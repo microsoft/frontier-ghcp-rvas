@@ -2,7 +2,7 @@
 
 ## Overview
 
-This hackathon is organized into **5 core role-based tracks** plus **2 bonus tracks** to provide structured learning paths for different team roles. As a facilitator, you'll guide participants to choose the right track and support them through their journey.
+This hackathon is organized into **5 core role-based tracks** plus **4 bonus tracks** to provide structured learning paths for different team roles. As a facilitator, you'll guide participants to choose the right track and support them through their journey.
 
 ## Pre-Hackathon Setup (1 week before)
 
@@ -43,6 +43,8 @@ Review the seven tracks:
 
 - [ ] [Copilot SDK Track](./tracks/bonus-copilot-sdk-track.md)
 - [ ] [Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)
+- [ ] [Cross-Functional Team Sprint Track](./tracks/bonus-team-sprint-track.md)
+- [ ] [Technical Team Sprint Track](./tracks/bonus-tech-sprint-track.md)
 
 ### 4. **Communication**
 
@@ -316,6 +318,37 @@ Around lunch, gather everyone:
 - Significantly longer (8-12 hours)
 - Help with prioritization across the stack
 
+### Bonus: Cross-Functional Team Sprint Track
+
+**Common challenges:**
+
+- Coordinating between PO, developers, QA, and DevOps in parallel
+- Managing scope when multiple people contribute to the same codebase
+- The Spark handover -- converting a prototype into a development repo
+
+**Facilitation tips:**
+
+- Requires a team of 4-6 people, not for solo participants
+- The PO drives the first phase; make sure they have GitHub Spark access
+- Help the team stick to timeboxes for sprint planning
+- Intervene if the team skips sprint planning or standup sync points
+
+### Bonus: Technical Team Sprint Track
+
+**Common challenges:**
+
+- Self-organizing without a PO can lead to scope creep or unclear priorities
+- Breaking the provided specification into actionable Issues
+- Integration between frontend and backend without a coordinator
+
+**Facilitation tips:**
+
+- Requires a team of 4 technical people, not for solo participants
+- No business roles -- the spec is provided, so the team jumps straight to technical planning
+- Encourage the team to write a clear technical spec before coding
+- Watch for teams that skip the planning phase and dive into code too early
+- Help the team self-organize by suggesting one person manage the project board
+
 ## Challenge & Track Difficulty Guide UPDATED
 
 ### By Track Difficulty
@@ -335,6 +368,11 @@ Around lunch, gather everyone:
 
 - Copilot SDK Track (requires completion of a core track)
 - Flight Delay Predictor Track (full-stack, multi-domain)
+
+**Team Bonus Tracks (8 hours):**
+
+- Cross-Functional Team Sprint Track (4-6 people, all roles)
+- Technical Team Sprint Track (4 developers/engineers, no business roles)
 
 ### By Individual Challenge
 

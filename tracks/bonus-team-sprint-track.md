@@ -27,8 +27,6 @@ Each person takes exactly one role. The minimum viable team is 4 people.
 | DevOps Engineer | Yes | Containers, CI/CD, infrastructure, deployment |
 | Business Analyst | Optional | Acceptance criteria, analytics requirements, data modeling |
 
-**Smaller teams (4-5 people):** The PO absorbs the BA role. With only 4 people, one developer handles both frontend and backend (simplify the UI scope accordingly).
-
 ## Prerequisites
 
 Each team member needs skills matching their assigned role:

@@ -1,0 +1,32 @@
+{
+	"name": "Bonus 4 - Technical Team Sprint",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:lts",
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/terraform:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"dbaeumer.vscode-eslint",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-playwright.playwright",
+				"ms-azuretools.vscode-docker",
+				"hashicorp.terraform",
+				"humao.rest-client",
+				"yzhang.markdown-all-in-one",
+				"bierner.markdown-mermaid",
+				"DavidAnson.vscode-markdownlint"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}

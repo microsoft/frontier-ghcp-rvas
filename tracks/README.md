@@ -1,6 +1,6 @@
 # Hackathon Tracks Overview
 
-Welcome! This hackathon is organized into **6 core tracks** plus **2 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+Welcome! This hackathon is organized into **6 core tracks** plus **4 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
 ## Choose Your Track
 
@@ -116,6 +116,18 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
+### 🥾 [Bonus: Technical Team Sprint](./bonus-tech-sprint-track.md)
+
+**Best for:** Teams of 4 developers/engineers who want to build a complete application from a provided specification, without business stakeholders
+
+**Focus:** Technical sprint -- from specification to production deployment, self-organized team
+
+**Your Challenge:** Bonus 4 - TrailMate Technical Sprint
+
+**Duration:** 8 hours (Team, Advanced)
+
+---
+
 ## Which Track Should I Choose?
 
 ### Answer These Questions
@@ -129,6 +141,7 @@ Completed your main track? These advanced tracks go deeper.
    - Product Owner/BA/PM → Product Owner & BA Track
    - Finished a core track and want more? → Bonus tracks
    - Cross-functional team (PO + devs + QA + DevOps)? → Bonus: Team Sprint
+   - Technical team (devs + QA + DevOps, no PO)? → Bonus: Technical Team Sprint
 
 2. **What do you want to learn?**
    - Building REST APIs → Backend Track
@@ -141,6 +154,7 @@ Completed your main track? These advanced tracks go deeper.
    - Building with the Copilot SDK → Bonus: Copilot SDK Track
    - Full-stack ML apps → Bonus: Flight Delay Track
    - Full team agile sprint → Bonus: Team Sprint
+   - Technical team sprint from spec → Bonus: Technical Team Sprint
 
 3. **How much time do you have?**
    - 4 hours → Choose any track, complete core tasks
@@ -166,6 +180,7 @@ Completed your main track? These advanced tracks go deeper.
 | 🧩 **Bonus: Copilot SDK** | ⭐⭐⭐ | 8-12h | Node.js, TypeScript, Copilot SDK | Bonus 1 |
 | ✈️ **Bonus: Flight Delay** | ⭐⭐⭐ | 8-12h | Python, scikit-learn, React/Vite | Bonus 2 |
 | 🏢 **Bonus: Team Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Bonus 3 |
+| 🥾 **Bonus: Tech Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Bonus 4 |
 
 ## What You'll Learn in Every Track
 
