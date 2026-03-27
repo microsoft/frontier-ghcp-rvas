@@ -15,5 +15,6 @@
 			]
 		}
 	},
+	"postCreateCommand": "cd challenges/challenge-4-frontend && npm install",
 	"remoteUser": "node"
 }

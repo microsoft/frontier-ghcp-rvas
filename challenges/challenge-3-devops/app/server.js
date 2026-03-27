@@ -5,6 +5,11 @@ const port = process.env.PORT || 3000;
 // Serve static files from 'public' directory
 app.use(express.static('public'));
 
+// Health check endpoint for Kubernetes probes
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
 // API endpoint for quotes
 app.get('/api/quote', (req, res) => {
     const quotes = [
