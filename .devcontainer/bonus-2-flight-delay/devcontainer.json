@@ -20,6 +20,19 @@
 			]
 		}
 	},
-	"postCreateCommand": "pip install pandas numpy scikit-learn matplotlib seaborn jupyter flask fastapi uvicorn && cd challenges/bonus-2-flight-delay/client && npm install",
+	"forwardPorts": [5173, 8000],
+	"portsAttributes": {
+		"5173": {
+			"label": "Vite Dev Server",
+			"protocol": "http",
+			"onAutoForward": "openBrowser"
+		},
+		"8000": {
+			"label": "Python API",
+			"protocol": "http",
+			"onAutoForward": "notify"
+		}
+	},
+	"postCreateCommand": "python3 -m pip install -r challenges/bonus-2-flight-delay/requirements.txt && cd challenges/bonus-2-flight-delay/client && npm install",
 	"remoteUser": "vscode"
 }
