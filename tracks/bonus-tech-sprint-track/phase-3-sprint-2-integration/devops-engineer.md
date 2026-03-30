@@ -6,28 +6,37 @@
 
 ## Tasks
 
-1. **Deploy to Azure:**
-   - Apply the Terraform or Bicep config to create Azure resources
-   - Build and push Docker images (to Azure Container Registry or GitHub Container Registry)
-   - Deploy backend and frontend to Azure App Service, Container Apps, or AKS
-   - Verify the deployed application loads and APIs respond
+1. **Add a reverse proxy** -- Add an nginx (or Traefik) service to `docker-compose.yml` that routes `/api/` to the backend and `/` to the frontend. This gives the whole stack a single entry point on one port and eliminates browser CORS issues.
 
-2. **Configure the production environment:**
-   - Set environment variables in Azure (database connection, API URL, CORS origins)
-   - Enable HTTPS
-   - Configure CORS so the frontend can call the backend
+2. **Make the stack shareable** -- Verify that anyone on the team can start the full application from a fresh clone with a single command:
+   - `docker compose up` should bring up backend, frontend, database, and reverse proxy
+   - All required environment variables should have defaults in `.env.example`
+   - Write or update `docs/local-setup.md` with the full startup sequence
 
-3. **Set up monitoring basics:**
-   - Health check endpoint monitoring (Azure Monitor or Application Insights)
-   - Ensure container logs are accessible for debugging
+3. **Add a CI smoke test** -- Update the GitHub Actions workflow to spin up the compose stack, wait for the health check to pass, and run basic requests against the API:
+   - `GET /health` responds 200
+   - `GET /api/trails` returns a JSON array (even if empty)
+   - Tear down the stack cleanly after the test
 
-4. **Update the CI pipeline** -- Add a deployment step that deploys to a staging or production environment on merge to main.
+4. **Review container logs** -- Confirm that `docker compose logs <service>` surfaces useful output for each service. Each service should log at an appropriate level (info for requests, error for failures). Fix anything that logs nothing or is too noisy.
+
+## Stretch: Deploy to Azure
+
+If the team completes the Docker Compose work with time to spare, attempt an Azure deployment:
+
+- Apply Terraform or Bicep to provision resources (resource group, Container Apps or App Service)
+- Build and push Docker images to Azure Container Registry or GitHub Container Registry
+- Set environment variables in Azure, enable HTTPS, configure CORS
+- Add a deployment step to the CI pipeline on merge to main
+
+This is optional. A working, demoed compose stack is a complete deliverable.
 
 ## Verification
 
-- [ ] Application deployed to Azure and accessible via a public URL
-- [ ] CI pipeline includes a deployment step
-- [ ] Health check or monitoring baseline in place
+- [ ] Reverse proxy routing `/api/` to backend and `/` to frontend
+- [ ] Another team member can start the full stack from scratch with `docker compose up`
+- [ ] `docs/local-setup.md` written
+- [ ] CI workflow runs a smoke test against the compose stack
 
 ---
 

@@ -6,19 +6,19 @@
 
 ## Tasks
 
-1. **Verify the production deployment** -- Confirm the live URL is working, HTTPS is active, and APIs respond correctly.
+1. **Verify the full stack** -- Run `docker compose up` from a clean state and confirm all services come up healthy. Check `docker compose ps` shows no containers restarting or exiting.
 
-2. **Document the deployment** -- Write `docs/deployment.md`: how to deploy, required environment variables, how to rollback if something breaks.
+2. **Document the stack** -- Write or finalize `docs/local-setup.md`: how to start the application, required `.env` values, how to reset the database, and how to stop everything cleanly.
 
-3. **Verify monitoring** -- Confirm health checks are green. Show that you can access container logs.
+3. **Verify logs and health checks** -- Confirm that `docker compose logs` surfaces useful output for each service. Confirm the CI smoke test is passing in GitHub Actions.
 
-4. **Demo contribution** -- Show the infrastructure: CI/CD pipeline, Azure resources, the deployment process, a green build in GitHub Actions.
+4. **Demo contribution** -- Walk through the infrastructure: the compose file architecture, the reverse proxy routing, the CI pipeline, and a live `docker compose up` showing the full stack starting cleanly.
 
 ## Verification
 
-- [ ] Production URL live and accessible
-- [ ] Deployment documentation written
-- [ ] Monitoring confirmed operational
+- [ ] All services healthy on `docker compose ps`
+- [ ] `docs/local-setup.md` complete
+- [ ] CI smoke test passing
 - [ ] Demo contribution prepared
 
 ---

@@ -25,7 +25,7 @@ Find your role and follow the link for your detailed task list:
 | [Backend Developer](phase-3-sprint-2-integration/backend-developer.md) | Bug fixes, search/filter, stats endpoint, auth | At least one advanced feature shipped |
 | [Frontend Developer](phase-3-sprint-2-integration/frontend-developer.md) | Connect to real API, dashboard, responsive design | No more mocked data in the critical path |
 | [QA Engineer](phase-3-sprint-2-integration/qa-engineer.md) | Regression tests, Sprint 2 tests, cross-browser, a11y | Full E2E suite against integrated app |
-| [DevOps Engineer](phase-3-sprint-2-integration/devops-engineer.md) | Deploy to Azure, production config, monitoring, CI/CD | App deployed to a public URL |
+| [DevOps Engineer](phase-3-sprint-2-integration/devops-engineer.md) | Reverse proxy, stack polish, CI smoke test, optional Azure | Full stack running from a single `docker compose up` |
 
 ## Sync Point: Integration Check (at ~5:30, 1 hour into Sprint 2)
 
@@ -35,7 +35,7 @@ A brief 5-minute check-in:
 - Are there any deployment blockers?
 - What will be ready for the demo vs. what will not?
 
-This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication. Focus on getting a working trail directory and condition reporting flow deployed to Azure.
+This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication. Focus on getting a working trail directory and condition reporting flow running end-to-end in the compose stack.
 
 ---
 

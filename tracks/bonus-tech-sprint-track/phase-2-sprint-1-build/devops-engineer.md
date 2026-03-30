@@ -25,19 +25,25 @@ Update the GitHub Actions workflow:
 - Run Playwright E2E tests (can fail for now if the app is not integrated yet)
 - Add linting steps for both services
 
-### Start Infrastructure as Code
+### Harden the Compose Setup
 
-Begin writing Terraform or Bicep for the Azure deployment:
+Now that backend and frontend are both running, make the compose file reliable for the whole team:
 
-- Resource group
-- Azure App Service or Container Apps for backend and frontend
-- Optionally: Azure Database for PostgreSQL (or keep SQLite for simplicity)
+- Add `healthcheck` blocks to the backend and database services so compose knows when they are ready
+- Add `restart: unless-stopped` to services that should recover from crashes
+- Use named volumes for the database so data survives a `docker compose down`
+- Add `depends_on` with `condition: service_healthy` so the backend waits for the database
 
 ### Environment Configuration
 
-Set up `.env` files for local and production. Document which environment variables each service needs in `docs/env-vars.md`.
+Set up `.env` files for local development. Document which environment variables each service needs in `docs/env-vars.md`. Make sure `.env` is in `.gitignore` and provide a `.env.example` instead.
 
-## Copilot Tip
+## Copilot Tips
+
+```text
+"Add a healthcheck to a PostgreSQL service in docker-compose.yml
+that uses pg_isready and marks the service healthy after 3 successes."
+```
 
 ```text
 "Create a multi-stage Dockerfile for a React app built with Vite.
@@ -47,10 +53,10 @@ Build stage uses Node 20, production stage uses nginx:alpine."
 ## Verification
 
 - [ ] Frontend Dockerfile building successfully
-- [ ] docker-compose running backend and frontend together
+- [ ] docker-compose running backend, frontend, and database together
+- [ ] Health checks and restart policies in place
 - [ ] CI pipeline expanded with test and build steps
-- [ ] Infrastructure as Code started (Terraform or Bicep)
-- [ ] Environment variables documented
+- [ ] `.env.example` committed and `docs/env-vars.md` written
 
 ---
 
