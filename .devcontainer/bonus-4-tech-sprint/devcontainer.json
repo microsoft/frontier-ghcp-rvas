@@ -1,6 +1,6 @@
 {
 	"name": "Bonus 4 - Technical Team Sprint",
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:lts",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:22",
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {
 			"version": "3.11"
