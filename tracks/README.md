@@ -1,6 +1,6 @@
 # Hackathon Tracks Overview
 
-Welcome! This hackathon is organized into **6 core tracks** plus **5 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+Welcome! This hackathon is organized into **6 core tracks** plus **11 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
 ## Choose Your Track
 
@@ -140,6 +140,78 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
+### 🔄 [Bonus: Legacy Code Modernization](./bonus-legacy-modernization-track.md)
+
+**Best for:** Developers who inherit undocumented Java applications and need to recover business knowledge, fix security issues, and migrate to modern frameworks
+
+**Focus:** Reverse-engineering legacy Java code, security auditing, characterization testing, and Spring Boot migration
+
+**Your Challenge:** Bonus 6 - Acme Bank Legacy Modernization
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
+### 📄 [Bonus: Living Documentation](./bonus-living-docs-track.md)
+
+**Best for:** Teams where documentation is always out of date and maintaining it is a manual burden nobody enjoys
+
+**Focus:** Automating javadoc, architecture diagrams, changelogs, stakeholder summaries, and PR documentation reviews
+
+**Your Challenge:** Bonus 7 - Widget Corp Living Documentation
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
+### 🔩 [Bonus: Pipeline Factory](./bonus-pipeline-factory-track.md)
+
+**Best for:** DevOps engineers and developers who build and maintain CI/CD pipelines, or teams that still deploy manually
+
+**Focus:** GitHub Actions pipeline creation, debugging broken deployments, reusable workflows, and incident runbooks
+
+**Your Challenge:** Bonus 8 - TaskBoard Pipeline Factory
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
+### 📝 [Bonus: Backlog Generator](./bonus-backlog-generator-track.md)
+
+**Best for:** Product owners, tech leads, and scrum masters who manually convert requirement documents into structured backlogs
+
+**Focus:** Automating spec-to-backlog conversion using Copilot prompts, agents, and the Atlassian MCP server
+
+**Your Challenge:** Bonus 9 - Spec-to-Backlog Automation
+
+**Duration:** 6-8 hours (Solo/Pair, No Code Required)
+
+---
+
+### 🖥️ [Bonus: Ops Assistant](./bonus-ops-assistant-track.md)
+
+**Best for:** Support teams, L1/L2 ops, and SREs who triage production incidents by manually reading logs
+
+**Focus:** AI-assisted log analysis, incident routing, troubleshooting runbooks, and deployment automation
+
+**Your Challenge:** Bonus 10 - Order Gateway Ops Assistant
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
+### 🚀 [Bonus: Spec-to-Ship Accelerator](./bonus-spec-to-ship-track.md)
+
+**Best for:** Tech leads and senior developers who manage the full lifecycle from requirements to deployed code
+
+**Focus:** End-to-end Copilot-assisted pipeline -- spec to backlog to technical analysis to code to tests to CI
+
+**Your Challenge:** Bonus 11 - Billing Module Spec-to-Ship
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
 ## Which Track Should I Choose?
 
 ### Answer These Questions
@@ -155,6 +227,12 @@ Completed your main track? These advanced tracks go deeper.
    - Cross-functional team (PO + devs + QA + DevOps)? → Bonus: Team Sprint
    - Technical team (devs + DevOps, optionally QA, no PO)? → Bonus: Technical Team Sprint
    - Interested in legacy modernization or obscure languages? → Bonus: MUMPS Modernization
+   - Inheriting undocumented Java code? → Bonus: Legacy Code Modernization
+   - Documentation is always out of date? → Bonus: Living Documentation
+   - Manual builds and deployments? → Bonus: Pipeline Factory
+   - Manually creating backlogs from specs? → Bonus: Backlog Generator
+   - Support team triaging incidents from logs? → Bonus: Ops Assistant
+   - Full lifecycle from spec to deployment? → Bonus: Spec-to-Ship Accelerator
 
 2. **What do you want to learn?**
    - Building REST APIs → Backend Track
@@ -169,6 +247,12 @@ Completed your main track? These advanced tracks go deeper.
    - Full team agile sprint → Bonus: Team Sprint
    - Technical team sprint from spec → Bonus: Technical Team Sprint
    - Legacy code comprehension and translation → Bonus: MUMPS Modernization
+   - Modernizing undocumented Java code → Bonus: Legacy Code Modernization
+   - Automating documentation → Bonus: Living Documentation
+   - CI/CD pipeline automation → Bonus: Pipeline Factory
+   - Sprint planning and backlog creation → Bonus: Backlog Generator
+   - Operations support and incident triage → Bonus: Ops Assistant
+   - End-to-end spec-to-ship workflow → Bonus: Spec-to-Ship Accelerator
 
 3. **How much time do you have?**
    - 4 hours → Choose any track, complete core tasks
@@ -196,6 +280,12 @@ Completed your main track? These advanced tracks go deeper.
 | 🏢 **Bonus: Team Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Bonus 3 |
 | 🥾 **Bonus: Tech Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Bonus 4 |
 | 🏦 **Bonus: MUMPS Modernization** | ⭐⭐⭐ | 8-12h | MUMPS, PSL/Java/Python/C#, testing | Bonus 5 |
+| 🔄 **Bonus: Legacy Modernization** | ⭐⭐⭐ | 6-8h | Java 8/17, Spring Boot 1.x/3.x, Maven | Bonus 6 |
+| 📄 **Bonus: Living Documentation** | ⭐⭐ | 6-8h | Java, Mermaid, Custom Prompts/Agents | Bonus 7 |
+| 🔩 **Bonus: Pipeline Factory** | ⭐⭐ | 6-8h | Node.js, GitHub Actions, Shell | Bonus 8 |
+| 📝 **Bonus: Backlog Generator** | ⭐⭐ | 6-8h | Prompts, Agents, Atlassian MCP | Bonus 9 |
+| 🖥️ **Bonus: Ops Assistant** | ⭐⭐ | 6-8h | Prompts, Agents, Node.js | Bonus 10 |
+| 🚀 **Bonus: Spec-to-Ship** | ⭐⭐⭐ | 6-8h | Node.js, Prompts, Agents, GitHub Actions | Bonus 11 |
 
 ## What You'll Learn in Every Track
 

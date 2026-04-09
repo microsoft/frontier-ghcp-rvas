@@ -2,7 +2,7 @@
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 core tracks** and **5 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 core tracks** and **11 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
 
 ## Hackathon Overview
 
@@ -21,6 +21,12 @@ This hackathon is organized into **role-based tracks** for different team types,
 - 🏢 **[Bonus: Cross-Functional Team Sprint](./tracks/bonus-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people)
 - 🥾 **[Bonus: Technical Team Sprint](./tracks/bonus-tech-sprint-track.md)** - Technical team sprint from spec to deployment (2-4 developers)
 - 🏦 **[Bonus: Legacy MUMPS Modernization](./tracks/bonus-mumps-modernization-track.md)** - Reverse-engineer and translate a MUMPS banking system (solo, advanced)
+- 🔄 **[Bonus: Legacy Code Modernization](./tracks/bonus-legacy-modernization-track.md)** - Reverse-engineer and modernize an undocumented Java application
+- 📄 **[Bonus: Living Documentation](./tracks/bonus-living-docs-track.md)** - Automate javadoc, diagrams, changelogs, and PR doc reviews
+- 🔩 **[Bonus: Pipeline Factory](./tracks/bonus-pipeline-factory-track.md)** - Build CI/CD pipelines, debug broken deployments, generate runbooks
+- 📝 **[Bonus: Backlog Generator](./tracks/bonus-backlog-generator-track.md)** - Convert requirement specs into structured backlogs with MCP
+- 🖥️ **[Bonus: Ops Assistant](./tracks/bonus-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling
+- 🚀 **[Bonus: Spec-to-Ship Accelerator](./tracks/bonus-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -275,6 +281,72 @@ Build TrailMate, a trail management platform for a regional parks authority, fro
 **Copilot Focus**: Legacy code comprehension with `/explain`, cross-language translation, characterization test generation, architecture documentation
 
 Reverse-engineer and translate a core banking system written in MUMPS -- a language most developers have never seen. The system handles customer management, deposit accounts, teller transactions, consumer loans, interest calculation, and end-of-day batch processing across 12 routines and ~2,500 lines of code. Understand it, test it, extend it, and translate it to a modern language while preserving every business rule.
+
+---
+
+### [Bonus 6: Legacy Code Modernization](./challenges/bonus-6-legacy-modernization/) ([Track](./tracks/bonus-legacy-modernization-track.md))
+
+**Team**: Solo or pair (Java developers)
+**Duration**: 6-8 hours
+**Skills**: Java 8/17, Spring Boot, Maven, REST APIs, SQL
+**Copilot Focus**: Legacy code comprehension with `/explain`, security auditing, characterization testing, framework migration
+
+Reverse-engineer and modernize the Acme Bank Account Manager -- an undocumented Java 8 / Spring Boot 1.5 banking application built by a contractor who left in 2018. The code has SQL injection vulnerabilities, deprecated libraries (Log4j 1.x, Apache HttpClient 4.x), no service layer, no tests, and business logic buried in controllers. Recover the business rules, audit for security issues, write characterization tests, and migrate to Spring Boot 3.x / Java 17+.
+
+---
+
+### [Bonus 7: Living Documentation](./challenges/bonus-7-living-docs/) ([Track](./tracks/bonus-living-docs-track.md))
+
+**Team**: Solo or pair (Java developers, tech leads)
+**Duration**: 6-8 hours
+**Skills**: Java, Javadoc, Mermaid diagrams, Markdown
+**Copilot Focus**: Bulk javadoc generation, architecture diagram creation, custom prompts for changelogs, custom agents for PR documentation review
+
+Automate the documentation of the Widget Corp Inventory Manager -- a Java application with stale javadoc, a changelog that stopped being updated two versions ago, and zero architecture diagrams. Generate accurate javadoc, create Mermaid diagrams for architecture and data model, build a changelog prompt that works from code diffs, and create an agent that reviews PRs for documentation completeness.
+
+---
+
+### [Bonus 8: Pipeline Factory](./challenges/bonus-8-pipeline-factory/) ([Track](./tracks/bonus-pipeline-factory-track.md))
+
+**Team**: Solo or pair (DevOps, platform engineers, developers)
+**Duration**: 6-8 hours
+**Skills**: GitHub Actions, Node.js, Shell scripting, CI/CD concepts
+**Copilot Focus**: Workflow generation, `/fix` for debugging broken deployments, reusable workflow design, incident runbook prompts
+
+Build CI/CD pipelines for TaskBoard, a kanban app that currently deploys via a shell script with commented-out scp commands. Create GitHub Actions workflows, debug 5 deliberate bugs in a broken staging deployment, build reusable workflow templates, and generate deployment gates with rollback mechanisms and incident runbooks.
+
+---
+
+### [Bonus 9: Backlog Generator](./challenges/bonus-9-backlog-generator/) ([Track](./tracks/bonus-backlog-generator-track.md))
+
+**Team**: Solo or pair (product owners, tech leads, scrum masters)
+**Duration**: 6-8 hours (no code required)
+**Skills**: Agile concepts (Epics, Stories, Acceptance Criteria), Jira/Confluence (optional)
+**Copilot Focus**: Custom prompts for spec-to-backlog conversion, custom agents for refinement, Atlassian Rovo MCP server for Jira/Confluence integration
+
+Convert three use case specifications of increasing complexity (Password Reset, Notification Preferences, Inventory Reorder) into structured backlogs. Build a reusable prompt that produces Epics, Stories, Tasks, and Test Cases following INVEST criteria. Create a refinement agent that reviews generated backlogs for gaps. Optionally push items directly to Jira using the Atlassian MCP server.
+
+---
+
+### [Bonus 10: Ops Assistant](./challenges/bonus-10-ops-assistant/) ([Track](./tracks/bonus-ops-assistant-track.md))
+
+**Team**: Solo or pair (support engineers, SREs, ops teams)
+**Duration**: 6-8 hours
+**Skills**: Log analysis concepts, incident management, basic Node.js (optional)
+**Copilot Focus**: Custom agents for log analysis, custom prompts for incident routing and runbook generation, error-to-plain-language translation
+
+Build AI-assisted operations tooling for the Order Gateway -- a critical e-commerce service. Analyze two days of production logs containing payment timeouts, database deadlocks, connection pool exhaustion, and OutOfMemoryErrors. Create a log analysis agent that explains errors in plain language for non-technical support staff, build an incident routing prompt that maps errors to responsible teams, and generate troubleshooting runbooks from historical incident data.
+
+---
+
+### [Bonus 11: Spec-to-Ship Accelerator](./challenges/bonus-11-spec-to-ship/) ([Track](./tracks/bonus-spec-to-ship-track.md))
+
+**Team**: Solo or pair (tech leads, senior developers)
+**Duration**: 6-8 hours
+**Skills**: Full SDLC concepts, Node.js, GitHub Actions
+**Copilot Focus**: End-to-end prompt chain -- spec to backlog to technical analysis to code to tests to CI pipeline, custom agents for test specification
+
+Compress the full development lifecycle for a billing module on an existing multi-tenant SaaS platform. Start with a functional requirements document and an existing tenant management API. Build prompts that convert the spec into work items, generate a technical analysis against the existing codebase, implement the billing module from generated stories, create test specifications with a custom agent, and wire up a CI pipeline -- all producing reusable Copilot artifacts.
 
 ---
 

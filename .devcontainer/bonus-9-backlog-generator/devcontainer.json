@@ -1,0 +1,19 @@
+{
+	"name": "Bonus 9 - Backlog Generator",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"yzhang.markdown-all-in-one",
+				"bierner.markdown-mermaid",
+				"DavidAnson.vscode-markdownlint"
+			]
+		}
+	},
+	"remoteUser": "node"
+}

@@ -1,0 +1,30 @@
+{
+	"name": "Bonus 7 - Living Documentation",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "21",
+			"installMaven": "true",
+			"installGradle": "false"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"vscjava.vscode-java-pack",
+				"humao.rest-client",
+				"yzhang.markdown-all-in-one",
+				"bierner.markdown-mermaid",
+				"DavidAnson.vscode-markdownlint"
+			]
+		}
+	},
+	"postCreateCommand": "cd challenges/bonus-7-living-docs && mvn dependency:resolve -q || true",
+	"remoteUser": "vscode"
+}

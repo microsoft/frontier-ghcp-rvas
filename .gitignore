@@ -30,6 +30,10 @@ ENV/
 # Build outputs
 dist/
 build/
+target/
+*.class
+*.jar
+*.war
 *.egg-info/
 .eggs/
 *.egg

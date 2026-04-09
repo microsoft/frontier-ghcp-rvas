@@ -1,0 +1,21 @@
+{
+	"name": "Bonus 10 - Ops Assistant",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"humao.rest-client",
+				"yzhang.markdown-all-in-one",
+				"bierner.markdown-mermaid",
+				"DavidAnson.vscode-markdownlint"
+			]
+		}
+	},
+	"postCreateCommand": "cd challenges/bonus-10-ops-assistant/app && npm install",
+	"remoteUser": "node"
+}

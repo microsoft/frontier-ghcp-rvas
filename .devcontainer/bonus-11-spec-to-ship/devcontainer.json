@@ -1,0 +1,23 @@
+{
+	"name": "Bonus 11 - Spec-to-Ship Accelerator",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"dbaeumer.vscode-eslint",
+				"humao.rest-client",
+				"yzhang.markdown-all-in-one",
+				"bierner.markdown-mermaid",
+				"DavidAnson.vscode-markdownlint",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"postCreateCommand": "cd challenges/bonus-11-spec-to-ship/existing-app && npm install",
+	"remoteUser": "node"
+}
