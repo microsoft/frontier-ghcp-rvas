@@ -21,6 +21,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "dotnet tool install --global Microsoft.Playwright.CLI && npm install -g @playwright/test",
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-5-qa && dotnet tool install --global Microsoft.Playwright.CLI && npm install -g @playwright/test",
 	"remoteUser": "vscode"
 }

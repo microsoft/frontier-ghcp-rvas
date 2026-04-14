@@ -15,7 +15,7 @@
 		},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
-	"postCreateCommand": "bash .devcontainer/bonus-5-mumps-banking/setup-yottadb.sh || true",
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-5-mumps-banking && (bash .devcontainer/bonus-5-mumps-banking/setup-yottadb.sh || true)",
 	"customizations": {
 		"vscode": {
 			"extensions": [

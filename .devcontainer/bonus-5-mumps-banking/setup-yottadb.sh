@@ -45,18 +45,19 @@ rm -rf "$TMPDIR"
 
 # Set up environment
 # Disable encryption plugin -- not needed for this challenge and the shared lib is not bundled.
+# Also set ydb_routines so the banking MUMPS routines are found automatically.
+CHALLENGE_DIR="/workspaces/gh-copilot-for-enterprise/challenges/bonus-5-mumps-banking"
 {
     echo "source /opt/yottadb/ydb_env_set"
     echo "unset ydb_crypt_config gtmcrypt_config gtm_passwd ydb_passwd 2>/dev/null"
+    echo "export ydb_routines=\"$CHALLENGE_DIR/routines /opt/yottadb/libyottadbutil.so\""
 } >> ~/.bashrc
 
 echo ""
-echo "YottaDB installed. To use it:"
-echo "  source /opt/yottadb/ydb_env_set"
-echo "  ydb"
+echo "YottaDB installed and configured."
+echo "The ydb_routines path is set automatically in every new shell."
 echo ""
-echo "To load the banking routines (run from challenges/bonus-5-mumps-banking/):"
-echo "  export ydb_routines=\"\$(pwd)/routines /opt/yottadb/libyottadbutil.so\""
+echo "To start the MUMPS interpreter:"
 echo "  ydb"
 echo "  YDB> DO INIT^BNKINIT"
 echo "  YDB> DO ^BNKMAIN"

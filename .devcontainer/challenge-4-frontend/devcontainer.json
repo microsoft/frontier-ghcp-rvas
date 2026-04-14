@@ -15,6 +15,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/challenge-4-frontend && npm install",
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-4-frontend && cd challenges/challenge-4-frontend && npm install",
 	"remoteUser": "node"
 }

@@ -30,5 +30,6 @@
 			]
 		}
 	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-3-team-sprint",
 	"remoteUser": "node"
 }

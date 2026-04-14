@@ -26,6 +26,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/bonus-6-legacy-modernization && mvn dependency:resolve -q || true",
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-6-legacy-modernization && cd challenges/bonus-6-legacy-modernization && mvn dependency:resolve -q || true",
 	"remoteUser": "vscode"
 }

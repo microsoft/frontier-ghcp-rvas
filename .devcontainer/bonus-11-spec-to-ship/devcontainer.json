@@ -18,6 +18,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/bonus-11-spec-to-ship/existing-app && npm install",
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-11-spec-to-ship && cd challenges/bonus-11-spec-to-ship/existing-app && npm install",
 	"remoteUser": "node"
 }
