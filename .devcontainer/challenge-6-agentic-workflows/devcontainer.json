@@ -20,5 +20,5 @@
 		}
 	},
 	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-6-agentic-workflows && gh extension install github/gh-aw || true",
-	"remoteUser": "vscode"
+	"remoteUser": "node"
 }
