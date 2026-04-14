@@ -1,6 +1,7 @@
 {
 	"name": "Challenge 6 - Agentic Workflows",
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {
 			"version": "3.11"
