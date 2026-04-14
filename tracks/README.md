@@ -1,6 +1,6 @@
 # Hackathon Tracks Overview
 
-Welcome! This hackathon is organized into **6 core tracks** plus **11 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+Welcome! This hackathon is organized into **7 core tracks** plus **11 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
 ## Choose Your Track
 
@@ -76,6 +76,18 @@ Welcome! This hackathon is organized into **6 core tracks** plus **11 bonus trac
 
 ---
 
+### 🤖 [Agentic Workflows Track](./agentic-workflows-track.md)
+
+**Best for:** Developers and DevOps engineers who want to automate repository maintenance with AI-powered workflows
+
+**Focus:** Building and operating GitHub Agentic Workflows -- Markdown-defined, AI-powered automation running in GitHub Actions for triage, code quality, documentation, CI monitoring, and security
+
+**Your Challenge:** Challenge 6 - GitHub Agentic Workflows
+
+**Duration:** 6-8 hours (5 progressive stages)
+
+---
+
 ## Bonus Tracks
 
 Completed your main track? These advanced tracks go deeper.
@@ -112,7 +124,7 @@ Completed your main track? These advanced tracks go deeper.
 
 **Your Challenge:** Bonus 3 - CityPulse Team Sprint
 
-**Duration:** 8 hours (Team, Advanced)
+**Duration:** 8-10 hours (Team, Advanced)
 
 ---
 
@@ -124,7 +136,7 @@ Completed your main track? These advanced tracks go deeper.
 
 **Your Challenge:** Bonus 4 - TrailMate Technical Sprint
 
-**Duration:** 8 hours (Team, Advanced)
+**Duration:** 8-10 hours (Team, Advanced)
 
 ---
 
@@ -226,6 +238,7 @@ Completed your main track? These advanced tracks go deeper.
    - Finished a core track and want more? → Bonus tracks
    - Cross-functional team (PO + devs + QA + DevOps)? → Bonus: Team Sprint
    - Technical team (devs + DevOps, optionally QA, no PO)? → Bonus: Technical Team Sprint
+   - Want to automate repository maintenance with AI? → Agentic Workflows Track
    - Interested in legacy modernization or obscure languages? → Bonus: MUMPS Modernization
    - Inheriting undocumented Java code? → Bonus: Legacy Code Modernization
    - Documentation is always out of date? → Bonus: Living Documentation
@@ -246,6 +259,7 @@ Completed your main track? These advanced tracks go deeper.
    - Full-stack ML apps → Bonus: Flight Delay Track
    - Full team agile sprint → Bonus: Team Sprint
    - Technical team sprint from spec → Bonus: Technical Team Sprint
+   - AI-powered repository automation → Agentic Workflows Track
    - Legacy code comprehension and translation → Bonus: MUMPS Modernization
    - Modernizing undocumented Java code → Bonus: Legacy Code Modernization
    - Automating documentation → Bonus: Living Documentation

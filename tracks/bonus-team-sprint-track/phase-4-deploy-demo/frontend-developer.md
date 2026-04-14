@@ -20,4 +20,4 @@
 
 ---
 
-Previous: [Phase 3 -- Frontend Developer Tasks](../phase-3-sprint-2-integration/frontend-developer.md)
+Previous: [Phase 3 -- Frontend Developer Tasks](../phase-3-sprint-2-integration/frontend-developer.md) | Next: [Phase 5 -- Frontend Developer Tasks](../phase-5-agentic-workflows/frontend-developer.md)

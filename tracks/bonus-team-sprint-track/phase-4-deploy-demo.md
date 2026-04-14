@@ -55,8 +55,8 @@ The team is done when:
 - [ ] Demo has been delivered
 - [ ] Retrospective has been discussed
 
-There is no next phase. The sprint is over.
+There is no next phase. The sprint is over. If time allows, continue to [Phase 5: Agentic Workflows](phase-5-agentic-workflows.md) to add AI-powered repository automation.
 
 ---
 
-Previous: [Phase 3: Sprint 2 -- Integration and Polish](phase-3-sprint-2-integration.md)
+Previous: [Phase 3: Sprint 2 -- Integration and Polish](phase-3-sprint-2-integration.md) | Next: [Phase 5: Agentic Workflows](phase-5-agentic-workflows.md) (optional)

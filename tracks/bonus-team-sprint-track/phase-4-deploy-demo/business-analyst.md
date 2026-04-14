@@ -24,4 +24,4 @@
 
 ---
 
-Previous: [Phase 3 -- Business Analyst Tasks](../phase-3-sprint-2-integration/business-analyst.md)
+Previous: [Phase 3 -- Business Analyst Tasks](../phase-3-sprint-2-integration/business-analyst.md) | Next: [Phase 5 -- Business Analyst Tasks](../phase-5-agentic-workflows/business-analyst.md)

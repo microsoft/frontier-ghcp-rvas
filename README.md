@@ -2,7 +2,7 @@
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **6 core tracks** and **11 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **7 core tracks** and **11 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
 
 ## Hackathon Overview
 
@@ -27,6 +27,7 @@ This hackathon is organized into **role-based tracks** for different team types,
 - 📝 **[Bonus: Backlog Generator](./tracks/bonus-backlog-generator-track.md)** - Convert requirement specs into structured backlogs with MCP
 - 🖥️ **[Bonus: Ops Assistant](./tracks/bonus-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling
 - 🚀 **[Bonus: Spec-to-Ship Accelerator](./tracks/bonus-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code
+- 🤖 **[Agentic Workflows Track](./tracks/agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
