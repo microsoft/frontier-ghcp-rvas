@@ -21,6 +21,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/challenge-1-web-api/node-express && npm install; cd /workspaces/gh-copilot-for-enterprise/challenges/challenge-1-web-api/python-fastapi && pip install -r requirements.txt",
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-1-backend && cd challenges/challenge-1-web-api/node-express && npm install; cd /workspaces/gh-copilot-for-enterprise/challenges/challenge-1-web-api/python-fastapi && pip install -r requirements.txt",
 	"remoteUser": "vscode"
 }

@@ -30,5 +30,6 @@
 			]
 		}
 	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-4-tech-sprint",
 	"remoteUser": "node"
 }

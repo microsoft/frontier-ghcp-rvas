@@ -15,6 +15,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "pip install -r challenges/challenge-2-ml-ai/requirements.txt",
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-2-data-science && pip install -r challenges/challenge-2-ml-ai/requirements.txt",
 	"remoteUser": "vscode"
 }

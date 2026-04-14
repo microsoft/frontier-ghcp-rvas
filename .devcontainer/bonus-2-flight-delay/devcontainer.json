@@ -33,6 +33,6 @@
 			"onAutoForward": "notify"
 		}
 	},
-	"postCreateCommand": "python3 -m pip install -r challenges/bonus-2-flight-delay/requirements.txt && cd challenges/bonus-2-flight-delay/client && npm install",
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-2-flight-delay && python3 -m pip install -r challenges/bonus-2-flight-delay/requirements.txt && cd challenges/bonus-2-flight-delay/client && npm install",
 	"remoteUser": "vscode"
 }

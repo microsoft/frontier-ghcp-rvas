@@ -15,5 +15,6 @@
 			]
 		}
 	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-9-backlog-generator",
 	"remoteUser": "node"
 }

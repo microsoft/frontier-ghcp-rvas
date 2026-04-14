@@ -2,25 +2,41 @@
 
 These steps apply to every track. Complete them before starting your first stage.
 
-## 1. Clean Start (CRITICAL)
+## 1. Open in a DevContainer (Recommended)
 
-The `.github/` directory contains instructions, agents, and skills used by the hackathon organizers. Run the cleanup script to reset it before you begin.
+Each challenge has its own devcontainer configuration under `.devcontainer/`. When you open the repo in a devcontainer (Codespaces or VS Code Dev Containers), pick the configuration that matches your challenge.
 
-**Linux / macOS / Codespaces:**
+The devcontainer automatically:
+
+- Installs all tools and dependencies for your challenge
+- Removes challenge folders, track files, and devcontainer configs you don't need
+- Clears `.github/copilot-instructions.md` so you start fresh
+- Removes sample agents and skills from `.github/`
+- Detaches the git remote so you don't accidentally push to the template repo
+
+After the container finishes building, your workspace only contains the files relevant to your track. Skip to step 3.
+
+## 2. Manual Setup (Without DevContainer)
+
+If you are **not** using a devcontainer, run the setup script with your challenge name:
+
+**Linux / macOS:**
 
 ```bash
-./scripts/clean-start.sh
+./scripts/setup-challenge.sh challenge-1-backend
 ```
 
 **Windows (PowerShell):**
 
 ```powershell
-.\scripts\clean-start.ps1
+.\scripts\setup-challenge.ps1 -Challenge challenge-1-backend
 ```
 
-This empties `.github/copilot-instructions.md`, removes existing agents and skills, and detaches the git remote so you don't accidentally push to the template repo.
+Run the script without arguments to see the full list of challenge names.
 
-## 2. Create Your Custom Instructions
+This does the same cleanup that the devcontainer does automatically -- removes unrelated challenges, tracks, and devcontainer configs, and resets `.github/`. You still need to install language-specific dependencies yourself (npm install, pip install, etc.) since there is no devcontainer to handle that.
+
+## 3. Create Your Custom Instructions
 
 `.github/copilot-instructions.md` tells Copilot about your project context and preferences. **Your goal is to create your own custom instructions file -- do not copy someone else's.**
 
@@ -32,7 +48,7 @@ Every track involves a different technology stack, so the specifics vary. At a m
 
 Your track file lists suggestions specific to your domain.
 
-## 3. Create Custom Agents (`.github/agents/`)
+## 4. Create Custom Agents (`.github/agents/`)
 
 Agents are specialized Copilot personas for different tasks. Create `.md` files in `.github/agents/` to define them. **Your goal is to create agents that match your workflow.**
 
@@ -48,6 +64,6 @@ Your track file suggests specific agents for your domain.
 >
 > **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance.
 
-## 4. Open the Challenge
+## 5. Open the Challenge
 
 Each track maps to a challenge folder under `challenges/`. Your track file tells you which folder to navigate to and what files to open first.

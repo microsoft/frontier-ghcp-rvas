@@ -16,6 +16,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/bonus-10-ops-assistant/app && npm install",
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-10-ops-assistant && cd challenges/bonus-10-ops-assistant/app && npm install",
 	"remoteUser": "node"
 }

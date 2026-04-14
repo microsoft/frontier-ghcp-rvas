@@ -27,6 +27,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/challenge-3-devops/app && npm install",
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-3-devops && cd challenges/challenge-3-devops/app && npm install",
 	"remoteUser": "vscode"
 }

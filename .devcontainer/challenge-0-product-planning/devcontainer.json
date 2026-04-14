@@ -41,5 +41,6 @@
 			}
 		}
 	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-0-product-planning",
 	"remoteUser": "vscode"
 }

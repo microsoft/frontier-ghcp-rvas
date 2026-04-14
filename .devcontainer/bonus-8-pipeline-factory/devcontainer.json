@@ -18,6 +18,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/bonus-8-pipeline-factory/api-service && npm install",
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-8-pipeline-factory && cd challenges/bonus-8-pipeline-factory/api-service && npm install",
 	"remoteUser": "node"
 }

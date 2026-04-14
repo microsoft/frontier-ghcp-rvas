@@ -25,6 +25,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd challenges/bonus-7-living-docs && mvn dependency:resolve -q || true",
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-7-living-docs && cd challenges/bonus-7-living-docs && mvn dependency:resolve -q || true",
 	"remoteUser": "vscode"
 }
