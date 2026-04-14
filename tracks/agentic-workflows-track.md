@@ -52,6 +52,8 @@ Navigate to `challenges/challenge-6-agentic-workflows/`. Read the [functional sp
 
 You need a GitHub repository to work in. If you do not have one ready, see the [getting started guide](../challenges/challenge-6-agentic-workflows/docs/getting-started.md) for options.
 
+A dedicated devcontainer is provided at `.devcontainer/challenge-6-agentic-workflows/` with Node.js LTS, Python 3.11, GitHub CLI, and the `gh-aw` extension.
+
 > **GitHub is required.** Agentic workflows run as GitHub Actions -- all workflow files must be pushed to a GitHub repository. You will create workflow files locally (or in a Codespace), but they only execute on GitHub after you push.
 
 ---

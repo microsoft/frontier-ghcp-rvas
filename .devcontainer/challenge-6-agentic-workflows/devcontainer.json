@@ -1,0 +1,24 @@
+{
+	"name": "Challenge 6 - Agentic Workflows",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"DavidAnson.vscode-markdownlint",
+				"bierner.markdown-mermaid",
+				"redhat.vscode-yaml",
+				"humao.rest-client"
+			]
+		}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-6-agentic-workflows && gh extension install github/gh-aw || true",
+	"remoteUser": "vscode"
+}

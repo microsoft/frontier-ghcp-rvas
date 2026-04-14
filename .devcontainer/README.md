@@ -48,6 +48,13 @@ Select the configuration that matches the challenge you are working on.
 - **Tools:** .NET 8.0 SDK, Playwright
 - **Extensions:** C# Dev Kit, Playwright Test
 
+### [Challenge 6: Agentic Workflows](./challenge-6-agentic-workflows/)
+
+**For:** Building AI-powered repository automation with GitHub Agentic Workflows.
+
+- **Tools:** Node.js LTS, Python 3.11, GitHub CLI, `gh-aw` extension
+- **Extensions:** Markdown lint, YAML, Mermaid
+
 ## How to Use
 
 1. **Copy the Folder**: Copy the contents of the specific challenge folder (e.g., `.devcontainer/challenge-1-backend/`) into the `.devcontainer/` folder of your own repository.
