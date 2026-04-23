@@ -1,0 +1,36 @@
+{
+	"name": "Bonus 12 - COBOL Banking Modernization",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "21",
+			"installMaven": "true",
+			"installGradle": "true"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh bonus-12-cobol-banking && (bash .devcontainer/bonus-12-cobol-banking/setup-gnucobol.sh || true)",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"vscjava.vscode-java-pack",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"humao.rest-client",
+				"yzhang.markdown-all-in-one",
+				"bierner.markdown-mermaid",
+				"DavidAnson.vscode-markdownlint",
+				"bitlang.cobol"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}

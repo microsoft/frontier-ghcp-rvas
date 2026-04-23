@@ -1,6 +1,6 @@
 # Hackathon Tracks Overview
 
-Welcome! This hackathon is organized into **7 core tracks** plus **11 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+Welcome! This hackathon is organized into **7 core tracks** plus **12 bonus tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
 ## Choose Your Track
 
@@ -224,6 +224,18 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
+### 🏗️ [Bonus: COBOL Banking Modernization](./bonus-cobol-modernization-track.md)
+
+**Best for:** Developers dealing with COBOL modernization or anyone who wants to tackle a full legacy-to-modern-web transformation
+
+**Focus:** Reverse-engineering a COBOL banking system, building characterization tests, and modernizing it into a React + Node.js/Java web application using Claude Code
+
+**Your Challenge:** Bonus 12 - COBOL Core Banking Modernization
+
+**Duration:** 8-12 hours (Solo, Advanced)
+
+---
+
 ## Which Track Should I Choose?
 
 ### Answer These Questions
@@ -240,6 +252,7 @@ Completed your main track? These advanced tracks go deeper.
    - Technical team (devs + DevOps, optionally QA, no PO)? → Bonus: Technical Team Sprint
    - Want to automate repository maintenance with AI? → Agentic Workflows Track
    - Interested in legacy modernization or obscure languages? → Bonus: MUMPS Modernization
+   - Modernizing COBOL into a full-stack web app? → Bonus: COBOL Banking Modernization
    - Inheriting undocumented Java code? → Bonus: Legacy Code Modernization
    - Documentation is always out of date? → Bonus: Living Documentation
    - Manual builds and deployments? → Bonus: Pipeline Factory
