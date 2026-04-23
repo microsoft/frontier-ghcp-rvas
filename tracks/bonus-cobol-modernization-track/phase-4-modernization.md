@@ -13,7 +13,7 @@ This is not a terminal app with a web wrapper. You are building a real web appli
 
 ## Tools Setup
 
-Install the Anthropic frontend-design skill before starting this phase. It gives Copilot the ability to generate polished React components and page layouts:
+Install the frontend-design skill before starting this phase. It gives Copilot the ability to generate polished React components and page layouts:
 
 ```shell
 npx skills install anthropics/claude-code

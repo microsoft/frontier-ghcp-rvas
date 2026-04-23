@@ -27,7 +27,7 @@
 - **Runtime (optional):** GnuCOBOL -- open-source COBOL compiler for building and running the original programs
 - **Backend target:** Node.js/TypeScript or Java (Spring Boot) -- your choice
 - **Frontend:** React with a modern UI library (Material UI, Tailwind, or similar)
-- **Copilot Skill:** Anthropic's `frontend-design` skill -- install via `npx skills install anthropics/claude-code` and select `frontend-design`
+- **Copilot Skill:** `frontend-design` skill -- install via `npx skills install anthropics/claude-code` and select `frontend-design`
 - **Testing:** Jest/Vitest (TypeScript) or JUnit 5 (Java)
 
 ## What You Are Working With
@@ -56,7 +56,7 @@ Your `.github/copilot-instructions.md` should include:
 - **COBOL Archaeologist Agent** -- Reads COBOL source and explains what it does. Identifies business rules, data flows, copybook structures, and paragraph naming conventions. Knows COBOL syntax, DIVISION/SECTION structure, FD entries, and common idioms.
 - **Banking Domain Agent** -- Understands core banking concepts: account types, interest calculation methods (simple vs. compound, day-count conventions), loan amortization, transaction atomicity, and audit requirements.
 - **Modernization Agent** -- Takes documented COBOL business logic and produces a modern web architecture: REST API endpoints, service layer design, database schema, and React page structure. Preserves behavior while adopting modern patterns.
-- **Frontend Design Agent** -- Works with the Anthropic `frontend-design` skill to design and build the React frontend. Handles component architecture, layout design, form validation, and responsive UI patterns.
+- **Frontend Design Agent** -- Works with the `frontend-design` skill to design and build the React frontend. Handles component architecture, layout design, form validation, and responsive UI patterns.
 
 ### Open the Challenge
 
@@ -86,14 +86,13 @@ Each phase builds on the previous. The archaeology phase is critical -- if you s
 - For modernization, describe the business rule first ("this paragraph calculates monthly loan payment using the PMT formula"), then ask for the equivalent in your target language. Do not ask Copilot to "translate this COBOL" cold -- it works better when you give it the intent.
 - Agent mode is strong for generating test scaffolding. Describe the test scenarios and let Copilot wire up the framework.
 - The `/explain` command works on COBOL files. Use it on the dense programs to build your understanding.
-- When working on the React frontend, install the Anthropic frontend-design skill (`npx skills install anthropics/claude-code`, then select `frontend-design`). It helps Copilot generate polished React components and page layouts from descriptions.
+- When working on the React frontend, install the frontend-design skill (`npx skills install anthropics/claude-code`, then select `frontend-design`). It helps Copilot generate polished React components and page layouts from descriptions.
 
 ## Resources
 
 - [COBOL Language Overview (Wikipedia)](https://en.wikipedia.org/wiki/COBOL)
 - [GnuCOBOL Documentation](https://gnucobol.sourceforge.io/)
 - [COBOL Tutorial (Tutorialspoint)](https://www.tutorialspoint.com/cobol/index.htm)
-- [Anthropic Skills for Copilot](https://github.com/anthropics/claude-code)
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
