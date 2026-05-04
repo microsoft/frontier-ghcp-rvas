@@ -16,13 +16,13 @@ Choose one of the challenge 7-18 tracks if one of these is true:
 
 | Primary role or goal | Start here |
 | --- | --- |
-| Product planning, backlog shaping, release planning | [Product Owner and BA Track](tracks/product-owner-track.md) |
-| APIs, authentication, persistence, backend testing | [Backend Developer Track](tracks/backend-developer-track.md) |
-| Data analysis, notebooks, model development | [Data Science and ML Track](tracks/data-science-ml-track.md) |
-| Containers, Terraform, Kubernetes, CI/CD | [DevOps and Platform Track](tracks/devops-platform-track.md) |
-| React, TypeScript, UI state, accessibility | [Frontend Developer Track](tracks/frontend-developer-track.md) |
-| Test planning, exploratory testing, automation | [QA Tester Track](tracks/qa-tester-track.md) |
-| Repository automation with AI workflows | [Agentic Workflows Track](tracks/agentic-workflows-track.md) |
+| Product planning, backlog shaping, release planning | [Challenge 0: Product Planning Track](tracks/challenge-0-product-planning-track.md) |
+| APIs, authentication, persistence, backend testing | [Challenge 1: Web API Track](tracks/challenge-1-web-api-track.md) |
+| Data analysis, notebooks, model development | [Challenge 2: ML & AI Track](tracks/challenge-2-ml-ai-track.md) |
+| Containers, Terraform, Kubernetes, CI/CD | [Challenge 3: DevOps Track](tracks/challenge-3-devops-track.md) |
+| React, TypeScript, UI state, accessibility | [Challenge 4: Frontend Track](tracks/challenge-4-frontend-track.md) |
+| Test planning, exploratory testing, automation | [Challenge 5: QA & Testing Track](tracks/challenge-5-qa-track.md) |
+| Repository automation with AI workflows | [Challenge 6: Agentic Workflows Track](tracks/challenge-6-agentic-workflows-track.md) |
 
 If more than one track looks plausible, pick the one that best matches the work people actually do day to day.
 

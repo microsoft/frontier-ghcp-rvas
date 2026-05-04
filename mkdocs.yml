@@ -16,13 +16,13 @@ nav:
   - Getting Started: tracks/getting-started.md
   - Track Catalog: tracks/README.md
   - Core Tracks:
-      - Product Owner and BA: tracks/product-owner-track.md
-      - Backend Developer: tracks/backend-developer-track.md
-      - Data Science and ML: tracks/data-science-ml-track.md
-      - DevOps and Platform: tracks/devops-platform-track.md
-      - Frontend Developer: tracks/frontend-developer-track.md
-      - QA Tester: tracks/qa-tester-track.md
-      - Agentic Workflows: tracks/agentic-workflows-track.md
+      - Challenge 0 - Product Planning: tracks/challenge-0-product-planning-track.md
+      - Challenge 1 - Web API: tracks/challenge-1-web-api-track.md
+      - Challenge 2 - ML and AI: tracks/challenge-2-ml-ai-track.md
+      - Challenge 3 - DevOps: tracks/challenge-3-devops-track.md
+      - Challenge 4 - Frontend: tracks/challenge-4-frontend-track.md
+      - Challenge 5 - QA and Testing: tracks/challenge-5-qa-track.md
+      - Challenge 6 - Agentic Workflows: tracks/challenge-6-agentic-workflows-track.md
   - Challenges 7-18:
       - Challenge 7 - Copilot SDK: tracks/challenge-7-copilot-sdk-track.md
       - Challenge 8 - Flight Delay Predictor: tracks/challenge-8-flight-delay-track.md

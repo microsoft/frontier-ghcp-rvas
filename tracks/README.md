@@ -4,7 +4,7 @@ Welcome! This hackathon is organized into **19 challenge tracks** to help you ge
 
 ## Choose Your Track
 
-### 📋 [Product Owner & Business Analyst Track](./product-owner-track.md)
+### 📋 [Challenge 0: Product Planning Track](./challenge-0-product-planning-track.md)
 
 **Best for:** Product Owners, Business Analysts, Project Managers, Scrum Masters, Program Managers
 
@@ -16,7 +16,7 @@ Welcome! This hackathon is organized into **19 challenge tracks** to help you ge
 
 ---
 
-### 🔧 [Backend Developer Track](./backend-developer-track.md)
+### 🔧 [Challenge 1: Web API Track](./challenge-1-web-api-track.md)
 
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
@@ -28,7 +28,7 @@ Welcome! This hackathon is organized into **19 challenge tracks** to help you ge
 
 ---
 
-### 📊 [Data Science & ML Track](./data-science-ml-track.md)
+### 📊 [Challenge 2: ML & AI Track](./challenge-2-ml-ai-track.md)
 
 **Best for:** Data Scientists, ML Engineers, Data Analysts
 
@@ -40,7 +40,7 @@ Welcome! This hackathon is organized into **19 challenge tracks** to help you ge
 
 ---
 
-### ☁️ [DevOps & Platform Track](./devops-platform-track.md)
+### ☁️ [Challenge 3: DevOps Track](./challenge-3-devops-track.md)
 
 **Best for:** DevOps Engineers, SREs, Platform Engineers, Cloud Engineers
 
@@ -52,7 +52,7 @@ Welcome! This hackathon is organized into **19 challenge tracks** to help you ge
 
 ---
 
-### 🎨 [Frontend Developer Track](./frontend-developer-track.md)
+### 🎨 [Challenge 4: Frontend Track](./challenge-4-frontend-track.md)
 
 **Best for:** Frontend Developers, UI/UX Engineers, React Developers
 
@@ -64,7 +64,7 @@ Welcome! This hackathon is organized into **19 challenge tracks** to help you ge
 
 ---
 
-### 🔍 [QA Tester Track](./qa-tester-track.md)
+### 🔍 [Challenge 5: QA & Testing Track](./challenge-5-qa-track.md)
 
 **Best for:** QA Engineers, Quality Assurance Specialists, Manual Testers
 
@@ -76,7 +76,7 @@ Welcome! This hackathon is organized into **19 challenge tracks** to help you ge
 
 ---
 
-### 🤖 [Agentic Workflows Track](./agentic-workflows-track.md)
+### 🤖 [Challenge 6: Agentic Workflows Track](./challenge-6-agentic-workflows-track.md)
 
 **Best for:** Developers and DevOps engineers who want to automate repository maintenance with AI-powered workflows
 
@@ -481,12 +481,13 @@ Track your progress across any track:
 
 ### Track Guides
 
-- [Product Owner & BA Track](./product-owner-track.md)
-- [Backend Developer Track](./backend-developer-track.md)
-- [Data Science & ML Track](./data-science-ml-track.md)
-- [DevOps & Platform Track](./devops-platform-track.md)
-- [Frontend Developer Track](./frontend-developer-track.md)
-- [QA Tester Track](./qa-tester-track.md)
+- [Challenge 0: Product Planning Track](./challenge-0-product-planning-track.md)
+- [Challenge 1: Web API Track](./challenge-1-web-api-track.md)
+- [Challenge 2: ML & AI Track](./challenge-2-ml-ai-track.md)
+- [Challenge 3: DevOps Track](./challenge-3-devops-track.md)
+- [Challenge 4: Frontend Track](./challenge-4-frontend-track.md)
+- [Challenge 5: QA & Testing Track](./challenge-5-qa-track.md)
+- [Challenge 6: Agentic Workflows Track](./challenge-6-agentic-workflows-track.md)
 - [Challenge 7: Copilot SDK Track](./challenge-7-copilot-sdk-track.md)
 - [Challenge 8: Flight Delay Predictor Track](./challenge-8-flight-delay-track.md)
 
@@ -500,4 +501,4 @@ Track your progress across any track:
 
 Choose your track above and get started.
 
-Not sure? Start with the [Backend Developer Track](./backend-developer-track.md) - it's the most beginner-friendly!
+Not sure? Start with [Challenge 1: Web API Track](./challenge-1-web-api-track.md) -- it's the most beginner-friendly.

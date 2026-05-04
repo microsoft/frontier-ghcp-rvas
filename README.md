@@ -6,16 +6,17 @@ Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contai
 
 ## Hackathon Overview
 
-This hackathon is organized into **role-based tracks** for different team types, plus **challenge 7-18 tracks** for advanced, cross-functional, and specialized work:
+This hackathon is organized into **19 challenge tracks** covering all skill levels and roles:
 
 ### Choose Your Track
 
-- 📋 **[Product Owner & BA Track](./tracks/product-owner-track.md)** - Product planning, backlog management, documentation (no code)
-- 🔧 **[Backend Developer Track](./tracks/backend-developer-track.md)** - REST APIs, authentication, testing
-- 📊 **[Data Science & ML Track](./tracks/data-science-ml-track.md)** - Data analysis, ML models, feature engineering
-- ☁️ **[DevOps & Platform Track](./tracks/devops-platform-track.md)** - Infrastructure as Code, containers, CI/CD
-- 🎨 **[Frontend Developer Track](./tracks/frontend-developer-track.md)** - React, TypeScript, modern UI
-- 🔍 **[QA Tester Track](./tracks/qa-tester-track.md)** - AI-assisted testing, test planning, Copilot for QA workflows
+- 📋 **[Challenge 0: Product Planning Track](./tracks/challenge-0-product-planning-track.md)** - Product planning, backlog management, documentation (no code)
+- 🔧 **[Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)** - REST APIs, authentication, testing
+- 📊 **[Challenge 2: ML & AI Track](./tracks/challenge-2-ml-ai-track.md)** - Data analysis, ML models, feature engineering
+- ☁️ **[Challenge 3: DevOps Track](./tracks/challenge-3-devops-track.md)** - Infrastructure as Code, containers, CI/CD
+- 🎨 **[Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)** - React, TypeScript, modern UI
+- 🔍 **[Challenge 5: QA & Testing Track](./tracks/challenge-5-qa-track.md)** - AI-assisted testing, test planning, Copilot for QA workflows
+- 🤖 **[Challenge 6: Agentic Workflows Track](./tracks/challenge-6-agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows
 - 🧩 **[Challenge 7: Copilot SDK Track](./tracks/challenge-7-copilot-sdk-track.md)** - Build a Copilot SDK application (advanced)
 - ✈️ **[Challenge 8: Flight Delay Predictor Track](./tracks/challenge-8-flight-delay-track.md)** - Full-stack ML app (advanced)
 - 🏢 **[Challenge 9: Cross-Functional Team Sprint](./tracks/challenge-9-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people)
@@ -28,7 +29,6 @@ This hackathon is organized into **role-based tracks** for different team types,
 - 🖥️ **[Challenge 16: Ops Assistant](./tracks/challenge-16-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling
 - 🚀 **[Challenge 17: Spec-to-Ship Accelerator](./tracks/challenge-17-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code
 - 🏗️ **[Challenge 18: COBOL Banking Modernization](./tracks/challenge-18-cobol-modernization-track.md)** - Reverse-engineer and modernize a COBOL banking system into a full-stack web app
-- 🤖 **[Agentic Workflows Track](./tracks/agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -142,7 +142,7 @@ Before starting, make sure Copilot is working:
 
 Once your environment is ready:
 
-1. Open your chosen track guide (e.g., `tracks/backend-developer-track.md`)
+1. Open your chosen track guide (e.g., `tracks/challenge-1-web-api-track.md`)
 2. Follow the recommended challenge sequence
 3. Use the track-specific tips and guidance
 
@@ -182,7 +182,7 @@ Throughout these challenges, you'll master:
 
 All 19 challenges are available, and each track has a dedicated challenge:
 
-### [Challenge 0: Product Planning -- TaskFlow v2.0](./challenges/challenge-0-product-planning/) ([Track](./tracks/product-owner-track.md))
+### [Challenge 0: Product Planning -- TaskFlow v2.0](./challenges/challenge-0-product-planning/) ([Track](./tracks/challenge-0-product-planning-track.md))
 
 **Team**: Product Owners, Business Analysts, Project Managers
 **Skills**: Markdown, GitHub Issues, GitHub Projects, Pull Requests
@@ -192,7 +192,7 @@ Plan the next major release of a task management platform across 5 progressive s
 
 ---
 
-### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/) ([Track](./tracks/backend-developer-track.md))
+### [Challenge 1: Web Development - REST API Builder](./challenges/challenge-1-web-api/) ([Track](./tracks/challenge-1-web-api-track.md))
 
 **Team**: Backend/Web Developers
 **Skills**: Express.js/FastAPI, API design, error handling, testing
@@ -202,7 +202,7 @@ Build a task management REST API across 5 progressive stages: basic CRUD, JWT au
 
 ---
 
-### [Challenge 2: ML/AI - Data Analysis & Model Development](./challenges/challenge-2-ml-ai/) ([Track](./tracks/data-science-ml-track.md))
+### [Challenge 2: ML/AI - Data Analysis & Model Development](./challenges/challenge-2-ml-ai/) ([Track](./tracks/challenge-2-ml-ai-track.md))
 
 **Team**: Data Scientists, ML Engineers
 **Skills**: Python, pandas, scikit-learn, data visualization
@@ -212,7 +212,7 @@ Predict customer churn across 5 stages: discover 7+ hidden data quality issues, 
 
 ---
 
-### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/) ([Track](./tracks/devops-platform-track.md))
+### [Challenge 3: DevOps - Infrastructure as Code](./challenges/challenge-3-devops/) ([Track](./tracks/challenge-3-devops-track.md))
 
 **Team**: DevOps, Platform Engineers
 **Skills**: Terraform, Docker, Kubernetes, CI/CD
@@ -222,7 +222,7 @@ Build infrastructure for a Node.js app across 5 stages: multi-stage Dockerfile w
 
 ---
 
-### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/) ([Track](./tracks/frontend-developer-track.md))
+### [Challenge 4: Frontend - Interactive UI Components](./challenges/challenge-4-frontend/) ([Track](./tracks/challenge-4-frontend-track.md))
 
 **Team**: Frontend Developers
 **Skills**: React, TypeScript, Component design, State management
@@ -232,7 +232,7 @@ Build a task dashboard across 5 stages: responsive layout with React Router, sta
 
 ---
 
-### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/) ([Track](./tracks/qa-tester-track.md))
+### [Challenge 5: QA & Test Automation](./challenges/challenge-5-qa/) ([Track](./tracks/challenge-5-qa-track.md))
 
 **Team**: QA Engineers, Quality Assurance Specialists, Manual Testers
 **Skills**: Test planning, test case design, bug reporting (no coding experience required)

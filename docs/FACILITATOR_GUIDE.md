@@ -29,15 +29,15 @@ This hackathon is organized into **7 core tracks** plus **12 challenge 7-18 trac
 
 ### 3. **Understand the Track Structure**
 
-Review the seven tracks:
+Review the seven core tracks:
 
 **Core Tracks (4-6 hours):**
 
-- [ ] [Backend Developer Track](./tracks/backend-developer-track.md)
-- [ ] [Data Science & ML Track](./tracks/data-science-ml-track.md)
-- [ ] [DevOps & Platform Track](./tracks/devops-platform-track.md)
-- [ ] [Frontend Developer Track](./tracks/frontend-developer-track.md)
-- [ ] [QA Tester Track](./tracks/qa-tester-track.md)
+- [ ] [Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)
+- [ ] [Challenge 2: ML & AI Track](./tracks/challenge-2-ml-ai-track.md)
+- [ ] [Challenge 3: DevOps Track](./tracks/challenge-3-devops-track.md)
+- [ ] [Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)
+- [ ] [Challenge 5: QA & Testing Track](./tracks/challenge-5-qa-track.md)
 
 **Challenge 7-18 Tracks:**
 

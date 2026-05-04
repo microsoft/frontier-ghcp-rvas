@@ -7,8 +7,8 @@ Every track has a **main file** under `tracks/` and a **subdirectory** containin
 ```text
 tracks/
   getting-started.md                          ← shared setup (clean start, instructions, agents)
-  backend-developer-track.md                  ← main track file (overview, table, tips, resources)
-  backend-developer-track/
+  challenge-1-web-api-track.md                  ← main track file (overview, table, tips, resources)
+  challenge-1-web-api-track/
     stage-1-basic-crud.md                     ← one file per stage
     stage-2-auth.md
     stage-3-storage.md
