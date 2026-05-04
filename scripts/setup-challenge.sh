@@ -55,6 +55,7 @@ declare -A CHALLENGE_MAP=(
   [challenge-16-ops-assistant]="challenge-16-ops-assistant"
   [challenge-17-spec-to-ship]="challenge-17-spec-to-ship"
   [challenge-18-cobol-banking]="challenge-18-cobol-banking"
+  [challenge-19-wcf-banking]="challenge-19-wcf-banking"
 )
 
 declare -A TRACK_FILE_MAP=(
@@ -77,6 +78,7 @@ declare -A TRACK_FILE_MAP=(
   [challenge-16-ops-assistant]="challenge-16-ops-assistant-track"
   [challenge-17-spec-to-ship]="challenge-17-spec-to-ship-track"
   [challenge-18-cobol-banking]="challenge-18-cobol-modernization-track"
+  [challenge-19-wcf-banking]="challenge-19-wcf-modernization-track"
 )
 
 declare -A TRACK_DIR_MAP=(
@@ -99,6 +101,7 @@ declare -A TRACK_DIR_MAP=(
   [challenge-16-ops-assistant]="challenge-16-ops-assistant-track"
   [challenge-17-spec-to-ship]="challenge-17-spec-to-ship-track"
   [challenge-18-cobol-banking]="challenge-18-cobol-modernization-track"
+  [challenge-19-wcf-banking]="challenge-19-wcf-modernization-track"
 )
 
 # ── Validate input ──────────────────────────────────────────────────
