@@ -2,6 +2,14 @@
 
 ## Active Decisions
 
+### 2026-05-04: Challenge 19 uses CoreWCF on .NET 8 (not classic WCF/.NET Framework)
+
+**By:** Linus, Basher (via Coordinator)
+
+**What:** Challenge 19 runs the WCF banking service using CoreWCF on .NET 8, not classic WCF/.NET Framework. Classic WCF requires Windows containers (not Codespaces-compatible). CoreWCF is Linux-native and installs via NuGet (CoreWCF.Http 1.5+).
+
+**Why:** Codespaces runs Linux containers. Classic WCF on .NET Framework requires Windows Server containers, which GitHub Codespaces does not support. CoreWCF provides the same service contract programming model on .NET 8 on Linux.
+
 ### 2026-04-28: MkDocs and GitHub Pages docs publishing shape (consolidated)
 
 **By:** Rusty, Basher, Danny

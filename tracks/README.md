@@ -236,6 +236,18 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
+### 🔧 [Challenge 19: WCF Banking Modernization](./challenge-19-wcf-modernization-track.md)
+
+**Best for:** .NET developers who work with WCF or SOAP services and need to modernize them to REST
+
+**Focus:** Understanding WCF service contracts, data contracts, and fault conditions, then migrating to ASP.NET Core Web API
+
+**Your Challenge:** Challenge 19 - WCF Banking Modernization (Meridian Savings Bank)
+
+**Duration:** 6-10 hours (Solo, Intermediate to Advanced)
+
+---
+
 ## Which Track Should I Choose?
 
 ### Answer These Questions

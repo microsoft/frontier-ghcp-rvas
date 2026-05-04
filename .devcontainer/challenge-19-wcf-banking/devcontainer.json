@@ -1,0 +1,30 @@
+{
+	"name": "Challenge 19 - WCF Banking Modernization",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+	"features": {
+		"ghcr.io/devcontainers/features/dotnet:2": {
+			"version": "8.0"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-19-wcf-banking && (bash .devcontainer/challenge-19-wcf-banking/setup-wcf.sh || true)",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.csdevkit",
+				"ms-dotnettools.dotnet-interactive-vscode",
+				"humao.rest-client",
+				"yzhang.markdown-all-in-one",
+				"DavidAnson.vscode-markdownlint",
+				"hediet.vscode-drawio"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}
