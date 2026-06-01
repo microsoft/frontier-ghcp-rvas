@@ -12,32 +12,35 @@ Choose one of the challenge 7-18 tracks if one of these is true:
 - You are running a team exercise instead of an individual track.
 - You want a specialized scenario such as legacy modernization, documentation automation, or operational tooling.
 
-## Step 2: Match the Track to the Primary Role
+## Step 2: Pick a Challenge
 
-| Primary role or goal | Start here |
-| --- | --- |
-| Product planning, backlog shaping, release planning | [Challenge 0: Product Planning Track](tracks/challenge-0-product-planning-track.md) |
-| APIs, authentication, persistence, backend testing | [Challenge 1: Web API Track](tracks/challenge-1-web-api-track.md) |
-| Data analysis, notebooks, model development | [Challenge 2: ML & AI Track](tracks/challenge-2-ml-ai-track.md) |
-| Containers, Terraform, Kubernetes, CI/CD | [Challenge 3: DevOps Track](tracks/challenge-3-devops-track.md) |
-| React, TypeScript, UI state, accessibility | [Challenge 4: Frontend Track](tracks/challenge-4-frontend-track.md) |
-| Test planning, exploratory testing, automation | [Challenge 5: QA & Testing Track](tracks/challenge-5-qa-track.md) |
-| Repository automation with AI workflows | [Challenge 6: Agentic Workflows Track](tracks/challenge-6-agentic-workflows-track.md) |
+Challenges 0-6 are the core tracks built around a primary role. Challenges 7-20 are follow-up and specialized scenarios for harder work, team exercises, legacy modernization, and workflow automation. Pick the row that best matches the work people actually do day to day.
 
-If more than one track looks plausible, pick the one that best matches the work people actually do day to day.
+| Challenge | Focus or when to choose | Track |
+| --- | --- | --- |
+| 0 | Product planning, backlog shaping, release planning | [Product Planning Track](tracks/challenge-0-product-planning-track.md) |
+| 1 | APIs, authentication, persistence, backend testing | [Web API Track](tracks/challenge-1-web-api-track.md) |
+| 2 | Data analysis, notebooks, model development | [ML & AI Track](tracks/challenge-2-ml-ai-track.md) |
+| 3 | Containers, Terraform, Kubernetes, CI/CD | [DevOps Track](tracks/challenge-3-devops-track.md) |
+| 4 | React, TypeScript, UI state, accessibility | [Frontend Track](tracks/challenge-4-frontend-track.md) |
+| 5 | Test planning, exploratory testing, automation | [QA & Testing Track](tracks/challenge-5-qa-track.md) |
+| 6 | Repository automation with AI workflows | [Agentic Workflows Track](tracks/challenge-6-agentic-workflows-track.md) |
+| 7 | Building with the Copilot runtime itself | [Copilot SDK Track](tracks/challenge-7-copilot-sdk-track.md) |
+| 8 | Full-stack ML application | [Flight Delay Predictor Track](tracks/challenge-8-flight-delay-track.md) |
+| 9 | Cross-functional team sprint | [Cross-Functional Team Sprint](tracks/challenge-9-team-sprint-track.md) |
+| 10 | Technical delivery sprint without product roles | [Technical Team Sprint](tracks/challenge-10-tech-sprint-track.md) |
+| 11 | Legacy MUMPS modernization | [Legacy MUMPS Modernization](tracks/challenge-11-mumps-modernization-track.md) |
+| 12 | General legacy code modernization | [Legacy Code Modernization](tracks/challenge-12-legacy-modernization-track.md) |
+| 13 | Documentation automation | [Living Documentation](tracks/challenge-13-living-docs-track.md) |
+| 14 | Pipeline and CI/CD automation | [Pipeline Factory](tracks/challenge-14-pipeline-factory-track.md) |
+| 15 | Backlog generation from requirements | [Backlog Generator](tracks/challenge-15-backlog-generator-track.md) |
+| 16 | Operational tooling and assistants | [Ops Assistant](tracks/challenge-16-ops-assistant-track.md) |
+| 17 | Spec-to-ship delivery acceleration | [Spec-to-Ship Accelerator](tracks/challenge-17-spec-to-ship-track.md) |
+| 18 | COBOL banking modernization | [COBOL Banking Modernization](tracks/challenge-18-cobol-modernization-track.md) |
+| 19 | Legacy WCF banking modernization | [Legacy WCF Banking Modernization](tracks/challenge-19-wcf-modernization-track.md) |
+| 20 | PowerShell automation | [PowerShell Automation](tracks/challenge-20-powershell-automation-track.md) |
 
-## Step 3: Choose a Challenge 7-18 Track When It Fits the Group
-
-These are the main challenge 7-18 choices by situation:
-
-- Building with the Copilot runtime itself: [Copilot SDK Track](tracks/challenge-7-copilot-sdk-track.md)
-- Full-stack ML application: [Flight Delay Predictor Track](tracks/challenge-8-flight-delay-track.md)
-- Cross-functional team sprint: [Cross-Functional Team Sprint](tracks/challenge-9-team-sprint-track.md)
-- Technical delivery sprint without product roles: [Technical Team Sprint](tracks/challenge-10-tech-sprint-track.md)
-- Legacy modernization: [COBOL Banking Modernization](tracks/challenge-18-cobol-modernization-track.md), [Legacy MUMPS Modernization](tracks/challenge-11-mumps-modernization-track.md), or [Legacy Code Modernization](tracks/challenge-12-legacy-modernization-track.md)
-- Documentation, pipelines, backlog, or operations workflows: [Living Documentation](tracks/challenge-13-living-docs-track.md), [Pipeline Factory](tracks/challenge-14-pipeline-factory-track.md), [Backlog Generator](tracks/challenge-15-backlog-generator-track.md), [Ops Assistant](tracks/challenge-16-ops-assistant-track.md), or [Spec-to-Ship Accelerator](tracks/challenge-17-spec-to-ship-track.md)
-
-## Step 4: Do the Shared Setup Before Opening the Challenge
+## Step 3: Do the Shared Setup Before Opening the Challenge
 
 Once you have a track:
 
