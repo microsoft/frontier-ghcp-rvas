@@ -4,5 +4,5 @@ pymdown-extensions==10.14
 # Pinned: pymdown-extensions 10.14 passes filename=None for untitled code
 # blocks, which Pygments 2.19+ no longer coerces to "" (crashes html.escape).
 # 2.18.0 is the last release that handles it. Revisit when bumping the theme.
-pygments==2.18.0
+pygments==2.20.0
 
