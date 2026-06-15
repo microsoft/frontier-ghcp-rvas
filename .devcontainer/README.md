@@ -62,6 +62,13 @@ Select the configuration that matches the challenge you are working on.
 - **Tools:** PowerShell 7 (Linux), Azure CLI, GitHub CLI, Pester 5, PSScriptAnalyzer, Az module
 - **Extensions:** PowerShell, Pester Test Explorer
 
+### [Challenge 21: Azure Terraform](./challenge-21-azure-terraform/)
+
+**For:** Cloud and platform engineers building Azure infrastructure with Terraform.
+
+- **Tools:** Terraform, Azure CLI, GitHub CLI
+- **Extensions:** Terraform, YAML
+
 ## How to Use
 
 1. **Copy the Folder**: Copy the contents of the specific challenge folder (e.g., `.devcontainer/challenge-1-backend/`) into the `.devcontainer/` folder of your own repository.

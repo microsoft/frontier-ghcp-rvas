@@ -8,4 +8,4 @@ Start here:
 2. Complete [Getting Started](tracks/getting-started.md) before opening a challenge.
 3. Use the [Track Catalog](tracks/README.md) or jump straight into a track guide from the navigation.
 
-The navigation keeps the core tracks first, then the challenge 7-18 tracks, then the shared reference material used across the hackathon.
+The navigation keeps the core tracks first, then the challenge 7-21 tracks, then the shared reference material used across the hackathon.

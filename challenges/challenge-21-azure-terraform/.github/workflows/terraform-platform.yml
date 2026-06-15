@@ -1,0 +1,67 @@
+name: Terraform Platform
+
+on:
+  pull_request:
+    paths:
+      - 'terraform/azure/**'
+      - 'modules/**'
+      - '.tflint.hcl'
+      - '.github/workflows/terraform-platform.yml'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: terraform-platform-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TF_IN_AUTOMATION: true
+  TF_INPUT: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.6
+
+      - name: Terraform fmt
+        run: terraform fmt -recursive -check
+
+      - name: Terraform init
+        run: terraform -chdir=terraform/azure init -backend=false
+
+      - name: Terraform validate
+        run: terraform -chdir=terraform/azure validate
+
+      - name: TFLint
+        uses: terraform-linters/setup-tflint@v4
+
+      - name: Run TFLint
+        run: |
+          tflint --init --config .tflint.hcl
+          tflint --chdir=terraform/azure --config ../../.tflint.hcl
+
+      # TODO(workshop): Add Azure login and terraform plan after you choose the
+      # authentication model for this repository. Prefer OIDC with an Azure
+      # federated credential instead of a long-lived client secret.
+      #
+      # - name: Azure login
+      #   uses: azure/login@v2
+      #   with:
+      #     client-id: ${{ secrets.AZURE_CLIENT_ID }}
+      #     tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+      #     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      #
+      # - name: Terraform plan
+      #   run: terraform -chdir=terraform/azure plan -no-color -out=tfplan

@@ -117,7 +117,7 @@ nav:
           - Stage 3 - Code Quality and Docs: tracks/challenge-6-agentic-workflows-track/stage-3-code-quality-docs.md
           - Stage 4 - CI Monitoring and ChatOps: tracks/challenge-6-agentic-workflows-track/stage-4-ci-monitoring-chatops.md
           - Stage 5 - Security and Advanced: tracks/challenge-6-agentic-workflows-track/stage-5-security-advanced.md
-  - Challenges 7-20:
+  - Challenges 7-21:
       - Challenge 7 - Copilot SDK:
           - Overview: tracks/challenge-7-copilot-sdk-track.md
           - Phase 1 - Foundation: tracks/challenge-7-copilot-sdk-track/phase-1-foundation.md
@@ -265,6 +265,13 @@ nav:
           - Stage 3 - Azure Automation: tracks/challenge-20-powershell-automation-track/stage-3-azure-automation.md
           - Stage 4 - Pester Tests: tracks/challenge-20-powershell-automation-track/stage-4-pester-tests.md
           - Stage 5 - Module and CI: tracks/challenge-20-powershell-automation-track/stage-5-module-and-ci.md
+      - Challenge 21 - Azure Terraform:
+          - Overview: tracks/challenge-21-azure-terraform-track.md
+          - Phase 1 - State and Naming Baseline: tracks/challenge-21-azure-terraform-track/phase-1-state-and-naming.md
+          - Phase 2 - Network and App Platform: tracks/challenge-21-azure-terraform-track/phase-2-network-and-platform.md
+          - Phase 3 - Identity and Secrets: tracks/challenge-21-azure-terraform-track/phase-3-identity-and-secrets.md
+          - Phase 4 - Modules and Environment Promotion: tracks/challenge-21-azure-terraform-track/phase-4-modules-and-environments.md
+          - Phase 5 - Policy, CI, and Drift Response: tracks/challenge-21-azure-terraform-track/phase-5-policy-ci-and-drift.md
   - Reference:
       - Copilot Guide: copilot-guide.md
       - Prompt Engineering: prompt-engineering.md

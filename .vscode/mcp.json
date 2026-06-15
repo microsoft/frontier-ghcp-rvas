@@ -1,40 +1,4 @@
 {
   "servers": {
-    "github": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp",
-      "gallery": "https://1es-mcp.data.eastus.azure-apicenter.ms/workspaces/default",
-      "version": "original"
-    },
-    "microsoft-docs": {
-      "type": "http",
-      "url": "https://learn.microsoft.com/api/mcp",
-      "gallery": "https://1es-mcp.data.eastus.azure-apicenter.ms/workspaces/default",
-      "version": "original"
-    },
-    "context7": {
-      "type": "http",
-      "url": "https://mcp.context7.com/mcp",
-      "headers": {
-        "CONTEXT7_API_KEY": "${input:CONTEXT7_API_KEY}"
-      }
-    },
-    "playwright": {
-      "command": "npx",
-      "args": ["@playwright/mcp@latest"],
-      "type": "stdio"
-    },
-    "atlassian": {
-      "type": "http",
-      "url": "https://mcp.atlassian.com/v1/sse"
-    }
-  },
-  "inputs": [
-    {
-      "id": "CONTEXT7_API_KEY",
-      "type": "promptString",
-      "description": "Context7 API key",
-      "password": true
-    }
-  ]
+  }
 }

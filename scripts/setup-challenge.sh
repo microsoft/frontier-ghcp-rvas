@@ -56,6 +56,7 @@ declare -A CHALLENGE_MAP=(
   [challenge-17-spec-to-ship]="challenge-17-spec-to-ship"
   [challenge-18-cobol-banking]="challenge-18-cobol-banking"
   [challenge-19-wcf-banking]="challenge-19-wcf-banking"
+  [challenge-21-azure-terraform]="challenge-21-azure-terraform"
 )
 
 declare -A TRACK_FILE_MAP=(
@@ -79,6 +80,7 @@ declare -A TRACK_FILE_MAP=(
   [challenge-17-spec-to-ship]="challenge-17-spec-to-ship-track"
   [challenge-18-cobol-banking]="challenge-18-cobol-modernization-track"
   [challenge-19-wcf-banking]="challenge-19-wcf-modernization-track"
+  [challenge-21-azure-terraform]="challenge-21-azure-terraform-track"
 )
 
 declare -A TRACK_DIR_MAP=(
@@ -102,6 +104,7 @@ declare -A TRACK_DIR_MAP=(
   [challenge-17-spec-to-ship]="challenge-17-spec-to-ship-track"
   [challenge-18-cobol-banking]="challenge-18-cobol-modernization-track"
   [challenge-19-wcf-banking]="challenge-19-wcf-modernization-track"
+  [challenge-21-azure-terraform]="challenge-21-azure-terraform-track"
 )
 
 # ── Validate input ──────────────────────────────────────────────────
@@ -127,6 +130,13 @@ fi
 CHALLENGE_DIR="${CHALLENGE_MAP[$CHALLENGE_KEY]}"
 TRACK_FILE_NAME="${TRACK_FILE_MAP[$CHALLENGE_KEY]}"
 TRACK_DIR_NAME="${TRACK_DIR_MAP[$CHALLENGE_KEY]}"
+TRACK_FILE_PATH="$REPO_ROOT/tracks/${TRACK_FILE_NAME}.md"
+TRACK_DIR_PATH="$REPO_ROOT/tracks/$TRACK_DIR_NAME"
+TRACK_ASSETS_PRESENT=false
+
+if [[ -f "$TRACK_FILE_PATH" || -d "$TRACK_DIR_PATH" ]]; then
+  TRACK_ASSETS_PRESENT=true
+fi
 
 echo "=== Challenge Setup: $CHALLENGE_KEY ==="
 echo ""
@@ -156,33 +166,37 @@ done
 # Keep: getting-started.md and the specific track .md + subfolder.
 # README.md and TRACK_STRUCTURE.md are removed -- they reference all
 # tracks and are a contributor guide, respectively.
-KEEP_TRACK_FILES=(
-  "getting-started.md"
-  "${TRACK_FILE_NAME}.md"
-)
+if [[ "$TRACK_ASSETS_PRESENT" == true ]]; then
+  KEEP_TRACK_FILES=(
+    "getting-started.md"
+    "${TRACK_FILE_NAME}.md"
+  )
 
-for item in "$REPO_ROOT"/tracks/*; do
-  item_name="$(basename "$item")"
+  for item in "$REPO_ROOT"/tracks/*; do
+    item_name="$(basename "$item")"
 
-  # Check if it's the track subfolder we need
-  if [[ "$item_name" == "$TRACK_DIR_NAME" && -d "$item" ]]; then
-    continue
-  fi
+    # Check if it's the track subfolder we need
+    if [[ "$item_name" == "$TRACK_DIR_NAME" && -d "$item" ]]; then
+      continue
+    fi
 
-  # Check if it's one of the files we always keep
-  keep=false
-  for keep_file in "${KEEP_TRACK_FILES[@]}"; do
-    if [[ "$item_name" == "$keep_file" ]]; then
-      keep=true
-      break
+    # Check if it's one of the files we always keep
+    keep=false
+    for keep_file in "${KEEP_TRACK_FILES[@]}"; do
+      if [[ "$item_name" == "$keep_file" ]]; then
+        keep=true
+        break
+      fi
+    done
+
+    if [[ "$keep" == false ]]; then
+      rm -rf "$item"
+      echo "[CLEAN] Removed tracks/$item_name"
     fi
   done
-
-  if [[ "$keep" == false ]]; then
-    rm -rf "$item"
-    echo "[CLEAN] Removed tracks/$item_name"
-  fi
-done
+else
+  echo "[WARN] Track content for $CHALLENGE_KEY is not in tracks/ yet -- leaving tracks/ intact"
+fi
 
 # ── Remove unrelated devcontainer configs ───────────────────────────
 
@@ -216,7 +230,8 @@ done
 
 # ── Replace root README with a focused version ──────────────────────
 
-cat > "$REPO_ROOT/README.md" <<EOF
+if [[ "$TRACK_ASSETS_PRESENT" == true ]]; then
+  cat > "$REPO_ROOT/README.md" <<EOF
 # GitHub Copilot Enterprise Hackathon
 
 This workspace is set up for your challenge. Everything you don't need
@@ -243,6 +258,37 @@ Before you begin, verify Copilot is working:
 - [MCP Servers Guide](docs/mcp-servers.md)
 - [Troubleshooting](TROUBLESHOOTING.md)
 EOF
+else
+  cat > "$REPO_ROOT/README.md" <<EOF
+# GitHub Copilot Enterprise Hackathon
+
+This workspace is set up for your challenge. The starter files are ready
+under \
+\`challenges/${CHALLENGE_DIR}/\`, and the shared docs were left in place
+because the dedicated track guide has not been added to \`tracks/\` yet.
+
+## Start Here
+
+1. Open \`challenges/${CHALLENGE_DIR}/\`
+2. Read [Getting Started](tracks/getting-started.md)
+3. Use the shared docs in \`docs/\` if you need Copilot or Azure setup help
+
+## Quick Copilot Check
+
+Before you begin, verify Copilot is working:
+
+1. Look at the bottom-right of VS Code -- the Copilot icon should say "Ready"
+2. Press \`Ctrl+Shift+I\` (or \`Cmd+Shift+I\` on Mac) to open Chat
+3. Ask: "Hello, are you working?"
+
+## Resources
+
+- [Copilot Guide](docs/copilot-guide.md)
+- [Prompt Engineering Guide](docs/prompt-engineering.md)
+- [MCP Servers Guide](docs/mcp-servers.md)
+- [Troubleshooting](TROUBLESHOOTING.md)
+EOF
+fi
 echo "[OK] Replaced root README.md"
 
 # ── Summary ─────────────────────────────────────────────────────────

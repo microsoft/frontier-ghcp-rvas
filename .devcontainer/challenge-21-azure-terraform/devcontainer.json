@@ -1,0 +1,23 @@
+{
+	"name": "Challenge 21 - Azure Terraform",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/terraform:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"hashicorp.terraform",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-21-azure-terraform && terraform -chdir=challenges/challenge-21-azure-terraform/terraform/azure init -backend=false",
+	"remoteUser": "vscode"
+}

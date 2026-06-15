@@ -1,4 +1,4 @@
-# Danny — History
+# Danny -- History
 
 ## Core Context
 
@@ -29,3 +29,13 @@
 - Added challenges 19 and 20 (were on disk but missing from nav entirely) + `tracks/TRACK_STRUCTURE.md` (as top-level "Track Structure").
 - Count: 168 track .md files, all now in nav exactly once; 147 of them newly added.
 - Verify with `. .venv-docs/bin/activate && mkdocs build --strict`. Strict FAILS on warnings (bad paths), but "not in nav" messages are INFO-level and do NOT fail strict. Leftover INFO entries are `challenges/**` starter materials and a nested `docs/docs/` mirror -- intentionally NOT in site nav (exercise files, not docs). Build must stay exit 0 / warning-free.
+
+### 2026-06-12 -- Challenge 21 Azure Terraform alignment
+- Challenge 21 is now the dedicated Azure Terraform track/challenge pair. Treat it as separate from Challenge 3 DevOps when updating catalog, nav, or challenge-selection copy.
+- `docs/challenge-selection.md` needs a full wording pass whenever the challenge table expands or is renumbered; the surrounding step text must match the visible table range, not just the table rows.
+- Challenge 21 follows the specialized-track phase convention (`phase-*` files, Phase labels in MkDocs). Its single participant Terraform root is `challenges/challenge-21-azure-terraform/terraform/azure`; do not reintroduce duplicate root-level `.tf` files under `terraform/`.
+- When normalizing a track from stage-style naming to phase-style naming, check filenames, H1s, navigation labels, relative links, devcontainer paths, workflow paths, and setup-script output together so participants see one coherent working path.
+
+### 2026-06-15 -- Challenge 21 richness guardrails
+- Enrich Challenge 21 through judgment pressure, not platform sprawl. Keep it Azure-only, phase-based, and scoped to Azure Container Apps, remote state, network shape, managed identity and Key Vault, module cleanup, CI gates, and drift response.
+- Future Challenge 21 edits should preserve the 4-6 hour cap by sharpening evidence prompts and acceptance criteria instead of adding a sixth phase or larger Azure architecture.

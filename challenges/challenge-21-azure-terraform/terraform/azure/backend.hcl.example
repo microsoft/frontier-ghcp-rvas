@@ -1,0 +1,7 @@
+resource_group_name  = "rg-tfstate-shared"
+storage_account_name = "stplatformstate"
+container_name       = "tfstate"
+
+# TODO(workshop): Pick a key convention that makes environment and region clear
+# without exposing team or customer names.
+key = "azure-terraform-dev-eastus2.tfstate"

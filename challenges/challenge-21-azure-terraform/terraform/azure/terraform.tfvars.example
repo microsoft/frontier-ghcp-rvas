@@ -1,0 +1,28 @@
+location               = "eastus2"
+name_prefix            = "teamalpha"
+environment            = "dev"
+tfstate_container_name = "tfstate"
+
+# TODO(workshop): Decide whether the state account should use LRS for cost or
+# ZRS for a stronger regional availability story.
+storage_replication_type = "LRS"
+
+# TODO(workshop): These are safe enough for bootstrap exercises, but they are
+# not automatically the right production defaults. Record the final decision in
+# docs/platform-notes.md before using remote state for a shared environment.
+enable_storage_public_network_access = true
+enable_storage_account_keys          = true
+blob_retention_days                  = 14
+container_retention_days             = 14
+
+vnet_name                      = "vnet-teamalpha-dev"
+subnet_name                    = "snet-app"
+log_analytics_workspace_name   = "log-teamalpha-dev"
+log_retention_days             = 30
+container_app_environment_name = "cae-teamalpha-dev"
+
+tags = {
+  owner               = "platform-team"
+  cost_center         = "hackathon"
+  data_classification = "internal"
+}

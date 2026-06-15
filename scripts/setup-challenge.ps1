@@ -48,6 +48,7 @@ $ChallengeMap = @{
     "challenge-17-spec-to-ship"       = "challenge-17-spec-to-ship"
     "challenge-18-cobol-banking"      = "challenge-18-cobol-banking"
     "challenge-19-wcf-banking"        = "challenge-19-wcf-banking"
+    "challenge-21-azure-terraform"    = "challenge-21-azure-terraform"
 }
 
 $TrackFileMap = @{
@@ -71,6 +72,7 @@ $TrackFileMap = @{
     "challenge-17-spec-to-ship"       = "challenge-17-spec-to-ship-track"
     "challenge-18-cobol-banking"      = "challenge-18-cobol-modernization-track"
     "challenge-19-wcf-banking"        = "challenge-19-wcf-modernization-track"
+    "challenge-21-azure-terraform"    = "challenge-21-azure-terraform-track"
 }
 
 $TrackDirMap = @{
@@ -94,6 +96,7 @@ $TrackDirMap = @{
     "challenge-17-spec-to-ship"       = "challenge-17-spec-to-ship-track"
     "challenge-18-cobol-banking"      = "challenge-18-cobol-modernization-track"
     "challenge-19-wcf-banking"        = "challenge-19-wcf-modernization-track"
+    "challenge-21-azure-terraform"    = "challenge-21-azure-terraform-track"
 }
 
 # Validate input
@@ -108,6 +111,9 @@ if (-not $ChallengeMap.ContainsKey($Challenge)) {
 $ChallengeDir = $ChallengeMap[$Challenge]
 $TrackFileName = $TrackFileMap[$Challenge]
 $TrackDirName = $TrackDirMap[$Challenge]
+$TrackFilePath = Join-Path $RepoRoot "tracks/$TrackFileName.md"
+$TrackDirPath = Join-Path $RepoRoot "tracks/$TrackDirName"
+$TrackAssetsPresent = (Test-Path $TrackFilePath) -or (Test-Path $TrackDirPath)
 
 Write-Host "=== Challenge Setup: $Challenge ===" -ForegroundColor Cyan
 Write-Host ""
@@ -130,20 +136,26 @@ Get-ChildItem -Path $ChallengesDir -Directory | ForEach-Object {
 }
 
 # Remove unrelated track files and folders
-$KeepTrackFiles = @("getting-started.md", "$TrackFileName.md")
 $TracksDir = Join-Path $RepoRoot "tracks"
 
-Get-ChildItem -Path $TracksDir | ForEach-Object {
-    $ItemName = $_.Name
+if ($TrackAssetsPresent) {
+    $KeepTrackFiles = @("getting-started.md", "$TrackFileName.md")
 
-    # Keep the track subfolder
-    if ($ItemName -eq $TrackDirName -and $_.PSIsContainer) { return }
+    Get-ChildItem -Path $TracksDir | ForEach-Object {
+        $ItemName = $_.Name
 
-    # Keep shared files
-    if ($KeepTrackFiles -contains $ItemName) { return }
+        # Keep the track subfolder
+        if ($ItemName -eq $TrackDirName -and $_.PSIsContainer) { return }
 
-    Remove-Item -Path $_.FullName -Recurse -Force
-    Write-Host "[CLEAN] Removed tracks/$ItemName" -ForegroundColor DarkGray
+        # Keep shared files
+        if ($KeepTrackFiles -contains $ItemName) { return }
+
+        Remove-Item -Path $_.FullName -Recurse -Force
+        Write-Host "[CLEAN] Removed tracks/$ItemName" -ForegroundColor DarkGray
+    }
+}
+else {
+    Write-Host "[WARN] Track content for $Challenge is not in tracks/ yet -- leaving tracks/ intact" -ForegroundColor Yellow
 }
 
 # Remove unrelated devcontainer configs
@@ -178,6 +190,8 @@ foreach ($RemoveFile in @("FACILITATOR_GUIDE.md", "CONTRIBUTING.md")) {
 
 # Replace root README with a focused version
 $RootReadme = Join-Path $RepoRoot "README.md"
+
+if ($TrackAssetsPresent) {
 @"
 # GitHub Copilot Enterprise Hackathon
 
@@ -205,6 +219,37 @@ Before you begin, verify Copilot is working:
 - [MCP Servers Guide](docs/mcp-servers.md)
 - [Troubleshooting](TROUBLESHOOTING.md)
 "@ | Set-Content -Path $RootReadme
+}
+else {
+@"
+# GitHub Copilot Enterprise Hackathon
+
+This workspace is set up for your challenge. The starter files are ready
+under `challenges/$ChallengeDir/`, and the shared docs were left in place
+because the dedicated track guide has not been added to `tracks/` yet.
+
+## Start Here
+
+1. Open `challenges/$ChallengeDir/`
+2. Read [Getting Started](tracks/getting-started.md)
+3. Use the shared docs in `docs/` if you need Copilot or Azure setup help
+
+## Quick Copilot Check
+
+Before you begin, verify Copilot is working:
+
+1. Look at the bottom-right of VS Code -- the Copilot icon should say "Ready"
+2. Press ``Ctrl+Shift+I`` (or ``Cmd+Shift+I`` on Mac) to open Chat
+3. Ask: "Hello, are you working?"
+
+## Resources
+
+- [Copilot Guide](docs/copilot-guide.md)
+- [Prompt Engineering Guide](docs/prompt-engineering.md)
+- [MCP Servers Guide](docs/mcp-servers.md)
+- [Troubleshooting](TROUBLESHOOTING.md)
+"@ | Set-Content -Path $RootReadme
+}
 Write-Host "[OK] Replaced root README.md" -ForegroundColor Green
 
 Write-Host ""

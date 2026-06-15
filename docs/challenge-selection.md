@@ -4,17 +4,17 @@ Use this page to choose a challenge in a clear order. The detailed instructions 
 
 ## Step 1: Decide What Kind of Session You Are Running
 
-Start with a core track if you are working solo or in a role-based group and want the standard 6-8 hour format.
+Start with challenges 0-6 if you want a core track built around a primary role and the standard 6-8 hour format.
 
-Choose one of the challenge 7-18 tracks if one of these is true:
+Choose one of the challenge 7-21 tracks if one of these is true:
 
 - You already finished a core track and want a harder follow-up.
-- You are running a team exercise instead of an individual track.
-- You want a specialized scenario such as legacy modernization, documentation automation, or operational tooling.
+- You want a team-based, advanced, or more specialized scenario.
+- You want a track focused on areas such as legacy modernization, documentation automation, or operational tooling.
 
 ## Step 2: Pick a Challenge
 
-Challenges 0-6 are the core tracks built around a primary role. Challenges 7-20 are follow-up and specialized scenarios for harder work, team exercises, legacy modernization, and workflow automation. Pick the row that best matches the work people actually do day to day.
+Challenges 0-6 are the core tracks built around a primary role. Challenges 7-21 are follow-up and specialized scenarios for harder work, team exercises, legacy modernization, and workflow automation. Pick the row that best matches the work people actually do day to day.
 
 | Challenge | Focus or when to choose | Track |
 | --- | --- | --- |
@@ -39,6 +39,7 @@ Challenges 0-6 are the core tracks built around a primary role. Challenges 7-20 
 | 18 | COBOL banking modernization | [COBOL Banking Modernization](tracks/challenge-18-cobol-modernization-track.md) |
 | 19 | Legacy WCF banking modernization | [Legacy WCF Banking Modernization](tracks/challenge-19-wcf-modernization-track.md) |
 | 20 | PowerShell automation | [PowerShell Automation](tracks/challenge-20-powershell-automation-track.md) |
+| 21 | Azure landing zones, Terraform modules, identity, policy, CI | [Azure Terraform Track](tracks/challenge-21-azure-terraform-track.md) |
 
 ## Step 3: Do the Shared Setup Before Opening the Challenge
 

@@ -23,11 +23,49 @@
 
 **What:** Upgraded the docs site from the plain default MkDocs theme to Material for MkDocs (navigation tabs/sections/top, light/dark palette toggle, search suggest/highlight, code copy) so the published GitHub Pages site renders tracks, challenges, and guides as a polished, navigable website. Pinned `mkdocs-material==9.5.49`, `pymdown-extensions==10.14`, and `pygments==2.18.0` in `requirements-docs.txt`. The existing `.github/workflows/deploy-docs.yml` is unchanged. `mkdocs build --strict` passes (exit 0).
 
-**Why:** The pygments pin is mandatory — pymdown-extensions 10.14 passes `filename=None` for untitled code blocks and pygments 2.19+ crashes in `html.escape` on that, breaking the strict build in CI. `pygments==2.18.0` is the last release that handles it.
+**Why:** The pygments pin is mandatory -- pymdown-extensions 10.14 passes `filename=None` for untitled code blocks and pygments 2.19+ crashes in `html.escape` on that, breaking the strict build in CI. `pygments==2.18.0` is the last release that handles it.
 
-**Supersedes:** The theme choice in the 2026-04-28 "MkDocs and GitHub Pages docs publishing shape" decision — plain default theme replaced by Material. The build command (`mkdocs build --strict`), dependency manifest, and dedicated Pages workflow remain as decided there.
+**Supersedes:** The theme choice in the 2026-04-28 "MkDocs and GitHub Pages docs publishing shape" decision -- plain default theme replaced by Material. The build command (`mkdocs build --strict`), dependency manifest, and dedicated Pages workflow remain as decided there.
 
 **Manual step (owner action required):** Set GitHub → Settings → Pages → Source = "GitHub Actions" once in the UI. This cannot be configured from code.
+
+### 2026-06-12: Challenge 21 is a dedicated Azure Terraform track with its own scaffold and devcontainer
+
+**By:** Danny, Rusty, Basher
+
+**What:** Added Challenge 21 as `challenge-21-azure-terraform`, positioned as a dedicated Azure Terraform track separate from the broader DevOps track. The track is a 4-6 hour Azure-only path focused on remote state, Azure platform setup, managed identity and Key Vault, module reuse, and CI plus drift handling. The corresponding challenge scaffold lives under `challenges/challenge-21-azure-terraform/terraform/azure`, ships with a dedicated lean devcontainer, and includes a valid Azure starter that provisions a resource group plus a private storage account and container for Terraform state exercises.
+
+**Guardrail:** When a challenge scaffold lands before its track guide, `scripts/setup-challenge.sh` and `scripts/setup-challenge.ps1` must preserve shared `tracks/` content instead of deleting it or leaving a broken README link.
+
+**Why:** The repository already covered Terraform inside the broader DevOps track, but it did not have a Terraform-first Azure infrastructure path. This isolates infrastructure authoring and review work into its own workshop-ready challenge without duplicating the container and Kubernetes scope from Challenge 3.
+
+### 2026-06-12: Challenge 21 phase naming and Terraform root
+
+**By:** Danny (Lead), requested by Marco Olivo
+
+**What:** Challenge 21 uses `phase-*` track files and Phase labels in navigation, matching the specialized track convention used by nearby challenges 17-19. The participant Terraform working root is `challenges/challenge-21-azure-terraform/terraform/azure`; duplicate root-level Terraform files under `terraform/` were consolidated into that path or removed.
+
+**Why:** Challenge 21 had both `stage-*` track pages and two Terraform roots, which made it look different from the specialized tracks and gave participants two possible places to work. The track, devcontainer, workflow, and starter files now point to one clear path.
+
+### 2026-06-15: Challenge 21 requires Terraform review judgment
+
+**By:** Danny, Rusty, Basher, Livingston, requested by Scribe
+
+**What:** Challenge 21 should be richer by adding realistic Azure Terraform judgment pressure, not by expanding the platform footprint. Keep it Azure-only, phase-based, and centered on `challenges/challenge-21-azure-terraform/terraform/azure`, with Azure Container Apps as the canonical hosting target. The track now expects participants to resolve ambiguous stakeholder requirements, review Terraform plans before apply, document rejected options, justify identity and access choices, define environment promotion rules, and handle drift or failed applies through a short incident runbook.
+
+**Scaffold guardrails:** The starter should stay intentionally incomplete enough to require decisions rather than copy-paste completion. It may include constrained variables, Azure naming and tagging guardrails, backend access choices, validation hooks, CI lint placeholders, drift evidence, and compact review docs. It should not add Kubernetes, Azure Container Registry, a full app build, complex multi-region deployment, private endpoint implementation, enterprise landing-zone scaffolding, production-grade policy suites, extra cloud providers, challenge-folder README files, or stage naming.
+
+**4-6 hour cap:** Keep deliverables to five phase-sized increments: state and naming, network and Container Apps environment, identity and Key Vault design, module and environment cleanup, and CI plus drift response. New artifacts should sharpen existing work rather than add a sixth phase.
+
+**Why:** The previous Challenge 21 flow was structurally sound but too linear. A participant could ask an AI assistant to generate Terraform phase by phase and pass most checks. The richer pattern rewards reasoning about naming, state, modules, identity, policy severity, plan review, and drift response while staying workshop-sized.
+
+### 2026-06-12: Challenge selection copy must stay aligned with the current catalog range
+
+**By:** Livingston, Danny
+
+**What:** Any update to `docs/challenge-selection.md` that expands or renumbers the challenge table must also update the surrounding instructional copy so the stated challenge range matches the table and repo structure.
+
+**Why:** Reviewer validation caught a mismatch where Step 1 still referenced an older challenge range after the catalog had expanded, which made the selection flow inconsistent even though the table itself was current.
 
 ### 2026-05-04: Challenge 19 uses CoreWCF on .NET 8 (not classic WCF/.NET Framework)
 

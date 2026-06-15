@@ -2,7 +2,7 @@
 
 ## Overview
 
-This hackathon is organized into **7 core tracks** plus **12 challenge 7-18 tracks** to provide structured learning paths for different team roles. As a facilitator, you'll guide participants to choose the right track and support them through their journey.
+This hackathon is organized into **7 core tracks** plus **15 challenge 7-21 tracks** to provide structured learning paths for different team roles. As a facilitator, you'll guide participants to choose the right track and support them through their journey.
 
 ## Pre-Hackathon Setup (1 week before)
 
@@ -39,7 +39,7 @@ Review the seven core tracks:
 - [ ] [Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)
 - [ ] [Challenge 5: QA & Testing Track](./tracks/challenge-5-qa-track.md)
 
-**Challenge 7-18 Tracks:**
+**Challenge 7-21 Tracks:**
 
 - [ ] [Copilot SDK Track](./tracks/challenge-7-copilot-sdk-track.md)
 - [ ] [Flight Delay Predictor Track](./tracks/challenge-8-flight-delay-track.md)
@@ -405,7 +405,7 @@ Ask participants to note:
 - Most helpful feature
 - Track-specific learnings
 - Time saved (estimate)
-- Whether a challenge 7-18 track was attempted
+- Whether a challenge 7-21 track was attempted
 
 ## Post-Hackathon
 

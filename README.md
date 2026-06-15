@@ -2,11 +2,11 @@
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **19 challenge tracks** with hands-on work that teaches your team how to use GitHub Copilot effectively.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **22 challenge tracks** with hands-on work that teaches your team how to use GitHub Copilot effectively.
 
 ## Hackathon Overview
 
-This hackathon is organized into **19 challenge tracks** covering all skill levels and roles:
+This hackathon is organized into **22 challenge tracks** covering all skill levels and roles:
 
 ### Choose Your Track
 
@@ -31,6 +31,7 @@ This hackathon is organized into **19 challenge tracks** covering all skill leve
 - 🏗️ **[Challenge 18: COBOL Banking Modernization](./tracks/challenge-18-cobol-modernization-track.md)** - Reverse-engineer and modernize a COBOL banking system into a full-stack web app
 - 🔧 **[Challenge 19: WCF Banking Modernization](./tracks/challenge-19-wcf-modernization-track.md)** - Understand a legacy WCF SOAP banking service and migrate it to a REST API
 - 💻 **[Challenge 20: PowerShell Automation](./tracks/challenge-20-powershell-automation-track.md)** - Fix, test, document, and package PowerShell scripts for real sysadmin work
+- ☁️ **[Challenge 21: Azure Terraform Track](./tracks/challenge-21-azure-terraform-track.md)** - Build an Azure Terraform foundation with modules, identity, policy checks, and CI guardrails
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -182,7 +183,7 @@ Throughout these challenges, you'll master:
 
 **Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
-All 19 challenges are available, and each track has a dedicated challenge:
+All 22 challenges are available, and each track has a dedicated challenge:
 
 ### [Challenge 0: Product Planning -- TaskFlow v2.0](./challenges/challenge-0-product-planning/) ([Track](./tracks/challenge-0-product-planning-track.md))
 
@@ -401,6 +402,16 @@ Reverse-engineer a legacy WCF banking service (Meridian Savings Bank) built circ
 **Copilot Focus**: Script comprehension, bug detection, error handling, test generation, module packaging, CI pipeline creation
 
 Take three inherited PowerShell scripts from the fictional Contoso IT team -- a stale account finder, a disk cleanup tool, and an Azure resource tagger -- and bring them up to production standard. Use Copilot to understand the code, fix bugs, add error handling and logging, write Pester tests, run static analysis, and wire everything into a GitHub Actions CI pipeline.
+
+---
+
+### Challenge 21: Azure Terraform Foundation ([Track](./tracks/challenge-21-azure-terraform-track.md))
+
+**Team**: Platform Engineers, DevOps Engineers, Cloud Engineers
+**Skills**: Terraform, Azure networking, managed identity, Key Vault, GitHub Actions
+**Copilot Focus**: Infrastructure review, plan explanation, module extraction, CI workflow generation
+
+Build an Azure Terraform foundation across 5 phases: bootstrap remote state and naming rules, provision a small Azure platform around Container Apps, wire managed identity and Key Vault, refactor the configuration into reusable modules for multiple environments, then add CI guardrails and a drift response runbook.
 
 ---
 
