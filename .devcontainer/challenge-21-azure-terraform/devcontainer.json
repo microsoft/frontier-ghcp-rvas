@@ -1,10 +1,15 @@
 {
 	"name": "Challenge 21 - Azure Terraform",
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	// NOTE: The ghcr.io/devcontainers/features/terraform feature was intentionally
+	// removed. That feature verifies its download by fetching HashiCorp's GPG signing
+	// key from keyserver.ubuntu.com, which is unreachable in some build environments
+	// (e.g. WSL/Debian) and fails the whole build with:
+	//   "gpg: keyserver receive failed: No keyserver available" -> "(!) Failed to get gpg key."
+	// Instead we install Terraform via install-terraform.sh, which verifies the
+	// download with a SHA256 checksum only (no GPG, no keyserver). devcontainer.json
+	// supports JSONC, so these comments are valid here.
 	"features": {
-		"ghcr.io/devcontainers/features/terraform:1": {
-			"version": "latest"
-		},
 		"ghcr.io/devcontainers/features/azure-cli:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
@@ -18,6 +23,8 @@
 			]
 		}
 	},
+	// Install Terraform first so it is on PATH before postCreateCommand runs `terraform init`.
+	"onCreateCommand": "bash .devcontainer/challenge-21-azure-terraform/install-terraform.sh",
 	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-21-azure-terraform && terraform -chdir=challenges/challenge-21-azure-terraform/terraform/azure init -backend=false",
 	"remoteUser": "vscode"
 }
