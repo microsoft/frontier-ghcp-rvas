@@ -1,0 +1,414 @@
+{
+  "generated_by": "scripts/generate-challenge-catalog.py",
+  "source": "docs/challenge-selection.md",
+  "count": 22,
+  "categories": [
+    "Core tracks",
+    "Advanced tracks",
+    "Team sprints",
+    "Legacy modernization",
+    "Workflow automation",
+    "Azure platform"
+  ],
+  "challenges": [
+    {
+      "id": 0,
+      "number": 0,
+      "slug": "challenge-0",
+      "title": "Product Planning",
+      "display_title": "Challenge 0: Product Planning",
+      "focus": "Product planning, backlog management, and documentation using GitHub Copilot and GitHub's collaboration features",
+      "selection_hint": "Product planning, backlog shaping, release planning",
+      "duration": "6-8 hours",
+      "category": "Core tracks",
+      "track_url": "tracks/challenge-0-product-planning-track.md",
+      "starter_path": "challenges/challenge-0-product-planning/",
+      "tags": [
+        "core-tracks",
+        "core",
+        "backlog",
+        "docs"
+      ]
+    },
+    {
+      "id": 1,
+      "number": 1,
+      "slug": "challenge-1",
+      "title": "Web API",
+      "display_title": "Challenge 1: Web API",
+      "focus": "Building APIs and backend services with GitHub Copilot",
+      "selection_hint": "APIs, authentication, persistence, backend testing",
+      "duration": "6-8 hours",
+      "category": "Core tracks",
+      "track_url": "tracks/challenge-1-web-api-track.md",
+      "starter_path": "challenges/challenge-1-web-api/",
+      "tags": [
+        "core-tracks",
+        "core",
+        "api"
+      ]
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "slug": "challenge-2",
+      "title": "ML & AI",
+      "display_title": "Challenge 2: ML & AI",
+      "focus": "Data analysis, machine learning, and AI development with GitHub Copilot",
+      "selection_hint": "Data analysis, notebooks, model development",
+      "duration": "6-8 hours",
+      "category": "Core tracks",
+      "track_url": "tracks/challenge-2-ml-ai-track.md",
+      "starter_path": "challenges/challenge-2-ml-ai/",
+      "tags": [
+        "core-tracks",
+        "core",
+        "ml"
+      ]
+    },
+    {
+      "id": 3,
+      "number": 3,
+      "slug": "challenge-3",
+      "title": "DevOps",
+      "display_title": "Challenge 3: DevOps",
+      "focus": "Infrastructure as Code, containerization, and deployment automation with GitHub Copilot",
+      "selection_hint": "Containers, Terraform, Kubernetes, CI/CD",
+      "duration": "6-8 hours",
+      "category": "Core tracks",
+      "track_url": "tracks/challenge-3-devops-track.md",
+      "starter_path": "challenges/challenge-3-devops/",
+      "tags": [
+        "core-tracks",
+        "core"
+      ]
+    },
+    {
+      "id": 4,
+      "number": 4,
+      "slug": "challenge-4",
+      "title": "Frontend",
+      "display_title": "Challenge 4: Frontend",
+      "focus": "Building modern, interactive user interfaces with GitHub Copilot",
+      "selection_hint": "React, TypeScript, UI state, accessibility",
+      "duration": "6-8 hours",
+      "category": "Core tracks",
+      "track_url": "tracks/challenge-4-frontend-track.md",
+      "starter_path": "challenges/challenge-4-frontend/",
+      "tags": [
+        "core-tracks",
+        "core",
+        "frontend"
+      ]
+    },
+    {
+      "id": 5,
+      "number": 5,
+      "slug": "challenge-5",
+      "title": "QA & Testing",
+      "display_title": "Challenge 5: QA & Testing",
+      "focus": "Using GitHub Copilot to test a real application -- test planning, test generation, debugging, and reporting",
+      "selection_hint": "Test planning, exploratory testing, automation",
+      "duration": "6-8 hours",
+      "category": "Core tracks",
+      "track_url": "tracks/challenge-5-qa-track.md",
+      "starter_path": "challenges/challenge-5-qa/",
+      "tags": [
+        "core-tracks",
+        "core",
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "id": 6,
+      "number": 6,
+      "slug": "challenge-6",
+      "title": "Agentic Workflows",
+      "display_title": "Challenge 6: Agentic Workflows",
+      "focus": "Build and operate GitHub Agentic Workflows -- Markdown-defined, AI-powered repository automation running in GitHub Actions",
+      "selection_hint": "Repository automation with AI workflows",
+      "duration": "6-8 hours",
+      "category": "Core tracks",
+      "track_url": "tracks/challenge-6-agentic-workflows-track.md",
+      "starter_path": "challenges/challenge-6-agentic-workflows/",
+      "tags": [
+        "core-tracks",
+        "core"
+      ]
+    },
+    {
+      "id": 7,
+      "number": 7,
+      "slug": "challenge-7",
+      "title": "Copilot SDK Developer",
+      "display_title": "Challenge 7: Copilot SDK Developer",
+      "focus": "Building a Release Notes Agent from scratch using the GitHub Copilot SDK",
+      "selection_hint": "Building with the Copilot runtime itself",
+      "duration": "8-12 hours (Advanced)",
+      "category": "Advanced tracks",
+      "track_url": "tracks/challenge-7-copilot-sdk-track.md",
+      "starter_path": "challenges/challenge-7-copilot-sdk/",
+      "tags": [
+        "advanced-tracks",
+        "advanced"
+      ]
+    },
+    {
+      "id": 8,
+      "number": 8,
+      "slug": "challenge-8",
+      "title": "Full-Stack Flight Delay Predictor",
+      "display_title": "Challenge 8: Full-Stack Flight Delay Predictor",
+      "focus": "Full-stack application development -- data science, API engineering, and frontend -- with GitHub Copilot",
+      "selection_hint": "Full-stack ML application",
+      "duration": "8-12 hours",
+      "category": "Advanced tracks",
+      "track_url": "tracks/challenge-8-flight-delay-track.md",
+      "starter_path": "challenges/challenge-8-flight-delay/",
+      "tags": [
+        "advanced-tracks",
+        "advanced",
+        "api",
+        "frontend"
+      ]
+    },
+    {
+      "id": 9,
+      "number": 9,
+      "slug": "challenge-9",
+      "title": "Cross-Functional Team Sprint",
+      "display_title": "Challenge 9: Cross-Functional Team Sprint",
+      "focus": "End-to-end product development in a cross-functional team -- from ideation to production deployment -- using GitHub Copilot across every role",
+      "selection_hint": "Cross-functional team sprint",
+      "duration": "8-10 hours",
+      "category": "Team sprints",
+      "track_url": "tracks/challenge-9-team-sprint-track.md",
+      "starter_path": "challenges/challenge-9-team-sprint/",
+      "tags": [
+        "team-sprints",
+        "advanced"
+      ]
+    },
+    {
+      "id": 10,
+      "number": 10,
+      "slug": "challenge-10",
+      "title": "Technical Team Sprint",
+      "display_title": "Challenge 10: Technical Team Sprint",
+      "focus": "End-to-end application development with a technical team -- from a provided specification to production deployment -- using GitHub Copilot across every technical role",
+      "selection_hint": "Technical delivery sprint without product roles",
+      "duration": "8-10 hours",
+      "category": "Team sprints",
+      "track_url": "tracks/challenge-10-tech-sprint-track.md",
+      "starter_path": "challenges/challenge-10-tech-sprint/",
+      "tags": [
+        "team-sprints",
+        "advanced"
+      ]
+    },
+    {
+      "id": 11,
+      "number": 11,
+      "slug": "challenge-11",
+      "title": "Legacy MUMPS Modernization",
+      "display_title": "Challenge 11: Legacy MUMPS Modernization",
+      "focus": "Legacy code comprehension, characterization testing, feature evolution, and language translation -- using GitHub Copilot to tame a codebase most developers have never seen",
+      "selection_hint": "Legacy MUMPS modernization",
+      "duration": "8-12 hours",
+      "category": "Legacy modernization",
+      "track_url": "tracks/challenge-11-mumps-modernization-track.md",
+      "starter_path": "challenges/challenge-11-mumps-banking/",
+      "tags": [
+        "legacy-modernization",
+        "advanced",
+        "legacy",
+        "mumps",
+        "testing"
+      ]
+    },
+    {
+      "id": 12,
+      "number": 12,
+      "slug": "challenge-12",
+      "title": "Legacy Code Modernization",
+      "display_title": "Challenge 12: Legacy Code Modernization",
+      "focus": "Reverse-engineering undocumented Java code, recovering business logic, migrating to modern frameworks, and capturing knowledge in Copilot-readable formats",
+      "selection_hint": "General legacy code modernization",
+      "duration": "6-8 hours",
+      "category": "Legacy modernization",
+      "track_url": "tracks/challenge-12-legacy-modernization-track.md",
+      "starter_path": "challenges/challenge-12-legacy-modernization/",
+      "tags": [
+        "legacy-modernization",
+        "advanced",
+        "legacy"
+      ]
+    },
+    {
+      "id": 13,
+      "number": 13,
+      "slug": "challenge-13",
+      "title": "Living Documentation",
+      "display_title": "Challenge 13: Living Documentation",
+      "focus": "Automating documentation generation -- javadoc, architecture diagrams, changelogs, and stakeholder-facing summaries -- using Copilot prompts and agents",
+      "selection_hint": "Documentation automation",
+      "duration": "6-8 hours",
+      "category": "Workflow automation",
+      "track_url": "tracks/challenge-13-living-docs-track.md",
+      "starter_path": "challenges/challenge-13-living-docs/",
+      "tags": [
+        "workflow-automation",
+        "advanced",
+        "docs"
+      ]
+    },
+    {
+      "id": 14,
+      "number": 14,
+      "slug": "challenge-14",
+      "title": "Pipeline Factory",
+      "display_title": "Challenge 14: Pipeline Factory",
+      "focus": "Building CI/CD pipelines from scratch, standardizing build and deploy processes, debugging broken deployments, and generating incident runbooks -- all with Copilot",
+      "selection_hint": "Pipeline and CI/CD automation",
+      "duration": "6-8 hours",
+      "category": "Workflow automation",
+      "track_url": "tracks/challenge-14-pipeline-factory-track.md",
+      "starter_path": "challenges/challenge-14-pipeline-factory/",
+      "tags": [
+        "workflow-automation",
+        "advanced",
+        "ci-cd"
+      ]
+    },
+    {
+      "id": 15,
+      "number": 15,
+      "slug": "challenge-15",
+      "title": "Backlog Generator",
+      "display_title": "Challenge 15: Backlog Generator",
+      "focus": "Automating the conversion of requirement specifications into structured project backlogs using Copilot prompts, agents, and the Atlassian MCP server",
+      "selection_hint": "Backlog generation from requirements",
+      "duration": "6-8 hours",
+      "category": "Workflow automation",
+      "track_url": "tracks/challenge-15-backlog-generator-track.md",
+      "starter_path": "challenges/challenge-15-backlog-generator/",
+      "tags": [
+        "workflow-automation",
+        "advanced",
+        "backlog"
+      ]
+    },
+    {
+      "id": 16,
+      "number": 16,
+      "slug": "challenge-16",
+      "title": "Ops Assistant",
+      "display_title": "Challenge 16: Ops Assistant",
+      "focus": "Building AI-assisted operations tooling -- log analysis agents, error-to-team routing, troubleshooting aids, and deployment automation -- using Copilot",
+      "selection_hint": "Operational tooling and assistants",
+      "duration": "6-8 hours",
+      "category": "Workflow automation",
+      "track_url": "tracks/challenge-16-ops-assistant-track.md",
+      "starter_path": "challenges/challenge-16-ops-assistant/",
+      "tags": [
+        "workflow-automation",
+        "advanced"
+      ]
+    },
+    {
+      "id": 17,
+      "number": 17,
+      "slug": "challenge-17",
+      "title": "Spec-to-Ship Accelerator",
+      "display_title": "Challenge 17: Spec-to-Ship Accelerator",
+      "focus": "Compressing the full development lifecycle -- from functional requirements to deployed code -- using Copilot prompts and agents at every stage",
+      "selection_hint": "Spec-to-ship delivery acceleration",
+      "duration": "6-8 hours",
+      "category": "Workflow automation",
+      "track_url": "tracks/challenge-17-spec-to-ship-track.md",
+      "starter_path": "challenges/challenge-17-spec-to-ship/",
+      "tags": [
+        "workflow-automation",
+        "advanced"
+      ]
+    },
+    {
+      "id": 18,
+      "number": 18,
+      "slug": "challenge-18",
+      "title": "Legacy COBOL Banking Modernization",
+      "display_title": "Challenge 18: Legacy COBOL Banking Modernization",
+      "focus": "Legacy code comprehension, characterization testing, feature evolution, and full-stack modernization -- using GitHub Copilot to reverse-engineer a COBOL banking system and rebuild it as a modern web application",
+      "selection_hint": "COBOL banking modernization",
+      "duration": "8-12 hours",
+      "category": "Legacy modernization",
+      "track_url": "tracks/challenge-18-cobol-modernization-track.md",
+      "starter_path": "challenges/challenge-18-cobol-banking/",
+      "tags": [
+        "legacy-modernization",
+        "advanced",
+        "cobol",
+        "legacy",
+        "testing"
+      ]
+    },
+    {
+      "id": 19,
+      "number": 19,
+      "slug": "challenge-19",
+      "title": "Legacy WCF Banking Modernization",
+      "display_title": "Challenge 19: Legacy WCF Banking Modernization",
+      "focus": "WCF contract archaeology, SOAP service comprehension, characterization testing, and REST API modernization -- using GitHub Copilot to reverse-engineer a banking SOAP service and rebuild it as a modern REST API",
+      "selection_hint": "Legacy WCF banking modernization",
+      "duration": "6-10 hours",
+      "category": "Legacy modernization",
+      "track_url": "tracks/challenge-19-wcf-modernization-track.md",
+      "starter_path": "challenges/challenge-19-wcf-banking/",
+      "tags": [
+        "legacy-modernization",
+        "advanced",
+        "api",
+        "legacy",
+        "testing"
+      ]
+    },
+    {
+      "id": 20,
+      "number": 20,
+      "slug": "challenge-20",
+      "title": "PowerShell Automation",
+      "display_title": "Challenge 20: PowerShell Automation",
+      "focus": "Using GitHub Copilot to write, debug, test, document, and automate PowerShell scripts for real sysadmin work",
+      "selection_hint": "PowerShell automation",
+      "duration": "4-6 hours",
+      "category": "Workflow automation",
+      "track_url": "tracks/challenge-20-powershell-automation-track.md",
+      "starter_path": "challenges/challenge-20-powershell-automation/",
+      "tags": [
+        "workflow-automation",
+        "advanced",
+        "powershell"
+      ]
+    },
+    {
+      "id": 21,
+      "number": 21,
+      "slug": "challenge-21",
+      "title": "Azure Terraform",
+      "display_title": "Challenge 21: Azure Terraform",
+      "focus": "Building and defending an Azure platform baseline with Terraform -- remote state, reusable modules, identity, policy checks, CI guardrails, and plan review discipline",
+      "selection_hint": "Azure landing zones, Terraform modules, identity, policy, CI",
+      "duration": "4-6 hours",
+      "category": "Azure platform",
+      "track_url": "tracks/challenge-21-azure-terraform-track.md",
+      "starter_path": "challenges/challenge-21-azure-terraform/",
+      "tags": [
+        "azure-platform",
+        "advanced",
+        "azure",
+        "terraform"
+      ]
+    }
+  ]
+}

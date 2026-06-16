@@ -35,6 +35,8 @@ This hackathon is organized into **22 challenge tracks** covering all skill leve
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
+Coaches who need a focused workshop path can use the MkDocs [Challenge Set Builder](./docs/challenge-builder.md) to select complete challenges and share one URL-only set.
+
 Each track provides a curated path through the challenges based on your role, with specific guidance, tips, and learning objectives.
 
 ## Duration
@@ -63,6 +65,8 @@ The GitHub Pages deployment workflow builds the same site from `mkdocs.yml`.
 ### Step 1: Choose Your Track
 
 **Not sure which track?** See the **[Track Selection Guide](./tracks/README.md)** for help choosing.
+
+**Running a coached session?** Open the docs site and use the **[Challenge Set Builder](./docs/challenge-builder.md)** to prepare a small challenge list for participants.
 
 ### Step 2: Set Up Environment
 
@@ -547,6 +551,7 @@ After the hackathon:
 ### Quick Links
 
 - **[Choose Your Track](./tracks/README.md)** - Role-based learning paths
+- **[Challenge Set Builder](./docs/challenge-builder.md)** - Coach-curated challenge links
 - **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
 - **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For hackathon organizers
 - **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content

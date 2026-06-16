@@ -39,6 +39,14 @@ theme:
 plugins:
   - search
 
+extra_css:
+  - assets/css/challenge-curator.css
+
+extra_javascript:
+  - assets/js/challenge-shared.js
+  - assets/js/challenge-builder.js
+  - assets/js/challenge-set.js
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -63,7 +71,10 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Challenge Selection: challenge-selection.md
+  - Challenge Selection:
+      - Guide: challenge-selection.md
+      - Set Builder: challenge-builder.md
+      - Challenge Set: challenge-set.md
   - Getting Started: tracks/getting-started.md
   - Track Catalog: tracks/README.md
   - Track Structure: tracks/TRACK_STRUCTURE.md

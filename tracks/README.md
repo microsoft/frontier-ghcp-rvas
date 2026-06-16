@@ -2,6 +2,8 @@
 
 Welcome! This hackathon is organized into **22 challenge tracks** to help you get the most out of GitHub Copilot based on your background and interests.
 
+Coaches can use the MkDocs [Challenge Set Builder](../challenge-builder.md) to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages, phases, and role pages.
+
 ## Choose Your Track
 
 ### 📋 [Challenge 0: Product Planning Track](./challenge-0-product-planning-track.md)

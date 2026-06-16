@@ -2,6 +2,8 @@
 
 Use this page to choose a challenge in a clear order. The detailed instructions still live in the track guides.
 
+Coaches running a focused workshop can use the [Challenge Set Builder](challenge-builder.md) to create a URL-only set of top-level challenges. Students open the generated link and see only that curated list.
+
 ## Step 1: Decide What Kind of Session You Are Running
 
 Start with challenges 0-6 if you want a core track built around a primary role and the standard 6-8 hour format.
@@ -50,3 +52,5 @@ Once you have a track:
 3. Use the track guide to find the correct challenge folder and stage order.
 
 This keeps setup consistent across the repo and avoids duplicating instructions inside the docs site.
+
+If you are coaching a mixed group, build a short set instead of asking everyone to scan the full catalog. The builder only selects complete challenges, not stages, phases, or role pages.
