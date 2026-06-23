@@ -10,6 +10,8 @@ tags:
   - core-tracks
   - core
   - ml
+outcomes:
+  - build-ai
 prerequisites: []
 track_url: tracks/challenge-2-ml-ai-track.md
 starter_path: challenges/challenge-2-ml-ai/

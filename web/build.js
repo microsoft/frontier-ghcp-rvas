@@ -51,6 +51,38 @@ const CATEGORY_CONFIG = {
   }
 };
 
+/* ─── Outcome config (additive, outcome-driven framing) ─────────────────────
+ * Business outcomes that challenges produce. Multi-valued: one challenge can
+ * deliver multiple outcomes. Additive to category (category controls color
+ * grouping, outcomes describe work results).
+ * ─────────────────────────────────────────────────────────────────────────── */
+const OUTCOME_CONFIG = {
+  'modernize-legacy': {
+    name: 'Modernize Legacy Systems',
+    description: 'Reverse-engineer, characterize, and migrate legacy codebases to modern platforms.'
+  },
+  'ship-features': {
+    name: 'Ship Product Features Faster',
+    description: 'Move from requirements to working, demoable software across the stack.'
+  },
+  'raise-quality': {
+    name: 'Raise Quality and Confidence',
+    description: 'Improve test coverage, accessibility, documentation, or reliability.'
+  },
+  'automate-delivery': {
+    name: 'Automate Delivery and Ops Toil',
+    description: 'Replace manual delivery or operations work with automated pipelines and tooling.'
+  },
+  'platform-foundation': {
+    name: 'Stand Up Cloud Platform Foundations',
+    description: 'Provision and harden Azure infrastructure with IaC, identity, and policy guardrails.'
+  },
+  'build-ai': {
+    name: 'Build AI-Powered Capabilities',
+    description: 'Develop and ship ML models, agents, or AI-driven features into production.'
+  }
+};
+
 /* ─── Paths ──────────────────────────────────────────────────────────────── */
 const ROOT                = path.resolve(__dirname, '..');
 const CHALLENGES_DIR      = path.join(ROOT, 'challenges');
@@ -203,6 +235,13 @@ function collectChallenges() {
         continue;
       }
 
+      const outcomes = Array.isArray(meta.outcomes) ? meta.outcomes : [];
+      for (const outcomeId of outcomes) {
+        if (!OUTCOME_CONFIG[outcomeId]) {
+          errors.push(`${slug}/meta.yml: invalid outcome '${outcomeId}' (must be one of: ${Object.keys(OUTCOME_CONFIG).join(', ')})`);
+        }
+      }
+
       const challenge = {
         id: meta.id,
         number: meta.number || 0,
@@ -214,6 +253,7 @@ function collectChallenges() {
         description: meta.description || '',
         focus: meta.focus || '',
         tags: Array.isArray(meta.tags) ? meta.tags : [],
+        outcomes: outcomes,
         prerequisites: Array.isArray(meta.prerequisites) ? meta.prerequisites : [],
         track_url: meta.track_url || '',
         starter_path: `challenges/${slug}/`,
@@ -359,6 +399,11 @@ function main() {
     source: 'challenges/*/meta.yml',
     count: challenges.length,
     categories,
+    outcomeConfig: Object.entries(OUTCOME_CONFIG).map(([id, cfg]) => ({
+      id,
+      name: cfg.name,
+      description: cfg.description
+    })),
     challenges
   };
 

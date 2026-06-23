@@ -9,6 +9,8 @@ focus: End-to-end application development with a technical team -- from a provid
 tags:
   - team-sprints
   - advanced
+outcomes:
+  - ship-features
 prerequisites: []
 track_url: tracks/challenge-10-tech-sprint-track.md
 starter_path: challenges/challenge-10-tech-sprint/

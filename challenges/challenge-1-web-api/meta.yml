@@ -10,6 +10,9 @@ tags:
   - core-tracks
   - core
   - api
+outcomes:
+  - ship-features
+  - raise-quality
 prerequisites: []
 track_url: tracks/challenge-1-web-api-track.md
 starter_path: challenges/challenge-1-web-api/

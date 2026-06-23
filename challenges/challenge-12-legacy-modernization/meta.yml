@@ -10,6 +10,8 @@ tags:
   - legacy-modernization
   - advanced
   - legacy
+outcomes:
+  - modernize-legacy
 prerequisites: []
 track_url: tracks/challenge-12-legacy-modernization-track.md
 starter_path: challenges/challenge-12-legacy-modernization/

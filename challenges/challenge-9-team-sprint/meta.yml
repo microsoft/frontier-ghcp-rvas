@@ -9,6 +9,8 @@ focus: End-to-end product development in a cross-functional team -- from ideatio
 tags:
   - team-sprints
   - advanced
+outcomes:
+  - ship-features
 prerequisites: []
 track_url: tracks/challenge-9-team-sprint-track.md
 starter_path: challenges/challenge-9-team-sprint/

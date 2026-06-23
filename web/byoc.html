@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function () {
+      try {
+        var k = 'fp-theme';
+        var saved = localStorage.getItem(k);
+        var pref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', saved || pref);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Bring Your Own Challenge — GitHub Copilot Enterprise Hackathon</title>
+  <meta name="description" content="Bring Your Own Challenge: run an outcome-driven hackathon on your own codebase" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23e8c84a'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' font-weight='800' text-anchor='middle' fill='%2303050d'%3EG%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="GitHub Copilot Enterprise Hackathon — Home">
+        <span class="brand-glyph" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1L10 6h5L11 9.5l1.5 5L8 12l-4.5 2.5L5 9.5 1 6h5z" fill="#03050d" stroke="#03050d" stroke-width="0.5" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>GitHub Copilot Enterprise Hackathon</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="builder.html">Builder</a>
+        <a href="paths.html">Learning Paths</a>
+        <a href="byoc.html" aria-current="page">BYOC</a>
+        <a href="guide.html?p=copilot-guide">Guides</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme"></button>
+        <button class="icon-btn nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════ HERO ══════════════════════════════ -->
+    <section class="hero" aria-labelledby="heroHeading">
+      <div class="wrap">
+        <span class="eyebrow">Bring Your Own Challenge</span>
+        <h1 id="heroHeading">Run a hackathon on<br><span class="accent">your own codebase.</span></h1>
+        <p class="lede">
+          The 22 challenges in this repository are worked examples that demonstrate outcome-driven patterns.
+          Use the BYOC authoring kit to design and run a hackathon around your team's actual app, repo, or
+          business outcome.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ KIT OVERVIEW ══════════════════════ -->
+    <section class="section" aria-labelledby="kitHeading">
+      <div class="wrap">
+        <div class="shead reveal">
+          <div>
+            <h2 id="kitHeading">The BYOC authoring kit.</h2>
+            <p>A structured approach to designing outcome-driven hackathons on real codebases. Define the outcome, map the work, design the stages, and run a facilitated event.</p>
+          </div>
+        </div>
+
+        <div class="module-grid">
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">Outcome Canvas</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">A structured worksheet to define the target outcome, current pain, definition of done, constraints, and demo plan before you build the challenge.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/outcome-canvas.md" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">Facilitator Runbook</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">Step-by-step guide for running a BYOC hackathon -- prep, environment setup, timeboxes, demo review, and outcome scorecard assessment.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/facilitator-runbook.md" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">Outcome Scorecard</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">A reusable definition-of-done and business-impact template. Replace usage metrics as the success measure with actual deliverable assessment.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/outcome-scorecard.md" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">Example Walkthrough</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">A worked example showing how to adapt an existing challenge end-to-end through the BYOC kit -- from outcome canvas to scorecard review.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/example-walkthrough.md" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ TEMPLATES ═════════════════════════ -->
+    <section class="section-tight" aria-labelledby="templatesHeading">
+      <div class="wrap">
+        <div class="shead reveal">
+          <div>
+            <h2 id="templatesHeading">Challenge authoring templates.</h2>
+            <p>Skeleton files matching the canonical track structure. Use these to author your own outcome-driven challenge around your app or repo.</p>
+          </div>
+        </div>
+
+        <div class="module-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))">
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">Track Template</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">Main track file skeleton with placeholders for outcome, overview, stages, and success criteria.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/templates/track-template.md" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">Stage Template</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">Stage skeleton with Tasks, Verification, Copilot vs Judgment sections, and navigation placeholders.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/templates/stage-template.md" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">meta.yml Template</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">Annotated metadata file with inline comments explaining valid values for outcomes, category, difficulty, and prerequisites.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/templates/meta.yml.template" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ GETTING STARTED ═══════════════════ -->
+    <section class="section-tight" aria-labelledby="startHeading">
+      <div class="wrap">
+        <div class="shead reveal">
+          <div>
+            <h2 id="startHeading">Getting started with BYOC.</h2>
+            <p>Follow these steps to design and run your own outcome-driven hackathon.</p>
+          </div>
+        </div>
+
+        <div class="card reveal" style="max-width:720px;padding:2rem;gap:1.5rem">
+          <ol style="list-style:decimal;padding-left:1.5rem;margin:0;line-height:1.8;font-size:1rem;color:var(--c-bright)">
+            <li><strong>Define your outcome</strong> using the <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/outcome-canvas.md" target="_blank" rel="noopener">Outcome Canvas</a>. What work result do you want teams to produce?</li>
+            <li><strong>Map the work</strong> into 3-5 stages or phases that progress toward the deliverable. Each stage should be completable in 45-90 minutes.</li>
+            <li><strong>Author your challenge</strong> using the <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/tree/main/byoc/templates" target="_blank" rel="noopener">templates</a>. Fill in the track file, stage files, and meta.yml with your outcome framing.</li>
+            <li><strong>Prepare the environment</strong>. Set up a Codespace, container, or local dev environment with your app's repo, dependencies, and any required credentials.</li>
+            <li><strong>Run the hackathon</strong> using the <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/facilitator-runbook.md" target="_blank" rel="noopener">Facilitator Runbook</a>. Timebox each stage, facilitate blockers, and run a demo-driven retrospective.</li>
+            <li><strong>Assess the outcome</strong> with the <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/outcome-scorecard.md" target="_blank" rel="noopener">Outcome Scorecard</a>. Did teams ship a demonstrable deliverable? Can they articulate the business impact?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ RELATED ═══════════════════════════ -->
+    <section class="section-tight" aria-labelledby="relatedHeading">
+      <div class="wrap">
+        <div class="shead reveal">
+          <div>
+            <h2 id="relatedHeading">Related resources.</h2>
+          </div>
+        </div>
+
+        <div class="module-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))">
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">BYOC Overview</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">The full BYOC README with motivation, use cases, and links to all kit components.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/byoc/README.md" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">Track Structure Guide</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">The canonical conventions for track file structure, sections, and metadata. All BYOC challenges must follow this.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon/blob/main/tracks/TRACK_STRUCTURE.md" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mod-card reveal card">
+            <div class="mod-card-header">
+              <div class="mod-card-title-block">
+                <div class="mod-card-title">Browse Example Challenges</div>
+              </div>
+            </div>
+            <div class="mod-card-body">
+              <p class="mod-card-desc">Explore the 22 worked-example challenges to see the outcome-driven pattern in action across different categories.</p>
+              <div class="mod-card-meta" style="margin-top:auto">
+                <a href="catalog.html" class="btn btn-ghost btn-sm">View Catalog →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <p>&copy; 2026 GitHub · This is a training resource for GitHub Enterprise, GitHub Copilot, and Azure.</p>
+      <div class="footer-links">
+        <a href="https://github.com/marcoolivo/frontier-ghcp-hackathon" target="_blank" rel="noopener">GitHub Repository</a>
+        <span>·</span>
+        <a href="guide.html?p=copilot-guide">Copilot Guide</a>
+        <span>·</span>
+        <a href="guide.html?p=facilitator-guide">Facilitator Guide</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/byoc.js"></script>
+
+</body>
+</html>

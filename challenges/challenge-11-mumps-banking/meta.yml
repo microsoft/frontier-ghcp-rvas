@@ -12,6 +12,8 @@ tags:
   - legacy
   - mumps
   - testing
+outcomes:
+  - modernize-legacy
 prerequisites: []
 track_url: tracks/challenge-11-mumps-modernization-track.md
 starter_path: challenges/challenge-11-mumps-banking/

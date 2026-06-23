@@ -68,6 +68,15 @@
     return show.map((t) => `<span class="badge badge-tag">${FP.esc(t)}</span>`).join('');
   };
 
+  FP.outcomeBadges = function (outcomeIds, outcomeConfig) {
+    if (!Array.isArray(outcomeIds) || !outcomeIds.length || !outcomeConfig) return '';
+    return outcomeIds.map((id) => {
+      const oc = outcomeConfig.find((o) => o.id === id);
+      const name = oc ? oc.name : id;
+      return `<span class="badge badge-outcome" title="${FP.esc(oc ? oc.description : '')}">${FP.esc(name)}</span>`;
+    }).join('');
+  };
+
   /* ─────────────────────────── URL helpers ───────────────────────── */
   FP.challengeUrl = function (id) {
     return 'challenge.html?id=' + encodeURIComponent(id);

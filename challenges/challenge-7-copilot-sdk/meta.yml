@@ -9,6 +9,8 @@ focus: Building a Release Notes Agent from scratch using the GitHub Copilot SDK
 tags:
   - advanced-tracks
   - advanced
+outcomes:
+  - build-ai
 prerequisites: []
 track_url: tracks/challenge-7-copilot-sdk-track.md
 starter_path: challenges/challenge-7-copilot-sdk/

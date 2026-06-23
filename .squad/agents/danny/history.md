@@ -39,3 +39,14 @@
 ### 2026-06-15 -- Challenge 21 richness guardrails
 - Enrich Challenge 21 through judgment pressure, not platform sprawl. Keep it Azure-only, phase-based, and scoped to Azure Container Apps, remote state, network shape, managed identity and Key Vault, module cleanup, CI gates, and drift response.
 - Future Challenge 21 edits should preserve the 4-6 hour cap by sharpening evidence prompts and acceptance criteria instead of adding a sixth phase or larger Azure architecture.
+
+### 2026-06-23 -- Outcome taxonomy finalized
+- Six outcome categories defined: `modernize-legacy`, `ship-features`, `raise-quality`, `automate-delivery`, `platform-foundation`, `build-ai`. All 22 challenges mapped; every outcome has 2+ challenges.
+- Data-model decision: `category` (existing, single-valued, color grouping) preserved unchanged. New `outcomes` field (multi-valued YAML list) added to `meta.yml`. `web/build.js` gains `OUTCOME_CONFIG` map for validation. `platform.json` emits outcomes per challenge + top-level `outcomeConfig`.
+- These are work/business outcomes (shipped deliverables), not learning objectives. The `TRACK_STRUCTURE.md` ban on "Learning Outcomes" sections in track files remains in effect.
+- Authoritative spec: `OUTCOMES.md` at repo root. Decision logged to `.squad/decisions.md`.
+
+### 2026-06-23 -- Team convention: Outcomes facet + BYOC kit (Scribe orchestration)
+- **Emerged convention:** All challenges now carry an `outcomes` facet in their metadata (defined by Danny). The hackathon narrative (Rusty) shifted from learning-centric to outcome-driven. The website (Linus) surfaces outcomes through badges and filtering. Facilitators now have a BYOC kit (5 prose files + 3 templates) to run hackathons on customer codebases using an outcome-canvas, facilitator-runbook, and outcome-scorecard framework.
+- **Key decisions logged:** danny-outcome-taxonomy.md, rusty-byoc-narrative.md, linus-outcome-datamodel.md, linus-site-outcomes.md, basher-byoc-tooling.md, livingston-outcome-review.md merged into `.squad/decisions.md`.
+- **Impact on future work:** Any new challenge must define its outcomes (1+ IDs from the 6 canonical outcomes) in meta.yml. Any narrative/copy update must use outcome-first framing ("what will teams deliver?") instead of learning-first framing. Site updates must preserve the outcomes filter and badges. BYOC kit files (canvas, runbook, scorecard, templates) are reference material for facilitators and customers authoring custom hackathons.

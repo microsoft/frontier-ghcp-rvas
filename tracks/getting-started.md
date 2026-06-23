@@ -1,6 +1,6 @@
 # Getting Started
 
-These steps apply to every track. Complete them before starting your first stage.
+These steps apply to every track and help you prepare your environment to drive an outcome with Copilot. Complete them before starting your first stage.
 
 ## 1. Open in a DevContainer (Recommended)
 
@@ -38,27 +38,28 @@ This does the same cleanup that the devcontainer does automatically -- removes u
 
 ## 3. Create Your Custom Instructions
 
-`.github/copilot-instructions.md` tells Copilot about your project context and preferences. **Your goal is to create your own custom instructions file -- do not copy someone else's.**
+`.github/copilot-instructions.md` tells Copilot about your project context and preferences. **Your goal is to create your own custom instructions file that helps you drive your outcome.**
 
-Every track involves a different technology stack, so the specifics vary. At a minimum, include:
+Every track involves a different technology stack and outcome, so the specifics vary. At a minimum, include:
 
 - Project context (framework, language, architecture)
+- The outcome you're trying to deliver (what "done" looks like)
 - Coding standards and conventions
 - What kind of output you expect (code style, testing approach, documentation)
 
-Your track file lists suggestions specific to your domain.
+Your track file lists suggestions specific to your domain and outcome.
 
 ## 4. Create Custom Agents (`.github/agents/`)
 
-Agents are specialized Copilot personas for different tasks. Create `.md` files in `.github/agents/` to define them. **Your goal is to create agents that match your workflow.**
+Agents are specialized Copilot personas for different tasks. Create `.md` files in `.github/agents/` to define them. **Your goal is to create agents that help you deliver your outcome faster.**
 
 **What to include in each agent:**
 
-- Clear description of the agent's expertise
+- Clear description of the agent's expertise and how it helps drive your outcome
 - Specific instructions for the kind of output it should generate
 - References to your project's patterns and conventions
 
-Your track file suggests specific agents for your domain.
+Your track file suggests specific agents for your domain and outcome.
 
 > Check out [github/awesome-copilot](https://github.com/github/awesome-copilot) for real-world examples of custom instructions and agent templates.
 >

@@ -9,6 +9,9 @@ focus: Infrastructure as Code, containerization, and deployment automation with 
 tags:
   - core-tracks
   - core
+outcomes:
+  - automate-delivery
+  - platform-foundation
 prerequisites: []
 track_url: tracks/challenge-3-devops-track.md
 starter_path: challenges/challenge-3-devops/

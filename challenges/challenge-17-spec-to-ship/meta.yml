@@ -9,6 +9,9 @@ focus: Compressing the full development lifecycle -- from functional requirement
 tags:
   - workflow-automation
   - advanced
+outcomes:
+  - ship-features
+  - automate-delivery
 prerequisites: []
 track_url: tracks/challenge-17-spec-to-ship-track.md
 starter_path: challenges/challenge-17-spec-to-ship/

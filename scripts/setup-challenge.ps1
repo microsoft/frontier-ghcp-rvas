@@ -188,6 +188,12 @@ foreach ($RemoveFile in @("FACILITATOR_GUIDE.md", "CONTRIBUTING.md")) {
     }
 }
 
+# Preserve facilitator-facing reference material
+# byoc/ (Bring Your Own Challenge authoring kit) and OUTCOMES.md are
+# reference materials for facilitators to understand the outcome-driven
+# model and adapt challenges. These are intentionally preserved in the
+# workspace for context, not removed to minimize participant clutter.
+
 # Replace root README with a focused version
 $RootReadme = Join-Path $RepoRoot "README.md"
 

@@ -228,6 +228,12 @@ for remove_file in FACILITATOR_GUIDE.md CONTRIBUTING.md; do
   fi
 done
 
+# ── Preserve facilitator-facing reference material ─────────────────
+# byoc/ (Bring Your Own Challenge authoring kit) and OUTCOMES.md are
+# reference materials for facilitators to understand the outcome-driven
+# model and adapt challenges. These are intentionally preserved in the
+# workspace for context, not removed to minimize participant clutter.
+
 # ── Replace root README with a focused version ──────────────────────
 
 if [[ "$TRACK_ASSETS_PRESENT" == true ]]; then

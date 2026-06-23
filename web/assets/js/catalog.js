@@ -4,7 +4,9 @@
 
   let _all = [];
   let _categories = [];
+  let _outcomeConfig = [];
   let _activeCat = null;
+  let _activeOutcome = null;
   let _activeDiff = null;
   let _query = '';
 
@@ -15,8 +17,10 @@
 
     _all = data.challenges || [];
     _categories = data.categories || [];
+    _outcomeConfig = data.outcomeConfig || [];
 
     buildCategoryChips();
+    buildOutcomeChips();
     buildDiffChips();
     initSearch();
     applyUrlState();
@@ -25,12 +29,15 @@
 
   const DIFFS = ['beginner', 'intermediate', 'advanced'];
 
-  /* Seed filter state from the URL query string (?cat=&difficulty=&q=) and
+  /* Seed filter state from the URL query string (?cat=&outcome=&difficulty=&q=) and
      reflect it on the chips + search input before the first render. Invalid
      values are ignored rather than applied. */
   function applyUrlState() {
     const cat = FP.qp('cat');
     if (cat && _categories.some((c) => c.id === cat)) _activeCat = cat;
+
+    const outcome = FP.qp('outcome');
+    if (outcome && _outcomeConfig.some((o) => o.id === outcome)) _activeOutcome = outcome;
 
     const diff = FP.qp('difficulty');
     if (diff && DIFFS.indexOf(diff) !== -1) _activeDiff = diff;
@@ -46,10 +53,15 @@
     syncUrl();
   }
 
-  /* Reflect _activeCat / _activeDiff onto the rendered chips. */
+  /* Reflect _activeCat / _activeOutcome / _activeDiff onto the rendered chips. */
   function syncChipState() {
     document.querySelectorAll('#catChips .chip').forEach((b) => {
       const on = b.dataset.cat === _activeCat;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+    document.querySelectorAll('#outcomeChips .chip').forEach((b) => {
+      const on = b.dataset.outcome === _activeOutcome;
       b.classList.toggle('active', on);
       b.setAttribute('aria-pressed', String(on));
     });
@@ -65,6 +77,7 @@
   function syncUrl() {
     const q = new URLSearchParams();
     if (_activeCat) q.set('cat', _activeCat);
+    if (_activeOutcome) q.set('outcome', _activeOutcome);
     if (_activeDiff) q.set('difficulty', _activeDiff);
     if (_query) q.set('q', _query);
     const qs = q.toString();
@@ -88,6 +101,29 @@
       btn.addEventListener('click', () => {
         const id = btn.dataset.cat;
         _activeCat = _activeCat === id ? null : id;
+        syncChipState();
+        syncUrl();
+        render();
+      });
+    });
+  }
+
+  function buildOutcomeChips() {
+    const container = document.getElementById('outcomeChips');
+    if (!container) return;
+
+    container.innerHTML = _outcomeConfig.map((o) =>
+      `<button class="chip" data-outcome="${FP.esc(o.id)}"
+         aria-pressed="false" type="button"
+         title="${FP.esc(o.description)}">
+         ${FP.esc(o.name)}
+       </button>`
+    ).join('');
+
+    container.querySelectorAll('.chip').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.outcome;
+        _activeOutcome = _activeOutcome === id ? null : id;
         syncChipState();
         syncUrl();
         render();
@@ -208,6 +244,7 @@
           ${FP.durBadge(c.duration_minutes)}
           <div class="ch-tags">${FP.tagBadges(c.tags, 3)}</div>
         </div>
+        <div class="ch-outcomes">${FP.outcomeBadges(c.outcomes || [], _outcomeConfig)}</div>
       </a>`;
   }
 

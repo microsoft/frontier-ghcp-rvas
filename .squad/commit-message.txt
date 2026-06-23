@@ -1,0 +1,63 @@
+Outcome-driven reframe + Bring Your Own Challenge (BYOC) kit
+
+Reframed the hackathon from learning-centric to outcome-driven and created a
+BYOC kit to support hackathons on customer codebases. This session delivered:
+
+1. Outcome Taxonomy (Danny): Finalized 6 business outcomes (modernize-legacy,
+   ship-features, raise-quality, automate-delivery, platform-foundation,
+   build-ai) with all 22 challenges mapped. Added authoritative OUTCOMES.md
+   and data-model contract (outcomes field in meta.yml, OUTCOME_CONFIG
+   validation in build.js, emission to platform.json).
+
+2. Narrative Reframe (Rusty): Shifted README.md, tracks/README.md,
+   FACILITATOR_GUIDE.md, and tracks/getting-started.md from learning-centric
+   ("learn how to use Copilot") to outcome-driven ("drive real work outcomes").
+   Every challenge now tagged with its outcome(s). Success metrics reframed
+   around demonstrable deliverables and business impact.
+
+3. BYOC Kit (Rusty): Created byoc/ directory with 5 prose files: outcome-canvas
+   (fill-in worksheet), facilitator-runbook (how to run on customer codebase),
+   outcome-scorecard (definition-of-done / business-impact scorecard),
+   example-walkthrough (worked example), and README (kit overview). Templates
+   added for customer authoring (track-template, stage-template, meta.yml.template).
+
+4. Data Model Implementation (Linus): Added outcomes field to all 22 meta.yml
+   files. Updated web/build.js with OUTCOME_CONFIG and outcome validation.
+   Emitted outcomes to platform.json per-challenge + top-level outcomeConfig.
+   Renamed learning paths to be outcome-led. Preserved "No Learning Outcomes
+   section" rule in tracks/TRACK_STRUCTURE.md.
+
+5. Website Reframe (Linus): Surfaced outcomes across catalog (filter chipset
+   + badges), challenge detail (hero badges), and learning paths (badges below
+   description). Added BYOC entry page (web/byoc.html + web/assets/js/byoc.js)
+   directing facilitators to canvas, runbook, scorecard, example, and templates.
+   Updated hero copy to "Drive outcomes. Build skills as you ship." Added
+   FP.outcomeBadges() helper to core.js for consistent outcome rendering.
+
+6. Tooling (Basher): Documented intentional preservation of byoc/ and
+   OUTCOMES.md in participant workspaces (added comments to setup and clean
+   scripts). Both materials are facilitator-facing reference, non-essential to
+   participant work, and have no build dependencies.
+
+7. QA Gate (Livingston): Final verification passed on first run. Markdownlint
+   0 errors. Build passes (22 challenges, 5 categories, 8 learning paths).
+   JS syntax valid (10 files). Outcome taxonomy consistent across all files.
+   Writing style compliant (no hype, no AI slop). Sync rules maintained.
+   No mechanical fixes required. Release-ready as delivered.
+
+8. Scribe Documentation: Created orchestration logs for each agent (Danny,
+   Rusty, Linus, Basher, Livingston), session log documenting goal/shipping/
+   verdict, merged all decision inbox files into .squad/decisions.md, appended
+   team-convention notes to agent history files.
+
+Changes are additive and non-breaking:
+- category field (5-color scheme) preserved unchanged
+- outcomes are a new multi-valued facet on top of existing data model
+- existing site structure, URLs, and navigation unchanged
+- build, deploy, and container workflows verified working
+
+All files pass humanized writing rules (no emoji headings, no em-dashes, no
+hype language, no AI sign-offs, natural developer voice, markdownlint-compliant).
+Azure-only constraint maintained throughout.
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>

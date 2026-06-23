@@ -11,6 +11,8 @@ tags:
   - advanced
   - azure
   - terraform
+outcomes:
+  - platform-foundation
 prerequisites: []
 track_url: tracks/challenge-21-azure-terraform-track.md
 starter_path: challenges/challenge-21-azure-terraform/

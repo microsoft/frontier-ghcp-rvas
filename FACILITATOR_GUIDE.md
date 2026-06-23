@@ -2,7 +2,9 @@
 
 ## Overview
 
-This hackathon is organized into **7 core tracks** plus **12 challenge 7-18 tracks** to provide structured learning paths for different team roles. As a facilitator, you'll guide participants to choose the right track and support them through their journey.
+This hackathon helps teams **drive real work outcomes** using GitHub Copilot. Your role as facilitator is to guide participants to define a measurable outcome, work through the stages that deliver it, and demonstrate the business impact at the end.
+
+Participants can either pick a **worked-example challenge** from the 22 tracks or **bring their own app/repository** and run a hackathon on their own codebase. See the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for guidance on customer-codebase sessions.
 
 ## Pre-Hackathon Setup (1 week before)
 
@@ -64,9 +66,10 @@ Send participants:
 **Welcome & Introduction (10 min)**
 
 - Introduce GitHub Copilot
-- **Explain the track-based format** NEW
+- Frame the hackathon as **outcome-driven work** -- participants will deliver a demonstrable result, not just learn features
+- Explain the two paths: pick a worked-example challenge, or bring your own app and define your own outcome
 - Review schedule
-- Show the [Tracks Overview](./tracks/README.md)
+- Show the [Tracks Overview](./tracks/README.md) and the [BYOC kit](./byoc/)
 
 **Demo: Copilot Basics (15 min)**
 
@@ -75,84 +78,84 @@ Send participants:
 - Quick example of workspace context
 - Show MCP servers (briefly)
 
-**Track Selection (5 min)** NEW
+**Track or Outcome Selection (5 min)**
 
-- Help participants choose their track
-- Suggest track based on their role
-- Point them to [Tracks Guide](./tracks/README.md)
+- Help participants choose their worked-example track OR define their own outcome
+- For worked examples: suggest track based on outcome they want to drive or their role
+- For BYOC: point them to [Outcome Canvas](./byoc/outcome-canvas.md)
+- Direct them to [Tracks Guide](./tracks/README.md) or [BYOC README](./byoc/README.md)
 
 ### Challenge Time (4-5 hours)
 
-**Recommended Flow (Track-Based):** UPDATED
+**Recommended Flow (Outcome-Based):**
 
-1. Participants choose their track based on their role
-2. Each track provides a curated sequence of challenges
+1. Participants define or choose their outcome
+2. Work through the challenge stages (or their own app) to deliver it
 3. Work individually or in pairs
-4. Facilitators rotate to help teams
+4. Facilitators rotate to help teams stay focused on the outcome
 5. Encourage using Copilot Chat for help
 
 **Tips for Facilitators:**
 
 - Don't solve problems directly
 - Guide participants to use Copilot
-- Encourage experimentation
-- Share interesting discoveries with the group
+- Keep the conversation tied to the outcome: "What are you trying to deliver? How will you demo it?"
+- Share interesting outcome-driven patterns with the group
 
 ### Mid-Day Check-in (15 min)
 
 Around lunch, gather everyone:
 
-- Quick poll: What track are you on? What challenge?
-- Share 2-3 "aha!" moments from different tracks
+- Quick poll: What outcome are you working on? What stage?
+- Share 2-3 outcome wins from different teams
 - Address common issues
-- **Track-specific tips**: Share insights relevant to each track
+- Reinforce outcome focus: "Show me what you're delivering"
 
 ### Showcase Session (1-2 hours)
 
 **Format Options:**
 
-**Option A: Track-Based Demos** RECOMMENDED
+**Option A: Outcome-Based Demos** RECOMMENDED
 
-- Group participants by track
-- Each track presents their solutions
-- Compare approaches across similar challenges
-- Share track-specific Copilot insights
+- Group participants by the outcome they delivered
+- Each team presents their result and the business impact
+- Compare approaches across similar outcomes
+- Share outcome-driven Copilot patterns
 
 **Option B: Demo Stations**
 
-- Set up tables for each track (or challenge)
-- Participants showcase their work
+- Set up tables for each outcome category
+- Participants showcase their work and explain the impact
 - Informal walk-around format
-- Cross-track learning
 
 **Option C: Presentations**
 
 - Each person/team presents (5 min each)
-- Show their solution
-- Highlight best Copilot interactions
-- Track-specific learnings
+- Show the outcome they delivered and demo it
+- State the business impact: time saved, risk reduced, quality improved
+- Highlight Copilot patterns that accelerated the work
 
 **Option D: Lightning Talks**
 
 - 2-minute rapid-fire presentations
-- Focus on most interesting Copilot use
+- Focus on the outcome and one key Copilot pattern
 
 ### Wrap-Up Session (30 min)
 
-**Best Practices Discussion (15 min)**
+**Outcome Review (15 min)**
 
-- What worked well?
-- When did Copilot excel?
-- When did it struggle?
-- Tips and tricks discovered
-
-**Productivity Insights (10 min)**
-
-- Estimate time saved
-- Code generated vs written
-- Most useful features
+- What outcomes did teams deliver?
+- What business impact did each produce?
+- How did Copilot accelerate the work?
+- Patterns discovered
 
 **Q&A (5 min)**
+
+**Next Steps (10 min)**
+
+- Apply these patterns to your own projects
+- Use the **[Outcome Scorecard](./byoc/outcome-scorecard.md)** for future work sessions
+- Track impact over time
 
 ## Facilitation Tips
 
@@ -398,14 +401,12 @@ Around lunch, gather everyone:
 
 Ask participants to note:
 
-- **Which track they chose** (challenge number or track name)
-- Time spent per challenge
-- Percentage of code generated by Copilot
-- Number of chat interactions
-- Most helpful feature
-- Track-specific learnings
-- Time saved (estimate)
-- Whether a challenge 7-18 track was attempted
+- **Outcome delivered** (what they built/shipped/modernized)
+- **Business impact** (time saved, risk reduced, quality improved, toil eliminated)
+- How Copilot accelerated the work
+- Patterns discovered (prompts, agents, workflow changes)
+- Time spent
+- Supporting evidence: percentage of code generated by Copilot, chat interactions
 
 ## Post-Hackathon
 
@@ -414,20 +415,27 @@ Ask participants to note:
 **Send to Participants:**
 
 - [ ] Thank you email
-- [ ] Feedback survey (include track-specific questions)
+- [ ] Feedback survey (include outcome-driven questions: What did you deliver? What was the business impact?)
+- [ ] Link to **[Outcome Scorecard](./byoc/outcome-scorecard.md)** for future work sessions
 - [ ] Additional resources
-- [ ] Link to solutions (if available)
-- [ ] Next steps for continued learning
+- [ ] Next steps for continued use
 
 **Collect Feedback on:**
 
-- Track structure effectiveness NEW
-- Track difficulty and guidance NEW
-- Challenge quality
-- Difficulty levels
-- Time allocation
-- Copilot effectiveness
+- Outcome clarity and achievement
+- Business impact realized
+- Copilot effectiveness in driving the outcome
+- Patterns discovered
 - Overall experience
+
+## BYOC Sessions
+
+If you're running a hackathon on a customer's own app or repository, see the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for:
+
+- How to run outcome-definition workshops
+- Environment and devcontainer guidance for customer codebases
+- Timeboxes and checkpoints for custom challenges
+- Outcome review and scorecard facilitation
 
 ### Share Results
 
@@ -493,12 +501,12 @@ Create a summary:
 
 A successful hackathon means:
 
-- All participants tried Copilot features
-- Everyone completed at least 1 challenge
-- Participants can explain Copilot benefits
-- Team discovered productivity improvements
-- Positive feedback on experience
-- Plans to use Copilot in daily work
+- Each team delivered a **demonstrable outcome** (working code, shipped feature, modernized system, or automated process)
+- Participants can **articulate the business impact** (faster delivery, reduced risk, lower toil, improved quality)
+- Teams used Copilot to accelerate the work and can **explain the patterns** they applied
+- Participants plan to apply these outcome-driven patterns to their daily work
+
+Track activity metrics (Copilot usage percentage, chat interactions) as supporting evidence, but measure success by the outcomes delivered and the business impact produced.
 
 ## Questions & Support
 

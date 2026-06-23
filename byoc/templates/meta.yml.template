@@ -1,0 +1,54 @@
+# Challenge metadata template
+# This file must be named meta.yml and live in the challenge root folder.
+
+# Unique challenge identifier (kebab-case, no spaces)
+id: challenge-{{NUMBER}}
+
+# Challenge number (integer, used for ordering)
+number: {{NUMBER}}
+
+# Challenge title (shown in catalog and navigation)
+title: {{TITLE}}
+
+# Category: controls color grouping on the website
+# Valid values: core-tracks | team-sprints | legacy-modernization | workflow-automation | azure-platform
+category: {{CATEGORY}}
+
+# Difficulty level
+# Valid values: beginner | intermediate | advanced
+difficulty: {{DIFFICULTY}}
+
+# Duration in minutes (used for time estimation)
+duration_minutes: {{DURATION_MINUTES}}
+
+# Short description (1-2 sentences, shown in catalog)
+description: >
+  {{SHORT_DESCRIPTION}}
+
+# Focus area (detailed, shown on challenge detail page)
+focus: >
+  {{DETAILED_FOCUS}}
+
+# Tags (list, used for search and filtering)
+tags:
+  - {{TAG_1}}
+  - {{TAG_2}}
+  - {{TAG_3}}
+
+# Outcomes: business outcomes this challenge delivers
+# Valid values: modernize-legacy | ship-features | raise-quality | automate-delivery | platform-foundation | build-ai
+# Multi-valued: list one or more outcomes this challenge produces
+outcomes:
+  - {{OUTCOME_1}}
+  # - {{OUTCOME_2}}  # uncomment if this challenge delivers multiple outcomes
+
+# Prerequisites: other challenge IDs that should be completed first
+# Use empty list [] if no prerequisites
+prerequisites: []
+  # - challenge-{{PREREQ_NUMBER}}
+
+# Track file path (relative to repository root)
+track_url: tracks/challenge-{{NUMBER}}-{{SLUG}}-track.md
+
+# Starter code path (relative to repository root, must exist)
+starter_path: challenges/challenge-{{NUMBER}}-{{SLUG}}/

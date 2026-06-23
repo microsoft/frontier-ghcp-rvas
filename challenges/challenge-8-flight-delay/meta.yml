@@ -11,6 +11,9 @@ tags:
   - advanced
   - api
   - frontend
+outcomes:
+  - ship-features
+  - build-ai
 prerequisites: []
 track_url: tracks/challenge-8-flight-delay-track.md
 starter_path: challenges/challenge-8-flight-delay/

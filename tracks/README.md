@@ -1,16 +1,26 @@
 # Hackathon Tracks Overview
 
-Welcome! This hackathon is organized into **22 challenge tracks** to help you get the most out of GitHub Copilot based on your background and interests.
+This hackathon helps you **drive real work outcomes** using GitHub Copilot. Pick a challenge track that delivers an outcome you want to produce, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a hackathon on your own app or repository.
+
+The **22 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
 Coaches can use the hackathon site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages, phases, and role pages.
 
-## Choose Your Track
+## Challenges by Outcome
+
+Tracks are organized by the outcomes they drive. See **[OUTCOMES.md](../OUTCOMES.md)** for full outcome definitions and the complete challenge mapping.
+
+### Ship Product Features Faster
+
+Move from requirements to working, demoable software across the stack.
 
 ### 📋 [Challenge 0: Product Planning Track](./challenge-0-product-planning-track.md)
 
+**Outcome:** Ship Product Features Faster
+
 **Best for:** Product Owners, Business Analysts, Project Managers, Scrum Masters, Program Managers
 
-**Focus:** Product planning, backlog management, documentation, and GitHub collaboration -- no code required
+**Focus:** Planning the next major release of a task management platform -- competitive analysis, user stories, feature specs, stakeholder negotiation, release planning. No code required.
 
 **Your Challenge:** Challenge 0 - Product Planning (TaskFlow v2.0)
 
@@ -20,9 +30,11 @@ Coaches can use the hackathon site's Challenge Set Builder and Learning Paths pa
 
 ### 🔧 [Challenge 1: Web API Track](./challenge-1-web-api-track.md)
 
+**Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
+
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
-**Focus:** REST API development, authentication, testing, and database integration
+**Focus:** Building a task management REST API across 5 stages -- CRUD, JWT auth, persistence, debugging, production readiness with load testing and observability.
 
 **Your Challenge:** Challenge 1 - REST API Builder
 
@@ -30,35 +42,13 @@ Coaches can use the hackathon site's Challenge Set Builder and Learning Paths pa
 
 ---
 
-### 📊 [Challenge 2: ML & AI Track](./challenge-2-ml-ai-track.md)
-
-**Best for:** Data Scientists, ML Engineers, Data Analysts
-
-**Focus:** Data analysis, feature engineering, model development, and ML pipelines
-
-**Your Challenge:** Challenge 2 - ML & Data Analysis (Jupyter Notebooks)
-
-**Duration:** 6-8 hours (5 progressive stages)
-
----
-
-### ☁️ [Challenge 3: DevOps Track](./challenge-3-devops-track.md)
-
-**Best for:** DevOps Engineers, SREs, Platform Engineers, Cloud Engineers
-
-**Focus:** Infrastructure as Code with Terraform (Azure), Docker, Kubernetes, and CI/CD
-
-**Your Challenge:** Challenge 3 - Infrastructure as Code
-
-**Duration:** 6-8 hours (5 progressive stages)
-
----
-
 ### 🎨 [Challenge 4: Frontend Track](./challenge-4-frontend-track.md)
+
+**Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 
 **Best for:** Frontend Developers, UI/UX Engineers, React Developers
 
-**Focus:** React components, TypeScript, modern UI development, and state management
+**Focus:** Building a task dashboard across 5 stages -- responsive layout, state management with undo, drag-and-drop Kanban, accessibility fixes, API integration with test coverage.
 
 **Your Challenge:** Challenge 4 - Interactive UI Components
 
@@ -66,51 +56,13 @@ Coaches can use the hackathon site's Challenge Set Builder and Learning Paths pa
 
 ---
 
-### 🔍 [Challenge 5: QA & Testing Track](./challenge-5-qa-track.md)
-
-**Best for:** QA Engineers, Quality Assurance Specialists, Manual Testers
-
-**Focus:** Using GitHub Copilot to test a real-world application -- test planning, AI-assisted test generation, and reporting
-
-**Your Challenge:** Challenge 5 - QA & Test Automation
-
-**Duration:** 6-8 hours (5 progressive stages)
-
----
-
-### 🤖 [Challenge 6: Agentic Workflows Track](./challenge-6-agentic-workflows-track.md)
-
-**Best for:** Developers and DevOps engineers who want to automate repository maintenance with AI-powered workflows
-
-**Focus:** Building and operating GitHub Agentic Workflows -- Markdown-defined, AI-powered automation running in GitHub Actions for triage, code quality, documentation, CI monitoring, and security
-
-**Your Challenge:** Challenge 6 - GitHub Agentic Workflows
-
-**Duration:** 6-8 hours (5 progressive stages)
-
----
-
-## Challenge 7-21 Tracks
-
-Completed your main track? These advanced tracks go deeper.
-
-### 🧩 [Challenge 7: Copilot SDK Track](./challenge-7-copilot-sdk-track.md)
-
-**Best for:** Experienced developers who want to embed Copilot's agent runtime in custom apps
-
-**Focus:** Building a Release Notes Agent using the GitHub Copilot SDK
-
-**Your Challenge:** Challenge 7 - Copilot SDK
-
-**Duration:** 8-12 hours (Advanced)
-
----
-
 ### ✈️ [Challenge 8: Flight Delay Predictor Track](./challenge-8-flight-delay-track.md)
+
+**Outcomes:** Ship Product Features Faster, Build AI-Powered Capabilities
 
 **Best for:** Full-stack developers who want to combine ML, API, and UI skills
 
-**Focus:** End-to-end application -- data science, backend API, and frontend UI
+**Focus:** Building a complete application that predicts flight delay probability -- explore FAA dataset, train ML model, serve through REST API, create user-facing frontend.
 
 **Your Challenge:** Challenge 8 - Flight Delay Predictor
 
@@ -120,9 +72,11 @@ Completed your main track? These advanced tracks go deeper.
 
 ### 🏢 [Challenge 9: Cross-Functional Team Sprint](./challenge-9-team-sprint-track.md)
 
+**Outcome:** Ship Product Features Faster
+
 **Best for:** Teams of 4-6 people from different roles (PO, developers, QA, DevOps) who want to build a complete application together
 
-**Focus:** End-to-end agile sprint -- ideation with GitHub Spark, parallel development, deployment to Azure
+**Focus:** Building CityPulse, a civic engagement platform, from scratch as a cross-functional team running a simulated agile sprint. PO ideates with GitHub Spark, team builds REST API + frontend + tests + CI/CD + deploys to Azure.
 
 **Your Challenge:** Challenge 9 - CityPulse Team Sprint
 
@@ -132,9 +86,11 @@ Completed your main track? These advanced tracks go deeper.
 
 ### 🥾 [Challenge 10: Technical Team Sprint](./challenge-10-tech-sprint-track.md)
 
+**Outcome:** Ship Product Features Faster
+
 **Best for:** Teams of 2-4 developers/engineers who want to build a complete application from a provided specification, without business stakeholders
 
-**Focus:** Technical sprint -- from specification to production deployment, self-organized team
+**Focus:** Building TrailMate, a trail management platform, from a provided functional specification. Team reads spec, writes technical spec, breaks work into Issues, self-organizes across two sprints.
 
 **Your Challenge:** Challenge 10 - TrailMate Technical Sprint
 
@@ -142,11 +98,45 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
+### 📝 [Challenge 15: Backlog Generator](./challenge-15-backlog-generator-track.md)
+
+**Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
+
+**Best for:** Product owners, tech leads, and scrum masters who manually convert requirement documents into structured backlogs
+
+**Focus:** Converting use case specifications into structured backlogs (Epics, Stories, Tasks, Test Cases) using reusable prompts, refinement agents, and the Atlassian MCP server.
+
+**Your Challenge:** Challenge 15 - Spec-to-Backlog Automation
+
+**Duration:** 6-8 hours (Solo/Pair, No Code Required)
+
+---
+
+### 🚀 [Challenge 17: Spec-to-Ship Accelerator](./challenge-17-spec-to-ship-track.md)
+
+**Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
+
+**Best for:** Tech leads and senior developers who manage the full lifecycle from requirements to deployed code
+
+**Focus:** Compressing the full development lifecycle for a billing module -- spec to backlog, technical analysis, implementation, test specifications, CI pipeline, all producing reusable Copilot artifacts.
+
+**Your Challenge:** Challenge 17 - Billing Module Spec-to-Ship
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
+### Modernize Legacy Systems
+
+Reverse-engineer, characterize, and migrate legacy codebases to modern platforms.
+
 ### 🏦 [Challenge 11: Legacy MUMPS Modernization](./challenge-11-mumps-modernization-track.md)
+
+**Outcome:** Modernize Legacy Systems
 
 **Best for:** Developers who enjoy reverse-engineering unfamiliar codebases and tackling legacy modernization challenges
 
-**Focus:** Legacy code comprehension, characterization testing, and cross-language translation of a MUMPS banking system
+**Focus:** Reverse-engineering and translating a core banking system written in MUMPS -- a language most developers have never seen. 12 routines, ~2,500 lines, covering customer management, deposits, loans, interest calculation, batch processing. Understand, test, extend, translate to modern language.
 
 **Your Challenge:** Challenge 11 - MUMPS Core Banking Modernization
 
@@ -156,9 +146,11 @@ Completed your main track? These advanced tracks go deeper.
 
 ### 🔄 [Challenge 12: Legacy Code Modernization](./challenge-12-legacy-modernization-track.md)
 
+**Outcome:** Modernize Legacy Systems
+
 **Best for:** Developers who inherit undocumented Java applications and need to recover business knowledge, fix security issues, and migrate to modern frameworks
 
-**Focus:** Reverse-engineering legacy Java code, security auditing, characterization testing, and Spring Boot migration
+**Focus:** Reverse-engineering and modernizing the Acme Bank Account Manager -- undocumented Java 8 / Spring Boot 1.5 banking app with SQL injection vulnerabilities, deprecated libraries, no tests. Recover business rules, audit security, write characterization tests, migrate to Spring Boot 3.x / Java 17+.
 
 **Your Challenge:** Challenge 12 - Acme Bank Legacy Modernization
 
@@ -166,71 +158,13 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
-### 📄 [Challenge 13: Living Documentation](./challenge-13-living-docs-track.md)
-
-**Best for:** Teams where documentation is always out of date and maintaining it is a manual burden nobody enjoys
-
-**Focus:** Automating javadoc, architecture diagrams, changelogs, stakeholder summaries, and PR documentation reviews
-
-**Your Challenge:** Challenge 13 - Widget Corp Living Documentation
-
-**Duration:** 6-8 hours (Solo/Pair)
-
----
-
-### 🔩 [Challenge 14: Pipeline Factory](./challenge-14-pipeline-factory-track.md)
-
-**Best for:** DevOps engineers and developers who build and maintain CI/CD pipelines, or teams that still deploy manually
-
-**Focus:** GitHub Actions pipeline creation, debugging broken deployments, reusable workflows, and incident runbooks
-
-**Your Challenge:** Challenge 14 - TaskBoard Pipeline Factory
-
-**Duration:** 6-8 hours (Solo/Pair)
-
----
-
-### 📝 [Challenge 15: Backlog Generator](./challenge-15-backlog-generator-track.md)
-
-**Best for:** Product owners, tech leads, and scrum masters who manually convert requirement documents into structured backlogs
-
-**Focus:** Automating spec-to-backlog conversion using Copilot prompts, agents, and the Atlassian MCP server
-
-**Your Challenge:** Challenge 15 - Spec-to-Backlog Automation
-
-**Duration:** 6-8 hours (Solo/Pair, No Code Required)
-
----
-
-### 🖥️ [Challenge 16: Ops Assistant](./challenge-16-ops-assistant-track.md)
-
-**Best for:** Support teams, L1/L2 ops, and SREs who triage production incidents by manually reading logs
-
-**Focus:** AI-assisted log analysis, incident routing, troubleshooting runbooks, and deployment automation
-
-**Your Challenge:** Challenge 16 - Order Gateway Ops Assistant
-
-**Duration:** 6-8 hours (Solo/Pair)
-
----
-
-### 🚀 [Challenge 17: Spec-to-Ship Accelerator](./challenge-17-spec-to-ship-track.md)
-
-**Best for:** Tech leads and senior developers who manage the full lifecycle from requirements to deployed code
-
-**Focus:** End-to-end Copilot-assisted pipeline -- spec to backlog to technical analysis to code to tests to CI
-
-**Your Challenge:** Challenge 17 - Billing Module Spec-to-Ship
-
-**Duration:** 6-8 hours (Solo/Pair)
-
----
-
 ### 🏗️ [Challenge 18: COBOL Banking Modernization](./challenge-18-cobol-modernization-track.md)
+
+**Outcome:** Modernize Legacy Systems
 
 **Best for:** Developers dealing with COBOL modernization or anyone who wants to tackle a full legacy-to-modern-web transformation
 
-**Focus:** Reverse-engineering a COBOL banking system, building characterization tests, and modernizing it into a React + Node.js/Java web application using Claude Code
+**Focus:** Reverse-engineering a COBOL banking system, building characterization tests, and modernizing it into a React + Node.js/Java web application -- the language that still runs the majority of the world's banking transactions.
 
 **Your Challenge:** Challenge 18 - COBOL Core Banking Modernization
 
@@ -240,9 +174,11 @@ Completed your main track? These advanced tracks go deeper.
 
 ### 🔧 [Challenge 19: WCF Banking Modernization](./challenge-19-wcf-modernization-track.md)
 
+**Outcome:** Modernize Legacy Systems
+
 **Best for:** .NET developers who work with WCF or SOAP services and need to modernize them to REST
 
-**Focus:** Understanding WCF service contracts, data contracts, and fault conditions, then migrating to ASP.NET Core Web API
+**Focus:** Reverse-engineering a legacy WCF banking service (Meridian Savings Bank) built circa 2010-2012, running on CoreWCF and .NET 8. Understand service contracts, data contracts, fault conditions, then port business logic to REST API using ASP.NET Core Web API.
 
 **Your Challenge:** Challenge 19 - WCF Banking Modernization (Meridian Savings Bank)
 
@@ -252,9 +188,11 @@ Completed your main track? These advanced tracks go deeper.
 
 ### 💻 [Challenge 20: PowerShell Automation](./challenge-20-powershell-automation-track.md)
 
+**Outcomes:** Automate Delivery and Ops Toil, Modernize Legacy Systems
+
 **Best for:** Sysadmins, IT Pros, and infrastructure engineers who write PowerShell to manage Windows environments or Azure resources
 
-**Focus:** Using Copilot to understand, fix, test, document, and package PowerShell scripts -- covering error handling, Pester testing, PSScriptAnalyzer, and GitHub Actions CI
+**Focus:** Taking three inherited PowerShell scripts (stale account finder, disk cleanup, Azure resource tagger) and bringing them to production standard -- bug fixes, error handling, Pester tests, static analysis, CI pipeline.
 
 **Your Challenge:** Challenge 20 - Contoso IT PowerShell Automation
 
@@ -262,11 +200,109 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
+### Raise Quality and Confidence
+
+Improve test coverage, accessibility, documentation, or reliability.
+
+### 🔍 [Challenge 5: QA & Testing Track](./challenge-5-qa-track.md)
+
+**Outcome:** Raise Quality and Confidence
+
+**Best for:** QA Engineers, Quality Assurance Specialists, Manual Testers
+
+**Focus:** Testing the eShop application across 5 stages -- explore with Copilot and Playwright MCP, debug and generate automated tests, expand coverage with page objects, compare AI-driven vs human-guided testing, build reporting and test strategy.
+
+**Your Challenge:** Challenge 5 - QA & Test Automation
+
+**Duration:** 6-8 hours (5 progressive stages)
+
+---
+
+### 📄 [Challenge 13: Living Documentation](./challenge-13-living-docs-track.md)
+
+**Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
+
+**Best for:** Teams where documentation is always out of date and maintaining it is a manual burden nobody enjoys
+
+**Focus:** Automating documentation of the Widget Corp Inventory Manager -- generate javadoc, create Mermaid diagrams, build changelog prompt, create documentation review agent for PRs.
+
+**Your Challenge:** Challenge 13 - Widget Corp Living Documentation
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
+### Automate Delivery and Ops Toil
+
+Replace manual, repetitive delivery or operations work with repeatable automation.
+
+### ☁️ [Challenge 3: DevOps Track](./challenge-3-devops-track.md)
+
+**Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
+
+**Best for:** DevOps Engineers, SREs, Platform Engineers, Cloud Engineers
+
+**Focus:** Building infrastructure for a Node.js app across 5 stages -- Docker Compose, Kubernetes with HPA and NetworkPolicy, Terraform for Azure (ACR, AKS), debug broken Key Vault module, CI/CD with blue/green deployment and DR runbook.
+
+**Your Challenge:** Challenge 3 - Infrastructure as Code
+
+**Duration:** 6-8 hours (5 progressive stages)
+
+---
+
+### 🤖 [Challenge 6: Agentic Workflows Track](./challenge-6-agentic-workflows-track.md)
+
+**Outcomes:** Automate Delivery and Ops Toil, Build AI-Powered Capabilities
+
+**Best for:** Developers and DevOps engineers who want to automate repository maintenance with AI-powered workflows
+
+**Focus:** Building and operating GitHub Agentic Workflows -- Markdown-defined, AI-powered automation running in GitHub Actions for triage, code quality, documentation, CI monitoring, and security.
+
+**Your Challenge:** Challenge 6 - GitHub Agentic Workflows
+
+**Duration:** 6-8 hours (5 progressive stages)
+
+---
+
+### 🔩 [Challenge 14: Pipeline Factory](./challenge-14-pipeline-factory-track.md)
+
+**Outcome:** Automate Delivery and Ops Toil
+
+**Best for:** DevOps engineers and developers who build and maintain CI/CD pipelines, or teams that still deploy manually
+
+**Focus:** Building CI/CD pipelines for TaskBoard, a kanban app that currently deploys via a shell script with commented-out scp commands. Create GitHub Actions workflows, debug 5 deliberate bugs, build reusable templates, generate deployment gates with rollback.
+
+**Your Challenge:** Challenge 14 - TaskBoard Pipeline Factory
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
+### 🖥️ [Challenge 16: Ops Assistant](./challenge-16-ops-assistant-track.md)
+
+**Outcome:** Automate Delivery and Ops Toil
+
+**Best for:** Support teams, L1/L2 ops, and SREs who triage production incidents by manually reading logs
+
+**Focus:** Building AI-assisted operations tooling for the Order Gateway -- analyze production logs (payment timeouts, deadlocks, connection pool exhaustion), create log analysis agent, build incident routing prompt, generate troubleshooting runbooks.
+
+**Your Challenge:** Challenge 16 - Order Gateway Ops Assistant
+
+**Duration:** 6-8 hours (Solo/Pair)
+
+---
+
+### Stand Up Cloud Platform Foundations
+
+Provision and harden Azure infrastructure baselines with IaC, identity, and policy guardrails.
+
 ### ☁️ [Challenge 21: Azure Terraform Track](./challenge-21-azure-terraform-track.md)
+
+**Outcome:** Stand Up Cloud Platform Foundations
 
 **Best for:** Platform engineers, cloud engineers, and developers who need to build and review Azure infrastructure in Terraform
 
-**Focus:** Azure remote state, platform provisioning, managed identity, module design, and CI guardrails
+**Focus:** Building an Azure Terraform foundation across 5 phases -- bootstrap remote state and naming rules, provision platform around Container Apps, wire managed identity and Key Vault, refactor into reusable modules, add CI guardrails and drift response.
 
 **Your Challenge:** Challenge 21 - Azure Terraform Foundation
 
@@ -274,9 +310,61 @@ Completed your main track? These advanced tracks go deeper.
 
 ---
 
+### Build AI-Powered Capabilities
+
+Develop and ship ML models, intelligent agents, or AI-driven features.
+
+### 📊 [Challenge 2: ML & AI Track](./challenge-2-ml-ai-track.md)
+
+**Outcome:** Build AI-Powered Capabilities
+
+**Best for:** Data Scientists, ML Engineers, Data Analysts
+
+**Focus:** Predicting customer churn across 5 stages -- discover data quality issues, create visualizations with hypothesis testing, train models with cost-sensitive evaluation, compare imbalance techniques with SHAP interpretability, deploy prediction API with drift detection and model card.
+
+**Your Challenge:** Challenge 2 - ML & Data Analysis (Jupyter Notebooks)
+
+**Duration:** 6-8 hours (5 progressive stages)
+
+---
+
+### 🧩 [Challenge 7: Copilot SDK Track](./challenge-7-copilot-sdk-track.md)
+
+**Outcome:** Build AI-Powered Capabilities
+
+**Best for:** Experienced developers who want to embed Copilot's agent runtime in custom apps
+
+**Focus:** Building a Release Notes Agent powered by the GitHub Copilot SDK. Fetch merged PRs, categorize changes, generate structured changelog through iterative conversation, publish draft GitHub Release -- all using custom tools, streaming responses, multi-turn sessions.
+
+**Your Challenge:** Challenge 7 - Copilot SDK
+
+**Duration:** 8-12 hours (Advanced)
+
+---
+
 ## Which Track Should I Choose?
 
-### Answer These Questions
+### By Outcome
+
+**Want to ship features faster?** Challenges 0, 1, 4, 8, 9, 10, 15, 17
+
+**Need to modernize legacy systems?** Challenges 11, 12, 18, 19, 20
+
+**Want to raise quality and confidence?** Challenges 1, 4, 5, 13
+
+**Looking to automate delivery or ops toil?** Challenges 3, 6, 13, 14, 15, 16, 17, 20
+
+**Building cloud platform foundations?** Challenges 3, 21
+
+**Want to build AI-powered capabilities?** Challenges 2, 6, 7, 8
+
+### By Role
+
+1. **What's your primary role?**
+
+### By Role
+
+Pick the track that matches your primary role, or choose by outcome if you want to deliver a specific result regardless of role.
 
 1. **What's your primary role?**
    - Backend/API Developer → Backend Track
@@ -285,55 +373,23 @@ Completed your main track? These advanced tracks go deeper.
    - Frontend/UI Developer → Frontend Track
    - QA/Test Engineer → QA Tester Track
    - Product Owner/BA/PM → Product Owner & BA Track
-   - Finished a core track and want more? → Challenge 7-21 tracks
-   - Sysadmin or IT Pro writing PowerShell? → Challenge 20: PowerShell Automation
    - Cross-functional team (PO + devs + QA + DevOps)? → Challenge 9: Team Sprint
    - Technical team (devs + DevOps, optionally QA, no PO)? → Challenge 10: Technical Team Sprint
-   - Want to automate repository maintenance with AI? → Agentic Workflows Track
-   - Interested in legacy modernization or obscure languages? → Challenge 11: MUMPS Modernization
-   - Modernizing COBOL into a full-stack web app? → Challenge 18: COBOL Banking Modernization
-   - Inheriting undocumented Java code? → Challenge 12: Legacy Code Modernization
-   - Documentation is always out of date? → Challenge 13: Living Documentation
-   - Manual builds and deployments? → Challenge 14: Pipeline Factory
-   - Manually creating backlogs from specs? → Challenge 15: Backlog Generator
-   - Support team triaging incidents from logs? → Challenge 16: Ops Assistant
-   - Full lifecycle from spec to deployment? → Challenge 17: Spec-to-Ship Accelerator
+   - Want to automate repository maintenance with AI? → Challenge 6: Agentic Workflows Track
 
-2. **What do you want to learn?**
-   - Building REST APIs → Backend Track
-   - Data analysis & ML → Data Science Track
-   - Infrastructure automation → DevOps Track
-   - User interfaces → Frontend Track
-   - Test automation → QA Tester Track
-   - Product planning & documentation → Product Owner & BA Track
-   - Full applications (API + UI) → Combine Backend + Frontend Tracks
-   - Building with the Copilot SDK → Challenge 7: Copilot SDK Track
-   - Full-stack ML apps → Challenge 8: Flight Delay Track
-   - Full team agile sprint → Challenge 9: Team Sprint
-   - Technical team sprint from spec → Challenge 10: Technical Team Sprint
-   - AI-powered repository automation → Agentic Workflows Track
-   - Legacy code comprehension and translation → Challenge 11: MUMPS Modernization
-   - Modernizing undocumented Java code → Challenge 12: Legacy Code Modernization
-   - Automating documentation → Challenge 13: Living Documentation
-   - CI/CD pipeline automation → Challenge 14: Pipeline Factory
-   - Sprint planning and backlog creation → Challenge 15: Backlog Generator
-   - Operations support and incident triage → Challenge 16: Ops Assistant
-   - End-to-end spec-to-ship workflow → Challenge 17: Spec-to-Ship Accelerator
-   - PowerShell scripting and automation → Challenge 20: PowerShell Automation
-   - Azure platform work with Terraform → Challenge 21: Azure Terraform Track
-
-3. **How much time do you have?**
-   - 4 hours → Choose any track, complete core tasks
-   - 6 hours → Complete full track with extras
-   - Full day → Combine multiple tracks (e.g., Backend + Frontend)
+2. **How much time do you have?**
+   - 4 hours → Choose any track, focus on core stages
+   - 6 hours → Complete full track
+   - Full day → Combine multiple tracks (e.g., Backend + Frontend) or tackle an advanced challenge
 
 ### Not Sure? Start Here
 
-- **New to Copilot?** → Backend Track (most beginner-friendly for developers) or Product Owner & BA Track (for non-developers)
-- **Want breadth?** → Combine Backend + Frontend Tracks
-- **Want depth?** → Choose your specialty track
+- **New to Copilot?** → Challenge 1: Web API Track (most beginner-friendly for developers) or Challenge 0: Product Planning Track (for non-developers)
+- **Want to deliver a specific outcome?** → See the outcome groupings above
+- **Want breadth?** → Combine Challenges 1 + 4 (Backend + Frontend)
+- **Want depth?** → Choose your specialty track or an advanced challenge
 
-## Track Comparison
+## Bring Your Own Challenge
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
@@ -358,9 +414,9 @@ Completed your main track? These advanced tracks go deeper.
 | 💻 **Challenge 20: PowerShell Automation** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | PowerShell, Pester, PSScriptAnalyzer, GitHub Actions | Challenge 20 |
 | ☁️ **Challenge 21: Azure Terraform** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | Terraform, AzureRM, Key Vault, GitHub Actions | Challenge 21 |
 
-## What You'll Learn in Every Track
+## What Skills You'll Build
 
-All tracks teach you:
+All tracks help you build proficiency with GitHub Copilot as a by-product of driving outcomes:
 
 - GitHub Copilot core features (inline suggestions, chat)
 - Effective prompt engineering
@@ -488,14 +544,14 @@ Plus access to:
 
 ## Success Metrics
 
-Track your progress across any track:
+A successful track completion means:
 
-- [] Completed at least required challenges for track
-- [] Used all major Copilot features
-- [] Achieved track-specific learning outcomes
-- [] Can demo working solution
-- [] Can explain productivity gains
-- [] Ready to use Copilot in daily work
+- [] Delivered a demonstrable outcome (working code, deployed feature, modernized app, or documented automation)
+- [] Can articulate the business impact of the outcome (faster delivery, reduced risk, lower toil)
+- [] Used Copilot features to accelerate the work and can explain the patterns
+- [] Ready to apply the patterns to your own projects
+
+Activity metrics (Copilot usage, chat interactions) are supporting evidence, not the goal.
 
 ## After Your Track
 

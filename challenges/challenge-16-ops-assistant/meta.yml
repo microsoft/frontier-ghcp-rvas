@@ -9,6 +9,8 @@ focus: Building AI-assisted operations tooling -- log analysis agents, error-to-
 tags:
   - workflow-automation
   - advanced
+outcomes:
+  - automate-delivery
 prerequisites: []
 track_url: tracks/challenge-16-ops-assistant-track.md
 starter_path: challenges/challenge-16-ops-assistant/

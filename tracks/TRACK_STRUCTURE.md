@@ -90,7 +90,7 @@ Each main track file links to this shared file and adds track-specific agent sug
 - **One "Getting Started" section.** The main track file links to the shared `getting-started.md` and adds track-specific subsections.
 - **One challenge link.** Link to the challenge folder once, inside `### Open the Challenge` in Getting Started.
 - **No "Track Overview" prose.** The metadata line (Duration / Difficulty / Focus) under the title is sufficient. Drop any paragraph restating the same information.
-- **No "Learning Outcomes" section.** The stages and their verification bullets already communicate what the participant will learn.
+- **No "Learning Outcomes" section.** The stages and their verification bullets already communicate what the participant will learn. Outcome framing belongs in metadata and the facilitator guide, not as a track-file section.
 - **Tips must be track-relevant.** Do not include tips for tools or domains that belong to a different track.
 - **Headings in main file:** `##` for top-level sections, `###` for subsections.
 - **Headings in stage files:** `#` for stage title, `##` for Tasks/Verification/etc.
@@ -98,6 +98,14 @@ Each main track file links to this shared file and adds track-specific agent sug
 - **Navigation links.** Every stage file must end with Previous/Next links to adjacent stages (first stage has only Next, last stage has only Previous).
 - **`awesome-copilot` referenced once.** In the shared `getting-started.md` file. Do not repeat it in individual tracks.
 - **No "Recommended Schedule" section.** Time estimates belong in the stages table. Clock-slot schedules belong in the Facilitator Guide, not in participant-facing track files.
+
+## Outcome Framing
+
+Every challenge maps to one or more business outcomes defined in the taxonomy: modernize-legacy, ship-features, raise-quality, automate-delivery, platform-foundation, build-ai. This outcome classification lives in metadata (`challenges/*/meta.yml` `outcomes:` field) and framing documents (facilitator guide, learning paths, website), NOT as a new section in track files.
+
+The track file describes WHAT work gets done and HOW to execute it. The outcome taxonomy describes WHY the work matters from a business perspective. Keep these separate.
+
+For customers authoring their own challenges (Bring Your Own Challenge), templates are provided in `byoc/templates/` matching this canonical structure.
 
 ## Writing Style
 

@@ -2,36 +2,50 @@
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **22 challenge tracks** with hands-on work that teaches your team how to use GitHub Copilot effectively.
+Welcome to the GitHub Copilot Enterprise Hackathon! This repository helps your team **drive real work outcomes** using GitHub Copilot. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a hackathon on your own codebase.
+
+## Two Ways to Run This Hackathon
+
+### Option 1: Pick a Worked-Example Challenge
+
+Choose one of the **22 challenge tracks** below. Each challenge maps to a specific business outcome and provides starter code, a devcontainer, and a progression path through real work. Use these to learn outcome-driven AI-assisted development patterns you can apply to your own work.
+
+### Option 2: Bring Your Own Challenge
+
+Run this hackathon on your own app or repository. The **[Bring Your Own Challenge (BYOC) kit](./byoc/)** provides a canvas to define your target outcome, templates to author a custom challenge, and a facilitator runbook to guide your session. This turns the hackathon into a working session that delivers a measurable result for your team.
+
+See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
 ## Hackathon Overview
 
-This hackathon is organized into **22 challenge tracks** covering all skill levels and roles:
+The repository includes **22 challenge tracks** organized by the outcomes they help you deliver:
 
-### Choose Your Track
+### Challenges by Outcome
 
-- 📋 **[Challenge 0: Product Planning Track](./tracks/challenge-0-product-planning-track.md)** - Product planning, backlog management, documentation (no code)
-- 🔧 **[Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)** - REST APIs, authentication, testing
-- 📊 **[Challenge 2: ML & AI Track](./tracks/challenge-2-ml-ai-track.md)** - Data analysis, ML models, feature engineering
-- ☁️ **[Challenge 3: DevOps Track](./tracks/challenge-3-devops-track.md)** - Infrastructure as Code, containers, CI/CD
-- 🎨 **[Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)** - React, TypeScript, modern UI
-- 🔍 **[Challenge 5: QA & Testing Track](./tracks/challenge-5-qa-track.md)** - AI-assisted testing, test planning, Copilot for QA workflows
-- 🤖 **[Challenge 6: Agentic Workflows Track](./tracks/challenge-6-agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows
-- 🧩 **[Challenge 7: Copilot SDK Track](./tracks/challenge-7-copilot-sdk-track.md)** - Build a Copilot SDK application (advanced)
-- ✈️ **[Challenge 8: Flight Delay Predictor Track](./tracks/challenge-8-flight-delay-track.md)** - Full-stack ML app (advanced)
-- 🏢 **[Challenge 9: Cross-Functional Team Sprint](./tracks/challenge-9-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people)
-- 🥾 **[Challenge 10: Technical Team Sprint](./tracks/challenge-10-tech-sprint-track.md)** - Technical team sprint from spec to deployment (2-4 developers)
-- 🏦 **[Challenge 11: Legacy MUMPS Modernization](./tracks/challenge-11-mumps-modernization-track.md)** - Reverse-engineer and translate a MUMPS banking system (solo, advanced)
-- 🔄 **[Challenge 12: Legacy Code Modernization](./tracks/challenge-12-legacy-modernization-track.md)** - Reverse-engineer and modernize an undocumented Java application
-- 📄 **[Challenge 13: Living Documentation](./tracks/challenge-13-living-docs-track.md)** - Automate javadoc, diagrams, changelogs, and PR doc reviews
-- 🔩 **[Challenge 14: Pipeline Factory](./tracks/challenge-14-pipeline-factory-track.md)** - Build CI/CD pipelines, debug broken deployments, generate runbooks
-- 📝 **[Challenge 15: Backlog Generator](./tracks/challenge-15-backlog-generator-track.md)** - Convert requirement specs into structured backlogs with MCP
-- 🖥️ **[Challenge 16: Ops Assistant](./tracks/challenge-16-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling
-- 🚀 **[Challenge 17: Spec-to-Ship Accelerator](./tracks/challenge-17-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code
-- 🏗️ **[Challenge 18: COBOL Banking Modernization](./tracks/challenge-18-cobol-modernization-track.md)** - Reverse-engineer and modernize a COBOL banking system into a full-stack web app
-- 🔧 **[Challenge 19: WCF Banking Modernization](./tracks/challenge-19-wcf-modernization-track.md)** - Understand a legacy WCF SOAP banking service and migrate it to a REST API
-- 💻 **[Challenge 20: PowerShell Automation](./tracks/challenge-20-powershell-automation-track.md)** - Fix, test, document, and package PowerShell scripts for real sysadmin work
-- ☁️ **[Challenge 21: Azure Terraform Track](./tracks/challenge-21-azure-terraform-track.md)** - Build an Azure Terraform foundation with modules, identity, policy checks, and CI guardrails
+Each challenge below drives one or more measurable business outcomes. The six outcome categories are: **Modernize Legacy Systems**, **Ship Product Features Faster**, **Raise Quality and Confidence**, **Automate Delivery and Ops Toil**, **Stand Up Cloud Platform Foundations**, and **Build AI-Powered Capabilities**. See **[OUTCOMES.md](./OUTCOMES.md)** for detailed definitions and the full challenge mapping.
+
+- 📋 **[Challenge 0: Product Planning Track](./tracks/challenge-0-product-planning-track.md)** - Product planning, backlog management, documentation (no code) | **Outcome:** Ship Product Features Faster
+- 🔧 **[Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)** - REST APIs, authentication, testing | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
+- 📊 **[Challenge 2: ML & AI Track](./tracks/challenge-2-ml-ai-track.md)** - Data analysis, ML models, feature engineering | **Outcome:** Build AI-Powered Capabilities
+- ☁️ **[Challenge 3: DevOps Track](./tracks/challenge-3-devops-track.md)** - Infrastructure as Code, containers, CI/CD | **Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
+- 🎨 **[Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)** - React, TypeScript, modern UI | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
+- 🔍 **[Challenge 5: QA & Testing Track](./tracks/challenge-5-qa-track.md)** - AI-assisted testing, test planning, Copilot for QA workflows | **Outcome:** Raise Quality and Confidence
+- 🤖 **[Challenge 6: Agentic Workflows Track](./tracks/challenge-6-agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows | **Outcomes:** Automate Delivery and Ops Toil, Build AI-Powered Capabilities
+- 🧩 **[Challenge 7: Copilot SDK Track](./tracks/challenge-7-copilot-sdk-track.md)** - Build a Copilot SDK application (advanced) | **Outcome:** Build AI-Powered Capabilities
+- ✈️ **[Challenge 8: Flight Delay Predictor Track](./tracks/challenge-8-flight-delay-track.md)** - Full-stack ML app (advanced) | **Outcomes:** Ship Product Features Faster, Build AI-Powered Capabilities
+- 🏢 **[Challenge 9: Cross-Functional Team Sprint](./tracks/challenge-9-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people) | **Outcome:** Ship Product Features Faster
+- 🥾 **[Challenge 10: Technical Team Sprint](./tracks/challenge-10-tech-sprint-track.md)** - Technical team sprint from spec to deployment (2-4 developers) | **Outcome:** Ship Product Features Faster
+- 🏦 **[Challenge 11: Legacy MUMPS Modernization](./tracks/challenge-11-mumps-modernization-track.md)** - Reverse-engineer and translate a MUMPS banking system (solo, advanced) | **Outcome:** Modernize Legacy Systems
+- 🔄 **[Challenge 12: Legacy Code Modernization](./tracks/challenge-12-legacy-modernization-track.md)** - Reverse-engineer and modernize an undocumented Java application | **Outcome:** Modernize Legacy Systems
+- 📄 **[Challenge 13: Living Documentation](./tracks/challenge-13-living-docs-track.md)** - Automate javadoc, diagrams, changelogs, and PR doc reviews | **Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
+- 🔩 **[Challenge 14: Pipeline Factory](./tracks/challenge-14-pipeline-factory-track.md)** - Build CI/CD pipelines, debug broken deployments, generate runbooks | **Outcome:** Automate Delivery and Ops Toil
+- 📝 **[Challenge 15: Backlog Generator](./tracks/challenge-15-backlog-generator-track.md)** - Convert requirement specs into structured backlogs with MCP | **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
+- 🖥️ **[Challenge 16: Ops Assistant](./tracks/challenge-16-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling | **Outcome:** Automate Delivery and Ops Toil
+- 🚀 **[Challenge 17: Spec-to-Ship Accelerator](./tracks/challenge-17-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code | **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
+- 🏗️ **[Challenge 18: COBOL Banking Modernization](./tracks/challenge-18-cobol-modernization-track.md)** - Reverse-engineer and modernize a COBOL banking system into a full-stack web app | **Outcome:** Modernize Legacy Systems
+- 🔧 **[Challenge 19: WCF Banking Modernization](./tracks/challenge-19-wcf-modernization-track.md)** - Understand a legacy WCF SOAP banking service and migrate it to a REST API | **Outcome:** Modernize Legacy Systems
+- 💻 **[Challenge 20: PowerShell Automation](./tracks/challenge-20-powershell-automation-track.md)** - Fix, test, document, and package PowerShell scripts for real sysadmin work | **Outcomes:** Automate Delivery and Ops Toil, Modernize Legacy Systems
+- ☁️ **[Challenge 21: Azure Terraform Track](./tracks/challenge-21-azure-terraform-track.md)** - Build an Azure Terraform foundation with modules, identity, policy checks, and CI guardrails | **Outcome:** Stand Up Cloud Platform Foundations
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -67,6 +81,23 @@ Then open `http://localhost:8000/index.html` in your browser.
 The GitHub Pages deployment workflow automatically builds and deploys the site from `.github/workflows/deploy-site.yml` on every push to `main`.
 
 ## Getting Started
+
+### Option 1: Work a Challenge Track
+
+1. **Choose a challenge** that drives an outcome you want to produce. See **[tracks/README.md](./tracks/README.md)** for the full catalog organized by outcome.
+2. **Set up your environment** using the prerequisites and devcontainer guidance in your chosen track file.
+3. **Work through the stages** in the track, delivering a demonstrable result at the end.
+
+### Option 2: Bring Your Own Challenge
+
+1. **Define your outcome** using the **[Outcome Canvas](./byoc/outcome-canvas.md)**.
+2. **Author your challenge** using the templates in **[byoc/templates/](./byoc/templates/)** (if you need a custom progression; otherwise skip this and work directly on your app).
+3. **Run your session** following the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)**.
+4. **Measure success** using the **[Outcome Scorecard](./byoc/outcome-scorecard.md)**.
+
+See the **[BYOC Kit README](./byoc/README.md)** for the end-to-end flow and a worked example.
+
+---
 
 ### Step 1: Choose Your Track
 
@@ -159,9 +190,9 @@ Once your environment is ready:
 2. Follow the recommended challenge sequence
 3. Use the track-specific tips and guidance
 
-## Key GitHub Copilot Features You'll Learn
+## Skills You'll Build While Driving Outcomes
 
-Throughout these challenges, you'll master:
+As you work through these challenges, you'll build proficiency with GitHub Copilot's capabilities as a by-product of delivering real work:
 
 ### 1. **Chat & Agentic Capabilities**
 
@@ -517,14 +548,13 @@ Prefer to explore on your own?
 
 ## Success Metrics
 
-Track your progress:
+A successful hackathon produces:
 
-- [ ] Chose and started your track
-- [ ] Completed at least 2 challenges (or all required challenges in your track)
-- [ ] Used all major chat commands (`/explain`, `/fix`, `/tests`)
-- [ ] Created reusable prompt collections
-- [ ] Documented learnings and productivity wins
-- [ ] Can explain Copilot's impact on your workflow
+- **A demonstrable outcome** for each team -- working code, a shipped feature, modernized infrastructure, or documented automation.
+- **Articulated business impact** -- participants can state the outcome they drove and why it matters (faster delivery, reduced risk, lower toil).
+- **Proficiency with Copilot** as a by-product -- the team can explain how they used Copilot to drive the outcome and plan to apply the patterns to their daily work.
+
+Track activity metrics (Copilot usage, chat interactions) as supporting evidence, but judge success by the work result.
 
 ## Collaboration
 
@@ -556,7 +586,8 @@ After the hackathon:
 
 ### Quick Links
 
-- **[Choose Your Track](./tracks/README.md)** - Role-based learning paths
+- **[Choose Your Track](./tracks/README.md)** - Outcome-driven learning paths organized by role and outcome
+- **[Bring Your Own Challenge Kit](./byoc/README.md)** - Run this hackathon on your own codebase
 - **Challenge Set Builder** - Available on the published site; coaches can curate challenge sets and generate student URLs
 - **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
 - **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For hackathon organizers

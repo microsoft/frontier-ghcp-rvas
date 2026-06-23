@@ -134,6 +134,190 @@
 
 **Manual step (owner action required):** Set GitHub → Settings → Pages → Source = "GitHub Actions" once in the UI (if not already done).
 
+### 2026-06-23: Outcome Taxonomy and Data-Model Contract
+
+**By:** Danny (Lead), requested by Marco Olivo
+
+**Date:** 2026-06-23
+
+**What:** Finalized a 6-category outcome taxonomy for the hackathon and defined the data-model contract for implementation. All 22 challenges are mapped. The taxonomy is additive to the existing 5-category color scheme -- it does not replace or break it.
+
+**Outcome IDs and Names:**
+
+| ID | Name |
+|----|------|
+| `modernize-legacy` | Modernize Legacy Systems |
+| `ship-features` | Ship Product Features Faster |
+| `raise-quality` | Raise Quality and Confidence |
+| `automate-delivery` | Automate Delivery and Ops Toil |
+| `platform-foundation` | Stand Up Cloud Platform Foundations |
+| `build-ai` | Build AI-Powered Capabilities |
+
+**Data-Model Decision:**
+
+- **`category`** (existing): Preserved. Single-valued. Controls color grouping on the site.
+  Values: `core-tracks`, `team-sprints`, `legacy-modernization`, `workflow-automation`, `azure-platform`.
+- **`outcomes`** (new): Multi-valued YAML list in each `meta.yml`. Describes the business
+  outcome the challenge delivers. Values drawn from the 6 IDs above.
+- **`OUTCOME_CONFIG`** in `web/build.js`: A map from outcome ID to `{name, description}`.
+  Build validates every challenge `outcomes[]` entry against this map. Fail on unknown IDs.
+- **`platform.json`**: Each challenge object gains an `outcomes` array. Top-level gains an
+  `outcomeConfig` key with the full map for frontend rendering.
+
+**Authoritative Reference:** Full taxonomy, mapping table, and implementation spec: `OUTCOMES.md` at repo root.
+
+**Implementation Impact:**
+- Linus: Add `outcomes` field to 22 `meta.yml` files (use mapping from OUTCOMES.md). Add `OUTCOME_CONFIG` + validation to `web/build.js`. Emit into `platform.json`.
+- Rusty: Use outcome names/descriptions in narrative reframes. Do not add "Learning Outcomes" sections to track files.
+- Basher: Preserve outcomes in participant workspaces.
+- Livingston: Validate sync between `meta.yml` outcomes and `OUTCOME_CONFIG` keys.
+
+**Why:** Customer wants hackathon framed around business outcomes (the work result a team delivers) rather than just learning activities. Additive taxonomy preserves existing site structure while reframing challenges by real business impact.
+
+### 2026-06-23: BYOC Narrative and Kit Structure
+
+**By:** Rusty (Content Dev), requested by Marco Olivo
+
+**Date:** 2026-06-23
+
+**What:** Shifted the hackathon narrative from learning-centric to outcome-driven and created the Bring Your Own Challenge (BYOC) kit to support hackathons on customer codebases.
+
+**Narrative Reframe:**
+- README.md now opens with "drive real work outcomes" instead of "learn how to use Copilot"
+- Added "Two ways to run this hackathon" section: (1) pick a worked-example challenge, (2) bring your own challenge
+- Every challenge listing includes a one-line outcome tag (e.g., "Ship Product Features Faster", "Modernize Legacy Systems")
+- Tracks organized by the 6 outcome categories first, then by role
+- Success metrics shifted from activity-only to outcome-first: "each team produced a demonstrable outcome and can articulate the business impact"
+- Facilitator guide reframed: opening as outcome selection, showcase as outcome demos, wrap-up as outcome review
+
+**BYOC Kit Structure (5 prose files):**
+1. **byoc/README.md** -- Kit overview, when to use it, end-to-end flow (define outcome -> author challenge -> run session -> score outcome), integration with worked-example challenges
+2. **byoc/outcome-canvas.md** -- Fill-in worksheet: target outcome (from the 6, or custom), current pain/baseline, definition of done, constraints, app/repo in scope, demo plan, success measurement (before/after impact)
+3. **byoc/facilitator-runbook.md** -- How to run a hackathon on a customer codebase: pre-session prep (outcome definition, environment/devcontainer guidance, access), day-of structure (opening, timeboxes with checkpoints, demo and outcome review), post-session follow-up, common challenges and mitigations, example timeboxes for common outcomes
+4. **byoc/outcome-scorecard.md** -- Reusable definition-of-done / business-impact scorecard: outcome statement, acceptance criteria (met/not met with evidence), artifacts, before/after impact (quantified), how Copilot accelerated the work, lessons learned, next steps
+5. **byoc/example-walkthrough.md** -- Worked example adapting the Web API challenge app end-to-end through the kit. Shows filled canvas + scorecard + session flow for a "make the API production-ready" outcome (add JWT auth, tests, structured logging)
+
+**Writing Style Compliance:** All BYOC files follow humanized rules (no emoji in headings, no em-dashes, no hype language, no AI sign-offs, natural phrasing, markdownlint-compliant).
+
+**Cross-Linking:** BYOC kit referenced from README.md ("Two ways to run this hackathon" section, "Bring Your Own Challenge Kit" in Quick Links), tracks/README.md ("Bring Your Own Challenge" section), FACILITATOR_GUIDE.md ("BYOC Sessions" section).
+
+**Why:** Customer wants the narrative tied to outcomes (the work result a team is trying to drive), not just learning activities. The BYOC kit enables customers to run hackathons on their own codebases and deliver measurable business value, positioning the 22 worked-example challenges as reference patterns rather than the only menu.
+
+### 2026-06-23: Outcome-Driven Data Model Implementation (Additive)
+
+**By:** Linus (Challenge Dev), Danny (Lead Architect)
+
+**Date:** 2026-06-23
+
+**Status:** Implemented
+
+**What:** Implemented the six-outcome business taxonomy additively on top of the existing 5-category color scheme. The outcome classification describes WHAT work result a challenge produces, while category continues to control visual color grouping on the site. These are independent, complementary dimensions.
+
+**Implementation Details:**
+1. **Data Model (additive, non-breaking)**
+   - Added OUTCOME_CONFIG to `web/build.js` defining the six canonical outcomes with id, name, and description
+   - Added outcomes field to all 22 `challenges/*/meta.yml` files with multi-valued lists per the mapping in OUTCOMES.md
+   - Build-time validation: Every outcome ID in meta.yml is validated against OUTCOME_CONFIG keys; build fails with clear error on unknown outcome
+   - platform.json emission: Each challenge object includes `outcomes: [..]` array, and top-level `outcomeConfig` array provides canonical definitions for frontend rendering
+
+2. **Learning Paths Reframing**
+   - Added `outcomes: [..]` field to all 8 paths, derived from constituent challenge mappings
+   - Renamed path `name` and `description` to be outcome-led (e.g., "Core Developer Path" with outcome focus, "Full-Stack Product Delivery", "Delivery and Operations Automation")
+   - Kept `id` and `challenge_ids` unchanged for compatibility
+
+3. **Documentation Updates**
+   - **tracks/TRACK_STRUCTURE.md**: Added "Outcome Framing" subsection documenting that outcomes live in metadata and framing, NOT as a track-file section
+   - Referenced new BYOC templates in byoc/templates/
+
+4. **BYOC Authoring Templates**
+   - Created `byoc/templates/track-template.md` -- main track file matching canonical structure with {{placeholders}}
+   - Created `byoc/templates/stage-template.md` -- stage skeleton with Tasks, Verification, Copilot vs Judgment, navigation
+   - Created `byoc/templates/meta.yml.template` -- annotated metadata file with inline comments explaining valid values for outcomes, category, difficulty, prerequisites
+
+**Verification:**
+- Build passes: `node web/build.js` reports 22 challenges, 5 categories, 8 learning paths, exit 0
+- platform.json emits outcomes correctly
+- All 22 meta.yml files contain valid outcomes per OUTCOMES.md mapping
+- No breaking changes to existing category or site structure
+
+**Why:** Repository framing was too learning-focused ("learn how to use Copilot") when customers want to run hackathons tied to business outcomes. Additive approach preserves the just-shipped bespoke site structure.
+
+### 2026-06-23: Website Outcome-Driven Reframe and BYOC Page
+
+**By:** Linus (Challenge Dev)
+
+**Date:** 2026-06-23
+
+**Status:** Implemented
+
+**What:** Reframed the GitHub Pages site from learning-centric to outcome-driven and added a Bring Your Own Challenge (BYOC) page. Kept the existing 22 challenges and 5-category color scheme intact; outcomes are additive and non-breaking.
+
+**Outcome Surfacing (data-driven):**
+- Catalog: added outcome filter chipset + outcome badges on challenge cards (reads from `platform.json` `outcomeConfig`)
+- Challenge detail: displays challenge outcomes as badges in hero metadata row
+- Paths: displays learning path outcomes as badges below description
+- Core.js: added `FP.outcomeBadges()` helper (additive, non-breaking)
+
+**Copy Updates (humanized, outcome-led):**
+- Hero: "Drive outcomes. Build skills as you ship."
+- Categories: "Pick your outcome path" (removed "Five learning journeys")
+- Paths: "Paths to measurable outcomes" (removed "Learning paths for your journey")
+- No hype language, no em-dashes, no emoji in headings
+
+**BYOC Page (web/byoc.html + byoc.js):**
+- Introduces Bring Your Own Challenge: run hackathons on your own codebase
+- Links to kit files in byoc/ (outcome-canvas.md, facilitator-runbook.md, outcome-scorecard.md, example-walkthrough.md, templates/)
+- All links point to GitHub repo (dependency-free, works from GitHub Pages)
+- Six-step getting-started flow inline on page
+- Added BYOC nav link consistently across all 9 site pages
+
+**Non-breaking:**
+- Category-based navigation, color scheme, and existing URLs unchanged
+- Outcomes are additive facet
+- All outcome labels and descriptions come from `platform.json` `outcomeConfig` -- no hardcoded labels in page scripts
+
+**Verification:**
+- `node web/build.js` passes (22 challenges, 5 categories, 8 learning paths, exit 0)
+- All 11 JavaScript files pass `node --check` (no syntax errors)
+- Outcome filter works on catalog (e.g. `?outcome=ship-features`)
+- Outcome badges render on catalog cards, challenge detail, and path cards with correct labels from outcomeConfig
+- BYOC page renders with all GitHub repo links to kit files
+
+**Why:** Site narrative was learning-first ("learn Copilot") instead of outcome-first ("drive a real deliverable"). Outcomes now visible across catalog, challenge detail, and paths, making it easy to filter and discover challenges by business outcome. BYOC page provides clear entry point for customers who want to adapt the kit to their own codebase.
+
+### 2026-06-23: Preserve byoc/ and OUTCOMES.md in Participant Workspaces
+
+**By:** Basher (DevOps)
+
+**Date:** 2026-06-23
+
+**Context:** The team added two new top-level items to the repository:
+- `OUTCOMES.md` -- the outcome taxonomy (8.6 KB)
+- `byoc/` -- the Bring Your Own Challenge authoring kit with templates, canvas, runbook, and example walkthrough (~56 KB)
+
+Both are **facilitator-facing reference materials** intended to help facilitators understand and adapt the outcome-driven model.
+
+**Decision:** **PRESERVE** `byoc/` and `OUTCOMES.md` in participant workspaces.
+
+**Rationale:**
+1. **Facilitator Reference:** These materials help facilitators run or adapt challenges. Even participants running a modified challenge could benefit from understanding the outcome framework.
+2. **No Burden:** Both files are small (~65 KB combined) and do not interfere with challenge work.
+3. **No Build Dependency:** Neither `web/build.js` nor any other build/deploy pipeline reads these files.
+4. **Intentional, Not Accidental:** Added explicit comments to setup and clean scripts to document that preservation is intentional, not accidental.
+
+**Implementation:**
+- `scripts/setup-challenge.sh` and `scripts/setup-challenge.ps1` do NOT remove `byoc/` or `OUTCOMES.md`
+- `scripts/_clean-common.sh` and `scripts/_clean-common.ps1` do NOT remove these files
+- Added comments documenting this as intentional behavior for facilitator reference
+
+**Verification:**
+- `bash -n scripts/*.sh` -- all scripts pass syntax validation
+- Devcontainer post-create calls `setup-challenge.sh` -- behavior unchanged, files preserved
+- `web/build.js` -- no changes needed (does not read byoc/ or OUTCOMES.md)
+- `.github/workflows/deploy-site.yml` -- no changes needed (triggers `node web/build.js`, no byoc/ reading)
+
+**Why:** Participant workspaces are slightly larger (~65 KB) but gain access to facilitator reference materials. Non-breaking; all build, deploy, and container workflows remain unchanged.
+
 ## Governance
 
 - All meaningful changes require team consensus

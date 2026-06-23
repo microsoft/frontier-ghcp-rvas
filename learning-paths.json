@@ -3,8 +3,9 @@
   "paths": [
     {
       "id": "core-developer-journey",
-      "name": "Core Developer Journey",
-      "description": "Start here. Plan, build, ship, and test a service end to end with Copilot.",
+      "name": "Core Developer Path",
+      "description": "Ship features, build platform foundations, and integrate AI capabilities with Copilot.",
+      "outcomes": ["ship-features", "platform-foundation", "build-ai", "raise-quality"],
       "challenge_ids": [
         "challenge-0",
         "challenge-1",
@@ -15,8 +16,9 @@
     },
     {
       "id": "full-stack-mastery",
-      "name": "Full-Stack Mastery",
-      "description": "Connect a backend API, a frontend, and a QA suite into one working product.",
+      "name": "Full-Stack Product Delivery",
+      "description": "Ship production-ready features across the stack with quality assurance.",
+      "outcomes": ["ship-features", "raise-quality", "build-ai"],
       "challenge_ids": [
         "challenge-1",
         "challenge-4",
@@ -26,8 +28,9 @@
     },
     {
       "id": "legacy-modernization",
-      "name": "Legacy Modernization",
-      "description": "Modernize MUMPS, COBOL, and WCF banking systems with Copilot as the guide.",
+      "name": "Legacy System Modernization",
+      "description": "Modernize MUMPS, COBOL, and WCF banking systems to modern platforms.",
+      "outcomes": ["modernize-legacy"],
       "challenge_ids": [
         "challenge-11",
         "challenge-12",
@@ -37,8 +40,9 @@
     },
     {
       "id": "automation-excellence",
-      "name": "Automation Excellence",
-      "description": "Turn manual delivery work into repeatable Copilot-driven workflows.",
+      "name": "Delivery and Operations Automation",
+      "description": "Automate delivery pipelines and eliminate manual operations toil.",
+      "outcomes": ["automate-delivery", "ship-features", "raise-quality"],
       "challenge_ids": [
         "challenge-13",
         "challenge-14",
@@ -49,8 +53,9 @@
     },
     {
       "id": "team-collaboration",
-      "name": "Team Collaboration",
-      "description": "Run cross-functional sprints where every role works with Copilot.",
+      "name": "Cross-Functional Product Delivery",
+      "description": "Ship features end-to-end with every role collaborating through Copilot.",
+      "outcomes": ["ship-features"],
       "challenge_ids": [
         "challenge-0",
         "challenge-9",
@@ -59,8 +64,9 @@
     },
     {
       "id": "ai-ml-path",
-      "name": "AI and ML",
-      "description": "Build ML models and agentic AI experiences on top of the Copilot platform.",
+      "name": "AI and ML Capabilities",
+      "description": "Build and ship AI-powered features, models, and agentic workflows.",
+      "outcomes": ["build-ai", "automate-delivery"],
       "challenge_ids": [
         "challenge-2",
         "challenge-6",
@@ -69,8 +75,9 @@
     },
     {
       "id": "azure-infrastructure",
-      "name": "Azure Infrastructure",
-      "description": "Provision and automate Azure platform baselines with Copilot and Terraform.",
+      "name": "Azure Platform Engineering",
+      "description": "Build and automate Azure infrastructure foundations with repeatable patterns.",
+      "outcomes": ["platform-foundation", "automate-delivery", "modernize-legacy"],
       "challenge_ids": [
         "challenge-3",
         "challenge-20",
@@ -79,8 +86,9 @@
     },
     {
       "id": "advanced-workflows",
-      "name": "Advanced Agentic Workflows",
-      "description": "Push past the basics into agentic workflows, the Copilot SDK, and spec-to-ship.",
+      "name": "AI-Driven Development Acceleration",
+      "description": "Build agentic workflows and compress the delivery lifecycle with AI assistance.",
+      "outcomes": ["build-ai", "automate-delivery", "ship-features"],
       "challenge_ids": [
         "challenge-6",
         "challenge-7",

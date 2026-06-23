@@ -11,6 +11,8 @@ tags:
   - core
   - qa
   - testing
+outcomes:
+  - raise-quality
 prerequisites: []
 track_url: tracks/challenge-5-qa-track.md
 starter_path: challenges/challenge-5-qa/
