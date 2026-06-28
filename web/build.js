@@ -95,6 +95,10 @@ const LEARNING_PATHS_PATH = path.join(ROOT, 'learning-paths.json');
 const FACILITATOR_PATH    = path.join(ROOT, 'FACILITATOR_GUIDE.md');
 const TROUBLESHOOT_PATH   = path.join(ROOT, 'TROUBLESHOOTING.md');
 
+/* ─── Repository (for resolving relative links in guides) ─────────────────── */
+const REPO_URL    = 'https://github.com/microsoft/frontier-ghcp-hackathon';
+const REPO_BRANCH = 'main';
+
 /* ─── Minimal YAML parser ────────────────────────────────────────────────────
  * Handles only the locked meta.yml contract: scalar key-value pairs, block
  * lists, inline comments. NOT a general parser -- intentional.
@@ -269,6 +273,57 @@ function collectChallenges() {
   return { challenges, errors };
 }
 
+/* ─── Guide link resolution ───────────────────────────────────────────────────
+ * A guide is built by concatenating a track file with its stage/phase files into
+ * one rendered page. Relative links inside those source files (e.g. the stage
+ * table-of-contents links, "Back to track" links, resource links) would 404 when
+ * served, because the individual .md files are not published. We rewrite them:
+ *   - Links that point to another file inlined into the SAME guide become
+ *     in-page anchors (#…) that jump to that section.
+ *   - All other relative links resolve to absolute GitHub URLs so they never 404.
+ * ─────────────────────────────────────────────────────────────────────────── */
+function fragmentAnchorId(relPathFromRoot) {
+  return 'src-' + relPathFromRoot
+    .replace(/\\/g, '/')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function repoUrlFor(relPathFromRoot, isDir) {
+  const clean = relPathFromRoot.replace(/\\/g, '/').replace(/\/+$/, '');
+  return `${REPO_URL}/${isDir ? 'tree' : 'blob'}/${REPO_BRANCH}/${clean}`;
+}
+
+/* Rewrite markdown links (not images) in a single fragment. `inlinedAnchors`
+ * maps a normalized absolute file path -> in-page anchor id. */
+function rewriteFragmentLinks(content, fragmentDir, inlinedAnchors) {
+  const LINK_RE = /(!?)\[((?:[^\]\\]|\\.)*)\]\(\s*([^()\s]+)((?:\s+"[^"]*")?)\s*\)/g;
+  return content.replace(LINK_RE, (full, bang, text, target, title) => {
+    if (bang) return full; // leave images untouched
+    const t = target.trim();
+    if (!t) return full;
+    if (t.startsWith('#') || t.startsWith('//') || /^[a-z][a-z0-9+.-]*:/i.test(t)) return full;
+
+    let core = t;
+    let hash = '';
+    const hi = core.indexOf('#');
+    if (hi >= 0) { hash = core.slice(hi); core = core.slice(0, hi); }
+    if (!core) return full; // pure in-page anchor
+
+    const isDir = core.endsWith('/');
+    const absTarget = path.resolve(fragmentDir, core);
+    const relToRoot = path.relative(ROOT, absTarget).replace(/\\/g, '/');
+    if (relToRoot.startsWith('..')) return full; // outside repo — leave as-is
+
+    const key = absTarget.replace(/\\/g, '/').toLowerCase();
+    if (!isDir && inlinedAnchors.has(key)) {
+      return `${bang}[${text}](#${inlinedAnchors.get(key)})`;
+    }
+    return `${bang}[${text}](${repoUrlFor(relToRoot, isDir)}${hash})`;
+  });
+}
+
 /* ─── Build challenge guides ──────────────────────────────────────────────── */
 function buildChallengeGuides(challenges) {
   const errors = [];
@@ -280,24 +335,42 @@ function buildChallengeGuides(challenges) {
     const trackDir = path.dirname(trackPath);
     const trackBasename = path.basename(trackPath, '.md');
 
-    let guide = readFileSafe(trackPath);
-    if (!guide) {
+    const trackRaw = readFileSafe(trackPath);
+    if (!trackRaw) {
       errors.push(`Challenge ${ch.id}: track file not found at ${ch.track_url}`);
       continue;
     }
 
-    const stageFiles = readDirSafe(trackDir)
+    /* Stage/phase files live in a sibling subdirectory named after the track,
+     * e.g. tracks/<track>.md + tracks/<track>/stage-*.md */
+    const stageDir = path.join(trackDir, trackBasename);
+    const stageFiles = readDirSafe(stageDir)
       .filter(e => e.isFile() && (e.name.startsWith('stage-') || e.name.startsWith('phase-')) && e.name.endsWith('.md'))
       .map(e => e.name)
       .sort();
 
+    /* All fragments inlined into this guide, in render order. */
+    const fragments = [{ absPath: trackPath, content: trackRaw }];
     for (const stageFile of stageFiles) {
-      const stagePath = path.join(trackDir, stageFile);
+      const stagePath = path.join(stageDir, stageFile);
       const stageContent = readFileSafe(stagePath);
-      if (stageContent) {
-        guide += '\n\n' + stageContent;
-      }
+      if (stageContent) fragments.push({ absPath: stagePath, content: stageContent });
     }
+
+    /* Map each inlined file to a stable in-page anchor id. */
+    const inlinedAnchors = new Map();
+    for (const frag of fragments) {
+      const relToRoot = path.relative(ROOT, frag.absPath).replace(/\\/g, '/');
+      frag.anchorId = fragmentAnchorId(relToRoot);
+      inlinedAnchors.set(frag.absPath.replace(/\\/g, '/').toLowerCase(), frag.anchorId);
+    }
+
+    const parts = fragments.map((frag) => {
+      const dir = path.dirname(frag.absPath);
+      const rewritten = rewriteFragmentLinks(frag.content, dir, inlinedAnchors);
+      return `<a id="${frag.anchorId}"></a>\n\n${rewritten}`;
+    });
+    const guide = parts.join('\n\n');
 
     const outDir = path.join(OUT_CHALLENGES_DIR, ch.id);
     ensureDir(outDir);
