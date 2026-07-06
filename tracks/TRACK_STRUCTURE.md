@@ -101,9 +101,9 @@ Each main track file links to this shared file and adds track-specific agent sug
 
 ## Outcome Framing
 
-Every challenge maps to one or more business outcomes defined in the taxonomy: modernize-legacy, ship-features, raise-quality, automate-delivery, platform-foundation, build-ai. This outcome classification lives in metadata (`challenges/*/meta.yml` `outcomes:` field) and framing documents (facilitator guide, learning paths, website), NOT as a new section in track files.
+Every challenge drives a business outcome (for example: modernizing legacy code, shipping features, raising quality, automating delivery, standing up platform foundations, or building AI capabilities). This framing lives in the facilitator guide, learning paths, and website, NOT as a new section in track files.
 
-The track file describes WHAT work gets done and HOW to execute it. The outcome taxonomy describes WHY the work matters from a business perspective. Keep these separate.
+The track file describes WHAT work gets done and HOW to execute it. The outcome framing describes WHY the work matters from a business perspective. Keep these separate.
 
 For customers authoring their own challenges (Bring Your Own Challenge), templates are provided in `byoc/templates/` matching this canonical structure.
 

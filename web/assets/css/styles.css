@@ -1,5 +1,5 @@
 /* =====================================================================
-   GitHub Copilot Hackathon
+   GitHub Copilot RVAS
    Visual system: deep-space canvas, Chakra Petch display + DM Sans body,
    frontier teal accent, five category colors, light/dark theme.
    ===================================================================== */
@@ -728,13 +728,6 @@ h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0; }
   font-size: 0.68rem;
 }
 .badge-tag:hover { color: var(--c-dim); }
-.badge-outcome {
-  background: rgba(232, 200, 74, 0.10);
-  color: var(--c-accent);
-  border-color: rgba(232, 200, 74, 0.20);
-  text-transform: none;
-  letter-spacing: 0;
-}
 
 /* ═══════════════════════════ FILTERS ═══════════════════════════════ */
 .filters {

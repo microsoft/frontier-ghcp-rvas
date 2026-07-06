@@ -10,9 +10,6 @@ tags:
   - workflow-automation
   - advanced
   - powershell
-outcomes:
-  - automate-delivery
-  - modernize-legacy
 prerequisites: []
 track_url: tracks/challenge-20-powershell-automation-track.md
 starter_path: challenges/challenge-20-powershell-automation/

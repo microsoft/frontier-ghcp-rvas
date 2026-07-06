@@ -1,6 +1,6 @@
 # BYOC Facilitator Runbook
 
-This runbook describes how to run an outcome-driven hackathon on a customer's own app or repository. Use this when participants are working on their own codebase instead of a pre-built challenge.
+This runbook describes how to run an outcome-driven RVAS delivery session on a customer's own app or repository. Use this when participants are working on their own codebase instead of a pre-built challenge.
 
 ## Pre-Session Prep (1-2 weeks before)
 
@@ -8,7 +8,7 @@ This runbook describes how to run an outcome-driven hackathon on a customer's ow
 
 Work with the team to fill in the **[Outcome Canvas](./outcome-canvas.md)**:
 
-- Target outcome category
+- Target type of outcome
 - Current pain and baseline metrics
 - Definition of done with concrete acceptance criteria
 - Constraints (time, team size, architecture, access)

@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-Common issues and solutions for the GitHub Copilot Hackathon.
+Common issues and solutions for the GitHub Copilot RVAS.
 
 ## GitHub Copilot Issues
 
@@ -244,7 +244,7 @@ npm install
 
 ```text
 
-# Using in-memory storage for hackathon
+# Using in-memory storage for the session
 
 # No external database needed
 
@@ -323,7 +323,7 @@ docker ps
 
 ```text
 
-# For hackathon: No real Azure deployment needed
+# For this session: No real Azure deployment needed
 
 # Terraform validate/plan only
 
@@ -442,7 +442,7 @@ git config --global user.email "you@example.com"
 
 ```bash
 
-# During hackathon, you likely won't push
+# During the session, you likely won't push
 
 # If you do and get conflicts:
 git stash
@@ -506,7 +506,7 @@ bash script.sh
  - Tool documentation
  - GitHub issues
 
-### During Hackathon
+### During the Session
 
 1. **Ask in Chat**
  - Slack/Teams channel

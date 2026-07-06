@@ -1,14 +1,14 @@
-# Hackathon Tracks Overview
+# RVAS Delivery Session Tracks Overview
 
-This hackathon helps you **drive real work outcomes** using GitHub Copilot. Pick a challenge track that delivers an outcome you want to produce, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a hackathon on your own app or repository.
+This RVAS delivery session helps you **drive real work outcomes** with GitHub Copilot, and turn those outcomes into lasting Copilot adoption. Pick a challenge track that delivers an outcome you want to produce, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a session on your own app or repository.
 
 The **22 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
-Coaches can use the hackathon site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages, phases, and role pages.
+Coaches can use the RVAS site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages, phases, and role pages.
 
 ## Challenges by Outcome
 
-Tracks are organized by the outcomes they drive. See **[OUTCOMES.md](../OUTCOMES.md)** for full outcome definitions and the complete challenge mapping.
+Tracks are grouped by the outcome they drive. Each grouping below reflects the kind of work result the track produces.
 
 ### Ship Product Features Faster
 
@@ -431,7 +431,7 @@ Plus track-specific skills!
 
 ### IMPORTANT: Create a Fresh Repository
 
-> **Critical:** Do NOT work directly in this hackathon repository! See [Getting Started](./getting-started.md) for the setup flow and workspace preparation steps.
+> **Critical:** Do NOT work directly in this RVAS repository! See [Getting Started](./getting-started.md) for the setup flow and workspace preparation steps.
 
 **[Follow the Setup Instructions](./getting-started.md)** - includes an interactive setup script.
 

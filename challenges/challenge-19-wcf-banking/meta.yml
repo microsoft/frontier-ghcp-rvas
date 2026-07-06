@@ -12,8 +12,6 @@ tags:
   - api
   - legacy
   - testing
-outcomes:
-  - modernize-legacy
 prerequisites: []
 track_url: tracks/challenge-19-wcf-modernization-track.md
 starter_path: challenges/challenge-19-wcf-banking/

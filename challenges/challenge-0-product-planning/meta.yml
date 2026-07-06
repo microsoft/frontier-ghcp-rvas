@@ -11,8 +11,6 @@ tags:
   - core
   - backlog
   - docs
-outcomes:
-  - ship-features
 prerequisites: []
 track_url: tracks/challenge-0-product-planning-track.md
 starter_path: challenges/challenge-0-product-planning/

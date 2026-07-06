@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * GitHub Copilot Hackathon — build step (dependency-free, Node core only).
+ * GitHub Copilot RVAS — build step (dependency-free, Node core only).
  *
  * Reads challenges/<slug>/meta.yml as the single source of truth and emits:
  *   web/assets/data/platform.json
@@ -21,7 +21,7 @@ const fs   = require('fs');
 const path = require('path');
 
 /* ─── Category config (LOCKED per contract) ─────────────────────────────────
- * These are the 5 categories for this hackathon.
+ * These are the 5 categories for this RVAS delivery session.
  * ─────────────────────────────────────────────────────────────────────────── */
 const CATEGORY_CONFIG = {
   'core-tracks': {
@@ -51,38 +51,6 @@ const CATEGORY_CONFIG = {
   }
 };
 
-/* ─── Outcome config (additive, outcome-driven framing) ─────────────────────
- * Business outcomes that challenges produce. Multi-valued: one challenge can
- * deliver multiple outcomes. Additive to category (category controls color
- * grouping, outcomes describe work results).
- * ─────────────────────────────────────────────────────────────────────────── */
-const OUTCOME_CONFIG = {
-  'modernize-legacy': {
-    name: 'Modernize Legacy Systems',
-    description: 'Reverse-engineer, characterize, and migrate legacy codebases to modern platforms.'
-  },
-  'ship-features': {
-    name: 'Ship Product Features Faster',
-    description: 'Move from requirements to working, demoable software across the stack.'
-  },
-  'raise-quality': {
-    name: 'Raise Quality and Confidence',
-    description: 'Improve test coverage, accessibility, documentation, or reliability.'
-  },
-  'automate-delivery': {
-    name: 'Automate Delivery and Ops Toil',
-    description: 'Replace manual delivery or operations work with automated pipelines and tooling.'
-  },
-  'platform-foundation': {
-    name: 'Stand Up Cloud Platform Foundations',
-    description: 'Provision and harden Azure infrastructure with IaC, identity, and policy guardrails.'
-  },
-  'build-ai': {
-    name: 'Build AI-Powered Capabilities',
-    description: 'Develop and ship ML models, agents, or AI-driven features into production.'
-  }
-};
-
 /* ─── Paths ──────────────────────────────────────────────────────────────── */
 const ROOT                = path.resolve(__dirname, '..');
 const CHALLENGES_DIR      = path.join(ROOT, 'challenges');
@@ -96,7 +64,7 @@ const FACILITATOR_PATH    = path.join(ROOT, 'FACILITATOR_GUIDE.md');
 const TROUBLESHOOT_PATH   = path.join(ROOT, 'TROUBLESHOOTING.md');
 
 /* ─── Repository (for resolving relative links in guides) ─────────────────── */
-const REPO_URL    = 'https://github.com/microsoft/frontier-ghcp-hackathon';
+const REPO_URL    = 'https://github.com/microsoft/frontier-ghcp-rvas';
 const REPO_BRANCH = 'main';
 
 /* ─── Minimal YAML parser ────────────────────────────────────────────────────
@@ -239,13 +207,6 @@ function collectChallenges() {
         continue;
       }
 
-      const outcomes = Array.isArray(meta.outcomes) ? meta.outcomes : [];
-      for (const outcomeId of outcomes) {
-        if (!OUTCOME_CONFIG[outcomeId]) {
-          errors.push(`${slug}/meta.yml: invalid outcome '${outcomeId}' (must be one of: ${Object.keys(OUTCOME_CONFIG).join(', ')})`);
-        }
-      }
-
       const challenge = {
         id: meta.id,
         number: meta.number || 0,
@@ -257,7 +218,6 @@ function collectChallenges() {
         description: meta.description || '',
         focus: meta.focus || '',
         tags: Array.isArray(meta.tags) ? meta.tags : [],
-        outcomes: outcomes,
         prerequisites: Array.isArray(meta.prerequisites) ? meta.prerequisites : [],
         track_url: meta.track_url || '',
         starter_path: `challenges/${slug}/`,
@@ -441,7 +401,7 @@ function validateReferences(challenges, paths) {
 
 /* ─── Main ────────────────────────────────────────────────────────────────── */
 function main() {
-  console.log('Building GitHub Copilot Hackathon site data...\n');
+  console.log('Building GitHub Copilot RVAS site data...\n');
 
   ensureDir(OUT_DATA_DIR);
   ensureDir(OUT_CHALLENGES_DIR);
@@ -472,11 +432,6 @@ function main() {
     source: 'challenges/*/meta.yml',
     count: challenges.length,
     categories,
-    outcomeConfig: Object.entries(OUTCOME_CONFIG).map(([id, cfg]) => ({
-      id,
-      name: cfg.name,
-      description: cfg.description
-    })),
     challenges
   };
 

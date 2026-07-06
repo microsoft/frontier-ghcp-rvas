@@ -23,6 +23,6 @@ container_app_environment_name = "cae-teamalpha-dev"
 
 tags = {
   owner               = "platform-team"
-  cost_center         = "hackathon"
+  cost_center         = "rvas"
   data_classification = "internal"
 }

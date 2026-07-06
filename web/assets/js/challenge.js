@@ -1,4 +1,4 @@
-/* GitHub Copilot Hackathon — challenge detail page (?id=<challengeId>) */
+/* GitHub Copilot RVAS — challenge detail page (?id=<challengeId>) */
 (function () {
   'use strict';
 
@@ -35,11 +35,10 @@
     }
 
     const allChallenges = data.challenges || [];
-    const outcomeConfig = data.outcomeConfig || [];
 
-    document.title = challenge.title + ' — GitHub Copilot Hackathon';
+    document.title = challenge.title + ' — GitHub Copilot RVAS';
     applyCategoryColor(challenge.category);
-    renderHero(challenge, data.categories || [], outcomeConfig);
+    renderHero(challenge, data.categories || []);
     renderSidebar(challenge, allChallenges);
     renderInfoPanel(challenge, data.categories || []);
     applyKioskLinks();
@@ -51,7 +50,7 @@
     document.documentElement.style.setProperty('--cat-color', color);
   }
 
-  function renderHero(c, categories, outcomeConfig) {
+  function renderHero(c, categories) {
     const color = FP.categoryColor(c.category);
     const catName = FP.categoryName(c.category, categories);
 
@@ -73,15 +72,11 @@
 
     const meta = document.getElementById('challengeMeta');
     if (meta) {
-      const outcomeHtml = (c.outcomes || []).length
-        ? FP.outcomeBadges(c.outcomes, outcomeConfig)
-        : '';
       meta.innerHTML = `
         <span class="badge cat-${FP.esc(c.category)}" style="--cat-color:${color}">${FP.esc(catName)}</span>
         ${FP.diffBadge(c.difficulty)}
         ${FP.durBadge(c.duration_minutes)}
-        ${FP.tagBadges(c.tags || [], 3)}
-        ${outcomeHtml}`;
+        ${FP.tagBadges(c.tags || [], 3)}`;
     }
 
     const focus = document.getElementById('challengeFocus');
@@ -94,7 +89,7 @@
     // Starter link
     const starterLink = document.getElementById('starterLink');
     if (starterLink && c.starter_path) {
-      const repoUrl = 'https://github.com/microsoft/frontier-ghcp-hackathon';
+      const repoUrl = 'https://github.com/microsoft/frontier-ghcp-rvas';
       starterLink.href = repoUrl + '/tree/main/' + c.starter_path;
       starterLink.target = '_blank';
       starterLink.rel = 'noopener';

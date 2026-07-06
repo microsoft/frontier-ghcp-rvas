@@ -1,12 +1,12 @@
 # Bring Your Own Challenge (BYOC) Kit
 
-This kit helps you run an outcome-driven hackathon on your own app or repository. Use it when you want to deliver a real work result on your team's codebase instead of working through a pre-built example.
+This kit helps you run an outcome-driven RVAS delivery session on your own app or repository. Use it when you want to deliver a real work result on your team's codebase instead of working through a pre-built example.
 
 ## What's in the Kit
 
 - **[Outcome Canvas](./outcome-canvas.md)** -- a fill-in worksheet to define your target outcome, pain, definition of done, constraints, and demo plan
 - **[Challenge Templates](./templates/)** -- skeletons for authoring a custom track structure (optional -- use if you need a progression path; otherwise work directly on your app)
-- **[Facilitator Runbook](./facilitator-runbook.md)** -- how to run a hackathon on a customer codebase (prep, environment, timeboxes, checkpoints, demo)
+- **[Facilitator Runbook](./facilitator-runbook.md)** -- how to run a session on a customer codebase (prep, environment, timeboxes, checkpoints, demo)
 - **[Outcome Scorecard](./outcome-scorecard.md)** -- a reusable definition-of-done template that replaces usage metrics as the success measure
 - **[Example Walkthrough](./example-walkthrough.md)** -- a worked example adapting an existing challenge app end-to-end through the kit
 
@@ -16,7 +16,7 @@ This kit helps you run an outcome-driven hackathon on your own app or repository
 
 - You want to drive a real outcome on your own app or repository
 - You have a specific business problem to solve (ship a feature, modernize legacy code, automate delivery, etc.)
-- You want the hackathon to produce demonstrable business value, not just learning
+- You want the session to produce demonstrable business value, not just learning
 - You have access to a real codebase and can provision a working environment for it
 
 **Use the worked-example challenges when:**
@@ -24,7 +24,7 @@ This kit helps you run an outcome-driven hackathon on your own app or repository
 - You want to learn outcome-driven patterns before applying them to your own work
 - You don't have access to a suitable codebase
 - You're teaching a workshop and want a repeatable, tested experience
-- You want to explore a specific technology or outcome category
+- You want to explore a specific technology or type of outcome
 
 ## End-to-End Flow
 
@@ -32,7 +32,7 @@ This kit helps you run an outcome-driven hackathon on your own app or repository
 
 Use the **[Outcome Canvas](./outcome-canvas.md)** to document:
 
-- Which of the 6 outcome categories you're targeting (or define a custom one)
+- The type of outcome you're targeting (ship a feature, modernize legacy code, raise quality, automate delivery, stand up platform foundations, build AI capabilities, or a custom one)
 - The current pain or baseline
 - What "done" looks like (definition of done)
 - Constraints (time, team size, existing architecture)
@@ -78,7 +78,7 @@ See **[example-walkthrough.md](./example-walkthrough.md)** for a full narrative 
 
 The 22 worked-example challenges are reference implementations of this flow. Each challenge:
 
-- Maps to one or more of the 6 outcome categories
+- Drives a clear business outcome
 - Has a filled-in scorecard (implicitly defined by the verification steps)
 - Provides starter code and a devcontainer
 - Shows outcome-driven patterns you can adapt

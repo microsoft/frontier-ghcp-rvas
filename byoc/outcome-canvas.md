@@ -1,10 +1,10 @@
 # Outcome Canvas
 
-Use this worksheet to define the outcome you want to drive in your hackathon session. Fill in each section before you start work.
+Use this worksheet to define the outcome you want to drive in your RVAS delivery session. Fill in each section before you start work.
 
 ## Target Outcome
 
-**Outcome Category (pick one or define custom):**
+**Type of Outcome (pick one or define custom):**
 
 - [ ] Modernize Legacy Systems
 - [ ] Ship Product Features Faster
@@ -34,7 +34,7 @@ _Business impact of the current pain: time wasted, risk of failure, quality issu
 
 ## Definition of Done
 
-**What does "done" look like at the end of the hackathon?**
+**What does "done" look like at the end of the session?**
 
 _List the specific deliverables. Be concrete._
 
@@ -56,7 +56,7 @@ _What must be true for the outcome to count as delivered?_
 
 **Time:**
 
-_How long is your hackathon session? (4 hours, 6 hours, full day)_
+_How long is your RVAS delivery session? (4 hours, 6 hours, full day)_
 
 **Team Size:**
 

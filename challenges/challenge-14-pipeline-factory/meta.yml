@@ -10,8 +10,6 @@ tags:
   - workflow-automation
   - advanced
   - ci-cd
-outcomes:
-  - automate-delivery
 prerequisites: []
 track_url: tracks/challenge-14-pipeline-factory-track.md
 starter_path: challenges/challenge-14-pipeline-factory/

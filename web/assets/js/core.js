@@ -1,4 +1,4 @@
-/* GitHub Copilot Hackathon — shared helpers: data loading, theme, nav, badges, scroll-reveal. */
+/* GitHub Copilot RVAS — shared helpers: data loading, theme, nav, badges, scroll-reveal. */
 (function () {
   'use strict';
 
@@ -66,15 +66,6 @@
     if (!Array.isArray(tags) || !tags.length) return '';
     const show = limit ? tags.slice(0, limit) : tags;
     return show.map((t) => `<span class="badge badge-tag">${FP.esc(t)}</span>`).join('');
-  };
-
-  FP.outcomeBadges = function (outcomeIds, outcomeConfig) {
-    if (!Array.isArray(outcomeIds) || !outcomeIds.length || !outcomeConfig) return '';
-    return outcomeIds.map((id) => {
-      const oc = outcomeConfig.find((o) => o.id === id);
-      const name = oc ? oc.name : id;
-      return `<span class="badge badge-outcome" title="${FP.esc(oc ? oc.description : '')}">${FP.esc(name)}</span>`;
-    }).join('');
   };
 
   /* ─────────────────────────── URL helpers ───────────────────────── */

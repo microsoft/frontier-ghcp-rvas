@@ -9,9 +9,6 @@ focus: Build and operate GitHub Agentic Workflows -- Markdown-defined, AI-powere
 tags:
   - core-tracks
   - core
-outcomes:
-  - automate-delivery
-  - build-ai
 prerequisites: []
 track_url: tracks/challenge-6-agentic-workflows-track.md
 starter_path: challenges/challenge-6-agentic-workflows/

@@ -1,7 +1,7 @@
 {
   "name": "task-manager-api",
   "version": "1.0.0",
-  "description": "Task Management REST API - GitHub Copilot Hackathon Challenge 1",
+  "description": "Task Management REST API - GitHub Copilot RVAS Challenge 1",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -9,7 +9,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "keywords": ["rest-api", "express", "copilot", "hackathon"],
+  "keywords": ["rest-api", "express", "copilot", "rvas"],
   "author": "",
   "license": "MIT",
   "dependencies": {

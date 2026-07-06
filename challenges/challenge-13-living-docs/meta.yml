@@ -10,9 +10,6 @@ tags:
   - workflow-automation
   - advanced
   - docs
-outcomes:
-  - raise-quality
-  - automate-delivery
 prerequisites: []
 track_url: tracks/challenge-13-living-docs-track.md
 starter_path: challenges/challenge-13-living-docs/

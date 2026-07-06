@@ -10,9 +10,6 @@ tags:
   - core-tracks
   - core
   - frontend
-outcomes:
-  - ship-features
-  - raise-quality
 prerequisites: []
 track_url: tracks/challenge-4-frontend-track.md
 starter_path: challenges/challenge-4-frontend/

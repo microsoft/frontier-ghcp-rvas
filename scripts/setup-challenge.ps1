@@ -189,9 +189,9 @@ foreach ($RemoveFile in @("FACILITATOR_GUIDE.md", "CONTRIBUTING.md")) {
 }
 
 # Preserve facilitator-facing reference material
-# byoc/ (Bring Your Own Challenge authoring kit) and OUTCOMES.md are
-# reference materials for facilitators to understand the outcome-driven
-# model and adapt challenges. These are intentionally preserved in the
+# byoc/ (Bring Your Own Challenge authoring kit) is
+# reference material for facilitators to understand the outcome-driven
+# model and adapt challenges. It is intentionally preserved in the
 # workspace for context, not removed to minimize participant clutter.
 
 # Replace root README with a focused version
@@ -199,7 +199,7 @@ $RootReadme = Join-Path $RepoRoot "README.md"
 
 if ($TrackAssetsPresent) {
 @"
-# GitHub Copilot Hackathon
+# GitHub Copilot RVAS
 
 This workspace is set up for your challenge. Everything you don't need
 has been removed so you can focus on the task at hand.
@@ -228,7 +228,7 @@ Before you begin, verify Copilot is working:
 }
 else {
 @"
-# GitHub Copilot Hackathon
+# GitHub Copilot RVAS
 
 This workspace is set up for your challenge. The starter files are ready
 under `challenges/$ChallengeDir/`, and the shared docs were left in place

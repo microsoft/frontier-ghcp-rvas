@@ -1,4 +1,4 @@
-/* GitHub Copilot Hackathon — coach set builder: multi-select challenges → shareable link */
+/* GitHub Copilot RVAS — coach set builder: multi-select challenges → shareable link */
 (function () {
   'use strict';
 

@@ -4,7 +4,7 @@ This walkthrough shows how to use the BYOC kit end-to-end. We'll take the **Web 
 
 ## Scenario
 
-**Context:** Your team has an internal task management API built in Node.js. It works, but it has no authentication, no tests, and it's not production-ready. You want to run a hackathon to make it deployable to production.
+**Context:** Your team has an internal task management API built in Node.js. It works, but it has no authentication, no tests, and it's not production-ready. You want to run an RVAS delivery session to make it deployable to production.
 
 **Goal:** Use the BYOC kit to define the outcome, structure the work, run the session, and measure the business impact.
 
@@ -12,7 +12,7 @@ This walkthrough shows how to use the BYOC kit end-to-end. We'll take the **Web 
 
 ### Target Outcome
 
-**Outcome Category:** Raise Quality and Confidence
+**Type of Outcome:** Raise Quality and Confidence
 
 **One-Sentence Outcome Statement:** "Make the task management API production-ready by adding JWT authentication, writing integration tests, and adding structured logging."
 
@@ -180,7 +180,7 @@ Here's the filled scorecard:
 
 Made the task management API production-ready by adding JWT authentication, integration tests, and structured logging.
 
-**Outcome Category:** Raise Quality and Confidence
+**Type of Outcome:** Raise Quality and Confidence
 
 ### Acceptance Criteria
 
@@ -272,4 +272,4 @@ To run a BYOC session on your app:
 4. Run the session with checkpoints every 1-2 hours
 5. Demo the result and fill in the **Outcome Scorecard**
 
-The pattern is the same regardless of the outcome category (modernize legacy, ship features, automate delivery, etc.).
+The pattern is the same regardless of the type of outcome (modernize legacy, ship features, automate delivery, etc.).

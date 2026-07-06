@@ -1,4 +1,4 @@
-/* GitHub Copilot Hackathon — learning paths page */
+/* GitHub Copilot RVAS — learning paths page */
 (function () {
   'use strict';
 
@@ -48,13 +48,6 @@
       const shareId = 'share-' + idx;
       const inputId = 'link-' + idx;
 
-      const outcomeHtml = (p.outcomes || []).length
-        ? '<div class="path-outcomes">' + (p.outcomes || []).map((o) => {
-            const oc = FP._cache?.outcomeConfig?.find((x) => x.id === o);
-            return `<span class="badge badge-outcome" title="${FP.esc(oc ? oc.description : '')}">${FP.esc(oc ? oc.name : o)}</span>`;
-          }).join('') + '</div>'
-        : '';
-
       return `
         <div class="path-card reveal card">
           <div class="path-card-header">
@@ -62,7 +55,6 @@
               <span class="path-id">${FP.esc(p.id)}</span>
               <h3 class="path-title">${FP.esc(p.name)}</h3>
               <p class="path-desc">${FP.esc(p.description || '')}</p>
-              ${outcomeHtml}
             </div>
             <div class="path-meta">
               <span class="badge badge-duration">${count} challenges</span>

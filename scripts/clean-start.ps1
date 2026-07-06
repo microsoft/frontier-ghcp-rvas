@@ -1,5 +1,5 @@
 #
-# clean-start.ps1 -- Reset the .github directory and git remote for a fresh hackathon start.
+# clean-start.ps1 -- Reset the .github directory and git remote for a fresh RVAS delivery session start.
 #
 # What it does:
 #   1. Empties .github/copilot-instructions.md
@@ -21,14 +21,14 @@ $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 
 . (Join-Path $PSScriptRoot "_clean-common.ps1")
 
-Write-Host "=== Hackathon Clean Start ===" -ForegroundColor Cyan
+Write-Host "=== RVAS Clean Start ===" -ForegroundColor Cyan
 Write-Host ""
 
 Invoke-CleanGitHubAndMeta
 
 # Stage and commit the clean state
 git -C $RepoRoot add -A
-git -C $RepoRoot commit -m "Clean start: reset for hackathon" --quiet
+git -C $RepoRoot commit -m "Clean start: reset for RVAS delivery session" --quiet
 Write-Host "[OK] Committed clean state to local repo" -ForegroundColor Green
 
 Write-Host ""

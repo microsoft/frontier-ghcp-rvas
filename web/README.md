@@ -1,6 +1,6 @@
-# GitHub Copilot Hackathon -- Web Site
+# GitHub Copilot RVAS -- Web Site
 
-Bespoke static site for the hackathon. No server required -- just open `index.html` after building.
+Bespoke static site for the GitHub Copilot RVAS delivery session. No server required -- just open `index.html` after building.
 
 ## Build
 
@@ -38,7 +38,7 @@ hosts ignore the query and serve the file, but browsers treat each version as a 
 cache entry. When you change a shared asset (`core.js`, `styles.css`) or any page script,
 bump the `?v=N` value on the affected includes across all pages. This prevents a new page
 script from pairing with a stale cached `core.js`, which throws a runtime error such as
-`FP.outcomeBadges is not a function`.
+`FP.diffBadge is not a function`.
 
 ## FP API
 
@@ -48,7 +48,7 @@ script from pairing with a stale cached `core.js`, which throws a runtime error 
 - `FP.loadPaths()` → Promise(paths.json), cached
 - `FP.categoryColor(id)`, `FP.categoryName(id, categories)` → category utilities
 - `FP.challengeUrl(id)`, `FP.catalogUrl(catId)`, `FP.guideUrl(slug)`, `FP.setUrl(ids, name)` → URL builders
-- `FP.diffBadge(d)`, `FP.durBadge(mins)`, `FP.tagBadges(tags, limit)`, `FP.outcomeBadges(ids, outcomeConfig)` → badge generators
+- `FP.diffBadge(d)`, `FP.durBadge(mins)`, `FP.tagBadges(tags, limit)` → badge generators
 - `FP.kioskParams()`, `FP.isKiosk()`, `FP.applyKiosk()`, `FP.kioskChallengeUrl(id, params)` → kiosk mode
 - `FP.initTheme()`, `FP.initNav()`, `FP.initReveal()`, `FP.renderError(el, msg)` → UI init
 - `FP.renderMd(raw, el)`, `FP.renderInlineMd(raw)` → markdown rendering

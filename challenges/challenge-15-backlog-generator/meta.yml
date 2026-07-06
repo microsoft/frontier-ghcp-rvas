@@ -10,9 +10,6 @@ tags:
   - workflow-automation
   - advanced
   - backlog
-outcomes:
-  - ship-features
-  - automate-delivery
 prerequisites: []
 track_url: tracks/challenge-15-backlog-generator-track.md
 starter_path: challenges/challenge-15-backlog-generator/

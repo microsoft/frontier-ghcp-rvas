@@ -12,8 +12,6 @@ tags:
   - cobol
   - legacy
   - testing
-outcomes:
-  - modernize-legacy
 prerequisites: []
 track_url: tracks/challenge-18-cobol-modernization-track.md
 starter_path: challenges/challenge-18-cobol-banking/

@@ -1,4 +1,4 @@
-/* GitHub Copilot Hackathon — home page */
+/* GitHub Copilot RVAS — home page */
 (function () {
   'use strict';
 

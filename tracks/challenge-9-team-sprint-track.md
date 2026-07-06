@@ -54,7 +54,7 @@ The team chooses their stack together. Recommended options:
 
 ## How This Track Works
 
-This is not a typical sequential hackathon track. The team works in parallel, like a real agile sprint.
+This is not a typical sequential track. The team works in parallel, like a real agile sprint.
 
 The challenge runs as a simulated sprint cycle:
 

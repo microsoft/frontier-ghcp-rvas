@@ -1,6 +1,6 @@
 # Outcome Scorecard
 
-Use this scorecard to document the outcome you delivered and the business impact it produced. Fill it in at the end of your hackathon session. This replaces activity metrics (Copilot usage percentage, chat interactions) as the primary success measure.
+Use this scorecard to document the outcome you delivered and the business impact it produced. Fill it in at the end of your RVAS delivery session. This replaces activity metrics (Copilot usage percentage, chat interactions) as the primary success measure.
 
 ## Outcome Statement
 
@@ -8,7 +8,7 @@ Use this scorecard to document the outcome you delivered and the business impact
 
 _One-sentence description of the outcome._
 
-**Outcome Category:**
+**Type of Outcome:**
 
 - [ ] Modernize Legacy Systems
 - [ ] Ship Product Features Faster

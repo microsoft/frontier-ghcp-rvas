@@ -39,7 +39,7 @@ Hikers can view all condition reports for a given trail, sorted by most recent. 
 
 ### Trail Status Updates (Priority: Should Have)
 
-Authorized users (or any user, for the hackathon) can update a trail's status (Open, Caution, Closed). The status change should reference the condition reports that prompted it.
+Authorized users (or any user, for this exercise) can update a trail's status (Open, Caution, Closed). The status change should reference the condition reports that prompted it.
 
 When a trail has High-severity condition reports, the UI should flag it visually (a warning indicator on the trail list and detail pages).
 

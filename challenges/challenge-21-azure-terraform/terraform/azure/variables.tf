@@ -198,7 +198,7 @@ variable "tags" {
   type        = map(string)
   default = {
     owner               = "platform-team"
-    cost_center         = "hackathon"
+    cost_center         = "rvas"
     data_classification = "internal"
   }
 

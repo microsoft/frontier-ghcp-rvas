@@ -51,8 +51,8 @@ function Invoke-CleanGitHubAndMeta {
 
     # ── Clean non-participant top-level directories and files ───────────
 
-    # Note: byoc/ (Bring Your Own Challenge kit) and OUTCOMES.md are intentionally
-    # NOT removed here. They are facilitator-facing reference materials and are
+    # Note: byoc/ (Bring Your Own Challenge kit) is intentionally
+    # NOT removed here. It is facilitator-facing reference material and is
     # preserved by design in participant workspaces for context about the
     # outcome-driven model.
 

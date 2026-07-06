@@ -1,10 +1,10 @@
-# GitHub Copilot Hackathon
+# GitHub Copilot RVAS
 
-![Hackathon Banner](docs/images/hackathon-banner.jpg)
+![GitHub Copilot RVAS banner](docs/images/rvas-banner.jpg)
 
-Welcome to the GitHub Copilot Hackathon! This repository helps your team **drive real work outcomes** using GitHub Copilot. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a hackathon on your own codebase.
+Welcome to the GitHub Copilot RVAS (Real Value Acceleration Solution)! This repository helps your team **drive real work outcomes** with GitHub Copilot, and use those outcomes to build lasting adoption across your organization. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run an RVAS delivery session on your own codebase.
 
-## Two Ways to Run This Hackathon
+## Two Ways to Run an RVAS Delivery Session
 
 ### Option 1: Pick a Worked-Example Challenge
 
@@ -12,17 +12,17 @@ Choose one of the **22 challenge tracks** below. Each challenge maps to a specif
 
 ### Option 2: Bring Your Own Challenge
 
-Run this hackathon on your own app or repository. The **[Bring Your Own Challenge (BYOC) kit](./byoc/)** provides a canvas to define your target outcome, templates to author a custom challenge, and a facilitator runbook to guide your session. This turns the hackathon into a working session that delivers a measurable result for your team.
+Run an RVAS delivery session on your own app or repository. The **[Bring Your Own Challenge (BYOC) kit](./byoc/)** provides a canvas to define your target outcome, templates to author a custom challenge, and a facilitator runbook to guide your session. This turns the session into working time that delivers a measurable result for your team.
 
 See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
-## Hackathon Overview
+## Overview
 
 The repository includes **22 challenge tracks** organized by the outcomes they help you deliver:
 
 ### Challenges by Outcome
 
-Each challenge below drives one or more measurable business outcomes. The six outcome categories are: **Modernize Legacy Systems**, **Ship Product Features Faster**, **Raise Quality and Confidence**, **Automate Delivery and Ops Toil**, **Stand Up Cloud Platform Foundations**, and **Build AI-Powered Capabilities**. See **[OUTCOMES.md](./OUTCOMES.md)** for detailed definitions and the full challenge mapping.
+Each challenge below drives a measurable business outcome -- shipping features, modernizing legacy systems, raising quality, automating delivery, standing up platform foundations, or building AI-powered capabilities. Delivering that outcome is what makes the case for wider Copilot adoption.
 
 - 📋 **[Challenge 0: Product Planning Track](./tracks/challenge-0-product-planning-track.md)** - Product planning, backlog management, documentation (no code) | **Outcome:** Ship Product Features Faster
 - 🔧 **[Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)** - REST APIs, authentication, testing | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
@@ -127,8 +127,8 @@ See the **[BYOC Kit README](./byoc/README.md)** for the end-to-end flow and a wo
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/microsoft/frontier-ghcp-hackathon.git
-   cd frontier-ghcp-hackathon
+   git clone https://github.com/microsoft/frontier-ghcp-rvas.git
+   cd frontier-ghcp-rvas
    ```
 
 2. Open the folder in VS Code.
@@ -145,7 +145,7 @@ The environment is pre-configured with:
 
 ### Step 3: Clean Start (CRITICAL)
 
-The `.github/` directory contains instructions, agents, and skills used by the hackathon organizers. Run the cleanup script to reset it before you begin.
+The `.github/` directory contains instructions, agents, and skills used by the RVAS delivery session organizers. Run the cleanup script to reset it before you begin.
 
 **Linux / macOS / Codespaces:**
 
@@ -512,7 +512,7 @@ Build an Azure Terraform foundation across 5 phases: bootstrap remote state and 
 | Wrong suggestions | Be more specific, provide more context, try chat instead |
 | Environment issues | Codespaces: rebuild container; Local: check tool versions |
 
-## Hackathon Format
+## Session Format
 
 ### Track-Based Learning (Recommended)
 
@@ -548,13 +548,13 @@ Prefer to explore on your own?
 
 ## Success Metrics
 
-A successful hackathon produces:
+A successful RVAS delivery session produces:
 
 - **A demonstrable outcome** for each team -- working code, a shipped feature, modernized infrastructure, or documented automation.
 - **Articulated business impact** -- participants can state the outcome they drove and why it matters (faster delivery, reduced risk, lower toil).
-- **Proficiency with Copilot** as a by-product -- the team can explain how they used Copilot to drive the outcome and plan to apply the patterns to their daily work.
+- **A path to adoption** -- the team can explain how they used Copilot to drive the outcome and has a concrete plan to apply the patterns to daily work, which is what turns a single session into sustained adoption.
 
-Track activity metrics (Copilot usage, chat interactions) as supporting evidence, but judge success by the work result.
+Track activity metrics (Copilot usage, chat interactions) as supporting evidence, but judge success by the work result and the follow-on adoption plan.
 
 ## Collaboration
 
@@ -565,7 +565,7 @@ Track activity metrics (Copilot usage, chat interactions) as supporting evidence
 
 ## Feedback
 
-After completing the hackathon, please share:
+After completing the session, please share:
 
 - What worked well
 - What could be improved
@@ -574,7 +574,7 @@ After completing the hackathon, please share:
 
 ## Next Steps
 
-After the hackathon:
+After the session:
 
 1. Apply Copilot to your daily work
 2. Explore advanced features and settings
@@ -587,10 +587,10 @@ After the hackathon:
 ### Quick Links
 
 - **[Choose Your Track](./tracks/README.md)** - Outcome-driven learning paths organized by role and outcome
-- **[Bring Your Own Challenge Kit](./byoc/README.md)** - Run this hackathon on your own codebase
+- **[Bring Your Own Challenge Kit](./byoc/README.md)** - Run an RVAS delivery session on your own codebase
 - **Challenge Set Builder** - Available on the published site; coaches can curate challenge sets and generate student URLs
 - **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
-- **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For hackathon organizers
+- **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For RVAS delivery session organizers
 - **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content
 
 ### Need Help?

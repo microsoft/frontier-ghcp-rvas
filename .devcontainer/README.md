@@ -1,6 +1,6 @@
 # DevContainer Configurations
 
-This folder contains dedicated DevContainer configurations for each challenge in the GitHub Copilot Hackathon.
+This folder contains dedicated DevContainer configurations for each challenge in the GitHub Copilot RVAS.
 
 ## Available Configurations
 

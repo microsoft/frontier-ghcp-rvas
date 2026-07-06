@@ -10,7 +10,7 @@
     "test": "vitest run --coverage",
     "test:watch": "vitest"
   },
-  "keywords": ["copilot-sdk", "github", "agent", "release-notes", "hackathon"],
+  "keywords": ["copilot-sdk", "github", "agent", "release-notes", "rvas"],
   "author": "",
   "license": "MIT",
   "dependencies": {

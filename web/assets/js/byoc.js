@@ -1,4 +1,4 @@
-/* GitHub Copilot Hackathon — BYOC page */
+/* GitHub Copilot RVAS — BYOC page */
 (function () {
   'use strict';
 
