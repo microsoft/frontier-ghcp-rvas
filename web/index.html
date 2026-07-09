@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css?v=4" />
+  <link rel="stylesheet" href="assets/css/shell.css" />
   <link rel="icon" href="assets/img/logo-mark-white.png" type="image/png" />
 </head>
 <body>
@@ -25,6 +26,8 @@
         <a href="paths.html">Learning Paths</a>
         <a href="byoc.html">BYOC</a>
         <a href="guide.html?p=copilot-guide">Guides</a>
+              <a class="cta" href="catalog.html">Browse all challenges →</a>
+        <a class="gh" href="https://github.com/microsoft/frontier-ghcp-rvas" target="_blank" rel="noopener" aria-label="View source on GitHub">GitHub ↗</a>
       </nav>
       <div class="nav-actions">
         <button class="icon-btn nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
@@ -38,6 +41,23 @@
 
     <!-- ═══════════════════════ HERO ══════════════════════════════ -->
     <section class="hero" aria-labelledby="heroHeading">
+      <svg class="hero-compass" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-width="0.6" stroke-opacity="0.15" stroke-dasharray="4 8"/>
+        <circle cx="200" cy="200" r="140" stroke="currentColor" stroke-width="0.4" stroke-opacity="0.10"/>
+        <circle cx="200" cy="200" r="80"  stroke="currentColor" stroke-width="0.4" stroke-opacity="0.12"/>
+        <path d="M200 60 A140 140 0 0 1 340 200" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+        <path d="M340 200 A140 140 0 0 1 200 340" stroke="#f87171" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+        <path d="M200 340 A140 140 0 0 1 60 200"  stroke="#a78bfa" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+        <path d="M60 200 A140 140 0 0 1 200 60"   stroke="#fb923c" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+        <line x1="200" y1="20"  x2="200" y2="380" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.10"/>
+        <line x1="20"  y1="200" x2="380" y2="200" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.10"/>
+        <circle cx="200" cy="200" r="5" fill="#1A77E3" fill-opacity="0.8"/>
+        <circle cx="200" cy="200" r="12" stroke="#1A77E3" stroke-width="1" stroke-opacity="0.3"/>
+        <circle cx="200" cy="60"  r="5" fill="#38bdf8" fill-opacity="0.7"/>
+        <circle cx="340" cy="200" r="5" fill="#f87171" fill-opacity="0.7"/>
+        <circle cx="200" cy="340" r="5" fill="#a78bfa" fill-opacity="0.7"/>
+        <circle cx="60"  cy="200" r="5" fill="#fb923c" fill-opacity="0.7"/>
+      </svg>
       <div class="wrap hero-grid">
         <div>
           <span class="eyebrow">GitHub Enterprise · Copilot · Azure</span>
@@ -55,22 +75,22 @@
             <a class="btn btn-ghost" href="catalog.html">Browse all challenges</a>
           </div>
 
-          <div class="stat-row" aria-label="Session statistics">
+          <div class="stats stats-4" aria-label="Session statistics">
             <div class="stat">
-              <div class="stat-n" id="stat-challenges">—</div>
-              <div class="stat-l">Challenges</div>
+              <span class="stat-num" id="stat-challenges">—</span>
+              <span class="stat-lbl">Challenges</span>
             </div>
             <div class="stat">
-              <div class="stat-n">5</div>
-              <div class="stat-l">Categories</div>
+              <span class="stat-num" data-count="5">5</span>
+              <span class="stat-lbl">Categories</span>
             </div>
             <div class="stat">
-              <div class="stat-n" id="stat-paths">—</div>
-              <div class="stat-l">Learning paths</div>
+              <span class="stat-num" id="stat-paths">—</span>
+              <span class="stat-lbl">Learning paths</span>
             </div>
             <div class="stat">
-              <div class="stat-n" id="stat-hours">—</div>
-              <div class="stat-l">Guided hours</div>
+              <span class="stat-num" id="stat-hours">—</span>
+              <span class="stat-lbl">Guided hours</span>
             </div>
           </div>
         </div>
@@ -186,5 +206,6 @@
   <script src="assets/js/marked.min.js?v=4"></script>
   <script src="assets/js/core.js?v=4"></script>
   <script src="assets/js/home.js?v=4"></script>
+  <script src="assets/js/shell.js"></script>
 </body>
 </html>
