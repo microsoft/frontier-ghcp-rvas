@@ -59,11 +59,11 @@ Auto-initializes theme, nav, kiosk, reveal on DOMContentLoaded.
 
 | ID | Name | Color |
 |----|------|-------|
-| core-tracks | Core Tracks | #58a6ff |
-| team-sprints | Team Sprints | #3fb950 |
-| legacy-modernization | Legacy Modernization | #d29922 |
-| workflow-automation | Workflow Automation | #a371f7 |
-| azure-platform | Azure Platform | #ec6547 |
+| core-tracks | Core Tracks | #0078d4 |
+| team-sprints | Team Sprints | #14868a |
+| legacy-modernization | Legacy Modernization | #504092 |
+| workflow-automation | Workflow Automation | #1a77e3 |
+| azure-platform | Azure Platform | #032254 |
 
 Use `.cat-<id>` CSS class + `style="--cat-color:<color>"` for category-specific styling.
 

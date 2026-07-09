@@ -27,27 +27,27 @@ const CATEGORY_CONFIG = {
   'core-tracks': {
     name: 'Core Tracks',
     description: 'Foundational GitHub Enterprise and Copilot skills -- API development, machine learning, DevOps, and frontend engineering.',
-    color: '#58a6ff'
+    color: '#0078d4'
   },
   'team-sprints': {
     name: 'Team Sprints',
     description: 'Multi-role sprint challenges -- product management, business analysis, development, QA, and DevOps working together.',
-    color: '#3fb950'
+    color: '#14868a'
   },
   'legacy-modernization': {
     name: 'Legacy Modernization',
     description: 'Migrate MUMPS, COBOL, and WCF systems to modern platforms with GitHub Copilot assistance.',
-    color: '#d29922'
+    color: '#504092'
   },
   'workflow-automation': {
     name: 'Workflow Automation',
     description: 'Build AI-powered automation for documentation, pipelines, backlog generation, ops assistance, and end-to-end delivery.',
-    color: '#a371f7'
+    color: '#1a77e3'
   },
   'azure-platform': {
     name: 'Azure Platform',
     description: 'Azure infrastructure and deployment automation with Terraform, PowerShell, and GitHub Actions.',
-    color: '#ec6547'
+    color: '#032254'
   }
 };
 
