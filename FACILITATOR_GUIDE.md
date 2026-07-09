@@ -202,7 +202,7 @@ Around lunch, gather everyone:
 - Consider switching tracks if significantly mismatched
 - Encourage helping others on same track
 
-**Issue: "I picked the wrong track"** NEW
+**Issue: "I picked the wrong track"**
 
 - It's okay to switch tracks!
 - Help them find a better fit
@@ -223,74 +223,73 @@ Around lunch, gather everyone:
 - Try challenges from another track
 - Explore advanced features
 
-## Track-Specific Facilitation Guide NEW
+## Track-Specific Facilitation Guide
 
 ### Backend Developer Track
 
 **Common challenges:**
 
-- Authentication complexity
-- Testing setup
+- Participants get stuck on JWT token validation errors, usually because they've hardcoded the secret or forgotten to check `Authorization` header casing. Ask them to paste the error into Copilot Chat and describe the flow -- it usually surfaces the missing piece quickly.
+- Test setup (Jest or pytest) stalls when participants skip the package install step or can't find the right test config. Point them to the existing test file in the starter code and ask Copilot to explain it before writing new tests.
 
 **Facilitation tips:**
 
-- Show JWT debugging techniques
-- Demo test generation with `/tests`
-- Most beginner-friendly track
+- This is the most forgiving track for new Copilot users. The starter code is intentionally simple, so Copilot suggestions are accurate and easy to evaluate.
+- When someone gets a long Copilot suggestion they don't understand, stop them and use `/explain` before accepting it. This is a better learning moment than accepting and moving on.
+- If participants finish Stage 3 early, push them to Stage 4's bug hunt rather than polishing earlier stages -- debugging with Copilot is more instructive than adding more CRUD endpoints.
 
 ### Data Science & ML Track
 
 **Common challenges:**
 
-- Data cleaning decisions
-- Feature engineering choices
+- Feature engineering decisions block participants who expect Copilot to make the choices for them. Redirect: ask them to write a comment explaining what the feature should capture, then let Copilot suggest code for it.
+- Jupyter notebook inline suggestions can be slow or absent if the kernel is restarting. If suggestions stop appearing, have them save, restart the kernel, and re-run prior cells.
 
 **Facilitation tips:**
 
-- Encourage using `/explain` for algorithms
-- Show Copilot in Jupyter notebooks
-- Requires intermediate Python skills
+- Copilot works better in notebooks when cells are small and comments describe intent. Participants who write one giant cell get worse suggestions. Ask them to split by logical step and add a comment at the top of each.
+- The ML model quality is not the goal -- the goal is using Copilot to move through the data pipeline faster. Don't let participants spend more than 30 minutes tuning hyperparameters.
+- `/explain` on scikit-learn estimators is unusually good. Show this early to build confidence.
 
 ### DevOps & Platform Track
 
 **Common challenges:**
 
-- Cloud credentials/access
-- Terraform syntax
+- Cloud credentials are the most common blocker. Verify before the session that sandbox accounts have the necessary roles assigned. If someone hits an auth error mid-session, have them switch to the local Docker path while you resolve it.
+- Terraform state errors (locked state, missing backend) confuse participants who've never used Terraform. Ask Copilot to explain the error message -- it usually gives a clear diagnosis and a `terraform force-unlock` or `terraform init` fix.
 
 **Facilitation tips:**
 
-- Ensure sandbox accounts available
-- Demo infrastructure code generation
-- Most complex track technically
+- This track has the highest setup complexity. Do a dry run with the devcontainer before the session, especially for the Terraform stages.
+- Participants often paste Terraform errors into inline chat rather than the Chat view. The Chat view gives better responses for multi-line error output -- redirect them there.
+- CI/CD stage failures in GitHub Actions are easier to debug by fetching the raw log URL and pasting it into Copilot Chat than by reading the folded UI.
 
 ### Frontend Developer Track
 
 **Common challenges:**
 
-- TypeScript errors
-- State management
+- TypeScript type errors from generated components are the most common friction point. Participants accept a suggestion, get a red underline, and don't know why. Ask them to hover the error and use `/fix` in inline chat -- this closes the loop fast.
+- State management decisions (where to put state, when to lift it) stall participants who don't have a React mental model yet. Ask them to describe what the component should do in a comment; Copilot usually picks a reasonable approach.
 
 **Facilitation tips:**
 
-- Show component generation
-- Demo type inference
-- Good for visual learners
+- Component generation works well when participants open an existing component as a reference tab before prompting. Tell them: "Show Copilot what you already have before asking for something new."
+- The accessibility stage (Stage 4) is easy to skip but high-value for demonstrating Copilot's breadth. Prompt: "Ask Copilot to audit this component for ARIA issues."
+- Participants who came from a non-TypeScript background benefit from asking Copilot to explain inferred types rather than adding `any` casts. Set that expectation early.
 
 ### QA Tester Track
 
 **Common challenges:**
 
-- Playwright setup and configuration
-- Page Object Model patterns
-- Test stability and flakiness
+- Playwright installation and browser download takes 2-3 minutes the first time and participants think it's stuck. Let them know it's downloading browser binaries.
+- Page Object Model patterns are unfamiliar to participants who've only written procedural tests. Have them open an existing POM file from the starter code and ask Copilot to explain the pattern before generating new pages.
+- Flaky tests are usually caused by missing `await` or a hard-coded timeout. Ask Copilot to review the failing test for race conditions -- it catches most of these.
 
 **Facilitation tips:**
 
-- Demo Playwright MCP integration
-- Show test generation with Copilot
-- Encourage using `/tests` for generating test cases
-- Intermediate-to-advanced track
+- The Playwright MCP integration (Stage 3) is the most impressive demo in this track. Reserve time for it and make sure the dev server is running before they start.
+- Test generation with `/tests` works best when the function under test has a clear signature and docstring. If suggestions are vague, ask participants to add a one-line comment describing the expected behavior first.
+- This track rewards participants who think like testers, not just developers. Encourage them to ask: "What would break this?" rather than "Does this work?".
 
 ### Challenge 7: Copilot SDK Track
 
@@ -352,7 +351,7 @@ Around lunch, gather everyone:
 - Watch for teams that skip the planning phase and dive into code too early
 - Help the team self-organize by suggesting one person manage the project board
 
-## Challenge & Track Difficulty Guide UPDATED
+## Challenge & Track Difficulty Guide
 
 ### By Track Difficulty
 
@@ -519,4 +518,4 @@ For facilitation questions:
 
 ---
 
-Remember: The goal is learning and discovery, not perfection!
+For outcome review and scorecard facilitation, see the [BYOC Facilitator Runbook](./byoc/facilitator-runbook.md).

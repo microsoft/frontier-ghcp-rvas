@@ -1,6 +1,6 @@
 # RVAS Delivery Session Tracks Overview
 
-This RVAS delivery session helps you **drive real work outcomes** with GitHub Copilot, and turn those outcomes into lasting Copilot adoption. Pick a challenge track that delivers an outcome you want to produce, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a session on your own app or repository.
+Pick a challenge track that matches the work you want to deliver, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a session on your own app or repository. Each track drives a specific business outcome -- the root README explains the full approach.
 
 The **22 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 

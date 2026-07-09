@@ -2,7 +2,7 @@
 
 ## What is GitHub Copilot?
 
-GitHub Copilot is an AI-powered development partner built into VS Code. It goes beyond code completion -- it can understand your entire project, make multi-file changes, run terminal commands, and iterate autonomously to complete complex tasks.
+GitHub Copilot is an AI assistant built into VS Code. In Agent mode it reads files, runs terminal commands you approve, catches errors, and retries -- handling multi-step tasks with less back-and-forth than inline completions alone.
 
 ## Three Ways to Interact
 
@@ -115,10 +115,10 @@ Write a comment describing what you need, then press Enter -- Copilot will sugge
 
 Click the model picker in Chat to switch models:
 
-- **GPT-4o** -- balanced performance
-- **Claude Sonnet** -- strong reasoning
-- **Gemini** -- fast responses
-- **o1/o3** -- complex reasoning
+- **GPT-4o** -- good general-purpose choice for most coding tasks
+- **Claude Sonnet** -- tends to follow complex, multi-constraint instructions more precisely
+- **Gemini** -- lower latency, useful when you're iterating quickly
+- **o1/o3** -- slower but useful for tasks that need step-by-step logical planning (architecture decisions, algorithm design); not worth it for routine code generation
 
 ## Customizing Copilot
 
