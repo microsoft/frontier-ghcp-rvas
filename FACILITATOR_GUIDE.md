@@ -2,9 +2,9 @@
 
 ## Overview
 
-This RVAS delivery session helps teams **drive real work outcomes** with GitHub Copilot, and use those outcomes to build lasting adoption. Your role as facilitator is to guide participants to define a measurable outcome, work through the stages that deliver it, and demonstrate the business impact at the end.
+This GitHub Copilot Adoption delivery session helps teams **drive real work outcomes** with GitHub Copilot, then build lasting adoption. Your role as facilitator is to guide participants to define a measurable outcome, work through the stages that deliver it, and demonstrate the business impact at the end.
 
-Participants can either pick a **worked-example challenge** from the 22 tracks or **bring their own app/repository** and run an RVAS delivery session on their own codebase. See the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for guidance on customer-codebase sessions.
+Participants can either pick a **worked-example challenge** from the 22 tracks or **bring their own app/repository** and run a GitHub Copilot Adoption delivery session on their own codebase. See the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for guidance on customer-codebase sessions.
 
 ## Pre-Session Setup (1 week before)
 
@@ -429,7 +429,7 @@ Ask participants to note:
 
 ## BYOC Sessions
 
-If you're running an RVAS delivery session on a customer's own app or repository, see the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for:
+If you're running a GitHub Copilot Adoption delivery session on a customer's own app or repository, see the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for:
 
 - How to run outcome-definition workshops
 - Environment and devcontainer guidance for customer codebases
@@ -498,7 +498,7 @@ Create a summary:
 
 ## Success Criteria
 
-A successful RVAS delivery session means:
+A successful GitHub Copilot Adoption delivery session means:
 
 - Each team delivered a **demonstrable outcome** (working code, shipped feature, modernized system, or automated process)
 - Participants can **articulate the business impact** (faster delivery, reduced risk, lower toil, improved quality)

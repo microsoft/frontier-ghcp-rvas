@@ -1,4 +1,4 @@
-/* GitHub Copilot RVAS — challenge detail page (?id=<challengeId>) */
+/* GitHub Copilot Adoption -- challenge detail page (?id=<challengeId>) */
 (function () {
   'use strict';
 
@@ -36,7 +36,7 @@
 
     const allChallenges = data.challenges || [];
 
-    document.title = challenge.title + ' — GitHub Copilot RVAS';
+    document.title = challenge.title + ' - GitHub Copilot Adoption';
     applyCategoryColor(challenge.category);
     renderHero(challenge, data.categories || []);
     renderSidebar(challenge, allChallenges);

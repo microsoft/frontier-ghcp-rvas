@@ -1,6 +1,6 @@
 ## Constraints
 
-- This RVAS delivery session content uses **Azure only**. Never reference AWS, GCP, or other cloud providers.
+- This GitHub Copilot Adoption delivery session content uses **Azure only**. Never reference AWS, GCP, or other cloud providers.
 - Do NOT include README.md files in challenge folders -- all instructions go in the corresponding track file under `tracks/`.
 - Do NOT provide ready-to-paste solutions for copilot-instructions, agents, or prompts. Describe WHAT to achieve, not HOW.
 - Each challenge should be completable in 4-6 hours.

@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-Common issues and solutions for the GitHub Copilot RVAS.
+Common issues and solutions for GitHub Copilot Adoption.
 
 ## GitHub Copilot Issues
 

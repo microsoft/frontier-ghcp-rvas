@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * GitHub Copilot RVAS — build step (dependency-free, Node core only).
+ * GitHub Copilot Adoption -- build step (dependency-free, Node core only).
  *
  * Reads challenges/<slug>/meta.yml as the single source of truth and emits:
  *   web/assets/data/platform.json
@@ -21,7 +21,7 @@ const fs   = require('fs');
 const path = require('path');
 
 /* ─── Category config (LOCKED per contract) ─────────────────────────────────
- * These are the 5 categories for this RVAS delivery session.
+ * These are the 5 categories for this GitHub Copilot Adoption delivery session.
  * ─────────────────────────────────────────────────────────────────────────── */
 const CATEGORY_CONFIG = {
   'core-tracks': {
@@ -401,7 +401,7 @@ function validateReferences(challenges, paths) {
 
 /* ─── Main ────────────────────────────────────────────────────────────────── */
 function main() {
-  console.log('Building GitHub Copilot RVAS site data...\n');
+  console.log('Building GitHub Copilot Adoption site data...\n');
 
   ensureDir(OUT_DATA_DIR);
   ensureDir(OUT_CHALLENGES_DIR);

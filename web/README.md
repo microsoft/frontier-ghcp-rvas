@@ -1,6 +1,6 @@
-# GitHub Copilot RVAS -- Web Site
+# GitHub Copilot Adoption -- Web Site
 
-Bespoke static site for the GitHub Copilot RVAS delivery session. No server required -- just open `index.html` after building.
+Bespoke static site for the GitHub Copilot Adoption delivery session. No server required -- just open `index.html` after building.
 
 ## Build
 

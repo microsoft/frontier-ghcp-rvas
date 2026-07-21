@@ -1,4 +1,4 @@
-/* GitHub Copilot RVAS — catalog page: filterable + searchable challenge grid */
+/* GitHub Copilot Adoption -- catalog page: filterable + searchable challenge grid */
 (function () {
   'use strict';
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# clean-start.sh -- Reset the .github directory and git remote for a fresh RVAS delivery session start.
+# clean-start.sh -- Reset the .github directory and git remote for a fresh GitHub Copilot Adoption delivery session start.
 #
 # What it does:
 #   1. Empties .github/copilot-instructions.md
@@ -24,14 +24,14 @@ REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 # shellcheck source=_clean-common.sh
 source "$REPO_ROOT/scripts/_clean-common.sh"
 
-echo "=== RVAS Clean Start ==="
+echo "=== GitHub Copilot Adoption Clean Start ==="
 echo ""
 
 clean_github_and_meta
 
 # Stage and commit the clean state
 git -C "$REPO_ROOT" add -A
-git -C "$REPO_ROOT" commit -m "Clean start: reset for RVAS delivery session" --quiet
+git -C "$REPO_ROOT" commit -m "Clean start: reset for GitHub Copilot Adoption delivery session" --quiet
 echo "[OK] Committed clean state to local repo"
 
 echo ""

@@ -1,4 +1,4 @@
-/* GitHub Copilot RVAS — shared helpers: data loading, theme, nav, badges, scroll-reveal. */
+/* GitHub Copilot Adoption -- shared helpers: data loading, theme, nav, badges, scroll-reveal. */
 (function () {
   'use strict';
 

@@ -1,10 +1,10 @@
-# GitHub Copilot RVAS
+# GitHub Copilot Adoption
 
-![GitHub Copilot RVAS banner](docs/images/rvas-banner.jpg)
+![GitHub Copilot Adoption banner](docs/images/rvas-banner.jpg)
 
-Welcome to the GitHub Copilot RVAS (Real Value Acceleration Solution)! This repository helps your team **drive real work outcomes** with GitHub Copilot, and use those outcomes to build lasting adoption across your organization. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run an RVAS delivery session on your own codebase.
+GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
 
-## Two Ways to Run an RVAS Delivery Session
+## Two Ways to Run a GitHub Copilot Adoption Delivery Session
 
 ### Option 1: Pick a Worked-Example Challenge
 
@@ -12,7 +12,7 @@ Choose one of the **22 challenge tracks** below. Each challenge maps to a specif
 
 ### Option 2: Bring Your Own Challenge
 
-Run an RVAS delivery session on your own app or repository. The **[Bring Your Own Challenge (BYOC) kit](./byoc/)** provides a canvas to define your target outcome, templates to author a custom challenge, and a facilitator runbook to guide your session. This turns the session into working time that delivers a measurable result for your team.
+Run a GitHub Copilot Adoption delivery session on your own app or repository. The **[Bring Your Own Challenge (BYOC) kit](./byoc/)** provides a canvas to define your target outcome, templates to author a custom challenge, and a facilitator runbook to guide your session. This turns the session into working time that delivers a measurable result for your team.
 
 See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
@@ -145,7 +145,7 @@ The environment is pre-configured with:
 
 ### Step 3: Clean Start (CRITICAL)
 
-The `.github/` directory contains instructions, agents, and skills used by the RVAS delivery session organizers. Run the cleanup script to reset it before you begin.
+The `.github/` directory contains instructions, agents, and skills used by GitHub Copilot Adoption delivery session organizers. Run the cleanup script to reset it before you begin.
 
 **Linux / macOS / Codespaces:**
 
@@ -548,7 +548,7 @@ Prefer to explore on your own?
 
 ## Success Metrics
 
-A successful RVAS delivery session produces:
+A successful GitHub Copilot Adoption delivery session produces:
 
 - **A demonstrable outcome** for each team -- working code, a shipped feature, modernized infrastructure, or documented automation.
 - **Articulated business impact** -- participants can state the outcome they drove and why it matters (faster delivery, reduced risk, lower toil).
@@ -587,10 +587,10 @@ After the session:
 ### Quick Links
 
 - **[Choose Your Track](./tracks/README.md)** - Outcome-driven learning paths organized by role and outcome
-- **[Bring Your Own Challenge Kit](./byoc/README.md)** - Run an RVAS delivery session on your own codebase
+- **[Bring Your Own Challenge Kit](./byoc/README.md)** - Run a GitHub Copilot Adoption delivery session on your own codebase
 - **Challenge Set Builder** - Available on the published site; coaches can curate challenge sets and generate student URLs
 - **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
-- **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For RVAS delivery session organizers
+- **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For GitHub Copilot Adoption delivery session organizers
 - **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content
 
 ### Need Help?

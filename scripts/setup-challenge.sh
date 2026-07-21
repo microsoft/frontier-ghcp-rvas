@@ -238,7 +238,7 @@ done
 
 if [[ "$TRACK_ASSETS_PRESENT" == true ]]; then
   cat > "$REPO_ROOT/README.md" <<EOF
-# GitHub Copilot RVAS
+# GitHub Copilot Adoption
 
 This workspace is set up for your challenge. Everything you don't need
 has been removed so you can focus on the task at hand.
@@ -266,7 +266,7 @@ Before you begin, verify Copilot is working:
 EOF
 else
   cat > "$REPO_ROOT/README.md" <<EOF
-# GitHub Copilot RVAS
+# GitHub Copilot Adoption
 
 This workspace is set up for your challenge. The starter files are ready
 under \

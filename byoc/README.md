@@ -1,6 +1,6 @@
 # Bring Your Own Challenge (BYOC) Kit
 
-This kit helps you run an outcome-driven RVAS delivery session on your own app or repository. Use it when you want to deliver a real work result on your team's codebase instead of working through a pre-built example.
+This kit helps you run an outcome-driven GitHub Copilot Adoption delivery session on your own app or repository. Use it when you want to deliver a real work result on your team's codebase instead of working through a pre-built example.
 
 ## What's in the Kit
 

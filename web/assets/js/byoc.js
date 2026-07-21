@@ -1,4 +1,4 @@
-/* GitHub Copilot RVAS — BYOC page */
+/* GitHub Copilot Adoption -- BYOC page */
 (function () {
   'use strict';
 

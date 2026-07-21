@@ -1,5 +1,5 @@
 /* =====================================================================
-   RVAS SHARED SHELL JS — vX  (source of truth: /shared/shell.js)
+   GITHUB COPILOT ADOPTION SHARED SHELL JS -- vX
    Self-contained, no data dependencies. Safe to load on every page.
    - Mobile nav toggle (+ Esc to close, click-outside)
    - Scroll reveal for .reveal elements

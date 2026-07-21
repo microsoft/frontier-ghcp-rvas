@@ -199,7 +199,7 @@ $RootReadme = Join-Path $RepoRoot "README.md"
 
 if ($TrackAssetsPresent) {
 @"
-# GitHub Copilot RVAS
+# GitHub Copilot Adoption
 
 This workspace is set up for your challenge. Everything you don't need
 has been removed so you can focus on the task at hand.
@@ -228,7 +228,7 @@ Before you begin, verify Copilot is working:
 }
 else {
 @"
-# GitHub Copilot RVAS
+# GitHub Copilot Adoption
 
 This workspace is set up for your challenge. The starter files are ready
 under `challenges/$ChallengeDir/`, and the shared docs were left in place

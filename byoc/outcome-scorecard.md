@@ -1,6 +1,6 @@
 # Outcome Scorecard
 
-Use this scorecard to document the outcome you delivered and the business impact it produced. Fill it in at the end of your RVAS delivery session. This replaces activity metrics (Copilot usage percentage, chat interactions) as the primary success measure.
+Use this scorecard to document the outcome you delivered and the business impact it produced. Fill it in at the end of your GitHub Copilot Adoption delivery session. This replaces activity metrics (Copilot usage percentage, chat interactions) as the primary success measure.
 
 ## Outcome Statement
 

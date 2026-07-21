@@ -4,7 +4,7 @@ This walkthrough shows how to use the BYOC kit end-to-end. We'll take the **Web 
 
 ## Scenario
 
-**Context:** Your team has an internal task management API built in Node.js. It works, but it has no authentication, no tests, and it's not production-ready. You want to run an RVAS delivery session to make it deployable to production.
+**Context:** Your team has an internal task management API built in Node.js. It works, but it has no authentication, no tests, and it's not production-ready. You want to run a GitHub Copilot Adoption delivery session to make it deployable to production.
 
 **Goal:** Use the BYOC kit to define the outcome, structure the work, run the session, and measure the business impact.
 

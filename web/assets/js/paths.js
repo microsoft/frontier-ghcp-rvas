@@ -1,4 +1,4 @@
-/* GitHub Copilot RVAS — learning paths page */
+/* GitHub Copilot Adoption -- learning paths page */
 (function () {
   'use strict';
 

@@ -1,10 +1,10 @@
-# RVAS Delivery Session Tracks Overview
+# GitHub Copilot Adoption Delivery Session Tracks Overview
 
 Pick a challenge track that matches the work you want to deliver, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a session on your own app or repository. Each track drives a specific business outcome -- the root README explains the full approach.
 
 The **22 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
-Coaches can use the RVAS site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages, phases, and role pages.
+Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages, phases, and role pages.
 
 ## Challenges by Outcome
 
@@ -431,7 +431,7 @@ Plus track-specific skills!
 
 ### IMPORTANT: Create a Fresh Repository
 
-> **Critical:** Do NOT work directly in this RVAS repository! See [Getting Started](./getting-started.md) for the setup flow and workspace preparation steps.
+> **Critical:** Do NOT work directly in this GitHub Copilot Adoption repository! See [Getting Started](./getting-started.md) for the setup flow and workspace preparation steps.
 
 **[Follow the Setup Instructions](./getting-started.md)** - includes an interactive setup script.
 

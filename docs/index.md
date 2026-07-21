@@ -1,6 +1,6 @@
 # Documentation
 
-Reference material for the GitHub Copilot RVAS. Start here, then jump into a track.
+Reference material for GitHub Copilot Adoption. Start here, then jump into a track.
 
 ## Guides
 

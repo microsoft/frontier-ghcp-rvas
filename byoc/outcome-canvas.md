@@ -1,6 +1,6 @@
 # Outcome Canvas
 
-Use this worksheet to define the outcome you want to drive in your RVAS delivery session. Fill in each section before you start work.
+Use this worksheet to define the outcome you want to drive in your GitHub Copilot Adoption delivery session. Fill in each section before you start work.
 
 ## Target Outcome
 
@@ -56,7 +56,7 @@ _What must be true for the outcome to count as delivered?_
 
 **Time:**
 
-_How long is your RVAS delivery session? (4 hours, 6 hours, full day)_
+_How long is your GitHub Copilot Adoption delivery session? (4 hours, 6 hours, full day)_
 
 **Team Size:**
 

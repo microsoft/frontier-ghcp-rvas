@@ -1,4 +1,4 @@
-/* GitHub Copilot RVAS — curated set view (?ids=a,b,c&name=…), opens in kiosk mode */
+/* GitHub Copilot Adoption -- curated set view (?ids=a,b,c&name=…), opens in kiosk mode */
 (function () {
   'use strict';
 
@@ -29,7 +29,7 @@
 
   function renderHeading(name, n) {
     const title = name || 'Your challenges';
-    document.title = title + ' — GitHub Copilot RVAS';
+    document.title = title + ' - GitHub Copilot Adoption';
     const h = document.getElementById('setHeading');
     if (h) h.textContent = name ? name : 'Your challenges.';
     const intro = document.getElementById('setIntro');

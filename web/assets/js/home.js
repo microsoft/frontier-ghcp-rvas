@@ -1,4 +1,4 @@
-/* GitHub Copilot RVAS — home page */
+/* GitHub Copilot Adoption -- home page */
 (function () {
   'use strict';
 

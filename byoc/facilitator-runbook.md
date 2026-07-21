@@ -1,6 +1,6 @@
 # BYOC Facilitator Runbook
 
-This runbook describes how to run an outcome-driven RVAS delivery session on a customer's own app or repository. Use this when participants are working on their own codebase instead of a pre-built challenge.
+This runbook describes how to run an outcome-driven GitHub Copilot Adoption delivery session on a customer's own app or repository. Use this when participants are working on their own codebase instead of a pre-built challenge.
 
 ## Pre-Session Prep (1-2 weeks before)
 
