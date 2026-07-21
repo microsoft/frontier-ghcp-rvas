@@ -89,3 +89,6 @@ Thumbs.db
 
 # Generated data (rebuilt by web/build.js)
 web/assets/data/
+
+# Graphify
+graphify-out/
