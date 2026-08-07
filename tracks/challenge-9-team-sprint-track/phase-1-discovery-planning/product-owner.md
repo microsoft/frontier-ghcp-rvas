@@ -4,7 +4,7 @@
 
 ## Tasks
 
-Before you start writing stories, put the product strategist agent from your setup to real use: run early feature ideas past it for trade-off framing before they reach the backlog, instead of treating the backlog as a first draft.
+Before you start writing stories, put the Product and Analysis Agent from your setup to real use: run early feature ideas past it for trade-off framing before they reach the backlog, instead of treating the backlog as a first draft.
 
 1. **Read the stakeholder brief** -- Open the [stakeholder brief](../../../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) and internalize the requirements. This is your specification from the "client."
 
