@@ -48,6 +48,7 @@ $ChallengeMap = @{
     "challenge-17-spec-to-ship"       = "challenge-17-spec-to-ship"
     "challenge-18-cobol-banking"      = "challenge-18-cobol-banking"
     "challenge-19-wcf-banking"        = "challenge-19-wcf-banking"
+    "challenge-20-powershell-automation" = "challenge-20-powershell-automation"
     "challenge-21-azure-terraform"    = "challenge-21-azure-terraform"
 }
 
@@ -72,6 +73,7 @@ $TrackFileMap = @{
     "challenge-17-spec-to-ship"       = "challenge-17-spec-to-ship-track"
     "challenge-18-cobol-banking"      = "challenge-18-cobol-modernization-track"
     "challenge-19-wcf-banking"        = "challenge-19-wcf-modernization-track"
+    "challenge-20-powershell-automation" = "challenge-20-powershell-automation-track"
     "challenge-21-azure-terraform"    = "challenge-21-azure-terraform-track"
 }
 
@@ -96,6 +98,7 @@ $TrackDirMap = @{
     "challenge-17-spec-to-ship"       = "challenge-17-spec-to-ship-track"
     "challenge-18-cobol-banking"      = "challenge-18-cobol-modernization-track"
     "challenge-19-wcf-banking"        = "challenge-19-wcf-modernization-track"
+    "challenge-20-powershell-automation" = "challenge-20-powershell-automation-track"
     "challenge-21-azure-terraform"    = "challenge-21-azure-terraform-track"
 }
 

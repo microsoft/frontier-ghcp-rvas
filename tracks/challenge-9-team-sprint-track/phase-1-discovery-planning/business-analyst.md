@@ -6,7 +6,7 @@
 
 ## Tasks
 
-Before tightening acceptance criteria, use your business analysis agent to spot gaps, conflicting criteria, and unclear metrics before they reach the backlog.
+Before tightening acceptance criteria, use your Product and Analysis Agent to spot gaps, conflicting criteria, and unclear metrics before they reach the backlog.
 
 1. **Help the PO refine acceptance criteria** -- Review each user story and tighten the criteria. Make sure they are testable and specific enough that QA can write tests against them.
 

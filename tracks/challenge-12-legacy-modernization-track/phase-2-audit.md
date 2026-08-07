@@ -18,7 +18,7 @@
 
 6. **Produce a technical debt report.** Create `docs/tech-debt-report.md` with all findings, organized by severity (Critical, High, Medium, Low). Each finding should have a description, location, risk, and recommended fix.
 
-If your Security Auditor agent or review skill produces a generic checklist instead of findings tied to these queries and controllers, refine that customization before writing the tech debt report.
+If your Security Auditor Agent or Dependency Upgrade Skill produces a generic checklist instead of findings tied to these queries, controllers, and dependencies, refine that customization before writing the tech debt report.
 
 ## Verification
 
