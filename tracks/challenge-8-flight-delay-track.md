@@ -80,4 +80,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-8-flight-delay-track/phases.md)
+Next: [Stages](challenge-8-flight-delay-track/stages.md)

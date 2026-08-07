@@ -1,8 +1,8 @@
-# Phase 3: Identity and Secrets
+# Stage 3: Identity and Secrets
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
-The platform exists, but it still is not safe to hand to an application team. This phase adds the identity and secret wiring that usually turns a quick demo environment into a real platform conversation.
+The platform exists, but it still is not safe to hand to an application team. This stage adds the identity and secret wiring that usually turns a quick demo environment into a real platform conversation.
 
 ## Scenario Notes
 
@@ -38,4 +38,4 @@ Copilot will generate identity blocks and Key Vault wiring, but it is not reliab
 
 ---
 
-Previous: [Phase 2: Network and App Platform](phase-2-network-and-platform.md) | Next: [Phase 4: Modules and Environment Promotion](phase-4-modules-and-environments.md)
+Previous: [Stage 2: Network and App Platform](stage-2-network-and-platform.md) | Next: [Stage 4: Modules and Environment Promotion](stage-4-modules-and-environments.md)

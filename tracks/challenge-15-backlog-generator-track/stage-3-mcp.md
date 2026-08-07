@@ -1,10 +1,10 @@
-# Phase 3: MCP Integration
+# Stage 3: MCP Integration
 
 **Duration:** 1.5-2 hours
 
 **Focus:** Pushing generated backlog items to Jira using the Atlassian Rovo MCP server
 
-> This phase requires an Atlassian Cloud account with Jira access. If you do not have one, skip to Phase 4.
+> This stage requires an Atlassian Cloud account with Jira access. If you do not have one, skip to Stage 4.
 
 ## Tasks
 
@@ -37,4 +37,4 @@
 
 ---
 
-Previous: [Phase 2: Refinement Agent](phase-2-refinement.md) | Next: [Phase 4: Consistency Benchmark](phase-4-benchmark.md)
+Previous: [Stage 2: Refinement Agent](stage-2-refinement.md) | Next: [Stage 4: Consistency Benchmark](stage-4-benchmark.md)

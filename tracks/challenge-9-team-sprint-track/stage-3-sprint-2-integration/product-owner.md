@@ -1,4 +1,4 @@
-# Phase 3: Sprint 2 -- Product Owner Tasks
+# Stage 3: Sprint 2 -- Product Owner Tasks
 
 **Time: Full 2 hours**
 
@@ -12,7 +12,7 @@
 
 4. **Draft release notes** -- Start `docs/release-notes.md`. Write it for end users, not developers. Describe the features that will ship and any known limitations.
 
-5. **Prepare the demo outline** -- Write bullet points for what you will show in Phase 4. Build a narrative: a resident discovers CityPulse, reports an issue, browses events, checks the dashboard.
+5. **Prepare the demo outline** -- Write bullet points for what you will show in Stage 4. Build a narrative: a resident discovers CityPulse, reports an issue, browses events, checks the dashboard.
 
 If your Product and Analysis Agent produces generic release notes or a poorly scoped demo outline, refine its shipping context before asking it to revise the draft.
 
@@ -24,4 +24,4 @@ If your Product and Analysis Agent produces generic release notes or a poorly sc
 
 ---
 
-Previous: [Phase 2: Sprint 1 -- Product Owner Tasks](../phase-2-sprint-1-build/product-owner.md) | Next: [Phase 4: Ship and Demo -- Product Owner Tasks](../phase-4-deploy-demo/product-owner.md)
+Previous: [Stage 2: Sprint 1 -- Product Owner Tasks](../stage-2-sprint-1-build/product-owner.md) | Next: [Stage 4: Ship and Demo -- Product Owner Tasks](../stage-4-deploy-demo/product-owner.md)

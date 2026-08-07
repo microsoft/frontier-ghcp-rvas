@@ -50,7 +50,7 @@ The original developers left a few notes in the code:
 - `GetStatementSummary` derives the opening balance by working backwards from the current balance, which gives wrong results for periods that do not cover all transactions.
 - Monthly interest uses simple interest with no day-count convention.
 
-These are real issues, not bugs introduced for the challenge. They are worth documenting during Phase 1 and deciding whether to preserve or fix during Phase 3.
+These are real issues, not bugs introduced for the challenge. They are worth documenting during Stage 1 and deciding whether to preserve or fix during Stage 3.
 
 ## Service Faults
 

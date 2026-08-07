@@ -87,4 +87,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-16-ops-assistant-track/phases.md)
+Next: [Stages](challenge-16-ops-assistant-track/stages.md)

@@ -31,7 +31,7 @@ There is no Product Owner or Business Analyst in this track. The functional spec
 
 **4 people** -- one role each, the ideal setup.
 
-**3 people** -- drop the QA Engineer role. Developers write their own tests (unit and integration), and the DevOps engineer adds basic E2E smoke tests to the CI pipeline. Skip the QA-specific pages in each phase.
+**3 people** -- drop the QA Engineer role. Developers write their own tests (unit and integration), and the DevOps engineer adds basic E2E smoke tests to the CI pipeline. Skip the QA-specific pages in each stage.
 
 **2 people** -- one person covers both Backend and Frontend (simplify the UI scope), the other covers DevOps. Skip QA entirely. Focus on getting a working deployment with core features rather than full coverage.
 
@@ -89,7 +89,7 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and Inspect the Challenge
 
-Navigate to `challenges/challenge-10-tech-sprint/`. Read the [functional specification](../challenges/challenge-10-tech-sprint/docs/functional-spec.md) as a team before starting Phase 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
+Navigate to `challenges/challenge-10-tech-sprint/`. Read the [functional specification](../challenges/challenge-10-tech-sprint/docs/functional-spec.md) as a team before starting Stage 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-10-tech-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
 
@@ -141,4 +141,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-10-tech-sprint-track/phases.md)
+Next: [Stages](challenge-10-tech-sprint-track/stages.md)

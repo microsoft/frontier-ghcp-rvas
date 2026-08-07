@@ -1,4 +1,4 @@
-# Phase 3: Sprint 2 -- Integration and Polish
+# Stage 3: Sprint 2 -- Integration and Polish
 
 **Duration:** 2 hours
 **Focus:** Integration, advanced features, bug fixing, deployment preparation
@@ -18,12 +18,12 @@ Quick self-organized planning. Do not spend more than 10 minutes on this.
 
 Find your role and follow the link for your detailed task list:
 
-| Role | Focus This Phase | Key Deliverable |
+| Role | Focus This Stage | Key Deliverable |
 |------|-----------------|-----------------|
-| [Backend Developer](phase-3-sprint-2-integration/backend-developer.md) | Bug fixes, search/filter, stats endpoint, auth | At least one advanced feature shipped |
-| [Frontend Developer](phase-3-sprint-2-integration/frontend-developer.md) | Connect to real API, dashboard, responsive design | No more mocked data in the critical path |
-| [QA Engineer](phase-3-sprint-2-integration/qa-engineer.md) | Regression tests, Sprint 2 tests, cross-browser, a11y | Full E2E suite against integrated app |
-| [DevOps Engineer](phase-3-sprint-2-integration/devops-engineer.md) | Reverse proxy, environment polish, CI smoke test | Full stack running reliably in Codespaces |
+| [Backend Developer](stage-3-sprint-2-integration/backend-developer.md) | Bug fixes, search/filter, stats endpoint, auth | At least one advanced feature shipped |
+| [Frontend Developer](stage-3-sprint-2-integration/frontend-developer.md) | Connect to real API, dashboard, responsive design | No more mocked data in the critical path |
+| [QA Engineer](stage-3-sprint-2-integration/qa-engineer.md) | Regression tests, Sprint 2 tests, cross-browser, a11y | Full E2E suite against integrated app |
+| [DevOps Engineer](stage-3-sprint-2-integration/devops-engineer.md) | Reverse proxy, environment polish, CI smoke test | Full stack running reliably in Codespaces |
 
 ## Sync Point: Integration Check (at ~5:30, 1 hour into Sprint 2)
 
@@ -39,4 +39,4 @@ If the shared repository instructions or the sprint board sync skill are produci
 
 ---
 
-Previous: [Phase 2: Sprint 1 -- Core Features](phase-2-sprint-1-build.md) | Next: [Phase 4: Ship and Demo](phase-4-deploy-demo.md)
+Previous: [Stage 2: Sprint 1 -- Core Features](stage-2-sprint-1-build.md) | Next: [Stage 4: Ship and Demo](stage-4-deploy-demo.md)

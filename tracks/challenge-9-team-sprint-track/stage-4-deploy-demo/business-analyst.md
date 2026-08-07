@@ -1,4 +1,4 @@
-# Phase 4: Ship and Demo -- Business Analyst Tasks
+# Stage 4: Ship and Demo -- Business Analyst Tasks
 
 **Time: ~1 hour tasks + demo/retro**
 
@@ -22,4 +22,4 @@
 
 ---
 
-Previous: [Phase 3: Sprint 2 -- Business Analyst Tasks](../phase-3-sprint-2-integration/business-analyst.md) | Next: [Phase 5: Agentic Workflows -- Business Analyst Tasks](../phase-5-agentic-workflows/business-analyst.md)
+Previous: [Stage 3: Sprint 2 -- Business Analyst Tasks](../stage-3-sprint-2-integration/business-analyst.md) | Next: [Stage 5: Agentic Workflows -- Business Analyst Tasks](../stage-5-agentic-workflows/business-analyst.md)

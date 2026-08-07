@@ -85,4 +85,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-13-living-docs-track/phases.md)
+Next: [Stages](challenge-13-living-docs-track/stages.md)

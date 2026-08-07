@@ -60,7 +60,7 @@ Your `.github/copilot-instructions.md` should include:
 
 ### Suggested Custom Agents
 
-- **Requirements Analyst Agent** -- Takes a functional requirements document and produces structured work items: Epics, Stories with Given/When/Then criteria, Tasks, and Test Cases, with dependency ordering and sizing. Give it the requirements doc; it drafts the work items. Use it as Phase 1's first pass.
+- **Requirements Analyst Agent** -- Takes a functional requirements document and produces structured work items: Epics, Stories with Given/When/Then criteria, Tasks, and Test Cases, with dependency ordering and sizing. Give it the requirements doc; it drafts the work items. Use it as Stage 1's first pass.
 - **Technical Analyst Agent** -- Takes a spec plus the existing codebase (`@workspace`) and produces a technical analysis: affected modules, new models, API decisions, schema changes, and risk. Give it the spec and repo access; it proposes an implementation order. Use it once work items exist.
 - **Test Spec Agent** -- Takes user stories and produces a test specification: scenarios with preconditions, steps, expected results, and edge cases, covering happy path and failure. Give it a story; it drafts the spec. Use it before implementation starts on that story.
 
@@ -76,10 +76,10 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for Using Copilot on This Track
 
-- For Phase 1, include an example of a well-formed Epic, Story, and Task in your prompt. Copilot produces much better structured output when it has a template to follow.
-- For Phase 2, use `@workspace` to point Copilot at the existing app. Ask it: "Given this spec and the existing codebase, what modules are affected, what new code is needed, and what order should we implement in?"
-- In Phase 3, work story by story. Feed Copilot one story's acceptance criteria at a time and let it generate the implementation. Review before moving to the next.
-- Agent mode is strong for Phase 4 -- describe the test scenarios and let Copilot scaffold the test files and pipeline YAML.
+- For Stage 1, include an example of a well-formed Epic, Story, and Task in your prompt. Copilot produces much better structured output when it has a template to follow.
+- For Stage 2, use `@workspace` to point Copilot at the existing app. Ask it: "Given this spec and the existing codebase, what modules are affected, what new code is needed, and what order should we implement in?"
+- In Stage 3, work story by story. Feed Copilot one story's acceptance criteria at a time and let it generate the implementation. Review before moving to the next.
+- Agent mode is strong for Stage 4 -- describe the test scenarios and let Copilot scaffold the test files and pipeline YAML.
 - Save your prompts in `.github/prompts/` as you go. The whole point is building reusable artifacts.
 
 ## Resources
@@ -90,4 +90,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-17-spec-to-ship-track/phases.md)
+Next: [Stages](challenge-17-spec-to-ship-track/stages.md)

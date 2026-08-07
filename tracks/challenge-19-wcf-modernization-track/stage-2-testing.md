@@ -1,4 +1,4 @@
-# Phase 2: Characterization Tests
+# Stage 2: Characterization Tests
 
 **Duration:** 1.5-2 hours
 
@@ -6,13 +6,13 @@
 
 ## Objective
 
-Write a test suite that captures what the WCF service currently does -- correct behavior, bugs, and all. These tests become your safety net for Phase 3. If your new REST API passes all of them, you know the business logic survived the migration intact.
+Write a test suite that captures what the WCF service currently does -- correct behavior, bugs, and all. These tests become your safety net for Stage 3. If your new REST API passes all of them, you know the business logic survived the migration intact.
 
 You are testing the running WCF service over HTTP, not the implementation classes directly. The goal is behavioral coverage, not line coverage.
 
 ## Tasks
 
-1. **Start the WCF service.** Run it in one terminal window and keep it running throughout this phase:
+1. **Start the WCF service.** Run it in one terminal window and keep it running throughout this stage:
 
    ```bash
    dotnet run --project src/Meridian.Banking.Service
@@ -71,4 +71,4 @@ If your Banking Domain agent or WSDL skill produces a generic characterization t
 
 ---
 
-Previous: [Phase 1: Contract Archaeology](phase-1-archaeology.md) | Next: [Phase 3: REST API Migration](phase-3-migration.md)
+Previous: [Stage 1: Contract Archaeology](stage-1-archaeology.md) | Next: [Stage 3: REST API Migration](stage-3-migration.md)

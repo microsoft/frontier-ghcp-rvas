@@ -1,4 +1,4 @@
-# Phase 1: State and Naming Baseline
+# Stage 1: State and Naming Baseline
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
@@ -18,7 +18,7 @@ Before you touch the backend config, use the full setup: keep your repository in
 2. Configure the main environment in `terraform/azure/` to use the remote backend. Remove hard-coded resource names and replace them with locals, variables, and a tagging baseline that fits the stakeholder notes.
 3. Add provider and Terraform version constraints, plus a `terraform.tfvars.example` that shows the minimum values another engineer would need to supply without exposing real subscription details.
 4. Add a short naming decision section to `docs/platform-notes.md`. Include one Azure naming limit you designed around and one stakeholder request you narrowed or deferred.
-5. Keep the layout ready for later phases. At minimum, `terraform/azure/` should stay the environment root, while reusable code belongs under `modules/`.
+5. Keep the layout ready for later stages. At minimum, `terraform/azure/` should stay the environment root, while reusable code belongs under `modules/`.
 
 ## Review Gate
 
@@ -38,4 +38,4 @@ Copilot is useful here for provider blocks, backend structure, and repetitive va
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Network and App Platform](phase-2-network-and-platform.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Network and App Platform](stage-2-network-and-platform.md)

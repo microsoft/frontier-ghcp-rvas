@@ -1,4 +1,4 @@
-# Phase 1: Code Archaeology
+# Stage 1: Code Archaeology
 
 **Duration:** 2-3 hours
 **Focus:** Reverse-engineering, documentation, architecture mapping
@@ -35,7 +35,7 @@ Before you open a single routine, use everything you set up: keep your repositor
    - Technical debt inventory
    - Glossary of domain terms used in the code
 
-## Copilot Tips for This Phase
+## Copilot Tips for This Stage
 
 - Use `/explain` on each `.m` file to get a starting point, then refine with follow-up questions.
 - Ask Copilot: "What does `F  S AID=$O(^ACCT(AID)) Q:AID=""  D` do?" -- it can explain MUMPS idioms.
@@ -54,4 +54,4 @@ Before you open a single routine, use everything you set up: keep your repositor
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Characterization Testing](phase-2-testing.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Characterization Testing](stage-2-testing.md)

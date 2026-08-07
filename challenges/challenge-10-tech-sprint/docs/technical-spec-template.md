@@ -1,6 +1,6 @@
 # Technical Specification Template
 
-Use this template to create your team's technical specification during Phase 1. Fill it in together, with each role contributing their section.
+Use this template to create your team's technical specification during Stage 1. Fill it in together, with each role contributing their section.
 
 ---
 

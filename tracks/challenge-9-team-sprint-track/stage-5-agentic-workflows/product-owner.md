@@ -1,4 +1,4 @@
-# Phase 5: Agentic Workflows -- Product Owner Tasks
+# Stage 5: Agentic Workflows -- Product Owner Tasks
 
 **Time: ~1 hour**
 
@@ -48,4 +48,4 @@
 
 ---
 
-Previous: [Phase 4: Ship and Demo -- Product Owner Tasks](../phase-4-deploy-demo/product-owner.md)
+Previous: [Stage 4: Ship and Demo -- Product Owner Tasks](../stage-4-deploy-demo/product-owner.md)

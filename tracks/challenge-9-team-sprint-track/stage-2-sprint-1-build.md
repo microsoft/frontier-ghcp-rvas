@@ -1,4 +1,4 @@
-# Phase 2: Sprint 1 -- Core Features
+# Stage 2: Sprint 1 -- Core Features
 
 **Duration:** 3 hours
 **Focus:** Parallel development of core features -- API, UI, tests, and infrastructure
@@ -11,12 +11,12 @@ Find your role and follow the link for your detailed task list:
 
 | Role | What You Build | Key Deliverable |
 |------|---------------|-----------------|
-| [Product Owner](phase-2-sprint-1-build/product-owner.md) | Backlog management, PR reviews, Sprint 2 prep | Board reflects reality, Sprint 2 stories written |
-| [Backend Developer](phase-2-sprint-1-build/backend-developer.md) | Reports CRUD API, Events API, seed data | Working endpoints testable with curl |
-| [Frontend Developer](phase-2-sprint-1-build/frontend-developer.md) | Report form, reports list, events list, navigation | Pages rendering with data |
-| [QA Engineer](phase-2-sprint-1-build/qa-engineer.md) | E2E tests, API tests, exploratory testing, bug reports | Test suite and filed bugs |
-| [DevOps Engineer](phase-2-sprint-1-build/devops-engineer.md) | Environment setup, process scripts, CI | Full stack running in the Codespace |
-| [Business Analyst](phase-2-sprint-1-build/business-analyst.md) | Feature validation, Sprint 2 refinement *(optional role)* | Validated features, analytics spec |
+| [Product Owner](stage-2-sprint-1-build/product-owner.md) | Backlog management, PR reviews, Sprint 2 prep | Board reflects reality, Sprint 2 stories written |
+| [Backend Developer](stage-2-sprint-1-build/backend-developer.md) | Reports CRUD API, Events API, seed data | Working endpoints testable with curl |
+| [Frontend Developer](stage-2-sprint-1-build/frontend-developer.md) | Report form, reports list, events list, navigation | Pages rendering with data |
+| [QA Engineer](stage-2-sprint-1-build/qa-engineer.md) | E2E tests, API tests, exploratory testing, bug reports | Test suite and filed bugs |
+| [DevOps Engineer](stage-2-sprint-1-build/devops-engineer.md) | Environment setup, process scripts, CI | Full stack running in the Codespace |
+| [Business Analyst](stage-2-sprint-1-build/business-analyst.md) | Feature validation, Sprint 2 refinement *(optional role)* | Validated features, analytics spec |
 
 ## Sync Point: Mid-Sprint Standup (at ~3:00, roughly 1.5 hours into Sprint 1)
 
@@ -28,7 +28,7 @@ Brief 5-minute standup, either in person or asynchronous via a GitHub Issue labe
 
 If anyone is blocked, resolve it immediately. If the frontend developer needs the API spec finalized, that takes priority. If QA needs seed data, the backend developer provides it.
 
-## Copilot Tips for This Phase
+## Copilot Tips for This Stage
 
 **Backend -- generate CRUD fast:**
 
@@ -61,7 +61,7 @@ and PostgreSQL. Add port forwarding for the backend on 3000 and frontend on 5173
 
 ---
 
-Previous: [Phase 1: Discovery and Sprint Planning](phase-1-discovery-planning.md) | Next: [Phase 3: Sprint 2 -- Integration and Polish](phase-3-sprint-2-integration.md)
+Previous: [Stage 1: Discovery and Sprint Planning](stage-1-discovery-planning.md) | Next: [Stage 3: Sprint 2 -- Integration and Polish](stage-3-sprint-2-integration.md)
 
 **QA Engineer:**
 
@@ -81,4 +81,4 @@ Previous: [Phase 1: Discovery and Sprint Planning](phase-1-discovery-planning.md
 
 ---
 
-Previous: [Phase 1: Discovery and Sprint Planning](phase-1-discovery-planning.md) | Next: [Phase 3: Sprint 2 -- Integration and Polish](phase-3-sprint-2-integration.md)
+Previous: [Stage 1: Discovery and Sprint Planning](stage-1-discovery-planning.md) | Next: [Stage 3: Sprint 2 -- Integration and Polish](stage-3-sprint-2-integration.md)

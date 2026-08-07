@@ -1,4 +1,4 @@
-# Phase 2: Sprint 1 -- Frontend Developer Tasks
+# Stage 2: Sprint 1 -- Frontend Developer Tasks
 
 **Time: Full 3 hours**
 
@@ -53,4 +53,4 @@ Generate mock data while waiting for the API:
 
 ---
 
-Previous: [Phase 1: Discovery and Planning -- Frontend Developer Tasks](../phase-1-discovery-planning/frontend-developer.md) | Next: [Phase 3: Sprint 2 -- Frontend Developer Tasks](../phase-3-sprint-2-integration/frontend-developer.md)
+Previous: [Stage 1: Discovery and Planning -- Frontend Developer Tasks](../stage-1-discovery-planning/frontend-developer.md) | Next: [Stage 3: Sprint 2 -- Frontend Developer Tasks](../stage-3-sprint-2-integration/frontend-developer.md)

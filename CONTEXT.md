@@ -20,14 +20,9 @@ A curated, non-sequential set of challenges relevant to one Role.
 _Avoid_: Role Track, Role Path
 
 **Stage**:
-An ordered part of a track that advances one solution through a sequence of
-increasingly capable outcomes.
+An ordered part of a track that advances work through increasingly capable
+outcomes, including activities coordinated across multiple roles.
 _Avoid_: Phase, step
-
-**Phase**:
-An ordered period of work that groups related activities across roles or a
-delivery lifecycle.
-_Avoid_: Stage, step
 
 **Customization Trio**:
 The three complementary customization types: Repository Instructions, Custom

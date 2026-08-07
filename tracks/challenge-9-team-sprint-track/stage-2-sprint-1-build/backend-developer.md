@@ -1,4 +1,4 @@
-# Phase 2: Sprint 1 -- Backend Developer Tasks
+# Stage 2: Sprint 1 -- Backend Developer Tasks
 
 **Time: Full 3 hours**
 
@@ -48,4 +48,4 @@ One PR per feature (Reports API, Events API, seed data). Link each to its GitHub
 
 ---
 
-Previous: [Phase 1: Discovery and Planning -- Backend Developer Tasks](../phase-1-discovery-planning/backend-developer.md) | Next: [Phase 3: Sprint 2 -- Backend Developer Tasks](../phase-3-sprint-2-integration/backend-developer.md)
+Previous: [Stage 1: Discovery and Planning -- Backend Developer Tasks](../stage-1-discovery-planning/backend-developer.md) | Next: [Stage 3: Sprint 2 -- Backend Developer Tasks](../stage-3-sprint-2-integration/backend-developer.md)

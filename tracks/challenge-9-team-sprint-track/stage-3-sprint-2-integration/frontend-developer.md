@@ -1,4 +1,4 @@
-# Phase 3: Sprint 2 -- Frontend Developer Tasks
+# Stage 3: Sprint 2 -- Frontend Developer Tasks
 
 **Time: Full 2 hours**
 
@@ -31,4 +31,4 @@ If your UI agent produces a generic dashboard, ignores the API response shape, o
 
 ---
 
-Previous: [Phase 2: Sprint 1 -- Frontend Developer Tasks](../phase-2-sprint-1-build/frontend-developer.md) | Next: [Phase 4: Ship and Demo -- Frontend Developer Tasks](../phase-4-deploy-demo/frontend-developer.md)
+Previous: [Stage 2: Sprint 1 -- Frontend Developer Tasks](../stage-2-sprint-1-build/frontend-developer.md) | Next: [Stage 4: Ship and Demo -- Frontend Developer Tasks](../stage-4-deploy-demo/frontend-developer.md)

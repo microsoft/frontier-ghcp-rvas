@@ -1,4 +1,4 @@
-# Phase 5: Policy, CI, and Drift Response
+# Stage 5: Policy, CI, and Drift Response
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
@@ -38,4 +38,4 @@ Copilot can write most of the GitHub Actions YAML, but it will not decide your o
 
 ---
 
-Previous: [Phase 4: Modules and Environment Promotion](phase-4-modules-and-environments.md)
+Previous: [Stage 4: Modules and Environment Promotion](stage-4-modules-and-environments.md)

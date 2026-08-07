@@ -1,4 +1,4 @@
-# Phase 4: Production-Ready
+# Stage 4: Production-Ready
 
 **Estimated:** 1-2 hours
 
@@ -28,4 +28,4 @@ The agent works end-to-end. Now make it reliable, testable, and deployable.
 
 ---
 
-Previous: [Phase 3: Advanced Features](phase-3-advanced-features.md)
+Previous: [Stage 3: Advanced Features](stage-3-advanced-features.md)

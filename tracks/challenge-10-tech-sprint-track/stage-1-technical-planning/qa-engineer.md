@@ -1,4 +1,4 @@
-# Phase 1: Technical Planning -- QA Engineer Tasks
+# Stage 1: Technical Planning -- QA Engineer Tasks
 
 **Time: ~1 hour setup + 30 min planning**
 
@@ -33,4 +33,4 @@ Plan to lean on the test-engineer agent for judgment on which TrailMate flows an
 
 ---
 
-Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- QA Engineer Tasks](../phase-2-sprint-1-build/qa-engineer.md)
+Previous: [Stages](../stages.md) | Next: [Stage 2: Sprint 1 -- QA Engineer Tasks](../stage-2-sprint-1-build/qa-engineer.md)

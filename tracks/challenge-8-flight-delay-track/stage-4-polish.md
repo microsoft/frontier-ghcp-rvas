@@ -1,4 +1,4 @@
-# Phase 4: Polish and Advanced Features
+# Stage 4: Polish and Advanced Features
 
 **Duration:** 1-2 hours
 **Focus:** Production readiness, advanced features
@@ -22,4 +22,4 @@ Go beyond the basics. These are optional challenges for teams who finish early o
 
 ---
 
-Previous: [Phase 3: Build the Frontend](phase-3-frontend.md)
+Previous: [Stage 3: Build the Frontend](stage-3-frontend.md)

@@ -86,4 +86,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-12-legacy-modernization-track/phases.md)
+Next: [Stages](challenge-12-legacy-modernization-track/stages.md)

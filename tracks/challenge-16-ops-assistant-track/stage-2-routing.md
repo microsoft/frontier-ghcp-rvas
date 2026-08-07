@@ -1,4 +1,4 @@
-# Phase 2: Incident Routing
+# Stage 2: Incident Routing
 
 **Duration:** 1.5-2 hours
 
@@ -39,4 +39,4 @@ If your routing agent or triage skill gives generic advice or conflicts with the
 
 ---
 
-Previous: [Phase 1: Log Analysis Agent](phase-1-log-analysis.md) | Next: [Phase 3: Troubleshooting Aids](phase-3-troubleshooting.md)
+Previous: [Stage 1: Log Analysis Agent](stage-1-log-analysis.md) | Next: [Stage 3: Troubleshooting Aids](stage-3-troubleshooting.md)

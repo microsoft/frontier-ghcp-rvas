@@ -1,4 +1,4 @@
-# Phase 5: Agentic Workflows -- DevOps Engineer Tasks
+# Stage 5: Agentic Workflows -- DevOps Engineer Tasks
 
 **Time: ~1 hour**
 
@@ -41,4 +41,4 @@
 
 ---
 
-Previous: [Phase 4: Ship and Demo -- DevOps Engineer Tasks](../phase-4-deploy-demo/devops-engineer.md)
+Previous: [Stage 4: Ship and Demo -- DevOps Engineer Tasks](../stage-4-deploy-demo/devops-engineer.md)

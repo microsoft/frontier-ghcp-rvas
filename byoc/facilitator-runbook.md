@@ -45,8 +45,8 @@ for authoring mechanics and resources.
 For a reusable challenge, author the page set before the session:
 
 1. Start with the overview page.
-2. Add and commit a `stages.md` or `phases.md` contents page.
-3. Add one dedicated page for each stage or phase.
+2. Add and commit a `stages.md` contents page.
+3. Add one dedicated page for each stage.
 4. Check the route from overview to contents, then through every previous and
    next link.
 

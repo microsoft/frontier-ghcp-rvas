@@ -1,4 +1,4 @@
-# Phase 3: Sprint 2 -- Backend Developer Tasks
+# Stage 3: Sprint 2 -- Backend Developer Tasks
 
 **Time: Full 2 hours**
 
@@ -24,7 +24,7 @@
 
 6. **Open PRs** for each feature. Keep them small and reviewable.
 
-If your API agent proposes a fix or endpoint that ignores an existing convention or conflicts with the Phase 1 spec, refine the agent's guidance before asking it to review the contract again.
+If your API agent proposes a fix or endpoint that ignores an existing convention or conflicts with the Stage 1 spec, refine the agent's guidance before asking it to review the contract again.
 
 ## Verification
 
@@ -34,4 +34,4 @@ If your API agent proposes a fix or endpoint that ignores an existing convention
 
 ---
 
-Previous: [Phase 2: Sprint 1 -- Backend Developer Tasks](../phase-2-sprint-1-build/backend-developer.md) | Next: [Phase 4: Ship and Demo -- Backend Developer Tasks](../phase-4-deploy-demo/backend-developer.md)
+Previous: [Stage 2: Sprint 1 -- Backend Developer Tasks](../stage-2-sprint-1-build/backend-developer.md) | Next: [Stage 4: Ship and Demo -- Backend Developer Tasks](../stage-4-deploy-demo/backend-developer.md)

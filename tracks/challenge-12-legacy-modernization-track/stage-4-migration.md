@@ -1,4 +1,4 @@
-# Phase 4: Migration
+# Stage 4: Migration
 
 **Duration:** 2-3 hours
 
@@ -28,7 +28,7 @@
 
 6. **Create a `.github/copilot-instructions.md` knowledge base.** Document the system's business rules, API contracts, and architectural decisions so future developers (and Copilot) have the context that the original team never wrote down.
 
-7. **Run all Phase 3 tests.** After migration, your characterization tests (with updated imports) should still pass. Fix any regressions.
+7. **Run all Stage 3 tests.** After migration, your characterization tests (with updated imports) should still pass. Fix any regressions.
 
 ## Verification
 
@@ -39,8 +39,8 @@
 - [ ] Proper error handling with custom exceptions
 - [ ] Manual JSON parsing replaced with Spring annotations
 - [ ] `.github/copilot-instructions.md` created with business rules
-- [ ] All Phase 3 characterization tests pass after migration
+- [ ] All Stage 3 characterization tests pass after migration
 
 ---
 
-Previous: [Phase 3: Test Harness](phase-3-tests.md)
+Previous: [Stage 3: Test Harness](stage-3-tests.md)

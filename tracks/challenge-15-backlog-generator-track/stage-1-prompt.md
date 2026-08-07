@@ -1,4 +1,4 @@
-# Phase 1: Spec-to-Backlog Prompt
+# Stage 1: Spec-to-Backlog Prompt
 
 **Duration:** 2-2.5 hours
 
@@ -43,4 +43,4 @@ Before you write the prompt, use everything from setup: keep your repository ins
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Refinement Agent](phase-2-refinement.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Refinement Agent](stage-2-refinement.md)

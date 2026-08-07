@@ -1,17 +1,17 @@
-# Phase 2: Characterization Testing
+# Stage 2: Characterization Testing
 
 **Duration:** 2-3 hours
 **Focus:** Writing tests that capture existing behavior before changing anything
 
 ## Objective
 
-Write a comprehensive test suite in your target language that documents and verifies the banking system's current behavior. These tests become the safety net for Phase 4 -- if your translation passes all characterization tests, you can be confident the business logic is preserved.
+Write a comprehensive test suite in your target language that documents and verifies the banking system's current behavior. These tests become the safety net for Stage 4 -- if your translation passes all characterization tests, you can be confident the business logic is preserved.
 
 You are not testing the MUMPS code directly. Instead, you are reimplementing the testable business logic (calculations, validations, data transformations) in your target language and writing tests against those implementations.
 
 ## Tasks
 
-1. **Set up your target language project.** Create a new project in the challenge folder for your chosen language (e.g., `psl/`, `java/`, `python/`, `typescript/`). Set up a test framework (JUnit 5, pytest, Jest, xUnit -- whatever fits your language). Define the project structure you will use for the full translation in Phase 4.
+1. **Set up your target language project.** Create a new project in the challenge folder for your chosen language (e.g., `psl/`, `java/`, `python/`, `typescript/`). Set up a test framework (JUnit 5, pytest, Jest, xUnit -- whatever fits your language). Define the project structure you will use for the full translation in Stage 4.
 
 2. **Test the utility functions.** Start with `BNKUTIL.m` -- the simplest module. Implement and test:
    - Date formatting (`FMTDT`): YYYYMMDD to MM/DD/YYYY
@@ -68,8 +68,8 @@ If your Translation agent or business-rule skill misses a MUMPS rounding quirk o
 - [ ] Transaction rule tests passing (deposit, withdrawal, transfer constraints)
 - [ ] Batch processing logic tests passing (fees, overdue detection)
 - [ ] Authentication rule tests passing
-- [ ] All tests green -- this is your safety net for Phase 4
+- [ ] All tests green -- this is your safety net for Stage 4
 
 ---
 
-Previous: [Phase 1: Code Archaeology](phase-1-archaeology.md) | Next: [Phase 3: Feature Evolution](phase-3-evolution.md)
+Previous: [Stage 1: Code Archaeology](stage-1-archaeology.md) | Next: [Stage 3: Feature Evolution](stage-3-evolution.md)

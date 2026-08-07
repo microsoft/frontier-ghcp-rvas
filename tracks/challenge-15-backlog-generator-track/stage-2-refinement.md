@@ -1,4 +1,4 @@
-# Phase 2: Refinement Agent
+# Stage 2: Refinement Agent
 
 **Duration:** 1.5-2 hours
 
@@ -20,7 +20,7 @@
    - Outputs a gap analysis: what is missing, what is ambiguous, what might be duplicated
    - Suggests specific additions or modifications with draft text
 
-3. **Test on the Password Reset spec.** Run the agent with the Password Reset spec and the backlog you generated in Phase 1. Intentionally leave one gap in the backlog (skip an alternative flow) and verify the agent catches it.
+3. **Test on the Password Reset spec.** Run the agent with the Password Reset spec and the backlog you generated in Stage 1. Intentionally leave one gap in the backlog (skip an alternative flow) and verify the agent catches it.
 
 4. **Test on the Inventory Reorder spec.** This is the hardest spec. Run the agent and check whether it catches:
    - EOQ formula coverage
@@ -43,4 +43,4 @@ If the refinement agent's gap analysis is generic, incomplete, or misses contrad
 
 ---
 
-Previous: [Phase 1: Spec-to-Backlog Prompt](phase-1-prompt.md) | Next: [Phase 3: MCP Integration](phase-3-mcp.md)
+Previous: [Stage 1: Spec-to-Backlog Prompt](stage-1-prompt.md) | Next: [Stage 3: MCP Integration](stage-3-mcp.md)

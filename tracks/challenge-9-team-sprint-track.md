@@ -82,7 +82,7 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and Inspect the Challenge
 
-Navigate to `challenges/challenge-9-team-sprint/`. Read the [stakeholder brief](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) as a team before starting Phase 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
+Navigate to `challenges/challenge-9-team-sprint/`. Read the [stakeholder brief](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) as a team before starting Stage 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-9-team-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
 
@@ -136,4 +136,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-9-team-sprint-track/phases.md)
+Next: [Stages](challenge-9-team-sprint-track/stages.md)

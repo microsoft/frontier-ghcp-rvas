@@ -1,4 +1,4 @@
-# Phase 2: Debug Staging
+# Stage 2: Debug Staging
 
 **Duration:** 1-1.5 hours
 
@@ -38,4 +38,4 @@ If your Deploy Debugger agent or pipeline skill gives a generic explanation or m
 
 ---
 
-Previous: [Phase 1: CI Pipeline](phase-1-ci.md) | Next: [Phase 3: Reusable Workflows](phase-3-reusable.md)
+Previous: [Stage 1: CI Pipeline](stage-1-ci.md) | Next: [Stage 3: Reusable Workflows](stage-3-reusable.md)

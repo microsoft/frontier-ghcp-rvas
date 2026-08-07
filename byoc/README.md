@@ -5,7 +5,7 @@ This kit helps you run an outcome-driven GitHub Copilot Adoption delivery sessio
 ## What's in the Kit
 
 - **[Outcome Canvas](./outcome-canvas.md)** -- a fill-in worksheet to define your target outcome, constraints, demo plan, and inputs for Customization Trio Design Briefs
-- **[Challenge Templates](./templates/)** -- skeletons for an overview page, a committed contents page, and a dedicated page for each stage or phase
+- **[Challenge Templates](./templates/)** -- skeletons for an overview page, a committed contents page, and a dedicated page for each stage
 - **[Facilitator Runbook](./facilitator-runbook.md)** -- how to prepare tailored Design Briefs and run a session on a customer codebase
 - **[Outcome Scorecard](./outcome-scorecard.md)** -- a reusable definition-of-done template that replaces usage metrics as the success measure
 - **[Example Walkthrough](./example-walkthrough.md)** -- a worked example adapting an existing challenge app end-to-end through the kit
@@ -53,12 +53,12 @@ covers authoring mechanics and resources.
 If you want a structured progression path, use the **[challenge templates](./templates/)** to create:
 
 - An overview page describing the challenge and setup
-- A committed `stages.md` or `phases.md` contents page listing the full progression
-- A dedicated page for each stage or phase, with previous and next links
+- A committed `stages.md` contents page listing the full progression
+- A dedicated page for each stage, with previous and next links
 - A devcontainer or environment setup guide
 
 Copy `track-template.md` first, then create its track folder. Copy
-`contents-template.md` into that folder as `stages.md` or `phases.md`, and add one
+`contents-template.md` into that folder as `stages.md`, and add one
 page from `stage-template.md` for each progression step. Keep the overview's next
 link, `contents_url` in `meta.yml`, the contents links, and every page footer in
 sync.

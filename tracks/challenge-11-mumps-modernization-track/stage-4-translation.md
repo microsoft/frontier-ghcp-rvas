@@ -1,11 +1,11 @@
-# Phase 4: Language Translation
+# Stage 4: Language Translation
 
 **Duration:** 2.5-3 hours
 **Focus:** Translating the full MUMPS system to a modern language while preserving behavior
 
 ## Objective
 
-Translate the core banking system from MUMPS to your chosen modern language. The translated system must pass all characterization tests from Phase 2. This is not a rewrite from scratch -- it is a faithful translation that preserves every business rule, validation, and calculation while adopting modern language patterns.
+Translate the core banking system from MUMPS to your chosen modern language. The translated system must pass all characterization tests from Stage 2. This is not a rewrite from scratch -- it is a faithful translation that preserves every business rule, validation, and calculation while adopting modern language patterns.
 
 ## Translation Strategy
 
@@ -59,7 +59,7 @@ Either way, run your characterization tests continuously. Every green test is pr
    - Batch idempotency (one run per day)
    - Loan default escalation (30-day warning, 90-day default)
 
-5. **Run your characterization tests.** Every test from Phase 2 should pass against the translated code. Fix any discrepancies by comparing the MUMPS logic with your translation.
+5. **Run your characterization tests.** Every test from Stage 2 should pass against the translated code. Fix any discrepancies by comparing the MUMPS logic with your translation.
 
 6. **Fix the known technical debt.** Now that the code is in a language you control:
    - Replace the hardcoded maintenance fee with a configurable value
@@ -79,10 +79,10 @@ Either way, run your characterization tests continuously. Every green test is pr
 - [ ] Target architecture documented (data layer, module structure, error handling)
 - [ ] Data layer translated with storage for all 8 globals
 - [ ] All business logic modules translated
-- [ ] All characterization tests from Phase 2 passing against translated code
+- [ ] All characterization tests from Stage 2 passing against translated code
 - [ ] At least 3 technical debt items fixed in the translated version
 - [ ] Code compiles/runs and produces correct output for basic operations
 
 ---
 
-Previous: [Phase 3: Feature Evolution](phase-3-evolution.md)
+Previous: [Stage 3: Feature Evolution](stage-3-evolution.md)

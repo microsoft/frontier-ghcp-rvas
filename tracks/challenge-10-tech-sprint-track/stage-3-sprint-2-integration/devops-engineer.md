@@ -1,4 +1,4 @@
-# Phase 3: Sprint 2 -- DevOps Engineer Tasks
+# Stage 3: Sprint 2 -- DevOps Engineer Tasks
 
 **Time: Full 2 hours**
 
@@ -29,4 +29,4 @@ If your infrastructure agent produces an incomplete smoke test or reverse proxy 
 
 ---
 
-Previous: [Phase 2: Sprint 1 -- DevOps Engineer Tasks](../phase-2-sprint-1-build/devops-engineer.md) | Next: [Phase 4: Ship and Demo -- DevOps Engineer Tasks](../phase-4-deploy-demo/devops-engineer.md)
+Previous: [Stage 2: Sprint 1 -- DevOps Engineer Tasks](../stage-2-sprint-1-build/devops-engineer.md) | Next: [Stage 4: Ship and Demo -- DevOps Engineer Tasks](../stage-4-deploy-demo/devops-engineer.md)

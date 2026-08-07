@@ -1,11 +1,11 @@
-# Phase 3: Feature Evolution
+# Stage 3: Feature Evolution
 
 **Duration:** 1.5-2 hours
 **Focus:** Extending the system with new features to test your understanding
 
 ## Objective
 
-Prove you understand the system by extending it. Add new features that require touching multiple modules and maintaining consistency with the existing data model, business rules, and coding patterns. You can do this in MUMPS (if you have YottaDB running) or in your target language (if you already started translating in Phase 2).
+Prove you understand the system by extending it. Add new features that require touching multiple modules and maintaining consistency with the existing data model, business rules, and coding patterns. You can do this in MUMPS (if you have YottaDB running) or in your target language (if you already started translating in Stage 2).
 
 ## Choose Your Features
 
@@ -71,10 +71,10 @@ Add a global transaction search that works across all accounts:
 
 1. **Design the feature.** Before writing code, document what changes are needed: which globals, which routines, what new menu options, what edge cases.
 2. **Implement** the feature in your chosen language (MUMPS or target).
-3. **Write tests** for the new functionality, following the same patterns from Phase 2.
-4. **Update your architecture document** from Phase 1 to reflect the additions.
+3. **Write tests** for the new functionality, following the same patterns from Stage 2.
+4. **Update your architecture document** from Stage 1 to reflect the additions.
 
-## Copilot Tips for This Phase
+## Copilot Tips for This Stage
 
 - Describe the feature to Copilot in banking terms first, then ask for the implementation. "Add a scheduled transfers table that the EOD batch picks up and executes" gives better results than "add a cron job."
 - If implementing in MUMPS, ask Copilot to generate code that follows the existing style -- point it at an existing routine as a reference.
@@ -90,4 +90,4 @@ Add a global transaction search that works across all accounts:
 
 ---
 
-Previous: [Phase 2: Characterization Testing](phase-2-testing.md) | Next: [Phase 4: Language Translation](phase-4-translation.md)
+Previous: [Stage 2: Characterization Testing](stage-2-testing.md) | Next: [Stage 4: Language Translation](stage-4-translation.md)

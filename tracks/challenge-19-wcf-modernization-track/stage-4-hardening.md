@@ -1,4 +1,4 @@
-# Phase 4: Integration and Hardening
+# Stage 4: Integration and Hardening
 
 **Duration:** 1-2 hours
 
@@ -6,11 +6,11 @@
 
 ## Objective
 
-Adapt the Phase 2 characterization tests to run against your new REST API. Every test that passed against the WCF service should pass against the REST API -- if it does not, the migration dropped a business rule. Fix the gaps, add API documentation, and produce a migration notes document that a consuming team could use to update their clients.
+Adapt the Stage 2 characterization tests to run against your new REST API. Every test that passed against the WCF service should pass against the REST API -- if it does not, the migration dropped a business rule. Fix the gaps, add API documentation, and produce a migration notes document that a consuming team could use to update their clients.
 
 ## Tasks
 
-1. **Adapt characterization tests to the REST API.** Take the test project from Phase 2:
+1. **Adapt characterization tests to the REST API.** Take the test project from Stage 2:
    - Add a configuration flag or test base class that points tests at either the WCF service or the REST API
    - Replace WCF channel factory calls with `HttpClient` calls
    - Replace `FaultException<ServiceFault>` assertions with HTTP status code assertions
@@ -53,7 +53,7 @@ Adapt the Phase 2 characterization tests to run against your new REST API. Every
 
 ## Verification
 
-- [ ] Phase 2 characterization tests adapted to run against the REST API
+- [ ] Stage 2 characterization tests adapted to run against the REST API
 - [ ] All tests pass against the REST API
 - [ ] Integration tests written and passing
 - [ ] Swagger UI accessible and documents all endpoints, status codes, and schemas
@@ -63,4 +63,4 @@ Adapt the Phase 2 characterization tests to run against your new REST API. Every
 
 ---
 
-Previous: [Phase 3: REST API Migration](phase-3-migration.md)
+Previous: [Stage 3: REST API Migration](stage-3-migration.md)

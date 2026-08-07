@@ -1,4 +1,4 @@
-# Phase 1: Spec to Backlog
+# Stage 1: Spec to Backlog
 
 **Duration:** 1.5-2 hours
 
@@ -43,4 +43,4 @@ Before you build the prompt, use the full trio: keep your repository instruction
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Technical Analysis](phase-2-analysis.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Technical Analysis](stage-2-analysis.md)

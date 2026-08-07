@@ -1,4 +1,4 @@
-# Phase 3: Code Generation
+# Stage 3: Code Generation
 
 **Duration:** 2-2.5 hours
 
@@ -48,4 +48,4 @@
 
 ---
 
-Previous: [Phase 2: Technical Analysis](phase-2-analysis.md) | Next: [Phase 4: Test Specs and Pipeline](phase-4-tests-pipeline.md)
+Previous: [Stage 2: Technical Analysis](stage-2-analysis.md) | Next: [Stage 4: Test Specs and Pipeline](stage-4-tests-pipeline.md)

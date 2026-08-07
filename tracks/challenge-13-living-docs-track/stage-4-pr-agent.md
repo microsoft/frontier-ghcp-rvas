@@ -1,4 +1,4 @@
-# Phase 4: PR Documentation Agent
+# Stage 4: PR Documentation Agent
 
 **Duration:** 2-3 hours
 
@@ -35,4 +35,4 @@
 
 ---
 
-Previous: [Phase 3: Changelog and Release Notes](phase-3-changelog.md)
+Previous: [Stage 3: Changelog and Release Notes](stage-3-changelog.md)

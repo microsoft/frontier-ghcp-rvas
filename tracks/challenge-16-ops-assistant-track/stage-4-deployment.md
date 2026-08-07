@@ -1,4 +1,4 @@
-# Phase 4: Deployment Automation
+# Stage 4: Deployment Automation
 
 **Duration:** 1.5-2 hours
 
@@ -34,4 +34,4 @@
 
 ---
 
-Previous: [Phase 3: Troubleshooting Aids](phase-3-troubleshooting.md)
+Previous: [Stage 3: Troubleshooting Aids](stage-3-troubleshooting.md)

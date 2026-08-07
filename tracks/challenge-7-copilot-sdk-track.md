@@ -69,7 +69,7 @@ The SDK manages the CLI process lifecycle automatically. You do not need to star
 
 ### Research the SDK First
 
-Before writing any code, use the `/research` slash command in Copilot Chat to gather current documentation for `@github/copilot-sdk`. The SDK is new enough that Copilot's built-in training may be incomplete, and researching it upfront gives you accurate material to build your custom instructions from. Phase 1 walks through this in detail -- it is the first task and everything else builds on it.
+Before writing any code, use the `/research` slash command in Copilot Chat to gather current documentation for `@github/copilot-sdk`. The SDK is new enough that Copilot's built-in training may be incomplete, and researching it upfront gives you accurate material to build your custom instructions from. Stage 1 walks through this in detail -- it is the first task and everything else builds on it.
 
 ### Repository Instructions for This Track
 
@@ -90,7 +90,7 @@ The custom agent you create here helps you write and debug the SDK application i
 
 ### Suggested Custom Skills
 
-- **SDK Research Skill** -- A fixed sequence for gathering current documentation with the `/research` command before writing code: pull the docs, note API surface that differs from Copilot's training data, and turn findings into your custom instructions. Run it once at the start, during Phase 1.
+- **SDK Research Skill** -- A fixed sequence for gathering current documentation with the `/research` command before writing code: pull the docs, note API surface that differs from Copilot's training data, and turn findings into your custom instructions. Run it once at the start, during Stage 1.
 - **Tool Registration Skill** -- A repeatable pattern for adding a new tool to the agent: define the schema, register the handler, wire it into the session, and verify it appears in a test conversation. Use it every time ship-it needs a new capability.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "copilot sdk", "typescript agent tool", and "release notes automation" before you draft your own.
@@ -130,4 +130,4 @@ and search for "copilot sdk cookbook" or the SDK language you are using.
 
 ---
 
-Next: [Phases](challenge-7-copilot-sdk-track/phases.md)
+Next: [Stages](challenge-7-copilot-sdk-track/stages.md)

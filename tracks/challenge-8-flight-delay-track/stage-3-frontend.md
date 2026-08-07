@@ -1,4 +1,4 @@
-# Phase 3: Build the Frontend
+# Stage 3: Build the Frontend
 
 **Duration:** 2-3 hours
 **Focus:** Frontend, UI/UX, API integration
@@ -26,7 +26,7 @@ Create a user-facing web application that allows someone to select a day of the 
 4. Install dependencies: `npm install`.
 5. Start dev server: `npm run dev`.
 
-## Copilot Tips for This Phase
+## Copilot Tips for This Stage
 
 - Describe your UI in comments before writing code -- Copilot will generate component structures.
 - Ask Copilot: *"Create a form with a dropdown for airports and days, with a submit button"*.
@@ -44,4 +44,4 @@ Create a user-facing web application that allows someone to select a day of the 
 
 ---
 
-Previous: [Phase 2: Build the Prediction API](phase-2-prediction-api.md) | Next: [Phase 4: Polish and Advanced Features](phase-4-polish.md)
+Previous: [Stage 2: Build the Prediction API](stage-2-prediction-api.md) | Next: [Stage 4: Polish and Advanced Features](stage-4-polish.md)

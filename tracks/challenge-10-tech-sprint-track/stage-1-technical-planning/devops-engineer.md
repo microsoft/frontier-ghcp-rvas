@@ -1,4 +1,4 @@
-# Phase 1: Technical Planning -- DevOps Engineer Tasks
+# Stage 1: Technical Planning -- DevOps Engineer Tasks
 
 **Time: ~1 hour setup + 30 min planning**
 
@@ -30,4 +30,4 @@ Plan to actually consult the infra-engineer agent on judgment calls like resourc
 
 ---
 
-Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- DevOps Engineer Tasks](../phase-2-sprint-1-build/devops-engineer.md)
+Previous: [Stages](../stages.md) | Next: [Stage 2: Sprint 1 -- DevOps Engineer Tasks](../stage-2-sprint-1-build/devops-engineer.md)

@@ -1,4 +1,4 @@
-# Phase 3: Sprint 2 -- Business Analyst Tasks
+# Stage 3: Sprint 2 -- Business Analyst Tasks
 
 **Time: Full 2 hours**
 
@@ -23,4 +23,4 @@ If your Product and Analysis Agent produces generic acceptance checks or poorly 
 
 ---
 
-Previous: [Phase 2: Sprint 1 -- Business Analyst Tasks](../phase-2-sprint-1-build/business-analyst.md) | Next: [Phase 4: Ship and Demo -- Business Analyst Tasks](../phase-4-deploy-demo/business-analyst.md)
+Previous: [Stage 2: Sprint 1 -- Business Analyst Tasks](../stage-2-sprint-1-build/business-analyst.md) | Next: [Stage 4: Ship and Demo -- Business Analyst Tasks](../stage-4-deploy-demo/business-analyst.md)

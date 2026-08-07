@@ -1,4 +1,4 @@
-# Phase 2: Architecture Diagrams
+# Stage 2: Architecture Diagrams
 
 **Duration:** 1-1.5 hours
 
@@ -28,4 +28,4 @@ If your diagram agent or documentation skill misses a relationship or the restoc
 
 ---
 
-Previous: [Phase 1: Javadoc Generation](phase-1-javadoc.md) | Next: [Phase 3: Changelog and Release Notes](phase-3-changelog.md)
+Previous: [Stage 1: Javadoc Generation](stage-1-javadoc.md) | Next: [Stage 3: Changelog and Release Notes](stage-3-changelog.md)

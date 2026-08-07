@@ -1,6 +1,6 @@
 # Drift Incident Evidence
 
-Use this evidence during Phase 5. Treat it like a ticket from operations, not a solved problem.
+Use this evidence during Stage 5. Treat it like a ticket from operations, not a solved problem.
 
 ## Incident Snapshot
 

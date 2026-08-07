@@ -1,4 +1,4 @@
-# Phase 4: Ship and Demo -- DevOps Engineer Tasks
+# Stage 4: Ship and Demo -- DevOps Engineer Tasks
 
 **Time: ~1 hour tasks + demo/retro**
 
@@ -21,4 +21,4 @@
 
 ---
 
-Previous: [Phase 3: Sprint 2 -- DevOps Engineer Tasks](../phase-3-sprint-2-integration/devops-engineer.md) | Next: [Phase 5: Agentic Workflows -- DevOps Engineer Tasks](../phase-5-agentic-workflows/devops-engineer.md)
+Previous: [Stage 3: Sprint 2 -- DevOps Engineer Tasks](../stage-3-sprint-2-integration/devops-engineer.md) | Next: [Stage 5: Agentic Workflows -- DevOps Engineer Tasks](../stage-5-agentic-workflows/devops-engineer.md)

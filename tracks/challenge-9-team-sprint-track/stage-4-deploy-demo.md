@@ -1,4 +1,4 @@
-# Phase 4: Ship and Demo
+# Stage 4: Ship and Demo
 
 **Duration:** 1.5 hours
 **Focus:** Production deployment, final testing, demo, retrospective
@@ -9,14 +9,14 @@ The final stretch. The team polishes the application, runs final tests on the pr
 
 Find your role and follow the link for your detailed task list:
 
-| Role | Focus This Phase | Key Deliverable |
+| Role | Focus This Stage | Key Deliverable |
 |------|-----------------|-----------------|
-| [Product Owner](phase-4-deploy-demo/product-owner.md) | Final acceptance, release notes, lead demo, run retro | Demo delivered, retrospective completed |
-| [Backend Developer](phase-4-deploy-demo/backend-developer.md) | Critical bug fixes, performance check, deployment help | API stable and ready for demo |
-| [Frontend Developer](phase-4-deploy-demo/frontend-developer.md) | Critical UI fixes, visual polish | UI polished for demo |
-| [QA Engineer](phase-4-deploy-demo/qa-engineer.md) | Final regression, production smoke test, test report | Test results ready for demo |
-| [DevOps Engineer](phase-4-deploy-demo/devops-engineer.md) | Verify environment, write docs, demo contribution | Codespace environment documented and running |
-| [Business Analyst](phase-4-deploy-demo/business-analyst.md) | Final walkthrough, known issues, retro notes *(optional role)* | Known issues finalized |
+| [Product Owner](stage-4-deploy-demo/product-owner.md) | Final acceptance, release notes, lead demo, run retro | Demo delivered, retrospective completed |
+| [Backend Developer](stage-4-deploy-demo/backend-developer.md) | Critical bug fixes, performance check, deployment help | API stable and ready for demo |
+| [Frontend Developer](stage-4-deploy-demo/frontend-developer.md) | Critical UI fixes, visual polish | UI polished for demo |
+| [QA Engineer](stage-4-deploy-demo/qa-engineer.md) | Final regression, production smoke test, test report | Test results ready for demo |
+| [DevOps Engineer](stage-4-deploy-demo/devops-engineer.md) | Verify environment, write docs, demo contribution | Codespace environment documented and running |
+| [Business Analyst](stage-4-deploy-demo/business-analyst.md) | Final walkthrough, known issues, retro notes *(optional role)* | Known issues finalized |
 
 ## Demo Format (last 20-30 minutes)
 
@@ -53,8 +53,8 @@ The team is done when:
 - [ ] Demo has been delivered
 - [ ] Retrospective has been discussed
 
-There is no next phase. The sprint is over. If time allows, continue to [Phase 5: Agentic Workflows](phase-5-agentic-workflows.md) to add AI-powered repository automation.
+There is no next stage. The sprint is over. If time allows, continue to [Stage 5: Agentic Workflows](stage-5-agentic-workflows.md) to add AI-powered repository automation.
 
 ---
 
-Previous: [Phase 3: Sprint 2 -- Integration and Polish](phase-3-sprint-2-integration.md) | Next: [Phase 5: Agentic Workflows](phase-5-agentic-workflows.md)
+Previous: [Stage 3: Sprint 2 -- Integration and Polish](stage-3-sprint-2-integration.md) | Next: [Stage 5: Agentic Workflows](stage-5-agentic-workflows.md)

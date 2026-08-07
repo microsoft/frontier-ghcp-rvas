@@ -4,9 +4,9 @@ Pick a challenge track that matches the work you want to deliver, or use the **[
 
 The **22 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
-Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages, phases, and role pages.
+Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages and role pages.
 
-Each track starts with an overview page for audience, setup, tips, and resources. Its linked contents page lists the stages or phases and any role-specific paths. Stage and phase pages include previous and next links for reading the track on GitHub.
+Each track starts with an overview page for audience, setup, tips, and resources. Its linked contents page lists the stages and any role-specific paths. Stage pages include previous and next links for reading the track on GitHub.
 
 Sessions use a customization trio: repository instructions, custom agents, and
 custom skills tailored to each challenge.
@@ -381,7 +381,7 @@ Provision and harden Azure infrastructure baselines with IaC, identity, and poli
 
 **Best for:** Platform engineers, cloud engineers, and developers who need to build and review Azure infrastructure in Terraform
 
-**Focus:** Building an Azure Terraform foundation across 5 phases -- bootstrap remote state and naming rules, provision platform around Container Apps, wire managed identity and Key Vault, refactor into reusable modules, add CI guardrails and drift response.
+**Focus:** Building an Azure Terraform foundation across 5 stages -- bootstrap remote state and naming rules, provision platform around Container Apps, wire managed identity and Key Vault, refactor into reusable modules, add CI guardrails and drift response.
 
 **Your Challenge:** Challenge 21 - Azure Terraform Foundation
 

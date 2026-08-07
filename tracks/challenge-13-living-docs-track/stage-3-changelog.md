@@ -1,4 +1,4 @@
-# Phase 3: Changelog and Release Notes
+# Stage 3: Changelog and Release Notes
 
 **Duration:** 1-1.5 hours
 
@@ -31,4 +31,4 @@
 
 ---
 
-Previous: [Phase 2: Architecture Diagrams](phase-2-diagrams.md) | Next: [Phase 4: PR Documentation Agent](phase-4-pr-agent.md)
+Previous: [Stage 2: Architecture Diagrams](stage-2-diagrams.md) | Next: [Stage 4: PR Documentation Agent](stage-4-pr-agent.md)

@@ -1,4 +1,4 @@
-# Phase 1: Discovery and Planning -- Product Owner Tasks
+# Stage 1: Discovery and Planning -- Product Owner Tasks
 
 **Time: Full 1.5 hours**
 
@@ -52,4 +52,4 @@ Before you start writing stories, put the Product and Analysis Agent from your s
 
 ---
 
-Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- Product Owner Tasks](../phase-2-sprint-1-build/product-owner.md)
+Previous: [Stages](../stages.md) | Next: [Stage 2: Sprint 1 -- Product Owner Tasks](../stage-2-sprint-1-build/product-owner.md)

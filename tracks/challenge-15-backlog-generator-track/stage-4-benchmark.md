@@ -1,4 +1,4 @@
-# Phase 4: Consistency Benchmark
+# Stage 4: Consistency Benchmark
 
 **Duration:** 1-1.5 hours
 
@@ -26,7 +26,7 @@
    - Are open questions flagged?
    - Are non-functional requirements captured?
 
-4. **Run the refinement agent on all three.** Use the agent from Phase 2 to review all three generated backlogs. Compare the gap analysis across specs -- does the agent catch similar types of gaps consistently?
+4. **Run the refinement agent on all three.** Use the agent from Stage 2 to review all three generated backlogs. Compare the gap analysis across specs -- does the agent catch similar types of gaps consistently?
 
 5. **Multi-person test (if your team has multiple people).** Have two team members independently run the same prompt on the same spec. Compare their outputs. High consistency means your prompt is deterministic enough to reduce person-to-person variation.
 
@@ -42,4 +42,4 @@
 
 ---
 
-Previous: [Phase 3: MCP Integration](phase-3-mcp.md)
+Previous: [Stage 3: MCP Integration](stage-3-mcp.md)

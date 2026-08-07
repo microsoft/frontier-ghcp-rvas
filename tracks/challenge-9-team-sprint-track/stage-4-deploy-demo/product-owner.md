@@ -1,4 +1,4 @@
-# Phase 4: Ship and Demo -- Product Owner Tasks
+# Stage 4: Ship and Demo -- Product Owner Tasks
 
 **Time: Full 1.5 hours**
 
@@ -31,4 +31,4 @@
 
 ---
 
-Previous: [Phase 3: Sprint 2 -- Product Owner Tasks](../phase-3-sprint-2-integration/product-owner.md) | Next: [Phase 5: Agentic Workflows -- Product Owner Tasks](../phase-5-agentic-workflows/product-owner.md)
+Previous: [Stage 3: Sprint 2 -- Product Owner Tasks](../stage-3-sprint-2-integration/product-owner.md) | Next: [Stage 5: Agentic Workflows -- Product Owner Tasks](../stage-5-agentic-workflows/product-owner.md)

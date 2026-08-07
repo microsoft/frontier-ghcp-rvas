@@ -1,4 +1,4 @@
-# Phase 3: Troubleshooting Aids
+# Stage 3: Troubleshooting Aids
 
 **Duration:** 1-1.5 hours
 
@@ -33,4 +33,4 @@
 
 ---
 
-Previous: [Phase 2: Incident Routing](phase-2-routing.md) | Next: [Phase 4: Deployment Automation](phase-4-deployment.md)
+Previous: [Stage 2: Incident Routing](stage-2-routing.md) | Next: [Stage 4: Deployment Automation](stage-4-deployment.md)

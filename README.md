@@ -54,8 +54,8 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 
 Coaches who need a focused workshop path can use the site's Challenge Set Builder and Learning Paths pages to select challenges and generate a single shareable student URL.
 
-Each track provides its own stage or phase progression with specific guidance,
-tips, and learning objectives.
+Each track provides its own stage progression with specific guidance, tips, and
+learning objectives.
 
 The documentation site also groups challenges into nine enterprise Role
 Collections. Use the **Roles** page to find relevant work for product and
@@ -89,10 +89,10 @@ are not assigned to any role.
 Each challenge is published as a set of pages rather than one concatenated guide:
 
 - The track file becomes the main overview.
-- The committed stages or phases contents file becomes the contents page.
-- Each stage or phase has its own page.
+- The committed `stages.md` file becomes the contents page.
+- Each stage has its own page.
 - Challenges with role-specific instructions include those pages beneath their
-  parent stage or phase.
+  parent stage.
 
 The challenge page shows this structure in a right-side **Challenge pages**
 menu. Every page has a direct URL in the form
@@ -484,7 +484,7 @@ Take three inherited PowerShell scripts from the fictional Contoso IT team -- a 
 **Skills**: Terraform, Azure networking, managed identity, Key Vault, GitHub Actions
 **Copilot Focus**: Infrastructure review, plan explanation, module extraction, CI workflow generation
 
-Build an Azure Terraform foundation across 5 phases: bootstrap remote state and naming rules, provision a small Azure platform around Container Apps, wire managed identity and Key Vault, refactor the configuration into reusable modules for multiple environments, then add CI guardrails and a drift response runbook.
+Build an Azure Terraform foundation across 5 stages: bootstrap remote state and naming rules, provision a small Azure platform around Container Apps, wire managed identity and Key Vault, refactor the configuration into reusable modules for multiple environments, then add CI guardrails and a drift response runbook.
 
 ---
 

@@ -1,9 +1,9 @@
-# Phase 1: Discovery and Sprint Planning
+# Stage 1: Discovery and Sprint Planning
 
 **Duration:** 1.5 hours
 **Focus:** Product ideation, backlog creation, tooling setup, sprint planning
 
-This phase sets the foundation. The PO drives ideation while everyone else sets up their development environment and tooling. The phase ends with a sprint planning session where the team commits to Sprint 1 scope.
+This stage sets the foundation. The PO drives ideation while everyone else sets up their development environment and tooling. The stage ends with a sprint planning session where the team commits to Sprint 1 scope.
 
 Before role setup begins, make sure the team's shared `.github/copilot-instructions.md` actually captures the CityPulse context everyone needs, and agree together on one shared custom skill, like the sprint board sync or Discovery Handoff sequence, so the whole team works from the same repeatable process instead of everyone improvising their own.
 
@@ -13,12 +13,12 @@ Find your role and follow the link for your detailed task list:
 
 | Role | Time | Summary |
 |------|------|---------|
-| [Product Owner](phase-1-discovery-planning/product-owner.md) | Full 1.5 hours | Prototype with GitHub Spark, write stories, create GitHub Issues, lead sprint planning |
-| [Backend Developer](phase-1-discovery-planning/backend-developer.md) | ~1 hr setup + 30 min planning | Scaffold backend, draft API spec, write custom instructions |
-| [Frontend Developer](phase-1-discovery-planning/frontend-developer.md) | ~1 hr setup + 30 min planning | Scaffold frontend, review Spark prototype, coordinate with backend |
-| [QA Engineer](phase-1-discovery-planning/qa-engineer.md) | ~1 hr setup + 30 min planning | Set up Playwright, write test plan, define test data needs |
-| [DevOps Engineer](phase-1-discovery-planning/devops-engineer.md) | ~1 hr setup + 30 min planning | Devcontainer config, CI pipeline, branching strategy |
-| [Business Analyst](phase-1-discovery-planning/business-analyst.md) | ~1 hr + 30 min planning | Refine acceptance criteria, data model, dashboard metrics *(optional role)* |
+| [Product Owner](stage-1-discovery-planning/product-owner.md) | Full 1.5 hours | Prototype with GitHub Spark, write stories, create GitHub Issues, lead sprint planning |
+| [Backend Developer](stage-1-discovery-planning/backend-developer.md) | ~1 hr setup + 30 min planning | Scaffold backend, draft API spec, write custom instructions |
+| [Frontend Developer](stage-1-discovery-planning/frontend-developer.md) | ~1 hr setup + 30 min planning | Scaffold frontend, review Spark prototype, coordinate with backend |
+| [QA Engineer](stage-1-discovery-planning/qa-engineer.md) | ~1 hr setup + 30 min planning | Set up Playwright, write test plan, define test data needs |
+| [DevOps Engineer](stage-1-discovery-planning/devops-engineer.md) | ~1 hr setup + 30 min planning | Devcontainer config, CI pipeline, branching strategy |
+| [Business Analyst](stage-1-discovery-planning/business-analyst.md) | ~1 hr + 30 min planning | Refine acceptance criteria, data model, dashboard metrics *(optional role)* |
 
 ## The Spark Handover
 
@@ -41,4 +41,4 @@ After planning, everyone should have clear tasks and an unblocked path into Spri
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Sprint 1 -- Core Features](phase-2-sprint-1-build.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Sprint 1 -- Core Features](stage-2-sprint-1-build.md)

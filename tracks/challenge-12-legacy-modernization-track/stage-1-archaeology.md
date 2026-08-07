@@ -1,4 +1,4 @@
-# Phase 1: Code Archaeology
+# Stage 1: Code Archaeology
 
 **Duration:** 1.5-2 hours
 
@@ -33,4 +33,4 @@ Before you open `AccountController.java`, use the full setup: keep your reposito
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Security and Debt Audit](phase-2-audit.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Security and Debt Audit](stage-2-audit.md)

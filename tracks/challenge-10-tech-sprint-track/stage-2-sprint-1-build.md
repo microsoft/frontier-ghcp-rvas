@@ -1,4 +1,4 @@
-# Phase 2: Sprint 1 -- Core Features
+# Stage 2: Sprint 1 -- Core Features
 
 **Duration:** 3 hours
 **Focus:** Parallel development of core features -- API, UI, tests, and infrastructure
@@ -11,10 +11,10 @@ Find your role and follow the link for your detailed task list:
 
 | Role | What You Build | Key Deliverable |
 |------|---------------|-----------------|
-| [Backend Developer](phase-2-sprint-1-build/backend-developer.md) | Trails CRUD API, Condition Reports API, seed data | Working endpoints testable with curl |
-| [Frontend Developer](phase-2-sprint-1-build/frontend-developer.md) | Trail list, trail detail, condition report form, navigation | Pages rendering with data |
-| [QA Engineer](phase-2-sprint-1-build/qa-engineer.md) | E2E tests, API tests, exploratory testing, bug reports | Test suite and filed bugs |
-| [DevOps Engineer](phase-2-sprint-1-build/devops-engineer.md) | Environment setup, process scripts, CI | Full stack running in the Codespace |
+| [Backend Developer](stage-2-sprint-1-build/backend-developer.md) | Trails CRUD API, Condition Reports API, seed data | Working endpoints testable with curl |
+| [Frontend Developer](stage-2-sprint-1-build/frontend-developer.md) | Trail list, trail detail, condition report form, navigation | Pages rendering with data |
+| [QA Engineer](stage-2-sprint-1-build/qa-engineer.md) | E2E tests, API tests, exploratory testing, bug reports | Test suite and filed bugs |
+| [DevOps Engineer](stage-2-sprint-1-build/devops-engineer.md) | Environment setup, process scripts, CI | Full stack running in the Codespace |
 
 ## Sync Point: Mid-Sprint Standup (at ~3:00, roughly 1.5 hours into Sprint 1)
 
@@ -55,4 +55,4 @@ If anyone is blocked, resolve it immediately. If the frontend developer needs th
 
 ---
 
-Previous: [Phase 1: Technical Planning](phase-1-technical-planning.md) | Next: [Phase 3: Sprint 2 -- Integration and Polish](phase-3-sprint-2-integration.md)
+Previous: [Stage 1: Technical Planning](stage-1-technical-planning.md) | Next: [Stage 3: Sprint 2 -- Integration and Polish](stage-3-sprint-2-integration.md)

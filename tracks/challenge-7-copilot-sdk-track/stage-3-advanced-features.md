@@ -1,8 +1,8 @@
-# Phase 3: Advanced Features
+# Stage 3: Advanced Features
 
 **Estimated:** 2-3 hours
 
-The agent can now fetch PRs and generate a changelog. In this phase you add MCP integration so it can read repository files, define a constrained release-manager persona, and give it write tools to actually publish the release.
+The agent can now fetch PRs and generate a changelog. In this stage you add MCP integration so it can read repository files, define a constrained release-manager persona, and give it write tools to actually publish the release.
 
 ## Tasks
 
@@ -45,4 +45,4 @@ The agent can now fetch PRs and generate a changelog. In this phase you add MCP 
 
 ---
 
-Previous: [Phase 2: Core Features](phase-2-core-features.md) | Next: [Phase 4: Production-Ready](phase-4-production.md)
+Previous: [Stage 2: Core Features](stage-2-core-features.md) | Next: [Stage 4: Production-Ready](stage-4-production.md)

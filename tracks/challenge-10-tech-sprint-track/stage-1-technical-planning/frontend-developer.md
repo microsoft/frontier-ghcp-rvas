@@ -1,4 +1,4 @@
-# Phase 1: Technical Planning -- Frontend Developer Tasks
+# Stage 1: Technical Planning -- Frontend Developer Tasks
 
 **Time: ~1 hour setup + 30 min planning**
 
@@ -38,4 +38,4 @@ Plan to actually use the ui-builder agent for the component-structure judgment c
 
 ---
 
-Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- Frontend Developer Tasks](../phase-2-sprint-1-build/frontend-developer.md)
+Previous: [Stages](../stages.md) | Next: [Stage 2: Sprint 1 -- Frontend Developer Tasks](../stage-2-sprint-1-build/frontend-developer.md)

@@ -1,13 +1,13 @@
-# Phase 5: Agentic Workflows
+# Stage 5: Agentic Workflows
 
 **Duration:** 1.5 hours
 **Focus:** Add GitHub Agentic Workflows to your deployed repository for continuous AI-driven maintenance
 
-> This phase requires your code to be pushed to a GitHub repository with GitHub Actions enabled. Agentic workflows run as GitHub Actions workflows -- they cannot run locally.
+> This stage requires your code to be pushed to a GitHub repository with GitHub Actions enabled. Agentic workflows run as GitHub Actions workflows -- they cannot run locally.
 
 Your application is deployed and working. Now you turn the repository into a self-maintaining project. GitHub Agentic Workflows let you describe automation in plain Markdown, and a coding agent executes it inside GitHub Actions with read-only permissions and safe outputs.
 
-By the end of this phase, your repository will have at least three agentic workflows running on a schedule or triggered by events -- triaging issues, monitoring CI health, and keeping documentation up to date.
+By the end of this stage, your repository will have at least three agentic workflows running on a schedule or triggered by events -- triaging issues, monitoring CI health, and keeping documentation up to date.
 
 ## Before You Start
 
@@ -30,14 +30,14 @@ By the end of this phase, your repository will have at least three agentic workf
 
 Find your role and follow the link for your detailed task list:
 
-| Role | Focus This Phase | Key Deliverable |
+| Role | Focus This Stage | Key Deliverable |
 |------|-----------------|-----------------|
-| [Product Owner](phase-5-agentic-workflows/product-owner.md) | Issue triage workflow, daily status report | Automated triage and status reporting active |
-| [Backend Developer](phase-5-agentic-workflows/backend-developer.md) | Code quality workflows, test improver | Code simplifier and test improver running |
-| [Frontend Developer](phase-5-agentic-workflows/frontend-developer.md) | Documentation updater, accessibility review | Auto-documentation and accessibility checks active |
-| [QA Engineer](phase-5-agentic-workflows/qa-engineer.md) | CI Doctor, daily QA workflow | CI failure investigation and QA automation active |
-| [DevOps Engineer](phase-5-agentic-workflows/devops-engineer.md) | Workflow security, permissions, safe outputs review | All workflows passing security review |
-| [Business Analyst](phase-5-agentic-workflows/business-analyst.md) | Weekly summary, discussion task miner *(optional role)* | Weekly reporting and task extraction active |
+| [Product Owner](stage-5-agentic-workflows/product-owner.md) | Issue triage workflow, daily status report | Automated triage and status reporting active |
+| [Backend Developer](stage-5-agentic-workflows/backend-developer.md) | Code quality workflows, test improver | Code simplifier and test improver running |
+| [Frontend Developer](stage-5-agentic-workflows/frontend-developer.md) | Documentation updater, accessibility review | Auto-documentation and accessibility checks active |
+| [QA Engineer](stage-5-agentic-workflows/qa-engineer.md) | CI Doctor, daily QA workflow | CI failure investigation and QA automation active |
+| [DevOps Engineer](stage-5-agentic-workflows/devops-engineer.md) | Workflow security, permissions, safe outputs review | All workflows passing security review |
+| [Business Analyst](stage-5-agentic-workflows/business-analyst.md) | Weekly summary, discussion task miner *(optional role)* | Weekly reporting and task extraction active |
 
 ## How Agentic Workflows Work
 
@@ -97,4 +97,4 @@ The team is done when:
 
 ---
 
-Previous: [Phase 4: Ship and Demo](phase-4-deploy-demo.md)
+Previous: [Stage 4: Ship and Demo](stage-4-deploy-demo.md)

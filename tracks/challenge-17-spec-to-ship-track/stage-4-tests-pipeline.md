@@ -1,4 +1,4 @@
-# Phase 4: Test Specs and Pipeline
+# Stage 4: Test Specs and Pipeline
 
 **Duration:** 1.5-2 hours
 
@@ -7,13 +7,13 @@
 ## Tasks
 
 1. **Build a test spec agent.** Create `.github/agents/test-spec-writer.agent.md` that:
-   - Takes user stories (from Phase 1) as input
+   - Takes user stories (from Stage 1) as input
    - Produces a test specification document for each story
    - Each test spec includes: test ID, description, preconditions, test steps, expected results, and priority
    - Covers happy path, alternative flows, edge cases, and negative tests
    - Groups tests by story and epic for traceability
 
-2. **Generate test specs.** Run the agent on the stories from your Phase 1 backlog. Focus on at least 3 stories:
+2. **Generate test specs.** Run the agent on the stories from your Stage 1 backlog. Focus on at least 3 stories:
    - A subscription plan change story (covers proration logic)
    - An invoice generation story (covers overage calculation)
    - A payment method management story (covers the "can't delete the last one" constraint)
@@ -27,11 +27,11 @@
 4. **Create a CI pipeline.** Create `.github/workflows/ci.yml` that:
    - Runs on pull requests and pushes to main
    - Installs dependencies
-   - Runs the unit tests from Phase 3
+   - Runs the unit tests from Stage 3
    - Reports test results
    - Caches node_modules
 
-5. **Save all prompts and agents.** Verify that all the artifacts you created across all 4 phases are saved in `.github/prompts/` and `.github/agents/`. These are the reusable tools your team takes home.
+5. **Save all prompts and agents.** Verify that all the artifacts you created across all 4 stages are saved in `.github/prompts/` and `.github/agents/`. These are the reusable tools your team takes home.
 
 ## Verification
 
@@ -43,4 +43,4 @@
 
 ---
 
-Previous: [Phase 3: Code Generation](phase-3-code.md)
+Previous: [Stage 3: Code Generation](stage-3-code.md)

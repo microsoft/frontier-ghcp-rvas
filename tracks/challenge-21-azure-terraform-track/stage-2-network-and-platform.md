@@ -1,4 +1,4 @@
-# Phase 2: Network and App Platform
+# Stage 2: Network and App Platform
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
@@ -15,7 +15,7 @@ Choose a network shape that fits a small internal app and write down what you ar
 1. Provision the core resource group and virtual network layout for the application environment. Include at least separate subnets for the application platform and private services.
 2. Add Log Analytics and any supporting monitoring resources needed for platform diagnostics.
 3. Provision an Azure Container Apps environment and the supporting resources it depends on. Define the key outputs another engineer would need for deployment.
-4. Create or update `docs/plan-review.md` with a plan summary for this phase. Include expected creates, anything that would replace an existing resource, and one network trade-off you made.
+4. Create or update `docs/plan-review.md` with a plan summary for this stage. Include expected creates, anything that would replace an existing resource, and one network trade-off you made.
 5. Review the dependency chain with Copilot and remove any accidental ordering issues or unnecessary explicit `depends_on` blocks.
 
 ## Review Gate
@@ -24,7 +24,7 @@ Run a plan before applying. Ask Copilot to explain the plan as if it were review
 
 ## Verification
 
-- `terraform plan` shows the expected platform resources without replacement churn from Phase 1
+- `terraform plan` shows the expected platform resources without replacement churn from Stage 1
 - The network layout is readable and separated by purpose
 - Outputs expose the resource group, region, and application platform identifiers you would need later
 - Monitoring resources are wired into the platform instead of existing as dead resources
@@ -36,4 +36,4 @@ Copilot can generate the basic Azure resource shapes quickly. You still need to 
 
 ---
 
-Previous: [Phase 1: State and Naming Baseline](phase-1-state-and-naming.md) | Next: [Phase 3: Identity and Secrets](phase-3-identity-and-secrets.md)
+Previous: [Stage 1: State and Naming Baseline](stage-1-state-and-naming.md) | Next: [Stage 3: Identity and Secrets](stage-3-identity-and-secrets.md)

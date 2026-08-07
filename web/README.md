@@ -24,10 +24,9 @@ The `assets/data/` directory is generated and git-ignored.
 A challenge is published as a page set:
 
 1. The main track file is the overview.
-2. The committed stages or phases contents file is the contents page.
-3. Each stage or phase is a dedicated page.
-4. Role-specific pages, where present, are nested under their parent stage or
-   phase.
+2. The committed `stages.md` file is the contents page.
+3. Each stage is a dedicated page.
+4. Role-specific pages, where present, are nested under their parent stage.
 
 The right-side **Challenge pages** menu reflects this hierarchy. Pages can be
 opened directly with `challenge.html?id=<id>&page=<page-id>`. If `page` is

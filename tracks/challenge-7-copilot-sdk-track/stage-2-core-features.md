@@ -1,4 +1,4 @@
-# Phase 2: Core Features
+# Stage 2: Core Features
 
 **Estimated:** 3-4 hours
 
@@ -41,4 +41,4 @@ If ship-it's categorization is generic or mishandles ambiguous PRs, refine the r
 
 ---
 
-Previous: [Phase 1: Foundation](phase-1-foundation.md) | Next: [Phase 3: Advanced Features](phase-3-advanced-features.md)
+Previous: [Stage 1: Foundation](stage-1-foundation.md) | Next: [Stage 3: Advanced Features](stage-3-advanced-features.md)

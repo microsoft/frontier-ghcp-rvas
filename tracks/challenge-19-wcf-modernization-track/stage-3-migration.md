@@ -1,4 +1,4 @@
-# Phase 3: REST API Migration
+# Stage 3: REST API Migration
 
 **Duration:** 2-3 hours
 
@@ -6,7 +6,7 @@
 
 ## Objective
 
-Rewrite the Meridian Savings Bank service as a REST API using ASP.NET Core Web API (.NET 8). The new API must match the behavior captured in the Phase 2 tests. You are not wrapping the WCF service -- you are porting the business logic into modern patterns.
+Rewrite the Meridian Savings Bank service as a REST API using ASP.NET Core Web API (.NET 8). The new API must match the behavior captured in the Stage 2 tests. You are not wrapping the WCF service -- you are porting the business logic into modern patterns.
 
 Decide up front whether to fix the known bugs (see `docs/system-context.md`) as part of migration, or preserve them to match the characterization tests exactly. Either choice is valid -- but make it deliberately and document it.
 
@@ -17,7 +17,7 @@ Decide up front whether to fix the known bugs (see `docs/system-context.md`) as 
    - HTTP verbs per operation
    - Request body schemas (translated from `DataContract` types to plain JSON objects)
    - Response schemas
-   - HTTP status codes for each `ErrorCode` (from your fault catalog in Phase 1)
+   - HTTP status codes for each `ErrorCode` (from your fault catalog in Stage 1)
    - A decision on whether to use controllers or minimal APIs
 
 2. **Scaffold the ASP.NET Core Web API project.**
@@ -58,7 +58,7 @@ Decide up front whether to fix the known bugs (see `docs/system-context.md`) as 
    - Preserve all validation rules, calculations, and error conditions
    - Return the appropriate HTTP status code for each error condition
 
-8. **Test two endpoints manually** to verify the API is working before moving to Phase 4:
+8. **Test two endpoints manually** to verify the API is working before moving to Stage 4:
    - Fetch customer 1001's accounts
    - Attempt to withdraw more than the savings account balance
 
@@ -85,11 +85,11 @@ Decide up front whether to fix the known bugs (see `docs/system-context.md`) as 
 - [ ] All three controllers implemented (`AccountController`, `LoanController`, `TransactionController`)
 - [ ] All WCF operations have a corresponding REST endpoint
 - [ ] Business logic ported: validation rules, overdraft logic, interest calculation, amortization formula
-- [ ] HTTP status codes match the fault catalog from Phase 1
+- [ ] HTTP status codes match the fault catalog from Stage 1
 - [ ] Error responses return JSON with at minimum `errorCode` and `message` fields
 - [ ] Two endpoints manually tested and working
 - [ ] Swagger UI accessible at `/swagger`
 
 ---
 
-Previous: [Phase 2: Characterization Tests](phase-2-testing.md) | Next: [Phase 4: Integration and Hardening](phase-4-hardening.md)
+Previous: [Stage 2: Characterization Tests](stage-2-testing.md) | Next: [Stage 4: Integration and Hardening](stage-4-hardening.md)

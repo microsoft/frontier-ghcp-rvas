@@ -1,4 +1,4 @@
-# Phase 1: Discovery and Planning -- Business Analyst Tasks
+# Stage 1: Discovery and Planning -- Business Analyst Tasks
 
 **Time: ~1 hour supporting PO + 30 min planning**
 
@@ -24,4 +24,4 @@ Before tightening acceptance criteria, use your Product and Analysis Agent to sp
 
 ---
 
-Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- Business Analyst Tasks](../phase-2-sprint-1-build/business-analyst.md)
+Previous: [Stages](../stages.md) | Next: [Stage 2: Sprint 1 -- Business Analyst Tasks](../stage-2-sprint-1-build/business-analyst.md)

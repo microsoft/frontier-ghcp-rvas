@@ -1,4 +1,4 @@
-# Phase 5: Agentic Workflows -- Frontend Developer Tasks
+# Stage 5: Agentic Workflows -- Frontend Developer Tasks
 
 **Time: ~1 hour**
 
@@ -36,4 +36,4 @@
 
 ---
 
-Previous: [Phase 4: Ship and Demo -- Frontend Developer Tasks](../phase-4-deploy-demo/frontend-developer.md)
+Previous: [Stage 4: Ship and Demo -- Frontend Developer Tasks](../stage-4-deploy-demo/frontend-developer.md)

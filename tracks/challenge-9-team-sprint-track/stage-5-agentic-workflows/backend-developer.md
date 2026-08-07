@@ -1,4 +1,4 @@
-# Phase 5: Agentic Workflows -- Backend Developer Tasks
+# Stage 5: Agentic Workflows -- Backend Developer Tasks
 
 **Time: ~1 hour**
 
@@ -39,4 +39,4 @@
 
 ---
 
-Previous: [Phase 4: Ship and Demo -- Backend Developer Tasks](../phase-4-deploy-demo/backend-developer.md)
+Previous: [Stage 4: Ship and Demo -- Backend Developer Tasks](../stage-4-deploy-demo/backend-developer.md)

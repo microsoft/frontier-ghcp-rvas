@@ -1,4 +1,4 @@
-# Phase 2: Build the Prediction API
+# Stage 2: Build the Prediction API
 
 **Duration:** 2-3 hours
 **Focus:** REST API, Flask or FastAPI, model serving
@@ -35,17 +35,17 @@ Create a REST API that serves the trained model and the list of airports so the 
 
 5. **Error handling** -- Return meaningful error messages with appropriate HTTP status codes.
 
-If your API agent or wiring skill produces a generic endpoint contract with wrong fields or missing validation, revise that customization before wiring the frontend in Phase 3.
+If your API agent or wiring skill produces a generic endpoint contract with wrong fields or missing validation, revise that customization before wiring the frontend in Stage 3.
 
 ## Getting Started
 
 1. Navigate to `challenges/challenge-8-flight-delay/server/`.
 2. Open `app.py` -- it contains a description of what to build.
-3. Copy your `model.pkl` and `airports.csv` (from Phase 1) into the `server/` folder.
+3. Copy your `model.pkl` and `airports.csv` (from Stage 1) into the `server/` folder.
 4. Install dependencies: `pip install -r requirements.txt`.
 5. Use Copilot to implement the endpoints.
 
-## Copilot Tips for This Phase
+## Copilot Tips for This Stage
 
 - Start the file with a multi-line comment describing your API -- Copilot uses this to generate endpoint code.
 - Ask Copilot: *"Create a Flask API that loads a scikit-learn model and serves predictions"*.
@@ -63,4 +63,4 @@ If your API agent or wiring skill produces a generic endpoint contract with wron
 
 ---
 
-Previous: [Phase 1: Data Exploration and Model Building](phase-1-data-exploration.md) | Next: [Phase 3: Build the Frontend](phase-3-frontend.md)
+Previous: [Stage 1: Data Exploration and Model Building](stage-1-data-exploration.md) | Next: [Stage 3: Build the Frontend](stage-3-frontend.md)

@@ -59,7 +59,7 @@ Your job is to make the smallest responsible Azure baseline and explain the trad
 Create these files under `challenges/challenge-21-azure-terraform/docs/` as you work:
 
 - `platform-notes.md` -- state bootstrap order, naming rules, tags, and open assumptions
-- `plan-review.md` -- plan review notes for at least two phases, including one risk you rejected
+- `plan-review.md` -- plan review notes for at least two stages, including one risk you rejected
 - `identity-review.md` -- managed identity and Key Vault access decisions
 - `environment-promotion.md` -- dev-to-prod differences and approval rules
 - `drift-response.md` -- incident steps for drift, failed apply, import, and rollback decisions
@@ -112,4 +112,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-21-azure-terraform-track/phases.md)
+Next: [Stages](challenge-21-azure-terraform-track/stages.md)

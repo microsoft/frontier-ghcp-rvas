@@ -1,6 +1,6 @@
 # Deployment Notes
 
-Use this file during Phase 5 to document the deployment workflow, approval path, and rollback approach for the Azure Terraform stack.
+Use this file during Stage 5 to document the deployment workflow, approval path, and rollback approach for the Azure Terraform stack.
 
 ## Checks Before Plan Review
 

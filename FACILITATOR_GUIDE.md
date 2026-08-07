@@ -331,7 +331,7 @@ Around lunch, gather everyone:
 **Facilitation tips:**
 
 - Requires a team of 4-6 people, not for solo participants
-- The PO drives the first phase; make sure they have GitHub Spark access
+- The PO drives the first stage; make sure they have GitHub Spark access
 - Help the team stick to timeboxes for sprint planning
 - Intervene if the team skips sprint planning or standup sync points
 

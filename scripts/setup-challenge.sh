@@ -30,7 +30,7 @@ source "$REPO_ROOT/scripts/_clean-common.sh"
 # Each devcontainer folder name maps to:
 #   CHALLENGE_DIR   -- folder under challenges/
 #   TRACK_FILE_NAME -- base name for the .md file under tracks/
-#   TRACK_DIR_NAME  -- subfolder under tracks/ for the phase docs
+#   TRACK_DIR_NAME  -- subfolder under tracks/ for the stage docs
 #
 # Entries where the devcontainer name differs from the challenge folder
 # or where the track name follows a different convention are spelled out.

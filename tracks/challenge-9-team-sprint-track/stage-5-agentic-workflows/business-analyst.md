@@ -1,4 +1,4 @@
-# Phase 5: Agentic Workflows -- Business Analyst Tasks
+# Stage 5: Agentic Workflows -- Business Analyst Tasks
 
 **Time: ~1 hour**
 
@@ -36,4 +36,4 @@
 
 ---
 
-Previous: [Phase 4: Ship and Demo -- Business Analyst Tasks](../phase-4-deploy-demo/business-analyst.md)
+Previous: [Stage 4: Ship and Demo -- Business Analyst Tasks](../stage-4-deploy-demo/business-analyst.md)

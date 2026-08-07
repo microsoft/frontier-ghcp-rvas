@@ -1,4 +1,4 @@
-# Phase 1: Log Analysis Agent
+# Stage 1: Log Analysis Agent
 
 **Duration:** 2-2.5 hours
 
@@ -45,4 +45,4 @@ Before you build the agent, use the full setup: keep your repository instruction
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Incident Routing](phase-2-routing.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Incident Routing](stage-2-routing.md)

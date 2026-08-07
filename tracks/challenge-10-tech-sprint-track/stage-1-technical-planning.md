@@ -1,9 +1,9 @@
-# Phase 1: Technical Planning
+# Stage 1: Technical Planning
 
 **Duration:** 1.5 hours
 **Focus:** Read the specification, create a technical spec, set up tooling, break work into Issues, plan Sprint 1
 
-This phase replaces the product discovery step found in other team tracks. The functional specification is already written -- your job is to turn it into a technical plan and get everything ready to build.
+This stage replaces the product discovery step found in other team tracks. The functional specification is already written -- your job is to turn it into a technical plan and get everything ready to build.
 
 Before role setup begins, make sure the team's shared `.github/copilot-instructions.md` actually captures the TrailMate context everyone needs, and agree on one shared custom skill, like the spec-to-issues or sprint board sync sequence, so backlog creation and handoffs stay consistent across roles instead of everyone building their own process.
 
@@ -13,10 +13,10 @@ Find your role and follow the link for your detailed task list:
 
 | Role | Time | Summary |
 |------|------|---------|
-| [Backend Developer](phase-1-technical-planning/backend-developer.md) | ~1 hr setup + 30 min planning | Scaffold backend, finalize API spec, custom instructions |
-| [Frontend Developer](phase-1-technical-planning/frontend-developer.md) | ~1 hr setup + 30 min planning | Scaffold frontend, design component hierarchy, coordinate with backend |
-| [QA Engineer](phase-1-technical-planning/qa-engineer.md) | ~1 hr setup + 30 min planning | Set up Playwright, write test plan, define test data needs |
-| [DevOps Engineer](phase-1-technical-planning/devops-engineer.md) | ~1 hr setup + 30 min planning | Devcontainer config, CI pipeline, branching strategy |
+| [Backend Developer](stage-1-technical-planning/backend-developer.md) | ~1 hr setup + 30 min planning | Scaffold backend, finalize API spec, custom instructions |
+| [Frontend Developer](stage-1-technical-planning/frontend-developer.md) | ~1 hr setup + 30 min planning | Scaffold frontend, design component hierarchy, coordinate with backend |
+| [QA Engineer](stage-1-technical-planning/qa-engineer.md) | ~1 hr setup + 30 min planning | Set up Playwright, write test plan, define test data needs |
+| [DevOps Engineer](stage-1-technical-planning/devops-engineer.md) | ~1 hr setup + 30 min planning | Devcontainer config, CI pipeline, branching strategy |
 
 ## Before You Start
 
@@ -25,7 +25,7 @@ Everyone reads the functional specification together:
 1. Open `challenges/challenge-10-tech-sprint/docs/functional-spec.md`
 2. Read through the entire document as a team (10 minutes)
 3. Discuss any questions or ambiguities -- resolve them now, not mid-sprint
-4. Assign one person to fill in `challenges/challenge-10-tech-sprint/docs/technical-spec-template.md` during Phase 1, with contributions from everyone
+4. Assign one person to fill in `challenges/challenge-10-tech-sprint/docs/technical-spec-template.md` during Stage 1, with contributions from everyone
 
 ## Creating the Backlog
 
@@ -51,4 +51,4 @@ After planning, everyone should have clear tasks and an unblocked path into Spri
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Sprint 1 -- Core Features](phase-2-sprint-1-build.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Sprint 1 -- Core Features](stage-2-sprint-1-build.md)

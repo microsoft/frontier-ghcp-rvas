@@ -1,4 +1,4 @@
-# Phase 5: Agentic Workflows -- QA Engineer Tasks
+# Stage 5: Agentic Workflows -- QA Engineer Tasks
 
 **Time: ~1 hour**
 
@@ -38,4 +38,4 @@
 
 ---
 
-Previous: [Phase 4: Ship and Demo -- QA Engineer Tasks](../phase-4-deploy-demo/qa-engineer.md)
+Previous: [Stage 4: Ship and Demo -- QA Engineer Tasks](../stage-4-deploy-demo/qa-engineer.md)

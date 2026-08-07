@@ -1,4 +1,4 @@
-# Phase 1: CI Pipeline
+# Stage 1: CI Pipeline
 
 **Duration:** 1.5-2 hours
 
@@ -35,4 +35,4 @@ Before you write the first workflow file, use the full setup: keep your reposito
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Debug Staging](phase-2-debug.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Debug Staging](stage-2-debug.md)

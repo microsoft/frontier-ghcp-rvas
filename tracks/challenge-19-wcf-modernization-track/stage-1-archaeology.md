@@ -1,4 +1,4 @@
-# Phase 1: Contract Archaeology
+# Stage 1: Contract Archaeology
 
 **Duration:** 2-3 hours
 
@@ -6,7 +6,7 @@
 
 ## Objective
 
-Understand the Meridian Savings Bank WCF service well enough to describe every operation, every data contract, and every fault condition to someone who has never worked with WCF. You start with the service contract interfaces, trace through the implementations, and produce a written inventory that will guide every decision in Phase 3.
+Understand the Meridian Savings Bank WCF service well enough to describe every operation, every data contract, and every fault condition to someone who has never worked with WCF. You start with the service contract interfaces, trace through the implementations, and produce a written inventory that will guide every decision in Stage 3.
 
 ## Tasks
 
@@ -68,4 +68,4 @@ Before you read a single contract, use the full setup: keep your repository inst
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Characterization Tests](phase-2-testing.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Characterization Tests](stage-2-testing.md)

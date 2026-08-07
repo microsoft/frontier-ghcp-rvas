@@ -18,7 +18,7 @@
 - Understanding of agile concepts: Epics, User Stories, Acceptance Criteria, Tasks
 - Familiarity with the INVEST criteria for good user stories
 - No coding experience required -- this track focuses on prompts, agents, and process
-- Atlassian Cloud account (optional, for MCP integration phases)
+- Atlassian Cloud account (optional, for MCP integration stages)
 
 ## Technology Stack
 
@@ -49,7 +49,7 @@ A dedicated devcontainer is provided at `.devcontainer/challenge-15-backlog-gene
 
 #### Atlassian MCP Server (Optional)
 
-If your team uses Atlassian Cloud (Jira / Confluence), you can connect Copilot to it via the Atlassian Rovo MCP Server. See the [MCP Servers Guide](../docs/mcp-servers.md#atlassian-rovo-mcp-server-jira-confluence) for setup instructions. This enables Phase 3 of the challenge, where you push generated backlog items directly to Jira.
+If your team uses Atlassian Cloud (Jira / Confluence), you can connect Copilot to it via the Atlassian Rovo MCP Server. See the [MCP Servers Guide](../docs/mcp-servers.md#atlassian-rovo-mcp-server-jira-confluence) for setup instructions. This enables Stage 3 of the challenge, where you push generated backlog items directly to Jira.
 
 ### Repository Instructions for This Track
 
@@ -94,4 +94,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-15-backlog-generator-track/phases.md)
+Next: [Stages](challenge-15-backlog-generator-track/stages.md)

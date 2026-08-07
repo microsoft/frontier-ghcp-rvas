@@ -89,4 +89,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-14-pipeline-factory-track/phases.md)
+Next: [Stages](challenge-14-pipeline-factory-track/stages.md)

@@ -204,7 +204,7 @@
         <details class="challenge-pages-details"${isActiveGroup ? ' open' : ''}>
           <summary class="challenge-pages-summary">${FP.esc(page.title)}</summary>
           <div class="challenge-pages-group-body">
-            ${renderPageLink(challengeId, page, isActive, page.kind === 'stage' ? 'Stage overview' : 'Phase overview')}
+            ${renderPageLink(challengeId, page, isActive, 'Stage overview')}
             <ul class="challenge-pages-children">
               ${children
                 .map((child) => {

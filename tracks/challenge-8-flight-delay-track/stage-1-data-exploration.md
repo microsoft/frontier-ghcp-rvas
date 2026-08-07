@@ -1,4 +1,4 @@
-# Phase 1: Data Exploration and Model Building
+# Stage 1: Data Exploration and Model Building
 
 **Duration:** 3-4 hours
 **Focus:** Jupyter Notebook, data science, machine learning
@@ -44,7 +44,7 @@ Before you open the notebook, use your full setup: keep your repository instruct
 3. Open `flight_delay_analysis.ipynb` and follow the guided cells.
 4. Use Copilot Agent Mode to help you write each cell.
 
-## Copilot Tips for This Phase
+## Copilot Tips for This Stage
 
 - Start each notebook cell with a descriptive comment -- Copilot uses this as context.
 - Use `/explain` to understand ML concepts like precision vs. recall.
@@ -62,4 +62,4 @@ Before you open the notebook, use your full setup: keep your repository instruct
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Build the Prediction API](phase-2-prediction-api.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Build the Prediction API](stage-2-prediction-api.md)

@@ -94,4 +94,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-18-cobol-modernization-track/phases.md)
+Next: [Stages](challenge-18-cobol-modernization-track/stages.md)

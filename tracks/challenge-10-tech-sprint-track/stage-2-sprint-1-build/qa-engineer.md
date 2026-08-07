@@ -1,4 +1,4 @@
-# Phase 2: Sprint 1 -- QA Engineer Tasks
+# Stage 2: Sprint 1 -- QA Engineer Tasks
 
 **Time: Full 3 hours**
 
@@ -56,4 +56,4 @@ difficulty filter dropdown, status filter, and trail cards."
 
 ---
 
-Previous: [Phase 1: Technical Planning -- QA Engineer Tasks](../phase-1-technical-planning/qa-engineer.md) | Next: [Phase 3: Sprint 2 -- QA Engineer Tasks](../phase-3-sprint-2-integration/qa-engineer.md)
+Previous: [Stage 1: Technical Planning -- QA Engineer Tasks](../stage-1-technical-planning/qa-engineer.md) | Next: [Stage 3: Sprint 2 -- QA Engineer Tasks](../stage-3-sprint-2-integration/qa-engineer.md)

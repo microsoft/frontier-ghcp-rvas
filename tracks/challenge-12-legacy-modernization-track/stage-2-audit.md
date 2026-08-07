@@ -1,4 +1,4 @@
-# Phase 2: Security and Debt Audit
+# Stage 2: Security and Debt Audit
 
 **Duration:** 1-1.5 hours
 
@@ -31,4 +31,4 @@ If your Security Auditor Agent produces generic findings instead of evidence tie
 
 ---
 
-Previous: [Phase 1: Code Archaeology](phase-1-archaeology.md) | Next: [Phase 3: Test Harness](phase-3-tests.md)
+Previous: [Stage 1: Code Archaeology](stage-1-archaeology.md) | Next: [Stage 3: Test Harness](stage-3-tests.md)

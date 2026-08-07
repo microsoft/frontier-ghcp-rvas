@@ -1,8 +1,8 @@
-# Phase 4: Modules and Environment Promotion
+# Stage 4: Modules and Environment Promotion
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
-The Terraform now works, but it still reads like a one-off build. This phase turns it into something another team could reuse for dev and prod without copying files and hoping for the best.
+The Terraform now works, but it still reads like a one-off build. This stage turns it into something another team could reuse for dev and prod without copying files and hoping for the best.
 
 ## Scenario Notes
 
@@ -12,7 +12,7 @@ Your goal is reuse with restraint. A module boundary should make review easier, 
 
 ## Tasks
 
-1. Extract reusable modules for the repeated infrastructure slices you built in earlier phases. Keep the module boundaries simple and explainable.
+1. Extract reusable modules for the repeated infrastructure slices you built in earlier stages. Keep the module boundaries simple and explainable.
 2. Add at least two environment configurations, such as `dev` and `prod`, with separate variable files or environment folders.
 3. Add validation rules, preconditions, or both for values that should not vary freely, such as regions, SKUs, or allowed CIDR ranges.
 4. Write `docs/environment-promotion.md` with the differences between dev and prod, what requires approval, and what can change through a pull request alone.
@@ -36,4 +36,4 @@ Copilot is good at extracting repeated blocks into modules. The hard part is res
 
 ---
 
-Previous: [Phase 3: Identity and Secrets](phase-3-identity-and-secrets.md) | Next: [Phase 5: Policy, CI, and Drift Response](phase-5-policy-ci-and-drift.md)
+Previous: [Stage 3: Identity and Secrets](stage-3-identity-and-secrets.md) | Next: [Stage 5: Policy, CI, and Drift Response](stage-5-policy-ci-and-drift.md)

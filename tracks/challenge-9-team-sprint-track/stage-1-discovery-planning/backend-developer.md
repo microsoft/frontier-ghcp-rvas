@@ -1,4 +1,4 @@
-# Phase 1: Discovery and Planning -- Backend Developer Tasks
+# Stage 1: Discovery and Planning -- Backend Developer Tasks
 
 **Time: ~1 hour setup + 30 min planning**
 
@@ -29,4 +29,4 @@ Plan to actually use the api-architect agent for the REST design judgment calls 
 
 ---
 
-Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- Backend Developer Tasks](../phase-2-sprint-1-build/backend-developer.md)
+Previous: [Stages](../stages.md) | Next: [Stage 2: Sprint 1 -- Backend Developer Tasks](../stage-2-sprint-1-build/backend-developer.md)

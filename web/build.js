@@ -339,8 +339,8 @@ function markdownTitle(content, fallback) {
 }
 
 function numericPageSort(a, b) {
-  const aMatch = a.name.match(/^(?:stage|phase)-(\d+)/i);
-  const bMatch = b.name.match(/^(?:stage|phase)-(\d+)/i);
+  const aMatch = a.name.match(/^stage-(\d+)/i);
+  const bMatch = b.name.match(/^stage-(\d+)/i);
   const numberDiff = Number(aMatch && aMatch[1]) - Number(bMatch && bMatch[1]);
   return numberDiff || a.name.localeCompare(b.name, undefined, { numeric: true });
 }
@@ -367,15 +367,15 @@ function collectChallengePages(challenge) {
     errors.push(`Challenge ${challenge.id}: contents file not found at ${challenge.contents_url}`);
   }
   if (fs.existsSync(contentsPath)) {
-    const contentsType = path.basename(contentsPath, '.md').toLowerCase();
-    if (!['stages', 'phases'].includes(contentsType)) {
-      errors.push(`Challenge ${challenge.id}: contents_url must point to stages.md or phases.md`);
+    const contentsName = path.basename(contentsPath).toLowerCase();
+    if (contentsName !== 'stages.md') {
+      errors.push(`Challenge ${challenge.id}: contents_url must point to stages.md`);
     } else {
       const rawContents = readFileSafe(contentsPath);
       if (rawContents === null) {
         errors.push(`Challenge ${challenge.id}: could not read ${challenge.contents_url}`);
       } else {
-        const expectedTitle = `${challenge.title}: ${contentsType === 'stages' ? 'Stages' : 'Phases'}`;
+        const expectedTitle = `${challenge.title}: Stages`;
         const actualTitle = markdownTitle(rawContents, '');
         if (actualTitle !== expectedTitle) {
           errors.push(
@@ -390,11 +390,11 @@ function collectChallengePages(challenge) {
   const trackDir = path.dirname(trackPath);
   const stageDir = path.join(trackDir, path.basename(trackPath, '.md'));
   const topLevelFiles = readDirSafe(stageDir)
-    .filter(entry => entry.isFile() && /^(stage|phase)-\d+.*\.md$/i.test(entry.name))
+    .filter(entry => entry.isFile() && /^stage-\d+.*\.md$/i.test(entry.name))
     .sort(numericPageSort)
     .map(entry => path.join(stageDir, entry.name));
   if (!topLevelFiles.length) {
-    errors.push(`Challenge ${challenge.id}: page sequence has no numeric stage or phase files in ${path.relative(ROOT, stageDir)}`);
+    errors.push(`Challenge ${challenge.id}: page sequence has no numeric stage files in ${path.relative(ROOT, stageDir)}`);
     return { pages: [], sources: new Map(), errors };
   }
 
@@ -406,8 +406,7 @@ function collectChallengePages(challenge) {
   for (const topLevelPath of topLevelFiles) {
     const relativePath = path.relative(stageDir, topLevelPath);
     const topLevelId = pageIdFromRelativePath(relativePath);
-    const kind = path.basename(topLevelPath).toLowerCase().startsWith('stage-') ? 'stage' : 'phase';
-    definitions.push({ id: topLevelId, kind, parent_id: null, sourcePath: topLevelPath });
+    definitions.push({ id: topLevelId, kind: 'stage', parent_id: null, sourcePath: topLevelPath });
 
     const nestedDir = topLevelPath.slice(0, -3);
     for (const nestedPath of walkMarkdownFiles(nestedDir)) {
@@ -447,7 +446,7 @@ function collectChallengePages(challenge) {
     if (!nestedByParent.has(page.parent_id)) nestedByParent.set(page.parent_id, new Map());
     nestedByParent.get(page.parent_id).set(page.rolePath, page);
   }
-  const stagePages = topLevel.filter(page => page.kind === 'stage' || page.kind === 'phase');
+  const stagePages = topLevel.filter(page => page.kind === 'stage');
   for (let i = 0; i < stagePages.length; i++) {
     const rolePages = nestedByParent.get(stagePages[i].id);
     if (!rolePages) continue;

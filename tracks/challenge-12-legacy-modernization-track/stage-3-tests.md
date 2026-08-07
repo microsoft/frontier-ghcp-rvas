@@ -1,4 +1,4 @@
-# Phase 3: Test Harness
+# Stage 3: Test Harness
 
 **Duration:** 1.5-2 hours
 
@@ -28,7 +28,7 @@
    - Searching customers (by name, by email)
    - Getting a customer with their accounts
 
-6. **Verify all tests pass.** These tests capture the application's current behavior. When you migrate in Phase 4, these same tests should still pass (after updating imports and annotations).
+6. **Verify all tests pass.** These tests capture the application's current behavior. When you migrate in Stage 4, these same tests should still pass (after updating imports and annotations).
 
 ## Verification
 
@@ -41,4 +41,4 @@
 
 ---
 
-Previous: [Phase 2: Security and Debt Audit](phase-2-audit.md) | Next: [Phase 4: Migration](phase-4-migration.md)
+Previous: [Stage 2: Security and Debt Audit](stage-2-audit.md) | Next: [Stage 4: Migration](stage-4-migration.md)

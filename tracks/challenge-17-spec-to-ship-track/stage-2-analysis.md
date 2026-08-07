@@ -1,4 +1,4 @@
-# Phase 2: Technical Analysis
+# Stage 2: Technical Analysis
 
 **Duration:** 1-1.5 hours
 
@@ -29,7 +29,7 @@
 
 5. **Identify what the prompt misses.** What would a senior developer add that the prompt did not? Common gaps: error handling strategy, monitoring/observability plan, performance considerations for the usage metering queries.
 
-If your Technical Analyst agent or spec workflow produces generic API decisions or a schema that misses metering requirements, refine that customization before Phase 3 builds against it.
+If your Technical Analyst agent or spec workflow produces generic API decisions or a schema that misses metering requirements, refine that customization before Stage 3 builds against it.
 
 ## Verification
 
@@ -41,4 +41,4 @@ If your Technical Analyst agent or spec workflow produces generic API decisions 
 
 ---
 
-Previous: [Phase 1: Spec to Backlog](phase-1-backlog.md) | Next: [Phase 3: Code Generation](phase-3-code.md)
+Previous: [Stage 1: Spec to Backlog](stage-1-backlog.md) | Next: [Stage 3: Code Generation](stage-3-code.md)

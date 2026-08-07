@@ -1,4 +1,4 @@
-# Phase 3: Sprint 2 -- QA Engineer Tasks
+# Stage 3: Sprint 2 -- QA Engineer Tasks
 
 **Time: Full 2 hours**
 
@@ -30,4 +30,4 @@ If your test agent produces generic assertions or coverage that does not map to 
 
 ---
 
-Previous: [Phase 2: Sprint 1 -- QA Engineer Tasks](../phase-2-sprint-1-build/qa-engineer.md) | Next: [Phase 4: Ship and Demo -- QA Engineer Tasks](../phase-4-deploy-demo/qa-engineer.md)
+Previous: [Stage 2: Sprint 1 -- QA Engineer Tasks](../stage-2-sprint-1-build/qa-engineer.md) | Next: [Stage 4: Ship and Demo -- QA Engineer Tasks](../stage-4-deploy-demo/qa-engineer.md)

@@ -129,4 +129,4 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-Next: [Phases](challenge-19-wcf-modernization-track/phases.md)
+Next: [Stages](challenge-19-wcf-modernization-track/stages.md)

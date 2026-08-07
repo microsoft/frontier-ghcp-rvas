@@ -1,4 +1,4 @@
-# Phase 2: Sprint 1 -- DevOps Engineer Tasks
+# Stage 2: Sprint 1 -- DevOps Engineer Tasks
 
 **Time: Full 3 hours**
 
@@ -58,4 +58,4 @@ the backend and frontend with hot reload inside a Codespace."
 
 ---
 
-Previous: [Phase 1: Technical Planning -- DevOps Engineer Tasks](../phase-1-technical-planning/devops-engineer.md) | Next: [Phase 3: Sprint 2 -- DevOps Engineer Tasks](../phase-3-sprint-2-integration/devops-engineer.md)
+Previous: [Stage 1: Technical Planning -- DevOps Engineer Tasks](../stage-1-technical-planning/devops-engineer.md) | Next: [Stage 3: Sprint 2 -- DevOps Engineer Tasks](../stage-3-sprint-2-integration/devops-engineer.md)

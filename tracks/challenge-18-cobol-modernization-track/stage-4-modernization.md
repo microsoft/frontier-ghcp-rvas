@@ -1,17 +1,17 @@
-# Phase 4: Full-Stack Modernization
+# Stage 4: Full-Stack Modernization
 
 **Duration:** 2.5-3 hours
 **Focus:** Building a modern web application from the COBOL business logic -- React frontend + API backend
 
 ## Objective
 
-Modernize the core banking system from a COBOL terminal application into a full web application. The backend exposes the business logic as a REST API. The frontend is a React application with a modern, polished UI. The modernized system must pass all characterization tests from Phase 2 -- every business rule, validation, and calculation must survive the translation intact.
+Modernize the core banking system from a COBOL terminal application into a full web application. The backend exposes the business logic as a REST API. The frontend is a React application with a modern, polished UI. The modernized system must pass all characterization tests from Stage 2 -- every business rule, validation, and calculation must survive the translation intact.
 
 This is not a terminal app with a web wrapper. You are building a real web application that a bank employee would use at their desk.
 
 ## Tools Setup
 
-Install the frontend-design skill before starting this phase. It gives Copilot the ability to generate polished React components and page layouts:
+Install the frontend-design skill before starting this stage. It gives Copilot the ability to generate polished React components and page layouts:
 
 ```shell
 npx skills install anthropics/claude-code
@@ -78,7 +78,7 @@ When prompted, select `frontend-design` from the list. This skill teaches Copilo
 
 ### Integration and Verification
 
-7. **Run your characterization tests.** Every test from Phase 2 should pass against the backend services. Fix any discrepancies by comparing the COBOL logic with your translation.
+7. **Run your characterization tests.** Every test from Stage 2 should pass against the backend services. Fix any discrepancies by comparing the COBOL logic with your translation.
 
 8. **Fix the known technical debt.** Now that the code is in a language you control:
    - Replace the hardcoded maintenance fee with a configurable value
@@ -108,7 +108,7 @@ When prompted, select `frontend-design` from the list. This skill teaches Copilo
 
 - [ ] Backend API implemented with all business logic translated
 - [ ] Data layer translated with storage for all ISAM file equivalents
-- [ ] All characterization tests from Phase 2 passing against backend services
+- [ ] All characterization tests from Stage 2 passing against backend services
 - [ ] React frontend implemented with all required pages
 - [ ] Frontend connects to backend API and handles errors gracefully
 - [ ] At least 3 technical debt items fixed in the modernized version
@@ -117,4 +117,4 @@ When prompted, select `frontend-design` from the list. This skill teaches Copilo
 
 ---
 
-Previous: [Phase 3: Feature Evolution](phase-3-evolution.md)
+Previous: [Stage 3: Feature Evolution](stage-3-evolution.md)

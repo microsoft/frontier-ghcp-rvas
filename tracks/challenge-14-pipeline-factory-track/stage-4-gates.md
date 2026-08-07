@@ -1,4 +1,4 @@
-# Phase 4: Deployment Gates and Runbooks
+# Stage 4: Deployment Gates and Runbooks
 
 **Duration:** 2-3 hours
 
@@ -27,7 +27,7 @@
    - Resolution options, ranked by likelihood of success
    - Escalation criteria (when to escalate vs. self-resolve)
 
-5. **Test the runbook prompt.** Feed it the bugs you found in Phase 2 (as if they were real incidents) and verify the produced runbooks are actionable.
+5. **Test the runbook prompt.** Feed it the bugs you found in Stage 2 (as if they were real incidents) and verify the produced runbooks are actionable.
 
 ## Verification
 
@@ -35,8 +35,8 @@
 - [ ] Post-deployment smoke test script created and integrated into workflow
 - [ ] Rollback mechanism designed (at minimum, documented in the workflow with conditional steps)
 - [ ] Incident runbook prompt created and tested
-- [ ] At least 2 runbooks generated from Phase 2 bugs
+- [ ] At least 2 runbooks generated from Stage 2 bugs
 
 ---
 
-Previous: [Phase 3: Reusable Workflows](phase-3-reusable.md)
+Previous: [Stage 3: Reusable Workflows](stage-3-reusable.md)

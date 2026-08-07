@@ -1,4 +1,4 @@
-# Phase 1: Javadoc Generation
+# Stage 1: Javadoc Generation
 
 **Duration:** 1.5-2 hours
 
@@ -34,4 +34,4 @@ Before generating any javadoc, use your setup: keep your repository instructions
 
 ---
 
-Previous: [Phases](phases.md) | Next: [Phase 2: Architecture Diagrams](phase-2-diagrams.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Architecture Diagrams](stage-2-diagrams.md)
