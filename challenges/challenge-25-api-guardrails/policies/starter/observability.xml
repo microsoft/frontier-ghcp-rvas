@@ -1,0 +1,15 @@
+<policies>
+  <inbound>
+    <base />
+    <!-- Add approved request context and tracing headers without logging secrets or tokens. -->
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+  <on-error>
+    <base />
+  </on-error>
+</policies>

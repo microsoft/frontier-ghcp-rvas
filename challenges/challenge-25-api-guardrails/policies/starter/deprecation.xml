@@ -1,0 +1,15 @@
+<policies>
+  <inbound>
+    <base />
+    <!-- Add policy behavior for announced, sunset, and retired API versions. -->
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+  <on-error>
+    <base />
+  </on-error>
+</policies>

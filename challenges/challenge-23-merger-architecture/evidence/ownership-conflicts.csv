@@ -1,0 +1,7 @@
+subject,HPC_claim,NMN_claim,conflict_evidence,decision_needed_by
+Customer email,HPC CRM owns the preferred email,NMN Buyer Registry owns buyer communication preference,"18 percent of sampled matches have different preferred addresses",Wave 1 design
+Customer identifier,HPC customer number is enterprise-wide,NMN buyer ID must remain stable for disputes,"Both values appear in contracts and audit exports",Before integration contract approval
+Refund status,HPC OMS is authoritative after approval,NMN Orders remains authoritative through settlement,"Support wants one status while finance needs source detail",Wave 2
+Login profile,HPC Identity stores display profile,NMN separates credential from buyer profile,"Profile updates currently write to different stores",Before single sign-on
+Consent,HPC latest timestamp wins,NMN purpose and region take precedence,"No shared consent vocabulary exists",Before any combined marketing
+Revenue report,HPC Finance owns the report,NMN Data Platform owns marketplace settlement truth,"Daily totals differ by event correction timing",First combined close

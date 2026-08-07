@@ -2,7 +2,7 @@
 
 ![GitHub Copilot Adoption banner](docs/images/rvas-banner.jpg)
 
-GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
+GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **28 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
 
 Each session includes repository instructions, custom agents, and custom skills
 tailored to the work.
@@ -11,7 +11,7 @@ tailored to the work.
 
 ### Option 1: Pick a Worked-Example Challenge
 
-Choose one of the **22 challenge tracks** below. Each challenge maps to a specific business outcome and provides starter code, a devcontainer, and a progression path through real work. Use these to learn outcome-driven AI-assisted development patterns you can apply to your own work.
+Choose one of the **28 challenge tracks** below. Each challenge maps to a specific business outcome and provides starter code, a devcontainer, and a progression path through real work. Use these to learn outcome-driven AI-assisted development patterns you can apply to your own work.
 
 ### Option 2: Bring Your Own Challenge
 
@@ -21,7 +21,7 @@ See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
 ## Overview
 
-The repository includes **22 challenge tracks** organized by the outcomes they help you deliver:
+The repository includes **28 challenge tracks** organized by the outcomes they help you deliver:
 
 ### Challenges by Outcome
 
@@ -49,6 +49,12 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 - 🔧 **[Challenge 19: WCF Banking Modernization](./tracks/challenge-19-wcf-modernization-track.md)** - Understand a legacy WCF SOAP banking service and migrate it to a REST API | **Outcome:** Modernize Legacy Systems
 - 💻 **[Challenge 20: PowerShell Automation](./tracks/challenge-20-powershell-automation-track.md)** - Fix, test, document, and package PowerShell scripts for real sysadmin work | **Outcomes:** Automate Delivery and Ops Toil, Modernize Legacy Systems
 - ☁️ **[Challenge 21: Azure Terraform Track](./tracks/challenge-21-azure-terraform-track.md)** - Build an Azure Terraform foundation with modules, identity, policy checks, and CI guardrails | **Outcome:** Stand Up Cloud Platform Foundations
+- 🔍 **[Challenge 22: Secure Release Review](./tracks/challenge-22-secure-release-track.md)** - Review and harden a .NET release candidate with evidence-based security gates | **Outcome:** Raise Quality and Confidence
+- 🧩 **[Challenge 23: Merger Integration Architecture](./tracks/challenge-23-merger-architecture-track.md)** - Define Azure system boundaries, integration contracts, and transition decisions after a merger | **Outcome:** Stand Up Cloud Platform Foundations
+- 📊 **[Challenge 24: Peak-Load Database Rescue](./tracks/challenge-24-database-rescue-track.md)** - Tune SQL Server safely and validate an Azure SQL-compatible migration | **Outcomes:** Raise Quality and Confidence, Stand Up Cloud Platform Foundations
+- ☁️ **[Challenge 25: Enterprise API Guardrails](./tracks/challenge-25-api-guardrails-track.md)** - Govern APIs with Azure API Management policies, contract checks, and onboarding controls | **Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
+- 📋 **[Challenge 26: Developer Onboarding Repair](./tracks/challenge-26-developer-onboarding-track.md)** - Repair task documentation and add checks for links, commands, and examples | **Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
+- 🎨 **[Challenge 27: Offline Field Service App](./tracks/challenge-27-offline-mobile-track.md)** - Build a dependable React Native workflow for intermittent connectivity | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -57,11 +63,10 @@ Coaches who need a focused workshop path can use the site's Challenge Set Builde
 Each track provides its own stage progression with specific guidance, tips, and
 learning objectives.
 
-The documentation site also groups challenges into nine enterprise Role
-Collections. Use the **Roles** page to find relevant work for product and
-business roles, frontend and backend developers, full-stack developers, data
-and AI practitioners, QA, DevOps and platform teams, IT operations, and
-technical leads.
+The documentation site also groups challenges into 13 enterprise Role
+Collections. Use the **Roles** page to find relevant work for product,
+engineering, data, security, database, documentation, mobile, platform,
+operations, QA, and architecture roles.
 
 ## Duration
 
@@ -256,7 +261,7 @@ As you work through these challenges, you'll build proficiency with GitHub Copil
 
 **Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
-All 22 challenges are available, and each track has a dedicated challenge:
+All 28 challenges are available, and each track has a dedicated challenge:
 
 ### [Challenge 0: Product Planning -- TaskFlow v2.0](./challenges/challenge-0-product-planning/) ([Track](./tracks/challenge-0-product-planning-track.md))
 
@@ -485,6 +490,72 @@ Take three inherited PowerShell scripts from the fictional Contoso IT team -- a 
 **Copilot Focus**: Infrastructure review, plan explanation, module extraction, CI workflow generation
 
 Build an Azure Terraform foundation across 5 stages: bootstrap remote state and naming rules, provision a small Azure platform around Container Apps, wire managed identity and Key Vault, refactor the configuration into reusable modules for multiple environments, then add CI guardrails and a drift response runbook.
+
+---
+
+### [Challenge 22: Secure Release Review](./challenges/challenge-22-secure-release/) ([Track](./tracks/challenge-22-secure-release-track.md))
+
+**Team**: Application security engineers, senior .NET developers, technical leads, platform engineers
+**Duration**: 4-6 hours
+**Skills**: .NET 8, threat modeling, authorization review, security testing, release evidence
+**Copilot Focus**: Code review, targeted remediation, regression tests, evidence-based release decisions
+
+Review a .NET 8 payments API before release. Trace trust boundaries, prioritize security findings, prove targeted fixes with tests, review dependencies and secrets, and finish with a defensible release checklist.
+
+---
+
+### [Challenge 23: Merger Integration Architecture](./challenges/challenge-23-merger-architecture/) ([Track](./tracks/challenge-23-merger-architecture-track.md))
+
+**Team**: Solution architects, enterprise architects, integration leads, technical program leads
+**Duration**: 4-6 hours
+**Skills**: Azure architecture, system boundaries, API and event contracts, ADRs, transition planning
+**Copilot Focus**: Evidence analysis, architecture options, contract review, migration risk
+
+Design an Azure integration foundation for two companies after a merger. Resolve conflicting system evidence, define capability ownership and contracts, record key decisions, and sequence a transition without a big-bang cutover.
+
+---
+
+### [Challenge 24: Peak-Load Database Rescue](./challenges/challenge-24-database-rescue/) ([Track](./tracks/challenge-24-database-rescue-track.md))
+
+**Team**: Database administrators, database reliability engineers, data platform engineers
+**Duration**: 4-6 hours
+**Skills**: SQL Server, Azure SQL, T-SQL, execution plans, safe schema migration
+**Copilot Focus**: Query evidence, tuning review, migration safety, operational runbooks
+
+Diagnose a SQL Server workload under peak load, reduce measured query cost, and ship a backward-compatible schema change. The required checks run locally, with Azure SQL available as an optional target validation.
+
+---
+
+### [Challenge 25: Enterprise API Guardrails](./challenges/challenge-25-api-guardrails/) ([Track](./tracks/challenge-25-api-guardrails-track.md))
+
+**Team**: API platform engineers, Azure platform engineers, technical leads, developer experience engineers
+**Duration**: 4-6 hours
+**Skills**: OpenAPI, Azure API Management, Microsoft Entra ID, contract checks, observability
+**Copilot Focus**: Contract comparison, lifecycle review, policy validation, platform onboarding
+
+Create a governed path for teams publishing APIs through Azure API Management. Compare inconsistent contracts, define standards and exceptions, test policies locally, and document the onboarding evidence required for platform review.
+
+---
+
+### [Challenge 26: Developer Onboarding Repair](./challenges/challenge-26-developer-onboarding/) ([Track](./tracks/challenge-26-developer-onboarding-track.md))
+
+**Team**: Technical writers, developer educators, developer experience practitioners, engineers
+**Duration**: 4-6 hours
+**Skills**: Markdown, information architecture, reader testing, Node.js documentation checks
+**Copilot Focus**: Documentation diagnosis, technical accuracy, example verification, editorial review
+
+Repair fragmented onboarding for a working CLI and SDK. Test real reader journeys, settle terminology and page boundaries, correct examples against the software, and add lightweight checks that keep the guidance usable.
+
+---
+
+### [Challenge 27: Offline Field Service App](./challenges/challenge-27-offline-mobile/) ([Track](./tracks/challenge-27-offline-mobile-track.md))
+
+**Team**: Mobile developers, frontend engineers, test engineers, technical leads
+**Duration**: 4-6 hours
+**Skills**: React Native, Expo, TypeScript, offline persistence, synchronization testing
+**Copilot Focus**: State-flow tracing, failure analysis, mobile accessibility, release evidence
+
+Make a React Native field-service workflow dependable when connectivity and device permissions fail. Preserve technician work across restarts, define conflict behavior, test degraded modes, and verify the mocked Azure Functions synchronization contract.
 
 ---
 

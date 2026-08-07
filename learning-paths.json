@@ -21,7 +21,8 @@
         "challenge-1",
         "challenge-4",
         "challenge-5",
-        "challenge-8"
+        "challenge-8",
+        "challenge-27"
       ]
     },
     {
@@ -44,7 +45,8 @@
         "challenge-14",
         "challenge-15",
         "challenge-16",
-        "challenge-17"
+        "challenge-17",
+        "challenge-26"
       ]
     },
     {
@@ -74,7 +76,8 @@
       "challenge_ids": [
         "challenge-3",
         "challenge-20",
-        "challenge-21"
+        "challenge-21",
+        "challenge-24"
       ]
     },
     {
@@ -85,6 +88,26 @@
         "challenge-6",
         "challenge-7",
         "challenge-17"
+      ]
+    },
+    {
+      "id": "secure-software-delivery",
+      "name": "Secure Software Delivery",
+      "description": "Review release risk, turn findings into regression evidence, and automate repeatable security checks.",
+      "challenge_ids": [
+        "challenge-5",
+        "challenge-22",
+        "challenge-6"
+      ]
+    },
+    {
+      "id": "enterprise-architecture-api-platforms",
+      "name": "Enterprise Architecture and API Platforms",
+      "description": "Define enterprise boundaries, govern shared APIs, and build the Azure platform foundations that support them.",
+      "challenge_ids": [
+        "challenge-23",
+        "challenge-25",
+        "challenge-21"
       ]
     }
   ]

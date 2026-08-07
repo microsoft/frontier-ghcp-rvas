@@ -1,0 +1,50 @@
+asyncapi: 2.6.0
+info:
+  title: Order Lifecycle Event Evidence
+  version: 0.3.0
+  description: Simplified evidence from current producers. Compatibility and ownership are unresolved.
+channels:
+  order.lifecycle:
+    subscribe:
+      message:
+        oneOf:
+          - $ref: "#/components/messages/OrderChanged"
+components:
+  messages:
+    OrderChanged:
+      name: OrderChanged
+      correlationId:
+        location: "$message.header#/correlationId"
+      headers:
+        type: object
+        required: [eventId, correlationId, sourceSystem, contractVersion]
+        properties:
+          eventId:
+            type: string
+          correlationId:
+            type: string
+          sourceSystem:
+            type: string
+            enum: [HPC-OMS, NMN-ORD]
+          contractVersion:
+            type: string
+      payload:
+        type: object
+        required: [orderId, sourceSystem, state, occurredAt]
+        properties:
+          orderId:
+            type: string
+          sourceSystem:
+            type: string
+          customerReference:
+            type: string
+          state:
+            type: string
+            enum: [accepted, processing, shipped, delivered, refund-requested, refunded, disputed]
+          occurredAt:
+            type: string
+            format: date-time
+          sequence:
+            type: integer
+          reason:
+            description: Current producers disagree on whether this is text or structured data.

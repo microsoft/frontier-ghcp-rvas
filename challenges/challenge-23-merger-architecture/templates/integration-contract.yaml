@@ -1,0 +1,43 @@
+contract:
+  name: TODO
+  version: 0.1.0
+  owner: TODO
+  purpose: TODO
+  interaction: TODO
+  producers:
+    - TODO
+  consumers:
+    - TODO
+  data_classification: TODO
+  authority:
+    source_of_record: TODO
+    conflict_rule: TODO
+  identity:
+    subject_types:
+      - TODO
+    boundary_rule: TODO
+  delivery:
+    latency_target: TODO
+    availability_target: TODO
+    ordering: TODO
+    idempotency_key: TODO
+    retry_policy: TODO
+    dead_letter_policy: TODO
+  compatibility:
+    versioning_rule: TODO
+    breaking_change_approval: TODO
+    deprecation_window: TODO
+  observability:
+    correlation_field: TODO
+    required_dimensions:
+      - source_system
+      - contract_version
+      - processing_outcome
+  privacy:
+    retention: TODO
+    deletion_handling: TODO
+    regional_constraint: TODO
+  failure_behavior:
+    dependency_unavailable: TODO
+    stale_data: TODO
+    partial_result: TODO

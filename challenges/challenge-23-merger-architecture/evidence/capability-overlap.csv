@@ -1,0 +1,8 @@
+capability,HPC_systems,NMN_systems,overlap,merger_pressure,open_question
+Customer profile,"HPC-CRM;HPC-IAM","NMN-BUY;NMN-ID",High,One account view,"Is a linked profile different from a mastered profile?"
+Order management,HPC-OMS,NMN-ORD,Medium,One order history,"Can customers act on an order through a federated view?"
+Identity,HPC-IAM,NMN-ID,High,Single sign-on,"How are buyer and seller-workforce identities kept distinct?"
+Refunds,HPC-OMS,NMN-ORD,High,Consistent support experience,"Which system owns refund state and customer notification?"
+Reporting,HPC-BI,NMN-LAKE,High,Combined daily finance report,"Can finance accept reconciled next-day data during transition?"
+Consent,HPC-CRM,NMN-BUY,High,Combined communications,"Which legal basis and regional rule wins when records conflict?"
+Seller administration,None,"NMN-SELL;NMN-ID",None,Protect marketplace operations,"How is this boundary kept outside customer unification?"

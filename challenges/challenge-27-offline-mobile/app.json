@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Field Notes",
+    "slug": "field-notes-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Field Notes to attach inspection photos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Field Notes to record where an inspection was completed."
+        }
+      ],
+      "expo-asset"
+    ],
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}

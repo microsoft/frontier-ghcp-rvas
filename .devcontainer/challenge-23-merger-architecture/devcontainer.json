@@ -1,0 +1,23 @@
+{
+	"name": "Challenge 23 - Merger Integration Architecture",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.12"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"DavidAnson.vscode-markdownlint",
+				"bierner.markdown-mermaid",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-23-merger-architecture",
+	"remoteUser": "vscode"
+}

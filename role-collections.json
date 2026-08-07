@@ -21,7 +21,8 @@
         "challenge-8",
         "challenge-9",
         "challenge-10",
-        "challenge-18"
+        "challenge-18",
+        "challenge-27"
       ]
     },
     {
@@ -39,7 +40,10 @@
         "challenge-17",
         "challenge-18",
         "challenge-19",
-        "challenge-21"
+        "challenge-21",
+        "challenge-22",
+        "challenge-24",
+        "challenge-25"
       ]
     },
     {
@@ -54,7 +58,8 @@
         "challenge-10",
         "challenge-17",
         "challenge-18",
-        "challenge-21"
+        "challenge-21",
+        "challenge-27"
       ]
     },
     {
@@ -79,7 +84,9 @@
         "challenge-12",
         "challenge-17",
         "challenge-18",
-        "challenge-19"
+        "challenge-19",
+        "challenge-22",
+        "challenge-27"
       ]
     },
     {
@@ -96,7 +103,10 @@
         "challenge-16",
         "challenge-17",
         "challenge-20",
-        "challenge-21"
+        "challenge-21",
+        "challenge-22",
+        "challenge-24",
+        "challenge-25"
       ]
     },
     {
@@ -108,7 +118,8 @@
         "challenge-14",
         "challenge-16",
         "challenge-20",
-        "challenge-21"
+        "challenge-21",
+        "challenge-24"
       ]
     },
     {
@@ -127,7 +138,63 @@
         "challenge-17",
         "challenge-18",
         "challenge-19",
-        "challenge-21"
+        "challenge-21",
+        "challenge-22",
+        "challenge-23",
+        "challenge-24",
+        "challenge-25",
+        "challenge-26"
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "description": "Review application and platform risks, strengthen delivery controls, and build evidence for secure release decisions.",
+      "challenge_ids": [
+        "challenge-5",
+        "challenge-6",
+        "challenge-12",
+        "challenge-19",
+        "challenge-21",
+        "challenge-22",
+        "challenge-25"
+      ]
+    },
+    {
+      "id": "database-engineering",
+      "name": "Database Engineering",
+      "description": "Design, tune, migrate, and operate data stores behind APIs, modernized systems, and Azure platforms.",
+      "challenge_ids": [
+        "challenge-1",
+        "challenge-12",
+        "challenge-18",
+        "challenge-19",
+        "challenge-21",
+        "challenge-24"
+      ]
+    },
+    {
+      "id": "documentation-enablement",
+      "name": "Documentation and Enablement",
+      "description": "Turn product, architecture, and delivery knowledge into accurate guidance that helps teams complete real tasks.",
+      "challenge_ids": [
+        "challenge-0",
+        "challenge-13",
+        "challenge-15",
+        "challenge-17",
+        "challenge-26"
+      ]
+    },
+    {
+      "id": "mobile-development",
+      "name": "Mobile Development",
+      "description": "Build and test dependable user journeys across mobile interfaces, services, and intermittent connectivity.",
+      "challenge_ids": [
+        "challenge-4",
+        "challenge-8",
+        "challenge-9",
+        "challenge-10",
+        "challenge-27"
       ]
     }
   ]

@@ -1,0 +1,23 @@
+{
+	"name": "Challenge 24 - Peak-Load Database Rescue",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.12"
+		},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"ms-mssql.mssql",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-24-database-rescue && python -m venv challenges/challenge-24-database-rescue/.venv && challenges/challenge-24-database-rescue/.venv/bin/pip install -r challenges/challenge-24-database-rescue/requirements-dev.txt && bash challenges/challenge-24-database-rescue/scripts/validate.sh",
+	"remoteUser": "vscode"
+}

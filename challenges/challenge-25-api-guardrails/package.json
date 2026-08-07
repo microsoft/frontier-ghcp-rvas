@@ -1,0 +1,24 @@
+{
+  "name": "challenge-25-api-guardrails",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local starter kit for the Enterprise API Guardrails challenge",
+  "type": "module",
+  "scripts": {
+    "mocks": "node scripts/start-mocks.js",
+    "smoke": "node scripts/smoke-tests.js",
+    "validate:openapi": "node scripts/validate-openapi.js",
+    "validate:policies": "node scripts/validate-policies.js",
+    "check:contracts": "node scripts/check-contracts.js",
+    "check:contracts:baseline": "node scripts/check-contracts.js --report-only",
+    "test": "node --test && npm run validate:openapi && npm run validate:policies && npm run smoke"
+  },
+  "dependencies": {
+    "fast-xml-parser": "5.10.1",
+    "openapi-schema-validator": "12.1.3",
+    "yaml": "2.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

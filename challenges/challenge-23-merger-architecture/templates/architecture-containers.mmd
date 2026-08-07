@@ -1,0 +1,14 @@
+flowchart LR
+    %% Show Azure services, retained source systems, trust boundaries, data paths, and observability.
+    CLIENT[TODO: Client]
+    EDGE[TODO: Azure entry service]
+    INTEGRATION[TODO: Integration component]
+    DATA[TODO: Data component]
+    SOURCE[TODO: Retained source]
+    OPS[TODO: Operations and audit]
+
+    CLIENT --> EDGE
+    EDGE --> INTEGRATION
+    INTEGRATION --> DATA
+    INTEGRATION --> SOURCE
+    INTEGRATION --> OPS

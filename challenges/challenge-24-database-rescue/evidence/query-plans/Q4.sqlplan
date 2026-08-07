@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShowPlanXML xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan" Version="1.617">
+  <BatchSequence>
+    <Batch>
+      <Statements>
+        <StmtSimple StatementText="Q4 operations order search" StatementSubTreeCost="12.87">
+          <QueryPlan CachedPlanSize="40" CompileTime="7" CompileCPU="7">
+            <RelOp NodeId="0" PhysicalOp="Top N Sort" LogicalOp="Top" EstimateRows="100">
+              <RelOp NodeId="1" PhysicalOp="Clustered Index Scan" LogicalOp="Clustered Index Scan" EstimateRows="100000" />
+            </RelOp>
+          </QueryPlan>
+        </StmtSimple>
+      </Statements>
+    </Batch>
+  </BatchSequence>
+</ShowPlanXML>

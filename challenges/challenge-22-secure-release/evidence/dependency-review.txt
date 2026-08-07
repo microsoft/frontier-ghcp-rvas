@@ -1,0 +1,13 @@
+Secure Release Review dependency evidence
+Captured for the local training release candidate
+
+Command:
+  dotnet list SecureReleaseReview.sln package --vulnerable --include-transitive
+
+Reviewer note:
+  The API references Newtonsoft.Json 12.0.1 even though the application uses
+  System.Text.Json. Confirm the advisory and affected version with the local
+  command, decide whether the package is needed, and record the evidence used
+  for the release decision.
+
+This file is a review lead, not a substitute for running the command.

@@ -1,0 +1,10 @@
+system_id,organization,system,capabilities,owner,technology,data_authority,availability,change_window,known_constraint
+HPC-CRM,HPC,Customer Hub,"customer profile;consent;support lookup",Customer Operations,".NET;SQL Server",HPC retail customer,99.95%,Sunday 02:00-04:00 UTC,"Customer ID reused by reporting extracts"
+HPC-OMS,HPC,Retail Order Manager,"cart checkout;order;returns;refund request",Retail Commerce,"Java;SQL Server",HPC retail order,99.95%,Tuesday 01:00-03:00 UTC,"Publishes no domain events"
+HPC-IAM,HPC,Shopper Identity,"customer login;MFA;password reset",Digital Experience,"OIDC provider;custom profile store",HPC login credential,99.99%,Monthly,"Email is treated as unique"
+HPC-BI,HPC,Enterprise Reporting,"sales;refund;customer reports",Finance Data,"SQL Server;SSIS",HPC management report,06:00 daily,Weeknights,"Reads replicas of CRM and OMS schemas directly"
+NMN-BUY,NMN,Buyer Registry,"buyer profile;communication preference",Marketplace Experience,"Node.js;PostgreSQL",NMN buyer,99.9%,Wednesday 00:00-02:00 UTC,"A buyer may share email with seller staff"
+NMN-ORD,NMN,Marketplace Orders,"order;fulfilment;dispute;refund",Marketplace Core,"Kotlin;PostgreSQL;Kafka-compatible broker",NMN marketplace order,99.95%,Rolling,"Event schema has three active versions"
+NMN-ID,NMN,Marketplace Identity,"buyer login;seller workforce login;federation",Identity Platform,"OIDC provider;directory",NMN principal and seller workforce,99.99%,Quarterly,"Tenant boundary is part of authorization"
+NMN-LAKE,NMN,Marketplace Analytics,"seller settlement;buyer behavior;regulatory extracts",Data Platform,"ADLS Gen2;Spark",NMN analytical history,08:00 daily,Daily,"Corrections arrive as compensating events"
+NMN-SELL,NMN,Seller Administration,"seller onboarding;catalog ownership;staff roles",Seller Platform,"Python;PostgreSQL",seller organization and role,99.9%,Thursday 02:00-04:00 UTC,"Must remain isolated from retail administration"

@@ -1,0 +1,1 @@
+-- Add rollback steps that preserve writes accepted during the compatibility window.

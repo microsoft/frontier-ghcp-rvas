@@ -1,0 +1,20 @@
+id: challenge-27
+number: 27
+title: Offline Field Service App
+category: core-tracks
+difficulty: intermediate
+duration_minutes: 300
+description: Build a dependable mobile workflow for field technicians who work with intermittent connectivity.
+focus: Designing offline data flows, synchronization behavior, and testable failure handling with GitHub Copilot
+tags:
+  - mobile-development
+  - offline-first
+  - field-service
+outcomes:
+  - ship-features
+  - raise-quality
+prerequisites: []
+devcontainer_key: challenge-27-offline-mobile
+track_url: tracks/challenge-27-offline-mobile-track.md
+contents_url: tracks/challenge-27-offline-mobile-track/stages.md
+starter_path: challenges/challenge-27-offline-mobile/

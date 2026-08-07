@@ -1,0 +1,20 @@
+id: challenge-24
+number: 24
+title: Peak-Load Database Rescue
+category: azure-platform
+difficulty: advanced
+duration_minutes: 300
+description: Diagnose and stabilize a SQL Server workload before validating the result against Azure SQL.
+focus: Reproducing peak-load symptoms, reading execution evidence, tuning safely, and shipping a backward-compatible database change with operational controls
+tags:
+  - azure-sql
+  - sql-server
+  - database-performance
+  - database-reliability
+outcomes:
+  - raise-quality
+  - platform-foundation
+prerequisites: []
+track_url: tracks/challenge-24-database-rescue-track.md
+contents_url: tracks/challenge-24-database-rescue-track/stages.md
+starter_path: challenges/challenge-24-database-rescue/

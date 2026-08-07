@@ -1,0 +1,8 @@
+flow,normal_volume,peak_volume,payload,latency_or_freshness,availability,recovery_objective,notes
+Customer lookup,220 requests/s,900 requests/s,3-8 KB,p95 under 450 ms,99.95%,RTO 60 min,"Peak follows campaigns"
+Identity token validation,1800 requests/s,5200 requests/s,under 4 KB,p95 under 120 ms,99.99%,RTO 15 min,"Seller workforce must stay tenant-scoped"
+Retail order changes,1.6 million/day,90 events/s,2-12 KB,visible under 2 min,99.9%,RPO 5 min,"Source has no event publisher today"
+Marketplace order events,4.8 million/day,320 events/s,4-24 KB,visible under 60 s,99.95%,RPO 1 min,"Three schema versions are active"
+Refund updates,140000/day,35 events/s,2-10 KB,visible under 5 min,99.9%,RPO 5 min,"Duplicate notifications have occurred"
+Combined finance report,1 run/day,2 runs/day,18 GB compressed,ready by 07:00 local,99.5%,RPO 24 h,"Must reconcile late corrections"
+Historical order query,35 requests/s,180 requests/s,10-200 KB,p95 under 2 s,99.9%,RTO 4 h,"Seven years online; older data may archive"

@@ -1,0 +1,15 @@
+<policies>
+  <inbound>
+    <base />
+    <!-- Add the approved identity, version, quota, and correlation controls here. -->
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+  <on-error>
+    <base />
+  </on-error>
+</policies>

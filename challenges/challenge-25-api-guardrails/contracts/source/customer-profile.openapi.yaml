@@ -1,0 +1,96 @@
+openapi: 3.0.3
+info:
+  title: Customer Profile API
+  version: 1.4.0
+servers:
+  - url: http://localhost:4101/v1
+tags:
+  - name: customers
+paths:
+  /customers:
+    get:
+      operationId: listCustomers
+      tags:
+        - customers
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: X-Correlation-ID
+          in: header
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Customer page
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - items
+                  - totalCount
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Customer"
+                  totalCount:
+                    type: integer
+        "400":
+          $ref: "#/components/responses/Problem"
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Customer:
+      type: object
+      required:
+        - customerId
+        - displayName
+      properties:
+        customerId:
+          type: string
+        displayName:
+          type: string
+        primaryEmail:
+          type: string
+          format: email
+    Problem:
+      type: object
+      required:
+        - type
+        - title
+        - status
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
+  responses:
+    Problem:
+      description: Request could not be processed
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
