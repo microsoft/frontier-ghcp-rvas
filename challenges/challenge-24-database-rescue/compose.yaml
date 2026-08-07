@@ -5,9 +5,9 @@ services:
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_PID: Developer
-      MSSQL_SA_PASSWORD: "${MSSQL_SA_PASSWORD:-LocalOnly_Strong_Password_2026!}"
+      MSSQL_SA_PASSWORD: "${MSSQL_SA_PASSWORD:-}"
     ports:
-      - "${MSSQL_PORT:-14333}:1433"
+      - "127.0.0.1:${MSSQL_PORT:-14333}:1433"
     volumes:
       - sqlserver-data:/var/opt/mssql
     restart: unless-stopped

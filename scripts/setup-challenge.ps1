@@ -201,7 +201,7 @@ cleaned up files from other challenges.
 Write-Host "[OK] Updated .devcontainer/README.md" -ForegroundColor Green
 
 # Remove files that are not for participants
-foreach ($RemoveFile in @("FACILITATOR_GUIDE.md", "CONTRIBUTING.md")) {
+foreach ($RemoveFile in @("CONTRIBUTING.md")) {
     $RemovePath = Join-Path $RepoRoot $RemoveFile
     if (Test-Path $RemovePath) {
         Remove-Item -Path $RemovePath -Force

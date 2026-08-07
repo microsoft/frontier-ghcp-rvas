@@ -14,5 +14,5 @@
 		}
 	},
 	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-27-offline-mobile && npm --prefix challenges/challenge-27-offline-mobile install",
-	"remoteUser": "vscode"
+	"remoteUser": "node"
 }

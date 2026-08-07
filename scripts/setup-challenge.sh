@@ -242,7 +242,7 @@ echo "[OK] Updated .devcontainer/README.md"
 
 # ── Remove files that are not for participants ─────────────────────
 
-for remove_file in FACILITATOR_GUIDE.md CONTRIBUTING.md; do
+for remove_file in CONTRIBUTING.md; do
   if [[ -f "$REPO_ROOT/$remove_file" ]]; then
     rm -f "$REPO_ROOT/$remove_file"
     echo "[CLEAN] Removed $remove_file"

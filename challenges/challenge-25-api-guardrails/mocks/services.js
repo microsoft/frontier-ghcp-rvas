@@ -97,13 +97,18 @@ const definitions = [
 export async function startAllMocks() {
   const running = [];
 
-  for (const definition of definitions) {
-    const server = http.createServer(definition.handler);
-    await new Promise((resolve, reject) => {
-      server.once("error", reject);
-      server.listen(definition.port, "127.0.0.1", resolve);
-    });
-    running.push({ ...definition, server });
+  try {
+    for (const definition of definitions) {
+      const server = http.createServer(definition.handler);
+      await new Promise((resolve, reject) => {
+        server.once("error", reject);
+        server.listen(definition.port, "127.0.0.1", resolve);
+      });
+      running.push({ ...definition, server });
+    }
+  } catch (error) {
+    await stopAllMocks(running);
+    throw error;
   }
 
   return running;

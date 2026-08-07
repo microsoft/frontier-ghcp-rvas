@@ -71,10 +71,21 @@ bash scripts/validate.sh
 ```
 
 If Docker can run the SQL Server 2022 image, build and execute the authoritative
-schema, seed, and slow workload locally:
+schema, seed, and slow workload locally. Set a strong password for this local
+session first:
 
 ```bash
+read -rsp "SQL Server SA password: " MSSQL_SA_PASSWORD
+echo
+export MSSQL_SA_PASSWORD
 bash scripts/run-local-sqlserver.sh
+```
+
+Stop the local service when you finish. This command does not require the
+password to remain in your shell:
+
+```bash
+docker compose down
 ```
 
 Keep the work local through the first three stages. Azure SQL validation is an
