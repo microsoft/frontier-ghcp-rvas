@@ -35,6 +35,8 @@ A brief 5-minute check-in:
 
 This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication. Focus on getting a working trail directory and condition reporting flow running end-to-end in the Codespace.
 
+If the shared repository instructions or the sprint board sync skill are producing conflicting guidance across roles, such as backend and frontend drifting from the same trail data model, revise them together as a team now, before Sprint 2 wraps up, rather than living with the mismatch through the demo.
+
 ---
 
 Previous: [Phase 2: Sprint 1 -- Core Features](phase-2-sprint-1-build.md) | Next: [Phase 4: Ship and Demo](phase-4-deploy-demo.md)

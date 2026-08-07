@@ -23,6 +23,8 @@
 
 7. **Open PRs** for each feature.
 
+If your UI agent produces a generic dashboard, ignores the stats response shape, or conflicts with the established badge styles, refine its guidance before opening the PR.
+
 ## Verification
 
 - [ ] Frontend connected to the real backend (no mocked data in the critical path)

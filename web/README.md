@@ -8,10 +8,12 @@ Bespoke static site for the GitHub Copilot Adoption delivery session. No server 
 node web/build.js
 ```
 
-Reads `challenges/*/meta.yml`, `learning-paths.json`, and track markdown, then generates:
+Reads `challenges/*/meta.yml`, `learning-paths.json`,
+`role-collections.json`, and track markdown, then generates:
 
 - `web/assets/data/platform.json` -- full catalog and each challenge's page manifest
 - `web/assets/data/paths.json` -- curated learning paths
+- `web/assets/data/roles.json` -- curated enterprise role collections
 - `web/assets/data/challenges/<id>/pages/<page-id>.md` -- one Markdown payload per challenge page
 - `web/assets/data/pages/<slug>.md` -- content docs
 
@@ -45,6 +47,7 @@ as a separate payload at
 - `builder.html` -- curated set builder
 - `set.html` -- curated set landing page
 - `paths.html` -- learning paths overview
+- `roles.html` -- challenges grouped by enterprise role
 - `guide.html` -- content guide renderer
 
 ## Shared shell
@@ -66,6 +69,7 @@ script from pairing with a stale cached `core.js`, which throws a runtime error 
 
 - `FP.loadData()` → Promise(platform.json), cached
 - `FP.loadPaths()` → Promise(paths.json), cached
+- `FP.loadRoles()` → Promise(roles.json), cached
 - `FP.categoryColor(id)`, `FP.categoryName(id, categories)` → category utilities
 - `FP.challengeUrl(id)`, `FP.catalogUrl(catId)`, `FP.guideUrl(slug)`, `FP.setUrl(ids, name)` → URL builders
 - `FP.diffBadge(d)`, `FP.durBadge(mins)`, `FP.tagBadges(tags, limit)` → badge generators
@@ -86,6 +90,16 @@ Auto-initializes theme, nav, kiosk, reveal on DOMContentLoaded.
 | azure-platform | Azure Platform | #032254 |
 
 Use `.cat-<id>` CSS class + `style="--cat-color:<color>"` for category-specific styling.
+
+## Role collections
+
+`role-collections.json` is the source of truth for the Roles page and homepage
+role cards. Each role has a stable ID, name, description, and curated list of
+challenge IDs.
+
+The build fails when a role is empty, contains duplicate or unknown challenge
+IDs, or leaves a challenge without a role. Role order is editorial relevance,
+not a prerequisite sequence.
 
 ## Serving locally
 

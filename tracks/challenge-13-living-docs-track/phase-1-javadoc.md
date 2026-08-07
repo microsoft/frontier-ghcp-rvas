@@ -6,6 +6,8 @@
 
 ## Tasks
 
+Before generating any javadoc, use your setup: keep your repository instructions open for your documentation conventions, bring in the agent you built for reviewing documentation completeness, and run your javadoc accuracy skill class by class instead of accepting the first draft Copilot proposes for a method.
+
 1. **Audit the existing documentation.** Go through each Java file and note what already has javadoc (even if it is stale or incomplete) vs. what has none. The `Product` class has a stub; everything else is bare.
 
 2. **Generate javadoc for domain classes.** Start with `Product.java`, `Order.java`, and `OrderLine.java`. For each class, ask Copilot to explain the class based on how it is used in the controllers, then write javadoc that reflects actual behavior. Pay attention to:

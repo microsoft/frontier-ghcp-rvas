@@ -174,7 +174,7 @@ h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0; }
   margin-left: auto;
   flex: 1;
 }
-@media (min-width: 768px) {
+@media (min-width: 1120px) {
   .nav-links { display: flex; }
 }
 .nav-links a {
@@ -200,7 +200,7 @@ h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0; }
 .nav-links a.cta:hover { opacity: 0.88; background: var(--c-accent); color: var(--c-900); }
 
 .nav-actions { margin-left: auto; display: flex; align-items: center; gap: 6px; }
-@media (min-width: 768px) { .nav-actions { margin-left: 0; } }
+@media (min-width: 1120px) { .nav-actions { margin-left: 0; } }
 
 /* Icon buttons (theme, hamburger) */
 .icon-btn {
@@ -216,7 +216,7 @@ h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0; }
 .icon-btn:hover { background: var(--c-600); color: var(--c-fg); }
 .icon-btn:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 2px; }
 .nav-toggle { display: grid; }
-@media (min-width: 768px) { .nav-toggle { display: none; } }
+@media (min-width: 1120px) { .nav-toggle { display: none; } }
 
 /* Mobile nav open state */
 .nav-links.open {
@@ -406,6 +406,67 @@ h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0; }
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+}
+
+.role-summary-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+}
+
+.role-summary-card {
+  min-height: 210px;
+  padding: 22px;
+  border: 1px solid var(--c-line);
+  border-top: 3px solid var(--c-accent);
+  border-radius: var(--r);
+  background: linear-gradient(145deg, #ffffff, var(--c-800));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: inherit;
+  transition: transform 0.2s var(--ease), border-color 0.2s, box-shadow 0.2s;
+}
+
+.role-summary-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--c-accent);
+  box-shadow: var(--shadow-card);
+}
+
+.role-summary-card:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 3px;
+}
+
+.role-sequence {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--c-accent);
+  letter-spacing: 0.12em;
+}
+
+.role-summary-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--c-fg);
+}
+
+.role-summary-description {
+  color: var(--c-dim);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.role-summary-count {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--c-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .outcome-grid {

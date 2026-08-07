@@ -32,6 +32,8 @@
 
 5. **Compile, commit, and push** -- Run `gh aw compile` after each new or modified workflow.
 
+If the workflow's first PR is generic -- vague simplifications, shallow tests, or docs that restate code -- refine the repository instructions, your participant-side Workflow Author agent, or its verification skill before rerunning the separate GitHub Actions workflow.
+
 ## Verification
 
 - [ ] Code simplifier workflow committed with lock file

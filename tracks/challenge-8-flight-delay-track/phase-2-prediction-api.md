@@ -35,6 +35,8 @@ Create a REST API that serves the trained model and the list of airports so the 
 
 5. **Error handling** -- Return meaningful error messages with appropriate HTTP status codes.
 
+If your API agent or wiring skill produces a generic endpoint contract with wrong fields or missing validation, revise that customization before wiring the frontend in Phase 3.
+
 ## Getting Started
 
 1. Navigate to `challenges/challenge-8-flight-delay/server/`.

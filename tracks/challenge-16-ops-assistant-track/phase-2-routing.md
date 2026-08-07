@@ -27,6 +27,8 @@
 
 5. **Add incident history correlation.** Enhance the prompt to reference historical incidents. When a new error matches a past incident's pattern, the prompt should say: "This matches INC-2025-0051 (resolved by adding a database index). Check if the fix has regressed."
 
+If your routing agent or triage skill gives generic advice or conflicts with the team-routing guide, revise that customization's rules before moving to troubleshooting aids.
+
 ## Verification
 
 - [ ] Incident routing prompt created (`.github/prompts/route-incident.prompt.md`)

@@ -57,6 +57,8 @@ You are testing the running WCF service over HTTP, not the implementation classe
    - Amortization schedule date sequence -- does `AddDays(30)` vs `AddMonths(1)` matter for a short term?
    - Statement summary for a date range with no transactions
 
+If your Banking Domain agent or WSDL skill produces a generic characterization test or misses the frozen-account edge case, refine that customization before trusting the test as a migration safety net.
+
 ## Verification
 
 - [ ] Test project compiles and connects to the running WCF service

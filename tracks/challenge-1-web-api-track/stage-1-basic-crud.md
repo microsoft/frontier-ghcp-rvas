@@ -6,6 +6,8 @@ Build the core task management endpoints using the in-memory data store.
 
 ## Tasks
 
+Before writing the first route, set the stage: keep your repository instructions open so Copilot knows the framework and conventions, bring in the agent you built for REST design judgment, and use your endpoint scaffolding skill so every resource follows the same shape from the start.
+
 1. Implement task CRUD endpoints: `POST /tasks`, `GET /tasks`, `GET /tasks/:id`, `PUT /tasks/:id`, `DELETE /tasks/:id`, `PATCH /tasks/:id/complete`.
 2. Input validation: title is required (3-100 characters), status must be a valid enum value (`todo`, `in_progress`, `done`), priority must be valid (`low`, `medium`, `high`).
 3. Proper HTTP status codes: 201 for creation, 400 for invalid input, 404 for not found, 200 for success.

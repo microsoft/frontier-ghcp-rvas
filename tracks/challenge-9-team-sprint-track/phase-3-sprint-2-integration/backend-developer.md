@@ -20,6 +20,8 @@
 
 5. **Open PRs** for each feature. Keep them small and reviewable.
 
+If your API agent proposes a fix or endpoint that ignores an existing convention or conflicts with the Phase 1 spec, refine the agent's guidance before asking it to review the contract again.
+
 ## Verification
 
 - [ ] Sprint 1 bugs fixed

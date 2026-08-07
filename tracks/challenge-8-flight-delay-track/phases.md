@@ -1,4 +1,4 @@
-# Challenge 8 Track: Full-Stack Flight Delay Predictor: Phases
+# Full-Stack Flight Delay Predictor: Phases
 
 ## Phases
 

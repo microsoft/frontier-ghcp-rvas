@@ -6,6 +6,8 @@ Before writing any tests, you need to know what you're testing. In this stage yo
 
 ## Tasks
 
+Before you write a single test, put the full setup to work: keep your repository instructions open for the eShop and Playwright context, bring in the test planning agent you built for flow and risk judgment, and use your selector discovery skill as you explore instead of guessing at selectors from memory.
+
 1. **Explore the app manually**: Open the running eShop application in your browser. Click through the main flows: browse the catalog, view a product, log in, add items to the cart. Take notes on what you see -- page names, key elements, forms, buttons, navigation patterns.
 
 2. **Ask Copilot about the app**: Open the `app/` folder in VS Code. Use Copilot Chat to ask questions about the application. Try prompts like:

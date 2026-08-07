@@ -4,6 +4,8 @@
 
 ## Tasks
 
+Plan to actually consult the infra-engineer agent on judgment calls like resource limits and CI structure, not just to have it exist alongside the pipeline.
+
 1. **Set up the repository structure** -- Define branching strategy (trunk-based or feature branches). Write a short doc in `docs/branching-strategy.md` with the team's agreement on PR conventions.
 
 2. **Configure the devcontainer** -- Set up `.devcontainer/devcontainer.json` so the Codespace includes all runtimes the team needs (Node.js, Python, PostgreSQL). Add VS Code extensions, port forwarding rules, and any post-create scripts.

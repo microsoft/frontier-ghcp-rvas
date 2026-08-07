@@ -1,4 +1,4 @@
-# Challenge 12 Track: Legacy Code Modernization: Phases
+# Legacy Code Modernization: Phases
 
 ## Phases
 

@@ -6,6 +6,8 @@ This stage establishes the foundation. You need a product brief that goes beyond
 
 ## Tasks
 
+Before you draft anything, put your setup to work: keep `.github/copilot-instructions.md` open as the baseline context on TaskFlow, bring in whichever product agent you built for positioning and KPI judgment, and run your document critique or story-writing skill instead of writing every section from a blank prompt.
+
 1. **Complete the product brief** in [docs/product-brief.md](../../challenges/challenge-0-product-planning/docs/product-brief.md). Fill in every section.
 
 2. **Competitive analysis** -- Add a new section to the product brief comparing TaskFlow to three real competitors (pick from Jira, Linear, Asana, Trello, ClickUp, or Monday.com). Create a positioning matrix that maps each product on two axes of your choosing (e.g., simplicity vs. power, individual vs. team-oriented). Explain where TaskFlow fits and why.

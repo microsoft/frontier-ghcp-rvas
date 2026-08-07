@@ -29,6 +29,8 @@
 
 5. **Identify what the prompt misses.** What would a senior developer add that the prompt did not? Common gaps: error handling strategy, monitoring/observability plan, performance considerations for the usage metering queries.
 
+If your Technical Analyst agent or spec workflow produces generic API decisions or a schema that misses metering requirements, refine that customization before Phase 3 builds against it.
+
 ## Verification
 
 - [ ] Technical analysis prompt created (`.github/prompts/technical-analysis.prompt.md`)

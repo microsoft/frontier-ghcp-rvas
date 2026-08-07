@@ -23,6 +23,8 @@ The dataset (`data/flights.csv`) contains ~272,000 records of US flights from 20
 
 ## Requirements
 
+Before you open the notebook, use your full setup: keep your repository instructions open for the project's goal and conventions, bring in the data scientist agent you built for feature and model judgment, and run your end-to-end wiring or leakage-check skill as you go rather than checking for leakage only at the end.
+
 1. **Load & Inspect** -- Load `data/flights.csv`, display shape, column types, first rows, summary statistics.
 2. **Clean** -- Identify null/missing values and handle them (e.g., replace with 0 or drop).
 3. **Explore** -- Create visualizations:

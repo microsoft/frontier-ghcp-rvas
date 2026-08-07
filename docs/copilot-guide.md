@@ -122,21 +122,27 @@ Click the model picker in Chat to switch models:
 
 ## Customizing Copilot
 
-### Custom Instructions
+The challenge tracks use three customization types. They work together, but
+each has a separate job.
+
+### Repository Instructions
 
 Create `.github/copilot-instructions.md` to set project-wide guidelines. Include project context, coding standards, testing requirements, and patterns to follow.
 
 ### Custom Agents
 
-Create specialized agents in `.github/agents/` as `.agent.md` files with YAML frontmatter. Define a name, description, tools, and behavioral instructions. Agents can hand off to other agents for multi-step workflows.
+Create specialized agents in `.github/agents/` as `.agent.md` files with YAML frontmatter. Use them for role-specific judgment, reviews, and decisions that need domain context.
 
-### Prompt Files
+### Custom Skills
 
-Create reusable prompts in `.github/prompts/` as `.prompt.md` files. Use `${input:variableName}` for dynamic inputs and `#file:path` references for context. Invoke them with `/prompt-name` in chat.
+Create custom skills in `.github/skills/` for repeatable, multi-step workflows.
+Skills are a better fit than an agent when the sequence should stay consistent
+across repeated runs.
 
-Use the [shared examples guidance](../tracks/getting-started.md#4-learn-from-examples-then-write-your-own)
-to find current examples. Useful search terms include "repository
-instructions", "custom agent", and "reusable prompt".
+Start with the
+[shared customization setup](../tracks/getting-started.md#3-draft-the-customization-trio).
+It explains how to inspect the challenge, keep the three artifacts distinct,
+and learn from examples without copying them.
 
 ## Security Checklist
 

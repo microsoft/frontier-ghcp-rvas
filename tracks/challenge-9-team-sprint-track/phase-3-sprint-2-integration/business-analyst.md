@@ -14,6 +14,8 @@
 
 4. **Document known issues** -- Create `docs/known-issues.md` listing bugs that the team will not fix before the demo. Include severity and workarounds.
 
+If your business analysis agent produces generic acceptance checks or poorly scoped known-issues notes, refine its guidance before handing the revised results to the PO.
+
 ## Verification
 
 - [ ] All completed features validated against acceptance criteria

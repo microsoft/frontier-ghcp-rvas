@@ -1,4 +1,4 @@
-# Challenge 10 Track: Technical Team Sprint: Phases
+# Technical Team Sprint: Phases
 
 ## Phases
 

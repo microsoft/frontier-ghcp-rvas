@@ -12,6 +12,8 @@ Add polish and interactivity that goes beyond basic CRUD.
 4. Toast notification system: success, error, and info variants. Auto-dismiss after 5 seconds with option to dismiss manually.
 5. Loading skeleton components (not spinners) for all data-loading states.
 
+If your UI agent or scaffolding skill leaves the Kanban board half-wired or conflicts with the Stage 2 state model, refine that customization before generating another pass.
+
 ## Verification
 
 - Theme persists across page reload

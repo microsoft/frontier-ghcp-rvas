@@ -1,4 +1,4 @@
-# Challenge 2 Track: ML & AI: Stages
+# ML & AI: Stages
 
 ## Stages
 

@@ -1,4 +1,4 @@
-# Challenge 6 Track: Agentic Workflows: Stages
+# Agentic Workflows: Stages
 
 ## Stages
 

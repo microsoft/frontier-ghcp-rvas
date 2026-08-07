@@ -1,4 +1,4 @@
-# Challenge 11 Track: Legacy MUMPS Modernization: Phases
+# Legacy MUMPS Modernization: Phases
 
 ## Phases
 

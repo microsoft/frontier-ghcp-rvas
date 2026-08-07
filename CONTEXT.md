@@ -10,6 +10,15 @@ A time-boxed adoption event in which participants follow a track and produce a
 working outcome.
 _Avoid_: Workshop, training
 
+**Role**:
+A broad enterprise job family used to help participants find challenges that
+match their work.
+_Avoid_: Persona, specialization
+
+**Role Collection**:
+A curated, non-sequential set of challenges relevant to one Role.
+_Avoid_: Role Track, Role Path
+
 **Stage**:
 An ordered part of a track that advances one solution through a sequence of
 increasingly capable outcomes.

@@ -6,6 +6,8 @@
 
 ## Tasks
 
+Before tightening acceptance criteria, use your business analysis agent to spot gaps, conflicting criteria, and unclear metrics before they reach the backlog.
+
 1. **Help the PO refine acceptance criteria** -- Review each user story and tighten the criteria. Make sure they are testable and specific enough that QA can write tests against them.
 
 2. **Create the data model document** -- Create `docs/data-model.md`. Define the entities (Report, Event, User), their fields, and relationships. Share with backend and frontend developers.

@@ -16,6 +16,8 @@
 
 5. **Assemble an architecture document.** Create `docs/architecture.md` in the challenge folder with all diagrams, a component description section, and a data model narrative.
 
+If your diagram agent or documentation skill misses a relationship or the restock-on-cancellation transition, refine that customization before assembling the architecture document.
+
 ## Verification
 
 - [ ] System architecture diagram created (Mermaid, shows all components)

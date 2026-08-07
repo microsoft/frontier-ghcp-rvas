@@ -1,4 +1,4 @@
-# Challenge 20 Track: PowerShell Automation: Stages
+# PowerShell Automation: Stages
 
 ## Stages
 

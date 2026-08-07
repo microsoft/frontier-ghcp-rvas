@@ -3,12 +3,16 @@
   'use strict';
 
   async function init() {
-    let data, pathsData;
-    try { 
-      data = await FP.loadData();
-      pathsData = await FP.loadPaths();
+    let data, pathsData, roleData;
+    try {
+      [data, pathsData, roleData] = await Promise.all([
+        FP.loadData(),
+        FP.loadPaths(),
+        FP.loadRoles()
+      ]);
     }
-    catch (e) { 
+    catch (e) {
+      FP.renderError('roleGrid', e.message);
       FP.renderError('categoryGrid', e.message);
       FP.renderError('pathsGrid', e.message);
       return;
@@ -16,11 +20,33 @@
 
     const { categories, challenges } = data;
     const { paths } = pathsData;
+    const { roles } = roleData;
 
     renderStats(categories, challenges, paths || []);
+    renderRoleCards(roles || []);
     renderCategoryCards(categories, challenges);
     renderPathsCards(paths || [], challenges);
     renderFeaturedChallenge(challenges);
+  }
+
+  function renderRoleCards(roles) {
+    const grid = document.getElementById('roleGrid');
+    if (!grid) return;
+    if (!roles.length) {
+      grid.innerHTML = '<div class="empty">No role collections configured.</div>';
+      return;
+    }
+
+    grid.innerHTML = roles.map((role, position) => `
+      <a class="role-summary-card reveal" href="roles.html#${FP.esc(role.id)}">
+        <span class="role-sequence">${String(position + 1).padStart(2, '0')}</span>
+        <span class="role-summary-name">${FP.esc(role.name)}</span>
+        <span class="role-summary-description">${FP.esc(role.description)}</span>
+        <span class="role-summary-count">${role.challenge_ids.length} challenges</span>
+      </a>
+    `).join('');
+
+    FP.initReveal();
   }
 
   function renderStats(categories, challenges, paths) {

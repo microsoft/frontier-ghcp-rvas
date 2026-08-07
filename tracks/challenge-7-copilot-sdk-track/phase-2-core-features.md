@@ -30,6 +30,8 @@ This is where the agent gets its hands dirty. You will build the custom tools th
     - Breaking changes should include a migration note (which the agent drafts based on the PR body and diff summary)
     - The format should follow common conventions (similar to Keep a Changelog or GitHub's auto-generated release notes)
 
+If ship-it's categorization is generic or mishandles ambiguous PRs, refine the repository instructions, your participant-side SDK Pairing agent, or the research skill before changing the separate SDK agent you are building.
+
 ## Verification
 
 - Asking "What changes are in this release?" triggers the `get_merged_prs` tool and returns real data from the target repo

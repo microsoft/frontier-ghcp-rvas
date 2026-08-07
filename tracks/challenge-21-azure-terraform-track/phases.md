@@ -1,4 +1,4 @@
-# Challenge 21 Track: Azure Terraform: Phases
+# Azure Terraform: Phases
 
 ## Phases
 

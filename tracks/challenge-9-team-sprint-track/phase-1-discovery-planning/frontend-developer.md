@@ -4,6 +4,8 @@
 
 ## Tasks
 
+Plan to actually use the ui-builder agent for the component-structure judgment calls it's meant for, not just to check the box of creating it.
+
 1. **Set up the frontend project** -- Choose a framework (React + Vite recommended). Scaffold the project:
    - Initialize with `npm create vite@latest` (or equivalent)
    - Set up routing (React Router or similar)

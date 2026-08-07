@@ -6,6 +6,8 @@ The `scripts/` folder has three PowerShell scripts inherited from a colleague wh
 
 ## Tasks
 
+Before you open the first script, use the full setup: keep your repository instructions open for your error-handling and logging conventions, bring in the PowerShell Expert agent for flagging anti-patterns, and run your script refactor skill instead of fixing issues one at a time with no consistent pass.
+
 1. Open `scripts/Get-StaleAccounts.ps1`. Use Copilot (`/explain`) to describe what the script does and what each parameter controls. Identify the date calculation bug and fix it.
 2. Open `scripts/Invoke-DiskCleanup.ps1`. Ask Copilot to list every issue it can see. Note the missing output and missing error handling -- you will fix these in Stage 2, but at minimum make the script syntactically correct and runnable.
 3. Open `scripts/Set-AzureResourceTags.ps1`. Ask Copilot to explain the risk of calling `Connect-AzAccount` without a `ServicePrincipal` or managed identity context in an automated script. Note what it says for Stage 3.

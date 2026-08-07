@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Learning Paths - GitHub Copilot Adoption</title>
-  <meta name="description" content="Curated learning paths for GitHub Copilot Adoption" />
+  <title>Challenges by Role - GitHub Copilot Adoption</title>
+  <meta name="description" content="Find GitHub Copilot Adoption challenges grouped by enterprise role." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css?v=5" />
-  <link rel="stylesheet" href="assets/css/paths.css?v=4" />
+  <link rel="stylesheet" href="assets/css/roles.css?v=1" />
   <link rel="stylesheet" href="assets/css/shell.css" />
   <link rel="icon" href="assets/img/logo-mark-white.png" type="image/png" />
 </head>
@@ -24,11 +24,11 @@
         <a href="index.html">Home</a>
         <a href="catalog.html">Catalog</a>
         <a href="builder.html">Builder</a>
-        <a href="paths.html" aria-current="page">Learning Paths</a>
-        <a href="roles.html">Roles</a>
+        <a href="paths.html">Learning Paths</a>
+        <a href="roles.html" aria-current="page">Roles</a>
         <a href="byoc.html">BYOC</a>
         <a href="guide.html?p=copilot-guide">Guides</a>
-              <a class="cta" href="catalog.html">Browse all challenges →</a>
+        <a class="cta" href="catalog.html">Browse all challenges →</a>
         <a class="gh" href="https://github.com/microsoft/frontier-ghcp-rvas" target="_blank" rel="noopener" aria-label="View source on GitHub">GitHub ↗</a>
       </nav>
       <div class="nav-actions">
@@ -39,33 +39,33 @@
     </div>
   </header>
 
-  <main>
+  <main id="mainContent">
 
-    <!-- ═══════════════════════ HERO ══════════════════════════════ -->
-    <section class="hero" aria-labelledby="heroHeading">
+    <section class="catalog-hero roles-hero" aria-labelledby="rolesHeading">
       <div class="wrap">
-        <span class="eyebrow">Curated sequences</span>
-        <h1 id="heroHeading">Learning paths.</h1>
-        <p class="lede">
-          Pre-built challenge sequences that build toward specific outcomes. Share any path with students, teams, or workshop participants.
-        </p>
+        <span class="eyebrow">Enterprise roles</span>
+        <h1 id="rolesHeading">Challenges by role.</h1>
+        <p>Start with the work closest to your job. Each collection is curated for relevance, not arranged as a required sequence.</p>
       </div>
     </section>
 
-    <!-- ═══════════════════════ PATHS ══════════════════════════════ -->
-    <section class="section" aria-labelledby="pathsHeading">
+    <section class="section-tight" aria-labelledby="roleIndexHeading">
       <div class="wrap">
-        <div class="shead reveal">
+        <div class="shead">
           <div>
-            <h2 id="pathsHeading" class="sr-only">All learning paths</h2>
+            <h2 id="roleIndexHeading">Choose your role.</h2>
+            <p>Roles overlap on purpose. Cross-functional challenges can appear in more than one collection.</p>
           </div>
-          <a class="link" href="builder.html">Build custom path →</a>
         </div>
-        <div class="paths-grid" id="pathsGrid">
-          <div class="empty">Loading paths…</div>
-        </div>
+        <nav class="role-summary-grid" id="roleIndex" aria-label="Role collections">
+          <div class="empty" role="status">Loading roles…</div>
+        </nav>
       </div>
     </section>
+
+    <div class="role-collections" id="roleCollections">
+      <div class="empty" role="status">Loading role collections…</div>
+    </div>
 
   </main>
 
@@ -87,7 +87,7 @@
   </footer>
 
   <script src="assets/js/core.js?v=5"></script>
-  <script src="assets/js/paths.js?v=4"></script>
+  <script src="assets/js/roles.js?v=1"></script>
   <script src="assets/js/shell.js"></script>
 </body>
 </html>

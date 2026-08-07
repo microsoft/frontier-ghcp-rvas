@@ -4,6 +4,9 @@
 
 GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
 
+Each session includes repository instructions, custom agents, and custom skills
+tailored to the work.
+
 ## Two Ways to Run a GitHub Copilot Adoption Delivery Session
 
 ### Option 1: Pick a Worked-Example Challenge
@@ -51,7 +54,14 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 
 Coaches who need a focused workshop path can use the site's Challenge Set Builder and Learning Paths pages to select challenges and generate a single shareable student URL.
 
-Each track provides a curated path through the challenges based on your role, with specific guidance, tips, and learning objectives.
+Each track provides its own stage or phase progression with specific guidance,
+tips, and learning objectives.
+
+The documentation site also groups challenges into nine enterprise Role
+Collections. Use the **Roles** page to find relevant work for product and
+business roles, frontend and backend developers, full-stack developers, data
+and AI practitioners, QA, DevOps and platform teams, IT operations, and
+technical leads.
 
 ## Duration
 
@@ -67,7 +77,14 @@ To build the site data locally:
 node web/build.js
 ```
 
-This reads `challenges/*/meta.yml`, `learning-paths.json`, and track markdown files, then writes the site data to `web/assets/data/`.
+This reads `challenges/*/meta.yml`, `learning-paths.json`,
+`role-collections.json`, and track markdown files, then writes the site data to
+`web/assets/data/`.
+
+Role Collections are curated challenge groups, not required sequences.
+`role-collections.json` is their source of truth. The build rejects unknown
+challenge IDs, duplicate role entries, empty collections, and challenges that
+are not assigned to any role.
 
 Each challenge is published as a set of pages rather than one concatenated guide:
 
@@ -217,18 +234,17 @@ As you work through these challenges, you'll build proficiency with GitHub Copil
 - **Planning Mode** - High-level architectural reasoning
 - Workspace context chat
 
-### 2. **Prompt Engineering**
+### 2. **Repository Instructions**
 
-- Effective prompt patterns
-- Context-aware requests
-- Iterative refinement
-- Collections and reusable prompts
+- Stable project context and constraints
+- Coding, testing, and review conventions
+- Mid-session refinement based on what the team learns
 
-### 3. **Extensibility & Custom Agents**
+### 3. **Custom Agents and Skills**
 
 - **MCP Servers** - Connect external tools and data
 - **Custom Agents** - Build and use specialized assistants
-- Enhanced context for Copilot
+- **Custom Skills** - Capture repeatable workflows
 
 ### 4. **Inline Suggestions**
 
@@ -379,9 +395,9 @@ Reverse-engineer and modernize the Acme Bank Account Manager -- an undocumented 
 **Team**: Solo or pair (Java developers, tech leads)
 **Duration**: 6-8 hours
 **Skills**: Java, Javadoc, Mermaid diagrams, Markdown
-**Copilot Focus**: Bulk javadoc generation, architecture diagram creation, custom prompts for changelogs, custom agents for PR documentation review
+**Copilot Focus**: Bulk javadoc generation, architecture diagrams, changelog workflow skills, custom agents for PR documentation review
 
-Automate the documentation of the Widget Corp Inventory Manager -- a Java application with stale javadoc, a changelog that stopped being updated two versions ago, and zero architecture diagrams. Generate accurate javadoc, create Mermaid diagrams for architecture and data model, build a changelog prompt that works from code diffs, and create an agent that reviews PRs for documentation completeness.
+Automate the documentation of the Widget Corp Inventory Manager -- a Java application with stale javadoc, a changelog that stopped being updated two versions ago, and zero architecture diagrams. Generate accurate javadoc, create Mermaid diagrams for architecture and data model, build a repeatable changelog workflow, and create an agent that reviews PRs for documentation completeness.
 
 ---
 
@@ -390,7 +406,7 @@ Automate the documentation of the Widget Corp Inventory Manager -- a Java applic
 **Team**: Solo or pair (DevOps, platform engineers, developers)
 **Duration**: 6-8 hours
 **Skills**: GitHub Actions, Node.js, Shell scripting, CI/CD concepts
-**Copilot Focus**: Workflow generation, `/fix` for debugging broken deployments, reusable workflow design, incident runbook prompts
+**Copilot Focus**: Workflow generation, `/fix` for debugging broken deployments, reusable workflow design, incident runbook skills
 
 Build CI/CD pipelines for TaskBoard, a kanban app that currently deploys via a shell script with commented-out scp commands. Create GitHub Actions workflows, debug 5 deliberate bugs in a broken staging deployment, build reusable workflow templates, and generate deployment gates with rollback mechanisms and incident runbooks.
 
@@ -401,9 +417,9 @@ Build CI/CD pipelines for TaskBoard, a kanban app that currently deploys via a s
 **Team**: Solo or pair (product owners, tech leads, scrum masters)
 **Duration**: 6-8 hours (no code required)
 **Skills**: Agile concepts (Epics, Stories, Acceptance Criteria), Jira/Confluence (optional)
-**Copilot Focus**: Custom prompts for spec-to-backlog conversion, custom agents for refinement, Atlassian Rovo MCP server for Jira/Confluence integration
+**Copilot Focus**: Spec-to-backlog workflow skills, custom agents for refinement, Atlassian Rovo MCP server for Jira/Confluence integration
 
-Convert three use case specifications of increasing complexity (Password Reset, Notification Preferences, Inventory Reorder) into structured backlogs. Build a reusable prompt that produces Epics, Stories, Tasks, and Test Cases following INVEST criteria. Create a refinement agent that reviews generated backlogs for gaps. Optionally push items directly to Jira using the Atlassian MCP server.
+Convert three use case specifications of increasing complexity (Password Reset, Notification Preferences, Inventory Reorder) into structured backlogs. Build a reusable skill that produces Epics, Stories, Tasks, and Test Cases following INVEST criteria. Create a refinement agent that reviews generated backlogs for gaps. Optionally push items directly to Jira using the Atlassian MCP server.
 
 ---
 
@@ -412,9 +428,9 @@ Convert three use case specifications of increasing complexity (Password Reset, 
 **Team**: Solo or pair (support engineers, SREs, ops teams)
 **Duration**: 6-8 hours
 **Skills**: Log analysis concepts, incident management, basic Node.js (optional)
-**Copilot Focus**: Custom agents for log analysis, custom prompts for incident routing and runbook generation, error-to-plain-language translation
+**Copilot Focus**: Custom agents for log analysis, incident routing and runbook workflow skills, error-to-plain-language translation
 
-Build AI-assisted operations tooling for the Order Gateway -- a critical e-commerce service. Analyze two days of production logs containing payment timeouts, database deadlocks, connection pool exhaustion, and OutOfMemoryErrors. Create a log analysis agent that explains errors in plain language for non-technical support staff, build an incident routing prompt that maps errors to responsible teams, and generate troubleshooting runbooks from historical incident data.
+Build AI-assisted operations tooling for the Order Gateway -- a critical e-commerce service. Analyze two days of production logs containing payment timeouts, database deadlocks, connection pool exhaustion, and OutOfMemoryErrors. Create a log analysis agent that explains errors in plain language for non-technical support staff, build an incident routing skill that maps errors to responsible teams, and generate troubleshooting runbooks from historical incident data.
 
 ---
 
@@ -423,9 +439,9 @@ Build AI-assisted operations tooling for the Order Gateway -- a critical e-comme
 **Team**: Solo or pair (tech leads, senior developers)
 **Duration**: 6-8 hours
 **Skills**: Full SDLC concepts, Node.js, GitHub Actions
-**Copilot Focus**: End-to-end prompt chain -- spec to backlog to technical analysis to code to tests to CI pipeline, custom agents for test specification
+**Copilot Focus**: End-to-end workflow skills -- spec to backlog to technical analysis to code to tests to CI pipeline, custom agents for test specification
 
-Compress the full development lifecycle for a billing module on an existing multi-tenant SaaS platform. Start with a functional requirements document and an existing tenant management API. Build prompts that convert the spec into work items, generate a technical analysis against the existing codebase, implement the billing module from generated stories, create test specifications with a custom agent, and wire up a CI pipeline -- all producing reusable Copilot artifacts.
+Compress the full development lifecycle for a billing module on an existing multi-tenant SaaS platform. Start with a functional requirements document and an existing tenant management API. Build skills that convert the spec into work items and carry each handoff forward, generate a technical analysis against the existing codebase, implement the billing module from generated stories, create test specifications with a custom agent, and wire up a CI pipeline.
 
 ---
 
@@ -478,7 +494,7 @@ Build an Azure Terraform foundation across 5 phases: bootstrap remote state and 
 
 Use the [shared examples guidance](./tracks/getting-started.md#4-learn-from-examples-then-write-your-own)
 to find current examples. Search for terms that match the artifact you need,
-such as "repository instructions", "custom agent", or "reusable prompt".
+such as "repository instructions", "custom agent", or "workflow skill".
 
 ### GitHub Copilot Documentation
 
@@ -592,7 +608,7 @@ After the session:
 
 1. Apply Copilot to your daily work
 2. Explore advanced features and settings
-3. Create team-specific prompt collections
+3. Refine your team's repository instructions, custom agents, and custom skills
 4. Share knowledge with your organization
 5. Measure and track productivity improvements
 

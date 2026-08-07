@@ -20,6 +20,8 @@
 
 6. **Generate a test report** -- Share results with the team (HTML report, or paste a summary into a GitHub Issue).
 
+If your test agent produces generic assertions or coverage that does not map to a TrailMate scenario, refine its guidance before relying on the test for the integration run.
+
 ## Verification
 
 - [ ] Full E2E suite run against the integrated app

@@ -11,6 +11,8 @@ Provision Azure infrastructure using Terraform with proper variable management.
 3. Create `terraform/azure/outputs.tf`: output ACR login server, AKS cluster name, kubeconfig command, and resource group name.
 4. Configure a remote state backend using Azure Storage Account.
 
+If your Terraform agent or pipeline skill produces hardcoded inputs or naming that conflicts with the tagging standard, revise that customization before moving to Stage 4.
+
 ## Verification
 
 - `terraform validate` passes

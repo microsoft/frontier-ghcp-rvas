@@ -1,4 +1,4 @@
-# Challenge 15 Track: Backlog Generator: Phases
+# Backlog Generator: Phases
 
 ## Phases
 

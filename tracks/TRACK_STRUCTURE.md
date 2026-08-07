@@ -49,9 +49,10 @@ The overview is the main file at `tracks/<track-name>.md`. Sections marked
 
 6. ## Getting Started                         (required)
    - Link to getting-started.md
-   - ### Custom Instructions for This Track
-   - ### Suggested Agents
-   - ### Open the Challenge
+   - ### Open and Inspect the Challenge
+   - ### Repository Instructions for This Track
+   - ### Suggested Custom Agents
+   - ### Suggested Custom Skills
 
 7. ## Tips for Using Copilot on This Track    (required)
 
@@ -70,7 +71,7 @@ The contents page is `tracks/<track-name>/stages.md` or
 `tracks/<track-name>/phases.md`.
 
 ```text
-1. # Track Title: Stages or Phases             (required)
+1. # Challenge Name: Stages or Phases         (required)
 
 2. ## Stages or ## Phases                      (required)
    - Summary table with linked names
@@ -99,6 +100,8 @@ Each top-level stage or phase lives at
    - Difficulty and time metadata
 
 2. ## Tasks                                    (required)
+   - Early use cue for the customization trio (if applicable)
+   - Midpoint refinement cue (if applicable)
 
 3. ## Verification                             (required)
 
@@ -121,6 +124,8 @@ Role-specific tasks live at
 1. # Phase N: Name -- Role Tasks               (required)
 
 2. ## Tasks                                    (required)
+   - Early use cue for the role's custom agent (if applicable)
+   - Midpoint refinement cue (if applicable)
 
 3. ## Verification                             (required)
 
@@ -155,29 +160,68 @@ Previous: [Stage 1: Basic CRUD](stage-1-basic-crud.md) | Next: [Stage 3: Persist
 
 ## Shared Getting Started File
 
-`tracks/getting-started.md` contains the common setup steps:
+`tracks/getting-started.md` explains the shared mechanics once:
 
-1. Clean Start
-2. Create Custom Instructions
-3. Create Custom Agents
-4. Open the Challenge
+1. Start from a clean workspace
+2. Open and inspect the challenge
+3. Draft repository instructions, custom agents, and custom skills
+4. Learn from examples, then write original artifacts
 
-Each overview links to this shared file and adds track-specific agent and
-instruction guidance.
+This file is the only external Awesome Copilot hub. Track overviews link to it
+instead of repeating setup mechanics or external example links.
+
+## Customization Trio
+
+Every overview adds track-specific guidance for three different artifacts:
+
+- **Repository instructions** hold stable project context, conventions, and
+  constraints that should apply across the session.
+- **Custom agents** provide specialist judgment for a defined role or decision.
+- **Custom skills** capture repeatable, multi-step workflows.
+
+List two or three tailored agent briefs and two or three tailored skill briefs.
+A brief names the purpose, expected input, useful timing, and boundaries of the
+artifact. It must not provide ready-to-paste instructions, agent definitions,
+skill files, or prompts. Participants author the artifacts.
+
+Place early-use cues and midpoint refinement cues in the relevant stage, phase,
+or nested role page. Keep them inside `## Tasks` or another work section, never
+`## Verification`. Verification checks the challenge result, not whether a
+participant followed a prescribed customization process.
+
+For team tracks, the team shares repository instructions and at least one
+workflow skill. Role pages use tailored custom agents for role-specific
+judgment. Do not create separate repository instructions for each role.
+
+In agent-heavy challenges, distinguish a Custom Agent that helps a participant
+author or review work from the runtime agent, agent engine, or automated
+workflow that the challenge builds or operates.
+
+For BYOC sessions, the facilitator prepares the tailored agent and skill
+briefs. Participants use those briefs to author their own artifacts.
 
 ## Rules
 
 - Do not duplicate content between the overview and contents page.
 - Keep verification criteria in each stage or phase file.
+- Keep customization use and refinement cues out of `## Verification`.
 - Keep one `Getting Started` section in the overview.
-- Link to the challenge folder once, under `### Open the Challenge`.
+- Keep the required Getting Started subsections in this order: `Open and
+  Inspect the Challenge`, `Repository Instructions for This Track`, `Suggested
+  Custom Agents`, and `Suggested Custom Skills`.
+- Link to the challenge folder once, under
+  `### Open and Inspect the Challenge`.
 - Do not add `Track Overview`, `Learning Outcomes`, or `Recommended Schedule`
   sections.
 - Keep tips relevant to the track.
 - Use `##` for overview and contents sections and `###` for subsections.
 - Use `#` for stage, phase, and nested role page titles.
 - Link every stage and phase name in the contents table.
-- Reference `awesome-copilot` once, in the shared setup page.
+- Use the challenge title from `meta.yml` in the contents-page H1:
+  `# <Challenge Name>: Stages` or `# <Challenge Name>: Phases`.
+- Do not include the challenge number or the word `Track` in the contents-page
+  H1.
+- Keep all external Awesome Copilot links in the shared setup page.
 - Do not create README files in challenge folders.
 
 ## Outcome Framing

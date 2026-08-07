@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "roles": [
+    {
+      "id": "product-business",
+      "name": "Product and Business",
+      "description": "Plan products, shape requirements, manage backlogs, and coordinate delivery across stakeholders.",
+      "challenge_ids": [
+        "challenge-0",
+        "challenge-9",
+        "challenge-15",
+        "challenge-17"
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend Developer",
+      "description": "Build accessible user interfaces, connect them to services, and contribute to full product delivery.",
+      "challenge_ids": [
+        "challenge-4",
+        "challenge-8",
+        "challenge-9",
+        "challenge-10",
+        "challenge-18"
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend and API Developer",
+      "description": "Build services, APIs, integrations, and modern replacements for existing backend systems.",
+      "challenge_ids": [
+        "challenge-1",
+        "challenge-7",
+        "challenge-8",
+        "challenge-9",
+        "challenge-10",
+        "challenge-11",
+        "challenge-12",
+        "challenge-17",
+        "challenge-18",
+        "challenge-19",
+        "challenge-21"
+      ]
+    },
+    {
+      "id": "full-stack",
+      "name": "Full-stack Developer",
+      "description": "Work across user interfaces, services, infrastructure, and end-to-end feature delivery.",
+      "challenge_ids": [
+        "challenge-1",
+        "challenge-4",
+        "challenge-8",
+        "challenge-9",
+        "challenge-10",
+        "challenge-17",
+        "challenge-18",
+        "challenge-21"
+      ]
+    },
+    {
+      "id": "data-ai-ml",
+      "name": "Data, AI, and ML Practitioner",
+      "description": "Explore data, build models, and create AI-powered applications and automated workflows.",
+      "challenge_ids": [
+        "challenge-2",
+        "challenge-6",
+        "challenge-7",
+        "challenge-8"
+      ]
+    },
+    {
+      "id": "qa-testing",
+      "name": "QA and Testing",
+      "description": "Improve test coverage, quality gates, accessibility, and confidence during modernization and delivery.",
+      "challenge_ids": [
+        "challenge-5",
+        "challenge-9",
+        "challenge-10",
+        "challenge-12",
+        "challenge-17",
+        "challenge-18",
+        "challenge-19"
+      ]
+    },
+    {
+      "id": "devops-platform",
+      "name": "DevOps, Platform, SRE, and Cloud",
+      "description": "Automate delivery, operate reliable platforms, and build repeatable Azure infrastructure foundations.",
+      "challenge_ids": [
+        "challenge-3",
+        "challenge-6",
+        "challenge-7",
+        "challenge-9",
+        "challenge-10",
+        "challenge-14",
+        "challenge-16",
+        "challenge-17",
+        "challenge-20",
+        "challenge-21"
+      ]
+    },
+    {
+      "id": "it-operations",
+      "name": "Sysadmin, IT Operations, and Support",
+      "description": "Automate administration, investigate incidents, and improve day-to-day operational support.",
+      "challenge_ids": [
+        "challenge-3",
+        "challenge-14",
+        "challenge-16",
+        "challenge-20",
+        "challenge-21"
+      ]
+    },
+    {
+      "id": "tech-lead-architect",
+      "name": "Tech Lead and Architect",
+      "description": "Guide technical decisions, modernization, documentation, platform design, and end-to-end delivery.",
+      "challenge_ids": [
+        "challenge-6",
+        "challenge-7",
+        "challenge-9",
+        "challenge-10",
+        "challenge-11",
+        "challenge-12",
+        "challenge-13",
+        "challenge-15",
+        "challenge-17",
+        "challenge-18",
+        "challenge-19",
+        "challenge-21"
+      ]
+    }
+  ]
+}

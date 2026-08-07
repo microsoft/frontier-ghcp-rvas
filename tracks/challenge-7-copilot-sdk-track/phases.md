@@ -1,4 +1,4 @@
-# Challenge 7 Track: Copilot SDK Developer: Phases
+# Copilot SDK Developer: Phases
 
 ## Phases
 

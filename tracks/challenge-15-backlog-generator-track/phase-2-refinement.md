@@ -31,6 +31,8 @@
 
 5. **Iterate on the agent.** Adjust its instructions until it reliably catches real gaps without producing excessive false positives.
 
+If the refinement agent's gap analysis is generic, incomplete, or misses contradictory criteria, revise its instructions before trusting it on the harder Inventory Reorder spec.
+
 ## Verification
 
 - [ ] Review criteria defined

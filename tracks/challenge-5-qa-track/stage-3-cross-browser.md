@@ -20,6 +20,8 @@ Login tests are passing. Now expand coverage to the core shopping flow and run t
 
 5. **Screenshot comparison**: Ask Copilot to add screenshot capture to key test steps (catalog page, basket page). Save them to a `screenshots/` directory. Compare screenshots across browsers manually -- note any layout differences.
 
+If your Playwright agent or selector skill produces generic page objects, mismatched selectors, or assertions that miss mobile quirks, revise that customization before the cross-browser run.
+
 ## Verification
 
 - `CatalogPage.ts` and `BasketPage.ts` are implemented and follow the `BasePage` pattern

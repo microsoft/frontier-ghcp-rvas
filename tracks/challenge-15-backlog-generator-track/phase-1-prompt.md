@@ -6,6 +6,8 @@
 
 ## Tasks
 
+Before you write the prompt, use everything from setup: keep your repository instructions open for your team's backlog conventions, bring in the Backlog Architect agent for the first pass at structuring epics and stories, and treat the spec-to-backlog conversion as the repeatable skill it's meant to be, not a one-off prompt you rewrite for every spec.
+
 1. **Study the source material.** Read `uc-password-reset.md` carefully. Identify the natural groupings (Epic-level themes), the individual capabilities (Story-level), and the implementation details (Task-level).
 
 2. **Design your output format.** Review the templates in `templates/backlog-item-templates.md`. Decide on your team's conventions:

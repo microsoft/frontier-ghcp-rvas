@@ -1,4 +1,4 @@
-# Challenge 0 Track: Product Planning: Stages
+# Product Planning: Stages
 
 ## Stages
 

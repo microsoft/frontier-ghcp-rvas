@@ -24,6 +24,8 @@
 
 4. **Review service logs** -- Make sure each service writes structured logs that are readable in the terminal. If the backend uses a logger, confirm the format is consistent.
 
+If your infrastructure agent produces an incomplete smoke test or reverse proxy config, refine its service and health-check guidance before calling the environment shareable.
+
 ## Verification
 
 - [ ] Reverse proxy routing `/api/` to backend and `/` to frontend

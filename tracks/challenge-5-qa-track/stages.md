@@ -1,4 +1,4 @@
-# Challenge 5 Track: QA & Testing: Stages
+# QA & Testing: Stages
 
 ## Stages
 

@@ -1,4 +1,4 @@
-# Challenge 13 Track: Living Documentation: Phases
+# Living Documentation: Phases
 
 ## Phases
 

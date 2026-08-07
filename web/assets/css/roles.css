@@ -1,0 +1,77 @@
+/* Challenges by Role page */
+
+.roles-hero h1 {
+  margin-top: 14px;
+}
+
+.role-collections {
+  border-top: 1px solid var(--c-line);
+}
+
+.role-section {
+  padding: 72px 0;
+  scroll-margin-top: 72px;
+}
+
+.role-section-alt {
+  background: var(--c-850);
+}
+
+.role-section-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.role-section-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--c-line);
+}
+
+.role-section-heading h2 {
+  margin-top: 12px;
+}
+
+.role-section-heading p {
+  max-width: 64ch;
+  margin: 14px 0 0;
+  color: var(--c-dim);
+}
+
+.role-anchor-link {
+  align-self: center;
+  padding: 8px 12px;
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--c-dim);
+  white-space: nowrap;
+  transition: border-color 0.18s, color 0.18s, background 0.18s;
+}
+
+.role-anchor-link:hover {
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+  background: var(--c-accent-glow);
+}
+
+@media (max-width: 720px) {
+  .role-section {
+    padding: 56px 0;
+  }
+
+  .role-section-heading {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .role-anchor-link {
+    grid-column: 2;
+    justify-self: start;
+  }
+}

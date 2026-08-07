@@ -4,6 +4,8 @@
 
 ## Tasks
 
+Before you start writing stories, put the product strategist agent from your setup to real use: run early feature ideas past it for trade-off framing before they reach the backlog, instead of treating the backlog as a first draft.
+
 1. **Read the stakeholder brief** -- Open the [stakeholder brief](../../../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) and internalize the requirements. This is your specification from the "client."
 
 2. **Prototype with GitHub Spark** -- Go to [github.com/spark](https://github.com/spark) (requires a GitHub Copilot license) and use GitHub Spark to create a quick interactive prototype of CityPulse. Describe screens in natural language:

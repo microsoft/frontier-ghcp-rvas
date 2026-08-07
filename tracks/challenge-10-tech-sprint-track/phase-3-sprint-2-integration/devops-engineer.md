@@ -18,6 +18,8 @@
 
 4. **Review service logs** -- Confirm that each service writes structured logs readable in the terminal. Each service should log at an appropriate level (info for requests, error for failures). Fix anything that logs nothing or is too noisy.
 
+If your infrastructure agent produces an incomplete smoke test or reverse proxy config, refine its service and health-check guidance before calling the environment shareable.
+
 ## Verification
 
 - [ ] Reverse proxy routing `/api/` to backend and `/` to frontend

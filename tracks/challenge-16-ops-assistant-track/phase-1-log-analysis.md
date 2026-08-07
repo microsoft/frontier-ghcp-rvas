@@ -6,6 +6,8 @@
 
 ## Tasks
 
+Before you build the agent, use the full setup: keep your repository instructions open for the Order Gateway context, bring in your Log Analyst agent to help group and explain errors, and treat the log triage sequence as a repeatable skill rather than a one-time read-through.
+
 1. **Analyze the log files manually first.** Read through both log files (`gateway-2025-12-01.log` and `gateway-2025-12-02.log`). Identify every distinct error pattern. For each, note: the error type, how many times it occurs, whether it looks like a one-off or a recurring issue, and what the likely root cause is.
 
 2. **Create the log analysis agent.** Create `.github/agents/log-analyst.agent.md` that:

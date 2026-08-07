@@ -14,6 +14,8 @@
 
 5. **Prepare the demo outline** -- Write bullet points for what you will show in Phase 4. Build a narrative: a resident discovers CityPulse, reports an issue, browses events, checks the dashboard.
 
+If your product strategy agent produces generic release notes or a poorly scoped demo outline, refine its shipping context before asking it to revise the draft.
+
 ## Verification
 
 - [ ] Sprint 2 bugs triaged -- each classified as fix/defer/won't fix

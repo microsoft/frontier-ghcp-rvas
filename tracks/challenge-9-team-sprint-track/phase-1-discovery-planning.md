@@ -5,6 +5,8 @@
 
 This phase sets the foundation. The PO drives ideation while everyone else sets up their development environment and tooling. The phase ends with a sprint planning session where the team commits to Sprint 1 scope.
 
+Before role setup begins, make sure the team's shared `.github/copilot-instructions.md` actually captures the CityPulse context everyone needs, and agree together on one shared custom skill, like the sprint board sync or Discovery Handoff sequence, so the whole team works from the same repeatable process instead of everyone improvising their own.
+
 ## Jump to Your Role
 
 Find your role and follow the link for your detailed task list:

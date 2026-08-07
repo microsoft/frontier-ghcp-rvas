@@ -6,6 +6,8 @@
 
 ## Tasks
 
+Before you build the prompt, use the full trio: keep your repository instructions open for the existing app's conventions, bring in the Requirements Analyst agent for the first structuring pass, and design the spec-to-backlog sequence as a reusable skill from the start, since that reusability is the point of this track.
+
 1. **Study the requirements document.** Read `specs/billing-module-requirements.md` thoroughly. Identify the natural Epic boundaries: subscription management, usage metering, invoice generation, payment processing, and admin/dashboard features.
 
 2. **Build the spec-to-backlog prompt.** Create `.github/prompts/spec-to-backlog.prompt.md` that:

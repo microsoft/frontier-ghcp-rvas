@@ -1,4 +1,4 @@
-# Challenge 9 Track: Cross-Functional Team Sprint: Phases
+# Cross-Functional Team Sprint: Phases
 
 ## Phases
 

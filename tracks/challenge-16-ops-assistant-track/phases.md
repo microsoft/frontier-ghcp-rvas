@@ -1,4 +1,4 @@
-# Challenge 16 Track: Ops Assistant: Phases
+# Ops Assistant: Phases
 
 ## Phases
 

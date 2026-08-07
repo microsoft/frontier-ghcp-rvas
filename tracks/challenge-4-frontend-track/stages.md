@@ -1,4 +1,4 @@
-# Challenge 4 Track: Frontend: Stages
+# Frontend: Stages
 
 ## Stages
 

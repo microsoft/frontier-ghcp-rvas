@@ -5,6 +5,8 @@
 
 This phase replaces the product discovery step found in other team tracks. The functional specification is already written -- your job is to turn it into a technical plan and get everything ready to build.
 
+Before role setup begins, make sure the team's shared `.github/copilot-instructions.md` actually captures the TrailMate context everyone needs, and agree on one shared custom skill, like the spec-to-issues or sprint board sync sequence, so backlog creation and handoffs stay consistent across roles instead of everyone building their own process.
+
 ## Jump to Your Role
 
 Find your role and follow the link for your detailed task list:

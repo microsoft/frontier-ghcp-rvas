@@ -1,4 +1,4 @@
-# Challenge 18 Track: Legacy COBOL Banking Modernization: Phases
+# Legacy COBOL Banking Modernization: Phases
 
 ## Phases
 

@@ -8,6 +8,83 @@ Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Lea
 
 Each track starts with an overview page for audience, setup, tips, and resources. Its linked contents page lists the stages or phases and any role-specific paths. Stage and phase pages include previous and next links for reading the track on GitHub.
 
+Sessions use a customization trio: repository instructions, custom agents, and
+custom skills tailored to each challenge.
+
+## Challenges by Role
+
+Role Collections group relevant challenges without implying a required order.
+Some challenges appear in more than one collection because the work crosses
+team boundaries.
+
+- **Product and Business:** [0](./challenge-0-product-planning-track.md),
+  [9](./challenge-9-team-sprint-track.md),
+  [15](./challenge-15-backlog-generator-track.md),
+  [17](./challenge-17-spec-to-ship-track.md)
+- **Frontend Developer:** [4](./challenge-4-frontend-track.md),
+  [8](./challenge-8-flight-delay-track.md),
+  [9](./challenge-9-team-sprint-track.md),
+  [10](./challenge-10-tech-sprint-track.md),
+  [18](./challenge-18-cobol-modernization-track.md)
+- **Backend and API Developer:** [1](./challenge-1-web-api-track.md),
+  [7](./challenge-7-copilot-sdk-track.md),
+  [8](./challenge-8-flight-delay-track.md),
+  [9](./challenge-9-team-sprint-track.md),
+  [10](./challenge-10-tech-sprint-track.md),
+  [11](./challenge-11-mumps-modernization-track.md),
+  [12](./challenge-12-legacy-modernization-track.md),
+  [17](./challenge-17-spec-to-ship-track.md),
+  [18](./challenge-18-cobol-modernization-track.md),
+  [19](./challenge-19-wcf-modernization-track.md),
+  [21](./challenge-21-azure-terraform-track.md)
+- **Full-stack Developer:** [1](./challenge-1-web-api-track.md),
+  [4](./challenge-4-frontend-track.md),
+  [8](./challenge-8-flight-delay-track.md),
+  [9](./challenge-9-team-sprint-track.md),
+  [10](./challenge-10-tech-sprint-track.md),
+  [17](./challenge-17-spec-to-ship-track.md),
+  [18](./challenge-18-cobol-modernization-track.md),
+  [21](./challenge-21-azure-terraform-track.md)
+- **Data, AI, and ML Practitioner:** [2](./challenge-2-ml-ai-track.md),
+  [6](./challenge-6-agentic-workflows-track.md),
+  [7](./challenge-7-copilot-sdk-track.md),
+  [8](./challenge-8-flight-delay-track.md)
+- **QA and Testing:** [5](./challenge-5-qa-track.md),
+  [9](./challenge-9-team-sprint-track.md),
+  [10](./challenge-10-tech-sprint-track.md),
+  [12](./challenge-12-legacy-modernization-track.md),
+  [17](./challenge-17-spec-to-ship-track.md),
+  [18](./challenge-18-cobol-modernization-track.md),
+  [19](./challenge-19-wcf-modernization-track.md)
+- **DevOps, Platform, SRE, and Cloud:** [3](./challenge-3-devops-track.md),
+  [6](./challenge-6-agentic-workflows-track.md),
+  [7](./challenge-7-copilot-sdk-track.md),
+  [9](./challenge-9-team-sprint-track.md),
+  [10](./challenge-10-tech-sprint-track.md),
+  [14](./challenge-14-pipeline-factory-track.md),
+  [16](./challenge-16-ops-assistant-track.md),
+  [17](./challenge-17-spec-to-ship-track.md),
+  [20](./challenge-20-powershell-automation-track.md),
+  [21](./challenge-21-azure-terraform-track.md)
+- **Sysadmin, IT Operations, and Support:**
+  [3](./challenge-3-devops-track.md),
+  [14](./challenge-14-pipeline-factory-track.md),
+  [16](./challenge-16-ops-assistant-track.md),
+  [20](./challenge-20-powershell-automation-track.md),
+  [21](./challenge-21-azure-terraform-track.md)
+- **Tech Lead and Architect:** [6](./challenge-6-agentic-workflows-track.md),
+  [7](./challenge-7-copilot-sdk-track.md),
+  [9](./challenge-9-team-sprint-track.md),
+  [10](./challenge-10-tech-sprint-track.md),
+  [11](./challenge-11-mumps-modernization-track.md),
+  [12](./challenge-12-legacy-modernization-track.md),
+  [13](./challenge-13-living-docs-track.md),
+  [15](./challenge-15-backlog-generator-track.md),
+  [17](./challenge-17-spec-to-ship-track.md),
+  [18](./challenge-18-cobol-modernization-track.md),
+  [19](./challenge-19-wcf-modernization-track.md),
+  [21](./challenge-21-azure-terraform-track.md)
+
 ## Challenges by Outcome
 
 Tracks are grouped by the outcome they drive. Each grouping below reflects the kind of work result the track produces.
@@ -106,7 +183,7 @@ Move from requirements to working, demoable software across the stack.
 
 **Best for:** Product owners, tech leads, and scrum masters who manually convert requirement documents into structured backlogs
 
-**Focus:** Converting use case specifications into structured backlogs (Epics, Stories, Tasks, Test Cases) using reusable prompts, refinement agents, and the Atlassian MCP server.
+**Focus:** Converting use case specifications into structured backlogs (Epics, Stories, Tasks, Test Cases) using workflow skills, refinement agents, and the Atlassian MCP server.
 
 **Your Challenge:** Challenge 15 - Spec-to-Backlog Automation
 
@@ -226,7 +303,7 @@ Improve test coverage, accessibility, documentation, or reliability.
 
 **Best for:** Teams where documentation is always out of date and maintaining it is a manual burden nobody enjoys
 
-**Focus:** Automating documentation of the Widget Corp Inventory Manager -- generate javadoc, create Mermaid diagrams, build changelog prompt, create documentation review agent for PRs.
+**Focus:** Automating documentation of the Widget Corp Inventory Manager -- generate javadoc, create Mermaid diagrams, build a changelog workflow skill, create a documentation review agent for PRs.
 
 **Your Challenge:** Challenge 13 - Widget Corp Living Documentation
 
@@ -286,7 +363,7 @@ Replace manual, repetitive delivery or operations work with repeatable automatio
 
 **Best for:** Support teams, L1/L2 ops, and SREs who triage production incidents by manually reading logs
 
-**Focus:** Building AI-assisted operations tooling for the Order Gateway -- analyze production logs (payment timeouts, deadlocks, connection pool exhaustion), create log analysis agent, build incident routing prompt, generate troubleshooting runbooks.
+**Focus:** Building AI-assisted operations tooling for the Order Gateway -- analyze production logs (payment timeouts, deadlocks, connection pool exhaustion), create a log analysis agent, build an incident routing skill, generate troubleshooting runbooks.
 
 **Your Challenge:** Challenge 16 - Order Gateway Ops Assistant
 
@@ -407,11 +484,11 @@ Pick the track that matches your primary role, or choose by outcome if you want 
 | 🥾 **Challenge 10: Tech Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Challenge 10 |
 | 🏦 **Challenge 11: MUMPS Modernization** | ⭐⭐⭐ | 8-12h | MUMPS, PSL/Java/Python/C#, testing | Challenge 11 |
 | 🔄 **Challenge 12: Legacy Modernization** | ⭐⭐⭐ | 6-8h | Java 8/17, Spring Boot 1.x/3.x, Maven | Challenge 12 |
-| 📄 **Challenge 13: Living Documentation** | ⭐⭐ | 6-8h | Java, Mermaid, Custom Prompts/Agents | Challenge 13 |
+| 📄 **Challenge 13: Living Documentation** | ⭐⭐ | 6-8h | Java, Mermaid, Custom Agents/Skills | Challenge 13 |
 | 🔩 **Challenge 14: Pipeline Factory** | ⭐⭐ | 6-8h | Node.js, GitHub Actions, Shell | Challenge 14 |
-| 📝 **Challenge 15: Backlog Generator** | ⭐⭐ | 6-8h | Prompts, Agents, Atlassian MCP | Challenge 15 |
-| 🖥️ **Challenge 16: Ops Assistant** | ⭐⭐ | 6-8h | Prompts, Agents, Node.js | Challenge 16 |
-| 🚀 **Challenge 17: Spec-to-Ship** | ⭐⭐⭐ | 6-8h | Node.js, Prompts, Agents, GitHub Actions | Challenge 17 |
+| 📝 **Challenge 15: Backlog Generator** | ⭐⭐ | 6-8h | Instructions, Agents, Skills, Atlassian MCP | Challenge 15 |
+| 🖥️ **Challenge 16: Ops Assistant** | ⭐⭐ | 6-8h | Instructions, Agents, Skills, Node.js | Challenge 16 |
+| 🚀 **Challenge 17: Spec-to-Ship** | ⭐⭐⭐ | 6-8h | Node.js, Agents, Skills, GitHub Actions | Challenge 17 |
 | 🏗️ **Challenge 18: COBOL Modernization** | ⭐⭐⭐ | 8-12h | COBOL, Node.js/Java, React, testing | Challenge 18 |
 | 💻 **Challenge 20: PowerShell Automation** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | PowerShell, Pester, PSScriptAnalyzer, GitHub Actions | Challenge 20 |
 | ☁️ **Challenge 21: Azure Terraform** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | Terraform, AzureRM, Key Vault, GitHub Actions | Challenge 21 |
@@ -422,12 +499,13 @@ All tracks help you build proficiency with GitHub Copilot as a by-product of dri
 
 - GitHub Copilot core features (inline suggestions, chat)
 - Effective prompt engineering
+- Repository instructions, custom agents, and custom skills
 - Using chat commands (`/explain`, `/fix`, `/tests`, `/new`)
 - Workspace context awareness (`@workspace`)
 - Code generation and acceleration
 - Testing and documentation with Copilot
 
-Plus track-specific skills!
+Plus track-specific practices.
 
 ## Getting Started
 
@@ -459,7 +537,7 @@ Each track provides:
 - Time allocation
 - Learning objectives
 - Tips specific to that domain
-- **Example `.github/copilot-instructions.md`** for your project
+- Tailored briefs for repository instructions, custom agents, and custom skills
 
 ### 5. Start Your First Challenge
 
@@ -496,7 +574,7 @@ Mix and match challenges across tracks based on your interests!
 ### 3. Use Track Resources
 
 - Each track has specific tips for that domain
-- Prompt examples tailored to the technology
+- Customization briefs tailored to the technology
 - Best practices for that area
 
 ### 4. Collaborate

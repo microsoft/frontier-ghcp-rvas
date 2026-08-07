@@ -9,6 +9,8 @@ Understand the MUMPS banking system well enough to explain every module's purpos
 
 ## Tasks
 
+Before you open a single routine, use everything you set up: keep your repository instructions open for the MUMPS conventions, bring in the MUMPS Archaeologist agent for the parts that need domain judgment, and run your business rule documentation skill as you trace each workflow instead of writing up the architecture doc from memory afterward.
+
 1. **Learn MUMPS basics.** Before touching the code, spend 15-20 minutes getting oriented. Ask Copilot to explain MUMPS syntax: what `S`, `W`, `I`, `D`, `Q`, `F`, `N`, `K`, `L`, `R` mean, how `^GLOBALS` work as a built-in database, what `$ORDER`, `$PIECE`, `$GET`, `$DATA`, `$HOROLOG` do, and what the `.` indentation means inside `DO` blocks. Create a cheat sheet for yourself in the challenge folder.
 
 2. **Map the module structure.** Read through every `.m` file in `routines/` and write a one-paragraph summary of each. Which modules handle user-facing menus? Which contain business logic? Which are pure utilities? Document the call graph -- which routines call which.

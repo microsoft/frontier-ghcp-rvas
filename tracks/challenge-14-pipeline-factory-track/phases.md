@@ -1,4 +1,4 @@
-# Challenge 14 Track: Pipeline Factory: Phases
+# Pipeline Factory: Phases
 
 ## Phases
 

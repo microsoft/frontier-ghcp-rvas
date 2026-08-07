@@ -11,6 +11,8 @@ The tagging script in `scripts/Set-AzureResourceTags.ps1` runs interactively wit
 3. Make the script idempotent: only call `Set-AzResource` when the existing tags differ from the target tags. Add a `-WhatIf` switch using `SupportsShouldProcess` so operators can preview changes without applying them.
 4. Read the `docs/tagging-policy.md` file and ask Copilot to generate a compliance summary report -- a table listing each resource, its current tags, and whether it is compliant or not -- without modifying any resources.
 
+If your Azure Automation agent or refactor skill produces a broken `-WhatIf` path or generic validation messages, refine that customization before trusting the compliance report.
+
 ## Verification
 
 - Running the script with `-WhatIf` prints the resources that would be tagged but makes no changes

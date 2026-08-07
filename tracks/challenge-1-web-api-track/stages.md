@@ -1,4 +1,4 @@
-# Challenge 1 Track: Web API: Stages
+# Web API: Stages
 
 ## Stages
 

@@ -12,6 +12,8 @@ Reproducibility matters. Use sklearn Pipelines for all preprocessing and trainin
 4. Hyperparameter tuning with GridSearchCV or RandomizedSearchCV. Document the search space and best parameters found.
 5. Define a custom scoring function where false negatives (missing a churner) cost 5x more than false positives. Use this scorer during tuning.
 
+If your data science agent or notebook skill falls back to generic accuracy instead of the 5x cost weighting, or ignores leakage risk, refine that customization before rerunning the model work.
+
 ## Verification
 
 - 4+ models trained using Pipeline objects

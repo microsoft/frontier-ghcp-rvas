@@ -4,6 +4,8 @@
 
 ## Tasks
 
+Plan to actually use the api-architect agent for the REST design judgment calls it exists for, resource shapes, status codes, error handling, not just to have it sit in `.github/agents/`.
+
 1. **Set up the development environment** -- Choose a backend framework (Express.js or FastAPI). Create the project scaffold:
    - Initialize the project (`npm init` or set up a virtualenv)
    - Set up folder structure (routes, models, middleware)

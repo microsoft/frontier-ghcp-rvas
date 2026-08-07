@@ -18,6 +18,8 @@ A spec is only useful if it is complete, consistent, and connects to the real sy
 
 6. **Open a Pull Request** for your specs on a branch. Write a PR description that summarizes the features and calls out open questions.
 
+If your agent or writing skill produces a generic first-pass spec -- vague NFRs, interchangeable personas, or weak acceptance criteria -- tighten that customization before asking it to revise the draft.
+
 ## Verification
 
 - Two complete feature specs exist, each with all sections filled

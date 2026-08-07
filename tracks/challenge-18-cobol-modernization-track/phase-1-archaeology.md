@@ -9,6 +9,8 @@ Understand the COBOL banking system well enough to explain every program's purpo
 
 ## Tasks
 
+Before you open a single COBOL program, use your full setup: keep your repository instructions open for the COBOL conventions and target stack, bring in the COBOL Archaeologist agent for the parts of the business logic that need domain judgment, and run your business rule documentation skill as you trace each workflow instead of writing the architecture doc from memory afterward.
+
 1. **Learn COBOL basics.** Before touching the code, spend 15-20 minutes getting oriented. Ask Copilot to explain COBOL structure: what the four DIVISIONs are (IDENTIFICATION, ENVIRONMENT, DATA, PROCEDURE), how SECTIONS and paragraphs organize code, what PIC clauses mean (`PIC 9(5)`, `PIC X(30)`, `PIC S9(7)V99 COMP-3`), how 88-level condition names work, what PERFORM and PERFORM THRU do, how EVALUATE/WHEN replaces nested IF chains, and how indexed file I/O works (OPEN, READ, WRITE, REWRITE, DELETE, START with keys). Create a cheat sheet for yourself in the challenge folder.
 
 2. **Map the program structure.** Read through every `.cbl` file and `.cpy` copybook. Write a one-paragraph summary of each. Which programs handle user-facing menus? Which contain business logic? Which are pure utilities? Document the call graph -- which programs CALL which, and which paragraphs PERFORM which.

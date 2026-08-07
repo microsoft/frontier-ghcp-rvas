@@ -6,6 +6,8 @@ In this phase you start by researching the SDK and building an accurate instruct
 
 ## Tasks
 
+Before you research the SDK, use the full trio: keep your repository instructions open as the baseline you're building toward, bring in the SDK Pairing agent you create locally to help design tool schemas, and run your SDK research skill to turn what you find into that instructions file. That pairing agent helps you build ship-it -- it is not ship-it itself, which is the release notes agent your code creates and runs through the SDK at runtime.
+
 1. **Research the SDK and build your instructions file**
     - Open Copilot Chat and use the `/research` slash command to pull current documentation, API references, and known issues for `@github/copilot-sdk`
     - Cover at minimum: `CopilotClient` initialization and options, session lifecycle, all streaming event types, custom tool schema format, the JSON-RPC communication model between the SDK and Copilot CLI, and any known caveats or version-specific changes

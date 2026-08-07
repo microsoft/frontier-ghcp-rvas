@@ -18,6 +18,8 @@ Before writing more HCL, decide what the app should be allowed to read and how t
 4. Write `docs/identity-review.md` with the identity choice, Key Vault access model, secret rotation assumption, and one permission you intentionally did not grant.
 5. Review the plan for over-broad permissions, unnecessary outputs, and any secret material that should not live in source control.
 
+If your Azure Identity agent or plan review skill proposes broad access or a generic Key Vault design, refine that customization before writing `docs/identity-review.md`.
+
 ## Review Gate
 
 Ask Copilot to review the identity and Key Vault plan for least privilege. Make it compare system-assigned and user-assigned identity for this scenario, then check whether your Terraform exposes sensitive values through variables, outputs, or example files.

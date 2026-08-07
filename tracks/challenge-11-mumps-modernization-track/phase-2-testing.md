@@ -51,6 +51,8 @@ You are not testing the MUMPS code directly. Instead, you are reimplementing the
    - Disabled accounts cannot log in
    - Role checks (admin, teller, auditor)
 
+If your Translation agent or business-rule skill misses a MUMPS rounding quirk or the month-end edge case, refine that customization with the specific rule before rerunning it.
+
 ## What Copilot Helps With vs. What Requires Your Judgment
 
 **Copilot is good at:** Generating test boilerplate, producing edge case lists from a business rule description, translating a MUMPS formula into your language, scaffolding the test project structure.

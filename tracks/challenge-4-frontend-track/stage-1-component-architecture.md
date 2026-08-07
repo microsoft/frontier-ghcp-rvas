@@ -6,6 +6,8 @@ Build the visual foundation with static data. Focus on component composition and
 
 ## Tasks
 
+Before you scaffold the first component, use what you set up: keep your repository instructions open for the accessibility and styling conventions, bring in the agent you built for component-structure judgment, and run your type-first scaffolding skill so the types drive the layout instead of guessing at props.
+
 1. Build a responsive dashboard layout with header, sidebar, and main content area using Tailwind CSS.
 2. Create TaskCard, TaskList, and Dashboard components with proper TypeScript interfaces.
 3. Implement React Router with at least 3 routes: Dashboard, Task List, and Task Detail.

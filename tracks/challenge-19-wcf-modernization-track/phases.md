@@ -1,4 +1,4 @@
-# Challenge 19 Track: Legacy WCF Banking Modernization: Phases
+# Legacy WCF Banking Modernization: Phases
 
 ## Phases
 

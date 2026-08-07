@@ -1,4 +1,4 @@
-# Challenge 3 Track: DevOps: Stages
+# DevOps: Stages
 
 ## Stages
 

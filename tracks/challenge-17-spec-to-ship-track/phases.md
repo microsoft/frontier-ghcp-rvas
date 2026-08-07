@@ -1,4 +1,4 @@
-# Challenge 17 Track: Spec-to-Ship Accelerator: Phases
+# Spec-to-Ship Accelerator: Phases
 
 ## Phases
 

@@ -7,6 +7,7 @@
   /* ─────────────────────────── Data ─────────────────────────────── */
   FP.dataUrl = 'assets/data/platform.json';
   FP.pathsUrl = 'assets/data/paths.json';
+  FP.rolesUrl = 'assets/data/roles.json';
 
   FP.loadData = async function () {
     if (FP._cache) return FP._cache;
@@ -22,6 +23,14 @@
     if (!res.ok) throw new Error('Could not load paths data (' + res.status + ')');
     FP._pathsCache = await res.json();
     return FP._pathsCache;
+  };
+
+  FP.loadRoles = async function () {
+    if (FP._rolesCache) return FP._rolesCache;
+    const res = await fetch(FP.rolesUrl, { cache: 'no-cache' });
+    if (!res.ok) throw new Error('Could not load roles data (' + res.status + ')');
+    FP._rolesCache = await res.json();
+    return FP._rolesCache;
   };
 
   /* Category accent CSS variable resolving */

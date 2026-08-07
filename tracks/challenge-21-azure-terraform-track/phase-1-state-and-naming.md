@@ -12,6 +12,8 @@ Resolve the naming and tagging tension before you touch the rest of the platform
 
 ## Tasks
 
+Before you touch the backend config, use the full setup: keep your repository instructions open for the naming and tagging rules you settle on, bring in the Terraform Reviewer agent for the module and naming judgment calls, and run your plan review skill on the first `terraform plan` rather than eyeballing the diff yourself.
+
 1. Use `terraform/azure/` as the working Terraform root. Provision the storage account and blob container you want to use for Terraform state, and document the bootstrap order in `docs/platform-notes.md`.
 2. Configure the main environment in `terraform/azure/` to use the remote backend. Remove hard-coded resource names and replace them with locals, variables, and a tagging baseline that fits the stakeholder notes.
 3. Add provider and Terraform version constraints, plus a `terraform.tfvars.example` that shows the minimum values another engineer would need to supply without exposing real subscription details.

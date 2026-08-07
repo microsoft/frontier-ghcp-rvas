@@ -5,6 +5,7 @@
  * Reads challenges/<slug>/meta.yml as the single source of truth and emits:
  *   web/assets/data/platform.json
  *   web/assets/data/paths.json
+ *   web/assets/data/roles.json
  *   web/assets/data/challenges/<id>/pages/<page-id>.md
  *   web/assets/data/pages/<slug>.md
  *
@@ -13,6 +14,7 @@
  *   - Category is one of the 5 valid categories
  *   - Challenge page IDs, parent relationships, and navigation are valid
  *   - Every learning-path challenge_id and prerequisites[] entry resolves to a real challenge
+ *   - Every role collection is valid and every challenge belongs to at least one role
  *
  *   node web/build.js
  */
@@ -61,6 +63,7 @@ const OUT_DATA_DIR        = path.join(__dirname, 'assets', 'data');
 const OUT_CHALLENGES_DIR  = path.join(OUT_DATA_DIR, 'challenges');
 const OUT_PAGES_DIR       = path.join(OUT_DATA_DIR, 'pages');
 const LEARNING_PATHS_PATH = path.join(ROOT, 'learning-paths.json');
+const ROLE_COLLECTIONS_PATH = path.join(ROOT, 'role-collections.json');
 const FACILITATOR_PATH    = path.join(ROOT, 'FACILITATOR_GUIDE.md');
 const TROUBLESHOOT_PATH   = path.join(ROOT, 'TROUBLESHOOTING.md');
 
@@ -363,6 +366,25 @@ function collectChallengePages(challenge) {
   if (!fs.existsSync(contentsPath)) {
     errors.push(`Challenge ${challenge.id}: contents file not found at ${challenge.contents_url}`);
   }
+  if (fs.existsSync(contentsPath)) {
+    const contentsType = path.basename(contentsPath, '.md').toLowerCase();
+    if (!['stages', 'phases'].includes(contentsType)) {
+      errors.push(`Challenge ${challenge.id}: contents_url must point to stages.md or phases.md`);
+    } else {
+      const rawContents = readFileSafe(contentsPath);
+      if (rawContents === null) {
+        errors.push(`Challenge ${challenge.id}: could not read ${challenge.contents_url}`);
+      } else {
+        const expectedTitle = `${challenge.title}: ${contentsType === 'stages' ? 'Stages' : 'Phases'}`;
+        const actualTitle = markdownTitle(rawContents, '');
+        if (actualTitle !== expectedTitle) {
+          errors.push(
+            `Challenge ${challenge.id}: ${challenge.contents_url} H1 must be '${expectedTitle}' (found '${actualTitle || '(missing)'}')`
+          );
+        }
+      }
+    }
+  }
   if (errors.length) return { pages: [], sources: new Map(), errors };
 
   const trackDir = path.dirname(trackPath);
@@ -545,8 +567,21 @@ function loadLearningPaths() {
   }
 }
 
+/* ─── Load role collections ─────────────────────────────────────────────── */
+function loadRoleCollections() {
+  const raw = readFileSafe(ROLE_COLLECTIONS_PATH);
+  if (!raw) return { roles: [], error: 'Could not read role-collections.json' };
+
+  try {
+    const data = JSON.parse(raw);
+    return { ...data, error: null };
+  } catch (e) {
+    return { roles: [], error: `Could not parse role-collections.json: ${e.message}` };
+  }
+}
+
 /* ─── Validate references ─────────────────────────────────────────────────── */
-function validateReferences(challenges, paths) {
+function validateReferences(challenges, paths, roles, roleLoadError) {
   const errors = [];
   const challengeIds = new Set(challenges.map(c => c.id));
 
@@ -563,6 +598,60 @@ function validateReferences(challenges, paths) {
       if (!challengeIds.has(cid)) {
         errors.push(`Learning path '${p.id}': challenge_id '${cid}' does not exist`);
       }
+    }
+  }
+
+  if (roleLoadError) errors.push(roleLoadError);
+  if (!Array.isArray(roles)) {
+    errors.push('role-collections.json: roles must be an array');
+    return errors;
+  }
+
+  const roleIds = new Set();
+  const assignedChallengeIds = new Set();
+  for (const role of roles) {
+    if (!role || typeof role !== 'object') {
+      errors.push('role-collections.json: every role must be an object');
+      continue;
+    }
+    if (typeof role.id !== 'string' || !role.id.trim()) {
+      errors.push('role-collections.json: every role must have a non-empty string id');
+    } else if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(role.id)) {
+      errors.push(`Role '${role.id}': id must be a lowercase URL-safe slug`);
+    } else if (roleIds.has(role.id)) {
+      errors.push(`role-collections.json: duplicate role id '${role.id}'`);
+    } else {
+      roleIds.add(role.id);
+    }
+    if (typeof role.name !== 'string' || !role.name.trim()) {
+      errors.push(`Role '${role.id || '(unknown)'}': missing non-empty name`);
+    }
+    if (typeof role.description !== 'string' || !role.description.trim()) {
+      errors.push(`Role '${role.id || '(unknown)'}': missing non-empty description`);
+    }
+    if (!Array.isArray(role.challenge_ids) || role.challenge_ids.length === 0) {
+      errors.push(`Role '${role.id || '(unknown)'}': challenge_ids must be a non-empty array`);
+      continue;
+    }
+
+    const roleChallengeIds = new Set();
+    for (const cid of role.challenge_ids) {
+      if (roleChallengeIds.has(cid)) {
+        errors.push(`Role '${role.id}': duplicate challenge_id '${cid}'`);
+        continue;
+      }
+      roleChallengeIds.add(cid);
+      if (!challengeIds.has(cid)) {
+        errors.push(`Role '${role.id}': challenge_id '${cid}' does not exist`);
+        continue;
+      }
+      assignedChallengeIds.add(cid);
+    }
+  }
+
+  for (const challenge of challenges) {
+    if (!assignedChallengeIds.has(challenge.id)) {
+      errors.push(`Challenge ${challenge.id}: not assigned to any role collection`);
     }
   }
 
@@ -625,9 +714,24 @@ function main() {
     'utf8'
   );
 
+  const roleCollections = loadRoleCollections();
+  fs.writeFileSync(
+    path.join(OUT_DATA_DIR, 'roles.json'),
+    JSON.stringify({
+      schema_version: roleCollections.schema_version || 1,
+      roles: roleCollections.roles || []
+    }, null, 2),
+    'utf8'
+  );
+
   buildContentPages();
 
-  const refErrors = validateReferences(challenges, learningPaths.paths || []);
+  const refErrors = validateReferences(
+    challenges,
+    learningPaths.paths || [],
+    roleCollections.roles,
+    roleCollections.error
+  );
   if (refErrors.length) {
     console.error('\nValidation errors:');
     refErrors.forEach(e => console.error(`  - ${e}`));
@@ -638,6 +742,7 @@ function main() {
   console.log(`  ${challenges.length} challenges`);
   console.log(`  ${categories.length} categories`);
   console.log(`  ${(learningPaths.paths || []).length} learning paths`);
+  console.log(`  ${(roleCollections.roles || []).length} role collections`);
   console.log(`  Output: web/assets/data/`);
   console.log('');
 }

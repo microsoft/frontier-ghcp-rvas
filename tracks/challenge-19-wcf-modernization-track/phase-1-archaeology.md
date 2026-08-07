@@ -10,6 +10,8 @@ Understand the Meridian Savings Bank WCF service well enough to describe every o
 
 ## Tasks
 
+Before you read a single contract, use the full setup: keep your repository instructions open for the WCF conventions and your REST target, bring in the WCF Analyst agent for the parts of the fault catalog that need judgment calls, and run your WSDL verification skill once the service is up instead of assuming SOAP responses are correct without checking.
+
 1. **Get oriented on WCF fundamentals.** Before reading service code, spend 15-20 minutes getting context. Ask Copilot to explain:
    - What `ServiceContract`, `OperationContract`, `DataContract`, `DataMember`, and `FaultContract` attributes do
    - What `BasicHttpBinding` is and what it controls (transport, encoding, security)
