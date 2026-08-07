@@ -1,7 +1,5 @@
 # Stage 3: Advanced Interactions
 
-[Back to Challenge 4: Frontend Track](../challenge-4-frontend-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Add polish and interactivity that goes beyond basic CRUD.

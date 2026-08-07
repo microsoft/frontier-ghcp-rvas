@@ -1,7 +1,5 @@
 # Stage 4: Class Imbalance and Interpretability
 
-[Back to Challenge 2: ML & AI Track](../challenge-2-ml-ai-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 The dataset has class imbalance. Address it rigorously and explain your model to the business.

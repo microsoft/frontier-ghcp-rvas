@@ -5,7 +5,7 @@ This kit helps you run an outcome-driven GitHub Copilot Adoption delivery sessio
 ## What's in the Kit
 
 - **[Outcome Canvas](./outcome-canvas.md)** -- a fill-in worksheet to define your target outcome, pain, definition of done, constraints, and demo plan
-- **[Challenge Templates](./templates/)** -- skeletons for authoring a custom track structure (optional -- use if you need a progression path; otherwise work directly on your app)
+- **[Challenge Templates](./templates/)** -- skeletons for an overview page, a committed contents page, and a dedicated page for each stage or phase
 - **[Facilitator Runbook](./facilitator-runbook.md)** -- how to run a session on a customer codebase (prep, environment, timeboxes, checkpoints, demo)
 - **[Outcome Scorecard](./outcome-scorecard.md)** -- a reusable definition-of-done template that replaces usage metrics as the success measure
 - **[Example Walkthrough](./example-walkthrough.md)** -- a worked example adapting an existing challenge app end-to-end through the kit
@@ -44,9 +44,16 @@ Use the **[Outcome Canvas](./outcome-canvas.md)** to document:
 
 If you want a structured progression path, use the **[challenge templates](./templates/)** to create:
 
-- A track file describing the outcome, stages, and success criteria
-- Stage files breaking the work into checkpoints
+- An overview page describing the challenge and setup
+- A committed `stages.md` or `phases.md` contents page listing the full progression
+- A dedicated page for each stage or phase, with previous and next links
 - A devcontainer or environment setup guide
+
+Copy `track-template.md` first, then create its track folder. Copy
+`contents-template.md` into that folder as `stages.md` or `phases.md`, and add one
+page from `stage-template.md` for each progression step. Keep the overview's next
+link, `contents_url` in `meta.yml`, the contents links, and every page footer in
+sync.
 
 If you already have a clear path, skip this step and work directly on your app.
 
@@ -88,7 +95,7 @@ When you bring your own challenge, you're authoring the 23rd (or 24th, or 25th) 
 ## Quick Start
 
 1. Open the **[Outcome Canvas](./outcome-canvas.md)** and fill it in for your app
-2. If you need stage-by-stage guidance, copy a template from **[templates/](./templates/)** and adapt it
+2. If you need a progression path, copy the overview, contents, and stage templates from **[templates/](./templates/)** and wire their navigation in order
 3. Set up your environment (devcontainer, local dev, or Codespaces)
 4. Run the session following the **[Facilitator Runbook](./facilitator-runbook.md)**
 5. Demo the result and fill in the **[Outcome Scorecard](./outcome-scorecard.md)**

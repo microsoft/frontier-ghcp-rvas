@@ -1,7 +1,5 @@
 # Stage 2: Your First Automated Tests with Copilot
 
-[Back to Challenge 5: QA & Testing Track](../challenge-5-qa-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 You have a test plan. Now you'll use Copilot to turn those test scenarios into working automated tests. The starter code includes some tests with intentional bugs -- a good exercise in using Copilot to diagnose and fix failures.

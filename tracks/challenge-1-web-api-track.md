@@ -52,20 +52,6 @@ Navigate to `challenges/challenge-1-web-api/` and choose either `node-express` o
 
 ---
 
-## Stages
-
-| Stage | Name | Difficulty | Est. Time | Key Deliverable |
-|-------|------|------------|-----------|----------------|
-| 1 | [Basic CRUD](challenge-1-web-api-track/stage-1-basic-crud.md) | ⭐ | 60-75 min | Working task endpoints with validation |
-| 2 | [Authentication and Authorization](challenge-1-web-api-track/stage-2-auth.md) | ⭐⭐ | 60-75 min | JWT auth, user-scoped tasks, role-based access |
-| 3 | [Persistent Storage and Relationships](challenge-1-web-api-track/stage-3-storage.md) | ⭐⭐ | 60-90 min | SQLite database, categories, comments, bulk operations |
-| 4 | [Advanced API Patterns and Debugging](challenge-1-web-api-track/stage-4-advanced.md) | ⭐⭐⭐ | 60-90 min | Fix 3 bugs in v2 module, WebSocket, audit log, rate limiting |
-| 5 | [Production Readiness](challenge-1-web-api-track/stage-5-production.md) | ⭐⭐⭐ | 60-90 min | OpenAPI spec, caching, load testing, structured logging |
-
-Each stage builds on the previous one. Copilot can help with code generation, but the later stages require architectural decisions, debugging skills, and performance analysis that need your judgment.
-
-> **Short on time?** Stages 4 and 5 list optional tasks you can skip. Focus on the bug hunt in Stage 4 and the OpenAPI spec + tests in Stage 5.
-
 ## Tips for Using Copilot on This Track
 
 - Write a short comment above each function describing the endpoint, expected inputs, and error cases. Copilot uses these as a spec.
@@ -79,3 +65,7 @@ Each stage builds on the previous one. Copilot can help with code generation, bu
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
+
+---
+
+Next: [Stages](challenge-1-web-api-track/stages.md)

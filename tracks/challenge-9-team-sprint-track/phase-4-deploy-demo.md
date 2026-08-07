@@ -1,7 +1,5 @@
 # Phase 4: Ship and Demo
 
-[Back to Team Sprint Track](../challenge-9-team-sprint-track.md)
-
 **Duration:** 1.5 hours
 **Focus:** Production deployment, final testing, demo, retrospective
 
@@ -59,4 +57,4 @@ There is no next phase. The sprint is over. If time allows, continue to [Phase 5
 
 ---
 
-Previous: [Phase 3: Sprint 2 -- Integration and Polish](phase-3-sprint-2-integration.md) | Next: [Phase 5: Agentic Workflows](phase-5-agentic-workflows.md) (optional)
+Previous: [Phase 3: Sprint 2 -- Integration and Polish](phase-3-sprint-2-integration.md) | Next: [Phase 5: Agentic Workflows](phase-5-agentic-workflows.md)

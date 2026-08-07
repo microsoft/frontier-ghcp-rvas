@@ -1,7 +1,5 @@
 # Stage 1: Data Discovery and Cleaning
 
-[Back to Challenge 2: ML & AI Track](../challenge-2-ml-ai-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 The dataset has 7+ distinct data quality problems. Your job is to find every one of them
@@ -23,4 +21,4 @@ without being told what to look for.
 
 ---
 
-Next: [Stage 2: Exploratory Analysis and Feature Engineering](stage-2-exploratory-analysis.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Exploratory Analysis and Feature Engineering](stage-2-exploratory-analysis.md)

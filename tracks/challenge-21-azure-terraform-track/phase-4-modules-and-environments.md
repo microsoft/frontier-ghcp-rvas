@@ -1,7 +1,5 @@
 # Phase 4: Modules and Environment Promotion
 
-[Back to Challenge 21: Azure Terraform Track](../challenge-21-azure-terraform-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
 The Terraform now works, but it still reads like a one-off build. This phase turns it into something another team could reuse for dev and prod without copying files and hoping for the best.

@@ -1,7 +1,5 @@
 # Stage 5: Integration and Testing
 
-[Back to Challenge 4: Frontend Track](../challenge-4-frontend-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Connect the frontend to a real (or mocked) backend and write thorough tests.

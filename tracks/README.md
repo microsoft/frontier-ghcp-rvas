@@ -6,6 +6,8 @@ The **22 challenge tracks** below are organized by the outcome they help you del
 
 Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages, phases, and role pages.
 
+Each track starts with an overview page for audience, setup, tips, and resources. Its linked contents page lists the stages or phases and any role-specific paths. Stage and phase pages include previous and next links for reading the track on GitHub.
+
 ## Challenges by Outcome
 
 Tracks are grouped by the outcome they drive. Each grouping below reflects the kind of work result the track produces.

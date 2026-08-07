@@ -1,7 +1,5 @@
 # Phase 3: Sprint 2 -- DevOps Engineer Tasks
 
-[Back to Phase 3 Overview](../phase-3-sprint-2-integration.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: Full 2 hours**
 
 ## Tasks
@@ -35,4 +33,4 @@
 
 ---
 
-Previous: [Phase 2 -- DevOps Engineer Tasks](../phase-2-sprint-1-build/devops-engineer.md) | Next: [Phase 4 -- DevOps Engineer Tasks](../phase-4-deploy-demo/devops-engineer.md)
+Previous: [Phase 2: Sprint 1 -- DevOps Engineer Tasks](../phase-2-sprint-1-build/devops-engineer.md) | Next: [Phase 4: Ship and Demo -- DevOps Engineer Tasks](../phase-4-deploy-demo/devops-engineer.md)

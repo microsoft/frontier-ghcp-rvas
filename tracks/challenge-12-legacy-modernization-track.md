@@ -60,19 +60,6 @@ A dedicated devcontainer is provided at `.devcontainer/challenge-12-legacy-moder
 
 ---
 
-## Phases
-
-| Phase | Name | Duration | What You Do |
-|-------|------|----------|-------------|
-| 1 | [Code Archaeology](challenge-12-legacy-modernization-track/phase-1-archaeology.md) | 1.5-2 hours | Reverse-engineer the codebase, document architecture and business rules |
-| 2 | [Security and Debt Audit](challenge-12-legacy-modernization-track/phase-2-audit.md) | 1-1.5 hours | Identify vulnerabilities, deprecated libraries, and technical debt |
-| 3 | [Test Harness](challenge-12-legacy-modernization-track/phase-3-tests.md) | 1.5-2 hours | Write characterization tests that capture current behavior |
-| 4 | [Migration](challenge-12-legacy-modernization-track/phase-4-migration.md) | 2-3 hours | Upgrade to Spring Boot 3.x, replace deprecated libraries, fix architecture |
-
-Each phase builds on the previous. The archaeology phase is foundational -- if you skip understanding the code, the migration will introduce regressions.
-
-> **Short on time?** Focus on Phases 1 and 3. Understanding the code and writing tests delivers value even without the migration.
-
 ## Tips for Using Copilot on This Track
 
 - Use `/explain` on each controller file. Follow up with targeted questions: "What business rule does the interest calculation implement?" or "What happens when a transfer fails halfway through?"
@@ -88,3 +75,7 @@ Each phase builds on the previous. The archaeology phase is foundational -- if y
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
+
+---
+
+Next: [Phases](challenge-12-legacy-modernization-track/phases.md)

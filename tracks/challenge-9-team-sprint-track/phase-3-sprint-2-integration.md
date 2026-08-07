@@ -1,7 +1,5 @@
 # Phase 3: Sprint 2 -- Integration and Polish
 
-[Back to Team Sprint Track](../challenge-9-team-sprint-track.md)
-
 **Duration:** 2 hours
 **Focus:** Integration, advanced features, bug fixing, deployment preparation
 

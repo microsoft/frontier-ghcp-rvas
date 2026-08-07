@@ -1,7 +1,5 @@
 # Phase 2: Refinement Agent
 
-[Back to Backlog Generator Track](../challenge-15-backlog-generator-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Building an agent that reviews generated backlogs for gaps and inconsistencies

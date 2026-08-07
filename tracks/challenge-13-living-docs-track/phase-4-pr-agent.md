@@ -1,7 +1,5 @@
 # Phase 4: PR Documentation Agent
 
-[Back to Living Documentation Track](../challenge-13-living-docs-track.md)
-
 **Duration:** 2-3 hours
 
 **Focus:** Building a Copilot agent that reviews code changes for documentation completeness

@@ -1,7 +1,5 @@
 # Stage 1: Setup and First Workflow
 
-[Back to Challenge 6: Agentic Workflows Track](../challenge-6-agentic-workflows-track.md)
-
 **Difficulty:** ⭐
 **Time:** 1 hour
 
@@ -78,4 +76,4 @@
 
 ---
 
-Next: [Stage 2: Issue and PR Management](stage-2-issue-pr-management.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Issue and PR Management](stage-2-issue-pr-management.md)

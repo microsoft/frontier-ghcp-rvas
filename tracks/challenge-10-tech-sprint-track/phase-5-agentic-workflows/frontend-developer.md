@@ -1,7 +1,5 @@
 # Phase 5: Agentic Workflows -- Frontend Developer Tasks
 
-[Back to Phase 5 Overview](../phase-5-agentic-workflows.md) | [Back to Technical Team Sprint Track](../../challenge-10-tech-sprint-track.md)
-
 **Time: ~1 hour**
 
 ## Tasks
@@ -38,4 +36,4 @@
 
 ---
 
-Previous: [Phase 4 -- Frontend Developer Tasks](../phase-4-deploy-demo/frontend-developer.md)
+Previous: [Phase 4: Ship and Demo -- Frontend Developer Tasks](../phase-4-deploy-demo/frontend-developer.md)

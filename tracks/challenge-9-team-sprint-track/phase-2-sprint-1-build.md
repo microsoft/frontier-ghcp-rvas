@@ -1,7 +1,5 @@
 # Phase 2: Sprint 1 -- Core Features
 
-[Back to Team Sprint Track](../challenge-9-team-sprint-track.md)
-
 **Duration:** 3 hours
 **Focus:** Parallel development of core features -- API, UI, tests, and infrastructure
 

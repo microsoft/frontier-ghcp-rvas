@@ -1,7 +1,5 @@
 # Stage 5: Reporting, Analysis, and Test Strategy
 
-[Back to Challenge 5: QA & Testing Track](../challenge-5-qa-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Tests exist. Now make them useful to your team: build reporting, analyze flakiness, and create a test strategy that captures what you've learned.

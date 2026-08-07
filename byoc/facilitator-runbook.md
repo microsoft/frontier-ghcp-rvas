@@ -17,7 +17,20 @@ Work with the team to fill in the **[Outcome Canvas](./outcome-canvas.md)**:
 
 Schedule a 30-minute outcome-definition workshop if needed. Keep it short and concrete.
 
-### 2. Environment and Access
+### 2. Choose the Session Pages
+
+For a reusable challenge, author the page set before the session:
+
+1. Start with the overview page.
+2. Add and commit a `stages.md` or `phases.md` contents page.
+3. Add one dedicated page for each stage or phase.
+4. Check the route from overview to contents, then through every previous and
+   next link.
+
+Use `byoc/templates/` as the starting point. For a one-time session with a clear
+plan, the Outcome Canvas can stand on its own.
+
+### 3. Environment and Access
 
 **Codebase Access:**
 
@@ -37,7 +50,7 @@ Schedule a 30-minute outcome-definition workshop if needed. Keep it short and co
 - [ ] Test data is available
 - [ ] CI/CD pipelines are accessible (if in scope for the outcome)
 
-### 3. Pre-Session Communication
+### 4. Pre-Session Communication
 
 Send participants:
 

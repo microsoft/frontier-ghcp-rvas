@@ -1,7 +1,5 @@
 # Phase 1: Technical Planning
 
-[Back to Technical Team Sprint Track](../challenge-10-tech-sprint-track.md)
-
 **Duration:** 1.5 hours
 **Focus:** Read the specification, create a technical spec, set up tooling, break work into Issues, plan Sprint 1
 
@@ -51,4 +49,4 @@ After planning, everyone should have clear tasks and an unblocked path into Spri
 
 ---
 
-Next: [Phase 2: Sprint 1 -- Core Features](phase-2-sprint-1-build.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Sprint 1 -- Core Features](phase-2-sprint-1-build.md)

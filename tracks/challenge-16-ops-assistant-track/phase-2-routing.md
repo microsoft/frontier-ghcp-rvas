@@ -1,7 +1,5 @@
 # Phase 2: Incident Routing
 
-[Back to Ops Assistant Track](../challenge-16-ops-assistant-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Building a prompt that routes issues to the correct team based on error patterns

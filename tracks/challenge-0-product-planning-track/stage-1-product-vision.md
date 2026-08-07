@@ -1,7 +1,5 @@
 # Stage 1: Product Vision and Market Analysis
 
-[Back to Challenge 0: Product Planning Track](../challenge-0-product-planning-track.md)
-
 **Difficulty:** ⭐ | **Time:** 60-90 min
 
 This stage establishes the foundation. You need a product brief that goes beyond generic descriptions and demonstrates real market understanding.
@@ -31,4 +29,4 @@ Copilot can draft persona descriptions, suggest KPI categories, and generate com
 
 ---
 
-Next: [Stage 2: User Stories and Backlog Quality](stage-2-user-stories.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: User Stories and Backlog Quality](stage-2-user-stories.md)

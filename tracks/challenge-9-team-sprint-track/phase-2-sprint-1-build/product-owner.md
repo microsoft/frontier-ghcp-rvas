@@ -1,7 +1,5 @@
 # Phase 2: Sprint 1 -- Product Owner Tasks
 
-[Back to Phase 2 Overview](../phase-2-sprint-1-build.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: Full 3 hours (active throughout)**
 
 You are not idle during the build phase. Your job is to keep the team unblocked and the backlog healthy.
@@ -39,4 +37,4 @@ You are not idle during the build phase. Your job is to keep the team unblocked 
 
 ---
 
-Previous: [Phase 1 -- Product Owner Tasks](../phase-1-discovery-planning/product-owner.md) | Next: [Phase 3 -- Product Owner Tasks](../phase-3-sprint-2-integration/product-owner.md)
+Previous: [Phase 1: Discovery and Planning -- Product Owner Tasks](../phase-1-discovery-planning/product-owner.md) | Next: [Phase 3: Sprint 2 -- Product Owner Tasks](../phase-3-sprint-2-integration/product-owner.md)

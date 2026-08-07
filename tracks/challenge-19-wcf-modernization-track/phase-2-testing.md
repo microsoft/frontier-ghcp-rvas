@@ -1,7 +1,5 @@
 # Phase 2: Characterization Tests
 
-[Back to Legacy WCF Banking Modernization Track](../challenge-19-wcf-modernization-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Writing tests that document and lock in the WCF service's current behavior before any migration work starts

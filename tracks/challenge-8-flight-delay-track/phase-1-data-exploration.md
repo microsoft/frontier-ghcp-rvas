@@ -1,7 +1,5 @@
 # Phase 1: Data Exploration and Model Building
 
-[Back to Flight Delay Predictor Track](../challenge-8-flight-delay-track.md)
-
 **Duration:** 3-4 hours
 **Focus:** Jupyter Notebook, data science, machine learning
 
@@ -62,4 +60,4 @@ The dataset (`data/flights.csv`) contains ~272,000 records of US flights from 20
 
 ---
 
-Next: [Phase 2: Build the Prediction API](phase-2-prediction-api.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Build the Prediction API](phase-2-prediction-api.md)

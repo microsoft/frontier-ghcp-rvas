@@ -1,24 +1,36 @@
 # Track File Structure
 
-Every track has a **main file** under `tracks/` and a **subdirectory** containing one file per stage/phase. Shared setup content lives in `tracks/getting-started.md`.
+Every track has an overview page under `tracks/`, a contents page in its track
+subdirectory, and one file per stage or phase. Tracks with role-specific work
+can also have nested role pages. Shared setup content lives in
+`tracks/getting-started.md`.
 
 ## File Layout
 
 ```text
 tracks/
-  getting-started.md                          ← shared setup (clean start, instructions, agents)
-  challenge-1-web-api-track.md                  ← main track file (overview, table, tips, resources)
+  getting-started.md
+  challenge-1-web-api-track.md
   challenge-1-web-api-track/
-    stage-1-basic-crud.md                     ← one file per stage
+    stages.md
+    stage-1-basic-crud.md
     stage-2-auth.md
-    stage-3-storage.md
-    stage-4-advanced.md
-    stage-5-production.md
+  challenge-9-team-sprint-track.md
+  challenge-9-team-sprint-track/
+    phases.md
+    phase-1-discovery-planning.md
+    phase-1-discovery-planning/
+      backend-developer.md
 ```
 
-## Main Track File: Section Order
+Use `stages.md` when the track uses Stage terminology and `phases.md` when it
+uses Phase terminology.
 
-Sections marked **(required)** must appear in every track. Sections marked **(if applicable)** should be included only when relevant.
+## Overview Page
+
+The overview is the main file at `tracks/<track-name>.md`. Sections marked
+**required** must appear in every track. Include sections marked
+**if applicable** only when relevant.
 
 ```text
 1. # Track Title                              (required)
@@ -33,80 +45,151 @@ Sections marked **(required)** must appear in every track. Sections marked **(if
 4. ## Technology Stack                        (required)
    - Bullet list of languages, frameworks, tools
 
-5. ## Getting Started                         (required)
+5. Track narrative or team guidance           (if applicable)
+
+6. ## Getting Started                         (required)
    - Link to getting-started.md
    - ### Custom Instructions for This Track
    - ### Suggested Agents
    - ### Open the Challenge
 
-6. ## Stages                                  (required)
-   - Summary table with linked stage names
-   - Brief paragraph on progression and judgment
-   - Blockquote with "Short on time?" guidance
-
 7. ## Tips for Using Copilot on This Track    (required)
-   - Practical prompts and patterns specific to the track
 
 8. ## Resources                               (required)
-   - Flat list of links: Copilot Guide, Prompt Engineering, Troubleshooting, Facilitator Guide
+
+9. Navigation footer                          (required)
+   - Next link to stages.md or phases.md
 ```
 
-## Stage File Format
+The overview does not contain the stage or phase summary table, progression
+paragraph, short-on-time guidance, or role progression matrices.
 
-Each stage lives in `tracks/<track-name>/stage-N-<slug>.md`. Some extended tracks still use `phase-N-<slug>.md`.
+## Contents Page
+
+The contents page is `tracks/<track-name>/stages.md` or
+`tracks/<track-name>/phases.md`.
 
 ```text
-1. # Stage N: Name
-   - Back-link to main track file
-   - Difficulty and Time metadata
+1. # Track Title: Stages or Phases             (required)
 
-2. ## Tasks                                   (required)
-   - Numbered list
+2. ## Stages or ## Phases                      (required)
+   - Summary table with linked names
+   - Brief progression paragraph              (if present)
+   - "Short on time?" guidance                (if present)
 
-3. ## Verification                            (required)
-   - Bullet list of pass criteria
+3. ## Follow Your Role                         (if applicable)
+   - Role matrices linking to nested pages
+
+4. Navigation footer                           (required)
+   - Previous link to the overview
+   - Next link to the first stage or phase
+```
+
+Links from a contents page to its stage, phase, or nested role pages are
+relative to the track subdirectory.
+
+## Stage or Phase Page
+
+Each top-level stage or phase lives at
+`tracks/<track-name>/stage-N-<slug>.md` or
+`tracks/<track-name>/phase-N-<slug>.md`.
+
+```text
+1. # Stage or Phase N: Name                    (required)
+   - Difficulty and time metadata
+
+2. ## Tasks                                    (required)
+
+3. ## Verification                             (required)
 
 4. ## What Copilot Helps With vs. What Requires Your Judgment
-                                              (if applicable)
+                                                (if applicable)
 
-5. Navigation footer                          (required)
-   - Previous / Next links to adjacent stages
+5. Navigation footer                            (required)
+```
+
+Top-level pages navigate numerically across other top-level pages. The first
+page links back to the contents page. Intermediate pages link to the previous
+and next numeric page. The last page links to the previous page.
+
+## Nested Role Page
+
+Role-specific tasks live at
+`tracks/<track-name>/phase-N-<slug>/<role>.md`.
+
+```text
+1. # Phase N: Name -- Role Tasks               (required)
+
+2. ## Tasks                                    (required)
+
+3. ## Verification                             (required)
+
+4. Navigation footer                            (required)
+```
+
+Nested role pages navigate to the same role in the previous or next phase.
+The role's first phase links back to `phases.md`. A top-level phase page never
+links directly to a nested role page in its footer.
+
+## Navigation Footer Format
+
+Place a horizontal rule before the footer. Use these forms:
+
+```markdown
+---
+
+Next: [Stages](challenge-1-web-api-track/stages.md)
+```
+
+```markdown
+---
+
+Previous: [Track Overview](../challenge-1-web-api-track.md) | Next: [Stage 1: Basic CRUD](stage-1-basic-crud.md)
+```
+
+```markdown
+---
+
+Previous: [Stage 1: Basic CRUD](stage-1-basic-crud.md) | Next: [Stage 3: Persistent Storage](stage-3-storage.md)
 ```
 
 ## Shared Getting Started File
 
-`tracks/getting-started.md` contains the steps common to all tracks:
+`tracks/getting-started.md` contains the common setup steps:
 
-1. Clean Start (run cleanup script)
-2. Create Custom Instructions (general guidance)
-3. Create Custom Agents (general guidance + awesome-copilot reference)
-4. Open the Challenge (pointer back to track file)
+1. Clean Start
+2. Create Custom Instructions
+3. Create Custom Agents
+4. Open the Challenge
 
-Each main track file links to this shared file and adds track-specific agent suggestions and instruction guidance.
+Each overview links to this shared file and adds track-specific agent and
+instruction guidance.
 
 ## Rules
 
-- **No duplicate content.** Verification criteria go inside each stage file only, never repeated in the main track file.
-- **One "Getting Started" section.** The main track file links to the shared `getting-started.md` and adds track-specific subsections.
-- **One challenge link.** Link to the challenge folder once, inside `### Open the Challenge` in Getting Started.
-- **No "Track Overview" prose.** The metadata line (Duration / Difficulty / Focus) under the title is sufficient. Drop any paragraph restating the same information.
-- **No "Learning Outcomes" section.** The stages and their verification bullets already communicate what the participant will learn. Outcome framing belongs in metadata and the facilitator guide, not as a track-file section.
-- **Tips must be track-relevant.** Do not include tips for tools or domains that belong to a different track.
-- **Headings in main file:** `##` for top-level sections, `###` for subsections.
-- **Headings in stage files:** `#` for stage title, `##` for Tasks/Verification/etc.
-- **Stage table links.** Every stage name in the summary table must be a relative link to the stage file.
-- **Navigation links.** Every stage file must end with Previous/Next links to adjacent stages (first stage has only Next, last stage has only Previous).
-- **`awesome-copilot` referenced once.** In the shared `getting-started.md` file. Do not repeat it in individual tracks.
-- **No "Recommended Schedule" section.** Time estimates belong in the stages table. Clock-slot schedules belong in the Facilitator Guide, not in participant-facing track files.
+- Do not duplicate content between the overview and contents page.
+- Keep verification criteria in each stage or phase file.
+- Keep one `Getting Started` section in the overview.
+- Link to the challenge folder once, under `### Open the Challenge`.
+- Do not add `Track Overview`, `Learning Outcomes`, or `Recommended Schedule`
+  sections.
+- Keep tips relevant to the track.
+- Use `##` for overview and contents sections and `###` for subsections.
+- Use `#` for stage, phase, and nested role page titles.
+- Link every stage and phase name in the contents table.
+- Reference `awesome-copilot` once, in the shared setup page.
+- Do not create README files in challenge folders.
 
 ## Outcome Framing
 
-Every challenge drives a business outcome (for example: modernizing legacy code, shipping features, raising quality, automating delivery, standing up platform foundations, or building AI capabilities). This framing lives in the facilitator guide, learning paths, and website, NOT as a new section in track files.
+Business outcome framing belongs in the facilitator guide, learning paths, and
+website. The overview explains what work gets done and how to execute it.
 
-The track file describes WHAT work gets done and HOW to execute it. The outcome framing describes WHY the work matters from a business perspective. Keep these separate.
-
-For customers authoring their own challenges (Bring Your Own Challenge), templates are provided in `byoc/templates/` matching this canonical structure.
+For customers authoring their own challenges, templates are available under
+`byoc/templates/`.
 
 ## Writing Style
 
-Follow the rules in `.github/copilot-instructions.md`: no emoji in headings, no em-dashes (use `--`), no hype language, no AI sign-offs, natural phrasing, markdownlint-compliant.
+Follow `.github/copilot-instructions.md`: no emoji in headings, no em dashes,
+no hype language, no AI sign-offs, natural phrasing, and markdownlint-compliant
+formatting.

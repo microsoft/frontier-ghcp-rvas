@@ -1,7 +1,5 @@
 # Phase 2: Characterization Testing
 
-[Back to Legacy COBOL Banking Modernization Track](../challenge-18-cobol-modernization-track.md)
-
 **Duration:** 2-3 hours
 **Focus:** Writing tests that capture existing behavior before changing anything
 

@@ -1,7 +1,5 @@
 # Phase 3: Reusable Workflows
 
-[Back to Pipeline Factory Track](../challenge-14-pipeline-factory-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Creating reusable workflow templates for standardization across projects

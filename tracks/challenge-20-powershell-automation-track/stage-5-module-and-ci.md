@@ -1,7 +1,5 @@
 # Stage 5: Module and CI Pipeline
 
-[Back to Challenge 20: PowerShell Automation Track](../challenge-20-powershell-automation-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
 The three scripts work and are tested. This stage packages them into a proper PowerShell module and adds a GitHub Actions workflow that lints and tests on every push.

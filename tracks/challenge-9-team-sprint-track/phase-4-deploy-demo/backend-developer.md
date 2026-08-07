@@ -1,7 +1,5 @@
 # Phase 4: Ship and Demo -- Backend Developer Tasks
 
-[Back to Phase 4 Overview](../phase-4-deploy-demo.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: ~1 hour tasks + demo/retro**
 
 ## Tasks
@@ -22,4 +20,4 @@
 
 ---
 
-Previous: [Phase 3 -- Backend Developer Tasks](../phase-3-sprint-2-integration/backend-developer.md) | Next: [Phase 5 -- Backend Developer Tasks](../phase-5-agentic-workflows/backend-developer.md)
+Previous: [Phase 3: Sprint 2 -- Backend Developer Tasks](../phase-3-sprint-2-integration/backend-developer.md) | Next: [Phase 5: Agentic Workflows -- Backend Developer Tasks](../phase-5-agentic-workflows/backend-developer.md)

@@ -1,7 +1,5 @@
 # Phase 2: Architecture Diagrams
 
-[Back to Living Documentation Track](../challenge-13-living-docs-track.md)
-
 **Duration:** 1-1.5 hours
 
 **Focus:** Creating Mermaid diagrams for system architecture, data model, and key workflows

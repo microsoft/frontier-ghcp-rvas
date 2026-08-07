@@ -68,19 +68,6 @@ If your team uses Atlassian Cloud (Jira / Confluence), you can connect Copilot t
 
 ---
 
-## Phases
-
-| Phase | Name | Duration | What You Do |
-|-------|------|----------|-------------|
-| 1 | [Spec-to-Backlog Prompt](challenge-15-backlog-generator-track/phase-1-prompt.md) | 2-2.5 hours | Build and refine a prompt that converts specs into structured backlogs |
-| 2 | [Refinement Agent](challenge-15-backlog-generator-track/phase-2-refinement.md) | 1.5-2 hours | Build an agent that reviews generated backlogs for gaps and inconsistencies |
-| 3 | [MCP Integration](challenge-15-backlog-generator-track/phase-3-mcp.md) | 1.5-2 hours | Push generated items to Jira using the Atlassian MCP server |
-| 4 | [Consistency Benchmark](challenge-15-backlog-generator-track/phase-4-benchmark.md) | 1-1.5 hours | Process all 3 specs and compare output consistency |
-
-Phases 1 and 2 are the core. Phase 3 requires an Atlassian Cloud account. Phase 4 is a validation exercise that tests your prompts on all three specs.
-
-> **Short on time?** Focus on Phases 1 and 2 with just the Password Reset spec. A working spec-to-backlog prompt and a refinement agent are the most valuable deliverables.
-
 ## Tips for Using Copilot on This Track
 
 - Start with the simplest spec (Password Reset) to build your prompt, then test it on the complex ones. If it works on Inventory Reorder, it works on everything.
@@ -96,3 +83,7 @@ Phases 1 and 2 are the core. Phase 3 requires an Atlassian Cloud account. Phase 
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
+
+---
+
+Next: [Phases](challenge-15-backlog-generator-track/phases.md)

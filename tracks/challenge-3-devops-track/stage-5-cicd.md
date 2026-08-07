@@ -1,7 +1,5 @@
 # Stage 5: CI/CD Pipeline and Deployment Strategy
 
-[Back to Challenge 3: DevOps Track](../challenge-3-devops-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Automate everything and plan for failure.

@@ -1,7 +1,5 @@
 # Phase 4: Deployment Gates and Runbooks
 
-[Back to Pipeline Factory Track](../challenge-14-pipeline-factory-track.md)
-
 **Duration:** 2-3 hours
 
 **Focus:** Adding deployment gates, rollback mechanisms, and generating incident runbooks

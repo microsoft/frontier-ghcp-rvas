@@ -1,7 +1,5 @@
 # Phase 5: Agentic Workflows -- DevOps Engineer Tasks
 
-[Back to Phase 5 Overview](../phase-5-agentic-workflows.md) | [Back to Technical Team Sprint Track](../../challenge-10-tech-sprint-track.md)
-
 **Time: ~1 hour**
 
 ## Tasks
@@ -42,4 +40,4 @@
 
 ---
 
-Previous: [Phase 4 -- DevOps Engineer Tasks](../phase-4-deploy-demo/devops-engineer.md)
+Previous: [Phase 4: Ship and Demo -- DevOps Engineer Tasks](../phase-4-deploy-demo/devops-engineer.md)

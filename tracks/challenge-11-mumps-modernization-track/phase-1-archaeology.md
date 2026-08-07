@@ -1,7 +1,5 @@
 # Phase 1: Code Archaeology
 
-[Back to Legacy MUMPS Modernization Track](../challenge-11-mumps-modernization-track.md)
-
 **Duration:** 2-3 hours
 **Focus:** Reverse-engineering, documentation, architecture mapping
 
@@ -54,4 +52,4 @@ Understand the MUMPS banking system well enough to explain every module's purpos
 
 ---
 
-Next: [Phase 2: Characterization Testing](phase-2-testing.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Characterization Testing](phase-2-testing.md)

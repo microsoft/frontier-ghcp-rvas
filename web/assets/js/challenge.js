@@ -1,4 +1,4 @@
-/* GitHub Copilot Adoption -- challenge detail page (?id=<challengeId>) */
+/* GitHub Copilot Adoption -- challenge detail page (?id=<challengeId>&page=<pageId>) */
 (function () {
   'use strict';
 
@@ -9,8 +9,20 @@
     return _kiosk ? FP.kioskChallengeUrl(id, _kiosk) : FP.challengeUrl(id);
   }
 
+  function pageUrl(challengeId, pageId) {
+    const query = new URLSearchParams();
+    query.set('id', challengeId);
+    query.set('page', pageId);
+    if (_kiosk) {
+      query.set('set', _kiosk.ids.join(','));
+      if (_kiosk.name) query.set('name', _kiosk.name);
+    }
+    return 'challenge.html?' + query.toString();
+  }
+
   async function init() {
     const challengeId = FP.qp('id');
+    const requestedPageId = FP.qp('page') || 'overview';
     if (!challengeId) {
       showError('No challenge ID specified in the URL. Please provide a valid challenge ID using ?id=challenge-X');
       return;
@@ -35,14 +47,25 @@
     }
 
     const allChallenges = data.challenges || [];
+    const pages = challenge.pages || [];
+    const selectedPage = pages.find((page) => page.id === requestedPageId);
 
-    document.title = challenge.title + ' - GitHub Copilot Adoption';
     applyCategoryColor(challenge.category);
-    renderHero(challenge, data.categories || []);
+    renderHero(challenge, data.categories || [], selectedPage);
     renderSidebar(challenge, allChallenges);
+    renderChallengePages(challenge, selectedPage);
     renderInfoPanel(challenge, data.categories || []);
     applyKioskLinks();
-    loadGuide(challenge);
+
+    if (!selectedPage) {
+      renderPageError(
+        'Page not found',
+        'The page "' + requestedPageId + '" is not part of this challenge. Choose a page from the challenge pages menu.'
+      );
+      return;
+    }
+
+    loadPage(challenge, selectedPage, pages);
   }
 
   function applyCategoryColor(categoryId) {
@@ -50,11 +73,13 @@
     document.documentElement.style.setProperty('--cat-color', color);
   }
 
-  function renderHero(c, categories) {
+  function renderHero(c, categories, selectedPage) {
     const color = FP.categoryColor(c.category);
     const catName = FP.categoryName(c.category, categories);
+    const pageTitle = selectedPage ? selectedPage.title : 'Page not found';
 
-    // Breadcrumbs
+    document.title = pageTitle + ' - ' + c.title + ' - GitHub Copilot Adoption';
+
     const crumbs = document.getElementById('breadcrumbs');
     if (crumbs) {
       crumbs.innerHTML = `
@@ -64,7 +89,9 @@
         <span>›</span>
         <a href="${FP.catalogUrl(c.category)}" style="color:${color}">${FP.esc(catName)}</a>
         <span>›</span>
-        <span>${FP.esc(c.id)}</span>`;
+        <a href="${pageUrl(c.id, 'overview')}">${FP.esc(c.id)}</a>
+        <span>›</span>
+        <span aria-current="page">${FP.esc(pageTitle)}</span>`;
     }
 
     _setText('challengeTitle', c.title);
@@ -86,7 +113,6 @@
   }
 
   function renderSidebar(c, allChallenges) {
-    // Starter link
     const starterLink = document.getElementById('starterLink');
     if (starterLink && c.starter_path) {
       const repoUrl = 'https://github.com/microsoft/frontier-ghcp-rvas';
@@ -95,7 +121,6 @@
       starterLink.rel = 'noopener';
     }
 
-    // Prerequisites
     const prereqPanel = document.getElementById('prereqPanel');
     const prereqList = document.getElementById('prereqList');
     if (prereqPanel && prereqList) {
@@ -117,7 +142,6 @@
       }
     }
 
-    // Tags
     const tagsList = document.getElementById('tagsList');
     if (tagsList) {
       const tags = c.tags || [];
@@ -132,6 +156,70 @@
         tagsList.innerHTML = '<span class="text-dim" style="font-size:0.8rem">No tags</span>';
       }
     }
+  }
+
+  function renderChallengePages(challenge, selectedPage) {
+    const panel = document.getElementById('challengePagesPanel');
+    const nav = document.getElementById('challengePagesNav');
+    const pages = challenge.pages || [];
+    if (!panel || !nav) return;
+
+    if (!pages.length) {
+      panel.style.display = 'none';
+      return;
+    }
+
+    const childrenByParent = new Map();
+    pages.forEach((page) => {
+      if (!page.parent_id) return;
+      if (!childrenByParent.has(page.parent_id)) childrenByParent.set(page.parent_id, []);
+      childrenByParent.get(page.parent_id).push(page);
+    });
+
+    nav.innerHTML = `
+      <ul class="challenge-pages-list">
+        ${pages
+          .filter((page) => !page.parent_id)
+          .map((page) => renderPageMenuItem(challenge.id, page, childrenByParent.get(page.id) || [], selectedPage))
+          .join('')}
+      </ul>`;
+
+    const disclosure = document.getElementById('challengePagesDisclosure');
+    if (disclosure && window.matchMedia('(max-width: 900px)').matches) {
+      disclosure.removeAttribute('open');
+    }
+  }
+
+  function renderPageMenuItem(challengeId, page, children, selectedPage) {
+    const isActive = !!selectedPage && selectedPage.id === page.id;
+    const isActiveGroup = isActive || (!!selectedPage && selectedPage.parent_id === page.id);
+    const link = renderPageLink(challengeId, page, isActive);
+
+    if (!children.length) {
+      return `<li class="challenge-pages-item challenge-pages-item-${FP.esc(page.kind)}">${link}</li>`;
+    }
+
+    return `
+      <li class="challenge-pages-item challenge-pages-item-${FP.esc(page.kind)} challenge-pages-group${isActiveGroup ? ' is-active-group' : ''}">
+        <details class="challenge-pages-details"${isActiveGroup ? ' open' : ''}>
+          <summary class="challenge-pages-summary">${FP.esc(page.title)}</summary>
+          <div class="challenge-pages-group-body">
+            ${renderPageLink(challengeId, page, isActive, page.kind === 'stage' ? 'Stage overview' : 'Phase overview')}
+            <ul class="challenge-pages-children">
+              ${children
+                .map((child) => {
+                  const childActive = !!selectedPage && selectedPage.id === child.id;
+                  return `<li class="challenge-pages-item challenge-pages-item-${FP.esc(child.kind)}">${renderPageLink(challengeId, child, childActive)}</li>`;
+                })
+                .join('')}
+            </ul>
+          </div>
+        </details>
+      </li>`;
+  }
+
+  function renderPageLink(challengeId, page, isActive, label) {
+    return `<a class="challenge-page-link${isActive ? ' is-active' : ''}" href="${pageUrl(challengeId, page.id)}"${isActive ? ' aria-current="page"' : ''}>${FP.esc(label || page.title)}</a>`;
   }
 
   function renderInfoPanel(c, categories) {
@@ -172,25 +260,67 @@
     }
   }
 
-  async function loadGuide(c) {
+  async function loadPage(challenge, page, pages) {
     const body = document.getElementById('guideBody');
     if (!body) return;
 
-    if (!c.guide) {
-      body.innerHTML = '<p class="text-dim" style="font-size:.875rem">No guide available for this challenge.</p>';
+    if (!page.content_url) {
+      renderPageError('Page unavailable', 'This page does not have a published content URL.');
       return;
     }
 
-    body.innerHTML = '<p class="text-dim" style="font-size:.875rem;font-family:var(--font-mono)">Loading guide…</p>';
+    body.innerHTML = '<p class="text-dim" style="font-size:.875rem;font-family:var(--font-mono)">Loading page…</p>';
 
     try {
-      const res = await fetch(c.guide, { cache: 'no-cache' });
+      const res = await fetch(page.content_url, { cache: 'no-cache' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const md = await res.text();
       FP.renderMd(md, body);
+      preserveKioskChallengeLinks(body);
+      renderPageNavigation(body, challenge.id, page, pages);
     } catch (e) {
-      body.innerHTML = `<p class="text-dim" style="font-size:.875rem">Could not load guide: ${FP.esc(e.message)}</p>`;
+      renderPageError('Could not load page', e.message);
     }
+  }
+
+  function preserveKioskChallengeLinks(root) {
+    if (!_kiosk) return;
+    root.querySelectorAll('a[href]').forEach((link) => {
+      const url = new URL(link.getAttribute('href'), window.location.href);
+      if (!url.pathname.endsWith('/challenge.html') && !url.pathname.endsWith('challenge.html')) return;
+      url.searchParams.set('set', _kiosk.ids.join(','));
+      if (_kiosk.name) url.searchParams.set('name', _kiosk.name);
+      else url.searchParams.delete('name');
+      link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
+    });
+  }
+
+  function renderPageNavigation(body, challengeId, page, pages) {
+    const previous = page.previous_id ? pages.find((item) => item.id === page.previous_id) : null;
+    const next = page.next_id ? pages.find((item) => item.id === page.next_id) : null;
+    if (!previous && !next) return;
+
+    const nav = document.createElement('nav');
+    nav.className = 'challenge-page-navigation';
+    nav.setAttribute('aria-label', 'Challenge page navigation');
+    nav.innerHTML = `
+      <div class="challenge-page-navigation-previous">
+        ${previous ? `<a class="challenge-page-navigation-link" href="${pageUrl(challengeId, previous.id)}"><span class="challenge-page-navigation-label">Previous</span><span class="challenge-page-navigation-title">${FP.esc(previous.title)}</span></a>` : ''}
+      </div>
+      <div class="challenge-page-navigation-next">
+        ${next ? `<a class="challenge-page-navigation-link" href="${pageUrl(challengeId, next.id)}"><span class="challenge-page-navigation-label">Next</span><span class="challenge-page-navigation-title">${FP.esc(next.title)}</span></a>` : ''}
+      </div>`;
+    body.appendChild(nav);
+  }
+
+  function renderPageError(title, message) {
+    const body = document.getElementById('guideBody');
+    if (!body) return;
+    body.innerHTML = `
+      <div class="challenge-page-error empty" role="alert">
+        <strong>${FP.esc(title)}</strong>
+        <p>${FP.esc(message)}</p>
+      </div>`;
   }
 
   function showError(msg) {

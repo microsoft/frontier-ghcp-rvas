@@ -1,7 +1,5 @@
 # Phase 4: Language Translation
 
-[Back to Legacy MUMPS Modernization Track](../challenge-11-mumps-modernization-track.md)
-
 **Duration:** 2.5-3 hours
 **Focus:** Translating the full MUMPS system to a modern language while preserving behavior
 

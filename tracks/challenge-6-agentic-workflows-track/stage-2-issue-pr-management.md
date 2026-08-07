@@ -1,7 +1,5 @@
 # Stage 2: Issue and PR Management
 
-[Back to Challenge 6: Agentic Workflows Track](../challenge-6-agentic-workflows-track.md)
-
 **Difficulty:** ⭐⭐
 **Time:** 1.5 hours
 

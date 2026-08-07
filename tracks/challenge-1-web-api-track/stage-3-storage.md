@@ -1,7 +1,5 @@
 # Stage 3: Persistent Storage and Relationships
 
-[Back to Challenge 1: Web API Track](../challenge-1-web-api-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Replace the in-memory store with a real database and add data relationships.

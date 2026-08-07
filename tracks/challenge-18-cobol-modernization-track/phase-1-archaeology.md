@@ -1,7 +1,5 @@
 # Phase 1: Code Archaeology
 
-[Back to Legacy COBOL Banking Modernization Track](../challenge-18-cobol-modernization-track.md)
-
 **Duration:** 2-3 hours
 **Focus:** Reverse-engineering, documentation, architecture mapping
 
@@ -56,4 +54,4 @@ Understand the COBOL banking system well enough to explain every program's purpo
 
 ---
 
-Next: [Phase 2: Characterization Testing](phase-2-testing.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Characterization Testing](phase-2-testing.md)

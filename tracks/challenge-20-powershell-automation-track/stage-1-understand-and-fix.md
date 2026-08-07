@@ -1,7 +1,5 @@
 # Stage 1: Understanding and Fixing Existing Scripts
 
-[Back to Challenge 20: PowerShell Automation Track](../challenge-20-powershell-automation-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
 The `scripts/` folder has three PowerShell scripts inherited from a colleague who left the team. Each one has at least one bug and no tests. Before touching them, use Copilot to understand what each script is supposed to do, then find and fix the problems.
@@ -25,4 +23,4 @@ Copilot will catch the date arithmetic bug and explain what `AddDays` with a pos
 
 ---
 
-Next: [Stage 2: Adding Error Handling and Logging](stage-2-error-handling.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Adding Error Handling and Logging](stage-2-error-handling.md)

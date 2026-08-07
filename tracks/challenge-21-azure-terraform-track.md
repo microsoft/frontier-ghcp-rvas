@@ -86,20 +86,6 @@ Keep the notes short. A reviewer should be able to tell why you made each decisi
 
 ---
 
-## Phases
-
-| Phase | Name | Difficulty | Est. Time | Key Deliverable |
-|-------|------|------------|-----------|----------------|
-| 1 | [State and Naming Baseline](challenge-21-azure-terraform-track/phase-1-state-and-naming.md) | ⭐⭐ | 45-60 min | Remote state bootstrap, provider constraints, naming and tagging rules with assumptions documented |
-| 2 | [Network and App Platform](challenge-21-azure-terraform-track/phase-2-network-and-platform.md) | ⭐⭐ | 45-60 min | VNet, subnets, Log Analytics, Container Apps environment, and plan review notes |
-| 3 | [Identity and Secrets](challenge-21-azure-terraform-track/phase-3-identity-and-secrets.md) | ⭐⭐⭐ | 45-60 min | Managed identity, Key Vault access, secret wiring, and least-privilege review |
-| 4 | [Modules and Environment Promotion](challenge-21-azure-terraform-track/phase-4-modules-and-environments.md) | ⭐⭐⭐ | 60-75 min | Reusable modules, environment rules, validation checks, and promotion notes |
-| 5 | [Policy, CI, and Drift Response](challenge-21-azure-terraform-track/phase-5-policy-ci-and-drift.md) | ⭐⭐⭐ | 60-75 min | GitHub Actions plan workflow, policy gates, and a drift response runbook |
-
-The phases follow the order most teams hit in real work: get state under control, stand up the platform, lock down identity, turn the layout into something reusable, then add the checks that stop bad changes from slipping through.
-
-> **Short on time?** Complete Phases 1, 2, and 5. That gives you a usable Azure Terraform baseline, a real hosting target, and the pipeline guardrails most teams need first.
-
 ## Tips for Using Copilot on This Track
 
 - Use Copilot as a reviewer before you use it as a generator. Ask it to compare two designs, find plan risks, and challenge your assumptions.
@@ -117,3 +103,7 @@ The phases follow the order most teams hit in real work: get state under control
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
+
+---
+
+Next: [Phases](challenge-21-azure-terraform-track/phases.md)

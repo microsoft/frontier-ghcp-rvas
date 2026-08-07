@@ -1,7 +1,5 @@
 # Phase 1: Discovery and Planning -- Business Analyst Tasks
 
-[Back to Phase 1 Overview](../phase-1-discovery-planning.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: ~1 hour supporting PO + 30 min planning**
 
 > The BA role is optional. If no one fills it, the PO absorbs these tasks.
@@ -24,4 +22,4 @@
 
 ---
 
-Next: [Phase 2 -- Business Analyst Tasks](../phase-2-sprint-1-build/business-analyst.md)
+Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- Business Analyst Tasks](../phase-2-sprint-1-build/business-analyst.md)

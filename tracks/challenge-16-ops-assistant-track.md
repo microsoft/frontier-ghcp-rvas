@@ -63,19 +63,6 @@ A dedicated devcontainer is provided at `.devcontainer/challenge-16-ops-assistan
 
 ---
 
-## Phases
-
-| Phase | Name | Duration | What You Do |
-|-------|------|----------|-------------|
-| 1 | [Log Analysis Agent](challenge-16-ops-assistant-track/phase-1-log-analysis.md) | 2-2.5 hours | Build an agent that reads logs, identifies errors, and explains them in plain language |
-| 2 | [Incident Routing](challenge-16-ops-assistant-track/phase-2-routing.md) | 1.5-2 hours | Build a prompt that routes issues to the correct team based on error patterns |
-| 3 | [Troubleshooting Aids](challenge-16-ops-assistant-track/phase-3-troubleshooting.md) | 1-1.5 hours | Create a troubleshooting decision tree and runbooks from historical data |
-| 4 | [Deployment Automation](challenge-16-ops-assistant-track/phase-4-deployment.md) | 1.5-2 hours | Generate deployment checklists and post-deploy smoke tests |
-
-Phase 1 is the foundation. Phases 2-4 can be done in any order after Phase 1.
-
-> **Short on time?** Focus on Phases 1 and 2. A log analysis agent and an incident routing prompt are the tools with the most immediate impact on daily operations.
-
 ## Tips for Using Copilot on This Track
 
 - When feeding log files to Copilot, use `#file` to reference the log files directly. Ask Copilot to "analyze this log file, identify all errors, group related errors together, and explain each group in plain language."
@@ -89,3 +76,7 @@ Phase 1 is the foundation. Phases 2-4 can be done in any order after Phase 1.
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
+
+---
+
+Next: [Phases](challenge-16-ops-assistant-track/phases.md)

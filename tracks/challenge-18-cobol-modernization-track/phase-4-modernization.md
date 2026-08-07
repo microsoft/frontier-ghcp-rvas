@@ -1,7 +1,5 @@
 # Phase 4: Full-Stack Modernization
 
-[Back to Legacy COBOL Banking Modernization Track](../challenge-18-cobol-modernization-track.md)
-
 **Duration:** 2.5-3 hours
 **Focus:** Building a modern web application from the COBOL business logic -- React frontend + API backend
 

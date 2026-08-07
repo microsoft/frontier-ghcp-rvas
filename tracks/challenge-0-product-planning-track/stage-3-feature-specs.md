@@ -1,7 +1,5 @@
 # Stage 3: Feature Specification and Technical Alignment
 
-[Back to Challenge 0: Product Planning Track](../challenge-0-product-planning-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 75-90 min
 
 A spec is only useful if it is complete, consistent, and connects to the real system. This stage pushes you beyond filling in templates.

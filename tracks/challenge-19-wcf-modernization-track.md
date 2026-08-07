@@ -98,19 +98,6 @@ It sends a real SOAP request to `GetCustomerProfile` for customer ID 1001 and pr
 
 ---
 
-## Phases
-
-| Phase | Name | Duration | What You Do |
-|-------|------|----------|-------------|
-| 1 | [Contract Archaeology](challenge-19-wcf-modernization-track/phase-1-archaeology.md) | 2-3 hours | Understand WCF contracts, map service operations, document business rules and faults |
-| 2 | [Characterization Tests](challenge-19-wcf-modernization-track/phase-2-testing.md) | 1.5-2 hours | Write tests against the running WCF service to pin current behavior |
-| 3 | [REST API Migration](challenge-19-wcf-modernization-track/phase-3-migration.md) | 2-3 hours | Build an ASP.NET Core Web API that replaces each WCF service operation |
-| 4 | [Integration and Hardening](challenge-19-wcf-modernization-track/phase-4-hardening.md) | 1-2 hours | Wire up tests against the REST API, fix gaps, add Swagger, write migration notes |
-
-Each phase builds on the previous. Phase 1 is not optional -- if you do not understand the contracts and faults going in, Phase 3 will produce a broken API that silently drops business rules.
-
-> **Short on time?** Focus on Phases 1 and 3. Translate `AccountService` only -- skip `LoanService` and `TransactionService`. Run manual REST tests instead of Phase 4's full test suite.
-
 ## Tips for Using Copilot on This Track
 
 - WCF is well-represented in Copilot's training data. Use `/explain` on a service contract file and it will reliably describe the operations, faults, and binding semantics.
@@ -130,3 +117,7 @@ Each phase builds on the previous. Phase 1 is not optional -- if you do not unde
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
+
+---
+
+Next: [Phases](challenge-19-wcf-modernization-track/phases.md)

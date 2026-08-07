@@ -1,7 +1,5 @@
 # Stage 3: Azure Automation and Compliance
 
-[Back to Challenge 20: PowerShell Automation Track](../challenge-20-powershell-automation-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
 The tagging script in `scripts/Set-AzureResourceTags.ps1` runs interactively with `Connect-AzAccount`, overwrites existing tags without checking them, and provides no feedback. This stage turns it into a safe, automatable compliance script.
@@ -26,6 +24,4 @@ Copilot knows `SupportsShouldProcess` syntax and will generate a correct `$PSCmd
 
 ---
 
-Previous: [Stage 2: Adding Error Handling and Logging](stage-2-error-handling.md)
-
-Next: [Stage 4: Pester Tests and Static Analysis](stage-4-pester-tests.md)
+Previous: [Stage 2: Adding Error Handling and Logging](stage-2-error-handling.md) | Next: [Stage 4: Pester Tests and Static Analysis](stage-4-pester-tests.md)

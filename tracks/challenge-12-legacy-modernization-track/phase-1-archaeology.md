@@ -1,7 +1,5 @@
 # Phase 1: Code Archaeology
 
-[Back to Legacy Code Modernization Track](../challenge-12-legacy-modernization-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Reverse-engineering, documentation, architecture mapping
@@ -33,4 +31,4 @@
 
 ---
 
-Next: [Phase 2: Security and Debt Audit](phase-2-audit.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Security and Debt Audit](phase-2-audit.md)

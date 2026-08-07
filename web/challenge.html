@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css?v=4" />
-  <link rel="stylesheet" href="assets/css/challenge.css?v=4" />
+  <link rel="stylesheet" href="assets/css/challenge.css?v=5" />
   <link rel="stylesheet" href="assets/css/shell.css" />
   <link rel="icon" href="assets/img/logo-mark-white.png" type="image/png" />
 </head>
@@ -72,6 +72,18 @@
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
             </a>
 
+            <div class="panel challenge-pages-panel" id="challengePagesPanel">
+              <details class="challenge-pages-panel-details" id="challengePagesDisclosure" open>
+                <summary class="panel-head challenge-pages-panel-summary">
+                  <span>Challenge pages</span>
+                  <span class="challenge-pages-panel-affordance" aria-hidden="true"></span>
+                </summary>
+                <div class="panel-body">
+                  <nav class="challenge-pages-nav" id="challengePagesNav" aria-label="Challenge pages"></nav>
+                </div>
+              </details>
+            </div>
+
             <div class="panel" id="prereqPanel">
               <div class="panel-head">Prerequisites</div>
               <div class="panel-body">
@@ -113,7 +125,7 @@
 
   <script src="assets/js/marked.min.js?v=4"></script>
   <script src="assets/js/core.js?v=4"></script>
-  <script src="assets/js/challenge.js?v=4"></script>
+  <script src="assets/js/challenge.js?v=5"></script>
   <script src="assets/js/shell.js"></script>
 </body>
 </html>

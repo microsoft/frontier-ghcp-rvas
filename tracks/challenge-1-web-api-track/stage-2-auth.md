@@ -1,7 +1,5 @@
 # Stage 2: Authentication and Authorization
 
-[Back to Challenge 1: Web API Track](../challenge-1-web-api-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 Add user management and protect all task endpoints.

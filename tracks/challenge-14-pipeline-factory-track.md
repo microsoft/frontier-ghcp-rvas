@@ -63,19 +63,6 @@ A dedicated devcontainer is provided at `.devcontainer/challenge-14-pipeline-fac
 
 ---
 
-## Phases
-
-| Phase | Name | Duration | What You Do |
-|-------|------|----------|-------------|
-| 1 | [CI Pipeline](challenge-14-pipeline-factory-track/phase-1-ci.md) | 1.5-2 hours | Create GitHub Actions workflows for build, lint, and test |
-| 2 | [Debug Staging](challenge-14-pipeline-factory-track/phase-2-debug.md) | 1-1.5 hours | Find and fix 5 deliberate bugs in the broken staging deployment |
-| 3 | [Reusable Workflows](challenge-14-pipeline-factory-track/phase-3-reusable.md) | 1.5-2 hours | Create reusable workflow templates for other projects |
-| 4 | [Deployment Gates and Runbooks](challenge-14-pipeline-factory-track/phase-4-gates.md) | 2-3 hours | Add deployment gates, rollback, and incident runbook generation |
-
-Phases 1 and 2 can be done in either order. Phases 3 and 4 build on the workflows created in Phase 1.
-
-> **Short on time?** Focus on Phases 1 and 2. A working CI pipeline and a fixed staging environment are the most impactful deliverables.
-
 ## Tips for Using Copilot on This Track
 
 - Use Agent mode to generate complete workflow files. Describe what you want ("a GitHub Actions workflow that builds and tests a Node.js app, runs on PRs and pushes to main, caches node_modules") and let Copilot produce the YAML.
@@ -91,3 +78,7 @@ Phases 1 and 2 can be done in either order. Phases 3 and 4 build on the workflow
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
+
+---
+
+Next: [Phases](challenge-14-pipeline-factory-track/phases.md)

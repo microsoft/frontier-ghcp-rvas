@@ -1,7 +1,5 @@
 # Phase 3: Sprint 2 -- Business Analyst Tasks
 
-[Back to Phase 3 Overview](../phase-3-sprint-2-integration.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: Full 2 hours**
 
 > The BA role is optional. If no one fills it, the PO absorbs these tasks.
@@ -23,4 +21,4 @@
 
 ---
 
-Previous: [Phase 2 -- Business Analyst Tasks](../phase-2-sprint-1-build/business-analyst.md) | Next: [Phase 4 -- Business Analyst Tasks](../phase-4-deploy-demo/business-analyst.md)
+Previous: [Phase 2: Sprint 1 -- Business Analyst Tasks](../phase-2-sprint-1-build/business-analyst.md) | Next: [Phase 4: Ship and Demo -- Business Analyst Tasks](../phase-4-deploy-demo/business-analyst.md)

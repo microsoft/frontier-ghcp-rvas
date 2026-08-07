@@ -1,7 +1,5 @@
 # Phase 3: MCP Integration
 
-[Back to Backlog Generator Track](../challenge-15-backlog-generator-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Pushing generated backlog items to Jira using the Atlassian Rovo MCP server

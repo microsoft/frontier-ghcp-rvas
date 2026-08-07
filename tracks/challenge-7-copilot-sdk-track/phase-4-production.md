@@ -1,7 +1,5 @@
 # Phase 4: Production-Ready
 
-[Back to Copilot SDK Track](../challenge-7-copilot-sdk-track.md)
-
 **Estimated:** 1-2 hours
 
 The agent works end-to-end. Now make it reliable, testable, and deployable.

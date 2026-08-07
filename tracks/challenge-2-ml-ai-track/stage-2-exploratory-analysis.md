@@ -1,7 +1,5 @@
 # Stage 2: Exploratory Analysis and Feature Engineering
 
-[Back to Challenge 2: ML & AI Track](../challenge-2-ml-ai-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Visualization without interpretation is decoration. Every plot needs to answer a question.

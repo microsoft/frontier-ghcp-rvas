@@ -1,7 +1,5 @@
 # Stage 5: Production Readiness
 
-[Back to Challenge 1: Web API Track](../challenge-1-web-api-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Prepare the API for production deployment.

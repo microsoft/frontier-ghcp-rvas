@@ -1,7 +1,5 @@
 # Stage 4: Advanced API Patterns and Debugging
 
-[Back to Challenge 1: Web API Track](../challenge-1-web-api-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 This stage introduces a broken v2 API module and advanced features.

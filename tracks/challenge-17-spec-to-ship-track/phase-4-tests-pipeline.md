@@ -1,7 +1,5 @@
 # Phase 4: Test Specs and Pipeline
 
-[Back to Spec-to-Ship Accelerator Track](../challenge-17-spec-to-ship-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Generating test specification documents and a CI pipeline

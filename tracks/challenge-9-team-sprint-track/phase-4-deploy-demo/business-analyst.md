@@ -1,7 +1,5 @@
 # Phase 4: Ship and Demo -- Business Analyst Tasks
 
-[Back to Phase 4 Overview](../phase-4-deploy-demo.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: ~1 hour tasks + demo/retro**
 
 > The BA role is optional. If no one fills it, the PO absorbs these tasks.
@@ -24,4 +22,4 @@
 
 ---
 
-Previous: [Phase 3 -- Business Analyst Tasks](../phase-3-sprint-2-integration/business-analyst.md) | Next: [Phase 5 -- Business Analyst Tasks](../phase-5-agentic-workflows/business-analyst.md)
+Previous: [Phase 3: Sprint 2 -- Business Analyst Tasks](../phase-3-sprint-2-integration/business-analyst.md) | Next: [Phase 5: Agentic Workflows -- Business Analyst Tasks](../phase-5-agentic-workflows/business-analyst.md)

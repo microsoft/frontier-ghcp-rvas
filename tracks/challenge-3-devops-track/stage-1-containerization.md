@@ -1,7 +1,5 @@
 # Stage 1: Containerization and Local Development
 
-[Back to Challenge 3: DevOps Track](../challenge-3-devops-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 Containerize the Node.js application and set up a local development workflow.
@@ -20,4 +18,4 @@ Containerize the Node.js application and set up a local development workflow.
 
 ---
 
-Next: [Stage 2: Kubernetes Orchestration](stage-2-kubernetes.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Kubernetes Orchestration](stage-2-kubernetes.md)

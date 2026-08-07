@@ -1,7 +1,5 @@
 # Phase 5: Policy, CI, and Drift Response
 
-[Back to Challenge 21: Azure Terraform Track](../challenge-21-azure-terraform-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
 The last step is making the Terraform safe to live in a shared repository. The goal is not just automation. It is giving the next engineer enough signal to trust a plan before it reaches production.

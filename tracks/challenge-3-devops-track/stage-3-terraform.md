@@ -1,7 +1,5 @@
 # Stage 3: Terraform Infrastructure
 
-[Back to Challenge 3: DevOps Track](../challenge-3-devops-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Provision Azure infrastructure using Terraform with proper variable management.

@@ -1,7 +1,5 @@
 # Phase 2: Debug Staging
 
-[Back to Pipeline Factory Track](../challenge-14-pipeline-factory-track.md)
-
 **Duration:** 1-1.5 hours
 
 **Focus:** Finding and fixing 5 deliberate bugs in the broken staging deployment

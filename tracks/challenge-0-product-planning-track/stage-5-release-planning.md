@@ -1,7 +1,5 @@
 # Stage 5: Release Planning and Go-to-Market
 
-[Back to Challenge 0: Product Planning Track](../challenge-0-product-planning-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 90-120 min
 
 A release plan is not just a list of features and dates. It is a risk management document, a communication tool, and a rollback strategy.

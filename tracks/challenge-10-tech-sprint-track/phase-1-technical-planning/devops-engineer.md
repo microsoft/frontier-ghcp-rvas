@@ -1,7 +1,5 @@
 # Phase 1: Technical Planning -- DevOps Engineer Tasks
 
-[Back to Phase 1 Overview](../phase-1-technical-planning.md) | [Back to Technical Team Sprint Track](../../challenge-10-tech-sprint-track.md)
-
 **Time: ~1 hour setup + 30 min planning**
 
 ## Tasks
@@ -30,4 +28,4 @@
 
 ---
 
-Next: [Phase 2 -- DevOps Engineer Tasks](../phase-2-sprint-1-build/devops-engineer.md)
+Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- DevOps Engineer Tasks](../phase-2-sprint-1-build/devops-engineer.md)

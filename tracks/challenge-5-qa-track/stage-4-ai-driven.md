@@ -1,7 +1,5 @@
 # Stage 4: AI-Driven Testing with Playwright MCP
 
-[Back to Challenge 5: QA & Testing Track](../challenge-5-qa-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 You've been guiding Copilot with specific prompts. Now let Copilot take the lead -- use the Playwright MCP server to have it autonomously explore the application and generate tests from what it observes.

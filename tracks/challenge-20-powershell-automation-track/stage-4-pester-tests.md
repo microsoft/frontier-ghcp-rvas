@@ -1,7 +1,5 @@
 # Stage 4: Pester Tests and Static Analysis
 
-[Back to Challenge 20: PowerShell Automation Track](../challenge-20-powershell-automation-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
 The `tests/` folder has Pester scaffold files with empty `It` blocks. Fill them in and add PSScriptAnalyzer to your local workflow.
@@ -25,6 +23,4 @@ Copilot is good at generating Pester `Mock` setups -- but it cannot know which c
 
 ---
 
-Previous: [Stage 3: Azure Automation and Compliance](stage-3-azure-automation.md)
-
-Next: [Stage 5: Module and CI Pipeline](stage-5-module-and-ci.md)
+Previous: [Stage 3: Azure Automation and Compliance](stage-3-azure-automation.md) | Next: [Stage 5: Module and CI Pipeline](stage-5-module-and-ci.md)

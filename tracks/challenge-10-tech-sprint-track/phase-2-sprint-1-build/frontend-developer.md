@@ -1,7 +1,5 @@
 # Phase 2: Sprint 1 -- Frontend Developer Tasks
 
-[Back to Phase 2 Overview](../phase-2-sprint-1-build.md) | [Back to Technical Team Sprint Track](../../challenge-10-tech-sprint-track.md)
-
 **Time: Full 3 hours**
 
 Build the core UI pages. Use mocked data while the API is being built, then swap to real API calls when the backend is ready.
@@ -56,4 +54,4 @@ Generate mock data while waiting for the API:
 
 ---
 
-Previous: [Phase 1 -- Frontend Developer Tasks](../phase-1-technical-planning/frontend-developer.md) | Next: [Phase 3 -- Frontend Developer Tasks](../phase-3-sprint-2-integration/frontend-developer.md)
+Previous: [Phase 1: Technical Planning -- Frontend Developer Tasks](../phase-1-technical-planning/frontend-developer.md) | Next: [Phase 3: Sprint 2 -- Frontend Developer Tasks](../phase-3-sprint-2-integration/frontend-developer.md)

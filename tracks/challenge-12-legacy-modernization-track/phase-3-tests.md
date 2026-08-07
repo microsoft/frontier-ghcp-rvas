@@ -1,7 +1,5 @@
 # Phase 3: Test Harness
 
-[Back to Legacy Code Modernization Track](../challenge-12-legacy-modernization-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Writing characterization tests that capture current behavior before migration

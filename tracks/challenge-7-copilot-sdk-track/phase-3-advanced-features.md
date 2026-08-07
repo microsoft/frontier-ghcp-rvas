@@ -1,7 +1,5 @@
 # Phase 3: Advanced Features
 
-[Back to Copilot SDK Track](../challenge-7-copilot-sdk-track.md)
-
 **Estimated:** 2-3 hours
 
 The agent can now fetch PRs and generate a changelog. In this phase you add MCP integration so it can read repository files, define a constrained release-manager persona, and give it write tools to actually publish the release.

@@ -1,7 +1,5 @@
 # Phase 3: Sprint 2 -- Backend Developer Tasks
 
-[Back to Phase 3 Overview](../phase-3-sprint-2-integration.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: Full 2 hours**
 
 ## Tasks
@@ -30,4 +28,4 @@
 
 ---
 
-Previous: [Phase 2 -- Backend Developer Tasks](../phase-2-sprint-1-build/backend-developer.md) | Next: [Phase 4 -- Backend Developer Tasks](../phase-4-deploy-demo/backend-developer.md)
+Previous: [Phase 2: Sprint 1 -- Backend Developer Tasks](../phase-2-sprint-1-build/backend-developer.md) | Next: [Phase 4: Ship and Demo -- Backend Developer Tasks](../phase-4-deploy-demo/backend-developer.md)

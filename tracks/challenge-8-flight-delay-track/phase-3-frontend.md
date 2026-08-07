@@ -1,7 +1,5 @@
 # Phase 3: Build the Frontend
 
-[Back to Flight Delay Predictor Track](../challenge-8-flight-delay-track.md)
-
 **Duration:** 2-3 hours
 **Focus:** Frontend, UI/UX, API integration
 

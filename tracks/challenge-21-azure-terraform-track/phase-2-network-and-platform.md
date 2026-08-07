@@ -1,7 +1,5 @@
 # Phase 2: Network and App Platform
 
-[Back to Challenge 21: Azure Terraform Track](../challenge-21-azure-terraform-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
 With state and naming cleaned up, you can build the first real slice of infrastructure. The goal is a small but believable Azure platform that an application team could actually target.

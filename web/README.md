@@ -10,22 +10,42 @@ node web/build.js
 
 Reads `challenges/*/meta.yml`, `learning-paths.json`, and track markdown, then generates:
 
-- `web/assets/data/platform.json` -- full catalog (categories + challenges)
+- `web/assets/data/platform.json` -- full catalog and each challenge's page manifest
 - `web/assets/data/paths.json` -- curated learning paths
-- `web/assets/data/challenges/<id>/guide.md` -- concatenated challenge guides
+- `web/assets/data/challenges/<id>/pages/<page-id>.md` -- one Markdown payload per challenge page
 - `web/assets/data/pages/<slug>.md` -- content docs
 
 The `assets/data/` directory is generated and git-ignored.
 
+## Challenge page model
+
+A challenge is published as a page set:
+
+1. The main track file is the overview.
+2. The committed stages or phases contents file is the contents page.
+3. Each stage or phase is a dedicated page.
+4. Role-specific pages, where present, are nested under their parent stage or
+   phase.
+
+The right-side **Challenge pages** menu reflects this hierarchy. Pages can be
+opened directly with `challenge.html?id=<id>&page=<page-id>`. If `page` is
+omitted, the overview opens.
+
+The `pages` array for each challenge in `platform.json` is its page manifest.
+Each entry identifies the page, its type and parent, its source, its generated
+`content_url`, and any previous or next page. The Markdown itself is generated
+as a separate payload at
+`assets/data/challenges/<id>/pages/<page-id>.md`.
+
 ## Pages
 
 - `index.html` -- home page (categories + learning paths + featured challenge)
-- `catalog.html` -- challenge catalog (not yet built)
-- `challenge.html` -- challenge detail page (not yet built)
-- `builder.html` -- curated set builder (not yet built)
-- `set.html` -- curated set landing page (not yet built)
-- `paths.html` -- learning paths overview (not yet built)
-- `guide.html` -- content guide renderer (not yet built)
+- `catalog.html` -- challenge catalog
+- `challenge.html` -- paged challenge content and navigation
+- `builder.html` -- curated set builder
+- `set.html` -- curated set landing page
+- `paths.html` -- learning paths overview
+- `guide.html` -- content guide renderer
 
 ## Shared shell
 

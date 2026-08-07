@@ -1,7 +1,5 @@
 # Phase 4: Polish and Advanced Features
 
-[Back to Flight Delay Predictor Track](../challenge-8-flight-delay-track.md)
-
 **Duration:** 1-2 hours
 **Focus:** Production readiness, advanced features
 

@@ -1,7 +1,5 @@
 # Phase 4: Ship and Demo -- QA Engineer Tasks
 
-[Back to Phase 4 Overview](../phase-4-deploy-demo.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: ~1 hour tasks + demo/retro**
 
 ## Tasks
@@ -22,4 +20,4 @@
 
 ---
 
-Previous: [Phase 3 -- QA Engineer Tasks](../phase-3-sprint-2-integration/qa-engineer.md) | Next: [Phase 5 -- QA Engineer Tasks](../phase-5-agentic-workflows/qa-engineer.md)
+Previous: [Phase 3: Sprint 2 -- QA Engineer Tasks](../phase-3-sprint-2-integration/qa-engineer.md) | Next: [Phase 5: Agentic Workflows -- QA Engineer Tasks](../phase-5-agentic-workflows/qa-engineer.md)

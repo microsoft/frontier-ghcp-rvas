@@ -1,7 +1,5 @@
 # Phase 3: Sprint 2 -- QA Engineer Tasks
 
-[Back to Phase 3 Overview](../phase-3-sprint-2-integration.md) | [Back to Technical Team Sprint Track](../../challenge-10-tech-sprint-track.md)
-
 **Time: Full 2 hours**
 
 ## Tasks
@@ -30,4 +28,4 @@
 
 ---
 
-Previous: [Phase 2 -- QA Engineer Tasks](../phase-2-sprint-1-build/qa-engineer.md) | Next: [Phase 4 -- QA Engineer Tasks](../phase-4-deploy-demo/qa-engineer.md)
+Previous: [Phase 2: Sprint 1 -- QA Engineer Tasks](../phase-2-sprint-1-build/qa-engineer.md) | Next: [Phase 4: Ship and Demo -- QA Engineer Tasks](../phase-4-deploy-demo/qa-engineer.md)

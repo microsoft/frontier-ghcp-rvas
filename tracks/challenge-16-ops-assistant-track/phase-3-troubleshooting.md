@@ -1,7 +1,5 @@
 # Phase 3: Troubleshooting Aids
 
-[Back to Ops Assistant Track](../challenge-16-ops-assistant-track.md)
-
 **Duration:** 1-1.5 hours
 
 **Focus:** Creating troubleshooting decision trees and runbooks from historical data

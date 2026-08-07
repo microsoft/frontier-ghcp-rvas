@@ -13,4 +13,5 @@ tags:
   - terraform
 prerequisites: []
 track_url: tracks/challenge-21-azure-terraform-track.md
+contents_url: tracks/challenge-21-azure-terraform-track/phases.md
 starter_path: challenges/challenge-21-azure-terraform/

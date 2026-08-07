@@ -1,7 +1,5 @@
 # Phase 1: Spec-to-Backlog Prompt
 
-[Back to Backlog Generator Track](../challenge-15-backlog-generator-track.md)
-
 **Duration:** 2-2.5 hours
 
 **Focus:** Building and refining a prompt that converts requirement specs into structured backlogs
@@ -43,4 +41,4 @@
 
 ---
 
-Next: [Phase 2: Refinement Agent](phase-2-refinement.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Refinement Agent](phase-2-refinement.md)

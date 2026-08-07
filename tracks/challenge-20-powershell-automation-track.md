@@ -61,20 +61,6 @@ Navigate to `challenges/challenge-20-powershell-automation/`. The `scripts/` fol
 
 ---
 
-## Stages
-
-| Stage | Name | Difficulty | Est. Time | Key Deliverable |
-|-------|------|------------|-----------|----------------|
-| 1 | [Understanding and Fixing Existing Scripts](challenge-20-powershell-automation-track/stage-1-understand-and-fix.md) | ⭐⭐ | 45-60 min | Bug-free scripts with inline explanations |
-| 2 | [Adding Error Handling and Logging](challenge-20-powershell-automation-track/stage-2-error-handling.md) | ⭐⭐ | 45-60 min | Scripts with structured error handling and verbose logging |
-| 3 | [Azure Automation and Compliance](challenge-20-powershell-automation-track/stage-3-azure-automation.md) | ⭐⭐⭐ | 45-60 min | Refactored tagging script with idempotency, validation, and dry-run mode |
-| 4 | [Pester Tests and Static Analysis](challenge-20-powershell-automation-track/stage-4-pester-tests.md) | ⭐⭐⭐ | 45-60 min | Passing Pester tests and clean PSScriptAnalyzer output |
-| 5 | [Module and CI Pipeline](challenge-20-powershell-automation-track/stage-5-module-and-ci.md) | ⭐⭐⭐ | 45-60 min | PowerShell module with manifest and GitHub Actions CI |
-
-Copilot is strong at generating valid PowerShell syntax and filling in Pester test bodies. It is less reliable on environment-specific details (your AD schema, your Azure naming conventions) -- those require your judgment. The tagging compliance script in Stage 3 requires decisions about idempotency that Copilot will flag but not make for you.
-
-> **Short on time?** Complete Stages 1 and 2 for a solid introduction, then pick either Stage 4 (testing) or Stage 5 (CI) based on what matters more to your team.
-
 ## Tips for Using Copilot on This Track
 
 - Start with a comment describing what the function should do, its parameters, and what it should return. Copilot uses this as a spec, not just a hint.
@@ -90,3 +76,7 @@ Copilot is strong at generating valid PowerShell syntax and filling in Pester te
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
+
+---
+
+Next: [Stages](challenge-20-powershell-automation-track/stages.md)

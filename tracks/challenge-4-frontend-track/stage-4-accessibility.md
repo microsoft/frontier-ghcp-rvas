@@ -1,7 +1,5 @@
 # Stage 4: Accessibility and Performance
 
-[Back to Challenge 4: Frontend Track](../challenge-4-frontend-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 This stage includes a pre-built component with intentional accessibility violations.

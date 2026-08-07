@@ -1,7 +1,5 @@
 # Phase 5: Agentic Workflows
 
-[Back to Team Sprint Track](../challenge-9-team-sprint-track.md)
-
 **Duration:** 1.5 hours
 **Focus:** Add GitHub Agentic Workflows to your deployed repository for continuous AI-driven maintenance
 

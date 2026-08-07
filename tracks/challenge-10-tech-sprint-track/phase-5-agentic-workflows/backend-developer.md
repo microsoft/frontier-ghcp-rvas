@@ -1,7 +1,5 @@
 # Phase 5: Agentic Workflows -- Backend Developer Tasks
 
-[Back to Phase 5 Overview](../phase-5-agentic-workflows.md) | [Back to Technical Team Sprint Track](../../challenge-10-tech-sprint-track.md)
-
 **Time: ~1 hour**
 
 ## Tasks
@@ -41,4 +39,4 @@
 
 ---
 
-Previous: [Phase 4 -- Backend Developer Tasks](../phase-4-deploy-demo/backend-developer.md)
+Previous: [Phase 4: Ship and Demo -- Backend Developer Tasks](../phase-4-deploy-demo/backend-developer.md)

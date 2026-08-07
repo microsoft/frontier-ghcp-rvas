@@ -1,7 +1,5 @@
 # Phase 4: Migration
 
-[Back to Legacy Code Modernization Track](../challenge-12-legacy-modernization-track.md)
-
 **Duration:** 2-3 hours
 
 **Focus:** Upgrading to Spring Boot 3.x, replacing deprecated libraries, introducing proper architecture

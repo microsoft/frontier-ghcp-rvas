@@ -1,7 +1,5 @@
 # Stage 4: Decision Making Under Constraints
 
-[Back to Challenge 0: Product Planning Track](../challenge-0-product-planning-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Real product work involves trade-offs, conflicting priorities, and imperfect information. This stage introduces all three.

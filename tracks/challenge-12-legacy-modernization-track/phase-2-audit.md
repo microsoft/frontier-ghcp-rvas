@@ -1,7 +1,5 @@
 # Phase 2: Security and Debt Audit
 
-[Back to Legacy Code Modernization Track](../challenge-12-legacy-modernization-track.md)
-
 **Duration:** 1-1.5 hours
 
 **Focus:** Identifying vulnerabilities, deprecated libraries, and technical debt

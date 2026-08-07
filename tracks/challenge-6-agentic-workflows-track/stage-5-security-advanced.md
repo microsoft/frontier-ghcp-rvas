@@ -1,7 +1,5 @@
 # Stage 5: Security and Advanced Patterns
 
-[Back to Challenge 6: Agentic Workflows Track](../challenge-6-agentic-workflows-track.md)
-
 **Difficulty:** ⭐⭐⭐
 **Time:** 1.5 hours
 

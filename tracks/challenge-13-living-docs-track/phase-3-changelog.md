@@ -1,7 +1,5 @@
 # Phase 3: Changelog and Release Notes
 
-[Back to Living Documentation Track](../challenge-13-living-docs-track.md)
-
 **Duration:** 1-1.5 hours
 
 **Focus:** Building a prompt that generates changelogs and stakeholder summaries from code diffs

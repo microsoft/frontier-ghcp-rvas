@@ -58,20 +58,6 @@ A dedicated devcontainer is provided at `.devcontainer/challenge-6-agentic-workf
 
 ---
 
-## Stages
-
-| Stage | Name | Duration | What You Build |
-|-------|------|----------|---------------|
-| 1 | [Setup and First Workflow](challenge-6-agentic-workflows-track/stage-1-setup-first-workflow.md) | 1 hour | Install `gh-aw`, create a daily status report workflow |
-| 2 | [Issue and PR Management](challenge-6-agentic-workflows-track/stage-2-issue-pr-management.md) | 1.5 hours | Issue triage, PR review workflows |
-| 3 | [Code Quality and Documentation](challenge-6-agentic-workflows-track/stage-3-code-quality-docs.md) | 1.5 hours | Code simplifier, test improver, documentation updater |
-| 4 | [CI Monitoring and ChatOps](challenge-6-agentic-workflows-track/stage-4-ci-monitoring-chatops.md) | 1.5 hours | CI Doctor, ChatOps commands |
-| 5 | [Security and Advanced Patterns](challenge-6-agentic-workflows-track/stage-5-security-advanced.md) | 1.5 hours | Security scan, custom workflow, workflow optimization |
-
-Each stage builds on the previous one. By Stage 5, you will have a repository with a comprehensive suite of agentic workflows covering triage, quality, documentation, CI, and security.
-
-> **Short on time?** Complete Stages 1-3 for a solid foundation. Stages 4-5 add depth but are not required for the core experience.
-
 ## Tips for Using Copilot on This Track
 
 - Ask Copilot to generate workflow Markdown files by describing what you want in natural language: "Create an agentic workflow that triages new issues by assigning labels and posting a summary comment."
@@ -91,3 +77,7 @@ Each stage builds on the previous one. By Stage 5, you will have a repository wi
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
+
+---
+
+Next: [Stages](challenge-6-agentic-workflows-track/stages.md)

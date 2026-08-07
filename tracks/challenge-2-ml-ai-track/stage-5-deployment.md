@@ -1,7 +1,5 @@
 # Stage 5: Deployment Pipeline and Monitoring
 
-[Back to Challenge 2: ML & AI Track](../challenge-2-ml-ai-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 A model that exists only in a notebook is not deployed. Make it usable.

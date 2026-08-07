@@ -1,7 +1,5 @@
 # Phase 2: Sprint 1 -- Backend Developer Tasks
 
-[Back to Phase 2 Overview](../phase-2-sprint-1-build.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: Full 3 hours**
 
 Build the core API endpoints. Open a separate PR for each logical feature and link it to the relevant GitHub Issue.
@@ -50,4 +48,4 @@ One PR per feature (Reports API, Events API, seed data). Link each to its GitHub
 
 ---
 
-Previous: [Phase 1 -- Backend Developer Tasks](../phase-1-discovery-planning/backend-developer.md) | Next: [Phase 3 -- Backend Developer Tasks](../phase-3-sprint-2-integration/backend-developer.md)
+Previous: [Phase 1: Discovery and Planning -- Backend Developer Tasks](../phase-1-discovery-planning/backend-developer.md) | Next: [Phase 3: Sprint 2 -- Backend Developer Tasks](../phase-3-sprint-2-integration/backend-developer.md)

@@ -1,7 +1,5 @@
 # Phase 3: REST API Migration
 
-[Back to Legacy WCF Banking Modernization Track](../challenge-19-wcf-modernization-track.md)
-
 **Duration:** 2-3 hours
 
 **Focus:** Building an ASP.NET Core Web API that replaces each WCF service operation, preserving all business logic

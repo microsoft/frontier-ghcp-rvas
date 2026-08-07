@@ -74,9 +74,12 @@ We can't deploy this to production because it's insecure and untested. The busin
 
 ## Step 2: Decide Whether to Author a Custom Challenge
 
-For this example, we'll **skip authoring a custom challenge** and work directly on the app. The outcome is clear, the work is straightforward, and we don't need a stage-by-stage track file.
+For this example, we'll **skip authoring a custom challenge** and work directly on the app. The outcome is clear, the work is straightforward, and we don't need a reusable progression.
 
-(If we wanted a reusable track, we'd copy `byoc/templates/track-template.md` and break the work into 3 stages: Stage 1 - Auth, Stage 2 - Tests, Stage 3 - Logging. But for a one-time session, the canvas is enough.)
+For a reusable track, we would copy the overview template, add a committed
+contents page, and create three linked stage pages: Auth, Tests, and Logging. The
+overview would link to contents, and each stage would link to the previous and
+next page. For this one-time session, the canvas is enough.
 
 ## Step 3: Run the Session
 

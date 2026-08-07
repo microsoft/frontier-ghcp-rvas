@@ -1,7 +1,5 @@
 # Phase 1: Discovery and Sprint Planning
 
-[Back to Team Sprint Track](../challenge-9-team-sprint-track.md)
-
 **Duration:** 1.5 hours
 **Focus:** Product ideation, backlog creation, tooling setup, sprint planning
 
@@ -41,4 +39,4 @@ After planning, everyone should have clear tasks and an unblocked path into Spri
 
 ---
 
-Next: [Phase 2: Sprint 1 -- Core Features](phase-2-sprint-1-build.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Sprint 1 -- Core Features](phase-2-sprint-1-build.md)

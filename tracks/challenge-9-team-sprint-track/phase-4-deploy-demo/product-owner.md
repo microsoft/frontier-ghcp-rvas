@@ -1,7 +1,5 @@
 # Phase 4: Ship and Demo -- Product Owner Tasks
 
-[Back to Phase 4 Overview](../phase-4-deploy-demo.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: Full 1.5 hours**
 
 ## Tasks
@@ -33,4 +31,4 @@
 
 ---
 
-Previous: [Phase 3 -- Product Owner Tasks](../phase-3-sprint-2-integration/product-owner.md) | Next: [Phase 5 -- Product Owner Tasks](../phase-5-agentic-workflows/product-owner.md)
+Previous: [Phase 3: Sprint 2 -- Product Owner Tasks](../phase-3-sprint-2-integration/product-owner.md) | Next: [Phase 5: Agentic Workflows -- Product Owner Tasks](../phase-5-agentic-workflows/product-owner.md)

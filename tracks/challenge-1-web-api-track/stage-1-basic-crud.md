@@ -1,7 +1,5 @@
 # Stage 1: Basic CRUD
 
-[Back to Challenge 1: Web API Track](../challenge-1-web-api-track.md)
-
 **Difficulty:** ⭐ | **Time:** 60-75 min
 
 Build the core task management endpoints using the in-memory data store.
@@ -24,4 +22,4 @@ Build the core task management endpoints using the in-memory data store.
 
 ---
 
-Next: [Stage 2: Authentication and Authorization](stage-2-auth.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Authentication and Authorization](stage-2-auth.md)

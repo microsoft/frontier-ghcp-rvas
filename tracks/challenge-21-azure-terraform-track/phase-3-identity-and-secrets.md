@@ -1,7 +1,5 @@
 # Phase 3: Identity and Secrets
 
-[Back to Challenge 21: Azure Terraform Track](../challenge-21-azure-terraform-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
 The platform exists, but it still is not safe to hand to an application team. This phase adds the identity and secret wiring that usually turns a quick demo environment into a real platform conversation.

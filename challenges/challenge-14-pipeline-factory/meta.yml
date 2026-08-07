@@ -12,4 +12,5 @@ tags:
   - ci-cd
 prerequisites: []
 track_url: tracks/challenge-14-pipeline-factory-track.md
+contents_url: tracks/challenge-14-pipeline-factory-track/phases.md
 starter_path: challenges/challenge-14-pipeline-factory/

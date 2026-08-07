@@ -1,7 +1,5 @@
 # Stage 3: Expanding Test Coverage
 
-[Back to Challenge 5: QA & Testing Track](../challenge-5-qa-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Login tests are passing. Now expand coverage to the core shopping flow and run tests across browsers.

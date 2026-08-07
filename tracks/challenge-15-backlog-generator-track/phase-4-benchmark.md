@@ -1,7 +1,5 @@
 # Phase 4: Consistency Benchmark
 
-[Back to Backlog Generator Track](../challenge-15-backlog-generator-track.md)
-
 **Duration:** 1-1.5 hours
 
 **Focus:** Testing your prompt across all three specs and measuring output consistency

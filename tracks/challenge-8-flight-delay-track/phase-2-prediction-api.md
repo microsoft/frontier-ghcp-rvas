@@ -1,7 +1,5 @@
 # Phase 2: Build the Prediction API
 
-[Back to Flight Delay Predictor Track](../challenge-8-flight-delay-track.md)
-
 **Duration:** 2-3 hours
 **Focus:** REST API, Flask or FastAPI, model serving
 

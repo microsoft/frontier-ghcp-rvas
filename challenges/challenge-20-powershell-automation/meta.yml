@@ -12,4 +12,5 @@ tags:
   - powershell
 prerequisites: []
 track_url: tracks/challenge-20-powershell-automation-track.md
+contents_url: tracks/challenge-20-powershell-automation-track/stages.md
 starter_path: challenges/challenge-20-powershell-automation/

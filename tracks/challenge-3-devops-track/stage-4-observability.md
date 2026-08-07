@@ -1,7 +1,5 @@
 # Stage 4: Observability and Security Hardening
 
-[Back to Challenge 3: DevOps Track](../challenge-3-devops-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 This stage includes a broken Terraform module that you must debug.

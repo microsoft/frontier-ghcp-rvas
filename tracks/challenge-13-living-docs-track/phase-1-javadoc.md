@@ -1,7 +1,5 @@
 # Phase 1: Javadoc Generation
 
-[Back to Living Documentation Track](../challenge-13-living-docs-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Generating accurate, comprehensive javadoc for all classes and public methods
@@ -34,4 +32,4 @@
 
 ---
 
-Next: [Phase 2: Architecture Diagrams](phase-2-diagrams.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Architecture Diagrams](phase-2-diagrams.md)

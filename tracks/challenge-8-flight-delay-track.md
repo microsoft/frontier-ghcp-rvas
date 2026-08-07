@@ -61,17 +61,6 @@ Navigate to `challenges/challenge-8-flight-delay/`. A dedicated devcontainer is 
 
 ---
 
-## Phases
-
-This challenge is broken into four phases. Each phase builds on the previous one.
-
-| Phase | Name | Duration | Focus |
-|-------|------|----------|-------|
-| 1 | [Data Exploration and Model Building](challenge-8-flight-delay-track/phase-1-data-exploration.md) | 3-4 hours | Jupyter Notebook, data science, machine learning |
-| 2 | [Build the Prediction API](challenge-8-flight-delay-track/phase-2-prediction-api.md) | 2-3 hours | REST API, Flask or FastAPI, model serving |
-| 3 | [Build the Frontend](challenge-8-flight-delay-track/phase-3-frontend.md) | 2-3 hours | Frontend, UI/UX, API integration |
-| 4 | [Polish and Advanced Features](challenge-8-flight-delay-track/phase-4-polish.md) | 1-2 hours | Production readiness, stretch work |
-
 ## Tips for Using Copilot on This Track
 
 - This track spans Python, Flask, and TypeScript. When switching layers, a comment describing the context ("Flask prediction endpoint" or "React form component") helps Copilot stay oriented.
@@ -83,3 +72,7 @@ This challenge is broken into four phases. Each phase builds on the previous one
 
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
+
+---
+
+Next: [Phases](challenge-8-flight-delay-track/phases.md)

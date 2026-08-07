@@ -1,7 +1,5 @@
 # Phase 3: Sprint 2 -- Frontend Developer Tasks
 
-[Back to Phase 3 Overview](../phase-3-sprint-2-integration.md) | [Back to Technical Team Sprint Track](../../challenge-10-tech-sprint-track.md)
-
 **Time: Full 2 hours**
 
 ## Tasks
@@ -33,4 +31,4 @@
 
 ---
 
-Previous: [Phase 2 -- Frontend Developer Tasks](../phase-2-sprint-1-build/frontend-developer.md) | Next: [Phase 4 -- Frontend Developer Tasks](../phase-4-deploy-demo/frontend-developer.md)
+Previous: [Phase 2: Sprint 1 -- Frontend Developer Tasks](../phase-2-sprint-1-build/frontend-developer.md) | Next: [Phase 4: Ship and Demo -- Frontend Developer Tasks](../phase-4-deploy-demo/frontend-developer.md)

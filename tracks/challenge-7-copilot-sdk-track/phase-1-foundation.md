@@ -1,7 +1,5 @@
 # Phase 1: Foundation
 
-[Back to Copilot SDK Track](../challenge-7-copilot-sdk-track.md)
-
 **Estimated:** 2-3 hours
 
 In this phase you start by researching the SDK and building an accurate instructions file, then set up the SDK, get a working streaming connection, and build the first piece of domain logic: accepting a repository and reference point, then confirming the release scope with the user.
@@ -46,4 +44,4 @@ In this phase you start by researching the SDK and building an accurate instruct
 
 ---
 
-Next: [Phase 2: Core Features](phase-2-core-features.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Core Features](phase-2-core-features.md)

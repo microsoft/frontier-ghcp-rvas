@@ -5,12 +5,13 @@
  * Reads challenges/<slug>/meta.yml as the single source of truth and emits:
  *   web/assets/data/platform.json
  *   web/assets/data/paths.json
- *   web/assets/data/challenges/<id>/guide.md
+ *   web/assets/data/challenges/<id>/pages/<page-id>.md
  *   web/assets/data/pages/<slug>.md
  *
  * Validation (exits non-zero on errors):
- *   - Every meta.yml has required fields
+ *   - Every meta.yml has required fields, including track_url and contents_url
  *   - Category is one of the 5 valid categories
+ *   - Challenge page IDs, parent relationships, and navigation are valid
  *   - Every learning-path challenge_id and prerequisites[] entry resolves to a real challenge
  *
  *   node web/build.js
@@ -206,6 +207,14 @@ function collectChallenges() {
         errors.push(`${slug}/meta.yml: invalid category '${meta.category}' (must be one of: ${Object.keys(CATEGORY_CONFIG).join(', ')})`);
         continue;
       }
+      if (!meta.track_url) {
+        errors.push(`${slug}/meta.yml: missing 'track_url' field`);
+        continue;
+      }
+      if (!meta.contents_url) {
+        errors.push(`${slug}/meta.yml: missing 'contents_url' field`);
+        continue;
+      }
 
       const challenge = {
         id: meta.id,
@@ -219,9 +228,10 @@ function collectChallenges() {
         focus: meta.focus || '',
         tags: Array.isArray(meta.tags) ? meta.tags : [],
         prerequisites: Array.isArray(meta.prerequisites) ? meta.prerequisites : [],
-        track_url: meta.track_url || '',
+        track_url: meta.track_url,
+        contents_url: meta.contents_url,
         starter_path: `challenges/${slug}/`,
-        guide: `assets/data/challenges/${meta.id}/guide.md`
+        pages: []
       };
 
       challenges.push(challenge);
@@ -233,21 +243,26 @@ function collectChallenges() {
   return { challenges, errors };
 }
 
-/* ─── Guide link resolution ───────────────────────────────────────────────────
- * A guide is built by concatenating a track file with its stage/phase files into
- * one rendered page. Relative links inside those source files (e.g. the stage
- * table-of-contents links, "Back to track" links, resource links) would 404 when
- * served, because the individual .md files are not published. We rewrite them:
- *   - Links that point to another file inlined into the SAME guide become
- *     in-page anchors (#…) that jump to that section.
- *   - All other relative links resolve to absolute GitHub URLs so they never 404.
+/* ─── Challenge page publishing ───────────────────────────────────────────────
+ * Track sources are published as separate Markdown payloads. Links between
+ * published challenge pages point back through challenge.html; other repository
+ * links continue to resolve to GitHub.
  * ─────────────────────────────────────────────────────────────────────────── */
-function fragmentAnchorId(relPathFromRoot) {
-  return 'src-' + relPathFromRoot
-    .replace(/\\/g, '/')
+function pageSlug(value) {
+  return value
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+function pageIdFromRelativePath(relativePath) {
+  return relativePath
+    .replace(/\\/g, '/')
+    .replace(/\.md$/i, '')
+    .split('/')
+    .map(pageSlug)
+    .filter(Boolean)
+    .join('/');
 }
 
 function repoUrlFor(relPathFromRoot, isDir) {
@@ -255,12 +270,17 @@ function repoUrlFor(relPathFromRoot, isDir) {
   return `${REPO_URL}/${isDir ? 'tree' : 'blob'}/${REPO_BRANCH}/${clean}`;
 }
 
-/* Rewrite markdown links (not images) in a single fragment. `inlinedAnchors`
- * maps a normalized absolute file path -> in-page anchor id. */
-function rewriteFragmentLinks(content, fragmentDir, inlinedAnchors) {
+function challengePageUrl(challengeId, pageId, hash) {
+  const query = new URLSearchParams({ id: challengeId, page: pageId });
+  return `challenge.html?${query.toString()}${hash || ''}`;
+}
+
+/* Rewrite markdown links, but not images. `publishedPages` maps normalized
+ * absolute source paths to page IDs. */
+function rewriteChallengeLinks(content, fragmentDir, challengeId, publishedPages) {
   const LINK_RE = /(!?)\[((?:[^\]\\]|\\.)*)\]\(\s*([^()\s]+)((?:\s+"[^"]*")?)\s*\)/g;
   return content.replace(LINK_RE, (full, bang, text, target, title) => {
-    if (bang) return full; // leave images untouched
+    if (bang) return full;
     const t = target.trim();
     if (!t) return full;
     if (t.startsWith('#') || t.startsWith('//') || /^[a-z][a-z0-9+.-]*:/i.test(t)) return full;
@@ -274,67 +294,217 @@ function rewriteFragmentLinks(content, fragmentDir, inlinedAnchors) {
     const isDir = core.endsWith('/');
     const absTarget = path.resolve(fragmentDir, core);
     const relToRoot = path.relative(ROOT, absTarget).replace(/\\/g, '/');
-    if (relToRoot.startsWith('..')) return full; // outside repo — leave as-is
+    if (relToRoot.startsWith('..')) return full;
 
     const key = absTarget.replace(/\\/g, '/').toLowerCase();
-    if (!isDir && inlinedAnchors.has(key)) {
-      return `${bang}[${text}](#${inlinedAnchors.get(key)})`;
+    if (!isDir && publishedPages.has(key)) {
+      return `[${text}](${challengePageUrl(challengeId, publishedPages.get(key), hash)}${title})`;
     }
-    return `${bang}[${text}](${repoUrlFor(relToRoot, isDir)}${hash})`;
+    return `[${text}](${repoUrlFor(relToRoot, isDir)}${hash}${title})`;
   });
 }
 
-/* ─── Build challenge guides ──────────────────────────────────────────────── */
-function buildChallengeGuides(challenges) {
-  const errors = [];
+function stripSourceNavigationFooter(content) {
+  const lines = content.split(/\r?\n/);
+  const kept = [];
+  const navigationLine = /^\s*(?:(?:previous|next|back to|return to)\s*:?\s*)?\[(?:previous|next|back|return)[^\]]*\]\([^)]+\)(?:\s*\|\s*(?:(?:previous|next|back to|return to)\s*:?\s*)?\[(?:previous|next|back|return)[^\]]*\]\([^)]+\))*\s*$/i;
+  const labeledNavigationLine = /^\s*(?:previous|next|back to|return to)\s*:\s*\[[^\]]+\]\([^)]+\)(?:\s*\|\s*(?:previous|next|back to|return to)\s*:\s*\[[^\]]+\]\([^)]+\))*\s*$/i;
 
-  for (const ch of challenges) {
-    if (!ch.track_url) continue;
-
-    const trackPath = path.join(ROOT, ch.track_url);
-    const trackDir = path.dirname(trackPath);
-    const trackBasename = path.basename(trackPath, '.md');
-
-    const trackRaw = readFileSafe(trackPath);
-    if (!trackRaw) {
-      errors.push(`Challenge ${ch.id}: track file not found at ${ch.track_url}`);
+  for (const line of lines) {
+    if (!navigationLine.test(line) && !labeledNavigationLine.test(line)) {
+      kept.push(line);
       continue;
     }
 
-    /* Stage/phase files live in a sibling subdirectory named after the track,
-     * e.g. tracks/<track>.md + tracks/<track>/stage-*.md */
-    const stageDir = path.join(trackDir, trackBasename);
-    const stageFiles = readDirSafe(stageDir)
-      .filter(e => e.isFile() && (e.name.startsWith('stage-') || e.name.startsWith('phase-')) && e.name.endsWith('.md'))
-      .map(e => e.name)
-      .sort();
-
-    /* All fragments inlined into this guide, in render order. */
-    const fragments = [{ absPath: trackPath, content: trackRaw }];
-    for (const stageFile of stageFiles) {
-      const stagePath = path.join(stageDir, stageFile);
-      const stageContent = readFileSafe(stagePath);
-      if (stageContent) fragments.push({ absPath: stagePath, content: stageContent });
+    let separatorIndex = kept.length - 1;
+    while (separatorIndex >= 0 && !kept[separatorIndex].trim()) separatorIndex--;
+    if (separatorIndex < 0 || !/^\s*---\s*$/.test(kept[separatorIndex])) {
+      kept.push(line);
+      continue;
     }
 
-    /* Map each inlined file to a stable in-page anchor id. */
-    const inlinedAnchors = new Map();
-    for (const frag of fragments) {
-      const relToRoot = path.relative(ROOT, frag.absPath).replace(/\\/g, '/');
-      frag.anchorId = fragmentAnchorId(relToRoot);
-      inlinedAnchors.set(frag.absPath.replace(/\\/g, '/').toLowerCase(), frag.anchorId);
+    kept.length = separatorIndex;
+    while (kept.length && !kept[kept.length - 1].trim()) kept.pop();
+  }
+
+  return kept.join('\n').trim();
+}
+
+function markdownTitle(content, fallback) {
+  const heading = content.match(/^\s*#\s+(.+?)\s*$/m);
+  return heading ? heading[1].replace(/\s+#*$/, '').trim() : fallback;
+}
+
+function numericPageSort(a, b) {
+  const aMatch = a.name.match(/^(?:stage|phase)-(\d+)/i);
+  const bMatch = b.name.match(/^(?:stage|phase)-(\d+)/i);
+  const numberDiff = Number(aMatch && aMatch[1]) - Number(bMatch && bMatch[1]);
+  return numberDiff || a.name.localeCompare(b.name, undefined, { numeric: true });
+}
+
+function walkMarkdownFiles(dir) {
+  const files = [];
+  for (const entry of readDirSafe(dir).sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }))) {
+    const entryPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) files.push(...walkMarkdownFiles(entryPath));
+    else if (entry.isFile() && entry.name.endsWith('.md')) files.push(entryPath);
+  }
+  return files;
+}
+
+function collectChallengePages(challenge) {
+  const errors = [];
+  const trackPath = path.join(ROOT, challenge.track_url);
+  const contentsPath = path.join(ROOT, challenge.contents_url);
+
+  if (!fs.existsSync(trackPath)) {
+    errors.push(`Challenge ${challenge.id}: track file not found at ${challenge.track_url}`);
+  }
+  if (!fs.existsSync(contentsPath)) {
+    errors.push(`Challenge ${challenge.id}: contents file not found at ${challenge.contents_url}`);
+  }
+  if (errors.length) return { pages: [], sources: new Map(), errors };
+
+  const trackDir = path.dirname(trackPath);
+  const stageDir = path.join(trackDir, path.basename(trackPath, '.md'));
+  const topLevelFiles = readDirSafe(stageDir)
+    .filter(entry => entry.isFile() && /^(stage|phase)-\d+.*\.md$/i.test(entry.name))
+    .sort(numericPageSort)
+    .map(entry => path.join(stageDir, entry.name));
+  if (!topLevelFiles.length) {
+    errors.push(`Challenge ${challenge.id}: page sequence has no numeric stage or phase files in ${path.relative(ROOT, stageDir)}`);
+    return { pages: [], sources: new Map(), errors };
+  }
+
+  const definitions = [
+    { id: 'overview', kind: 'overview', parent_id: null, sourcePath: trackPath },
+    { id: 'contents', kind: 'contents', parent_id: null, sourcePath: contentsPath }
+  ];
+
+  for (const topLevelPath of topLevelFiles) {
+    const relativePath = path.relative(stageDir, topLevelPath);
+    const topLevelId = pageIdFromRelativePath(relativePath);
+    const kind = path.basename(topLevelPath).toLowerCase().startsWith('stage-') ? 'stage' : 'phase';
+    definitions.push({ id: topLevelId, kind, parent_id: null, sourcePath: topLevelPath });
+
+    const nestedDir = topLevelPath.slice(0, -3);
+    for (const nestedPath of walkMarkdownFiles(nestedDir)) {
+      const nestedRelativePath = path.relative(stageDir, nestedPath);
+      definitions.push({
+        id: pageIdFromRelativePath(nestedRelativePath),
+        kind: 'role',
+        parent_id: topLevelId,
+        sourcePath: nestedPath,
+        rolePath: path.relative(nestedDir, nestedPath).replace(/\\/g, '/').toLowerCase()
+      });
     }
+  }
 
-    const parts = fragments.map((frag) => {
-      const dir = path.dirname(frag.absPath);
-      const rewritten = rewriteFragmentLinks(frag.content, dir, inlinedAnchors);
-      return `<a id="${frag.anchorId}"></a>\n\n${rewritten}`;
-    });
-    const guide = parts.join('\n\n');
+  const ids = new Set();
+  const sources = new Map();
+  for (const definition of definitions) {
+    if (!definition.id) {
+      errors.push(`Challenge ${challenge.id}: could not derive a page ID from ${path.relative(ROOT, definition.sourcePath)}`);
+      continue;
+    }
+    if (ids.has(definition.id)) {
+      errors.push(`Challenge ${challenge.id}: duplicate page ID '${definition.id}'`);
+    }
+    ids.add(definition.id);
+    sources.set(definition.sourcePath.replace(/\\/g, '/').toLowerCase(), definition.id);
+  }
 
-    const outDir = path.join(OUT_CHALLENGES_DIR, ch.id);
-    ensureDir(outDir);
-    fs.writeFileSync(path.join(outDir, 'guide.md'), guide, 'utf8');
+  const topLevel = definitions.filter(page => !page.parent_id);
+  for (let i = 0; i < topLevel.length; i++) {
+    if (i > 0) topLevel[i].previous_id = topLevel[i - 1].id;
+    if (i < topLevel.length - 1) topLevel[i].next_id = topLevel[i + 1].id;
+  }
+
+  const nestedByParent = new Map();
+  for (const page of definitions.filter(item => item.parent_id)) {
+    if (!nestedByParent.has(page.parent_id)) nestedByParent.set(page.parent_id, new Map());
+    nestedByParent.get(page.parent_id).set(page.rolePath, page);
+  }
+  const stagePages = topLevel.filter(page => page.kind === 'stage' || page.kind === 'phase');
+  for (let i = 0; i < stagePages.length; i++) {
+    const rolePages = nestedByParent.get(stagePages[i].id);
+    if (!rolePages) continue;
+    for (const [rolePath, rolePage] of rolePages) {
+      const previous = i > 0 ? nestedByParent.get(stagePages[i - 1].id)?.get(rolePath) : null;
+      const next = i < stagePages.length - 1 ? nestedByParent.get(stagePages[i + 1].id)?.get(rolePath) : null;
+      rolePage.previous_id = previous ? previous.id : 'contents';
+      if (next) rolePage.next_id = next.id;
+    }
+  }
+
+  if (!definitions.length) {
+    errors.push(`Challenge ${challenge.id}: page sequence is empty`);
+  }
+  for (const page of definitions) {
+    if (page.parent_id && !ids.has(page.parent_id)) {
+      errors.push(`Challenge ${challenge.id}: page '${page.id}' has unknown parent '${page.parent_id}'`);
+    }
+    for (const neighbor of [page.previous_id, page.next_id]) {
+      if (neighbor && !ids.has(neighbor)) {
+        errors.push(`Challenge ${challenge.id}: page '${page.id}' references unknown page '${neighbor}'`);
+      }
+    }
+  }
+
+  const pages = definitions.map((definition) => {
+    const raw = readFileSafe(definition.sourcePath);
+    if (raw === null) {
+      errors.push(`Challenge ${challenge.id}: could not read ${path.relative(ROOT, definition.sourcePath)}`);
+    }
+    const relativeSource = path.relative(ROOT, definition.sourcePath).replace(/\\/g, '/');
+    const page = {
+      id: definition.id,
+      title: markdownTitle(raw || '', path.basename(definition.sourcePath, '.md')),
+      kind: definition.kind,
+      parent_id: definition.parent_id,
+      content_url: `assets/data/challenges/${challenge.id}/pages/${definition.id}.md`,
+      source_path: relativeSource
+    };
+    if (definition.previous_id) page.previous_id = definition.previous_id;
+    if (definition.next_id) page.next_id = definition.next_id;
+    return page;
+  });
+
+  return { pages, definitions, sources, errors };
+}
+
+function buildChallengePages(challenges) {
+  const errors = [];
+  const collected = [];
+
+  for (const ch of challenges) {
+    const result = collectChallengePages(ch);
+    errors.push(...result.errors);
+    collected.push({ challenge: ch, ...result });
+  }
+
+  if (errors.length) return errors;
+
+  for (const item of collected) {
+    const pagesDir = path.join(OUT_CHALLENGES_DIR, item.challenge.id, 'pages');
+    fs.rmSync(pagesDir, { recursive: true, force: true });
+    ensureDir(pagesDir);
+
+    item.challenge.pages = item.pages;
+    for (let i = 0; i < item.definitions.length; i++) {
+      const definition = item.definitions[i];
+      const raw = readFileSafe(definition.sourcePath);
+      const withoutFooter = stripSourceNavigationFooter(raw);
+      const rewritten = rewriteChallengeLinks(
+        withoutFooter,
+        path.dirname(definition.sourcePath),
+        item.challenge.id,
+        item.sources
+      );
+      const outputPath = path.join(pagesDir, `${definition.id}.md`);
+      ensureDir(path.dirname(outputPath));
+      fs.writeFileSync(outputPath, `${rewritten}\n`, 'utf8');
+    }
   }
 
   return errors;
@@ -420,6 +590,13 @@ function main() {
 
   challenges.sort((a, b) => a.number - b.number);
 
+  const pageErrors = buildChallengePages(challenges);
+  if (pageErrors.length) {
+    console.error('Challenge page validation errors:');
+    pageErrors.forEach(e => console.error(`  - ${e}`));
+    process.exit(1);
+  }
+
   const categories = Object.entries(CATEGORY_CONFIG).map(([id, cfg]) => ({
     id,
     name: cfg.name,
@@ -447,12 +624,6 @@ function main() {
     JSON.stringify(learningPaths, null, 2),
     'utf8'
   );
-
-  const guideErrors = buildChallengeGuides(challenges);
-  if (guideErrors.length) {
-    console.warn('Warnings during guide building:');
-    guideErrors.forEach(e => console.warn(`  - ${e}`));
-  }
 
   buildContentPages();
 

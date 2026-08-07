@@ -1,7 +1,5 @@
 # Phase 2: Sprint 1 -- QA Engineer Tasks
 
-[Back to Phase 2 Overview](../phase-2-sprint-1-build.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: Full 3 hours**
 
 Write tests in parallel with development. Start with stubs or mocks if endpoints are not ready yet. Switch to the real app as features land.
@@ -56,4 +54,4 @@ description textarea, category dropdown, location input, and submit button."
 
 ---
 
-Previous: [Phase 1 -- QA Engineer Tasks](../phase-1-discovery-planning/qa-engineer.md) | Next: [Phase 3 -- QA Engineer Tasks](../phase-3-sprint-2-integration/qa-engineer.md)
+Previous: [Phase 1: Discovery and Planning -- QA Engineer Tasks](../phase-1-discovery-planning/qa-engineer.md) | Next: [Phase 3: Sprint 2 -- QA Engineer Tasks](../phase-3-sprint-2-integration/qa-engineer.md)

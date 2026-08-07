@@ -1,7 +1,5 @@
 # Stage 1: Component Architecture and Layout
 
-[Back to Challenge 4: Frontend Track](../challenge-4-frontend-track.md)
-
 **Difficulty:** ⭐ | **Time:** 60-75 min
 
 Build the visual foundation with static data. Focus on component composition and responsive design.
@@ -22,4 +20,4 @@ Build the visual foundation with static data. Focus on component composition and
 
 ---
 
-Next: [Stage 2: State Management and CRUD](stage-2-state-management.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: State Management and CRUD](stage-2-state-management.md)

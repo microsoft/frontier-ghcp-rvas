@@ -1,7 +1,5 @@
 # Stage 2: State Management and CRUD
 
-[Back to Challenge 4: Frontend Track](../challenge-4-frontend-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Replace static data with real state management. Users must be able to create, edit, and delete tasks.

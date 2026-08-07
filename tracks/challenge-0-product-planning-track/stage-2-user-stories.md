@@ -1,7 +1,5 @@
 # Stage 2: User Stories and Backlog Quality
 
-[Back to Challenge 0: Product Planning Track](../challenge-0-product-planning-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
 Writing user stories is easy. Writing good ones is harder. This stage tests whether you can tell the difference.

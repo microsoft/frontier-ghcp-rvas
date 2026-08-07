@@ -1,7 +1,5 @@
 # Phase 4: Deployment Automation
 
-[Back to Ops Assistant Track](../challenge-16-ops-assistant-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Generating deployment checklists and post-deploy smoke tests

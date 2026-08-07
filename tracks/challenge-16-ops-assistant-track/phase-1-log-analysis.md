@@ -1,7 +1,5 @@
 # Phase 1: Log Analysis Agent
 
-[Back to Ops Assistant Track](../challenge-16-ops-assistant-track.md)
-
 **Duration:** 2-2.5 hours
 
 **Focus:** Building an agent that reads logs, identifies errors, and explains them in plain language
@@ -45,4 +43,4 @@
 
 ---
 
-Next: [Phase 2: Incident Routing](phase-2-routing.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Incident Routing](phase-2-routing.md)

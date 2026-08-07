@@ -1,7 +1,5 @@
 # Phase 4: Integration and Hardening
 
-[Back to Legacy WCF Banking Modernization Track](../challenge-19-wcf-modernization-track.md)
-
 **Duration:** 1-2 hours
 
 **Focus:** Running characterization tests against the REST API, fixing behavior gaps, adding Swagger, writing migration notes

@@ -1,6 +1,6 @@
 # Stage {{NUMBER}}: {{STAGE_NAME}}
 
-[Back to Challenge {{CHALLENGE_NUMBER}} Overview](../challenge-{{CHALLENGE_NUMBER}}-{{CHALLENGE_SLUG}}-track.md)
+[Back to Challenge {{CHALLENGE_NUMBER}} Contents](./stages.md)
 
 **Difficulty:** {{DIFFICULTY}} | **Time:** {{TIME_ESTIMATE}}
 
@@ -31,4 +31,4 @@
 
 ---
 
-{{NAVIGATION_FOOTER}}
+[Previous: {{PREVIOUS_PAGE_TITLE}}]({{PREVIOUS_PAGE_PATH}}) | [Next: {{NEXT_PAGE_TITLE}}]({{NEXT_PAGE_PATH}})

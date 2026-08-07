@@ -1,7 +1,5 @@
 # Phase 1: State and Naming Baseline
 
-[Back to Challenge 21: Azure Terraform Track](../challenge-21-azure-terraform-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
 You inherited a flat Terraform directory with hard-coded names, no remote state, and no agreement on tags. Fix the foundation before you build anything larger on top of it.
@@ -38,4 +36,4 @@ Copilot is useful here for provider blocks, backend structure, and repetitive va
 
 ---
 
-Next: [Phase 2: Network and App Platform](phase-2-network-and-platform.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Network and App Platform](phase-2-network-and-platform.md)

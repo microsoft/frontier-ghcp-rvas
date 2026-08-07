@@ -1,7 +1,5 @@
 # Stage 3: Model Development and Rigorous Evaluation
 
-[Back to Challenge 2: ML & AI Track](../challenge-2-ml-ai-track.md)
-
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
 Reproducibility matters. Use sklearn Pipelines for all preprocessing and training.

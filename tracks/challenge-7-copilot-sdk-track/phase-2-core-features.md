@@ -1,7 +1,5 @@
 # Phase 2: Core Features
 
-[Back to Copilot SDK Track](../challenge-7-copilot-sdk-track.md)
-
 **Estimated:** 3-4 hours
 
 This is where the agent gets its hands dirty. You will build the custom tools that fetch PR data from GitHub, teach the agent to categorize changes, and have it generate a structured changelog -- all through natural conversation.

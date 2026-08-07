@@ -1,7 +1,5 @@
 # Phase 2: Technical Analysis
 
-[Back to Spec-to-Ship Accelerator Track](../challenge-17-spec-to-ship-track.md)
-
 **Duration:** 1-1.5 hours
 
 **Focus:** Generating a technical analysis from the spec and the existing codebase

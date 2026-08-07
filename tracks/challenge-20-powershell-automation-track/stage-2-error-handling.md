@@ -1,7 +1,5 @@
 # Stage 2: Adding Error Handling and Logging
 
-[Back to Challenge 20: PowerShell Automation Track](../challenge-20-powershell-automation-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
 The scripts from Stage 1 run, but they fail silently when something goes wrong. A machine is offline, a temp directory is locked, an AD query returns nothing -- all of these produce no visible output. This stage adds proper error handling and structured logging to `Invoke-DiskCleanup.ps1`.
@@ -26,6 +24,4 @@ Copilot generates `try/catch` skeletons quickly and knows the `Export-Csv` synta
 
 ---
 
-Previous: [Stage 1: Understanding and Fixing Existing Scripts](stage-1-understand-and-fix.md)
-
-Next: [Stage 3: Azure Automation and Compliance](stage-3-azure-automation.md)
+Previous: [Stage 1: Understanding and Fixing Existing Scripts](stage-1-understand-and-fix.md) | Next: [Stage 3: Azure Automation and Compliance](stage-3-azure-automation.md)

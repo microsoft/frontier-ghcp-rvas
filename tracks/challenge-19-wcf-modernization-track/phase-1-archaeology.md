@@ -1,7 +1,5 @@
 # Phase 1: Contract Archaeology
 
-[Back to Legacy WCF Banking Modernization Track](../challenge-19-wcf-modernization-track.md)
-
 **Duration:** 2-3 hours
 
 **Focus:** Understanding WCF contracts, mapping service operations, documenting business rules and fault conditions
@@ -68,4 +66,4 @@ Understand the Meridian Savings Bank WCF service well enough to describe every o
 
 ---
 
-Next: [Phase 2: Characterization Tests](phase-2-testing.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Characterization Tests](phase-2-testing.md)

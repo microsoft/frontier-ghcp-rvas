@@ -1,7 +1,5 @@
 # Phase 3: Feature Evolution
 
-[Back to Legacy COBOL Banking Modernization Track](../challenge-18-cobol-modernization-track.md)
-
 **Duration:** 1.5-2 hours
 **Focus:** Extending the system with new features to test your understanding
 

@@ -1,7 +1,5 @@
 # Phase 1: Spec to Backlog
 
-[Back to Spec-to-Ship Accelerator Track](../challenge-17-spec-to-ship-track.md)
-
 **Duration:** 1.5-2 hours
 
 **Focus:** Building a prompt that converts the billing module spec into structured work items
@@ -43,4 +41,4 @@
 
 ---
 
-Next: [Phase 2: Technical Analysis](phase-2-analysis.md)
+Previous: [Phases](phases.md) | Next: [Phase 2: Technical Analysis](phase-2-analysis.md)

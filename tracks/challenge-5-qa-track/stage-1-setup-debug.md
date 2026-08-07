@@ -1,7 +1,5 @@
 # Stage 1: Application Discovery and Test Planning
 
-[Back to Challenge 5: QA & Testing Track](../challenge-5-qa-track.md)
-
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 Before writing any tests, you need to know what you're testing. In this stage you'll explore the eShop application using Copilot and the Playwright MCP server, then build a test plan.
@@ -40,4 +38,4 @@ Copilot can read the codebase and describe what it finds. Playwright MCP can nav
 
 ---
 
-Next: [Stage 2: Your First Automated Tests with Copilot](stage-2-page-objects.md)
+Previous: [Stages](stages.md) | Next: [Stage 2: Your First Automated Tests with Copilot](stage-2-page-objects.md)

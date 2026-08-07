@@ -1,7 +1,5 @@
 # Phase 1: Discovery and Planning -- Backend Developer Tasks
 
-[Back to Phase 1 Overview](../phase-1-discovery-planning.md) | [Back to Team Sprint Track](../../challenge-9-team-sprint-track.md)
-
 **Time: ~1 hour setup + 30 min planning**
 
 ## Tasks
@@ -29,4 +27,4 @@
 
 ---
 
-Next: [Phase 2 -- Backend Developer Tasks](../phase-2-sprint-1-build/backend-developer.md)
+Previous: [Phases](../phases.md) | Next: [Phase 2: Sprint 1 -- Backend Developer Tasks](../phase-2-sprint-1-build/backend-developer.md)

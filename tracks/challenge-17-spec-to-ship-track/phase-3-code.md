@@ -1,7 +1,5 @@
 # Phase 3: Code Generation
 
-[Back to Spec-to-Ship Accelerator Track](../challenge-17-spec-to-ship-track.md)
-
 **Duration:** 2-2.5 hours
 
 **Focus:** Using Copilot to implement the billing module from the generated stories

@@ -50,5 +50,8 @@ prerequisites: []
 # Track file path (relative to repository root)
 track_url: tracks/challenge-{{NUMBER}}-{{SLUG}}-track.md
 
+# Contents page path (relative to repository root)
+contents_url: tracks/challenge-{{NUMBER}}-{{SLUG}}-track/stages.md
+
 # Starter code path (relative to repository root, must exist)
 starter_path: challenges/challenge-{{NUMBER}}-{{SLUG}}/

@@ -67,7 +67,23 @@ To build the site data locally:
 node web/build.js
 ```
 
-This reads `challenges/*/meta.yml`, `learning-paths.json`, and track markdown files, then writes JSON to `web/assets/data/`.
+This reads `challenges/*/meta.yml`, `learning-paths.json`, and track markdown files, then writes the site data to `web/assets/data/`.
+
+Each challenge is published as a set of pages rather than one concatenated guide:
+
+- The track file becomes the main overview.
+- The committed stages or phases contents file becomes the contents page.
+- Each stage or phase has its own page.
+- Challenges with role-specific instructions include those pages beneath their
+  parent stage or phase.
+
+The challenge page shows this structure in a right-side **Challenge pages**
+menu. Every page has a direct URL in the form
+`challenge.html?id=<id>&page=<page-id>`.
+
+The generated `platform.json` catalog includes the page manifest for each
+challenge. Markdown payloads are written separately under
+`web/assets/data/challenges/<id>/pages/<page-id>.md`.
 
 To preview locally:
 
