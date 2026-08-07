@@ -31,22 +31,9 @@
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
-
-Your `.github/copilot-instructions.md` should describe:
-
-- The repository you are adding agentic workflows to (what does the code do, what language, what frameworks)
-- The types of automation you want (triage, documentation, code quality, CI monitoring)
-- Security constraints: read-only permissions, safe outputs only, scoped labels
-
-### Suggested Agents
-
-- **Workflow Author Agent** -- Knows the GitHub Agentic Workflows frontmatter schema, safe-output types, and permission model. Helps write and debug workflow Markdown files.
-- **Security Reviewer Agent** -- Reviews agentic workflow files for permission creep, missing safe-output constraints, and potential prompt injection vectors.
-
-### Open the Challenge
+### Open and Inspect the Challenge
 
 Navigate to `challenges/challenge-6-agentic-workflows/`. Read the [functional specification](../challenges/challenge-6-agentic-workflows/docs/functional-spec.md) before starting Stage 1.
 
@@ -55,6 +42,29 @@ You need a GitHub repository to work in. If you do not have one ready, see the [
 A dedicated devcontainer is provided at `.devcontainer/challenge-6-agentic-workflows/` with Node.js LTS, Python 3.11, GitHub CLI, and the `gh-aw` extension.
 
 > **GitHub is required.** Agentic workflows run as GitHub Actions -- all workflow files must be pushed to a GitHub repository. You will create workflow files locally (or in a Codespace), but they only execute on GitHub after you push.
+
+### Repository Instructions for This Track
+
+Your `.github/copilot-instructions.md` should describe:
+
+- The repository you are adding agentic workflows to (what does the code do, what language, what frameworks)
+- The types of automation you want (triage, documentation, code quality, CI monitoring)
+- Security constraints: read-only permissions, safe outputs only, scoped labels
+- Non-negotiable: no workflow gets write access or secrets it doesn't need for its stated purpose
+
+### Suggested Custom Agents
+
+The agents below are custom Copilot agents you run locally to help author and review workflow files. They are not the agentic workflows themselves -- those run unattended in GitHub Actions using an agent engine (Copilot, Claude, or Codex) you configure per workflow, and building them is what this track has you do.
+
+- **Workflow Author Agent** -- Knows the `gh-aw` frontmatter schema, safe-output types, and permission model well enough to help draft and debug workflow Markdown files. Give it a description of the automation you want; it proposes frontmatter and structure for you to review. Use it while authoring, before you compile.
+- **Security Reviewer Agent** -- Applies a permissions lens to a finished workflow file: scope creep, missing safe-output constraints, and prompt injection exposure from untrusted input. Give it a draft or compiled workflow; it returns findings. Use it before pushing a workflow to GitHub.
+
+### Suggested Custom Skills
+
+- **Workflow Compile and Verify Skill** -- A fixed sequence after every edit: run `gh aw compile` to regenerate the lock file, diff the generated permissions against what you intended, and confirm the trigger conditions match the automation's purpose. Run it before every push.
+- **Safe-Output Audit Skill** -- A repeatable pass over a workflow's outputs (issues, comments, PRs) that checks each one is scoped to the minimum labels and permissions needed. Use it whenever a workflow gains a new output type.
+
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "agentic workflow", "repository automation skill", and "GitHub Actions security instructions" before you draft your own.
 
 ---
 

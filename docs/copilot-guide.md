@@ -134,7 +134,9 @@ Create specialized agents in `.github/agents/` as `.agent.md` files with YAML fr
 
 Create reusable prompts in `.github/prompts/` as `.prompt.md` files. Use `${input:variableName}` for dynamic inputs and `#file:path` references for context. Invoke them with `/prompt-name` in chat.
 
-> Check out the [github/awesome-copilot](https://github.com/github/awesome-copilot) repository for examples of custom instructions, agents, and prompt files.
+Use the [shared examples guidance](../tracks/getting-started.md#4-learn-from-examples-then-write-your-own)
+to find current examples. Useful search terms include "repository
+instructions", "custom agent", and "reusable prompt".
 
 ## Security Checklist
 

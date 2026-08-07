@@ -40,9 +40,15 @@ The challenge is not just to build the billing module. It is to build the **tool
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
+
+Navigate to `challenges/challenge-17-spec-to-ship/`. Read the [system context](../challenges/challenge-17-spec-to-ship/docs/system-context.md) first, then review both the spec and the existing app before writing any instructions.
+
+A dedicated devcontainer is provided at `.devcontainer/challenge-17-spec-to-ship/` with Node.js LTS.
+
+### Repository Instructions for This Track
 
 Your `.github/copilot-instructions.md` should include:
 
@@ -50,18 +56,21 @@ Your `.github/copilot-instructions.md` should include:
 - The project's code conventions (from the existing app: Express routes, in-memory data store pattern)
 - Your team's work item format (Epic/Story/Task structure, acceptance criteria style)
 - Your test specification conventions (test format, what constitutes an edge case worth testing)
+- Non-negotiable: every stage's output must be reusable for the next feature, not a one-off for the billing module
 
-### Suggested Agents
+### Suggested Custom Agents
 
-- **Requirements Analyst Agent** -- Takes a functional requirements document and produces structured work items: Epics, User Stories with Given/When/Then acceptance criteria, Technical Tasks, and Test Cases. Understands dependency ordering and can size stories.
-- **Technical Analyst Agent** -- Takes a spec plus the existing codebase (`@workspace`) and produces a technical analysis: affected modules, new models needed, API design decisions, database schema changes, risk assessment, and a recommended implementation order.
-- **Test Spec Agent** -- Takes user stories and produces a test specification document: test scenarios with preconditions, steps, expected results, and edge cases. Covers both happy path and failure scenarios.
+- **Requirements Analyst Agent** -- Takes a functional requirements document and produces structured work items: Epics, Stories with Given/When/Then criteria, Tasks, and Test Cases, with dependency ordering and sizing. Give it the requirements doc; it drafts the work items. Use it as Phase 1's first pass.
+- **Technical Analyst Agent** -- Takes a spec plus the existing codebase (`@workspace`) and produces a technical analysis: affected modules, new models, API decisions, schema changes, and risk. Give it the spec and repo access; it proposes an implementation order. Use it once work items exist.
+- **Test Spec Agent** -- Takes user stories and produces a test specification: scenarios with preconditions, steps, expected results, and edge cases, covering happy path and failure. Give it a story; it drafts the spec. Use it before implementation starts on that story.
 
-### Open the Challenge
+### Suggested Custom Skills
 
-Navigate to `challenges/challenge-17-spec-to-ship/`. Read the [system context](../challenges/challenge-17-spec-to-ship/docs/system-context.md) first, then review both the spec and the existing app.
+- **Spec-to-Work-Items Skill** -- A reusable sequence: given any functional requirements document, produce Epics/Stories/Tasks in the team's format, checking dependency order and sizing consistently every time.
+- **Story-to-Code Handoff Skill** -- A repeatable workflow: take one story's acceptance criteria, generate the implementation against the existing codebase's conventions, and confirm it against the criteria before moving to the next story.
+- **Pipeline Generation Skill** -- A workflow for turning finished test specs into CI/CD scaffolding (test job plus deploy gate), applied the same way for each new feature.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-17-spec-to-ship/` with Node.js LTS.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "requirements analyst agent", "spec to code skill", and "reusable workflow instructions" before you draft your own.
 
 ---
 

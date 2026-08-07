@@ -40,9 +40,15 @@ Data lives in indexed sequential (ISAM) files -- COBOL's native flat-file storag
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
+
+Navigate to `challenges/challenge-18-cobol-banking/`. Read the system-context.md first, then start exploring the COBOL source files and copybooks before writing any instructions.
+
+A dedicated devcontainer is provided at `.devcontainer/challenge-18-cobol-banking/` with GnuCOBOL, Node.js LTS, Java 21, and the tools needed to compile and run the original COBOL programs.
+
+### Repository Instructions for This Track
 
 Your `.github/copilot-instructions.md` should include:
 
@@ -50,19 +56,21 @@ Your `.github/copilot-instructions.md` should include:
 - The COBOL conventions: IDENTIFICATION DIVISION, ENVIRONMENT DIVISION, DATA DIVISION, PROCEDURE DIVISION, WORKING-STORAGE SECTION, copybooks (`.cpy` files), PERFORM/PERFORM THRU, EVALUATE/WHEN, indexed file I/O (OPEN, READ, WRITE, REWRITE, DELETE, START), COMP-3 packed decimal, PIC clauses (PIC 9, PIC X, PIC S9V99), 88-level condition names, paragraph and section naming conventions
 - Your target backend language and framework conventions
 - That you want Copilot to explain COBOL idioms when asked and to preserve business logic exactly during modernization
+- Non-negotiable: a modernized module must match the original's behavior, including its quirks, unless a quirk is a documented bug you're explicitly asked to fix
 
-### Suggested Agents
+### Suggested Custom Agents
 
-- **COBOL Archaeologist Agent** -- Reads COBOL source and explains what it does. Identifies business rules, data flows, copybook structures, and paragraph naming conventions. Knows COBOL syntax, DIVISION/SECTION structure, FD entries, and common idioms.
-- **Banking Domain Agent** -- Understands core banking concepts: account types, interest calculation methods (simple vs. compound, day-count conventions), loan amortization, transaction atomicity, and audit requirements.
-- **Modernization Agent** -- Takes documented COBOL business logic and produces a modern web architecture: REST API endpoints, service layer design, database schema, and React page structure. Preserves behavior while adopting modern patterns.
-- **Frontend Design Agent** -- Works with the `frontend-design` skill to design and build the React frontend. Handles component architecture, layout design, form validation, and responsive UI patterns.
+- **COBOL Archaeologist Agent** -- Reads COBOL source and copybooks and explains what it does: business rules, data flow, and paragraph structure. Give it a program or copybook; it returns a plain-language walkthrough. Use it before touching any modernization work.
+- **Banking Domain Agent** -- Applies banking domain judgment: interest calculation methods, loan amortization, and audit requirements the COBOL code assumes but rarely states outright. Give it a described rule; it explains the domain reasoning. Use it when a calculation's intent is unclear from the code alone.
+- **Modernization Agent** -- Reasons about target architecture: how a documented COBOL business rule becomes a REST endpoint, service layer, schema, and page structure in your chosen stack. Give it a documented rule and your target stack; it proposes the design. Use it once the Archaeologist and Domain agents have made the original logic clear.
 
-### Open the Challenge
+### Suggested Custom Skills
 
-Navigate to `challenges/challenge-18-cobol-banking/`. Read the system-context.md first, then start exploring the COBOL source files and copybooks.
+- **Behavior Parity Check Skill** -- A repeatable comparison: run the original COBOL program (via GnuCOBOL) and the modernized code against the same inputs, and confirm the outputs, including known quirks, match before calling a module migrated.
+- **Business Rule Documentation Skill** -- A fixed sequence: trace a paragraph, extract the rule in plain language, and log it in a shared doc before any code gets rewritten.
+- **Frontend Scaffolding Skill** -- A repeatable workflow using the installed `frontend-design` skill to scaffold each new React view: generate the layout and component breakdown first, then refine styling and responsiveness in a second pass.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-18-cobol-banking/` with GnuCOBOL, Node.js LTS, Java 21, and the tools needed to compile and run the original COBOL programs.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "legacy code archaeology agent", "characterization testing skill", and "banking domain instructions" before you draft your own.
 
 ---
 

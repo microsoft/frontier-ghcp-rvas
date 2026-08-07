@@ -8,29 +8,24 @@
 clean_github_and_meta() {
   # ── Clean .github ───────────────────────────────────────────────────
 
+  local github_dir="$REPO_ROOT/.github"
+  mkdir -p "$github_dir"
+
   local instructions_file="$REPO_ROOT/.github/copilot-instructions.md"
-  if [[ -f "$instructions_file" ]]; then
-    > "$instructions_file"
-    echo "[OK] Cleared .github/copilot-instructions.md"
-  else
-    echo "[SKIP] .github/copilot-instructions.md not found"
-  fi
+  > "$instructions_file"
+  echo "[OK] Created empty .github/copilot-instructions.md"
 
   local agents_dir="$REPO_ROOT/.github/agents"
-  if [[ -d "$agents_dir" ]]; then
-    find "$agents_dir" -type f ! -name '.gitkeep' -delete 2>/dev/null || true
-    echo "[OK] Removed custom agents from .github/agents/"
-  else
-    echo "[SKIP] .github/agents/ not found"
-  fi
+  mkdir -p "$agents_dir"
+  find "$agents_dir" -mindepth 1 -maxdepth 1 ! -name '.gitkeep' \
+    -exec rm -rf -- {} +
+  echo "[OK] Reset .github/agents/"
 
   local skills_dir="$REPO_ROOT/.github/skills"
-  if [[ -d "$skills_dir" ]]; then
-    rm -rf "${skills_dir:?}"/* 2>/dev/null || true
-    echo "[OK] Removed custom skills from .github/skills/"
-  else
-    echo "[SKIP] .github/skills/ not found"
-  fi
+  mkdir -p "$skills_dir"
+  find "$skills_dir" -mindepth 1 -maxdepth 1 ! -name '.gitkeep' \
+    -exec rm -rf -- {} +
+  echo "[OK] Reset .github/skills/"
 
   local workflows_dir="$REPO_ROOT/.github/workflows"
   if [[ -d "$workflows_dir" ]]; then

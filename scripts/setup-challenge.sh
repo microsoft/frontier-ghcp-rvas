@@ -6,8 +6,8 @@
 # needed for the given challenge. Everything else is removed so users
 # see a clean, focused workspace.
 #
-# Also runs the clean-start logic (empties copilot-instructions.md,
-# removes sample agents/skills, detaches the git remote).
+# Also runs the clean-start logic (creates empty repository instructions,
+# agent, and skill locations; removes samples; detaches the git remote).
 #
 # Usage:
 #   ./scripts/setup-challenge.sh <devcontainer-folder-name>
@@ -305,3 +305,6 @@ echo ""
 echo "Next steps:"
 echo "  1. Read tracks/$TRACK_FILE_NAME.md for the full challenge walkthrough"
 echo "  2. Start with tracks/getting-started.md if this is your first time"
+echo "  3. Create repository instructions in .github/copilot-instructions.md"
+echo "  4. Create a custom agent in .github/agents/"
+echo "  5. Create a custom skill in .github/skills/"

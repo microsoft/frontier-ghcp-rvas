@@ -30,29 +30,11 @@ This track does not assume coding experience. You will use Copilot to generate, 
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
 
-**What to include in your `.github/copilot-instructions.md`:**
-
-- That you are a QA tester working with Playwright and TypeScript
-- That the target application is eShop, a .NET Aspire e-commerce reference app
-- Your preferred test structure (describe/it blocks, AAA pattern)
-- That you want Copilot to explain code it generates, not just produce it
-- That test names should describe the user behavior being verified
-
-### Suggested Agents
-
-**Agents to consider creating:**
-
-- **Test Planner Agent** -- Helps identify test scenarios, edge cases, and risk areas from application pages
-- **Playwright Helper Agent** -- Generates and explains Playwright test code in simple terms
-- **Bug Reporter Agent** -- Helps write clear, structured bug reports from test failures
-
-### Open the Challenge
-
-Navigate to `challenges/challenge-5-qa/`. You will not build an application in this track. Instead, you will test an existing one (eShop) using Copilot as your testing assistant.
+Navigate to `challenges/challenge-5-qa/`. You will not build an application in this track. Instead, you will test an existing one (eShop) using Copilot as your testing assistant. Browse the running application's pages before writing any instructions or tests.
 
 #### Setup: Target Application
 
@@ -97,6 +79,30 @@ You will be testing **[eShop](https://github.com/dotnet/eShop)**, a .NET Aspire 
     npm install
     npx playwright install
     ```
+
+### Repository Instructions for This Track
+
+Your `.github/copilot-instructions.md` should cover:
+
+- That you are a QA tester working with Playwright and TypeScript
+- That the target application is eShop, a .NET Aspire e-commerce reference app
+- Your preferred test structure (describe/it blocks, AAA pattern)
+- That you want Copilot to explain code it generates, not just produce it
+- That test names should describe the user behavior being verified
+- Non-negotiable: never report a failure as a bug without checking whether the selector or a wait condition is the actual cause
+
+### Suggested Custom Agents
+
+- **Test Planner Agent** -- Applies test design judgment: which user flows matter most, what edge cases exist, and where risk concentrates in the application. Give it a page or feature area; it proposes a scenario list. Use it before writing any test code.
+- **Playwright Helper Agent** -- Generates and explains Playwright code in plain terms, translating a described scenario into selectors and assertions. Give it a scenario and the page's structure; it returns code plus a plain-language walkthrough. Use it once you know what to test.
+- **Bug Reporter Agent** -- Applies judgment on what makes a bug report actionable: reproduction steps, expected vs. actual, and severity. Give it a failing test or error message; it drafts a structured report. Use it after a test fails, not as a test-writing tool.
+
+### Suggested Custom Skills
+
+- **Test Failure Triage Skill** -- A fixed sequence for a failing test: read the error, check the selector against the live page, and classify the failure as a real bug, a flaky wait, or a stale selector. Run it every time a test fails before rewriting anything.
+- **Selector Discovery Skill** -- A repeatable workflow using the browser's Inspect tool to capture stable selectors for a page, then confirm each one against the Playwright MCP server before using it in a test. Use it before writing tests against a new page.
+
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "playwright test agent", "bug report skill", and "QA instructions" before you draft your own.
 
 ---
 

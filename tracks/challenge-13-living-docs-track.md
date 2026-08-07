@@ -34,9 +34,15 @@ The Product class has a stub javadoc from v1.0 that says "Represents inventory i
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
+
+Navigate to `challenges/challenge-13-living-docs/`. Read the [system context](../challenges/challenge-13-living-docs/docs/system-context.md) first, then start exploring the `src/` directory before writing any instructions.
+
+A dedicated devcontainer is provided at `.devcontainer/challenge-13-living-docs/` with Java 21, Maven, and Node.js LTS.
+
+### Repository Instructions for This Track
 
 Your `.github/copilot-instructions.md` should include:
 
@@ -44,18 +50,20 @@ Your `.github/copilot-instructions.md` should include:
 - Your javadoc conventions (what to document, parameter descriptions, exception docs)
 - That Copilot should generate documentation that matches the actual code behavior, not aspirational behavior
 - Your preferred diagram format (Mermaid recommended) and level of detail
+- Non-negotiable: never document behavior you haven't verified by reading the method itself
 
-### Suggested Agents
+### Suggested Custom Agents
 
-- **Documentation Reviewer Agent** -- Reviews PRs and flags any public API change (new endpoints, changed parameters, modified return types) that lacks corresponding documentation updates. Can check javadoc, API docs, and the changelog.
-- **Diagram Generator Agent** -- Reads Java source files and generates Mermaid architecture diagrams, sequence diagrams for workflows, and ERD diagrams from SQL schemas.
-- **Release Communicator Agent** -- Takes code diffs and produces two outputs: (1) a technical changelog entry and (2) a non-technical stakeholder summary of the same changes.
+- **Documentation Reviewer Agent** -- Reviews PRs and flags any public API change (new endpoints, changed parameters, modified return types) missing corresponding documentation. Give it a diff; it returns a list of undocumented changes. Use it as a PR gate, not a writing tool.
+- **Diagram Generator Agent** -- Reads Java source and generates Mermaid architecture, sequence, and ERD diagrams from the actual code and schema. Give it a package or workflow; it proposes the diagram. Use it when a change needs a visual, not for routine documentation.
+- **Release Communicator Agent** -- Applies judgment on audience: takes a code diff and produces both a technical changelog entry and a non-technical stakeholder summary. Give it a diff; it drafts both outputs. Use it at release time, not per-commit.
 
-### Open the Challenge
+### Suggested Custom Skills
 
-Navigate to `challenges/challenge-13-living-docs/`. Read the [system context](../challenges/challenge-13-living-docs/docs/system-context.md) first, then start exploring the `src/` directory.
+- **Javadoc Accuracy Pass Skill** -- A fixed sequence: ask Copilot to explain what a method actually does including edge cases, then generate javadoc from that explanation rather than from the signature alone. Run it per class, not as a bulk pass.
+- **Changelog Reconciliation Skill** -- A repeatable workflow: diff the current changelog against actual version history, and backfill entries for versions that shipped features without documentation.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-13-living-docs/` with Java 21, Maven, and Node.js LTS.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "documentation review agent", "changelog skill", and "javadoc instructions" before you draft your own.
 
 ---
 

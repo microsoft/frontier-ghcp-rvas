@@ -1,32 +1,42 @@
 # Getting Started
 
-These steps apply to every track and help you prepare your environment to drive an outcome with Copilot. Complete them before starting your first stage.
+These steps apply to every track. Start with a clean workspace, inspect the
+challenge, and then prepare the Copilot customizations you will use during the
+session.
 
-## 1. Open in a DevContainer (Recommended)
+## 1. Start from a Clean Workspace
 
-Each challenge has its own devcontainer configuration under `.devcontainer/`. When you open the repo in a devcontainer (Codespaces or VS Code Dev Containers), pick the configuration that matches your challenge.
+### Open in a DevContainer (Recommended)
+
+Each challenge has its own devcontainer configuration under `.devcontainer/`.
+When you open the repository in a devcontainer through Codespaces or VS Code
+Dev Containers, pick the configuration that matches your challenge.
 
 The devcontainer automatically:
 
 - Installs all tools and dependencies for your challenge
-- Removes challenge folders, track files, and devcontainer configs you don't need
+- Removes challenge folders, track files, and devcontainer configurations you
+  do not need
 - Clears `.github/copilot-instructions.md` so you start fresh
 - Removes sample agents and skills from `.github/`
-- Detaches the git remote so you don't accidentally push to the template repo
+- Detaches the git remote so you do not accidentally push to the template
+  repository
 
-After the container finishes building, your workspace only contains the files relevant to your track. Skip to step 3.
+After the container finishes building, your workspace contains only the files
+relevant to your track. Continue with step 2.
 
-## 2. Manual Setup (Without DevContainer)
+### Manual Setup (Without a DevContainer)
 
-If you are **not** using a devcontainer, run the setup script with your challenge name:
+If you are not using a devcontainer, run the setup script with your challenge
+name.
 
-**Linux / macOS:**
+Linux or macOS:
 
 ```bash
 ./scripts/setup-challenge.sh challenge-1-backend
 ```
 
-**Windows (PowerShell):**
+Windows PowerShell:
 
 ```powershell
 .\scripts\setup-challenge.ps1 -Challenge challenge-1-backend
@@ -34,37 +44,62 @@ If you are **not** using a devcontainer, run the setup script with your challeng
 
 Run the script without arguments to see the full list of challenge names.
 
-This does the same cleanup that the devcontainer does automatically -- removes unrelated challenges, tracks, and devcontainer configs, and resets `.github/`. You still need to install language-specific dependencies yourself (npm install, pip install, etc.) since there is no devcontainer to handle that.
+The script performs the same cleanup as the devcontainer. It removes unrelated
+challenges, tracks, and devcontainer configurations and resets `.github/`. You
+still need to install language-specific dependencies yourself, such as with
+`npm install` or `pip install`.
 
-## 3. Create Your Custom Instructions
+## 2. Open and Inspect the Challenge
 
-`.github/copilot-instructions.md` tells Copilot about your project context and preferences. **Your goal is to create your own custom instructions file that helps you drive your outcome.**
+Follow the **Open the Challenge** link in your track. Before creating any
+customizations, inspect the starter code, tests, configuration, and supporting
+documentation. Identify the outcome, project conventions, constraints, and
+work that the challenge leaves for you.
 
-Every track involves a different technology stack and outcome, so the specifics vary. At a minimum, include:
+Each track provides a tailored brief and durable search terms for finding
+relevant patterns and documentation. Use those as investigation guides, not as
+ready-to-paste prompts, agents, skills, or instructions. When a challenge
+includes cloud examples, use Azure only.
 
-- Project context (framework, language, architecture)
-- The outcome you're trying to deliver (what "done" looks like)
-- Coding standards and conventions
-- What kind of output you expect (code style, testing approach, documentation)
+## 3. Draft the Customization Trio
 
-Your track file lists suggestions specific to your domain and outcome.
+Set aside 20--30 minutes to draft three challenge-specific artifacts. They
+serve different purposes and should not repeat the same content.
 
-## 4. Create Custom Agents (`.github/agents/`)
+### Repository Instructions
 
-Agents are specialized Copilot personas for different tasks. Create `.md` files in `.github/agents/` to define them. **Your goal is to create agents that help you deliver your outcome faster.**
+Use `.github/copilot-instructions.md` for stable, project-wide context and
+constraints. Capture facts and conventions that should apply throughout the
+challenge rather than task-specific directions.
 
-**What to include in each agent:**
+See GitHub's
+[repository custom instructions documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)
+for current authoring guidance.
 
-- Clear description of the agent's expertise and how it helps drive your outcome
-- Specific instructions for the kind of output it should generate
-- References to your project's patterns and conventions
+### Custom Agent
 
-Your track file suggests specific agents for your domain and outcome.
+Create one or more custom agents under `.github/agents/` for specialist judgment. Define
+the role that should assess tradeoffs, apply domain expertise, and make
+recommendations within the challenge's constraints.
 
-> Check out [github/awesome-copilot](https://github.com/github/awesome-copilot) for real-world examples of custom instructions and agent templates.
->
-> **Tip**: Reference your agents in chat using `@agent-name` to get specialized assistance.
+See GitHub's
+[custom agent authoring documentation](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents-in-your-ide)
+for current authoring guidance.
 
-## 5. Open the Challenge
+### Custom Skill
 
-Each track maps to a challenge folder under `challenges/`. Your track file tells you which folder to navigate to and what files to open first.
+Create one or more custom skills under `.github/skills/` for a repeatable, multi-step
+workflow. Choose work that benefits from a consistent sequence and can be
+reused during the challenge.
+
+See GitHub's
+[custom skill authoring documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills)
+for current authoring guidance.
+
+## 4. Learn from Examples, Then Write Your Own
+
+Inspect [github/awesome-copilot](https://github.com/github/awesome-copilot)
+and its [Learning Hub](https://awesome-copilot.github.com/) to see how other
+teams structure customizations. Use the examples to understand the available
+patterns, then author artifacts that fit your challenge. Installing a
+community artifact does not complete this exercise.

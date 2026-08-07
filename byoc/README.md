@@ -4,9 +4,9 @@ This kit helps you run an outcome-driven GitHub Copilot Adoption delivery sessio
 
 ## What's in the Kit
 
-- **[Outcome Canvas](./outcome-canvas.md)** -- a fill-in worksheet to define your target outcome, pain, definition of done, constraints, and demo plan
+- **[Outcome Canvas](./outcome-canvas.md)** -- a fill-in worksheet to define your target outcome, constraints, demo plan, and inputs for Customization Trio Design Briefs
 - **[Challenge Templates](./templates/)** -- skeletons for an overview page, a committed contents page, and a dedicated page for each stage or phase
-- **[Facilitator Runbook](./facilitator-runbook.md)** -- how to run a session on a customer codebase (prep, environment, timeboxes, checkpoints, demo)
+- **[Facilitator Runbook](./facilitator-runbook.md)** -- how to prepare tailored Design Briefs and run a session on a customer codebase
 - **[Outcome Scorecard](./outcome-scorecard.md)** -- a reusable definition-of-done template that replaces usage metrics as the success measure
 - **[Example Walkthrough](./example-walkthrough.md)** -- a worked example adapting an existing challenge app end-to-end through the kit
 
@@ -23,7 +23,7 @@ This kit helps you run an outcome-driven GitHub Copilot Adoption delivery sessio
 
 - You want to learn outcome-driven patterns before applying them to your own work
 - You don't have access to a suitable codebase
-- You're teaching a workshop and want a repeatable, tested experience
+- You're running a session and want a repeatable, tested experience
 - You want to explore a specific technology or type of outcome
 
 ## End-to-End Flow
@@ -39,8 +39,16 @@ Use the **[Outcome Canvas](./outcome-canvas.md)** to document:
 - The app or repository in scope
 - How you'll demo the result
 - How success is measured
+- The stable context, specialist judgment, and repeatable procedure that should
+  shape the Customization Trio
 
-### 2. Author Your Challenge (Optional)
+The facilitator turns those inputs into three tailored Design Briefs.
+Participants then inspect the real repository and author Repository
+Instructions, a Custom Agent, and a Custom Skill. The
+[shared getting started guide](../tracks/getting-started.md)
+covers authoring mechanics and resources.
+
+### 2. Author Your Challenge Pages (Optional)
 
 If you want a structured progression path, use the **[challenge templates](./templates/)** to create:
 
@@ -62,8 +70,11 @@ If you already have a clear path, skip this step and work directly on your app.
 Follow the **[Facilitator Runbook](./facilitator-runbook.md)** to:
 
 - Prepare the environment and codebase access
+- Prepare Design Briefs without supplying completed customizations
+- Reserve 20--30 minutes for participants to inspect the repository and draft
+  the Customization Trio
 - Set timeboxes and checkpoints
-- Facilitate the work session
+- Guide the work session
 - Guide the demo and outcome review
 
 ### 4. Score the Outcome
@@ -94,11 +105,13 @@ When you bring your own challenge, you're authoring the 23rd (or 24th, or 25th) 
 
 ## Quick Start
 
-1. Open the **[Outcome Canvas](./outcome-canvas.md)** and fill it in for your app
+1. Open the **[Outcome Canvas](./outcome-canvas.md)** and fill it in for your app,
+   including the Customization Trio design inputs
 2. If you need a progression path, copy the overview, contents, and stage templates from **[templates/](./templates/)** and wire their navigation in order
-3. Set up your environment (devcontainer, local dev, or Codespaces)
-4. Run the session following the **[Facilitator Runbook](./facilitator-runbook.md)**
-5. Demo the result and fill in the **[Outcome Scorecard](./outcome-scorecard.md)**
+3. Prepare the three tailored Design Briefs
+4. Set up your environment (devcontainer, local dev, or Codespaces)
+5. Run the session following the **[Facilitator Runbook](./facilitator-runbook.md)**
+6. Demo the result and fill in the **[Outcome Scorecard](./outcome-scorecard.md)**
 
 ## Questions?
 

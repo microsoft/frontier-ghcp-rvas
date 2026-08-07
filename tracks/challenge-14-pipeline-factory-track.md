@@ -38,9 +38,15 @@ The application works but has no CI/CD pipeline, no automated tests, and no stan
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
+
+Navigate to `challenges/challenge-14-pipeline-factory/`. Read the [system context](../challenges/challenge-14-pipeline-factory/docs/system-context.md) first, then explore the `api-service/` and `stage-broken/` directories before writing any instructions.
+
+A dedicated devcontainer is provided at `.devcontainer/challenge-14-pipeline-factory/` with Node.js LTS and GitHub CLI.
+
+### Repository Instructions for This Track
 
 Your `.github/copilot-instructions.md` should include:
 
@@ -48,18 +54,20 @@ Your `.github/copilot-instructions.md` should include:
 - Your deployment conventions (environment naming, secret management, approval gates)
 - That Copilot should generate GitHub Actions workflows following best practices (pinned action versions, minimal permissions, proper secret handling)
 - Your preferred testing approach (what level of tests, coverage requirements)
+- Non-negotiable: no workflow gets broader permissions than the job actually requires
 
-### Suggested Agents
+### Suggested Custom Agents
 
-- **Pipeline Architect Agent** -- Designs GitHub Actions workflows following best practices. Knows reusable workflows, matrix builds, caching strategies, and environment protection rules.
-- **Deploy Debugger Agent** -- Analyzes broken deployment configurations, mismatched environment variables, and missing dependencies. Can compare a working setup against a broken one and identify discrepancies.
-- **Runbook Writer Agent** -- Takes error logs or incident descriptions and produces step-by-step runbooks for operations teams, including both diagnostic and resolution procedures.
+- **Pipeline Architect Agent** -- Designs GitHub Actions workflows following best practices: reusable workflows, matrix builds, caching, and environment protection rules. Give it a build/deploy requirement; it proposes the workflow structure. Use it when designing or restructuring a pipeline.
+- **Deploy Debugger Agent** -- Analyzes broken deployment configurations, mismatched environment variables, and missing dependencies by comparing a working setup against a broken one. Give it both configurations; it identifies discrepancies. Use it during the staging debugging phase.
+- **Runbook Writer Agent** -- Takes an error log or incident description and produces a step-by-step runbook with diagnostic and resolution procedures. Give it a log excerpt; it drafts the runbook. Use it once an incident is understood, not while still diagnosing it.
 
-### Open the Challenge
+### Suggested Custom Skills
 
-Navigate to `challenges/challenge-14-pipeline-factory/`. Read the [system context](../challenges/challenge-14-pipeline-factory/docs/system-context.md) first, then explore the `api-service/` and `stage-broken/` directories.
+- **Config Drift Diff Skill** -- A fixed sequence: compare the working `api-service/` against `stage-broken/` file by file, list every discrepancy, and classify each as configuration, dependency, or code drift.
+- **Pipeline Stage Addition Skill** -- A repeatable workflow for adding a new CI/CD stage: define the job, parameterize what differs from prior stages, wire required secrets, and verify with a dry run before merging.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-14-pipeline-factory/` with Node.js LTS and GitHub CLI.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "CI/CD pipeline agent", "deployment drift skill", and "GitHub Actions instructions" before you draft your own.
 
 ---
 

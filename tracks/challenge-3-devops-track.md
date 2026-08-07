@@ -35,28 +35,34 @@
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
 
-**What to include:**
+Navigate to `challenges/challenge-3-devops/`. Explore the starter code: `app/` has the working application, `kubernetes/` and `terraform/` have minimal scaffolds. Read through the existing scaffolds before writing any instructions, then work through the stages in order.
 
-- Cloud provider and services in use (Azure)
+### Repository Instructions for This Track
+
+Your `.github/copilot-instructions.md` should cover:
+
+- Cloud provider and services in use (Azure only)
 - Infrastructure as Code tool preferences (Terraform)
 - Naming conventions and tagging standards
 - Security requirements and compliance needs
+- Non-negotiable: no secrets in source control, and least-privilege IAM by default
 
-### Suggested Agents
+### Suggested Custom Agents
 
-**Agents to consider creating:**
+- **Terraform Expert Agent** -- Applies IaC judgment: module boundaries, variable design, and state trade-offs for Azure resources. Give it a resource requirement; it proposes the module shape. Use it when designing or restructuring Terraform, not for one-off `apply` runs.
+- **Kubernetes Engineer Agent** -- Reasons about manifest and Helm chart design: resource limits, probes, and replica strategy for a workload. Give it a deployment target; it recommends the manifest structure. Use it when shaping how a service runs in the cluster.
+- **Security Reviewer Agent** -- Applies a security and compliance lens to infrastructure code: least-privilege IAM, image pinning, and secret handling. Give it a Terraform or Kubernetes file; it returns findings. Use it before merging infrastructure changes.
 
-- **Terraform Expert Agent** -- Specialized in IaC best practices, module design, and Azure resources
-- **Kubernetes Engineer Agent** -- Focused on container orchestration, manifests, and Helm charts
-- **Security Reviewer Agent** -- Expert in infrastructure security and compliance
+### Suggested Custom Skills
 
-### Open the Challenge
+- **Pipeline Stage Scaffolding Skill** -- A consistent sequence for adding a new CI/CD stage: define the job, wire its inputs from the prior stage, and add the required secrets and permissions. Use it every time a stage is added so the pipeline stays uniform.
+- **Drift Detection Skill** -- A repeatable comparison between the last applied Terraform state and the current configuration, producing a plain-language summary of what changed and why. Run it before every apply, not only when something looks wrong.
 
-Navigate to `challenges/challenge-3-devops/`. Explore the starter code: `app/` has the working application, `kubernetes/` and `terraform/` have minimal scaffolds. Work through the stages in order.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "terraform review agent", "kubernetes manifest skill", and "azure IaC instructions" before you draft your own.
 
 ---
 

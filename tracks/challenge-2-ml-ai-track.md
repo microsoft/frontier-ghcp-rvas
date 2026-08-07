@@ -32,28 +32,35 @@
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
 
-**What to include:**
+Navigate to `challenges/challenge-2-ml-ai/` and install requirements (`pip install -r requirements.txt`). Open `customer_churn_analysis.ipynb` in VS Code and read through the existing cells and dataset before writing any instructions, then work through the stages in order.
+
+### Repository Instructions for This Track
+
+Your `.github/copilot-instructions.md` should cover:
 
 - Python version and key libraries (pandas, scikit-learn, etc.)
 - Coding standards (PEP 8, type hints, docstrings)
 - Data science best practices (EDA, validation, pipelines)
 - Notebook documentation standards
+- The actual outcome: predicting customer churn from the provided dataset, not a generic ML exercise
+- Non-negotiable: any train/test split must happen before scaling or encoding touches the full dataset
 
-### Suggested Agents
+### Suggested Custom Agents
 
-**Agents to consider creating:**
+- **Data Scientist Agent** -- Applies judgment on feature engineering and model choice: which encodings fit the data, and what a reasonable baseline looks like. Give it a dataset description or notebook cell; it recommends the next analytical step. Use it while exploring data, not once a pipeline is locked in.
+- **ML Engineer Agent** -- Focuses on pipeline and deployment concerns: reproducibility, avoiding data leakage, and model packaging. Give it a working notebook; it flags what needs to change before it becomes a script or service. Use it once a model performs well enough to formalize.
+- **Visualization Expert Agent** -- Judges what a chart should show and for whom: chart type and what to annotate. Give it a metric you want to communicate; it proposes the visualization approach. Use it when a result needs explaining, not for routine plotting.
 
-- **Data Scientist Agent** -- Expert in EDA, feature engineering, and model development
-- **ML Engineer Agent** -- Focused on model optimization, pipelines, and deployment
-- **Visualization Expert Agent** -- Specialized in creating insightful charts and dashboards
+### Suggested Custom Skills
 
-### Open the Challenge
+- **Notebook Documentation Skill** -- A repeatable pass that adds a markdown summary above each analysis section: what the cell does, key assumptions, and the result. Run it before sharing a notebook, not while still iterating.
+- **Leakage Check Skill** -- A fixed checklist run against a pipeline before evaluation: confirm the split happens before any fitting, scaling, or encoding step touches the full dataset. Run it once before trusting a reported metric.
 
-Navigate to `challenges/challenge-2-ml-ai/` and install requirements (`pip install -r requirements.txt`). Open `customer_churn_analysis.ipynb` in VS Code and work through the stages in order.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "data science agent", "notebook documentation skill", and "pandas instructions" before you draft your own.
 
 ---
 

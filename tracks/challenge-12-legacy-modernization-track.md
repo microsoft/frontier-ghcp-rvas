@@ -35,9 +35,15 @@ The code has several intentional problems: SQL injection vulnerabilities, no ser
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
+
+Navigate to `challenges/challenge-12-legacy-modernization/`. Read the [system context](../challenges/challenge-12-legacy-modernization/docs/system-context.md) first, then explore the `src/` directory before writing any instructions.
+
+A dedicated devcontainer is provided at `.devcontainer/challenge-12-legacy-modernization/` with Java 8 (to compile the legacy code), Maven, and Node.js LTS. During the migration phase, you will update the `pom.xml` to target Java 17+ and install a newer JDK (e.g., `sdk install java 21-tem` via SDKMAN) to compile the migrated code.
+
+### Repository Instructions for This Track
 
 Your `.github/copilot-instructions.md` should include:
 
@@ -45,18 +51,20 @@ Your `.github/copilot-instructions.md` should include:
 - The target stack: Java 17+, Spring Boot 3.x, proper layered architecture, JUnit 5
 - Your coding conventions (package naming, exception handling approach, API response format)
 - That Copilot should flag security issues, deprecated APIs, and missing tests when reviewing code
+- Non-negotiable: preserve existing business behavior during migration -- fix security and structure, not the rules
 
-### Suggested Agents
+### Suggested Custom Agents
 
-- **Code Archaeologist Agent** -- Reads Java code and explains business logic, identifies design patterns (or anti-patterns), traces data flow through controllers and database queries. Knows Spring Boot 1.x and 3.x differences.
-- **Migration Advisor Agent** -- Recommends specific migration steps: which libraries to replace, which APIs changed between Spring Boot 1.x and 3.x (javax to jakarta, etc.), and what order to do them in.
-- **Security Auditor Agent** -- Identifies SQL injection, insecure dependencies, missing input validation, and other OWASP Top 10 issues. Proposes fixes with code examples.
+- **Code Archaeologist Agent** -- Reads Java code and explains business logic, design patterns (or anti-patterns), and data flow through controllers and queries. Give it a controller or class; it returns a plain-language walkthrough. Use it before any migration work starts.
+- **Migration Advisor Agent** -- Recommends specific migration steps: which libraries to replace, which APIs changed between Spring Boot 1.x and 3.x, and what order to do them in. Give it the current `pom.xml` and target stack; it proposes a sequenced plan. Use it once you understand what the code currently does.
+- **Security Auditor Agent** -- Identifies SQL injection, insecure dependencies, missing validation, and other OWASP Top 10 issues, and proposes fixes with examples. Give it a controller or query; it returns findings. Use it as a pass before and after migration.
 
-### Open the Challenge
+### Suggested Custom Skills
 
-Navigate to `challenges/challenge-12-legacy-modernization/`. Read the [system context](../challenges/challenge-12-legacy-modernization/docs/system-context.md) first, then explore the `src/` directory.
+- **Dependency Upgrade Skill** -- A fixed sequence: check `pom.xml` for deprecated or vulnerable libraries, plan the javax-to-jakarta and Spring Boot 1.x-to-3.x replacement order, then upgrade one dependency at a time, verifying compilation after each.
+- **Controller-to-Service Extraction Skill** -- A repeatable refactor workflow: pull business logic out of a controller method into a service class, preserving behavior, then add the test that was missing before the move.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-12-legacy-modernization/` with Java 8 (to compile the legacy code), Maven, and Node.js LTS. During the migration phase, you will update the `pom.xml` to target Java 17+ and install a newer JDK (e.g., `sdk install java 21-tem` via SDKMAN) to compile the migrated code.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "legacy code archaeology agent", "dependency migration skill", and "spring boot instructions" before you draft your own.
 
 ---
 

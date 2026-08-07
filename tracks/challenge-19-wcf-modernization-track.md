@@ -39,31 +39,15 @@ Some operations have documented bugs (see `docs/system-context.md`). Some have u
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
 
-Your `.github/copilot-instructions.md` should include:
-
-- That you are working with a legacy WCF banking service running on CoreWCF (.NET 8) and modernizing it to a REST API using ASP.NET Core Web API
-- WCF-specific concepts Copilot should expect to encounter: `ServiceContract`, `OperationContract`, `DataContract`, `DataMember`, `FaultContract`, `ServiceFault`, `BasicHttpBinding`, `ServiceBehavior`, WSDL, SOAP 1.1 message structure
-- The modernization goal: preserve all business logic while adopting REST/JSON conventions and HTTP status codes in place of SOAP faults
-- Your preference for REST endpoint design (controllers vs. minimal APIs) and persistence strategy (in-memory, SQLite, or other)
-
-### Suggested Agents
-
-- **WCF Analyst Agent** -- Reads WCF service contracts and explains each operation, its data contracts, and the faults it can throw. Understands `ServiceContract`/`OperationContract`/`DataContract`/`FaultContract` syntax, `BasicHttpBinding` configuration, and SOAP message structure.
-- **Banking Domain Agent** -- Understands banking operations: account types, interest calculation methods, loan amortization, overdraft logic, transaction reconciliation.
-- **REST Migration Agent** -- Maps WCF service operations to REST endpoints. Knows HTTP verbs, status codes, OpenAPI/Swagger documentation, and ASP.NET Core controller patterns. Translates SOAP faults to HTTP responses.
-- **Test Strategy Agent** -- Designs characterization tests to capture WCF behavior before migration. Knows xUnit/NUnit structure, integration testing patterns, and how to test both SOAP and REST APIs.
-
-### Open the Challenge
-
-Navigate to `challenges/challenge-19-wcf-banking/`. Read `docs/system-context.md` first, then `docs/architecture.md`, then explore the service contracts in `src/Meridian.Banking.Service/Contracts/`.
+Navigate to `challenges/challenge-19-wcf-banking/`. Read `docs/system-context.md` first, then `docs/architecture.md`, then explore the service contracts in `src/Meridian.Banking.Service/Contracts/` before writing any instructions.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-19-wcf-banking/` with .NET 8 SDK, CoreWCF dependencies, and the VS Code C# extension.
 
-### Running the WCF Service
+#### Running the WCF Service
 
 From the challenge root, restore and start the service:
 
@@ -86,7 +70,7 @@ curl 'http://localhost:5000/AccountService?wsdl'
 
 A successful response returns an XML document starting with `<wsdl:definitions ...>`. A 400 or empty response means the service is not up yet or the URL was not quoted correctly.
 
-### Using the Console Client
+#### Using the Console Client
 
 A demo client is included at `src/Meridian.Banking.Client`. With the service running in one terminal, open a second terminal and run:
 
@@ -95,6 +79,31 @@ dotnet run --project src/Meridian.Banking.Client
 ```
 
 It sends a real SOAP request to `GetCustomerProfile` for customer ID 1001 and prints the raw HTTP status and response body. This is a quick sanity check that the service is accepting SOAP messages correctly. The client uses raw HTTP rather than a generated proxy, so you can also read its source to see what a well-formed SOAP envelope looks like for this service.
+
+### Repository Instructions for This Track
+
+Your `.github/copilot-instructions.md` should include:
+
+- That you are working with a legacy WCF banking service running on CoreWCF (.NET 8) and modernizing it to a REST API using ASP.NET Core Web API
+- WCF-specific concepts Copilot should expect to encounter: `ServiceContract`, `OperationContract`, `DataContract`, `DataMember`, `FaultContract`, `ServiceFault`, `BasicHttpBinding`, `ServiceBehavior`, WSDL, SOAP 1.1 message structure
+- The modernization goal: preserve all business logic while adopting REST/JSON conventions and HTTP status codes in place of SOAP faults
+- Your preference for REST endpoint design (controllers vs. minimal APIs) and persistence strategy (in-memory, SQLite, or other)
+- Non-negotiable: every migrated endpoint needs a characterization test proving it matches the original SOAP behavior before the SOAP path is retired
+
+### Suggested Custom Agents
+
+The participant custom agents below are Copilot agents you use while working. They are separate from the WCF service and REST API you are building -- those are the challenge's runtime deliverables, not `.github/agents/` definitions.
+
+- **WCF Analyst Agent** -- Reads WCF service contracts and explains each operation, its data contracts, and the faults it can throw. Give it a contract file; it returns a plain-language breakdown of the operation and its `BasicHttpBinding` configuration. Use it before mapping anything to REST.
+- **Banking Domain Agent** -- Applies banking domain judgment for account types, interest calculation, and transaction reconciliation that the WCF service assumes. Give it an operation's behavior; it explains the domain reasoning. Use it when a rule's intent isn't obvious from the contract alone.
+- **REST Migration Agent** -- Reasons about how each WCF operation and fault should map to an HTTP verb, path, and status code, and how to phrase the resulting OpenAPI documentation. Give it an analyzed operation; it proposes the REST equivalent. Use it once the Analyst agent has explained the original contract.
+
+### Suggested Custom Skills
+
+- **Characterization Testing Skill** -- A fixed sequence for capturing current WCF behavior before changing anything: call each operation with representative inputs, record the exact response including faults, and turn those recordings into xUnit/NUnit tests that must keep passing through the migration.
+- **WSDL Verification Skill** -- A repeatable check after starting the service: fetch the WSDL for each endpoint, confirm it parses, and use the console client to send one real SOAP request per service as a smoke test before deeper work begins.
+
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "SOAP to REST migration agent", "characterization testing skill", and "ASP.NET Core instructions" before you draft your own.
 
 ---
 

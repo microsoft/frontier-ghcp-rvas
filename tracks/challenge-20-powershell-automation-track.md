@@ -35,29 +35,35 @@
 
 A devcontainer is provided for this track. Copy `.devcontainer/challenge-20-powershell-automation/` into `.devcontainer/` in your working repository and reopen in container. It installs PowerShell 7, Pester, PSScriptAnalyzer, the Az module, and the VS Code PowerShell extension automatically.
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
 
-**What to include:**
+Navigate to `challenges/challenge-20-powershell-automation/`. The `scripts/` folder has three starter scripts with intentional gaps and bugs. The `tests/` folder has Pester scaffolds. Read through both before writing any instructions, then work through the stages in order.
+
+### Repository Instructions for This Track
+
+Your `.github/copilot-instructions.md` should cover:
 
 - PowerShell version and edition (e.g., PowerShell 7 on Linux/macOS, or Windows PowerShell 5.1)
 - Target environment (Active Directory, Azure, hybrid, standalone Windows)
 - Preferred error handling pattern (`try/catch` with `Write-Error` vs `$ErrorActionPreference = 'Stop'`)
 - Logging approach (structured `Write-Verbose`/`Write-Information` vs a custom log function)
 - Whether you want comment-based help generated on every function
+- Non-negotiable: no `Write-Host` in scripts -- use `Write-Verbose` or `Write-Output` instead
 
-### Suggested Agents
+### Suggested Custom Agents
 
-**Agents to consider creating:**
+- **PowerShell Expert Agent** -- Knows PowerShell best practices, PSScriptAnalyzer rules, and Pester test patterns, and flags deprecated aliases and anti-patterns. Give it a script; it returns findings. Use it before and after any refactor.
+- **Pester Test Writer Agent** -- Writes Pester 5 `Describe`/`Context`/`It` blocks with proper mocking, always covering both happy-path and error-path cases. Give it a function; it proposes the test file. Use it once a function's behavior is settled.
+- **Azure Automation Agent** -- Focuses on Az module cmdlets, managed identity auth, and idempotent resource operations. Give it an automation task; it proposes the cmdlet sequence. Use it for Stage 3 work against Azure resources.
 
-- **PowerShell Expert Agent** -- Knows PowerShell best practices, PSScriptAnalyzer rules, and Pester test patterns. Flags deprecated aliases and common anti-patterns.
-- **Pester Test Writer Agent** -- Specialized in writing Pester 5 `Describe`/`Context`/`It` blocks with proper mocking. Always suggests both happy-path and error-path tests.
-- **Azure Automation Agent** -- Focuses on Az module cmdlets, managed identity auth, and idempotent resource operations.
+### Suggested Custom Skills
 
-### Open the Challenge
+- **Script Refactor Skill** -- A fixed sequence: run PSScriptAnalyzer, fix flagged aliases and anti-patterns one at a time, then re-run analysis to confirm a clean pass before touching tests.
+- **Comment-Based Help Skill** -- A repeatable workflow: for every function missing documentation, generate comment-based help matching its actual parameters and add a Pester test that verifies the help exists.
 
-Navigate to `challenges/challenge-20-powershell-automation/`. The `scripts/` folder has three starter scripts with intentional gaps and bugs. The `tests/` folder has Pester scaffolds. Work through the stages in order.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "powershell review agent", "pester test skill", and "azure automation instructions" before you draft your own.
 
 ---
 

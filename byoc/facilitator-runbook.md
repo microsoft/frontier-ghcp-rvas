@@ -12,12 +12,35 @@ Work with the team to fill in the **[Outcome Canvas](./outcome-canvas.md)**:
 - Current pain and baseline metrics
 - Definition of done with concrete acceptance criteria
 - Constraints (time, team size, architecture, access)
+- Stable repository context and constraints for Repository Instructions
+- Specialist judgment that could be assigned to a Custom Agent
+- One repeatable procedure worth encoding as a Custom Skill
 - Demo plan
 - Success measurement (before/after business impact)
 
-Schedule a 30-minute outcome-definition workshop if needed. Keep it short and concrete.
+Schedule a 30-minute outcome-definition discussion if needed. Keep it short
+and concrete.
 
-### 2. Choose the Session Pages
+### 2. Prepare the Customization Trio Design Briefs
+
+Turn the Customization Trio inputs from the canvas into three tailored Design
+Briefs:
+
+- Repository Instructions: intended outcome, audience, stable context,
+  constraints, and quality bar
+- Custom Agent: specialist responsibility, judgment required, Use Cues,
+  boundaries, and quality bar
+- Custom Skill: repeatable procedure, Use Cues, inputs, outputs, constraints,
+  and quality bar
+
+Keep each brief specific to the customer's repository, but do not author the
+customization for participants. They must inspect the real repository, confirm
+the brief against what they find, and write the three artifacts themselves.
+Use the
+[shared getting started guide](../tracks/getting-started.md)
+for authoring mechanics and resources.
+
+### 3. Choose the Session Pages
 
 For a reusable challenge, author the page set before the session:
 
@@ -30,7 +53,7 @@ For a reusable challenge, author the page set before the session:
 Use `byoc/templates/` as the starting point. For a one-time session with a clear
 plan, the Outcome Canvas can stand on its own.
 
-### 3. Environment and Access
+### 4. Environment and Access
 
 **Codebase Access:**
 
@@ -50,12 +73,13 @@ plan, the Outcome Canvas can stand on its own.
 - [ ] Test data is available
 - [ ] CI/CD pipelines are accessible (if in scope for the outcome)
 
-### 4. Pre-Session Communication
+### 5. Pre-Session Communication
 
 Send participants:
 
 - [ ] Link to the repository
 - [ ] **[Outcome Canvas](./outcome-canvas.md)** (filled in)
+- [ ] The three tailored Design Briefs
 - [ ] Environment setup instructions
 - [ ] Any pre-reading (existing architecture docs, ADRs, relevant code paths)
 - [ ] Schedule with timeboxes
@@ -63,24 +87,29 @@ Send participants:
 
 ## Day-Of Structure
 
-### Opening (30 min)
+### Opening and Initial Drafting
 
-**Outcome Framing (15 min):**
+**Outcome Framing:**
 
 - State the target outcome clearly
 - Show the definition of done
 - Walk through the demo plan
 - Explain how success will be measured (business impact, not activity metrics)
 
-**Copilot Demo (10 min):**
+**Repository Orientation:**
 
-- Quick demo of inline suggestions, chat commands, workspace context
-- Show how Copilot can accelerate the work toward the outcome
+- Confirm access and show where the app, tests, configuration, and supporting
+  documentation live
+- Introduce the three Design Briefs without showing completed customizations
 
-**Environment Check (5 min):**
+**Customization Trio Drafting:**
 
-- Verify everyone can run the app
-- Confirm access to the repository and any required services
+- Set aside 20--30 minutes across the opening and the start of work time
+- Have participants inspect the real repository before they write
+- Ask them to author Repository Instructions, a Custom Agent, and a Custom Skill
+  from the briefs and repository evidence
+- Keep the drafting time inside the session schedule rather than adding a
+  separate exercise
 
 ### Work Time (4-5 hours)
 
@@ -110,6 +139,9 @@ At each checkpoint, gather the team briefly (5 min):
 - Don't solve technical problems directly -- guide participants to use Copilot
 - If someone is stuck, ask: "What would you need to demo this part? Work backward from that."
 - Share patterns as you see them: "Team A just used `/explain` to understand a legacy module -- that might help you too."
+- At the midpoint, remind participants to refine the Customization Trio using
+  what they have learned from the repository and the work so far. This is not a
+  check, review gate, or submission.
 
 ### Demo and Outcome Review (1 hour)
 
@@ -151,7 +183,8 @@ A successful BYOC session produces:
 
 - **A demonstrable outcome** -- working code, shipped feature, modernized system, automated process
 - **Articulated business impact** -- time saved, risk reduced, quality improved, toil eliminated
-- **Reusable patterns** -- prompts, agents, workflow changes that the team can apply to future work
+- **Reusable patterns** -- Repository Instructions, Custom Agents, Custom
+  Skills, and working practices that the team can apply to future work
 
 Activity metrics (Copilot usage percentage, chat interactions) are supporting evidence, not the goal.
 

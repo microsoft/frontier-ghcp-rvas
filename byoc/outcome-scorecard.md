@@ -86,8 +86,9 @@ _What Copilot features or patterns helped you deliver this outcome?_
 - [ ] `/fix` to debug issues
 - [ ] `/tests` to generate test cases
 - [ ] Workspace chat with `@workspace` for context-aware generation
-- [ ] Custom agents for specialized tasks
-- [ ] Custom prompts or prompt collections
+- [ ] Repository Instructions for stable repository guidance
+- [ ] Custom Agents for specialist judgment
+- [ ] Custom Skills for repeatable procedures
 - [ ] MCP servers for external tool integration
 - [ ] Other (describe):
 
@@ -105,7 +106,9 @@ _How much faster was this work with Copilot compared to manual effort?_
 
 **Patterns to reuse:**
 
-_Which prompts, agents, or workflows will you apply to future work?_
+_Which working practices or reusable Repository Instructions, Custom Agents,
+or Custom Skills will you apply to future work? Record useful patterns here
+without treating Customization Trio completion as an outcome criterion._
 
 ---
 

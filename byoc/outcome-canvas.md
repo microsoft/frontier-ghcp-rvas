@@ -92,6 +92,50 @@ _Languages, frameworks, hosting, dependencies._
 
 ---
 
+## Customization Trio Design Inputs
+
+The facilitator uses these notes to prepare a tailored Design Brief for each
+part of the Customization Trio. Capture what matters in this repository without
+drafting the customizations here.
+
+### Repository Instructions
+
+**What stable repository context should Copilot always know?**
+
+_Record durable conventions, architecture boundaries, terminology, and quality
+expectations that apply across the session._
+
+**What constraints must every change respect?**
+
+_Include compatibility requirements, security expectations, approved Azure
+services, testing standards, and areas that must not change._
+
+### Custom Agent
+
+**Where is specialist judgment needed?**
+
+_Name the decisions that require domain expertise, tradeoff analysis, or review
+against repository constraints._
+
+**What responsibility should the specialist own?**
+
+_Describe the intended outcome, audience, Use Cues, boundaries, and quality bar
+for the facilitator's Design Brief._
+
+### Custom Skill
+
+**What repeatable procedure is worth encoding?**
+
+_Choose one recurring, multi-part task that benefits from a consistent
+procedure rather than one-off guidance._
+
+**What should the procedure produce?**
+
+_Describe its Use Cues, required inputs, expected outputs, constraints, and
+quality bar._
+
+---
+
 ## Demo Plan
 
 **What will you show at the end?**

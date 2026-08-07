@@ -5,8 +5,8 @@
 # needed for the given challenge. Everything else is removed so users
 # see a clean, focused workspace.
 #
-# Also runs the clean-start logic (empties copilot-instructions.md,
-# removes sample agents/skills, detaches the git remote).
+# Also runs the clean-start logic (creates empty repository instructions,
+# agent, and skill locations; removes samples; detaches the git remote).
 #
 # Usage:
 #   .\scripts\setup-challenge.ps1 -Challenge <devcontainer-folder-name>
@@ -264,3 +264,6 @@ Write-Host ""
 Write-Host "Next steps:"
 Write-Host "  1. Read tracks/$TrackFileName.md for the full challenge walkthrough"
 Write-Host "  2. Start with tracks/getting-started.md if this is your first time"
+Write-Host "  3. Create repository instructions in .github/copilot-instructions.md"
+Write-Host "  4. Create a custom agent in .github/agents/"
+Write-Host "  5. Create a custom skill in .github/skills/"

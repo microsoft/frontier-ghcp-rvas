@@ -476,11 +476,9 @@ Build an Azure Terraform foundation across 5 phases: bootstrap remote state and 
 
 ### Examples & Templates
 
-> **[github/awesome-copilot](https://github.com/github/awesome-copilot)** - A curated collection of real-world examples including:
-> - Custom instruction files (`.github/copilot-instructions.md`)
-> - Custom agent templates (`.github/agents/`)
-> - Reusable prompt files (`.github/prompts/`)
-> - Best practices and patterns
+Use the [shared examples guidance](./tracks/getting-started.md#4-learn-from-examples-then-write-your-own)
+to find current examples. Search for terms that match the artifact you need,
+such as "repository instructions", "custom agent", or "reusable prompt".
 
 ### GitHub Copilot Documentation
 

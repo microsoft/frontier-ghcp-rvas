@@ -22,23 +22,30 @@
 
 ## Getting Started
 
-Follow the [shared getting started guide](./getting-started.md) for initial setup steps.
+Follow the [shared getting started guide](./getting-started.md) for setup,
+authoring mechanics, and resources. The sections below are tailored Design
+Briefs. They describe what each customization should cover without supplying a
+finished artifact.
 
-### Custom Instructions for This Track
+### Open and Inspect
 
-{{DESCRIBE_WHAT_COPILOT_CONTEXT_TO_PROVIDE}}
+{{DESCRIBE_WHAT_PARTICIPANTS_MUST_INSPECT_IN_THE_REAL_REPOSITORY_AND_WHAT_EVIDENCE_THEY_SHOULD_GATHER_BEFORE_AUTHORING_CUSTOMIZATIONS}}
 
-### Suggested Agents
+### Repository Instructions
 
-{{LIST_RELEVANT_COPILOT_AGENTS_FOR_THIS_CHALLENGE}}
+{{DESCRIBE_THE_INTENDED_OUTCOME_AUDIENCE_STABLE_REPOSITORY_CONTEXT_CONSTRAINTS_AND_QUALITY_BAR_THE_REPOSITORY_INSTRUCTIONS_MUST_COVER}}
 
-### Open the Challenge
+### Suggested Custom Agents
 
-Navigate to your challenge folder and open it in your development environment.
+{{DESCRIBE_THE_SPECIALIST_JUDGMENT_RESPONSIBILITIES_USE_CUES_BOUNDARIES_AND_QUALITY_BAR_RELEVANT_TO_THIS_CHALLENGE}}
+
+### Suggested Custom Skills
+
+{{DESCRIBE_THE_REPEATABLE_PROCEDURES_USE_CUES_INPUTS_OUTPUTS_CONSTRAINTS_AND_QUALITY_BAR_RELEVANT_TO_THIS_CHALLENGE}}
 
 ## Tips for Using Copilot on This Track
 
-{{PRACTICAL_PROMPTS_AND_PATTERNS_SPECIFIC_TO_THIS_TRACK}}
+{{DESCRIBE_PRACTICAL_COPILOT_USAGE_PATTERNS_SPECIFIC_TO_THIS_TRACK}}
 
 ## Resources
 

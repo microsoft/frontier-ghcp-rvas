@@ -7,31 +7,26 @@
 function Invoke-CleanGitHubAndMeta {
     # ── Clean .github ───────────────────────────────────────────────────
 
+    $GitHubDir = Join-Path $RepoRoot ".github"
+    New-Item -ItemType Directory -Path $GitHubDir -Force | Out-Null
+
     $InstructionsFile = Join-Path $RepoRoot ".github\copilot-instructions.md"
-    if (Test-Path $InstructionsFile) {
-        Set-Content -Path $InstructionsFile -Value "" -NoNewline
-        Write-Host "[OK] Cleared .github/copilot-instructions.md" -ForegroundColor Green
-    } else {
-        Write-Host "[SKIP] .github/copilot-instructions.md not found" -ForegroundColor Yellow
-    }
+    Set-Content -Path $InstructionsFile -Value "" -NoNewline
+    Write-Host "[OK] Created empty .github/copilot-instructions.md" -ForegroundColor Green
 
     $AgentsDir = Join-Path $RepoRoot ".github\agents"
-    if (Test-Path $AgentsDir) {
-        Get-ChildItem -Path $AgentsDir -File -Recurse |
-            Where-Object { $_.Name -ne ".gitkeep" } |
-            Remove-Item -Force
-        Write-Host "[OK] Removed custom agents from .github/agents/" -ForegroundColor Green
-    } else {
-        Write-Host "[SKIP] .github/agents/ not found" -ForegroundColor Yellow
-    }
+    New-Item -ItemType Directory -Path $AgentsDir -Force | Out-Null
+    Get-ChildItem -Path $AgentsDir -Force |
+        Where-Object { $_.Name -ne ".gitkeep" } |
+        Remove-Item -Recurse -Force
+    Write-Host "[OK] Reset .github/agents/" -ForegroundColor Green
 
     $SkillsDir = Join-Path $RepoRoot ".github\skills"
-    if (Test-Path $SkillsDir) {
-        Get-ChildItem -Path $SkillsDir -Recurse | Remove-Item -Recurse -Force
-        Write-Host "[OK] Removed custom skills from .github/skills/" -ForegroundColor Green
-    } else {
-        Write-Host "[SKIP] .github/skills/ not found" -ForegroundColor Yellow
-    }
+    New-Item -ItemType Directory -Path $SkillsDir -Force | Out-Null
+    Get-ChildItem -Path $SkillsDir -Force |
+        Where-Object { $_.Name -ne ".gitkeep" } |
+        Remove-Item -Recurse -Force
+    Write-Host "[OK] Reset .github/skills/" -ForegroundColor Green
 
     $WorkflowsDir = Join-Path $RepoRoot ".github\workflows"
     if (Test-Path $WorkflowsDir) {

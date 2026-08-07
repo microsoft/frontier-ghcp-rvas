@@ -78,35 +78,43 @@ The stakeholder brief is in [challenges/challenge-9-team-sprint/docs/stakeholder
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
 
-Each team member should contribute to a shared `.github/copilot-instructions.md`. At minimum include:
+Navigate to `challenges/challenge-9-team-sprint/`. Read the [stakeholder brief](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) as a team before starting Phase 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
+
+A dedicated devcontainer is provided at `.devcontainer/challenge-9-team-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
+
+### Repository Instructions for This Track
+
+Repository instructions are shared, not role-specific. Each team member should contribute to one `.github/copilot-instructions.md`. At minimum include:
 
 - The project name (CityPulse) and what it does
 - The team's chosen tech stack (backend framework, frontend framework, database)
 - Code conventions the team agreed on (naming, file structure, API patterns)
+- Non-negotiable: the exported Spark handover repo is the contract -- do not roll back to Spark once development starts
 
 Individual team members can also maintain role-specific context in their agent definitions.
 
-### Suggested Agents
+### Suggested Custom Agents
 
-**Agents the team should consider creating together:**
+Agents are role-specific -- each person builds the one matching their role, informed by the shared repository instructions above:
 
-- **Product Strategist Agent** -- Helps the PO write user stories, acceptance criteria, and release notes
-- **API Architect Agent** -- Understands the CityPulse REST API conventions and data model
-- **UI Component Agent** -- Knows the frontend framework, component patterns, and styling approach
-- **Test Engineer Agent** -- Specializes in Playwright E2E tests with page object patterns
-- **Infrastructure Agent** -- Focused on devcontainer configuration, GitHub Actions, and environment setup
+- **Product Strategist Agent** -- Helps the PO turn a raw idea into backlog-ready work: user stories, acceptance criteria, and release notes. Give it a feature idea or stakeholder note; it drafts the story and criteria in the team's format. Use it throughout Discovery and whenever new scope reaches the board, not for grooming code-level tasks.
+- **Engineering Conventions Agent** -- Applies CityPulse's technical conventions on whichever layer its owner works: REST resource shapes, status codes, and the data model for backend developers, or component patterns and styling approach for frontend developers. Give it an endpoint or component description; it proposes the shape consistent with the rest of the app. Backend and frontend developers each build their own instance scoped to their layer; use it when designing new work, not for writing its tests.
+- **Quality and Infrastructure Agent** -- Applies delivery judgment on whichever side its owner covers: Playwright E2E coverage with page object patterns for QA, or devcontainer configuration, GitHub Actions, and environment setup for DevOps. Give it a working feature or an infrastructure requirement; it proposes the test list or the pipeline/devcontainer shape. QA and DevOps each build their own instance scoped to their responsibility; use it once a feature is testable or when the environment needs to change.
 
-Agree on shared agents during sprint planning so everyone benefits from the same project context.
+Agree on the roster during sprint planning so everyone builds against the same project context.
 
-### Open the Challenge
+### Suggested Custom Skills
 
-Navigate to `challenges/challenge-9-team-sprint/`. Read the [stakeholder brief](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) as a team before starting Phase 1.
+Workflow skills are shared team assets, not tied to one role. Agree on these together so board hygiene and handoffs stay consistent no matter who does the work:
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-9-team-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
+- **Sprint Board Sync Skill** -- A repeatable sequence run after every merge: update the issue's status, link the PR, and note any scope change discovered during implementation. Keeps GitHub Issues honest without a separate status meeting.
+- **Discovery Handoff Skill** -- The fixed sequence for turning the Spark prototype into the development contract: export it into the repository, confirm the exported structure matches what developers need, and document anything explicitly out of scope. Run once, at the Discovery-to-Sprint 1 boundary.
+
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "team sprint agents", "issue sync skill", and "cross-functional instructions" before you draft your own.
 
 ---
 

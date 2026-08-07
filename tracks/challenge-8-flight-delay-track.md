@@ -33,11 +33,15 @@
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
 
-**What to include:**
+Navigate to `challenges/challenge-8-flight-delay/`. A dedicated devcontainer is provided at `.devcontainer/challenge-8-flight-delay/` with Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS. Read through the starter notebook and scaffolding across all three layers before writing any instructions.
+
+### Repository Instructions for This Track
+
+Your `.github/copilot-instructions.md` should cover:
 
 - Python version, key data science libraries (pandas, scikit-learn)
 - Backend framework choice (Flask or FastAPI) and API design conventions
@@ -45,19 +49,20 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 - Code quality standards (PEP 8 for Python, ESLint for JS/TS)
 - Testing expectations
 - The project's overall goal: flight delay prediction from FAA data
+- Non-negotiable: the API's input schema must match what the model actually expects, and the frontend must match the API in turn
 
-### Suggested Agents
+### Suggested Custom Agents
 
-**Agents to consider creating:**
+- **Data Scientist Agent** -- Applies judgment on EDA and feature engineering for flight delay data: which features carry signal, how to handle imbalance, and which model family fits. Give it the dataset or notebook state; it proposes the next analytical step. Use it during model development, not once the model is serving predictions.
+- **API Engineer Agent** -- Focuses on REST design and serialization for the prediction endpoint: request/response shape, model loading strategy, and error handling for bad input. Give it the model's expected inputs; it proposes the endpoint contract. Use it when wiring the model into Flask/FastAPI.
+- **Frontend Developer Agent** -- Applies UI judgment for the chosen framework: form design for prediction inputs, state handling, and how to present a result. Give it the API contract; it proposes the component structure. Use it once the API is callable.
 
-- **Data Scientist Agent** -- Expert in EDA, feature engineering, and model training
-- **API Engineer Agent** -- Focused on REST API design, Flask/FastAPI, and data serialization
-- **Frontend Developer Agent** -- Specialized in building UIs with your chosen framework
-- **Full-Stack Integrator Agent** -- Understands the entire pipeline from model to UI
+### Suggested Custom Skills
 
-### Open the Challenge
+- **End-to-End Wiring Skill** -- A fixed sequence for verifying the pipeline from model to UI: confirm the API's input schema matches what the model expects, confirm the frontend sends and renders that same shape, and trace one request through all three layers. Run it after any change to the model's feature set.
+- **Cross-Layer Debugging Skill** -- A repeatable approach for CORS, serialization, or model-loading errors: capture the full traceback, identify which layer raised it, and check that layer's contract with its neighbor. Use it whenever a request fails without an obvious cause.
 
-Navigate to `challenges/challenge-8-flight-delay/`. A dedicated devcontainer is provided at `.devcontainer/challenge-8-flight-delay/` with Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "full-stack ML agent", "API integration skill", and "flask instructions" before you draft your own.
 
 ---
 

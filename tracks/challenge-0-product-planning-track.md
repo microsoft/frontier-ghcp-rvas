@@ -42,29 +42,35 @@ This track supports three ways of working. Choose the one that fits you best, or
 
 > All paths are valid. Mix and match as you like.
 
-Follow the [common setup steps](getting-started.md) for the clean start, custom instructions, and custom agents, then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
 
-**What to include:**
+Navigate to `challenges/challenge-0-product-planning/`. This is where your starter files live (templates, sample docs, and exercises). Read through the templates and sample docs before drafting anything -- the writing standards and artifact types below should reflect what's actually there.
+
+### Repository Instructions for This Track
+
+Your `.github/copilot-instructions.md` should cover:
 
 - Your role (Product Owner, BA, PM) and what you need help with
 - The product you are planning (TaskFlow -- a task management platform)
 - The kind of artifacts you produce (user stories, specs, ADRs, release plans)
 - Writing standards (clear, concise, structured markdown)
 - GitHub workflow preferences (issue labels, milestone naming, branch strategy)
+- That this track has no codebase, so Copilot should suggest process and document improvements, not application code
 
-### Suggested Agents
+### Suggested Custom Agents
 
-**Agents to consider creating:**
+- **Product Strategist Agent** -- Weighs a feature idea or product brief draft against the product's goals and flags risks or open questions. Give it a rough idea; it returns a structured brief with trade-offs called out. Use it before committing an idea to the backlog, not for polishing final prose.
+- **Story Writer Agent** -- Turns an approved idea into user stories with clear, testable acceptance criteria. Give it a feature description; it returns story drafts in Given/When/Then form. Use it once direction is set and the idea needs to become working units.
+- **Release Planner Agent** -- Reasons about milestone sequencing, dependency risk, and stakeholder communication. Give it a backlog or set of stories; it proposes a milestone plan with risks called out. Use it when sequencing a release, not for day-to-day story writing.
 
-- **Product Strategist Agent** -- Helps write product briefs, evaluate feature ideas, and define success metrics
-- **Story Writer Agent** -- Specializes in writing user stories with clear acceptance criteria
-- **Release Planner Agent** -- Focused on milestone planning, risk assessment, and communication plans
+### Suggested Custom Skills
 
-### Open the Challenge
+- **Issue Batch Creation Skill** -- A repeatable sequence for turning a finished stories file into GitHub Issues through the MCP server: parse the file, map each story to title, body, and labels, create the issues, and confirm the count matches. Use it once stories are final, not while still drafting.
+- **Document Critique Pass Skill** -- A structured review sequence for a brief, spec, or ADR: check for contradictions, priority conflicts, and untestable acceptance criteria, then list findings before anyone else reads the draft. Run it as a last step before sharing a document.
 
-Navigate to `challenges/challenge-0-product-planning/`. This is where your starter files live (templates, sample docs, and exercises).
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "product brief agent", "user story skill", and "release notes instructions" before you draft your own.
 
 ---
 

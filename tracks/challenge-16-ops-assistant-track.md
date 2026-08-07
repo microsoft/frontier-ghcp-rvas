@@ -38,9 +38,15 @@ You are the operations team for the **Order Gateway** -- a critical e-commerce s
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
+
+Navigate to `challenges/challenge-16-ops-assistant/`. Read the [system context](../challenges/challenge-16-ops-assistant/docs/system-context.md) first, then explore the `logs/` and `incidents/` directories before writing any instructions.
+
+A dedicated devcontainer is provided at `.devcontainer/challenge-16-ops-assistant/` with Node.js LTS.
+
+### Repository Instructions for This Track
 
 Your `.github/copilot-instructions.md` should include:
 
@@ -48,18 +54,20 @@ Your `.github/copilot-instructions.md` should include:
 - The team structure and routing rules (from the team routing guide)
 - That Copilot should explain errors in plain language suitable for non-technical support staff
 - That diagnosis should reference historical incidents when relevant patterns match
+- Non-negotiable: never route an incident without citing the log evidence behind the recommendation
 
-### Suggested Agents
+### Suggested Custom Agents
 
-- **Log Analyst Agent** -- Reads log files and identifies: error patterns, root causes vs. symptoms, severity assessment, and timeline of events. Can distinguish between one-off errors and recurring patterns.
-- **Incident Router Agent** -- Takes an error description or log excerpt and determines: which team should investigate, what priority to assign, and what historical incidents have similar patterns. Outputs a structured routing recommendation.
-- **Runbook Generator Agent** -- Takes an error pattern and produces a step-by-step troubleshooting guide: what to check, what commands to run, when to escalate, and how to verify the fix.
+- **Log Analyst Agent** -- Reads log files and identifies error patterns, root causes vs. symptoms, severity, and the timeline of events, distinguishing one-off errors from recurring ones. Give it a log file; it returns grouped findings. Use it as the first pass on any incident.
+- **Incident Router Agent** -- Takes an error description or log excerpt and determines which team should investigate, what priority to assign, and which historical incidents look similar. Give it the Log Analyst's output; it returns a routing recommendation. Use it once errors are identified, not on raw logs.
+- **Runbook Generator Agent** -- Takes an error pattern and produces a step-by-step troubleshooting guide: what to check, what to run, when to escalate. Give it a resolved incident; it drafts the runbook. Use it after resolution, so the next person doesn't start from zero.
 
-### Open the Challenge
+### Suggested Custom Skills
 
-Navigate to `challenges/challenge-16-ops-assistant/`. Read the [system context](../challenges/challenge-16-ops-assistant/docs/system-context.md) first, then explore the `logs/` and `incidents/` directories.
+- **Log Triage Skill** -- A fixed sequence: pull a log window, group related errors, separate one-off noise from recurring patterns, and timestamp the sequence of events leading to the failure.
+- **Historical Pattern Match Skill** -- A repeatable workflow: take a new error signature, search incident history for matching root causes, and attach the closest historical match with its resolution.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-16-ops-assistant/` with Node.js LTS.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "log analysis agent", "incident routing skill", and "ops runbook instructions" before you draft your own.
 
 ---
 

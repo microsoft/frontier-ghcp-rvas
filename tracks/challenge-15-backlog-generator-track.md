@@ -39,9 +39,19 @@ These specs are structured like the Confluence pages your team already works wit
 
 ## Getting Started
 
-Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents), then continue below.
+Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Custom Instructions for This Track
+### Open and Inspect the Challenge
+
+Navigate to `challenges/challenge-15-backlog-generator/`. Read the [system context](../challenges/challenge-15-backlog-generator/docs/system-context.md) first, then explore the `specs/` directory before writing any instructions.
+
+A dedicated devcontainer is provided at `.devcontainer/challenge-15-backlog-generator/` with Node.js LTS (for MCP server tooling).
+
+#### Atlassian MCP Server (Optional)
+
+If your team uses Atlassian Cloud (Jira / Confluence), you can connect Copilot to it via the Atlassian Rovo MCP Server. See the [MCP Servers Guide](../docs/mcp-servers.md#atlassian-rovo-mcp-server-jira-confluence) for setup instructions. This enables Phase 3 of the challenge, where you push generated backlog items directly to Jira.
+
+### Repository Instructions for This Track
 
 Your `.github/copilot-instructions.md` should include:
 
@@ -49,22 +59,20 @@ Your `.github/copilot-instructions.md` should include:
 - Your team's backlog conventions (Epic naming, Story format, Acceptance Criteria style)
 - The INVEST criteria and how your team applies them
 - Your definition of "done" for user stories and tasks
+- Non-negotiable: never push generated items to Jira without a human reviewing them first
 
-### Suggested Agents
+### Suggested Custom Agents
 
-- **Backlog Architect Agent** -- Takes a use case specification and produces a structured backlog: Epics, User Stories with Acceptance Criteria (Given/When/Then format), Technical Tasks, and Test Cases. Follows the INVEST criteria and your team's conventions.
-- **Refinement Analyst Agent** -- Reviews a generated backlog against the original spec and identifies: missing requirements, ambiguous acceptance criteria, undiscovered dependencies, and edge cases not covered by any story.
-- **Estimation Guide Agent** -- Analyzes generated stories and suggests relative sizing (S/M/L/XL) based on complexity indicators: number of integrations, data model changes, UI interactions, and business rule complexity.
+- **Backlog Architect Agent** -- Takes a use case specification and produces a structured backlog: Epics, Stories with Given/When/Then acceptance criteria, Tasks, and Test Cases following INVEST and your team's conventions. Give it a spec; it drafts the backlog. Use it as the first pass on any new spec.
+- **Refinement Analyst Agent** -- Reviews a generated backlog against the original spec and flags missing requirements, ambiguous criteria, undiscovered dependencies, and uncovered edge cases. Give it the spec and the draft backlog together; it returns gaps. Use it after the Architect agent, before anyone estimates.
+- **Estimation Guide Agent** -- Suggests relative sizing (S/M/L/XL) based on complexity indicators: integrations, data model changes, UI interactions, and business rule complexity. Give it the refined backlog; it proposes sizes with reasoning. Use it once stories are stable, not on a first draft.
 
-### Open the Challenge
+### Suggested Custom Skills
 
-Navigate to `challenges/challenge-15-backlog-generator/`. Read the [system context](../challenges/challenge-15-backlog-generator/docs/system-context.md) first, then explore the `specs/` directory.
+- **Spec-to-Backlog Conversion Skill** -- A fixed sequence: read a use case spec, extract actors, preconditions, and alternate paths, and generate Epics/Stories/Tasks in the team's standard format, run consistently across specs of any complexity.
+- **Jira Push Skill** -- A repeatable workflow via the Atlassian Rovo MCP server: read a Confluence page, map its content to Jira issue fields, create one issue as a dry run, then push the rest once the mapping is verified.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-15-backlog-generator/` with Node.js LTS (for MCP server tooling).
-
-### Atlassian MCP Server (Optional)
-
-If your team uses Atlassian Cloud (Jira / Confluence), you can connect Copilot to it via the Atlassian Rovo MCP Server. See the [MCP Servers Guide](../docs/mcp-servers.md#atlassian-rovo-mcp-server-jira-confluence) for setup instructions. This enables Phase 3 of the challenge, where you push generated backlog items directly to Jira.
+Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "backlog generation agent", "jira automation skill", and "agile instructions" before you draft your own.
 
 ---
 
