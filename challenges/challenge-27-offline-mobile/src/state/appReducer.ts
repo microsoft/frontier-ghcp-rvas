@@ -54,5 +54,7 @@ export function appReducer(state: AppState, action: AppAction): AppState {
       };
     case "message-cleared":
       return { ...state, message: undefined };
+    default:
+      return state;
   }
 }
