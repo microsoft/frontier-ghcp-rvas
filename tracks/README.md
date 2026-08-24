@@ -2,7 +2,7 @@
 
 Pick a challenge track that matches the work you want to deliver, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a session on your own app or repository. Each track drives a specific business outcome -- the root README explains the full approach.
 
-The **22 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
+The **28 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
 Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages and role pages.
 
@@ -25,7 +25,8 @@ team boundaries.
   [8](./challenge-8-flight-delay-track.md),
   [9](./challenge-9-team-sprint-track.md),
   [10](./challenge-10-tech-sprint-track.md),
-  [18](./challenge-18-cobol-modernization-track.md)
+  [18](./challenge-18-cobol-modernization-track.md),
+  [27](./challenge-27-offline-mobile-track.md)
 - **Backend and API Developer:** [1](./challenge-1-web-api-track.md),
   [7](./challenge-7-copilot-sdk-track.md),
   [8](./challenge-8-flight-delay-track.md),
@@ -36,7 +37,10 @@ team boundaries.
   [17](./challenge-17-spec-to-ship-track.md),
   [18](./challenge-18-cobol-modernization-track.md),
   [19](./challenge-19-wcf-modernization-track.md),
-  [21](./challenge-21-azure-terraform-track.md)
+  [21](./challenge-21-azure-terraform-track.md),
+  [22](./challenge-22-secure-release-track.md),
+  [24](./challenge-24-database-rescue-track.md),
+  [25](./challenge-25-api-guardrails-track.md)
 - **Full-stack Developer:** [1](./challenge-1-web-api-track.md),
   [4](./challenge-4-frontend-track.md),
   [8](./challenge-8-flight-delay-track.md),
@@ -44,7 +48,8 @@ team boundaries.
   [10](./challenge-10-tech-sprint-track.md),
   [17](./challenge-17-spec-to-ship-track.md),
   [18](./challenge-18-cobol-modernization-track.md),
-  [21](./challenge-21-azure-terraform-track.md)
+  [21](./challenge-21-azure-terraform-track.md),
+  [27](./challenge-27-offline-mobile-track.md)
 - **Data, AI, and ML Practitioner:** [2](./challenge-2-ml-ai-track.md),
   [6](./challenge-6-agentic-workflows-track.md),
   [7](./challenge-7-copilot-sdk-track.md),
@@ -55,7 +60,9 @@ team boundaries.
   [12](./challenge-12-legacy-modernization-track.md),
   [17](./challenge-17-spec-to-ship-track.md),
   [18](./challenge-18-cobol-modernization-track.md),
-  [19](./challenge-19-wcf-modernization-track.md)
+  [19](./challenge-19-wcf-modernization-track.md),
+  [22](./challenge-22-secure-release-track.md),
+  [27](./challenge-27-offline-mobile-track.md)
 - **DevOps, Platform, SRE, and Cloud:** [3](./challenge-3-devops-track.md),
   [6](./challenge-6-agentic-workflows-track.md),
   [7](./challenge-7-copilot-sdk-track.md),
@@ -65,13 +72,17 @@ team boundaries.
   [16](./challenge-16-ops-assistant-track.md),
   [17](./challenge-17-spec-to-ship-track.md),
   [20](./challenge-20-powershell-automation-track.md),
-  [21](./challenge-21-azure-terraform-track.md)
+  [21](./challenge-21-azure-terraform-track.md),
+  [22](./challenge-22-secure-release-track.md),
+  [24](./challenge-24-database-rescue-track.md),
+  [25](./challenge-25-api-guardrails-track.md)
 - **Sysadmin, IT Operations, and Support:**
   [3](./challenge-3-devops-track.md),
   [14](./challenge-14-pipeline-factory-track.md),
   [16](./challenge-16-ops-assistant-track.md),
   [20](./challenge-20-powershell-automation-track.md),
-  [21](./challenge-21-azure-terraform-track.md)
+  [21](./challenge-21-azure-terraform-track.md),
+  [24](./challenge-24-database-rescue-track.md)
 - **Tech Lead and Architect:** [6](./challenge-6-agentic-workflows-track.md),
   [7](./challenge-7-copilot-sdk-track.md),
   [9](./challenge-9-team-sprint-track.md),
@@ -83,7 +94,36 @@ team boundaries.
   [17](./challenge-17-spec-to-ship-track.md),
   [18](./challenge-18-cobol-modernization-track.md),
   [19](./challenge-19-wcf-modernization-track.md),
-  [21](./challenge-21-azure-terraform-track.md)
+  [21](./challenge-21-azure-terraform-track.md),
+  [22](./challenge-22-secure-release-track.md),
+  [23](./challenge-23-merger-architecture-track.md),
+  [24](./challenge-24-database-rescue-track.md),
+  [25](./challenge-25-api-guardrails-track.md),
+  [26](./challenge-26-developer-onboarding-track.md)
+- **Security:** [5](./challenge-5-qa-track.md),
+  [6](./challenge-6-agentic-workflows-track.md),
+  [12](./challenge-12-legacy-modernization-track.md),
+  [19](./challenge-19-wcf-modernization-track.md),
+  [21](./challenge-21-azure-terraform-track.md),
+  [22](./challenge-22-secure-release-track.md),
+  [25](./challenge-25-api-guardrails-track.md)
+- **Database Engineering:** [1](./challenge-1-web-api-track.md),
+  [12](./challenge-12-legacy-modernization-track.md),
+  [18](./challenge-18-cobol-modernization-track.md),
+  [19](./challenge-19-wcf-modernization-track.md),
+  [21](./challenge-21-azure-terraform-track.md),
+  [24](./challenge-24-database-rescue-track.md)
+- **Documentation and Enablement:**
+  [0](./challenge-0-product-planning-track.md),
+  [13](./challenge-13-living-docs-track.md),
+  [15](./challenge-15-backlog-generator-track.md),
+  [17](./challenge-17-spec-to-ship-track.md),
+  [26](./challenge-26-developer-onboarding-track.md)
+- **Mobile Development:** [4](./challenge-4-frontend-track.md),
+  [8](./challenge-8-flight-delay-track.md),
+  [9](./challenge-9-team-sprint-track.md),
+  [10](./challenge-10-tech-sprint-track.md),
+  [27](./challenge-27-offline-mobile-track.md)
 
 ## Challenges by Outcome
 
@@ -205,6 +245,20 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
+### 🎨 [Challenge 27: Offline Field Service App](./challenge-27-offline-mobile-track.md)
+
+**Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
+
+**Best for:** Mobile developers, frontend engineers, test engineers, and technical leads working on offline field workflows
+
+**Focus:** Making a React Native inspection workflow survive restarts, network failures, permission denial, and synchronization conflicts while keeping core tests runnable in Node.
+
+**Your Challenge:** Challenge 27 - Offline Field Service App
+
+**Duration:** 4-6 hours (Solo/Pair)
+
+---
+
 ### Modernize Legacy Systems
 
 Reverse-engineer, characterize, and migrate legacy codebases to modern platforms.
@@ -311,6 +365,34 @@ Improve test coverage, accessibility, documentation, or reliability.
 
 ---
 
+### 🔍 [Challenge 22: Secure Release Review](./challenge-22-secure-release-track.md)
+
+**Outcome:** Raise Quality and Confidence
+
+**Best for:** Application security engineers, senior .NET developers, technical leads, and platform engineers
+
+**Focus:** Reviewing a .NET 8 payments API, prioritizing security findings, proving narrow remediations with tests, and producing evidence for a release decision.
+
+**Your Challenge:** Challenge 22 - Secure Release Review
+
+**Duration:** 4-6 hours (Solo/Pair)
+
+---
+
+### 📊 [Challenge 24: Peak-Load Database Rescue](./challenge-24-database-rescue-track.md)
+
+**Outcomes:** Raise Quality and Confidence, Stand Up Cloud Platform Foundations
+
+**Best for:** Database administrators, database reliability engineers, data platform engineers, and operations engineers
+
+**Focus:** Diagnosing a SQL Server workload, measuring safe tuning changes, and shipping an Azure SQL-compatible schema migration with operational evidence.
+
+**Your Challenge:** Challenge 24 - Peak-Load Database Rescue
+
+**Duration:** 4-6 hours (Solo/Pair)
+
+---
+
 ### Automate Delivery and Ops Toil
 
 Replace manual, repetitive delivery or operations work with repeatable automation.
@@ -371,6 +453,20 @@ Replace manual, repetitive delivery or operations work with repeatable automatio
 
 ---
 
+### 📋 [Challenge 26: Developer Onboarding Repair](./challenge-26-developer-onboarding-track.md)
+
+**Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
+
+**Best for:** Technical writers, developer educators, developer experience practitioners, and engineers who maintain onboarding docs
+
+**Focus:** Testing reader tasks, rebuilding information architecture, correcting CLI and SDK examples, and adding lightweight editorial checks.
+
+**Your Challenge:** Challenge 26 - Developer Onboarding Repair
+
+**Duration:** 4-6 hours (Solo/Pair)
+
+---
+
 ### Stand Up Cloud Platform Foundations
 
 Provision and harden Azure infrastructure baselines with IaC, identity, and policy guardrails.
@@ -384,6 +480,34 @@ Provision and harden Azure infrastructure baselines with IaC, identity, and poli
 **Focus:** Building an Azure Terraform foundation across 5 stages -- bootstrap remote state and naming rules, provision platform around Container Apps, wire managed identity and Key Vault, refactor into reusable modules, add CI guardrails and drift response.
 
 **Your Challenge:** Challenge 21 - Azure Terraform Foundation
+
+**Duration:** 4-6 hours (Solo/Pair)
+
+---
+
+### 🧩 [Challenge 23: Merger Integration Architecture](./challenge-23-merger-architecture-track.md)
+
+**Outcome:** Stand Up Cloud Platform Foundations
+
+**Best for:** Solution and enterprise architects, integration leads, platform leads, and technical program leads
+
+**Focus:** Turning conflicting merger evidence into Azure system boundaries, integration contracts, architecture decisions, and a sequenced transition plan.
+
+**Your Challenge:** Challenge 23 - Merger Integration Architecture
+
+**Duration:** 4-6 hours (Solo/Pair)
+
+---
+
+### ☁️ [Challenge 25: Enterprise API Guardrails](./challenge-25-api-guardrails-track.md)
+
+**Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
+
+**Best for:** API platform engineers, Azure platform engineers, technical leads, and developer experience engineers
+
+**Focus:** Governing OpenAPI contracts with standards, Azure API Management policies, automated checks, observability requirements, and a clear onboarding path.
+
+**Your Challenge:** Challenge 25 - Enterprise API Guardrails
 
 **Duration:** 4-6 hours (Solo/Pair)
 
@@ -425,15 +549,15 @@ Develop and ship ML models, intelligent agents, or AI-driven features.
 
 ### By Outcome
 
-**Want to ship features faster?** Challenges 0, 1, 4, 8, 9, 10, 15, 17
+**Want to ship features faster?** Challenges 0, 1, 4, 8, 9, 10, 15, 17, 27
 
 **Need to modernize legacy systems?** Challenges 11, 12, 18, 19, 20
 
-**Want to raise quality and confidence?** Challenges 1, 4, 5, 13
+**Want to raise quality and confidence?** Challenges 1, 4, 5, 13, 22, 24, 26, 27
 
-**Looking to automate delivery or ops toil?** Challenges 3, 6, 13, 14, 15, 16, 17, 20
+**Looking to automate delivery or ops toil?** Challenges 3, 6, 13, 14, 15, 16, 17, 20, 25, 26
 
-**Building cloud platform foundations?** Challenges 3, 21
+**Building cloud platform foundations?** Challenges 3, 21, 23, 24, 25
 
 **Want to build AI-powered capabilities?** Challenges 2, 6, 7, 8
 
@@ -490,8 +614,15 @@ Pick the track that matches your primary role, or choose by outcome if you want 
 | 🖥️ **Challenge 16: Ops Assistant** | ⭐⭐ | 6-8h | Instructions, Agents, Skills, Node.js | Challenge 16 |
 | 🚀 **Challenge 17: Spec-to-Ship** | ⭐⭐⭐ | 6-8h | Node.js, Agents, Skills, GitHub Actions | Challenge 17 |
 | 🏗️ **Challenge 18: COBOL Modernization** | ⭐⭐⭐ | 8-12h | COBOL, Node.js/Java, React, testing | Challenge 18 |
+| 🔧 **Challenge 19: WCF Modernization** | ⭐⭐ -- ⭐⭐⭐ | 6-10h | C#, CoreWCF, ASP.NET Core, xUnit | Challenge 19 |
 | 💻 **Challenge 20: PowerShell Automation** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | PowerShell, Pester, PSScriptAnalyzer, GitHub Actions | Challenge 20 |
 | ☁️ **Challenge 21: Azure Terraform** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | Terraform, AzureRM, Key Vault, GitHub Actions | Challenge 21 |
+| 🔍 **Challenge 22: Secure Release Review** | ⭐⭐⭐ | 4-6h | .NET 8, xUnit, application security | Challenge 22 |
+| 🧩 **Challenge 23: Merger Architecture** | ⭐⭐⭐ | 4-6h | Azure architecture, Mermaid, OpenAPI, ADRs | Challenge 23 |
+| 📊 **Challenge 24: Database Rescue** | ⭐⭐⭐ | 4-6h | SQL Server, Azure SQL, T-SQL, SQLFluff | Challenge 24 |
+| ☁️ **Challenge 25: API Guardrails** | ⭐⭐⭐ | 4-6h | OpenAPI, Azure API Management, Node.js | Challenge 25 |
+| 📋 **Challenge 26: Onboarding Repair** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | Markdown, TypeScript, Node.js | Challenge 26 |
+| 🎨 **Challenge 27: Offline Mobile** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | React Native, Expo, TypeScript, Jest | Challenge 27 |
 
 ## What Skills You'll Build
 

@@ -1,0 +1,22 @@
+{
+	"name": "Challenge 25 - Enterprise API Guardrails",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "22"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"redhat.vscode-yaml",
+				"redhat.vscode-xml"
+			]
+		}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-25-api-guardrails && cd challenges/challenge-25-api-guardrails && npm install",
+	"remoteUser": "vscode"
+}

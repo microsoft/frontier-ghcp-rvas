@@ -1,0 +1,21 @@
+id: challenge-23
+number: 23
+title: Merger Integration Architecture
+category: azure-platform
+difficulty: advanced
+duration_minutes: 300
+description: Design an Azure integration foundation that connects systems inherited through a company merger.
+focus: Mapping merger boundaries, comparing integration patterns, defining Azure contracts and decisions, and sequencing safe transition states
+tags:
+  - azure-integration
+  - solution-architecture
+  - mergers
+  - advanced
+outcomes:
+  - platform-foundation
+  - architecture-decisions
+  - migration-roadmap
+prerequisites: []
+track_url: tracks/challenge-23-merger-architecture-track.md
+contents_url: tracks/challenge-23-merger-architecture-track/stages.md
+starter_path: challenges/challenge-23-merger-architecture/

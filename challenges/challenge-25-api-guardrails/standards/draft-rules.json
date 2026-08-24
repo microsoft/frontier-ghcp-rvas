@@ -1,0 +1,36 @@
+{
+  "contractDirectories": [
+    "contracts/source"
+  ],
+  "versioning": {
+    "infoVersion": "semver",
+    "pathPrefix": "/v"
+  },
+  "naming": {
+    "operationIdPattern": "^[a-z][A-Za-z0-9]+$",
+    "propertyPattern": "^[a-z][A-Za-z0-9]*$"
+  },
+  "pagination": {
+    "approvedQueryParameters": [
+      "cursor",
+      "limit"
+    ]
+  },
+  "errors": {
+    "mediaType": "application/problem+json",
+    "requiredFields": [
+      "type",
+      "title",
+      "status"
+    ]
+  },
+  "identity": {
+    "allowedSecurityTypes": [
+      "oauth2",
+      "openIdConnect"
+    ]
+  },
+  "observability": {
+    "correlationHeader": "x-correlation-id"
+  }
+}

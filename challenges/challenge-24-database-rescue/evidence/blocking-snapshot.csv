@@ -1,0 +1,4 @@
+captured_at,session_id,blocking_session_id,wait_type,wait_ms,resource,query_id
+2026-07-15T12:02:10Z,72,61,LCK_M_S,8420,KEY: Sales.Customer,Q2
+2026-07-15T12:02:10Z,88,61,LCK_M_S,3710,KEY: Sales.Customer,Q4
+2026-07-15T12:02:15Z,72,61,LCK_M_S,13420,KEY: Sales.Customer,Q2

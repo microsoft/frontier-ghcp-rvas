@@ -50,6 +50,12 @@ $ChallengeMap = @{
     "challenge-19-wcf-banking"        = "challenge-19-wcf-banking"
     "challenge-20-powershell-automation" = "challenge-20-powershell-automation"
     "challenge-21-azure-terraform"    = "challenge-21-azure-terraform"
+    "challenge-22-secure-release"     = "challenge-22-secure-release"
+    "challenge-23-merger-architecture" = "challenge-23-merger-architecture"
+    "challenge-24-database-rescue"    = "challenge-24-database-rescue"
+    "challenge-25-api-guardrails"     = "challenge-25-api-guardrails"
+    "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding"
+    "challenge-27-offline-mobile"     = "challenge-27-offline-mobile"
 }
 
 $TrackFileMap = @{
@@ -75,6 +81,12 @@ $TrackFileMap = @{
     "challenge-19-wcf-banking"        = "challenge-19-wcf-modernization-track"
     "challenge-20-powershell-automation" = "challenge-20-powershell-automation-track"
     "challenge-21-azure-terraform"    = "challenge-21-azure-terraform-track"
+    "challenge-22-secure-release"     = "challenge-22-secure-release-track"
+    "challenge-23-merger-architecture" = "challenge-23-merger-architecture-track"
+    "challenge-24-database-rescue"    = "challenge-24-database-rescue-track"
+    "challenge-25-api-guardrails"     = "challenge-25-api-guardrails-track"
+    "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding-track"
+    "challenge-27-offline-mobile"     = "challenge-27-offline-mobile-track"
 }
 
 $TrackDirMap = @{
@@ -100,6 +112,12 @@ $TrackDirMap = @{
     "challenge-19-wcf-banking"        = "challenge-19-wcf-modernization-track"
     "challenge-20-powershell-automation" = "challenge-20-powershell-automation-track"
     "challenge-21-azure-terraform"    = "challenge-21-azure-terraform-track"
+    "challenge-22-secure-release"     = "challenge-22-secure-release-track"
+    "challenge-23-merger-architecture" = "challenge-23-merger-architecture-track"
+    "challenge-24-database-rescue"    = "challenge-24-database-rescue-track"
+    "challenge-25-api-guardrails"     = "challenge-25-api-guardrails-track"
+    "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding-track"
+    "challenge-27-offline-mobile"     = "challenge-27-offline-mobile-track"
 }
 
 # Validate input
@@ -183,7 +201,7 @@ cleaned up files from other challenges.
 Write-Host "[OK] Updated .devcontainer/README.md" -ForegroundColor Green
 
 # Remove files that are not for participants
-foreach ($RemoveFile in @("FACILITATOR_GUIDE.md", "CONTRIBUTING.md")) {
+foreach ($RemoveFile in @("CONTRIBUTING.md")) {
     $RemovePath = Join-Path $RepoRoot $RemoveFile
     if (Test-Path $RemovePath) {
         Remove-Item -Path $RemovePath -Force

@@ -1,0 +1,10 @@
+{
+  "capture_window_seconds": 300,
+  "source": "fixture from the peak-load rehearsal",
+  "waits": [
+    {"wait_type": "PAGEIOLATCH_SH", "wait_ms": 184220, "signal_wait_ms": 9240, "tasks": 4381},
+    {"wait_type": "CXPACKET", "wait_ms": 71480, "signal_wait_ms": 11930, "tasks": 2108},
+    {"wait_type": "LCK_M_S", "wait_ms": 38820, "signal_wait_ms": 1510, "tasks": 314},
+    {"wait_type": "WRITELOG", "wait_ms": 19940, "signal_wait_ms": 2180, "tasks": 1202}
+  ]
+}

@@ -1,0 +1,18 @@
+id: challenge-22
+number: 22
+title: Secure Release Review
+category: core-tracks
+difficulty: advanced
+duration_minutes: 300
+description: Review and harden a .NET release candidate with identity, payment, and admin security gaps before approving it for production.
+focus: Threat modeling, application security review, targeted remediation, security tests, and evidence-based release criteria with GitHub Copilot
+tags:
+  - secure-release
+  - application-security
+  - dotnet
+outcomes:
+  - raise-quality
+prerequisites: []
+track_url: tracks/challenge-22-secure-release-track.md
+contents_url: tracks/challenge-22-secure-release-track/stages.md
+starter_path: challenges/challenge-22-secure-release/

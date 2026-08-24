@@ -1,0 +1,30 @@
+[
+  {
+    "id": "JOB-1042",
+    "assetLabel": "Cooling unit CU-14",
+    "customerName": "Northwind Cold Storage",
+    "address": "14 Dock Road, Rotterdam",
+    "scheduledFor": "2026-08-07T08:30:00.000Z",
+    "status": "in-progress",
+    "serverVersion": 3,
+    "notes": "Intermittent compressor alarm reported overnight."
+  },
+  {
+    "id": "JOB-1048",
+    "assetLabel": "Pump station PS-08",
+    "customerName": "Contoso Waterworks",
+    "address": "8 Canal Street, Utrecht",
+    "scheduledFor": "2026-08-07T12:00:00.000Z",
+    "status": "assigned",
+    "serverVersion": 1
+  },
+  {
+    "id": "JOB-1051",
+    "assetLabel": "Generator GEN-22",
+    "customerName": "Fabrikam Distribution",
+    "address": "220 Freight Lane, Antwerp",
+    "scheduledFor": "2026-08-07T15:30:00.000Z",
+    "status": "assigned",
+    "serverVersion": 2
+  }
+]

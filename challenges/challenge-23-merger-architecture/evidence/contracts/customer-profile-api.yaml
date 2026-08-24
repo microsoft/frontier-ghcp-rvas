@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: Linked Customer Profile Query
+  version: 0.1.0
+  description: Evidence-only draft from an abandoned pilot. It is not an approved target contract.
+paths:
+  /linked-customers/{linkId}:
+    get:
+      operationId: getLinkedCustomer
+      parameters:
+        - name: linkId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: correlation-id
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A linked view with source and freshness information
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LinkedCustomer"
+        "404":
+          description: No approved link exists
+        "503":
+          description: One or more required sources are unavailable
+components:
+  schemas:
+    LinkedCustomer:
+      type: object
+      required:
+        - linkId
+        - identities
+        - sources
+      properties:
+        linkId:
+          type: string
+        identities:
+          type: array
+          items:
+            $ref: "#/components/schemas/SourceIdentity"
+        displayName:
+          type: string
+        email:
+          type: string
+          format: email
+        sources:
+          type: array
+          items:
+            type: string
+        asOf:
+          type: string
+          format: date-time
+    SourceIdentity:
+      type: object
+      required:
+        - source
+        - sourceId
+        - identityType
+      properties:
+        source:
+          type: string
+          enum: [HPC-CRM, NMN-BUY, NMN-ID]
+        sourceId:
+          type: string
+        identityType:
+          type: string
+          enum: [retail-customer, marketplace-buyer, seller-workforce]
+        matchConfidence:
+          type: number
+          minimum: 0
+          maximum: 1

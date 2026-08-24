@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShowPlanXML xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan" Version="1.617">
+  <BatchSequence>
+    <Batch>
+      <Statements>
+        <StmtSimple StatementText="Q3 product hot list" StatementSubTreeCost="29.47">
+          <QueryPlan CachedPlanSize="56" CompileTime="11" CompileCPU="10">
+            <RelOp NodeId="0" PhysicalOp="Hash Match" LogicalOp="Aggregate" EstimateRows="25">
+              <MemoryGrantInfo SerialRequiredMemory="2048" SerialDesiredMemory="131072" GrantedMemory="32768" MaxUsedMemory="32768" />
+              <Warnings>
+                <HashSpillDetails GrantedMemoryKb="32768" UsedMemoryKb="32768" WritesToTempDb="612" ReadsFromTempDb="612" />
+              </Warnings>
+              <RelOp NodeId="1" PhysicalOp="Clustered Index Scan" LogicalOp="Clustered Index Scan" EstimateRows="300000" />
+            </RelOp>
+          </QueryPlan>
+        </StmtSimple>
+      </Statements>
+    </Batch>
+  </BatchSequence>
+</ShowPlanXML>

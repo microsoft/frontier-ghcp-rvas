@@ -1,0 +1,18 @@
+{
+	"name": "Challenge 27 - Offline Field Service App",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"expo.vscode-expo-tools"
+			]
+		}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-27-offline-mobile && npm --prefix challenges/challenge-27-offline-mobile install",
+	"remoteUser": "node"
+}

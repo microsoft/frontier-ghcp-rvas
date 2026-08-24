@@ -1,0 +1,17 @@
+{
+  "service": "field-service-functions",
+  "version": "2026-08-01",
+  "operations": {
+    "listJobs": {
+      "method": "GET",
+      "path": "/api/jobs",
+      "successStatus": 200
+    },
+    "syncAction": {
+      "method": "POST",
+      "path": "/api/sync/actions",
+      "successStatus": 200,
+      "conflictStatus": 409
+    }
+  }
+}

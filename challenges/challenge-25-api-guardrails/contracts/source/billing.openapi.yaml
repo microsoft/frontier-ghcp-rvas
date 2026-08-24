@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: Billing Service
+  version: beta
+servers:
+  - url: http://localhost:4103/api
+paths:
+  /invoices:
+    get:
+      summary: Fetch invoices
+      parameters:
+        - name: nextToken
+          in: query
+          schema:
+            type: string
+        - name: maxResults
+          in: query
+          schema:
+            type: integer
+            default: 25
+      responses:
+        "200":
+          description: Invoice result
+          headers:
+            X-Request-ID:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Invoices:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Invoice"
+                  NextToken:
+                    type: string
+        "500":
+          description: Unexpected failure
+          content:
+            text/plain:
+              schema:
+                type: string
+components:
+  schemas:
+    Invoice:
+      type: object
+      properties:
+        InvoiceNumber:
+          type: string
+        AccountID:
+          type: string
+        AmountDue:
+          type: number
+          format: double

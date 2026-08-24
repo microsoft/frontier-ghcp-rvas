@@ -1,0 +1,2 @@
+-- Add evidence-backed indexes here.
+-- State the expected read benefit and write or storage cost in comments.

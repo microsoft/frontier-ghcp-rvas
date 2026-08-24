@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShowPlanXML xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan" Version="1.617">
+  <BatchSequence>
+    <Batch>
+      <Statements>
+        <StmtSimple StatementText="Q1 recent orders by customer email" StatementSubTreeCost="18.44">
+          <QueryPlan CachedPlanSize="48" CompileTime="9" CompileCPU="8">
+            <RelOp NodeId="0" PhysicalOp="Sort" LogicalOp="Sort" EstimateRows="200">
+              <Warnings>
+                <SpillToTempDb SpillLevel="1" SpilledThreadCount="2" />
+              </Warnings>
+              <RelOp NodeId="1" PhysicalOp="Clustered Index Scan" LogicalOp="Clustered Index Scan" EstimateRows="16800" />
+            </RelOp>
+          </QueryPlan>
+        </StmtSimple>
+      </Statements>
+    </Batch>
+  </BatchSequence>
+</ShowPlanXML>

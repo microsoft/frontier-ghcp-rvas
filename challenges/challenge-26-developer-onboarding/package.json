@@ -1,0 +1,21 @@
+{
+  "name": "launchpad-developer-tools",
+  "version": "2.3.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "launchpad": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build --silent && node --test dist/test/*.test.js",
+    "launchpad": "node dist/src/cli.js",
+    "docs:links": "node scripts/check-links.mjs",
+    "docs:examples": "npm run build --silent && node scripts/check-examples.mjs",
+    "docs:check": "npm run docs:links && npm run docs:examples"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

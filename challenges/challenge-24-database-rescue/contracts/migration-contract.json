@@ -1,0 +1,34 @@
+{
+  "change_id": "customer-email-address-v2",
+  "target": "Sales.Customer",
+  "current_column": {
+    "name": "Email",
+    "type": "nvarchar(320)",
+    "nullable": false
+  },
+  "new_column": {
+    "name": "EmailAddress",
+    "type": "nvarchar(320)",
+    "eventual_nullable": false
+  },
+  "compatibility_window": {
+    "minimum_minutes": 60,
+    "old_readers_use": "Email",
+    "old_writers_use": "Email",
+    "new_readers_use": "EmailAddress",
+    "new_writers_use": "EmailAddress"
+  },
+  "required_properties": [
+    "The expand step is safe to rerun and does not remove or rename Email.",
+    "Old and new writers remain usable throughout the compatibility window.",
+    "Backfill runs in bounded batches and can resume after interruption.",
+    "Reconciliation detects nulls, mismatches, and duplicate normalized values.",
+    "The contract step is separate, online-compatible, and blocked until reconciliation passes.",
+    "Rollback restores the prior write path without discarding accepted writes."
+  ],
+  "azure_sql_notes": [
+    "Do not rely on SQL Server Agent.",
+    "Keep transactions short enough for an Azure SQL deployment window.",
+    "State any edition or service-tier assumptions for online index operations."
+  ]
+}
