@@ -4,7 +4,7 @@
     {
       "id": "core-developer-journey",
       "name": "Core Developer Path",
-      "description": "Ship features, build platform foundations, and integrate AI capabilities with Copilot.",
+      "description": "Start with product planning, then work through APIs, AI, delivery, and frontend development.",
       "challenge_ids": [
         "challenge-0",
         "challenge-1",
@@ -16,7 +16,7 @@
     {
       "id": "full-stack-mastery",
       "name": "Full-Stack Product Delivery",
-      "description": "Ship production-ready features across the stack with quality assurance.",
+      "description": "Build a feature from the API to the interface, then test it the way a real user would.",
       "challenge_ids": [
         "challenge-1",
         "challenge-4",
@@ -28,7 +28,7 @@
     {
       "id": "legacy-modernization",
       "name": "Legacy System Modernization",
-      "description": "Modernize MUMPS, COBOL, and WCF banking systems to modern platforms.",
+      "description": "Read unfamiliar MUMPS, COBOL, and WCF systems, protect their behavior with tests, and replace them safely.",
       "challenge_ids": [
         "challenge-11",
         "challenge-12",
@@ -39,7 +39,7 @@
     {
       "id": "automation-excellence",
       "name": "Delivery and Operations Automation",
-      "description": "Automate delivery pipelines and eliminate manual operations toil.",
+      "description": "Replace repetitive delivery and operations work with tools your team can maintain.",
       "challenge_ids": [
         "challenge-13",
         "challenge-14",
@@ -52,7 +52,7 @@
     {
       "id": "team-collaboration",
       "name": "Cross-Functional Product Delivery",
-      "description": "Ship features end-to-end with every role collaborating through Copilot.",
+      "description": "Plan and ship one feature with product and engineering roles working together.",
       "challenge_ids": [
         "challenge-0",
         "challenge-9",
@@ -62,7 +62,7 @@
     {
       "id": "ai-ml-path",
       "name": "AI and ML Capabilities",
-      "description": "Build and ship AI-powered features, models, and agentic workflows.",
+      "description": "Work with data, train a model, and build software that uses AI where it earns its place.",
       "challenge_ids": [
         "challenge-2",
         "challenge-6",
@@ -72,7 +72,7 @@
     {
       "id": "azure-infrastructure",
       "name": "Azure Platform Engineering",
-      "description": "Build and automate Azure infrastructure foundations with repeatable patterns.",
+      "description": "Create Azure infrastructure your team can deploy again, review, and operate without guesswork.",
       "challenge_ids": [
         "challenge-3",
         "challenge-20",
@@ -83,7 +83,7 @@
     {
       "id": "advanced-workflows",
       "name": "AI-Driven Development Acceleration",
-      "description": "Build agentic workflows and compress the delivery lifecycle with AI assistance.",
+      "description": "Use agents and the Copilot SDK to shorten the path from a written requirement to working software.",
       "challenge_ids": [
         "challenge-6",
         "challenge-7",
@@ -93,7 +93,7 @@
     {
       "id": "secure-software-delivery",
       "name": "Secure Software Delivery",
-      "description": "Review release risk, turn findings into regression evidence, and automate repeatable security checks.",
+      "description": "Find release risks, fix the ones that matter, and add tests that keep them from coming back.",
       "challenge_ids": [
         "challenge-5",
         "challenge-22",
@@ -103,7 +103,7 @@
     {
       "id": "enterprise-architecture-api-platforms",
       "name": "Enterprise Architecture and API Platforms",
-      "description": "Define enterprise boundaries, govern shared APIs, and build the Azure platform foundations that support them.",
+      "description": "Make the architecture decisions behind shared APIs, then support them with clear Azure platform controls.",
       "challenge_ids": [
         "challenge-23",
         "challenge-25",

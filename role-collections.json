@@ -4,7 +4,7 @@
     {
       "id": "product-business",
       "name": "Product and Business",
-      "description": "Plan products, shape requirements, manage backlogs, and coordinate delivery across stakeholders.",
+      "description": "Turn a rough idea into work a team can understand, estimate, and ship.",
       "challenge_ids": [
         "challenge-0",
         "challenge-9",
@@ -15,7 +15,7 @@
     {
       "id": "frontend",
       "name": "Frontend Developer",
-      "description": "Build accessible user interfaces, connect them to services, and contribute to full product delivery.",
+      "description": "Build interfaces people can use and connect them to the services behind the product.",
       "challenge_ids": [
         "challenge-4",
         "challenge-8",
@@ -28,7 +28,7 @@
     {
       "id": "backend",
       "name": "Backend and API Developer",
-      "description": "Build services, APIs, integrations, and modern replacements for existing backend systems.",
+      "description": "Build APIs and integrations, or replace a backend that has outlived its original design.",
       "challenge_ids": [
         "challenge-1",
         "challenge-7",
@@ -49,7 +49,7 @@
     {
       "id": "full-stack",
       "name": "Full-stack Developer",
-      "description": "Work across user interfaces, services, infrastructure, and end-to-end feature delivery.",
+      "description": "Take a feature from the interface through the service layer and into a working environment.",
       "challenge_ids": [
         "challenge-1",
         "challenge-4",
@@ -65,7 +65,7 @@
     {
       "id": "data-ai-ml",
       "name": "Data, AI, and ML Practitioner",
-      "description": "Explore data, build models, and create AI-powered applications and automated workflows.",
+      "description": "Work with data and models, then put them inside software that solves a clear problem.",
       "challenge_ids": [
         "challenge-2",
         "challenge-6",
@@ -76,7 +76,7 @@
     {
       "id": "qa-testing",
       "name": "QA and Testing",
-      "description": "Improve test coverage, quality gates, accessibility, and confidence during modernization and delivery.",
+      "description": "Find the weak spots in a release and add checks that catch them before users do.",
       "challenge_ids": [
         "challenge-5",
         "challenge-9",
@@ -92,7 +92,7 @@
     {
       "id": "devops-platform",
       "name": "DevOps, Platform, SRE, and Cloud",
-      "description": "Automate delivery, operate reliable platforms, and build repeatable Azure infrastructure foundations.",
+      "description": "Build Azure environments that can be deployed repeatedly and operated without constant manual repair.",
       "challenge_ids": [
         "challenge-3",
         "challenge-6",
@@ -112,7 +112,7 @@
     {
       "id": "it-operations",
       "name": "Sysadmin, IT Operations, and Support",
-      "description": "Automate administration, investigate incidents, and improve day-to-day operational support.",
+      "description": "Automate routine administration and give support teams better tools for incident work.",
       "challenge_ids": [
         "challenge-3",
         "challenge-14",
@@ -125,7 +125,7 @@
     {
       "id": "tech-lead-architect",
       "name": "Tech Lead and Architect",
-      "description": "Guide technical decisions, modernization, documentation, platform design, and end-to-end delivery.",
+      "description": "Make the technical decisions that keep a modernization or delivery effort moving in one direction.",
       "challenge_ids": [
         "challenge-6",
         "challenge-7",
@@ -149,7 +149,7 @@
     {
       "id": "security",
       "name": "Security",
-      "description": "Review application and platform risks, strengthen delivery controls, and build evidence for secure release decisions.",
+      "description": "Review real release risks and produce enough evidence to approve, fix, or stop the release.",
       "challenge_ids": [
         "challenge-5",
         "challenge-6",
@@ -163,7 +163,7 @@
     {
       "id": "database-engineering",
       "name": "Database Engineering",
-      "description": "Design, tune, migrate, and operate data stores behind APIs, modernized systems, and Azure platforms.",
+      "description": "Fix slow workloads and move data safely as applications and Azure environments change around them.",
       "challenge_ids": [
         "challenge-1",
         "challenge-12",
@@ -176,7 +176,7 @@
     {
       "id": "documentation-enablement",
       "name": "Documentation and Enablement",
-      "description": "Turn product, architecture, and delivery knowledge into accurate guidance that helps teams complete real tasks.",
+      "description": "Write guidance that a new team member can follow without asking what the author meant.",
       "challenge_ids": [
         "challenge-0",
         "challenge-13",
@@ -188,7 +188,7 @@
     {
       "id": "mobile-development",
       "name": "Mobile Development",
-      "description": "Build and test dependable user journeys across mobile interfaces, services, and intermittent connectivity.",
+      "description": "Build mobile workflows that still make sense when the network disappears halfway through a job.",
       "challenge_ids": [
         "challenge-4",
         "challenge-8",

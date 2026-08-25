@@ -24,7 +24,7 @@
     const challengeId = FP.qp('id');
     const requestedPageId = FP.qp('page') || 'overview';
     if (!challengeId) {
-      showError('No challenge ID specified in the URL. Please provide a valid challenge ID using ?id=challenge-X');
+      showError('This link does not include a challenge ID. Open a challenge from the catalog or add ?id=challenge-X to the URL.');
       return;
     }
 
@@ -34,14 +34,14 @@
     try {
       data = await FP.loadData();
     } catch (e) {
-      showError('Failed to load platform data: ' + e.message);
+      showError('The challenge catalog could not be loaded: ' + e.message);
       return;
     }
 
     const challenge = (data.challenges || []).find((c) => c.id === challengeId);
     if (!challenge) {
       showError(
-        'Challenge "' + challengeId + '" not found. <a href="catalog.html">Browse all challenges</a> to find what you are looking for.'
+        'We could not find "' + challengeId + '". <a href="catalog.html">Browse the catalog</a> to choose another challenge.'
       );
       return;
     }
@@ -60,7 +60,7 @@
     if (!selectedPage) {
       renderPageError(
         'Page not found',
-        'The page "' + requestedPageId + '" is not part of this challenge. Choose a page from the challenge pages menu.'
+        '"' + requestedPageId + '" is not part of this challenge. Choose another page from the menu.'
       );
       return;
     }
@@ -265,7 +265,7 @@
     if (!body) return;
 
     if (!page.content_url) {
-      renderPageError('Page unavailable', 'This page does not have a published content URL.');
+      renderPageError('Page unavailable', 'There is no published content for this page.');
       return;
     }
 

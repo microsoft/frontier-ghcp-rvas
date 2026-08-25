@@ -29,27 +29,27 @@ const path = require('path');
 const CATEGORY_CONFIG = {
   'core-tracks': {
     name: 'Core Tracks',
-    description: 'Foundational GitHub Enterprise and Copilot skills -- API development, machine learning, DevOps, and frontend engineering.',
+    description: 'Practice the day-to-day work behind APIs, frontend applications, machine learning, and DevOps with GitHub Copilot.',
     color: '#0078d4'
   },
   'team-sprints': {
     name: 'Team Sprints',
-    description: 'Multi-role sprint challenges -- product management, business analysis, development, QA, and DevOps working together.',
+    description: 'Bring several roles together to plan, build, test, and ship one product as a team.',
     color: '#14868a'
   },
   'legacy-modernization': {
     name: 'Legacy Modernization',
-    description: 'Migrate MUMPS, COBOL, and WCF systems to modern platforms with GitHub Copilot assistance.',
+    description: 'Understand an unfamiliar MUMPS, COBOL, or WCF system before rebuilding it on a modern platform.',
     color: '#504092'
   },
   'workflow-automation': {
     name: 'Workflow Automation',
-    description: 'Build AI-powered automation for documentation, pipelines, backlog generation, ops assistance, and end-to-end delivery.',
+    description: 'Use Copilot to remove repetitive work from pipelines, operations, planning, and documentation.',
     color: '#1a77e3'
   },
   'azure-platform': {
     name: 'Azure Platform',
-    description: 'Azure infrastructure and deployment automation with Terraform, PowerShell, and GitHub Actions.',
+    description: 'Build and operate Azure infrastructure with Terraform, PowerShell, and GitHub Actions.',
     color: '#032254'
   }
 };

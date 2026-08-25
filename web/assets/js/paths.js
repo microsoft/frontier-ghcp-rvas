@@ -66,9 +66,9 @@
             <ol class="challenge-list">${chList}</ol>
           </div>
           <div class="path-share" id="${shareId}">
-            <button class="btn btn-sm btn-ghost" type="button" data-action="show">Share with students</button>
+            <button class="btn btn-sm btn-ghost" type="button" data-action="show">Share this path</button>
             <div class="share-controls" style="display:none">
-              <label for="${inputId}" class="sr-only">Student link</label>
+              <label for="${inputId}" class="sr-only">Path link</label>
               <input type="text" id="${inputId}" class="share-input" value="${FP.esc(absUrl)}" readonly />
               <button class="btn btn-sm btn-ghost" type="button" data-action="copy">Copy</button>
               <a class="btn btn-sm btn-primary" href="${setUrl}" target="_blank">Open</a>
