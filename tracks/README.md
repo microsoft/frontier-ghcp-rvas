@@ -2,7 +2,7 @@
 
 Pick a challenge track that matches the work you want to deliver, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a session on your own app or repository. Each track drives a specific business outcome -- the root README explains the full approach.
 
-The **28 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
+The **29 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
 Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages and role pages.
 
@@ -20,7 +20,8 @@ team boundaries.
 - **Product and Business:** [0](./challenge-0-product-planning-track.md),
   [9](./challenge-9-team-sprint-track.md),
   [15](./challenge-15-backlog-generator-track.md),
-  [17](./challenge-17-spec-to-ship-track.md)
+  [17](./challenge-17-spec-to-ship-track.md),
+  [28](./challenge-28-work-iq-workplace-assistant-track.md)
 - **Frontend Developer:** [4](./challenge-4-frontend-track.md),
   [8](./challenge-8-flight-delay-track.md),
   [9](./challenge-9-team-sprint-track.md),
@@ -99,7 +100,8 @@ team boundaries.
   [23](./challenge-23-merger-architecture-track.md),
   [24](./challenge-24-database-rescue-track.md),
   [25](./challenge-25-api-guardrails-track.md),
-  [26](./challenge-26-developer-onboarding-track.md)
+  [26](./challenge-26-developer-onboarding-track.md),
+  [28](./challenge-28-work-iq-workplace-assistant-track.md)
 - **Security:** [5](./challenge-5-qa-track.md),
   [6](./challenge-6-agentic-workflows-track.md),
   [12](./challenge-12-legacy-modernization-track.md),
@@ -118,7 +120,8 @@ team boundaries.
   [13](./challenge-13-living-docs-track.md),
   [15](./challenge-15-backlog-generator-track.md),
   [17](./challenge-17-spec-to-ship-track.md),
-  [26](./challenge-26-developer-onboarding-track.md)
+  [26](./challenge-26-developer-onboarding-track.md),
+  [28](./challenge-28-work-iq-workplace-assistant-track.md)
 - **Mobile Development:** [4](./challenge-4-frontend-track.md),
   [8](./challenge-8-flight-delay-track.md),
   [9](./challenge-9-team-sprint-track.md),
@@ -254,6 +257,20 @@ Move from requirements to working, demoable software across the stack.
 **Focus:** Making a React Native inspection workflow survive restarts, network failures, permission denial, and synchronization conflicts while keeping core tests runnable in Node.
 
 **Your Challenge:** Challenge 27 - Offline Field Service App
+
+**Duration:** 4-6 hours (Solo/Pair)
+
+---
+
+### 📋 [Challenge 28: Work IQ Workplace Assistant](./challenge-28-work-iq-workplace-assistant-track.md)
+
+**Outcomes:** Automate Delivery and Ops Toil, Ship Product Features Faster
+
+**Best for:** Delivery leads, technical leads, developers, and information governance partners who need a reviewed view of active project work
+
+**Focus:** Retrieving approved Microsoft 365 context with Microsoft Work IQ, turning it into an evidence-backed action register, and requiring human approval before any write action.
+
+**Your Challenge:** Challenge 28 - Work IQ Workplace Assistant
 
 **Duration:** 4-6 hours (Solo/Pair)
 
@@ -623,6 +640,7 @@ Pick the track that matches your primary role, or choose by outcome if you want 
 | ☁️ **Challenge 25: API Guardrails** | ⭐⭐⭐ | 4-6h | OpenAPI, Azure API Management, Node.js | Challenge 25 |
 | 📋 **Challenge 26: Onboarding Repair** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | Markdown, TypeScript, Node.js | Challenge 26 |
 | 🎨 **Challenge 27: Offline Mobile** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | React Native, Expo, TypeScript, Jest | Challenge 27 |
+| 📋 **Challenge 28: Work IQ Workplace Assistant** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | Work IQ, Copilot CLI, Microsoft Entra ID, Microsoft 365 | Challenge 28 |
 
 ## What Skills You'll Build
 

@@ -2,7 +2,7 @@
 
 ![GitHub Copilot Adoption banner](docs/images/rvas-banner.jpg)
 
-GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **28 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
+GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **29 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
 
 Each session includes repository instructions, custom agents, and custom skills
 tailored to the work.
@@ -11,7 +11,7 @@ tailored to the work.
 
 ### Option 1: Pick a Worked-Example Challenge
 
-Choose one of the **28 challenge tracks** below. Each challenge maps to a specific business outcome and provides starter code, a devcontainer, and a progression path through real work. Use these to learn outcome-driven AI-assisted development patterns you can apply to your own work.
+Choose one of the **29 challenge tracks** below. Each challenge maps to a specific business outcome and provides starter code, a devcontainer, and a progression path through real work. Use these to learn outcome-driven AI-assisted development patterns you can apply to your own work.
 
 ### Option 2: Bring Your Own Challenge
 
@@ -21,7 +21,7 @@ See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
 ## Overview
 
-The repository includes **28 challenge tracks** organized by the outcomes they help you deliver:
+The repository includes **29 challenge tracks** organized by the outcomes they help you deliver:
 
 ### Challenges by Outcome
 
@@ -55,6 +55,7 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 - ☁️ **[Challenge 25: Enterprise API Guardrails](./tracks/challenge-25-api-guardrails-track.md)** - Govern APIs with Azure API Management policies, contract checks, and onboarding controls | **Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
 - 📋 **[Challenge 26: Developer Onboarding Repair](./tracks/challenge-26-developer-onboarding-track.md)** - Repair task documentation and add checks for links, commands, and examples | **Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
 - 🎨 **[Challenge 27: Offline Field Service App](./tracks/challenge-27-offline-mobile-track.md)** - Build a dependable React Native workflow for intermittent connectivity | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
+- 📋 **[Challenge 28: Work IQ Workplace Assistant](./tracks/challenge-28-work-iq-workplace-assistant-track.md)** - Build a permission-aware workplace handoff using Microsoft Work IQ and GitHub Copilot CLI | **Outcomes:** Automate Delivery and Ops Toil, Ship Product Features Faster
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -261,7 +262,7 @@ As you work through these challenges, you'll build proficiency with GitHub Copil
 
 **Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
-All 28 challenges are available, and each track has a dedicated challenge:
+All 29 challenges are available, and each track has a dedicated challenge:
 
 ### [Challenge 0: Product Planning -- TaskFlow v2.0](./challenges/challenge-0-product-planning/) ([Track](./tracks/challenge-0-product-planning-track.md))
 
@@ -556,6 +557,17 @@ Repair fragmented onboarding for a working CLI and SDK. Test real reader journey
 **Copilot Focus**: State-flow tracing, failure analysis, mobile accessibility, release evidence
 
 Make a React Native field-service workflow dependable when connectivity and device permissions fail. Preserve technician work across restarts, define conflict behavior, test degraded modes, and verify the mocked Azure Functions synchronization contract.
+
+---
+
+### [Challenge 28: Work IQ Workplace Assistant](./challenges/challenge-28-work-iq-workplace-assistant/) ([Track](./tracks/challenge-28-work-iq-workplace-assistant-track.md))
+
+**Team**: Delivery leads, technical leads, developers, information governance partners
+**Duration**: 4-6 hours
+**Skills**: Microsoft Work IQ, GitHub Copilot CLI, Microsoft Entra ID, Microsoft 365, evidence review
+**Copilot Focus**: Permission-aware retrieval, evidence mapping, handoff drafting, human approval gates
+
+Build a reviewed project handoff from approved Microsoft 365 context. Retrieve a narrow set of meetings, messages, emails, or documents, create an evidence-backed action register, and keep all write actions behind human approval.
 
 ---
 

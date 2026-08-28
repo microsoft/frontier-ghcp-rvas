@@ -1,0 +1,19 @@
+{
+	"name": "Challenge 28 - Work IQ Workplace Assistant",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"DavidAnson.vscode-markdownlint",
+				"yzhang.markdown-all-in-one"
+			]
+		}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-28-work-iq-workplace-assistant",
+	"remoteUser": "node"
+}

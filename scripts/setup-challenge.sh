@@ -64,6 +64,7 @@ declare -A CHALLENGE_MAP=(
   [challenge-25-api-guardrails]="challenge-25-api-guardrails"
   [challenge-26-developer-onboarding]="challenge-26-developer-onboarding"
   [challenge-27-offline-mobile]="challenge-27-offline-mobile"
+  [challenge-28-work-iq-workplace-assistant]="challenge-28-work-iq-workplace-assistant"
 )
 
 declare -A TRACK_FILE_MAP=(
@@ -95,6 +96,7 @@ declare -A TRACK_FILE_MAP=(
   [challenge-25-api-guardrails]="challenge-25-api-guardrails-track"
   [challenge-26-developer-onboarding]="challenge-26-developer-onboarding-track"
   [challenge-27-offline-mobile]="challenge-27-offline-mobile-track"
+  [challenge-28-work-iq-workplace-assistant]="challenge-28-work-iq-workplace-assistant-track"
 )
 
 declare -A TRACK_DIR_MAP=(
@@ -126,6 +128,7 @@ declare -A TRACK_DIR_MAP=(
   [challenge-25-api-guardrails]="challenge-25-api-guardrails-track"
   [challenge-26-developer-onboarding]="challenge-26-developer-onboarding-track"
   [challenge-27-offline-mobile]="challenge-27-offline-mobile-track"
+  [challenge-28-work-iq-workplace-assistant]="challenge-28-work-iq-workplace-assistant-track"
 )
 
 # ── Validate input ──────────────────────────────────────────────────
