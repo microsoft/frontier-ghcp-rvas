@@ -1,5 +1,7 @@
 ---
 emoji: "🔧"
+engine: copilot
+model: gpt-5-mini
 timeout-minutes: 5
 strict: true
 on:
@@ -21,7 +23,7 @@ safe-outputs:
   noop:
     report-as-issue: false
   add-labels:
-    allowed: [bug, feature, enhancement, documentation, question, help-wanted, good-first-issue]
+    allowed: [bug, feature, enhancement, documentation, question, help-wanted, good-first-issue, community]
   add-comment: {}
 imports:
   - shared/github-guard-policy.md
