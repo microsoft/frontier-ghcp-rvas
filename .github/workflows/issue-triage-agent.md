@@ -5,7 +5,8 @@ model: gpt-5-mini
 timeout-minutes: 5
 strict: true
 on:
-  schedule: "daily around 14:00 on weekdays"  # ~2 PM UTC, weekdays only
+  schedule:
+    - cron: "45 13 * * 1-5"  # 13:45 UTC, weekdays only
   workflow_dispatch:
 permissions:
   issues: read
@@ -41,6 +42,7 @@ Skip issues that:
 After adding the label to an issue, mention the issue author in a comment using this format (follow shared/reporting.md guidelines):
 
 **Comment Template**:
+
 ```markdown
 ### 🏷️ Issue Triaged
 
