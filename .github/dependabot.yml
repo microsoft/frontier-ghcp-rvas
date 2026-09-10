@@ -2,6 +2,10 @@ version: 2
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
+    # The gh-aw compiler updates these runtime actions with its generated workflows.
+    ignore:
+      - dependency-name: "github/gh-aw-actions/*"
+      - dependency-name: "github/gh-aw/actions/*"
     groups:
       github-actions:
         patterns: ["*"]
