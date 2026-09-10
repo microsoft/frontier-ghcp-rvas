@@ -1,0 +1,106 @@
+:root {
+    --paper: #f3f0e8;
+    --card: #fffdf7;
+    --ink: #252c27;
+    --muted: #596158;
+    --rule: #c5c9ba;
+    --olive: #43533a;
+    --orange: #b0441c;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Trebuchet MS", sans-serif; line-height: 1.55; }
+a { color: inherit; text-underline-offset: .22em; }
+button, input, select { font: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+.demo-banner { display: flex; justify-content: center; gap: 1.5rem; padding: .6rem 1.5rem; background: var(--ink); color: var(--paper); font-size: .78rem; flex-wrap: wrap; }
+.demo-banner strong, .eyebrow, .asset-id, .section-label > span, .wordmark small, footer { font-family: "Courier New", monospace; }
+.demo-banner strong { letter-spacing: .07em; }
+.site-header { max-width: 1320px; margin: auto; padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; border-bottom: 1px solid var(--rule); }
+.wordmark { display: flex; align-items: center; gap: .9rem; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+.wordmark small { display: block; font-size: .62rem; letter-spacing: .06em; font-weight: normal; margin-top: .2rem; }
+.brand-mark { display: grid; place-items: center; background: var(--orange); color: white; width: 45px; height: 45px; font-family: Georgia, serif; font-size: 1.3rem; }
+nav { display: flex; gap: 1.7rem; flex-wrap: wrap; }
+nav a { text-decoration: none; padding: .5rem 0; font-size: .9rem; border-bottom: 2px solid transparent; }
+nav a:hover, nav a[aria-current="page"] { border-color: var(--orange); }
+main { max-width: 1320px; margin: auto; padding: 0 3rem 4rem; min-height: 70vh; }
+.page-heading { display: flex; justify-content: space-between; align-items: end; gap: 3rem; padding: 3.5rem 0 3rem; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; color: var(--olive); margin: 0 0 1rem; font-weight: bold; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font: normal clamp(2.7rem, 4.7vw, 4.4rem)/1.08 Georgia, "Times New Roman", serif; letter-spacing: -.04em; margin-bottom: 0; }
+h2 { font: normal 1.6rem/1.25 Georgia, "Times New Roman", serif; margin-bottom: .7rem; }
+h3 { font: normal 1.8rem/1.2 Georgia, "Times New Roman", serif; margin-bottom: .6rem; }
+.intro { max-width: 320px; color: var(--muted); margin-bottom: .2rem; }
+.compact { padding-bottom: 2.5rem; }
+.date-panel { display: flex; justify-content: space-between; align-items: center; gap: 2rem; background: #e4e7dc; border-top: 3px solid var(--olive); padding: 1.8rem; }
+.date-panel p, .booking-form-panel > p { color: var(--muted); font-size: .87rem; margin: 0; }
+.date-form { display: flex; align-items: end; gap: 1rem; flex-wrap: wrap; }
+.field { display: flex; flex-direction: column; gap: .35rem; }
+label { font-weight: bold; font-size: .84rem; }
+input, select { min-height: 46px; padding: .6rem .7rem; border: 1px solid #818b7c; border-radius: 0; background: var(--card); color: var(--ink); min-width: 0; max-width: 100%; }
+button, .button { display: inline-block; border: 1px solid var(--olive); border-radius: 0; padding: .7rem 1.05rem; background: var(--olive); color: white; text-decoration: none; font-size: .86rem; font-weight: bold; cursor: pointer; min-height: 46px; text-align: center; }
+button:hover, .button:hover { background: #2d3c26; }
+.secondary { background: transparent; color: var(--ink); border-color: #929b8a; }
+.secondary:hover { background: #e4e7dc; }
+.section-label { display: flex; justify-content: space-between; align-items: center; margin: 2rem 0 1rem; gap: 1rem; }
+.section-label h2 { margin: 0; }
+.section-label > span { font-size: .67rem; color: var(--muted); letter-spacing: .03em; }
+.equipment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.equipment-card { padding: 1.6rem; background: var(--card); border: 1px solid var(--rule); border-top: 4px solid var(--ink); }
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: .75rem; color: var(--muted); margin-bottom: 1.5rem; }
+.asset-id { letter-spacing: .04em; }
+.location { font-size: .85rem; color: var(--muted); }
+.card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--rule); padding-top: 1.1rem; margin-top: 1.7rem; min-height: 64px; }
+.status { display: inline-block; font-size: .74rem; font-weight: bold; padding: .25rem .55rem; }
+.available { color: #314a25; background: #e3ebdd; }
+.unavailable { color: #813514; background: #f7e5d8; }
+.neutral { color: #535951; background: #eaece7; }
+.text-link { font-size: .8rem; white-space: nowrap; }
+.booking-layout { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; gap: 3rem; align-items: start; }
+.booking-form-panel { padding: 1.7rem; background: #e4e7dc; border-top: 3px solid var(--olive); }
+.booking-form-panel form { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.booking-layout .section-label { margin-top: 0; }
+.reservation-card { background: var(--card); padding: 1.5rem; border: 1px solid var(--rule); margin-bottom: 1rem; }
+.reservation-card .card-top { margin-bottom: 1rem; }
+.reservation-card h3 { font-size: 1.5rem; }
+.reservation-card p { font-size: .88rem; color: var(--muted); margin-bottom: 1rem; }
+.date-pair { display: flex; flex-wrap: wrap; gap: 1rem 3rem; margin: 0 0 1rem; }
+dt { font-size: .72rem; color: var(--muted); }
+dd { margin: .2rem 0 0; font-family: "Courier New", monospace; font-weight: bold; }
+.notice { border-left: 4px solid var(--olive); padding: 1rem 1.3rem; background: #e4ebdd; margin: 1.5rem 0; }
+.errors:not(.validation-summary-valid) { color: #83260d; border-left: 4px solid #ac3b18; background: #fbe7df; padding: 1rem; margin: 1.5rem 0; }
+.errors ul { margin: 0; padding-left: 1.4rem; }
+.validation-summary-valid { display: none; }
+.maintenance-row { display: grid; grid-template-columns: 75px 1fr auto auto; align-items: center; gap: 1.5rem; padding: 1.7rem 0; border-bottom: 1px solid var(--rule); }
+.maintenance-row h2 { font-size: 1.45rem; margin-bottom: .3rem; }
+.maintenance-row p { font-size: .8rem; color: var(--muted); margin: 0; }
+.empty-state { padding: 2rem; border: 1px dashed var(--rule); }
+footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; max-width: 1224px; margin: auto; border-top: 1px solid var(--rule); padding: 1.5rem 0 2rem; font-size: .68rem; color: var(--muted); }
+.skip-link { position: absolute; top: -100px; left: 1rem; background: white; padding: .75rem; z-index: 2; }
+.skip-link:focus { top: .5rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 1000px) {
+    .site-header { align-items: start; flex-direction: column; gap: 1rem; }
+    .date-panel { align-items: start; flex-direction: column; }
+    .maintenance-row { grid-template-columns: 70px 1fr; }
+    .equipment-card { padding: 1.2rem; }
+    .card-bottom { align-items: start; flex-direction: column; }
+    footer { margin: 0 3rem; }
+}
+@media (max-width: 650px) {
+    .demo-banner { justify-content: start; gap: .25rem; padding: .75rem 1.2rem; }
+    .site-header { padding: 1.5rem 1.2rem; }
+    main { padding: 0 1.2rem 2.5rem; }
+    .page-heading { align-items: start; flex-direction: column; gap: 1.5rem; padding: 2.5rem 0 2rem; }
+    .intro { max-width: 100%; }
+    .equipment-grid, .booking-layout { grid-template-columns: 1fr; gap: 1rem; }
+    .booking-layout { gap: 2rem; }
+    .date-form { width: 100%; display: grid; grid-template-columns: 1fr; }
+    .date-panel { padding: 1.2rem; width: 100%; }
+    .section-label { align-items: start; flex-direction: column; gap: .3rem; }
+    .card-bottom { align-items: center; flex-direction: row; flex-wrap: wrap; }
+    .maintenance-row { gap: 1rem; }
+    .maintenance-row .asset-id { grid-column: 1 / -1; }
+    .maintenance-row > div { grid-column: 1 / -1; }
+    .maintenance-row .status, .maintenance-row form { grid-column: 1 / -1; justify-self: start; }
+    footer { margin: 0 1.2rem; }
+}

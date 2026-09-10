@@ -65,6 +65,7 @@ declare -A CHALLENGE_MAP=(
   [challenge-26-developer-onboarding]="challenge-26-developer-onboarding"
   [challenge-27-offline-mobile]="challenge-27-offline-mobile"
   [challenge-28-work-iq-workplace-assistant]="challenge-28-work-iq-workplace-assistant"
+  [challenge-29-inherit-and-evolve]="challenge-29-inherit-and-evolve"
 )
 
 declare -A TRACK_FILE_MAP=(
@@ -97,6 +98,7 @@ declare -A TRACK_FILE_MAP=(
   [challenge-26-developer-onboarding]="challenge-26-developer-onboarding-track"
   [challenge-27-offline-mobile]="challenge-27-offline-mobile-track"
   [challenge-28-work-iq-workplace-assistant]="challenge-28-work-iq-workplace-assistant-track"
+  [challenge-29-inherit-and-evolve]="challenge-29-inherit-and-evolve-track"
 )
 
 declare -A TRACK_DIR_MAP=(
@@ -129,6 +131,7 @@ declare -A TRACK_DIR_MAP=(
   [challenge-26-developer-onboarding]="challenge-26-developer-onboarding-track"
   [challenge-27-offline-mobile]="challenge-27-offline-mobile-track"
   [challenge-28-work-iq-workplace-assistant]="challenge-28-work-iq-workplace-assistant-track"
+  [challenge-29-inherit-and-evolve]="challenge-29-inherit-and-evolve-track"
 )
 
 # ── Validate input ──────────────────────────────────────────────────

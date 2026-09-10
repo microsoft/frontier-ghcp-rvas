@@ -1,0 +1,41 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Equipment desk";
+}
+<section class="page-heading">
+    <div><p class="eyebrow">01 / EQUIPMENT REGISTER</p><h1>The right kit.<br />Ready for the field.</h1></div>
+    <p class="intro">Check a date range, then reserve an item for your team. Each listing is one piece of equipment.</p>
+</section>
+<section class="date-panel" aria-labelledby="dates-heading">
+    <div><h2 id="dates-heading">When do you need it?</h2><p id="range-help">Pickup is included. Return is excluded.<br />Sample bookings use October 2030.</p></div>
+    <form method="get" class="date-form">
+        <div class="field"><label asp-for="Start">Pickup date</label><input asp-for="Start" type="date" required aria-describedby="range-help" /></div>
+        <div class="field"><label asp-for="End">Return date</label><input asp-for="End" type="date" required aria-describedby="range-help" /></div>
+        <button type="submit">Check availability</button>
+    </form>
+</section>
+<div asp-validation-summary="All" class="errors" role="alert"></div>
+<div class="section-label"><h2>Equipment</h2><span>@Model.Equipment.Count ITEMS / SINGLE-UNIT BOOKINGS</span></div>
+<div class="equipment-grid">
+    @foreach (var item in Model.Equipment)
+    {
+        var availability = Model.Availability.GetValueOrDefault(item.Id);
+        <article class="equipment-card">
+            <div class="card-top"><span class="asset-id">EQ-@item.Id.ToString("D3")</span><span>@item.Category</span></div>
+            <h3>@item.Name</h3>
+            <p class="location">@item.Location</p>
+            <div class="card-bottom">
+                <span class="status @(availability?.IsAvailable == true ? "available" : "unavailable")">@(availability?.Reason ?? "Check dates")</span>
+                @if (availability?.IsAvailable == true)
+                {
+                    <a class="button" asp-page="/Reservations" asp-route-EquipmentId="@item.Id" asp-route-Start="@Model.Start" asp-route-End="@Model.End">Reserve<span class="sr-only"> @item.Name</span></a>
+                }
+                else
+                {
+                    <a class="text-link" asp-page="/Reservations">View reservations</a>
+                }
+            </div>
+        </article>
+    }
+</div>

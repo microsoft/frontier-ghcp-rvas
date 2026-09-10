@@ -1,0 +1,54 @@
+name: Challenge 29 starter
+
+on:
+  pull_request:
+    paths:
+      - "challenges/challenge-29-inherit-and-evolve/**"
+      - ".devcontainer/challenge-29-inherit-and-evolve/**"
+      - ".github/workflows/challenge-29.yml"
+  push:
+    branches: [main]
+    paths:
+      - "challenges/challenge-29-inherit-and-evolve/**"
+      - ".devcontainer/challenge-29-inherit-and-evolve/**"
+      - ".github/workflows/challenge-29.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  starter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: challenges/challenge-29-inherit-and-evolve
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: "10.0.x"
+      - name: Build and test the starter
+        run: bash scripts/validate-starter.sh
+      - name: Build the application image
+        run: docker build -t equipment-booking:ci .
+      - name: Check container startup and restart
+        run: |
+          docker run -d --name equipment-booking-ci \
+            -p 127.0.0.1:5080:8080 \
+            -v equipment-booking-ci-data:/data equipment-booking:ci
+          curl --fail --silent --show-error --retry 15 --retry-delay 1 \
+            --retry-connrefused http://127.0.0.1:5080/health
+          curl --fail --silent --show-error http://127.0.0.1:5080/ > /dev/null
+          docker exec equipment-booking-ci test -s /data/bookings.db
+          docker restart equipment-booking-ci
+          curl --fail --silent --show-error --retry 15 --retry-delay 1 \
+            --retry-connrefused http://127.0.0.1:5080/health
+      - name: Show container logs
+        if: always()
+        run: |
+          if docker container inspect equipment-booking-ci > /dev/null 2>&1; then
+            docker logs equipment-booking-ci
+            docker rm -f equipment-booking-ci
+          fi
