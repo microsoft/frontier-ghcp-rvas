@@ -2,7 +2,7 @@
 
 ![GitHub Copilot Adoption banner](docs/images/rvas-banner.jpg)
 
-GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **29 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
+GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **30 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
 
 Each session includes repository instructions, custom agents, and custom skills
 tailored to the work.
@@ -11,7 +11,7 @@ tailored to the work.
 
 ### Option 1: Pick a Worked-Example Challenge
 
-Choose one of the **29 challenge tracks** below. Each challenge maps to a specific business outcome and provides starter code, a devcontainer, and a progression path through real work. Use these to learn outcome-driven AI-assisted development patterns you can apply to your own work.
+Choose one of the **30 challenge tracks** below. Each challenge maps to a specific business outcome and provides starter code, a devcontainer, and a progression path through real work. Use these to learn outcome-driven AI-assisted development patterns you can apply to your own work.
 
 ### Option 2: Bring Your Own Challenge
 
@@ -21,7 +21,7 @@ See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
 ## Overview
 
-The repository includes **29 challenge tracks** organized by the outcomes they help you deliver:
+The repository includes **30 challenge tracks** organized by the outcomes they help you deliver:
 
 ### Challenges by Outcome
 
@@ -56,6 +56,7 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 - 📋 **[Challenge 26: Developer Onboarding Repair](./tracks/challenge-26-developer-onboarding-track.md)** - Repair task documentation and add checks for links, commands, and examples | **Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
 - 🎨 **[Challenge 27: Offline Field Service App](./tracks/challenge-27-offline-mobile-track.md)** - Build a dependable React Native workflow for intermittent connectivity | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 - 📋 **[Challenge 28: Work IQ Workplace Assistant](./tracks/challenge-28-work-iq-workplace-assistant-track.md)** - Build a permission-aware workplace handoff using Microsoft Work IQ and GitHub Copilot CLI | **Outcomes:** Automate Delivery and Ops Toil, Ship Product Features Faster
+- 🔧 **[Challenge 29: Inherit and Evolve an Application](./tracks/challenge-29-inherit-and-evolve-track.md)** - Understand a working .NET equipment-booking app, fix a cancellation defect, and add a waitlist | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -71,7 +72,8 @@ operations, QA, and architecture roles.
 
 ## Duration
 
-**6-8 hours** per track.
+Duration varies by track. Challenge 29 takes **4-6 hours**, with a five-hour core.
+Check the selected track for its time budget.
 
 ## Documentation Site
 
@@ -262,7 +264,7 @@ As you work through these challenges, you'll build proficiency with GitHub Copil
 
 **Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
 
-All 29 challenges are available, and each track has a dedicated challenge:
+All 30 challenges are available, and each track has a dedicated challenge:
 
 ### [Challenge 0: Product Planning -- TaskFlow v2.0](./challenges/challenge-0-product-planning/) ([Track](./tracks/challenge-0-product-planning-track.md))
 
@@ -568,6 +570,22 @@ Make a React Native field-service workflow dependable when connectivity and devi
 **Copilot Focus**: Permission-aware retrieval, evidence mapping, handoff drafting, human approval gates
 
 Build a reviewed project handoff from approved Microsoft 365 context. Retrieve a narrow set of meetings, messages, emails, or documents, create an evidence-backed action register, and keep all write actions behind human approval.
+
+---
+
+### [Challenge 29: Inherit and Evolve an Application](./challenges/challenge-29-inherit-and-evolve/) ([Track](./tracks/challenge-29-inherit-and-evolve-track.md))
+
+**Team**: C# developers, full-stack engineers, QA engineers, technical leads
+**Duration**: 4-6 hours
+**Skills**: ASP.NET Core, SQLite, code comprehension, regression testing
+**Copilot Focus**: Tracing unfamiliar code, investigating defects, adding features safely
+
+Take over a working equipment-booking app. Verify how it behaves, fix a reported
+cancellation defect, then add a waitlist through the UI and backend. The starter
+includes seeded data and passing baseline tests, plus an application Dockerfile
+and a dedicated devcontainer.
+The Challenge 29 workflow runs the starter tests and checks application-container
+startup and restart when its code changes.
 
 ---
 

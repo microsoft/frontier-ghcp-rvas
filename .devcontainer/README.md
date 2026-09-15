@@ -69,6 +69,19 @@ Select the configuration that matches the challenge you are working on.
 - **Tools:** Terraform, Azure CLI, GitHub CLI
 - **Extensions:** Terraform, YAML
 
+### [Challenge 29: Inherit and Evolve an Application](./challenge-29-inherit-and-evolve/)
+
+**For:** C# developers taking over an unfamiliar application.
+
+- **Tools:** .NET 10 SDK, GitHub CLI, Docker CLI using the host engine
+- **Extensions:** C# Dev Kit, GitHub Copilot, REST Client, markdownlint
+- **Application:** Equipment booking on port 5080, with local SQLite storage
+
+Setup prepares a challenge-only workspace and runs the starter tests. Use a
+disposable clone: setup removes unrelated challenges and organizer files.
+The [track guide](../tracks/challenge-29-inherit-and-evolve-track.md) covers startup
+and the separate application container.
+
 ## How to Use
 
 1. **Copy the Folder**: Copy the contents of the specific challenge folder (e.g., `.devcontainer/challenge-1-backend/`) into the `.devcontainer/` folder of your own repository.

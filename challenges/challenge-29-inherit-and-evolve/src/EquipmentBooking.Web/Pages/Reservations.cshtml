@@ -1,0 +1,60 @@
+@page
+@model ReservationsModel
+@{
+    ViewData["Title"] = "Reservations";
+}
+<section class="page-heading compact">
+    <div><p class="eyebrow">02 / BOOKING REGISTER</p><h1>Reservations</h1></div>
+    <p class="intro">Book equipment for a colleague. Confirmed and cancelled bookings stay in the register.</p>
+</section>
+<div asp-validation-summary="All" class="errors" role="alert"></div>
+<div class="booking-layout">
+    <section class="booking-form-panel" aria-labelledby="new-booking">
+        <h2 id="new-booking">New reservation</h2>
+        <p id="booking-help">Pickup day is included; return day is excluded. For one day, choose the next day as the return date.</p>
+        <form method="post" asp-page-handler="Create">
+            <div class="field"><label asp-for="EquipmentId">Equipment</label>
+                <select asp-for="EquipmentId" required>
+                    @foreach (var item in Model.Equipment)
+                    {
+                        <option value="@item.Id">@item.Name@(item.IsUnderMaintenance ? " (maintenance)" : "")</option>
+                    }
+                </select>
+            </div>
+            <div class="field"><label asp-for="EmployeeId">Employee (synthetic)</label>
+                <select asp-for="EmployeeId" required>
+                    @foreach (var employee in Model.Employees)
+                    {
+                        <option value="@employee.Id">@employee.Name / @employee.Department</option>
+                    }
+                </select>
+            </div>
+            <div class="field"><label asp-for="Start">Pickup date</label><input asp-for="Start" type="date" required aria-describedby="booking-help" /></div>
+            <div class="field"><label asp-for="End">Return date</label><input asp-for="End" type="date" required aria-describedby="booking-help" /></div>
+            <button type="submit">Confirm reservation</button>
+        </form>
+    </section>
+    <section aria-labelledby="history-heading">
+        <div class="section-label"><h2 id="history-heading">Reservation history</h2><span>@Model.Reservations.Count RECORDS</span></div>
+        @if (Model.Reservations.Count == 0)
+        {
+            <p class="empty-state">No reservations yet. Choose an item to make the first booking.</p>
+        }
+        @foreach (var reservation in Model.Reservations)
+        {
+            <article class="reservation-card">
+                <div class="card-top"><span class="asset-id">#@reservation.Id</span><span class="status @(reservation.Status == "Confirmed" ? "available" : "neutral")">@reservation.Status</span></div>
+                <h3>@reservation.EquipmentName</h3>
+                <p>@reservation.EmployeeName</p>
+                <dl class="date-pair"><div><dt>Pickup / included</dt><dd>@BookingRange.Format(reservation.Start)</dd></div><div><dt>Return / excluded</dt><dd>@BookingRange.Format(reservation.End)</dd></div></dl>
+                @if (reservation.Status == "Confirmed")
+                {
+                    <form method="post" asp-page-handler="Cancel">
+                        <input type="hidden" name="id" value="@reservation.Id" />
+                        <button class="secondary" type="submit" aria-label="Cancel reservation @reservation.Id for @reservation.EquipmentName">Cancel reservation</button>
+                    </form>
+                }
+            </article>
+        }
+    </section>
+</div>

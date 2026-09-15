@@ -1,0 +1,35 @@
+{
+	"name": "Challenge 29 - Inherit and Evolve an Application",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/dotnet:2": {
+			"version": "10.0"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"ms-dotnettools.csdevkit",
+				"ms-azuretools.vscode-docker",
+				"humao.rest-client",
+				"DavidAnson.vscode-markdownlint"
+			],
+			"settings": {
+				"dotnet.defaultSolution": "challenges/challenge-29-inherit-and-evolve/EquipmentBooking.sln"
+			}
+		}
+	},
+	"forwardPorts": [5080],
+	"portsAttributes": {
+		"5080": {
+			"label": "Equipment booking",
+			"onAutoForward": "notify"
+		}
+	},
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-29-inherit-and-evolve && bash challenges/challenge-29-inherit-and-evolve/scripts/validate-starter.sh",
+	"remoteUser": "vscode"
+}

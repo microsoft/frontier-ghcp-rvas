@@ -1,0 +1,21 @@
+id: challenge-29
+number: 29
+title: Inherit and Evolve an Application
+category: core-tracks
+difficulty: intermediate
+duration_minutes: 300
+description: Learn an unfamiliar equipment-booking application, fix a reported cancellation defect, and add a waitlist without breaking existing behavior.
+focus: Code comprehension, defect investigation, regression testing, and feature delivery with GitHub Copilot
+tags:
+  - application-maintenance
+  - dotnet
+  - debugging
+  - full-stack
+outcomes:
+  - ship-features
+  - raise-quality
+prerequisites: []
+devcontainer_key: challenge-29-inherit-and-evolve
+track_url: tracks/challenge-29-inherit-and-evolve-track.md
+contents_url: tracks/challenge-29-inherit-and-evolve-track/stages.md
+starter_path: challenges/challenge-29-inherit-and-evolve/

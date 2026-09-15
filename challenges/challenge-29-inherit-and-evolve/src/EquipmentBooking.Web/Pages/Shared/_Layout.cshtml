@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] | EquipmentBooking</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="demo-banner"><strong>LOCAL DEMO / NO AUTHENTICATION</strong><span>Synthetic records. Anyone with access can book or change equipment.</span></div>
+    <header class="site-header">
+        <a class="wordmark" asp-page="/Index"><span class="brand-mark" aria-hidden="true">EB</span><span>EquipmentBooking<small>FIELD OPERATIONS / EQUIPMENT DESK</small></span></a>
+        <nav aria-label="Main navigation">
+            <a asp-page="/Index" aria-current="@(ViewContext.RouteData.Values["page"]?.ToString() == "/Index" ? "page" : null)">Equipment</a>
+            <a asp-page="/Reservations" aria-current="@(ViewContext.RouteData.Values["page"]?.ToString() == "/Reservations" ? "page" : null)">Reservations</a>
+            <a asp-page="/Admin" aria-current="@(ViewContext.RouteData.Values["page"]?.ToString() == "/Admin" ? "page" : null)">Demo admin</a>
+        </nav>
+    </header>
+    <main id="main">
+        @if (TempData["Notice"] is string notice)
+        {
+            <div class="notice" role="status">@notice</div>
+        }
+        @RenderBody()
+    </main>
+    <footer><span>Equipment desk / demonstration only</span><span>Day bookings include pickup day and exclude return day.</span></footer>
+</body>
+</html>

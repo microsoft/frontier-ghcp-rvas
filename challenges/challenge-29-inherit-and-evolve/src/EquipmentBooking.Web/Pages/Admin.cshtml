@@ -1,0 +1,26 @@
+@page
+@model AdminModel
+@{
+    ViewData["Title"] = "Demo admin";
+}
+<section class="page-heading compact">
+    <div><p class="eyebrow">03 / SERVICE BENCH</p><h1>Demo admin</h1></div>
+    <p class="intro">No sign-in or roles in this local demo. Anyone can change maintenance settings.</p>
+</section>
+<div class="notice">Maintenance blocks new bookings. Existing reservations remain in the register.</div>
+<div asp-validation-summary="All" class="errors" role="alert"></div>
+<section aria-label="Equipment maintenance" class="maintenance-list">
+    @foreach (var item in Model.Equipment)
+    {
+        <article class="maintenance-row">
+            <span class="asset-id">EQ-@item.Id.ToString("D3")</span>
+            <div><h2>@item.Name</h2><p>@item.Location</p></div>
+            <span class="status @(item.IsUnderMaintenance ? "unavailable" : "available")">@(item.IsUnderMaintenance ? "Under maintenance" : "In service")</span>
+            <form method="post" asp-page-handler="Maintenance">
+                <input type="hidden" name="id" value="@item.Id" />
+                <input type="hidden" name="isUnderMaintenance" value="@((!item.IsUnderMaintenance).ToString().ToLowerInvariant())" />
+                <button class="secondary" type="submit" aria-label="@(item.IsUnderMaintenance ? "Return to service: " : "Mark for maintenance: ")@item.Name">@(item.IsUnderMaintenance ? "Return to service" : "Mark for maintenance")</button>
+            </form>
+        </article>
+    }
+</section>

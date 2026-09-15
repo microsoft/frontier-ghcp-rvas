@@ -56,6 +56,7 @@ $ChallengeMap = @{
     "challenge-25-api-guardrails"     = "challenge-25-api-guardrails"
     "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding"
     "challenge-27-offline-mobile"     = "challenge-27-offline-mobile"
+    "challenge-29-inherit-and-evolve" = "challenge-29-inherit-and-evolve"
 }
 
 $TrackFileMap = @{
@@ -87,6 +88,7 @@ $TrackFileMap = @{
     "challenge-25-api-guardrails"     = "challenge-25-api-guardrails-track"
     "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding-track"
     "challenge-27-offline-mobile"     = "challenge-27-offline-mobile-track"
+    "challenge-29-inherit-and-evolve" = "challenge-29-inherit-and-evolve-track"
 }
 
 $TrackDirMap = @{
@@ -118,6 +120,7 @@ $TrackDirMap = @{
     "challenge-25-api-guardrails"     = "challenge-25-api-guardrails-track"
     "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding-track"
     "challenge-27-offline-mobile"     = "challenge-27-offline-mobile-track"
+    "challenge-29-inherit-and-evolve" = "challenge-29-inherit-and-evolve-track"
 }
 
 # Validate input
