@@ -5,7 +5,7 @@ category: workflow-automation
 difficulty: intermediate
 duration_minutes: 420
 description: Automate the conversion of requirement specs into structured backlogs using Copilot and the Atlassian MCP server.
-focus: Automating the conversion of requirement specifications into structured project backlogs using Copilot prompts, agents, and the Atlassian MCP server
+focus: Automating the conversion of requirement specifications into structured project backlogs using Copilot skills, agents, and the Atlassian MCP server
 tags:
   - workflow-automation
   - advanced

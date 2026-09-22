@@ -7,6 +7,12 @@ GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub
 Each session includes repository instructions, custom agents, and custom skills
 tailored to the work.
 
+Participants author **custom skills for reusable workflows** and refine them
+throughout the session. Ordinary chat prompts remain useful for one-off requests.
+The Backlog Generator's first stage is now
+[Spec-to-Backlog Skill](tracks/challenge-15-backlog-generator-track/stage-1-skill.md);
+links to its former `stage-1-prompt` page need updating.
+
 ## Two Ways to Run a GitHub Copilot Adoption Delivery Session
 
 ### Option 1: Pick a Worked-Example Challenge

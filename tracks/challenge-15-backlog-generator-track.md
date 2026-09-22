@@ -4,7 +4,7 @@
 
 **Difficulty:** ⭐⭐
 
-**Focus:** Automating the conversion of requirement specifications into structured project backlogs using Copilot prompts, agents, and the Atlassian MCP server
+**Focus:** Automating the conversion of requirement specifications into structured project backlogs using Copilot skills, agents, and the Atlassian MCP server
 
 ## Who Is This For
 
@@ -17,13 +17,13 @@
 
 - Understanding of agile concepts: Epics, User Stories, Acceptance Criteria, Tasks
 - Familiarity with the INVEST criteria for good user stories
-- No coding experience required -- this track focuses on prompts, agents, and process
+- No coding experience required -- you will build reusable backlog workflows with Copilot skills and agents
 - Atlassian Cloud account (optional, for MCP integration stages)
 
 ## Technology Stack
 
 - **Source material:** Use case specification documents (markdown, simulating Confluence pages)
-- **Copilot features:** Custom prompts, custom agents, Copilot chat
+- **Copilot features:** Custom skills, custom agents, Copilot chat
 - **MCP integration:** Atlassian Rovo MCP server (Jira + Confluence access)
 - **Output format:** Structured markdown, optionally pushed to Jira
 
@@ -70,7 +70,7 @@ Your `.github/copilot-instructions.md` should include:
 ### Suggested Custom Skills
 
 - **Spec-to-Backlog Conversion Skill** -- A fixed sequence: read a use case spec, extract actors, preconditions, and alternate paths, and generate Epics/Stories/Tasks in the team's standard format, run consistently across specs of any complexity.
-- **Jira Push Skill** -- A repeatable workflow via the Atlassian Rovo MCP server: read a Confluence page, map its content to Jira issue fields, create one issue as a dry run, then push the rest once the mapping is verified.
+- **Jira Push Skill** -- Map a reviewed backlog to Jira fields and create linked items in dependency order through the Atlassian Rovo MCP server. Use it in Stage 3 after a human approves the target project and mapping. Record created issue references and failed writes before retrying. Confluence is an optional source for backlog generation.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "backlog generation agent", "jira automation skill", and "agile instructions" before you draft your own.
 
@@ -78,11 +78,11 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for Using Copilot on This Track
 
-- Start with the simplest spec (Password Reset) to build your prompt, then test it on the complex ones. If it works on Inventory Reorder, it works on everything.
-- When writing the backlog prompt, be explicit about output format. Include an example of what a well-formed Epic, Story, and Task look like for your team.
+- Start with the simplest spec (Password Reset) to build your skill, then test it on the more complex specs. Check coverage each time.
+- Define the backlog skill's output format using your team's work item conventions and the provided backlog templates.
 - The refinement agent works best when you give it both the original spec and the generated backlog, then ask it to find gaps. Use `#file` references to point at both documents.
-- For the MCP integration, start by reading a Confluence page and creating a single Jira issue before attempting bulk creation.
-- Test your prompt consistency by having multiple team members run the same spec through the same prompt and comparing outputs.
+- For the MCP integration, verify the field mapping with a single approved Jira issue before attempting bulk creation.
+- Test consistency by having multiple team members use the same skill on the same spec and compare outputs.
 
 ## Resources
 

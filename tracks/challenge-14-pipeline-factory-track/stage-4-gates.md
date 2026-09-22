@@ -21,20 +21,20 @@
    - On failed smoke test, redeploys the previous version
    - Logs the rollback event
 
-4. **Build an incident runbook prompt.** Create `.github/prompts/incident-runbook.prompt.md` that takes an error log or incident description and produces:
+4. **Build an incident runbook skill.** Create or refine `.github/skills/incident-runbook/SKILL.md` from the brief in setup. The workflow should use an error log or incident description as evidence and work with the Runbook Writer agent to produce:
    - A plain-language description of the problem
    - Step-by-step diagnostic procedure
    - Resolution options, ranked by likelihood of success
    - Escalation criteria (when to escalate vs. self-resolve)
 
-5. **Test the runbook prompt.** Feed it the bugs you found in Stage 2 (as if they were real incidents) and verify the produced runbooks are actionable.
+5. **Test the runbook skill.** Use the bugs you found in Stage 2 as incident inputs. Check that the runbooks address those failures and give actionable diagnostic steps. Refine the skill when its output lacks evidence or clear escalation criteria.
 
 ## Verification
 
 - [ ] Environment protection configured (staging auto-deploy, production manual approval)
 - [ ] Post-deployment smoke test script created and integrated into workflow
 - [ ] Rollback mechanism designed (at minimum, documented in the workflow with conditional steps)
-- [ ] Incident runbook prompt created and tested
+- [ ] Runbooks tie diagnostic steps and resolution options to the supplied incident evidence
 - [ ] At least 2 runbooks generated from Stage 2 bugs
 
 ---

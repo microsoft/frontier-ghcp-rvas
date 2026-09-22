@@ -25,7 +25,7 @@
 - **Application:** Node.js/Express API + static HTML frontend
 - **CI/CD:** GitHub Actions
 - **Debugging:** A deliberately broken staging deployment with 5 bugs to find
-- **Copilot features:** Agent mode, `/fix` command, custom prompts
+- **Copilot features:** Agent mode, `/fix` command, custom skills
 
 ## What You Are Working With
 
@@ -66,6 +66,7 @@ Your `.github/copilot-instructions.md` should include:
 
 - **Config Drift Diff Skill** -- A fixed sequence: compare the working `api-service/` against `stage-broken/` file by file, list every discrepancy, and classify each as configuration, dependency, or code drift.
 - **Pipeline Stage Addition Skill** -- A repeatable workflow for adding a new CI/CD stage: define the job, parameterize what differs from prior stages, wire required secrets, and verify with a dry run before merging.
+- **Incident Runbook Skill** -- Turn incident evidence into a runbook with diagnostic checks and escalation criteria. Use it with the Runbook Writer agent in Stage 4 and test the output against the failures from Stage 2. Keep unconfirmed resolution options separate from known fixes.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "CI/CD pipeline agent", "deployment drift skill", and "GitHub Actions instructions" before you draft your own.
 
@@ -77,7 +78,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - For the staging debugging phase, paste the broken `server.js` and the working `server.js` into chat and ask Copilot to diff them and identify issues.
 - When creating reusable workflows, ask Copilot to parameterize things that differ between projects (Node version, test command, deploy target).
 - Use `/fix` on the broken staging code -- it catches several of the issues directly.
-- For runbook generation, give Copilot an error log and ask it to produce a step-by-step troubleshooting guide written for someone with limited technical background.
+- Give the incident runbook skill an error log, then check that its troubleshooting guide is usable by someone with limited technical background.
 
 ## Resources
 

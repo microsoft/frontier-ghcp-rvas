@@ -92,6 +92,16 @@ Create one or more custom skills under `.github/skills/` for a repeatable, multi
 workflow. Choose work that benefits from a consistent sequence and can be
 reused during the challenge.
 
+Each skill belongs in `.github/skills/<skill-name>/SKILL.md`. Give it a
+lowercase, hyphenated name and a description that explains when to use it.
+Define the required inputs and expected results, including the checks that
+make those results useful. Author the skill yourself; a track's brief describes
+the work it should support.
+
+**Reuse the same skill as you progress.** When a stage builds on a skill from
+setup, refine that artifact rather than creating another one. Keep reusable
+workflows in skills. Use ordinary chat messages for one-off requests.
+
 See GitHub's
 [custom skill authoring documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills)
 for current authoring guidance.

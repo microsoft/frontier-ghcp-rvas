@@ -6,7 +6,7 @@
 
 ## Tasks
 
-1. **Build a pre-deployment checklist generator.** Create `.github/prompts/deploy-checklist.prompt.md` that takes a set of code changes (described or referenced via `#file`) and produces:
+1. **Build a pre-deployment checklist skill.** Create `.github/skills/deploy-checklist/SKILL.md` for a workflow that reviews code changes (described or referenced via `#file`) against the app's deployment requirements and produces:
    - What services are affected by this change
    - Configuration changes needed (environment variables, feature flags)
    - Database migration steps (if any)
@@ -21,13 +21,12 @@
    - Check response times are within acceptable limits
    - Report pass/fail per check with timestamps
 
-3. **Test the checklist prompt.** Make a code change to the demo app (add a new endpoint or modify an existing one) and run the checklist prompt. Verify the output is specific to the change, not generic.
+3. **Test the checklist skill.** Make a code change to the demo app (add a new endpoint or modify an existing one) and use the skill. Verify that each checklist item is relevant to the change, then refine any rules that produced generic advice.
 
-4. **Integrate ops agents.** Create a combined workflow prompt that chains your tools: analyze deployment logs with the log analyst agent, route any errors to the right team with the routing prompt, and generate runbooks for new error patterns.
+4. **Combine the ops workflows.** Use your Log Triage skill with the Log Analyst agent to analyze deployment logs. Pass the findings to the incident routing skill from Stage 2, then use the runbook skill from Stage 3 for errors that need troubleshooting guidance. Keep evidence and unresolved questions in each handoff. Reuse these skills rather than authoring another orchestration artifact.
 
 ## Verification
 
-- [ ] Pre-deployment checklist prompt created and tested
 - [ ] Post-deployment smoke test script created and tested against the demo app
 - [ ] Checklist produces change-specific output (not generic boilerplate)
 - [ ] Combined workflow demonstrated (log analysis to routing to runbook generation)

@@ -279,44 +279,23 @@ import pandas as pd
 def transform_customer_data(raw_data: list[dict]) -> pd.DataFrame:
 ```
 
-## Prompt Collections
+## Reusable Workflows
 
-Create reusable prompt templates for common tasks:
+Use **custom skills** when a task needs a repeatable workflow. Keep ordinary
+chat messages for one-off requests and follow-up questions.
 
-### Test Generation Template
+Choose the work your skill should cover:
 
-```text
-/tests create [framework] tests for this [component/function/class]
-Include:
-- Happy path scenarios
-- Edge cases ([specific cases])
-- Error handling
-- Mock [dependencies]
-[Coverage target: X%]
-```
+- **Test generation:** identify behavior and edge cases, generate tests in the
+  project's framework, then check the results against the requested coverage.
+- **Code review:** assess a diff against project conventions and report findings
+  with code evidence. Leave specialist judgment to the relevant custom agent.
+- **Refactoring:** identify the behavior to preserve, make the scoped change,
+  and use tests to check compatibility.
 
-### Code Review Template
-
-```text
-Review this code for:
-- Security vulnerabilities ([specific concerns])
-- Performance issues
-- Best practices for [language/framework]
-- Error handling
-- Code style consistency
-Suggest improvements with examples
-```
-
-### Refactoring Template
-
-```text
-Refactor this code to:
-- Follow [pattern/principle]
-- Improve [readability/performance/maintainability]
-- Extract [what to extract]
-- Maintain backward compatibility
-- Add [what to add]
-```
+Define the inputs and expected results before authoring the skill. Follow the
+[shared skill guidance](../tracks/getting-started.md#custom-skill) for artifact
+structure, then use your track's brief to decide what the workflow must achieve.
 
 ## Common Pitfalls
 

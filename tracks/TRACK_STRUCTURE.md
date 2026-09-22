@@ -181,6 +181,12 @@ A brief names the purpose, expected input, useful timing, and boundaries of the
 artifact. It must not provide ready-to-paste instructions, agent definitions,
 skill files, or prompts. Participants author the artifacts.
 
+Use skills for exercises that produce reusable workflows. Refer to
+`.github/skills/<skill-name>/SKILL.md` and reuse a matching skill from setup
+before asking participants to create another one. Describe its inputs and
+expected results without supplying a completed skill. Ordinary chat examples
+can remain; do not require a separate Copilot prompt file for the workflow.
+
 Place early-use cues and midpoint refinement cues in the relevant stage
 or nested role page. Keep them inside `## Tasks` or another work section, never
 `## Verification`. Verification checks the challenge result, not whether a

@@ -31,7 +31,7 @@
    - Reports test results
    - Caches node_modules
 
-5. **Save all prompts and agents.** Verify that all the artifacts you created across all 4 stages are saved in `.github/prompts/` and `.github/agents/`. These are the reusable tools your team takes home.
+5. **Prepare the reusable artifacts for handoff.** Save each skill under `.github/skills/<skill-name>/SKILL.md` and each custom agent under `.github/agents/`. Keep the CI pipeline in `.github/workflows/`. Check that the skills identify their required inputs and reference files that another team member can access.
 
 ## Verification
 
@@ -39,7 +39,7 @@
 - [ ] Test specs generated for at least 3 stories
 - [ ] Test specs include happy path, edge cases, and negative tests
 - [ ] CI pipeline created and validates the test suite
-- [ ] All prompts and agents saved in `.github/prompts/` and `.github/agents/`
+- [ ] Another team member can use the saved workflows with the documented inputs and available references
 
 ---
 

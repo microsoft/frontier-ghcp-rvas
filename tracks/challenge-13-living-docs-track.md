@@ -4,7 +4,7 @@
 
 **Difficulty:** ⭐⭐
 
-**Focus:** Automating documentation generation -- javadoc, architecture diagrams, changelogs, and stakeholder-facing summaries -- using Copilot prompts and agents
+**Focus:** Automating documentation generation -- javadoc, architecture diagrams, changelogs, and stakeholder-facing summaries -- using Copilot skills and agents
 
 ## Who Is This For
 
@@ -24,7 +24,7 @@
 
 - **Codebase:** Java 17, Spring Boot 3.x, JdbcTemplate, H2 database
 - **Documentation tools:** Javadoc, Mermaid diagrams, Markdown
-- **Copilot features:** Custom prompts, custom agents, Copilot chat
+- **Copilot features:** Custom skills, custom agents, Copilot chat
 
 ## What You Are Working With
 
@@ -61,7 +61,8 @@ Your `.github/copilot-instructions.md` should include:
 ### Suggested Custom Skills
 
 - **Javadoc Accuracy Pass Skill** -- A fixed sequence: ask Copilot to explain what a method actually does including edge cases, then generate javadoc from that explanation rather than from the signature alone. Run it per class, not as a bulk pass.
-- **Changelog Reconciliation Skill** -- A repeatable workflow: diff the current changelog against actual version history, and backfill entries for versions that shipped features without documentation.
+- **Changelog Reconciliation Skill** -- Compare the changelog with version history and backfill missing entries. In Stage 3, extend the same skill to generate entries from a code diff, checking affected components and breaking changes against the code.
+- **Stakeholder Summary Skill** -- Turn a code diff into a summary for product owners, checking user impact and any need for business communication. Use it alongside the changelog skill in Stage 3; leave audience judgment to the Release Communicator agent.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "documentation review agent", "changelog skill", and "javadoc instructions" before you draft your own.
 
@@ -71,7 +72,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 - When generating javadoc, paste a method into chat and ask "What does this method actually do, including edge cases?" Then ask Copilot to write the javadoc based on its own explanation. This produces more accurate docs than asking for javadoc cold.
 - For Mermaid diagrams, describe the diagram you want in plain language first, then ask Copilot to generate the Mermaid syntax. Iterate on the diagram until it matches the actual architecture.
-- Test your changelog prompt on small diffs first (a single-file change), then scale to multi-file changes.
+- Test your changelog skill on small diffs first (a single-file change), then scale to multi-file changes.
 - For the PR review agent, start by defining what "documentation completeness" means for your team. Different teams care about different things.
 - Use `@workspace` to give Copilot full context when generating cross-module diagrams.
 

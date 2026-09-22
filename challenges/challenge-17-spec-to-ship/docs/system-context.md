@@ -22,10 +22,10 @@ Each step is done by a different person, in a different tool, with no automated 
 
 An end-to-end Copilot-assisted pipeline that compresses this lifecycle:
 
-1. **Spec to Backlog**: A prompt that converts the requirements doc into structured work items
-2. **Spec to Technical Analysis**: A prompt that assesses impact on the existing codebase
+1. **Spec to Backlog**: A skill that converts the requirements doc into structured work items and checks coverage
+2. **Spec to Technical Analysis**: A skill that checks the spec against the existing codebase and documents the required changes
 3. **Stories to Code**: Copilot-generated implementation of the billing module
 4. **Stories to Test Specs**: An agent that generates test specification documents
 5. **Code to Pipeline**: A GitHub Actions CI pipeline for the complete application
 
-The goal is not just to build the feature -- it is to build reusable Copilot artifacts (prompts, agents) that your team can apply to any future spec-to-ship cycle.
+Build the feature and **reusable Copilot skills and agents** that your team can apply to a later spec-to-ship cycle.

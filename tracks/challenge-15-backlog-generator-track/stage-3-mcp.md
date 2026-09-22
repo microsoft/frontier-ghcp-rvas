@@ -19,21 +19,22 @@
    - Create multiple Stories under that Epic
    - Set the correct issue type, summary, description, and acceptance criteria
 
-5. **Build a bulk creation prompt.** Create `.github/prompts/push-backlog-to-jira.prompt.md` that:
-   - Takes your generated backlog as input
-   - Instructs Copilot (in Agent mode with MCP) to create all items in Jira
+5. **Build the Jira Push skill.** Create or refine `.github/skills/push-backlog-to-jira/SKILL.md` from setup for a workflow that:
+   - Takes your reviewed backlog as input
+   - Requires human approval of the target project and issue mapping before creating items through MCP
    - Creates Epics first, then Stories linked to Epics, then Tasks linked to Stories
    - Handles the dependency ordering
+   - Reports created issue references and any failed writes so a retry does not duplicate completed work
 
-6. **Read a Confluence page (bonus).** If you have Confluence, use the MCP tools to read a Confluence page and feed its content into your spec-to-backlog prompt. This closes the loop: Confluence page in, Jira backlog out.
+6. **Read a Confluence page (bonus).** If you have Confluence, use the MCP tools to read a page and supply its content to your spec-to-backlog skill. Review the generated backlog before using the Jira Push skill.
 
 ## Verification
 
 - [ ] Atlassian MCP server configured and authenticated
 - [ ] At least one Jira issue created via Copilot MCP tools
 - [ ] An Epic with linked Stories created in Jira
-- [ ] Bulk creation prompt created and tested
-- [ ] (Bonus) Confluence page read and used as prompt input
+- [ ] Approved backlog items created in dependency order, with issue references and failures reported
+- [ ] (Bonus) Confluence content converted into a reviewed backlog
 
 ---
 

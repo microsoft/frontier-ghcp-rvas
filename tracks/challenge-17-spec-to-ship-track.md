@@ -4,7 +4,7 @@
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** Compressing the full development lifecycle -- from functional requirements to deployed code -- using Copilot prompts and agents at every stage
+**Focus:** Compressing the full development lifecycle -- from functional requirements to deployed code -- using Copilot skills and agents at every stage
 
 ## Who Is This For
 
@@ -24,7 +24,7 @@
 
 - **Source material:** Functional requirements document for a billing module
 - **Existing app:** Node.js/Express tenant management API
-- **Copilot features:** Custom prompts, custom agents, Agent mode, `@workspace`
+- **Copilot features:** Custom skills, custom agents, Agent mode, `@workspace`
 - **CI/CD:** GitHub Actions
 - **Output:** Work items, technical analysis, code, test specs, pipeline config
 
@@ -36,7 +36,7 @@ Two pieces:
 
 2. **An existing application** (`existing-app/`) -- A simple tenant management API that already handles tenant and user CRUD. The billing module needs to integrate with this existing codebase.
 
-The challenge is not just to build the billing module. It is to build the **tooling and workflow** -- the prompts and agents that convert each stage into the next -- so the approach is reusable for any future feature.
+Build the billing module and the **reusable skills and agents** that carry work between stages. Your team should be able to use them for a later feature.
 
 ## Getting Started
 
@@ -66,7 +66,7 @@ Your `.github/copilot-instructions.md` should include:
 
 ### Suggested Custom Skills
 
-- **Spec-to-Work-Items Skill** -- A reusable sequence: given any functional requirements document, produce Epics/Stories/Tasks in the team's format, checking dependency order and sizing consistently every time.
+- **Spec-to-Backlog Skill** -- Convert a functional requirements document into work items in the team's format, then check coverage and dependency order. Use it in Stage 1 with the Requirements Analyst agent.
 - **Story-to-Code Handoff Skill** -- A repeatable workflow: take one story's acceptance criteria, generate the implementation against the existing codebase's conventions, and confirm it against the criteria before moving to the next story.
 - **Pipeline Generation Skill** -- A workflow for turning finished test specs into CI/CD scaffolding (test job plus deploy gate), applied the same way for each new feature.
 
@@ -76,11 +76,11 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for Using Copilot on This Track
 
-- For Stage 1, include an example of a well-formed Epic, Story, and Task in your prompt. Copilot produces much better structured output when it has a template to follow.
+- For Stage 1, give the backlog skill your team's work item conventions so its outputs use a consistent format.
 - For Stage 2, use `@workspace` to point Copilot at the existing app. Ask it: "Given this spec and the existing codebase, what modules are affected, what new code is needed, and what order should we implement in?"
 - In Stage 3, work story by story. Feed Copilot one story's acceptance criteria at a time and let it generate the implementation. Review before moving to the next.
 - Agent mode is strong for Stage 4 -- describe the test scenarios and let Copilot scaffold the test files and pipeline YAML.
-- Save your prompts in `.github/prompts/` as you go. The whole point is building reusable artifacts.
+- Save each skill under `.github/skills/<skill-name>/SKILL.md` as you go. Keep its inputs clear enough for another team member to use it.
 
 ## Resources
 

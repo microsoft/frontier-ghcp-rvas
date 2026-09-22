@@ -8,7 +8,7 @@
 
 1. **Study the existing app.** Read `existing-app/src/server.js`. Understand the current data model (tenants, users), the API patterns, and the code conventions.
 
-2. **Build the technical analysis prompt.** Create `.github/prompts/technical-analysis.prompt.md` that:
+2. **Build the technical analysis skill.** Create `.github/skills/technical-analysis/SKILL.md` for a workflow that checks the spec against the codebase and uses the Technical Analyst agent to assess design choices. The skill:
    - Takes the spec (`#file:billing-module-requirements.md`) and the existing codebase (`@workspace` or specific `#file` references)
    - Produces a technical analysis document covering:
      - Which existing modules are affected
@@ -19,7 +19,7 @@
      - Risk assessment (what could go wrong, what is complex)
      - Recommended implementation order (what to build first)
 
-3. **Run the prompt.** Generate the technical analysis. Save it to `docs/technical-analysis.md` in the challenge folder.
+3. **Use the skill.** Generate the technical analysis. Save it to `docs/technical-analysis.md` in the challenge folder.
 
 4. **Validate against the spec.** Check that the technical analysis is consistent with the requirements:
    - Are all API endpoints from the spec accounted for?
@@ -27,13 +27,12 @@
    - Are the authorization rules addressed in the design?
    - Is the Stripe integration approach PCI-compliant (no card numbers stored)?
 
-5. **Identify what the prompt misses.** What would a senior developer add that the prompt did not? Common gaps: error handling strategy, monitoring/observability plan, performance considerations for the usage metering queries.
+5. **Review the gaps.** Check the analysis for missing error handling, monitoring needs, and performance considerations for usage metering queries. Refine the skill's review criteria where the output is incomplete.
 
-If your Technical Analyst agent or spec workflow produces generic API decisions or a schema that misses metering requirements, refine that customization before Stage 3 builds against it.
+If your Technical Analyst agent or analysis skill produces generic API decisions or a schema that misses metering requirements, refine it before Stage 3 builds against it.
 
 ## Verification
 
-- [ ] Technical analysis prompt created (`.github/prompts/technical-analysis.prompt.md`)
 - [ ] Technical analysis generated for the billing module
 - [ ] Analysis covers: affected modules, new models, API design, schema, integrations, risks, implementation order
 - [ ] Analysis is consistent with the spec requirements

@@ -17,7 +17,7 @@
 
 - Basic understanding of application logs (log levels, stack traces, timestamps)
 - Familiarity with incident management concepts (severity, routing, escalation)
-- No deep programming experience required -- this track focuses on Copilot prompts and agents
+- No deep programming experience required -- this track focuses on Copilot skills and agents
 - Some comfort with Node.js helpful but not necessary (for the demo app)
 
 ## Technology Stack
@@ -25,7 +25,7 @@
 - **Log data:** Production-style log files with multiple error patterns
 - **Incident data:** Historical incident reports with root cause analysis
 - **Demo app:** Simple Node.js/Express API for testing ops tooling
-- **Copilot features:** Custom agents, custom prompts, Copilot chat, Agent mode
+- **Copilot features:** Custom agents, custom skills, Copilot chat, Agent mode
 
 ## What You Are Working With
 
@@ -65,7 +65,8 @@ Your `.github/copilot-instructions.md` should include:
 ### Suggested Custom Skills
 
 - **Log Triage Skill** -- A fixed sequence: pull a log window, group related errors, separate one-off noise from recurring patterns, and timestamp the sequence of events leading to the failure.
-- **Historical Pattern Match Skill** -- A repeatable workflow: take a new error signature, search incident history for matching root causes, and attach the closest historical match with its resolution.
+- **Historical Pattern Match and Routing Skill** -- Start with an error signature and search incident history for a supported match. In Stage 2, extend the same workflow with the team-routing guide and the Incident Router agent to recommend an owner with evidence. State when no historical match exists.
+- **Runbook Generation Skill** -- Use incident evidence to produce diagnostic steps and an escalation path. Build it in Stage 3 with the Runbook Generator agent, distinguishing confirmed fixes from proposed checks. Stage 4 adds a separate skill for change-specific deployment checklists.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "log analysis agent", "incident routing skill", and "ops runbook instructions" before you draft your own.
 
@@ -74,7 +75,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 ## Tips for Using Copilot on This Track
 
 - When feeding log files to Copilot, use `#file` to reference the log files directly. Ask Copilot to "analyze this log file, identify all errors, group related errors together, and explain each group in plain language."
-- For the routing prompt, include the team routing table in the prompt context. Ask Copilot to match error patterns against the table and justify its routing recommendation.
+- Give the routing skill the team routing table and incident evidence. Check that its recommendation follows the table and cites the relevant log entries.
 - Test your agent against both log files -- day 1 has different error patterns than day 2. A good agent handles both.
 - For runbook generation, start from the incident history. Ask Copilot: "Based on INC-2025-0051, write a runbook that an L1 support engineer could follow next time this happens."
 - Use the demo app to create live error scenarios. Run the app, hit the `/api/orders?simulate=error` endpoint, and feed the logs to your agent.

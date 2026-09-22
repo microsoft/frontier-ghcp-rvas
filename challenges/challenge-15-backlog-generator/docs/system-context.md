@@ -25,7 +25,7 @@ This manual process takes hours per spec. Different people produce different str
 
 Copilot-based automation that turns a spec document into a structured backlog, using:
 
-- Custom prompts (`.github/prompts/`) for the conversion rules
+- Custom skills (`.github/skills/`) for repeatable backlog conversion and reviewed Jira publishing
 - Custom agents (`.github/agents/`) for refinement and gap analysis
 - Optionally, the Atlassian Rovo MCP server to push items directly to Jira
 

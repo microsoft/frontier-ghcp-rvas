@@ -43,4 +43,4 @@ If the refinement agent's gap analysis is generic, incomplete, or misses contrad
 
 ---
 
-Previous: [Stage 1: Spec-to-Backlog Prompt](stage-1-prompt.md) | Next: [Stage 3: MCP Integration](stage-3-mcp.md)
+Previous: [Stage 1: Spec-to-Backlog Skill](stage-1-skill.md) | Next: [Stage 3: MCP Integration](stage-3-mcp.md)
