@@ -2,14 +2,14 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 30 min
 
-Keep application code unchanged in this stage. You need to know what the
-inherited version does before asking Copilot to change it.
+Do not change application code in this stage. First learn what the inherited
+version does.
 
 ## Tasks
 
-1. Complete setup in a disposable clone. If you used the devcontainer, skip
-   manual clean-start setup: it has already run. The post-create step also
-   validates the starter but leaves the application stopped.
+1. Set up a disposable clone. If you use the devcontainer, skip the manual
+   clean-start setup. Its post-create step already validates the starter and
+   leaves the application stopped.
 2. From the challenge folder, check the starter:
 
    ```bash
@@ -25,21 +25,22 @@ inherited version does before asking Copilot to change it.
    dotnet run --project src/EquipmentBooking.Web --urls http://0.0.0.0:5080
    ```
 
-4. Open `http://localhost:5080` in your browser, or use the devcontainer's
-   forwarded port 5080. Keep port forwarding private. Browse equipment at `/`,
-   open `/Reservations` for booking and history, and find the demo maintenance
-   controls at `/Admin`. Identify the synthetic employee selector.
-5. Use fixed dates in October 2030 to check availability. Make a reservation
-   on available equipment and find it in the reservation list. Observe
-   cancellation and maintenance behavior without repairing anything yet.
-6. Record the commands and results in your working note. Separate an
-   environment failure from an application symptom.
-7. Draft brief repository instructions from the facts you have checked.
-   Create the small Discovery Reviewer agent and regression-test skill
-   described in the overview. You will refine them during the next stages.
+4. Open `http://localhost:5080` in your browser, or use the devcontainer port
+   forwarded from 5080. Keep the forwarded port private. Browse equipment at
+   `/`, use `/Reservations` to book equipment and view its history, and find
+   the demo maintenance controls at `/Admin`. Find the synthetic employee
+   selector.
+5. Use fixed dates in October 2030 to check availability. Reserve available
+   equipment and find the reservation in the list. Check cancellation and
+   maintenance, but do not fix anything yet.
+6. Record the commands and results in your working note. Distinguish setup
+   failures from application symptoms.
+7. Write short repository instructions based on facts you checked. Create the
+   Discovery Reviewer agent and regression-test skill described in the
+   overview. You will refine both in later stages.
 
-Stop a foreground local run with `Ctrl+C`. Restart it with the same launch
-command. Keep your test data until you have recorded any useful observation.
+Stop a foreground local run with `Ctrl+C`, then restart it with the same
+command. Keep test data until you have recorded useful observations.
 The local database is
 `src/EquipmentBooking.Web/App_Data/equipment-booking.db`, relative to the
 challenge folder. `Booking__DatabasePath` overrides that location; relative
@@ -47,21 +48,21 @@ override paths resolve against the web project's content root.
 
 ### Seeded Lab Data
 
-The UI defaults to October 10 to October 12, 2030, regardless of today's date.
-The thermal camera has a reservation for that range. The laser level has a
-cancelled reservation for it; compare its history with the availability shown.
-The inspection tablet starts available, and the moisture meter is under
-maintenance.
+The UI defaults to October 10 through October 12, 2030, regardless of the
+current date. The thermal camera has a reservation for that range. The laser
+level has a cancelled reservation for the same dates. Compare its history with
+the availability shown. The inspection tablet starts available. The moisture
+meter starts under maintenance.
 
 The employee choices are Alex Morgan, Sam Rivera, and Taylor Chen. These are
 synthetic identities, not authenticated users.
 
 ### Optional Docker Run
 
-The simplest Docker path uses a **host terminal**, outside the devcontainer.
-It requires a running Docker daemon. Stop any web process using port 5080,
-then run these commands from the challenge folder on the host. The final `.`
-is the application build context.
+Use a **host terminal** outside the devcontainer for the simplest Docker path.
+It needs a running Docker daemon. Stop any web process on port 5080, then run
+these commands from the challenge folder on the host. The final `.` is the
+application build context.
 
 ```bash
 docker build -t challenge-29-booking .
@@ -73,10 +74,10 @@ docker run -d --name challenge-29-booking \
   challenge-29-booking
 ```
 
-Open `http://localhost:5080`. The named volume stores the database separately
-from the container. If you run Docker commands inside the devcontainer, its
-CLI uses the host engine: port 5080 is published on the host, and the
-devcontainer's forwarded URL may not reach it.
+Open `http://localhost:5080`. The named volume keeps the database outside the
+container. Docker commands run inside the devcontainer still use the host
+engine. Port 5080 is published on the host, so the devcontainer's forwarded URL
+may not reach it.
 
 Stop and restart without losing data:
 
@@ -90,11 +91,10 @@ your development environment.
 
 ## Verification
 
-- The browser loads the starter, and you can find its existing booking
-  workflows.
+- The browser loads the starter and shows its existing booking workflows.
 - `dotnet test EquipmentBooking.sln` and `bash scripts/validate-starter.sh`
   pass against the unchanged starter.
-- The baseline note records any unexpected behavior without claiming a cause.
+- The baseline note records unexpected behavior without guessing at a cause.
 - No application changes or waitlist implementation have been made.
 
 **Passing baseline tests are incomplete evidence.** The cancellation defect is
@@ -103,9 +103,9 @@ suite.
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can explain launch output and help locate entry points. You decide
-whether a failure comes from setup or the application. Keep observed behavior
-separate from an explanation that merely sounds plausible.
+Copilot can explain launch output and help find entry points. You decide
+whether a failure comes from setup or the application. Keep what you observed
+separate from guesses about why it happened.
 
 ---
 
