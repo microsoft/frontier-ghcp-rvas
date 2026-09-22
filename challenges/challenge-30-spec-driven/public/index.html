@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service Desk | Request register</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="/">SD<span>Service Desk</span></a>
+      <span class="lab-label">Local workshop / demo data</span>
+    </header>
+    <main>
+      <div class="intro">
+        <div>
+          <p class="eyebrow">Operations / Request register</p>
+          <h1>Make the request.<br>Keep the details.</h1>
+          <p class="lede">A shared place for equipment and service requests.</p>
+        </div>
+        <div class="identity">
+          <label for="identity">Demo identity</label>
+          <select id="identity" disabled></select>
+          <p>No sign-in. Everyone can view the register.<br>Restarting the server resets all data.</p>
+        </div>
+      </div>
+      <p id="error" role="alert" hidden></p>
+      <p id="notice" role="status" aria-live="polite"></p>
+      <div class="workspace">
+        <section aria-labelledby="register-heading">
+          <div class="section-heading">
+            <h2 id="register-heading">Request register</h2>
+            <button id="refresh" class="quiet" type="button">Refresh</button>
+          </div>
+          <p class="section-note">Drafts can be submitted by their requester. Approval is not available in this starter.</p>
+          <div id="requests" aria-busy="true"></div>
+        </section>
+        <aside aria-labelledby="new-heading">
+          <p class="eyebrow">Start here</p>
+          <h2 id="new-heading">New request</h2>
+          <form id="create-form">
+            <fieldset id="create-fields" disabled>
+              <label for="title">Title</label>
+              <input id="title" name="title" maxlength="100" required placeholder="What do you need?">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" maxlength="1000" rows="4" required placeholder="Include enough detail for someone else to act."></textarea>
+              <label for="cost">Estimated cost (USD)</label>
+              <input id="cost" name="cost" inputmode="decimal" pattern="[0-9]+(\.[0-9]{1,2})?" required placeholder="0.00">
+              <p class="hint">Use up to two decimal places. No commas.</p>
+              <button type="submit">Create draft</button>
+            </fieldset>
+          </form>
+        </aside>
+      </div>
+    </main>
+    <footer>Service Desk <span>Challenge 30 / Spec-driven feature delivery</span></footer>
+    <template id="request-template">
+      <article class="request">
+        <div class="request-meta"><span class="request-id"></span><span class="status"></span></div>
+        <h3></h3>
+        <p class="description"></p>
+        <div class="request-bottom"><span class="requester"></span><strong class="cost"></strong></div>
+        <button class="submit-request quiet" type="button" hidden>Submit request</button>
+      </article>
+    </template>
+  </body>
+</html>

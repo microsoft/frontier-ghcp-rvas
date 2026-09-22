@@ -1,0 +1,21 @@
+id: challenge-30
+number: 30
+title: Spec-Driven Feature Delivery with GitHub Spec Kit
+category: workflow-automation
+difficulty: intermediate
+duration_minutes: 300
+description: Use GitHub Spec Kit with Copilot CLI to add approvals to a service-request app, then change the approval rules while keeping the specification and code aligned.
+focus: Spec-driven development, requirements clarification, implementation, and living specifications
+tags:
+  - spec-driven-development
+  - spec-kit
+  - copilot-cli
+  - typescript
+outcomes:
+  - ship-features
+  - raise-quality
+prerequisites: []
+devcontainer_key: challenge-30-spec-driven
+track_url: tracks/challenge-30-spec-driven-track.md
+contents_url: tracks/challenge-30-spec-driven-track/stages.md
+starter_path: challenges/challenge-30-spec-driven/

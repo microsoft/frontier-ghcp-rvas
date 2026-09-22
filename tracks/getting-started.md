@@ -4,6 +4,10 @@ These steps apply to every track. Start with a clean workspace, inspect the
 challenge, and then prepare the Copilot customizations you will use during the
 session.
 
+**Challenge 30 exception:** follow its baseline stage for setup and Spec Kit
+initialization. It uses supplied Spec Kit skills; authoring custom agents and
+skills is optional. Complete cleanup before initialization, never afterward.
+
 ## 1. Start from a Clean Workspace
 
 ### Open in a DevContainer (Recommended)

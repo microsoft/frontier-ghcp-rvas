@@ -203,6 +203,10 @@ workflow that the challenge builds or operates.
 For BYOC sessions, the facilitator prepares the tailored agent and skill
 briefs. Participants use those briefs to author their own artifacts.
 
+Challenge 30 is a narrow exception: participants adopt Spec Kit's supplied
+workflow. Keep the required overview subsections, but mark custom agent and
+skill briefs as optional. Do not require them to rebuild Spec Kit's workflow.
+
 ## Rules
 
 - Do not duplicate content between the overview and contents page.

@@ -2,7 +2,7 @@
 
 Pick a challenge track that matches the work you want to deliver, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a session on your own app or repository. Each track drives a specific business outcome -- the root README explains the full approach.
 
-The **30 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
+The **31 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
 Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages and role pages.
 
@@ -10,6 +10,9 @@ Each track starts with an overview page for audience, setup, tips, and resources
 
 Sessions use a customization trio: repository instructions, custom agents, and
 custom skills tailored to each challenge.
+
+Challenge 30 instead adopts Spec Kit's supplied workflow. Custom agent and skill
+authoring is optional for that track.
 
 ## Challenges by Role
 
@@ -42,7 +45,8 @@ team boundaries.
   [22](./challenge-22-secure-release-track.md),
   [24](./challenge-24-database-rescue-track.md),
   [25](./challenge-25-api-guardrails-track.md),
-  [29](./challenge-29-inherit-and-evolve-track.md)
+  [29](./challenge-29-inherit-and-evolve-track.md),
+  [30](./challenge-30-spec-driven-track.md)
 - **Full-stack Developer:** [1](./challenge-1-web-api-track.md),
   [4](./challenge-4-frontend-track.md),
   [8](./challenge-8-flight-delay-track.md),
@@ -52,7 +56,8 @@ team boundaries.
   [18](./challenge-18-cobol-modernization-track.md),
   [21](./challenge-21-azure-terraform-track.md),
   [27](./challenge-27-offline-mobile-track.md),
-  [29](./challenge-29-inherit-and-evolve-track.md)
+  [29](./challenge-29-inherit-and-evolve-track.md),
+  [30](./challenge-30-spec-driven-track.md)
 - **Data, AI, and ML Practitioner:** [2](./challenge-2-ml-ai-track.md),
   [6](./challenge-6-agentic-workflows-track.md),
   [7](./challenge-7-copilot-sdk-track.md),
@@ -66,7 +71,8 @@ team boundaries.
   [19](./challenge-19-wcf-modernization-track.md),
   [22](./challenge-22-secure-release-track.md),
   [27](./challenge-27-offline-mobile-track.md),
-  [29](./challenge-29-inherit-and-evolve-track.md)
+  [29](./challenge-29-inherit-and-evolve-track.md),
+  [30](./challenge-30-spec-driven-track.md)
 - **DevOps, Platform, SRE, and Cloud:** [3](./challenge-3-devops-track.md),
   [6](./challenge-6-agentic-workflows-track.md),
   [7](./challenge-7-copilot-sdk-track.md),
@@ -105,7 +111,8 @@ team boundaries.
   [25](./challenge-25-api-guardrails-track.md),
   [26](./challenge-26-developer-onboarding-track.md),
   [28](./challenge-28-work-iq-workplace-assistant-track.md),
-  [29](./challenge-29-inherit-and-evolve-track.md)
+  [29](./challenge-29-inherit-and-evolve-track.md),
+  [30](./challenge-30-spec-driven-track.md)
 - **Security:** [5](./challenge-5-qa-track.md),
   [6](./challenge-6-agentic-workflows-track.md),
   [12](./challenge-12-legacy-modernization-track.md),
@@ -291,6 +298,22 @@ defect with a regression test, and adding a waitlist through the existing UI and
 backend.
 
 **Your Challenge:** Challenge 29 - Equipment Booking
+
+**Duration:** 4-6 hours (five stages)
+
+---
+
+### [Challenge 30: Spec-Driven Feature Delivery with GitHub Spec Kit](./challenge-30-spec-driven-track.md)
+
+**Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
+
+**Best for:** Developers and technical leads adopting spec-driven development
+
+**Focus:** Using Spec Kit with Copilot CLI to clarify an approval feature,
+implement it in an existing TypeScript app, and update the same specification
+when the approval rules change.
+
+**Your Challenge:** Challenge 30 - Service Desk
 
 **Duration:** 4-6 hours (five stages)
 
@@ -586,11 +609,11 @@ Develop and ship ML models, intelligent agents, or AI-driven features.
 
 ### By Outcome
 
-**Want to ship features faster?** Challenges 0, 1, 4, 8, 9, 10, 15, 17, 27, 29
+**Want to ship features faster?** Challenges 0, 1, 4, 8, 9, 10, 15, 17, 27, 29, 30
 
 **Need to modernize legacy systems?** Challenges 11, 12, 18, 19, 20
 
-**Want to raise quality and confidence?** Challenges 1, 4, 5, 13, 22, 24, 26, 27, 29
+**Want to raise quality and confidence?** Challenges 1, 4, 5, 13, 22, 24, 26, 27, 29, 30
 
 **Looking to automate delivery or ops toil?** Challenges 3, 6, 13, 14, 15, 16, 17, 20, 25, 26
 
@@ -662,6 +685,7 @@ Pick the track that matches your primary role, or choose by outcome if you want 
 | 🎨 **Challenge 27: Offline Mobile** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | React Native, Expo, TypeScript, Jest | Challenge 27 |
 | 📋 **Challenge 28: Work IQ Workplace Assistant** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | Work IQ, Copilot CLI, Microsoft Entra ID, Microsoft 365 | Challenge 28 |
 | 🔧 **Challenge 29: Inherit and Evolve** | ⭐⭐ | 4-6h | .NET 10, Razor Pages, SQLite, xUnit | Challenge 29 |
+| 🔧 **Challenge 30: Spec-Driven Feature Delivery** | ⭐⭐ | 4-6h | Spec Kit, Copilot CLI, TypeScript, Playwright | Challenge 30 |
 
 ## What Skills You'll Build
 

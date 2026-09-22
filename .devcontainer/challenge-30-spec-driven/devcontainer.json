@@ -1,0 +1,32 @@
+{
+  "name": "Challenge 30 - Spec-Driven Feature Delivery",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12",
+      "installTools": false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "DavidAnson.vscode-markdownlint"
+      ]
+    }
+  },
+  "remoteEnv": {
+    "PATH": "${containerWorkspaceFolder}/challenges/challenge-30-spec-driven/.tools/python/bin:${containerWorkspaceFolder}/challenges/challenge-30-spec-driven/.tools/copilot/node_modules/.bin:${containerEnv:PATH}",
+    "HOST": "0.0.0.0"
+  },
+  "forwardPorts": [5080],
+  "portsAttributes": {
+    "5080": {
+      "label": "Service Desk (local lab)",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/challenge-30-spec-driven/setup.sh",
+  "remoteUser": "node"
+}

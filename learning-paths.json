@@ -85,12 +85,13 @@
     {
       "id": "advanced-workflows",
       "name": "AI-Driven Development Acceleration",
-      "description": "Use agents and the Copilot SDK to shorten the path from a written requirement to working software.",
+      "description": "Use agents, the Copilot SDK, and Spec Kit to take a written requirement through implementation.",
       "challenge_ids": [
         "challenge-6",
         "challenge-7",
         "challenge-17",
-        "challenge-28"
+        "challenge-28",
+        "challenge-30"
       ]
     },
     {

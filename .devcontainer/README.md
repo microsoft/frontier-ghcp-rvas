@@ -82,6 +82,19 @@ disposable clone: setup removes unrelated challenges and organizer files.
 The [track guide](../tracks/challenge-29-inherit-and-evolve-track.md) covers startup
 and the separate application container.
 
+### [Challenge 30: Spec-Driven Feature Delivery with GitHub Spec Kit](./challenge-30-spec-driven/)
+
+**For:** Developers adopting a spec-driven workflow with Copilot CLI.
+
+- **Tools:** Node.js 22, Python 3.12, uv, Spec Kit 1.0.9, Copilot CLI 1.0.88-1
+- **Application:** Service Desk on port 5080, with in-memory demo data
+
+Select this configuration directly; keep `setup.sh` in its challenge subfolder.
+First-time setup removes unrelated content and installs the pinned tools.
+Rebuilding a prepared workspace preserves participant customizations. Setup
+checks the starter but leaves Spec Kit initialization to
+[Stage 1](../tracks/challenge-30-spec-driven-track/stage-1-baseline.md).
+
 ## How to Use
 
 1. **Copy the Folder**: Copy the contents of the specific challenge folder (e.g., `.devcontainer/challenge-1-backend/`) into the `.devcontainer/` folder of your own repository.
