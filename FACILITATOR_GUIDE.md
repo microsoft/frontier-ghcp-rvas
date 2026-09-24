@@ -9,22 +9,6 @@ Participants can either pick a **worked-example challenge** from the
 See the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for guidance
 on customer-codebase sessions.
 
-### Spec Kit Session
-
-[Challenge 30](./tracks/challenge-30-spec-driven-track.md) uses GitHub Spec Kit's
-supplied workflow with Copilot CLI. Choose it for teams learning spec-driven
-feature delivery. Challenge 17 remains the option for teams that want to author
-their own reusable delivery workflows.
-
-Custom agents and skills are optional in Challenge 30. Reserve time for its
-mandatory rule change: participants must update the same feature specification
-and prove the revised behavior. The stage pages include the stakeholder briefs
-and guidance for resolving open policy questions.
-
-Before the session, check the pinned CLI versions and Copilot sign-in. Run
-cleanup before initializing Spec Kit; repeating it afterward removes installed
-skills. The local app uses synthetic identities and must not be exposed publicly.
-
 ## Pre-Session Setup (1 week before)
 
 ### 1. **Verify Prerequisites**
