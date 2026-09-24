@@ -19,6 +19,10 @@ Reads `challenges/*/meta.yml`, `learning-paths.json`,
 
 The `assets/data/` directory is generated and git-ignored.
 
+Links from content docs are rewritten during the build. Published content routes
+stay on the site; links without a published route open the source file on GitHub.
+Keep those links relative to the repository source file.
+
 ## Challenge page model
 
 A challenge is published as a page set:

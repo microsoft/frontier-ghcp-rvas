@@ -532,8 +532,65 @@ function buildChallengePages(challenges) {
 }
 
 /* ─── Build content pages ─────────────────────────────────────────────────── */
-function buildContentPages() {
+function publishedChallengePages(challenges) {
+  const pages = new Map();
+
+  for (const challenge of challenges) {
+    for (const page of challenge.pages || []) {
+      const sourcePath = path.resolve(ROOT, page.source_path).replace(/\\/g, '/').toLowerCase();
+      pages.set(sourcePath, challengePageUrl(challenge.id, page.id));
+    }
+  }
+
+  return pages;
+}
+
+function publishedContentPages(pages) {
+  const published = new Map();
+
+  for (const page of pages) {
+    const sourcePath = page.source.replace(/\\/g, '/').toLowerCase();
+    published.set(sourcePath, `guide.html?p=${encodeURIComponent(page.slug)}`);
+  }
+
+  published.set(path.join(DOCS_DIR, 'index.md').replace(/\\/g, '/').toLowerCase(), 'index.html');
+  published.set(path.join(TRACKS_DIR, 'README.md').replace(/\\/g, '/').toLowerCase(), 'catalog.html');
+  published.set(path.join(ROOT, 'byoc').replace(/\\/g, '/').toLowerCase(), 'byoc.html');
+
+  return published;
+}
+
+function rewriteContentPageLinks(content, sourcePath, challengePages, contentPages) {
+  const LINK_RE = /(!?)\[((?:[^\]\\]|\\.)*)\]\(\s*([^()\s]+)((?:\s+"[^"]*")?)\s*\)/g;
+  return content.replace(LINK_RE, (full, bang, text, target, title) => {
+    if (bang) return full;
+    const t = target.trim();
+    if (!t || t.startsWith('#') || t.startsWith('//') || /^[a-z][a-z0-9+.-]*:/i.test(t)) return full;
+
+    let core = t;
+    let hash = '';
+    const hashIndex = core.indexOf('#');
+    if (hashIndex >= 0) {
+      hash = core.slice(hashIndex);
+      core = core.slice(0, hashIndex);
+    }
+    if (!core) return full;
+
+    const isDir = core.endsWith('/');
+    const targetPath = path.resolve(path.dirname(sourcePath), core).replace(/\\/g, '/').toLowerCase();
+    const relToRoot = path.relative(ROOT, targetPath).replace(/\\/g, '/');
+    if (relToRoot.startsWith('..')) return full;
+
+    const publishedUrl = challengePages.get(targetPath) || contentPages.get(targetPath);
+    if (publishedUrl) return `[${text}](${publishedUrl}${hash}${title})`;
+
+    return `[${text}](${repoUrlFor(relToRoot, isDir)}${hash}${title})`;
+  });
+}
+
+function buildContentPages(challenges) {
   ensureDir(OUT_PAGES_DIR);
+  const challengePages = publishedChallengePages(challenges);
 
   const pages = [
     { slug: 'copilot-guide', source: path.join(DOCS_DIR, 'copilot-guide.md') },
@@ -543,11 +600,13 @@ function buildContentPages() {
     { slug: 'troubleshooting', source: TROUBLESHOOT_PATH },
     { slug: 'getting-started', source: path.join(TRACKS_DIR, 'getting-started.md') }
   ];
+  const contentPages = publishedContentPages(pages);
 
   for (const page of pages) {
     const content = readFileSafe(page.source);
     if (content) {
-      fs.writeFileSync(path.join(OUT_PAGES_DIR, `${page.slug}.md`), content, 'utf8');
+      const rewritten = rewriteContentPageLinks(content, page.source, challengePages, contentPages);
+      fs.writeFileSync(path.join(OUT_PAGES_DIR, `${page.slug}.md`), rewritten, 'utf8');
     }
   }
 }
@@ -723,7 +782,7 @@ function main() {
     'utf8'
   );
 
-  buildContentPages();
+  buildContentPages(challenges);
 
   const refErrors = validateReferences(
     challenges,
