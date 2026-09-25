@@ -4,8 +4,21 @@ const errorBox = document.querySelector("#error");
 const notice = document.querySelector("#notice");
 const form = document.querySelector("#create-form");
 const fields = document.querySelector("#create-fields");
+const refreshButton = document.querySelector("#refresh");
 let users = [];
 let requests = [];
+let busy = false;
+
+function setBusy(value) {
+  busy = value;
+  refreshButton.disabled = busy;
+  identity.disabled = busy || users.length === 0;
+  fields.disabled = busy || users.length === 0;
+  register.setAttribute("aria-busy", String(busy));
+  for (const button of register.querySelectorAll(".submit-request")) {
+    button.disabled = busy;
+  }
+}
 
 function showError(error) {
   errorBox.textContent = error instanceof Error ? error.message : String(error);
@@ -42,9 +55,11 @@ function render() {
       new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(request.costCents / 100);
     const submit = card.querySelector(".submit-request");
     submit.hidden = request.status !== "draft" || request.requesterId !== identity.value;
+    submit.disabled = busy;
     submit.addEventListener("click", async () => {
+      if (busy) return;
       clearMessages();
-      submit.disabled = true;
+      setBusy(true);
       try {
         const updated = await api(`/api/requests/${request.id}/submit`, { method: "POST" });
         requests = requests.map((item) => item.id === updated.id ? updated : item);
@@ -52,7 +67,8 @@ function render() {
         notice.textContent = `${updated.id} submitted.`;
       } catch (error) {
         showError(error);
-        submit.disabled = false;
+      } finally {
+        setBusy(false);
       }
     });
     register.append(card);
@@ -60,7 +76,7 @@ function render() {
 }
 
 async function refresh() {
-  register.setAttribute("aria-busy", "true");
+  setBusy(true);
   try {
     const [loadedUsers, loadedRequests] = await Promise.all([api("/api/users"), api("/api/requests")]);
     const selected = identity.value;
@@ -68,11 +84,9 @@ async function refresh() {
     requests = loadedRequests;
     identity.replaceChildren(...users.map((user) => new Option(`${user.name} / ${user.role}`, user.id)));
     if (users.some((user) => user.id === selected)) identity.value = selected;
-    identity.disabled = false;
-    fields.disabled = false;
     render();
   } finally {
-    register.setAttribute("aria-busy", "false");
+    setBusy(false);
   }
 }
 
@@ -80,22 +94,20 @@ identity.addEventListener("change", () => {
   clearMessages();
   render();
 });
-document.querySelector("#refresh").addEventListener("click", async (event) => {
+refreshButton.addEventListener("click", async () => {
+  if (busy) return;
   clearMessages();
-  const button = event.currentTarget;
-  button.disabled = true;
   try {
     await refresh();
     notice.textContent = "Register refreshed.";
   } catch (error) {
     showError(error);
-  } finally {
-    button.disabled = false;
   }
 });
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (busy) return;
   clearMessages();
   const data = new FormData(form);
   const [whole, fraction = ""] = String(data.get("cost")).split(".");
@@ -104,7 +116,7 @@ form.addEventListener("submit", async (event) => {
     showError(new Error("The estimated cost is too large."));
     return;
   }
-  fields.disabled = true;
+  setBusy(true);
   try {
     const created = await api("/api/requests", {
       method: "POST",
@@ -117,7 +129,7 @@ form.addEventListener("submit", async (event) => {
   } catch (error) {
     showError(error);
   } finally {
-    fields.disabled = false;
+    setBusy(false);
   }
 });
 

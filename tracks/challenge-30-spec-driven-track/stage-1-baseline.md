@@ -49,7 +49,10 @@
 
    Create a draft as Alex, submit it, then switch identities. Notice which
    actions disappear. The server also checks who may submit; hiding a button
-   alone is not enough. Stop the app with Ctrl+C in its terminal when needed.
+   alone is not enough. While an operation is running, the UI disables refresh
+   and request changes so responses cannot overwrite newer state. Controls
+   become available again when it finishes, including after a server error.
+   Stop the app with Ctrl+C in its terminal when needed.
    Restarting it discards all changes and restores the seeded requests.
 
 4. **Inspect the small application.** Read `src/requests.ts`, `src/app.ts`,
