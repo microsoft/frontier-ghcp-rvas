@@ -3,12 +3,13 @@ number: 9
 title: Cross-Functional Team Sprint
 category: team-sprints
 difficulty: advanced
-duration_minutes: 540
-description: Build a product end-to-end with a cross-functional team using GitHub Copilot across every role from ideation to deployment.
+duration_minutes: 300
+description: Build a product with a cross-functional team and use Impeccable for a focused, QA-verified report-flow improvement.
 focus: End-to-end product development in a cross-functional team -- from ideation to production deployment -- using GitHub Copilot across every role
 tags:
   - team-sprints
   - advanced
+  - impeccable
 prerequisites: []
 track_url: tracks/challenge-9-team-sprint-track.md
 contents_url: tracks/challenge-9-team-sprint-track/stages.md

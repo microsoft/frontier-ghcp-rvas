@@ -1,6 +1,6 @@
 # Stage 4: Polish and Advanced Features
 
-**Duration:** 1-2 hours
+**Duration:** Optional, outside the core budget
 **Focus:** Production readiness, advanced features
 
 ## Objective

@@ -1,6 +1,6 @@
 # Challenge 9 Track: Cross-Functional Team Sprint
 
-**Duration:** 8-10 hours
+**Duration:** 4-6 hours (five-hour core; extended backlog is optional)
 
 **Difficulty:** ⭐⭐⭐
 
@@ -51,6 +51,7 @@ The team chooses their stack together. Recommended options:
 - **Testing:** Playwright for E2E, Jest or pytest for unit tests
 - **Infrastructure:** GitHub Codespaces (devcontainers), GitHub Actions
 - **Collaboration:** GitHub Issues, GitHub Projects, GitHub Spark
+- **UI review:** Impeccable, installed manually by the frontend developer
 
 ## How This Track Works
 
@@ -76,6 +77,11 @@ Your team is building **CityPulse** -- a civic engagement platform. A fictional 
 
 The stakeholder brief is in [challenges/challenge-9-team-sprint/docs/stakeholder-brief.md](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md). Read it as a team before sprint planning.
 
+**Core scope:** report submission, readable report status, and upcoming events,
+with API integration and a tested demo. Work in parallel. Keep the dashboard,
+authentication, and agentic workflows outside the core. Azure deployment is a
+stretch task if the team has not prepared an environment before the session.
+
 ## Getting Started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
@@ -85,6 +91,15 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 Navigate to `challenges/challenge-9-team-sprint/`. Read the [stakeholder brief](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) as a team before starting Stage 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-9-team-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
+
+### Install and Use Impeccable
+
+The frontend developer follows the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
+after clean setup. Preflight a source file in the exported frontend. Use `shape`
+for the report-submission journey in Stage 2, then review the working form and
+reports list in Stage 3. Preserve the Spark handover contract. QA checks one
+accepted improvement against the story's acceptance criteria; the dashboard
+stays optional.
 
 ### Repository Instructions for This Track
 

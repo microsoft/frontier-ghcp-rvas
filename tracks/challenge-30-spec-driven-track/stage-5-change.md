@@ -44,11 +44,20 @@
    scope. Use test fixtures to verify the rule for previously completed and
    pending requests. Do not claim a restart tested preservation of history.
 
-5. **Run both test suites and use `/speckit-converge` again.** Review any new
+5. **Review the intermediate approval state.** Use 15--25 minutes of this
+   stage's existing review time for Impeccable's `critique` on the working
+   request card. After one high-cost approval, the requester must understand
+   that another eligible manager's decision is still required. Check pending
+   and fully approved states at the same viewport; preserve the existing UI.
+   Record accepted requirements in the current specification and browser
+   tests. The starter exposes `request-status` as a stable test hook. Review
+   feedback cannot change the approval policy without the spec-first step.
+
+6. **Run both test suites and use `/speckit-converge` again.** Review any new
    tasks, fix genuine gaps, and rerun the affected checks. Reuse the optional
    Acceptance Evidence skill if it helped in Stage 4.
 
-6. **Review the final diff.** Show the revised acceptance criterion and the
+7. **Review the final diff.** Show the revised acceptance criterion and the
    test that proves it. Explain one decision the model could not make safely
    without clarification. Commit the updated specification with its code.
 
@@ -60,6 +69,7 @@
 - Two different eligible managers are required for a high-cost request.
 - The first approval is visibly pending; repeated or forbidden approvals do
   not advance it.
+- The UI critique decision agrees with the revised specification and browser tests
 - Completed decisions remain final, with fixture-based regression evidence.
 - The application works through the UI, all tests pass, and no material
   convergence gap remains.

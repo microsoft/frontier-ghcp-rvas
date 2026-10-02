@@ -3,14 +3,15 @@ number: 8
 title: Full-Stack Flight Delay Predictor
 category: core-tracks
 difficulty: advanced
-duration_minutes: 600
-description: Develop a full-stack ML application integrating data science, API engineering, and frontend with GitHub Copilot.
+duration_minutes: 300
+description: Build one flight-delay model and API, then review the integrated prediction UI with Impeccable.
 focus: Full-stack application development -- data science, API engineering, and frontend -- with GitHub Copilot
 tags:
   - advanced-tracks
   - advanced
   - api
   - frontend
+  - impeccable
 prerequisites: []
 track_url: tracks/challenge-8-flight-delay-track.md
 contents_url: tracks/challenge-8-flight-delay-track/stages.md

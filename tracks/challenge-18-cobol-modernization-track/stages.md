@@ -4,14 +4,19 @@
 
 | Stage | Name | Duration | What You Do |
 |-------|------|----------|-------------|
-| 1 | [Code Archaeology](stage-1-archaeology.md) | 2-3 hours | Reverse-engineer the COBOL codebase, document architecture, map data model |
-| 2 | [Characterization Testing](stage-2-testing.md) | 2-3 hours | Write tests that capture current behavior in your target language |
-| 3 | [Feature Evolution](stage-3-evolution.md) | 1.5-2 hours | Extend the system with new features |
-| 4 | [Full-Stack Modernization](stage-4-modernization.md) | 2.5-3 hours | Build a React frontend + API backend from the COBOL business logic |
+| Setup | [Environment and skills](../challenge-18-cobol-modernization-track.md#getting-started) | 30 min | Copilot customizations, manual Impeccable install |
+| 1 | [Code Archaeology](stage-1-archaeology.md) | 45 min | Trace account transfer and its record layouts |
+| 2 | [Characterization Testing](stage-2-testing.md) | 60 min | Capture transfer behavior before translation |
+| 3 | [Feature Evolution](stage-3-evolution.md) | Optional | New banking features outside the core |
+| 4 | [Full-Stack Modernization](stage-4-modernization.md) | 165 min | Local transfer API, React journey, one UI review and fix |
 
-Each stage builds on the previous. The archaeology stage is critical -- if you skip understanding the code, the modernization stage will produce a broken system.
+The core takes **five hours including setup**. Complete Stages 1 and 2, then
+go directly to Stage 4. Characterization comes before translation; do not skip
+it to spend more time on the UI. Full-system migration and Stage 3 are optional.
 
-> **Short on time?** Focus on Stages 1 and 4. Translate the core transaction program and account program rather than the full system. Skip Stage 3 entirely.
+> **Four-hour session:** Preflight setup and cap the final stage at 135 minutes.
+> Keep one transfer view and its rejection cases. Preserve characterization
+> and the browser review; skip extra account-management pages.
 
 ---
 

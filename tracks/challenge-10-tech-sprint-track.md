@@ -1,6 +1,6 @@
 # Challenge 10 Track: Technical Team Sprint
 
-**Duration:** 8-10 hours
+**Duration:** 4-6 hours (five-hour core; extended backlog is optional)
 
 **Difficulty:** ⭐⭐⭐
 
@@ -58,6 +58,7 @@ The team chooses their stack together. Recommended options:
 - **Testing:** Playwright for E2E, Jest or pytest for unit tests
 - **Infrastructure:** GitHub Codespaces (devcontainers), GitHub Actions
 - **Collaboration:** GitHub Issues, GitHub Projects
+- **UI review:** Impeccable, installed manually by the frontend developer
 
 ## How This Track Works
 
@@ -83,6 +84,12 @@ Your team is building **TrailMate** -- a trail management platform for a regiona
 
 The functional specification is in [challenges/challenge-10-tech-sprint/docs/functional-spec.md](../challenges/challenge-10-tech-sprint/docs/functional-spec.md). Read it as a team before sprint planning.
 
+**Core scope:** trail browsing and detail, status/severity labels, and condition
+reporting, with API integration and a tested demo. Work in parallel. Keep
+dashboard analytics, authentication, and agentic workflows outside the core.
+Azure deployment is a stretch task if the team has not prepared an environment
+before the session.
+
 ## Getting Started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
@@ -92,6 +99,15 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 Navigate to `challenges/challenge-10-tech-sprint/`. Read the [functional specification](../challenges/challenge-10-tech-sprint/docs/functional-spec.md) as a team before starting Stage 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-10-tech-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
+
+### Install and Use Impeccable
+
+The frontend developer follows the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
+after clean setup. Preflight a source file in the chosen frontend. In Stages
+2--3, review the trail list and detail journey. Make Closed and Caution states
+clear without color, and check high-severity warnings at a narrow viewport.
+Keep status rules in the functional specification; the skill must not invent
+a new policy.
 
 ### Repository Instructions for This Track
 

@@ -24,12 +24,12 @@ test("create and submit a request from the register", async ({ page }) => {
   await page.getByRole("button", { name: "Create draft" }).click();
   const card = page.getByRole("article").filter({ hasText: "Browser smoke request" });
   await expect(card).toContainText("$1,000.01");
-  await expect(card.locator(".status")).toHaveText("draft");
+  await expect(card.getByTestId("request-status")).toHaveText("draft");
   await page.getByLabel("Demo identity").selectOption("manager-1");
   await expect(card.getByRole("button", { name: "Submit request" })).toBeHidden();
   await page.getByLabel("Demo identity").selectOption("employee-1");
   await card.getByRole("button", { name: "Submit request" }).click();
-  await expect(card.locator(".status")).toHaveText("submitted");
+  await expect(card.getByTestId("request-status")).toHaveText("submitted");
   await page.reload();
   await expect(page.getByRole("article").filter({ hasText: "Browser smoke request" }).locator(".status"))
     .toHaveText("submitted");

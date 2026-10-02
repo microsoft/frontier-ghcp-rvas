@@ -26,7 +26,7 @@
             <h3>@item.Name</h3>
             <p class="location">@item.Location</p>
             <div class="card-bottom">
-                <span class="status @(availability?.IsAvailable == true ? "available" : "unavailable")">@(availability?.Reason ?? "Check dates")</span>
+                <span data-testid="equipment-status" class="status @(availability?.IsAvailable == true ? "available" : "unavailable")">@(availability?.Reason ?? "Check dates")</span>
                 @if (availability?.IsAvailable == true)
                 {
                     <a class="button" asp-page="/Reservations" asp-route-EquipmentId="@item.Id" asp-route-Start="@Model.Start" asp-route-End="@Model.End">Reserve<span class="sr-only"> @item.Name</span></a>

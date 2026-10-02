@@ -41,6 +41,10 @@ Select the configuration that matches the challenge you are working on.
 - **Tools:** Node.js 20
 - **Extensions:** ESLint, Prettier, Tailwind CSS
 
+Participants install the Impeccable skill with `npx` after the clean setup.
+Use the [frontend setup checks](../tracks/challenge-4-frontend-track.md#install-and-check-impeccable)
+to verify it in the participant environment.
+
 ### [Challenge 5: QA & Test Automation](./challenge-5-qa/)
 
 **For:** Testing the eShopOnWeb (.NET) application.
@@ -73,7 +77,7 @@ Select the configuration that matches the challenge you are working on.
 
 **For:** C# developers taking over an unfamiliar application.
 
-- **Tools:** .NET 10 SDK, GitHub CLI, Docker CLI using the host engine
+- **Tools:** .NET 10 SDK, Node.js 22 for npx, GitHub CLI, Docker CLI using the host engine
 - **Extensions:** C# Dev Kit, GitHub Copilot, REST Client, markdownlint
 - **Application:** Equipment booking on port 5080, with local SQLite storage
 

@@ -3,13 +3,14 @@ number: 4
 title: Frontend
 category: core-tracks
 difficulty: intermediate
-duration_minutes: 420
-description: Build modern, interactive React user interfaces with TypeScript, state management, and accessibility using GitHub Copilot.
-focus: Building modern, interactive user interfaces with GitHub Copilot
+duration_minutes: 300
+description: Build an accessible React task dashboard with GitHub Copilot and use Impeccable to review and improve one user flow.
+focus: React development and evidence-based UI improvements with GitHub Copilot and Impeccable
 tags:
   - core-tracks
   - core
   - frontend
+  - impeccable
 prerequisites: []
 track_url: tracks/challenge-4-frontend-track.md
 contents_url: tracks/challenge-4-frontend-track/stages.md

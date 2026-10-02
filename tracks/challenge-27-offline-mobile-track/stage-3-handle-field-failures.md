@@ -23,6 +23,12 @@ Permission Degraded-Mode Check before accepting either permission flow.
    and status cues that do not depend on color.
 6. Exercise stable, offline, flaky, and conflict fixtures. Add useful retry and
    recovery feedback without turning transient failures into duplicate work.
+7. Within the existing accessibility review time, use Impeccable's `critique`
+   on the inspection journey in Expo web. Distinguish saved locally, awaiting
+   sync, failed, and conflicted states without color. Improve one confusing
+   message or recovery action while preserving technician input and the agreed
+   conflict policy. Use `inspection-save` and `inspection-notes` test IDs to
+   target the same controls in before-and-after evidence.
 
 At the midpoint, refine the two reviewer agents with one miss from the first
 pass. Tighten their checks around the actual failure you found rather than
@@ -36,6 +42,8 @@ adding broad mobile advice.
 - Inspection work continues when optional permissions are unavailable
 - Accessibility fixes cover both controls and changing sync status
 - Every network fixture has a deterministic validation path
+- One UI review improves sync or recovery feedback without changing queue behavior
+- Web evidence is labeled as web evidence; outstanding native checks remain explicit
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 

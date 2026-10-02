@@ -1,6 +1,6 @@
 # Stage 3: Sprint 2 -- Integration and Polish
 
-**Duration:** 2 hours
+**Duration:** 90 minutes for core integration and review
 **Focus:** Integration, advanced features, bug fixing, deployment preparation
 
 Sprint 2 builds on the core features from Sprint 1. The priority shifts: integrate the frontend with the real backend, fix bugs that QA found, add advanced features where capacity allows, and get the first deployment working.

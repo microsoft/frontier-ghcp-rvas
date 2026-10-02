@@ -17,7 +17,7 @@ with regression evidence, and adding a small waitlist feature
 - Comfortable reading C# and writing automated tests
 - Basic understanding of HTTP forms and relational data
 - GitHub Copilot access in your editor or terminal
-- .NET 10 SDK, or VS Code with Dev Containers and Docker
+- .NET 10 SDK and Node.js with npm, or VS Code with Dev Containers and Docker
 
 You do not need prior knowledge of this codebase. No Azure subscription,
 credentials, or external services are required.
@@ -29,6 +29,7 @@ credentials, or external services are required.
 - SQLite for local persistence
 - xUnit tests
 - Docker for an optional local application run
+- Impeccable for a focused review of the new waitlist UI
 
 Your team has inherited an equipment-booking application. Employees can browse
 equipment and check availability, then make or cancel reservations. A demo
@@ -61,8 +62,8 @@ Follow the [common setup steps](getting-started.md), with the warning below.
 Work in
 [`challenges/challenge-29-inherit-and-evolve/`](../challenges/challenge-29-inherit-and-evolve/).
 Use `.devcontainer/challenge-29-inherit-and-evolve/devcontainer.json` when
-selecting a devcontainer. It provides .NET 10 and the host Docker CLI, and
-forwards port 5080. Keep that forwarded port private. Its post-create step runs
+selecting a devcontainer. It provides .NET 10 and the host Docker CLI. Node.js 22
+runs the skill installer. Port 5080 is forwarded; keep it private. Its post-create step runs
 repository setup, then `scripts/validate-starter.sh` to restore, build, and
 test the starter. **It does not start the application.**
 
@@ -75,6 +76,14 @@ for launch commands.
 Keep one short working note, wherever your team normally keeps engineering
 notes. Add source references during discovery and extend it with the final
 change summary. There is no separate report for each stage.
+
+### Install and Use Impeccable
+
+Follow the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it).
+Preflight `src/EquipmentBooking.Web/Pages/Index.cshtml`. In Stage 4, review only
+the new waitlist flow after it works. Preserve Razor and the existing visual
+style. Make pending and confirmed states distinct, and explain blocked admin
+confirmation. Keep date rules and eligibility in the application's tests.
 
 ### Repository Instructions for This Track
 

@@ -1,6 +1,6 @@
 # Stage 1: Technical Planning
 
-**Duration:** 1.5 hours
+**Duration:** 60 minutes for the core; role-page estimates cover the extended backlog
 **Focus:** Read the specification, create a technical spec, set up tooling, break work into Issues, plan Sprint 1
 
 This stage replaces the product discovery step found in other team tracks. The functional specification is already written -- your job is to turn it into a technical plan and get everything ready to build.

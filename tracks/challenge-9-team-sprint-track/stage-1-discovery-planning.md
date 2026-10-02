@@ -1,6 +1,6 @@
 # Stage 1: Discovery and Sprint Planning
 
-**Duration:** 1.5 hours
+**Duration:** 60 minutes for the core; role-page estimates cover the extended backlog
 **Focus:** Product ideation, backlog creation, tooling setup, sprint planning
 
 This stage sets the foundation. The PO drives ideation while everyone else sets up their development environment and tooling. The stage ends with a sprint planning session where the team commits to Sprint 1 scope.

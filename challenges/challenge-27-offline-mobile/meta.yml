@@ -4,12 +4,13 @@ title: Offline Field Service App
 category: core-tracks
 difficulty: intermediate
 duration_minutes: 300
-description: Build a dependable mobile workflow for field technicians who work with intermittent connectivity.
+description: Build a dependable offline mobile workflow and use Impeccable to review inspection and recovery feedback.
 focus: Designing offline data flows, synchronization behavior, and testable failure handling with GitHub Copilot
 tags:
   - mobile-development
   - offline-first
   - field-service
+  - impeccable
 outcomes:
   - ship-features
   - raise-quality

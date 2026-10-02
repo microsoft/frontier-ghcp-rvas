@@ -14,6 +14,11 @@ custom skills tailored to each challenge.
 Challenge 30 instead adopts Spec Kit's supplied workflow. Custom agent and skill
 authoring is optional for that track.
 
+Challenges 4, 8, 9, 10, 18, 27, 29, and 30 also use a participant-installed
+Impeccable skill for one focused UI review. Follow the
+[shared installation checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
+and the selected track's review scope.
+
 ## Challenges by Role
 
 Role Collections group relevant challenges without implying a required order.
@@ -181,11 +186,11 @@ Move from requirements to working, demoable software across the stack.
 
 **Best for:** Frontend Developers, UI/UX Engineers, React Developers
 
-**Focus:** Building a task dashboard across 5 stages -- responsive layout, state management with undo, drag-and-drop Kanban, accessibility fixes, API integration with test coverage.
+**Focus:** Build an accessible task dashboard with CRUD and a mocked API. Use Impeccable for one required critique-and-fix cycle and final UI polish.
 
-**Your Challenge:** Challenge 4 - Interactive UI Components
+**Your Challenge:** Challenge 4 - Accessible Task Dashboard with Impeccable
 
-**Duration:** 6-8 hours (5 progressive stages)
+**Duration:** 4-6 hours (five-hour core; optional stretch tasks)
 
 ---
 
@@ -195,11 +200,11 @@ Move from requirements to working, demoable software across the stack.
 
 **Best for:** Full-stack developers who want to combine ML, API, and UI skills
 
-**Focus:** Building a complete application that predicts flight delay probability -- explore FAA dataset, train ML model, serve through REST API, create user-facing frontend.
+**Focus:** Build one baseline flight-delay model and API, then review the prediction UI with Impeccable. Preserve probability wording and the cross-layer contract.
 
 **Your Challenge:** Challenge 8 - Flight Delay Predictor
 
-**Duration:** 8-12 hours (Advanced)
+**Duration:** 4-6 hours (five-hour core; optional advanced work)
 
 ---
 
@@ -209,11 +214,11 @@ Move from requirements to working, demoable software across the stack.
 
 **Best for:** Teams of 4-6 people from different roles (PO, developers, QA, DevOps) who want to build a complete application together
 
-**Focus:** Building CityPulse, a civic engagement platform, from scratch as a cross-functional team running a simulated agile sprint. PO ideates with GitHub Spark, team builds REST API + frontend + tests + CI/CD + deploys to Azure.
+**Focus:** Build CityPulse report and event journeys in parallel, integrate the API, and use Impeccable for one QA-verified UI improvement. Azure deployment is optional without a prepared environment.
 
 **Your Challenge:** Challenge 9 - CityPulse Team Sprint
 
-**Duration:** 8-10 hours (Team, Advanced)
+**Duration:** 4-6 hours (five-hour team core; optional extended backlog)
 
 ---
 
@@ -223,11 +228,11 @@ Move from requirements to working, demoable software across the stack.
 
 **Best for:** Teams of 2-4 developers/engineers who want to build a complete application from a provided specification, without business stakeholders
 
-**Focus:** Building TrailMate, a trail management platform, from a provided functional specification. Team reads spec, writes technical spec, breaks work into Issues, self-organizes across two sprints.
+**Focus:** Build TrailMate browsing and condition reporting from the specification, then use Impeccable to improve status and warning clarity. Keep analytics outside the core.
 
 **Your Challenge:** Challenge 10 - TrailMate Technical Sprint
 
-**Duration:** 8-10 hours (Team, Advanced)
+**Duration:** 4-6 hours (five-hour team core; optional extended backlog)
 
 ---
 
@@ -357,11 +362,11 @@ Reverse-engineer, characterize, and migrate legacy codebases to modern platforms
 
 **Best for:** Developers dealing with COBOL modernization or anyone who wants to tackle a full legacy-to-modern-web transformation
 
-**Focus:** Reverse-engineering a COBOL banking system, building characterization tests, and modernizing it into a React + Node.js/Java web application -- the language that still runs the majority of the world's banking transactions.
+**Focus:** Characterize one COBOL transfer workflow, modernize it through an API and React UI, and review the teller journey with Impeccable.
 
 **Your Challenge:** Challenge 18 - COBOL Core Banking Modernization
 
-**Duration:** 8-12 hours (Solo, Advanced)
+**Duration:** 4-6 hours (five-hour transfer core; optional full-system work)
 
 ---
 
@@ -660,12 +665,12 @@ Pick the track that matches your primary role, or choose by outcome if you want 
 | 🔧 **Backend** | ⭐ -- ⭐⭐⭐ | 6-8h | Node.js/Python, REST APIs | Challenge 1 |
 | 📊 **Data Science** | ⭐ -- ⭐⭐⭐ | 6-8h | Python, pandas, ML | Challenge 2 |
 | ☁️ **DevOps** | ⭐ -- ⭐⭐⭐ | 6-8h | Terraform, Docker, K8s | Challenge 3 |
-| 🎨 **Frontend** | ⭐ -- ⭐⭐⭐ | 6-8h | React, TypeScript | Challenge 4 |
+| 🎨 **Frontend** | ⭐ -- ⭐⭐⭐ | 4-6h | React, TypeScript, Impeccable | Challenge 4 |
 | 🔍 **QA Tester** | ⭐ -- ⭐⭐⭐ | 6-8h | Playwright, xUnit, .NET Aspire | Challenge 5 |
 | 🧩 **Challenge 7: Copilot SDK** | ⭐⭐⭐ | 8-12h | Node.js, TypeScript, Copilot SDK | Challenge 7 |
-| ✈️ **Challenge 8: Flight Delay** | ⭐⭐⭐ | 8-12h | Python, scikit-learn, React/Vite | Challenge 8 |
-| 🏢 **Challenge 9: Team Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Challenge 9 |
-| 🥾 **Challenge 10: Tech Sprint** | ⭐⭐⭐ | 8h | Full stack, Docker, Azure, Playwright | Challenge 10 |
+| ✈️ **Challenge 8: Flight Delay** | ⭐⭐⭐ | 4-6h | Python, scikit-learn, React/Vite, Impeccable | Challenge 8 |
+| 🏢 **Challenge 9: Team Sprint** | ⭐⭐⭐ | 4-6h | Full stack, Playwright, Impeccable | Challenge 9 |
+| 🥾 **Challenge 10: Tech Sprint** | ⭐⭐⭐ | 4-6h | Full stack, Playwright, Impeccable | Challenge 10 |
 | 🏦 **Challenge 11: MUMPS Modernization** | ⭐⭐⭐ | 8-12h | MUMPS, PSL/Java/Python/C#, testing | Challenge 11 |
 | 🔄 **Challenge 12: Legacy Modernization** | ⭐⭐⭐ | 6-8h | Java 8/17, Spring Boot 1.x/3.x, Maven | Challenge 12 |
 | 📄 **Challenge 13: Living Documentation** | ⭐⭐ | 6-8h | Java, Mermaid, Custom Agents/Skills | Challenge 13 |
@@ -673,7 +678,7 @@ Pick the track that matches your primary role, or choose by outcome if you want 
 | 📝 **Challenge 15: Backlog Generator** | ⭐⭐ | 6-8h | Instructions, Agents, Skills, Atlassian MCP | Challenge 15 |
 | 🖥️ **Challenge 16: Ops Assistant** | ⭐⭐ | 6-8h | Instructions, Agents, Skills, Node.js | Challenge 16 |
 | 🚀 **Challenge 17: Spec-to-Ship** | ⭐⭐⭐ | 6-8h | Node.js, Agents, Skills, GitHub Actions | Challenge 17 |
-| 🏗️ **Challenge 18: COBOL Modernization** | ⭐⭐⭐ | 8-12h | COBOL, Node.js/Java, React, testing | Challenge 18 |
+| 🏗️ **Challenge 18: COBOL Modernization** | ⭐⭐⭐ | 4-6h | COBOL, Node.js/Java, React, Impeccable | Challenge 18 |
 | 🔧 **Challenge 19: WCF Modernization** | ⭐⭐ -- ⭐⭐⭐ | 6-10h | C#, CoreWCF, ASP.NET Core, xUnit | Challenge 19 |
 | 💻 **Challenge 20: PowerShell Automation** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | PowerShell, Pester, PSScriptAnalyzer, GitHub Actions | Challenge 20 |
 | ☁️ **Challenge 21: Azure Terraform** | ⭐⭐ -- ⭐⭐⭐ | 4-6h | Terraform, AzureRM, Key Vault, GitHub Actions | Challenge 21 |

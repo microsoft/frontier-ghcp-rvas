@@ -1,58 +1,44 @@
 # Stage 1: Code Archaeology
 
-**Duration:** 2-3 hours
-**Focus:** Reverse-engineering, documentation, architecture mapping
-
-## Objective
-
-Understand the COBOL banking system well enough to explain every program's purpose, map the data model, trace key business workflows, and document the system for someone who has never seen it. You start with almost nothing -- a brief system context file and a set of source files in a language most developers have never worked with.
+**Duration:** 45 minutes
+**Focus:** Trace one transfer workflow before changing its implementation
 
 ## Tasks
 
-Before you open a single COBOL program, use your full setup: keep your repository instructions open for the COBOL conventions and target stack, bring in the COBOL Archaeologist agent for the parts of the business logic that need domain judgment, and run your business rule documentation skill as you trace each workflow instead of writing the architecture doc from memory afterward.
+Keep your repository instructions open for the target stack and COBOL
+conventions. Use the COBOL Archaeologist agent where the transfer logic is
+unclear, and run your business-rule documentation skill as you trace it.
 
-1. **Learn COBOL basics.** Before touching the code, spend 15-20 minutes getting oriented. Ask Copilot to explain COBOL structure: what the four DIVISIONs are (IDENTIFICATION, ENVIRONMENT, DATA, PROCEDURE), how SECTIONS and paragraphs organize code, what PIC clauses mean (`PIC 9(5)`, `PIC X(30)`, `PIC S9(7)V99 COMP-3`), how 88-level condition names work, what PERFORM and PERFORM THRU do, how EVALUATE/WHEN replaces nested IF chains, and how indexed file I/O works (OPEN, READ, WRITE, REWRITE, DELETE, START with keys). Create a cheat sheet for yourself in the challenge folder.
-
-2. **Map the program structure.** Read through every `.cbl` file and `.cpy` copybook. Write a one-paragraph summary of each. Which programs handle user-facing menus? Which contain business logic? Which are pure utilities? Document the call graph -- which programs CALL which, and which paragraphs PERFORM which.
-
-3. **Extract the data model.** The database is defined in FD (File Description) entries and copybooks. For each ISAM file, document:
-   - The record layout from the copybook (field names, PIC clauses, sizes)
-   - The primary key and any alternate keys (ALTERNATE RECORD KEY)
-   - COMP-3 packed decimal fields and their precision
-   - 88-level condition names and what they represent
-   - Relationships between files (customer ID linking accounts to customers, etc.)
-
-4. **Trace three key workflows end-to-end.** Pick three operations and trace them through the code from user input to file write:
-   - A customer deposit (menu selection through the transaction program and back)
-   - An account-to-account transfer (including any locking or serialization strategy)
-   - End-of-day batch processing (all the steps the batch program runs)
-
-5. **Identify quirks, risks, and technical debt.** As you read, note anything that looks like a bug, a workaround, dead code, a security concern, or a missing feature. The system context file hints at some of these, but there are more to find.
-
-6. **Produce an architecture document.** Write a single markdown file (`docs/architecture.md` in the challenge folder) that covers:
-   - System overview and program map
-   - Data model with all ISAM files and record layouts documented
-   - Key workflow diagrams (text-based, Mermaid, or ASCII -- your choice)
-   - Technical debt inventory
-   - Glossary of domain terms used in the code
-
-## Copilot Tips for This Stage
-
-- Use `/explain` on each `.cbl` file to get a starting point, then refine with follow-up questions.
-- Ask Copilot: "What does this PERFORM THRU block do?" or "Explain this EVALUATE statement" -- it handles COBOL idioms well.
-- Point Copilot at the seed data or initialization program first -- the initial data setup reveals the data model more clearly than the business logic.
-- Use agent mode to generate Mermaid diagrams from your program descriptions.
-- For dense PROCEDURE DIVISION blocks, paste them into chat and ask "What business rule does this implement?"
-- Copybooks are key -- they define the record layouts that every program shares. Start there for the data model.
+1. Get oriented in the COBOL divisions, paragraphs, and copybook fields used
+   by `programs/BNKTXN.cbl`. Trace `PROCESS-TRANSFER` and the paragraphs it calls.
+2. Identify the account and transaction record layouts. Record balance
+   precision, account status/type checks, and the fields changed by a transfer.
+3. Follow successful transfer and rejected-input paths from prompts to file
+   writes. Check same-account handling, account eligibility, amount limits,
+   and insufficient funds against the source.
+4. Compare actual file operations with comments about locking. Distinguish
+   implemented behavior from claims in comments; do not assume atomicity.
+5. Keep one short source-linked note for the transfer workflow. List observed
+   outputs and uncertainties that Stage 2 must check. Preserve the COBOL files.
 
 ## Verification
 
-- [ ] Cheat sheet of COBOL syntax and conventions created
-- [ ] All programs and copybooks summarized with purpose and responsibilities
-- [ ] Complete data model documented (all ISAM files, record layouts, keys, conditions)
-- [ ] Three workflows traced with step-by-step descriptions
-- [ ] Technical debt items identified (at least 5)
-- [ ] Architecture document written and saved to the challenge folder
+- The note identifies the transfer entry point, relevant record layouts, and
+  called paragraphs
+- Each claimed rule has a source reference
+- Successful and rejected paths are traced through their observable effects
+- Open questions distinguish suspected defects from behavior to preserve
+
+## Stretch Tasks
+
+Map every program and ISAM file, trace deposit and end-of-day batch workflows,
+and build a broader technical-debt inventory. Keep this outside the core.
+
+## What Copilot Helps With vs. What Requires Your Judgment
+
+Copilot can explain paragraphs and propose a workflow map. You decide whether
+the explanation matches the actual file operations. A plausible summary is
+not evidence that a transfer is safe or atomic.
 
 ---
 

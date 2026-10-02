@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "id": "successful-transfer",
+      "sourceAccount": "synthetic-account-a",
+      "destinationAccount": "synthetic-account-b",
+      "amount": "100.00",
+      "responseState": "success"
+    },
+    {
+      "id": "same-account",
+      "sourceAccount": "synthetic-account-a",
+      "destinationAccount": "synthetic-account-a",
+      "amount": "100.00",
+      "responseState": "validation-error"
+    },
+    {
+      "id": "nonpositive-amount",
+      "sourceAccount": "synthetic-account-a",
+      "destinationAccount": "synthetic-account-b",
+      "amount": "-1.00",
+      "responseState": "validation-error"
+    },
+    {
+      "id": "failed-request",
+      "sourceAccount": "synthetic-account-a",
+      "destinationAccount": "synthetic-account-b",
+      "amount": "100.00",
+      "responseState": "request-error"
+    }
+  ]
+}

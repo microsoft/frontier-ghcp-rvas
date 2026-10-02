@@ -34,6 +34,17 @@ A dashboard page showing:
 - Number of events in the next 7 days
 - Recent activity (last 5 reports submitted)
 
+### UI Acceptance Criteria
+
+- Report status has a readable text label, including Acknowledged. Color alone
+  must not carry its meaning.
+- Invalid or failed submissions preserve entered values and explain the
+  next action. A failed request must not show submission success.
+- An empty reports list explains that there are no reports yet.
+- A resident can complete the report form using the keyboard at mobile width.
+- One reviewed UI improvement has before-and-after evidence in the feature PR
+  and is checked against these criteria by QA.
+
 ### User Accounts (Priority: Could Have)
 
 Optional for the first version. If time allows, add user registration and login so that reports and events are associated with a user. Protect creation endpoints behind authentication.
@@ -42,8 +53,8 @@ Optional for the first version. If time allows, add user registration and login 
 
 - The platform must be a web application (accessible from a browser)
 - It must work on both desktop and mobile screens
-- The team has 8 hours to deliver a working version
-- Deploy to a cloud environment (Azure preferred)
+- The team has a five-hour core, with up to six hours for debugging
+- Demonstrate locally; Azure deployment is optional unless an environment is already prepared
 - There is no existing infrastructure -- you are starting from scratch
 
 ## Success Criteria
@@ -52,7 +63,7 @@ The mayor will evaluate the demo based on:
 
 1. Can a resident submit an issue report and see it in the system?
 2. Can a resident browse upcoming community events?
-3. Is the application deployed and accessible online?
+3. Can the team demonstrate the integrated application locally or on Azure?
 4. Does the project have automated tests?
 5. Does the team have a CI/CD pipeline?
 

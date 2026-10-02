@@ -30,6 +30,9 @@ public sealed class BrowserTests : BookingTest
         Assert.Contains("Thermal camera", html);
         var document = await new HtmlParser().ParseDocumentAsync(html);
         Assert.Equal(4, document.QuerySelectorAll(".equipment-card").Length);
+        var statusLabels = document.QuerySelectorAll("[data-testid='equipment-status']");
+        Assert.Equal(4, statusLabels.Length);
+        Assert.All(statusLabels, label => Assert.False(string.IsNullOrWhiteSpace(label.TextContent)));
         var response = await Client.GetAsync("/?Start=2030-10-12&End=2030-10-14");
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         document = await new HtmlParser().ParseDocumentAsync(await response.Content.ReadAsStringAsync());

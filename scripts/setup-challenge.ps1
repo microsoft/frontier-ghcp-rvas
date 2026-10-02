@@ -56,18 +56,19 @@ $ChallengeMap = @{
     "challenge-25-api-guardrails"     = "challenge-25-api-guardrails"
     "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding"
     "challenge-27-offline-mobile"     = "challenge-27-offline-mobile"
+    "challenge-28-work-iq-workplace-assistant" = "challenge-28-work-iq-workplace-assistant"
     "challenge-29-inherit-and-evolve" = "challenge-29-inherit-and-evolve"
     "challenge-30-spec-driven"       = "challenge-30-spec-driven"
 }
 
 $TrackFileMap = @{
-    "challenge-0-product-planning"    = "product-owner-track"
-    "challenge-1-backend"             = "backend-developer-track"
-    "challenge-2-data-science"        = "data-science-ml-track"
-    "challenge-3-devops"              = "devops-platform-track"
-    "challenge-4-frontend"            = "frontend-developer-track"
-    "challenge-5-qa"                  = "qa-tester-track"
-    "challenge-6-agentic-workflows"   = "agentic-workflows-track"
+    "challenge-0-product-planning"    = "challenge-0-product-planning-track"
+    "challenge-1-backend"             = "challenge-1-web-api-track"
+    "challenge-2-data-science"        = "challenge-2-ml-ai-track"
+    "challenge-3-devops"              = "challenge-3-devops-track"
+    "challenge-4-frontend"            = "challenge-4-frontend-track"
+    "challenge-5-qa"                  = "challenge-5-qa-track"
+    "challenge-6-agentic-workflows"   = "challenge-6-agentic-workflows-track"
     "challenge-7-copilot-sdk"         = "challenge-7-copilot-sdk-track"
     "challenge-8-flight-delay"        = "challenge-8-flight-delay-track"
     "challenge-9-team-sprint"         = "challenge-9-team-sprint-track"
@@ -89,18 +90,19 @@ $TrackFileMap = @{
     "challenge-25-api-guardrails"     = "challenge-25-api-guardrails-track"
     "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding-track"
     "challenge-27-offline-mobile"     = "challenge-27-offline-mobile-track"
+    "challenge-28-work-iq-workplace-assistant" = "challenge-28-work-iq-workplace-assistant-track"
     "challenge-29-inherit-and-evolve" = "challenge-29-inherit-and-evolve-track"
     "challenge-30-spec-driven"       = "challenge-30-spec-driven-track"
 }
 
 $TrackDirMap = @{
-    "challenge-0-product-planning"    = "product-owner-track"
-    "challenge-1-backend"             = "backend-developer-track"
-    "challenge-2-data-science"        = "data-science-ml-track"
-    "challenge-3-devops"              = "devops-platform-track"
-    "challenge-4-frontend"            = "frontend-developer-track"
-    "challenge-5-qa"                  = "qa-tester-track"
-    "challenge-6-agentic-workflows"   = "agentic-workflows-track"
+    "challenge-0-product-planning"    = "challenge-0-product-planning-track"
+    "challenge-1-backend"             = "challenge-1-web-api-track"
+    "challenge-2-data-science"        = "challenge-2-ml-ai-track"
+    "challenge-3-devops"              = "challenge-3-devops-track"
+    "challenge-4-frontend"            = "challenge-4-frontend-track"
+    "challenge-5-qa"                  = "challenge-5-qa-track"
+    "challenge-6-agentic-workflows"   = "challenge-6-agentic-workflows-track"
     "challenge-7-copilot-sdk"         = "challenge-7-copilot-sdk-track"
     "challenge-8-flight-delay"        = "challenge-8-flight-delay-track"
     "challenge-9-team-sprint"         = "challenge-9-team-sprint-track"
@@ -122,6 +124,7 @@ $TrackDirMap = @{
     "challenge-25-api-guardrails"     = "challenge-25-api-guardrails-track"
     "challenge-26-developer-onboarding" = "challenge-26-developer-onboarding-track"
     "challenge-27-offline-mobile"     = "challenge-27-offline-mobile-track"
+    "challenge-28-work-iq-workplace-assistant" = "challenge-28-work-iq-workplace-assistant-track"
     "challenge-29-inherit-and-evolve" = "challenge-29-inherit-and-evolve-track"
     "challenge-30-spec-driven"       = "challenge-30-spec-driven-track"
 }
@@ -140,7 +143,28 @@ $TrackFileName = $TrackFileMap[$Challenge]
 $TrackDirName = $TrackDirMap[$Challenge]
 $TrackFilePath = Join-Path $RepoRoot "tracks/$TrackFileName.md"
 $TrackDirPath = Join-Path $RepoRoot "tracks/$TrackDirName"
-$TrackAssetsPresent = (Test-Path $TrackFilePath) -or (Test-Path $TrackDirPath)
+$ChallengePath = Join-Path $RepoRoot "challenges/$ChallengeDir"
+$DevcontainerPath = Join-Path $RepoRoot ".devcontainer/$Challenge"
+
+$MissingPaths = @()
+if (-not (Test-Path $ChallengePath -PathType Container)) {
+    $MissingPaths += "challenges/$ChallengeDir"
+}
+if (-not (Test-Path $TrackFilePath -PathType Leaf)) {
+    $MissingPaths += "tracks/$TrackFileName.md"
+}
+if (-not (Test-Path $TrackDirPath -PathType Container)) {
+    $MissingPaths += "tracks/$TrackDirName"
+}
+if (-not (Test-Path $DevcontainerPath -PathType Container)) {
+    $MissingPaths += ".devcontainer/$Challenge"
+}
+
+if ($MissingPaths.Count -gt 0) {
+    Write-Host "Error: setup files are missing for '$Challenge':" -ForegroundColor Red
+    $MissingPaths | ForEach-Object { Write-Host "  $_" -ForegroundColor Red }
+    exit 1
+}
 
 Write-Host "=== Challenge Setup: $Challenge ===" -ForegroundColor Cyan
 Write-Host ""
@@ -165,24 +189,19 @@ Get-ChildItem -Path $ChallengesDir -Directory | ForEach-Object {
 # Remove unrelated track files and folders
 $TracksDir = Join-Path $RepoRoot "tracks"
 
-if ($TrackAssetsPresent) {
-    $KeepTrackFiles = @("getting-started.md", "$TrackFileName.md")
+$KeepTrackFiles = @("getting-started.md", "$TrackFileName.md")
 
-    Get-ChildItem -Path $TracksDir | ForEach-Object {
-        $ItemName = $_.Name
+Get-ChildItem -Path $TracksDir | ForEach-Object {
+    $ItemName = $_.Name
 
-        # Keep the track subfolder
-        if ($ItemName -eq $TrackDirName -and $_.PSIsContainer) { return }
+    # Keep the track subfolder
+    if ($ItemName -eq $TrackDirName -and $_.PSIsContainer) { return }
 
-        # Keep shared files
-        if ($KeepTrackFiles -contains $ItemName) { return }
+    # Keep shared files
+    if ($KeepTrackFiles -contains $ItemName) { return }
 
-        Remove-Item -Path $_.FullName -Recurse -Force
-        Write-Host "[CLEAN] Removed tracks/$ItemName" -ForegroundColor DarkGray
-    }
-}
-else {
-    Write-Host "[WARN] Track content for $Challenge is not in tracks/ yet -- leaving tracks/ intact" -ForegroundColor Yellow
+    Remove-Item -Path $_.FullName -Recurse -Force
+    Write-Host "[CLEAN] Removed tracks/$ItemName" -ForegroundColor DarkGray
 }
 
 # Remove unrelated devcontainer configs
@@ -224,7 +243,6 @@ foreach ($RemoveFile in @("CONTRIBUTING.md")) {
 # Replace root README with a focused version
 $RootReadme = Join-Path $RepoRoot "README.md"
 
-if ($TrackAssetsPresent) {
 @"
 # GitHub Copilot Adoption
 
@@ -252,37 +270,6 @@ Before you begin, verify Copilot is working:
 - [MCP Servers Guide](docs/mcp-servers.md)
 - [Troubleshooting](TROUBLESHOOTING.md)
 "@ | Set-Content -Path $RootReadme
-}
-else {
-@"
-# GitHub Copilot Adoption
-
-This workspace is set up for your challenge. The starter files are ready
-under `challenges/$ChallengeDir/`, and the shared docs were left in place
-because the dedicated track guide has not been added to `tracks/` yet.
-
-## Start Here
-
-1. Open `challenges/$ChallengeDir/`
-2. Read [Getting Started](tracks/getting-started.md)
-3. Use the shared docs in `docs/` if you need Copilot or Azure setup help
-
-## Quick Copilot Check
-
-Before you begin, verify Copilot is working:
-
-1. Look at the bottom-right of VS Code -- the Copilot icon should say "Ready"
-2. Press ``Ctrl+Shift+I`` (or ``Cmd+Shift+I`` on Mac) to open Chat
-3. Ask: "Hello, are you working?"
-
-## Resources
-
-- [Copilot Guide](docs/copilot-guide.md)
-- [Prompt Engineering Guide](docs/prompt-engineering.md)
-- [MCP Servers Guide](docs/mcp-servers.md)
-- [Troubleshooting](TROUBLESHOOTING.md)
-"@ | Set-Content -Path $RootReadme
-}
 Write-Host "[OK] Replaced root README.md" -ForegroundColor Green
 
 Write-Host ""

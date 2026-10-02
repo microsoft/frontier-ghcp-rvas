@@ -23,7 +23,7 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
-# shellcheck source=_clean-common.sh
+# shellcheck source=scripts/_clean-common.sh
 source "$REPO_ROOT/scripts/_clean-common.sh"
 
 # ── Mapping tables ──────────────────────────────────────────────────
@@ -70,13 +70,13 @@ declare -A CHALLENGE_MAP=(
 )
 
 declare -A TRACK_FILE_MAP=(
-  [challenge-0-product-planning]="product-owner-track"
-  [challenge-1-backend]="backend-developer-track"
-  [challenge-2-data-science]="data-science-ml-track"
-  [challenge-3-devops]="devops-platform-track"
-  [challenge-4-frontend]="frontend-developer-track"
-  [challenge-5-qa]="qa-tester-track"
-  [challenge-6-agentic-workflows]="agentic-workflows-track"
+  [challenge-0-product-planning]="challenge-0-product-planning-track"
+  [challenge-1-backend]="challenge-1-web-api-track"
+  [challenge-2-data-science]="challenge-2-ml-ai-track"
+  [challenge-3-devops]="challenge-3-devops-track"
+  [challenge-4-frontend]="challenge-4-frontend-track"
+  [challenge-5-qa]="challenge-5-qa-track"
+  [challenge-6-agentic-workflows]="challenge-6-agentic-workflows-track"
   [challenge-7-copilot-sdk]="challenge-7-copilot-sdk-track"
   [challenge-8-flight-delay]="challenge-8-flight-delay-track"
   [challenge-9-team-sprint]="challenge-9-team-sprint-track"
@@ -104,13 +104,13 @@ declare -A TRACK_FILE_MAP=(
 )
 
 declare -A TRACK_DIR_MAP=(
-  [challenge-0-product-planning]="product-owner-track"
-  [challenge-1-backend]="backend-developer-track"
-  [challenge-2-data-science]="data-science-ml-track"
-  [challenge-3-devops]="devops-platform-track"
-  [challenge-4-frontend]="frontend-developer-track"
-  [challenge-5-qa]="qa-tester-track"
-  [challenge-6-agentic-workflows]="agentic-workflows-track"
+  [challenge-0-product-planning]="challenge-0-product-planning-track"
+  [challenge-1-backend]="challenge-1-web-api-track"
+  [challenge-2-data-science]="challenge-2-ml-ai-track"
+  [challenge-3-devops]="challenge-3-devops-track"
+  [challenge-4-frontend]="challenge-4-frontend-track"
+  [challenge-5-qa]="challenge-5-qa-track"
+  [challenge-6-agentic-workflows]="challenge-6-agentic-workflows-track"
   [challenge-7-copilot-sdk]="challenge-7-copilot-sdk-track"
   [challenge-8-flight-delay]="challenge-8-flight-delay-track"
   [challenge-9-team-sprint]="challenge-9-team-sprint-track"
@@ -162,10 +162,19 @@ TRACK_FILE_NAME="${TRACK_FILE_MAP[$CHALLENGE_KEY]}"
 TRACK_DIR_NAME="${TRACK_DIR_MAP[$CHALLENGE_KEY]}"
 TRACK_FILE_PATH="$REPO_ROOT/tracks/${TRACK_FILE_NAME}.md"
 TRACK_DIR_PATH="$REPO_ROOT/tracks/$TRACK_DIR_NAME"
-TRACK_ASSETS_PRESENT=false
+CHALLENGE_PATH="$REPO_ROOT/challenges/$CHALLENGE_DIR"
+DEVCONTAINER_PATH="$REPO_ROOT/.devcontainer/$CHALLENGE_KEY"
 
-if [[ -f "$TRACK_FILE_PATH" || -d "$TRACK_DIR_PATH" ]]; then
-  TRACK_ASSETS_PRESENT=true
+MISSING_PATHS=()
+[[ -d "$CHALLENGE_PATH" ]] || MISSING_PATHS+=("challenges/$CHALLENGE_DIR")
+[[ -f "$TRACK_FILE_PATH" ]] || MISSING_PATHS+=("tracks/$TRACK_FILE_NAME.md")
+[[ -d "$TRACK_DIR_PATH" ]] || MISSING_PATHS+=("tracks/$TRACK_DIR_NAME")
+[[ -d "$DEVCONTAINER_PATH" ]] || MISSING_PATHS+=(".devcontainer/$CHALLENGE_KEY")
+
+if (( ${#MISSING_PATHS[@]} > 0 )); then
+  echo "Error: setup files are missing for '$CHALLENGE_KEY':" >&2
+  printf "  %s\n" "${MISSING_PATHS[@]}" >&2
+  exit 1
 fi
 
 echo "=== Challenge Setup: $CHALLENGE_KEY ==="
@@ -196,37 +205,33 @@ done
 # Keep: getting-started.md and the specific track .md + subfolder.
 # README.md and TRACK_STRUCTURE.md are removed -- they reference all
 # tracks and are a contributor guide, respectively.
-if [[ "$TRACK_ASSETS_PRESENT" == true ]]; then
-  KEEP_TRACK_FILES=(
-    "getting-started.md"
-    "${TRACK_FILE_NAME}.md"
-  )
+KEEP_TRACK_FILES=(
+  "getting-started.md"
+  "${TRACK_FILE_NAME}.md"
+)
 
-  for item in "$REPO_ROOT"/tracks/*; do
-    item_name="$(basename "$item")"
+for item in "$REPO_ROOT"/tracks/*; do
+  item_name="$(basename "$item")"
 
-    # Check if it's the track subfolder we need
-    if [[ "$item_name" == "$TRACK_DIR_NAME" && -d "$item" ]]; then
-      continue
-    fi
+  # Check if it's the track subfolder we need
+  if [[ "$item_name" == "$TRACK_DIR_NAME" && -d "$item" ]]; then
+    continue
+  fi
 
-    # Check if it's one of the files we always keep
-    keep=false
-    for keep_file in "${KEEP_TRACK_FILES[@]}"; do
-      if [[ "$item_name" == "$keep_file" ]]; then
-        keep=true
-        break
-      fi
-    done
-
-    if [[ "$keep" == false ]]; then
-      rm -rf "$item"
-      echo "[CLEAN] Removed tracks/$item_name"
+  # Check if it's one of the files we always keep
+  keep=false
+  for keep_file in "${KEEP_TRACK_FILES[@]}"; do
+    if [[ "$item_name" == "$keep_file" ]]; then
+      keep=true
+      break
     fi
   done
-else
-  echo "[WARN] Track content for $CHALLENGE_KEY is not in tracks/ yet -- leaving tracks/ intact"
-fi
+
+  if [[ "$keep" == false ]]; then
+    rm -rf "$item"
+    echo "[CLEAN] Removed tracks/$item_name"
+  fi
+done
 
 # ── Remove unrelated devcontainer configs ───────────────────────────
 
@@ -251,12 +256,10 @@ echo "[OK] Updated .devcontainer/README.md"
 
 # ── Remove files that are not for participants ─────────────────────
 
-for remove_file in CONTRIBUTING.md; do
-  if [[ -f "$REPO_ROOT/$remove_file" ]]; then
-    rm -f "$REPO_ROOT/$remove_file"
-    echo "[CLEAN] Removed $remove_file"
-  fi
-done
+if [[ -f "$REPO_ROOT/CONTRIBUTING.md" ]]; then
+  rm -f "$REPO_ROOT/CONTRIBUTING.md"
+  echo "[CLEAN] Removed CONTRIBUTING.md"
+fi
 
 # ── Preserve facilitator-facing reference material ─────────────────
 # byoc/ (Bring Your Own Challenge authoring kit) is
@@ -266,8 +269,7 @@ done
 
 # ── Replace root README with a focused version ──────────────────────
 
-if [[ "$TRACK_ASSETS_PRESENT" == true ]]; then
-  cat > "$REPO_ROOT/README.md" <<EOF
+cat > "$REPO_ROOT/README.md" <<EOF
 # GitHub Copilot Adoption
 
 This workspace is set up for your challenge. Everything you don't need
@@ -294,37 +296,6 @@ Before you begin, verify Copilot is working:
 - [MCP Servers Guide](docs/mcp-servers.md)
 - [Troubleshooting](TROUBLESHOOTING.md)
 EOF
-else
-  cat > "$REPO_ROOT/README.md" <<EOF
-# GitHub Copilot Adoption
-
-This workspace is set up for your challenge. The starter files are ready
-under \
-\`challenges/${CHALLENGE_DIR}/\`, and the shared docs were left in place
-because the dedicated track guide has not been added to \`tracks/\` yet.
-
-## Start Here
-
-1. Open \`challenges/${CHALLENGE_DIR}/\`
-2. Read [Getting Started](tracks/getting-started.md)
-3. Use the shared docs in \`docs/\` if you need Copilot or Azure setup help
-
-## Quick Copilot Check
-
-Before you begin, verify Copilot is working:
-
-1. Look at the bottom-right of VS Code -- the Copilot icon should say "Ready"
-2. Press \`Ctrl+Shift+I\` (or \`Cmd+Shift+I\` on Mac) to open Chat
-3. Ask: "Hello, are you working?"
-
-## Resources
-
-- [Copilot Guide](docs/copilot-guide.md)
-- [Prompt Engineering Guide](docs/prompt-engineering.md)
-- [MCP Servers Guide](docs/mcp-servers.md)
-- [Troubleshooting](TROUBLESHOOTING.md)
-EOF
-fi
 echo "[OK] Replaced root README.md"
 
 # ── Summary ─────────────────────────────────────────────────────────

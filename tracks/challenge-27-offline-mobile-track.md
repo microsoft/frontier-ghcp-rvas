@@ -31,6 +31,7 @@ web target and Node test suite cover the required work.
 - **Jest** for state and integration tests that run in Node
 - **Expo Camera and Expo Location** behind testable permission adapters
 - **Mocked Azure Functions contract** for job retrieval and queued action sync
+- **Impeccable** for a focused review of inspection and sync feedback
 
 ## Getting Started
 
@@ -49,6 +50,14 @@ The starter is a working service board with inspection forms and four network
 fixtures. It is not release-ready. Refresh the web app after saving an
 inspection, force a conflict, and try both permission buttons. Those failures
 define the work.
+
+### Install and Use Impeccable
+
+Follow the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it).
+Preflight `src/components/InspectionPanel.tsx`. In Stage 3, review feedback for
+local saves and synchronization failures in the Expo web target. Keep React
+Native components and the chosen conflict policy. **Web review does not prove
+native accessibility**; record any native-device checks still outstanding.
 
 ### Repository Instructions for This Track
 

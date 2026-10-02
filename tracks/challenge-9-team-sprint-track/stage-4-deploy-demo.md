@@ -1,6 +1,11 @@
 # Stage 4: Ship and Demo
 
-**Duration:** 1.5 hours
+**Duration:** 30 minutes for a tested core demo
+
+Use the core scope from the [contents page](stages.md). Azure deployment is
+optional when an environment was not prepared before the session. The full
+deployment tasks below remain stretch work; a local demo still requires
+integration and test evidence.
 **Focus:** Production deployment, final testing, demo, retrospective
 
 The final stretch. The team polishes the application, runs final tests on the production environment, and delivers a demo. The PO leads the demo and the team runs a brief retrospective afterward.

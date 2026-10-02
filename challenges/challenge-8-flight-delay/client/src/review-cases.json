@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "id": "low-probability",
+      "status": 200,
+      "delayMs": 0,
+      "body": { "delay_probability": 0.1 }
+    },
+    {
+      "id": "high-probability",
+      "status": 200,
+      "delayMs": 0,
+      "body": { "delay_probability": 0.8 }
+    },
+    {
+      "id": "delayed-response",
+      "status": 200,
+      "delayMs": 1500,
+      "body": { "delay_probability": 0.4 }
+    },
+    {
+      "id": "failed-request",
+      "status": 503,
+      "delayMs": 0,
+      "body": { "error": "Prediction service unavailable." }
+    }
+  ]
+}

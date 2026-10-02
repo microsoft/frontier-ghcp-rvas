@@ -1,6 +1,6 @@
 # Stage 2: Sprint 1 -- Core Features
 
-**Duration:** 3 hours
+**Duration:** 120 minutes for the selected core stories
 **Focus:** Parallel development of core features -- API, UI, tests, and infrastructure
 
 Everyone works in parallel on their assigned Sprint 1 stories. Use GitHub Issues for questions and PRs for code review. The PO stays active on the board, triaging and reviewing throughout.

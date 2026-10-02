@@ -21,6 +21,8 @@ decision.
 - [ ] Screen reader names, roles, values, and state changes are checked
 - [ ] Touch targets, text scaling, focus order, and contrast are checked
 - [ ] Offline, queued, failed, and conflicted states do not rely on color alone
+- [ ] One Impeccable review decision improves sync or recovery feedback without changing the conflict policy
+- [ ] Expo web evidence is labeled; native-device checks still outstanding are listed
 
 ## Test and Release Evidence
 

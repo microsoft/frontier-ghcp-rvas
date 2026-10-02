@@ -21,6 +21,12 @@
 
 6. **Open PRs** for each feature.
 
+Use **15--25 minutes of the existing bug-fix time** for an Impeccable `critique`
+of the working report form and reports list. Check invalid input, empty results,
+and failed submission. Fix one useful finding without changing the accepted
+story or adding a dashboard. QA verifies the fix against the story, including
+keyboard use. Put before-and-after evidence and your decision in the feature PR.
+
 If your UI agent produces a generic dashboard, ignores the API response shape, or conflicts with the established layout, refine its guidance before opening the PR.
 
 ## Verification
@@ -28,6 +34,7 @@ If your UI agent produces a generic dashboard, ignores the API response shape, o
 - [ ] Frontend connected to the real backend (no mocked data in the critical path)
 - [ ] Sprint 1 UI bugs fixed
 - [ ] At least one new feature added (dashboard, search, or responsive improvements)
+- [ ] QA verified one UI improvement; report submission and status behavior still match the accepted story
 
 ---
 

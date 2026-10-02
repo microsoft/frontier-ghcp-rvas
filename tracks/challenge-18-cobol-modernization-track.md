@@ -1,10 +1,10 @@
 # Challenge 18 Track: Legacy COBOL Banking Modernization
 
-**Duration:** 8-12 hours
+**Duration:** 4-6 hours (five-hour core for one transfer workflow)
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** Legacy code comprehension, characterization testing, feature evolution, and full-stack modernization -- using GitHub Copilot to reverse-engineer a COBOL banking system and rebuild it as a modern web application
+**Focus:** Trace and characterize a COBOL account-transfer workflow, then expose it through an API and a React UI
 
 ## Who Is This For
 
@@ -27,7 +27,7 @@
 - **Runtime (optional):** GnuCOBOL -- open-source COBOL compiler for building and running the original programs
 - **Backend target:** Node.js/TypeScript or Java (Spring Boot) -- your choice
 - **Frontend:** React with a modern UI library (Material UI, Tailwind, or similar)
-- **Copilot Skill:** `frontend-design` skill -- install via `npx skills install anthropics/claude-code` and select `frontend-design`
+- **UI review:** Impeccable, installed manually for one teller workflow
 - **Testing:** Jest/Vitest (TypeScript) or JUnit 5 (Java)
 
 ## What You Are Working With
@@ -38,6 +38,12 @@ The code is spread across multiple COBOL programs and copybooks totaling roughly
 
 Data lives in indexed sequential (ISAM) files -- COBOL's native flat-file storage with key-based access. A minimal context document is provided. Everything else you learn about the system, you learn from the code.
 
+**The core covers one account-to-account transfer workflow.** Characterize its
+rules before translation, then build a local API and React view for account
+selection, transfer submission, and the resulting balances. Full-system
+translation and new banking features are stretch work. Preserve the original
+COBOL sources and do not replace their behavior with design recommendations.
+
 ## Getting Started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
@@ -47,6 +53,15 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 Navigate to `challenges/challenge-18-cobol-banking/`. Read the system-context.md first, then start exploring the COBOL source files and copybooks before writing any instructions.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-18-cobol-banking/` with GnuCOBOL, Node.js LTS, Java 21, and the tools needed to compile and run the original COBOL programs.
+
+### Install and Use Impeccable
+
+Follow the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
+after clean setup. Once the React shell exists, preflight one of its source
+files. In Stage 4, critique only the transfer flow. Use
+`fixtures/transfer-ui-cases.json` for review states and preserve the behavior
+captured in Stage 2. This replaces the former frontend-design installation;
+do not install both skills for this exercise.
 
 ### Repository Instructions for This Track
 
@@ -68,7 +83,7 @@ Your `.github/copilot-instructions.md` should include:
 
 - **Behavior Parity Check Skill** -- A repeatable comparison: run the original COBOL program (via GnuCOBOL) and the modernized code against the same inputs, and confirm the outputs, including known quirks, match before calling a module migrated.
 - **Business Rule Documentation Skill** -- A fixed sequence: trace a paragraph, extract the rule in plain language, and log it in a shared doc before any code gets rewritten.
-- **Frontend Scaffolding Skill** -- A repeatable workflow using the installed `frontend-design` skill to scaffold each new React view: generate the layout and component breakdown first, then refine styling and responsiveness in a second pass.
+- **Transfer Journey Check Skill** -- A repeatable check of account selection, rejected transfers, and successful balance updates. Require backend evidence before accepting a success message. Keep it separate from Impeccable's general UI review.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "legacy code archaeology agent", "characterization testing skill", and "banking domain instructions" before you draft your own.
 
@@ -81,7 +96,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - For modernization, describe the business rule first ("this paragraph calculates monthly loan payment using the PMT formula"), then ask for the equivalent in your target language. Do not ask Copilot to "translate this COBOL" cold -- it works better when you give it the intent.
 - Agent mode is strong for generating test scaffolding. Describe the test scenarios and let Copilot wire up the framework.
 - The `/explain` command works on COBOL files. Use it on the dense programs to build your understanding.
-- When working on the React frontend, install the frontend-design skill (`npx skills install anthropics/claude-code`, then select `frontend-design`). It helps Copilot generate polished React components and page layouts from descriptions.
+- Give Impeccable the characterized transfer rules before reviewing the UI. Accept a change only if the backend tests and browser journey still agree.
 
 ## Resources
 

@@ -1,6 +1,6 @@
 # Stage 2: Build the Prediction API
 
-**Duration:** 2-3 hours
+**Duration:** 60 minutes
 **Focus:** REST API, Flask or FastAPI, model serving
 
 ## Objective
@@ -18,7 +18,10 @@ Create a REST API that serves the trained model and the list of airports so the 
    }
    ```
 
-   Where `delay_probability` is the chance the flight is delayed >15 min, and `confidence` is the model's certainty.
+   `delay_probability` is the estimated probability of a delay over 15 minutes.
+   Define what `confidence` measures if you return it. A probability's complement
+   is not evidence of calibrated model certainty; do not label it that way in
+   the UI.
 
 2. **`GET /airports`** -- Returns the list of airports from `airports.csv`, sorted alphabetically by name:
 

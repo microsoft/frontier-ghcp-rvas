@@ -1,75 +1,49 @@
 # Stage 2: Characterization Testing
 
-**Duration:** 2-3 hours
-**Focus:** Writing tests that capture existing behavior before changing anything
-
-## Objective
-
-Write a comprehensive test suite in your target language that documents and verifies the banking system's current behavior. These tests become the safety net for Stage 4 -- if your modernized application passes all characterization tests, you can be confident the business logic is preserved.
-
-You are not testing the COBOL code directly. Instead, you are reimplementing the testable business logic (calculations, validations, data transformations) in your target language and writing tests against those implementations.
+**Duration:** 60 minutes
+**Focus:** Capture transfer behavior before translation
 
 ## Tasks
 
-1. **Set up your target language project.** Create a new project in the challenge folder for your chosen backend language (`typescript/` or `java/`). Set up a test framework (Jest or Vitest for TypeScript, JUnit 5 for Java). Define the project structure you will use for the full modernization in Stage 4.
+1. Create the target-language project in `typescript/` or `java/` and set up
+   its test framework. Keep the original COBOL source unchanged.
+2. Derive expected outcomes from the source-linked trace. When GnuCOBOL runs,
+   compare the original with the target using the same synthetic inputs.
+   Label source-derived expectations separately from executed comparisons.
+3. Characterize valid transfer, same-account rejection, ineligible accounts,
+   nonpositive amount, transfer-limit boundaries, and insufficient funds.
+   Check the behavior of both source and destination account types.
+4. Check resulting balances and transaction records, including currency
+   precision. For each rejected case, inspect whether balances or logs changed
+   rather than asserting only an error message.
+5. Reuse the Behavior Parity Check skill on the successful and rejected paths.
+   If the Modernization agent misses a rule, refine it with the actual source
+   and failing case before generating another implementation.
 
-2. **Test the utility functions.** Start with the utility program -- the simplest module. Implement and test:
-   - Date formatting: YYYYMMDD to MM/DD/YYYY
-   - Date validation: valid and invalid dates, leap years
-   - Month addition: edge cases around year boundaries and month-end clamping
-   - Currency formatting: negative numbers, zero, large numbers, decimal handling
-   - String operations (uppercase, left-pad, trim)
-
-3. **Test the validation logic.** From the customer management program, implement and test:
-   - SSN validation: valid format, wrong length, missing dashes, non-digits
-   - ZIP code validation: 5-digit, 9-digit with dash, invalid
-   - SSN masking: full SSN, short input
-   - Adult age check: exactly 18, under 18, birthday edge cases
-
-4. **Test the financial calculations.** These are the critical ones. From the loan and interest programs:
-   - Monthly payment calculation: verify against known PMT formula values. Test with P=$25,000 R=8.5% N=60, P=$75,000 R=8.5% N=120, and the 0% edge case.
-   - Interest portion calculation: verify the monthly interest split
-   - Amortization schedule: verify that the full schedule sums correctly (total payments = principal + total interest)
-   - Savings interest accrual: daily rate calculation, month-end posting logic
-   - FD maturity interest: simple interest formula `P * R * T`
-
-5. **Test the transaction rules.** From the transaction and account programs:
-   - Deposit validations: positive amount, active account, no FD deposits
-   - Withdrawal validations: sufficient funds, daily limit, FD restriction
-   - Transfer validations: both accounts active, not same account, transfer limit, locking order
-   - Overdraft logic: checking accounts allow overdraft, savings do not
-   - Minimum opening deposit by account type
-
-6. **Test the batch processing logic.** From the batch program:
-   - Monthly fee charging: only on the 1st, only for checking below $500
-   - Loan overdue detection: 30-day and 90-day thresholds
-   - Batch idempotency: cannot run twice on the same day
-
-7. **Test the authentication rules.** From the authentication program:
-   - Password hashing produces consistent output for the same input
-   - Login lockout after 3 failed attempts
-   - Disabled accounts cannot log in
-   - Role checks (admin, teller, auditor)
-
-If your Modernization agent or business-rule skill misses COMP-3 precision or the month-end edge case, refine that customization with the specific rule before rerunning it.
-
-## What Copilot Helps With vs. What Requires Your Judgment
-
-**Copilot is good at:** Generating test boilerplate, producing edge case lists from a business rule description, translating a COBOL computation into your language, scaffolding the test project structure.
-
-**You decide:** Which behaviors are intentional vs. accidental (is the month-end interest posting at day >= 28 a bug or a feature?), what level of precision to test financial calculations at (COMP-3 packed decimal has specific precision behavior), and how to model the COBOL ISAM file structure in your target language's type system.
+**Do not call target-only tests proof of parity.** Preserve original quirks
+unless you explicitly agree to fix one and record the changed expectation.
+Use `fixtures/transfer-ui-cases.json` as a list of presentation states, not
+as the authority for banking rules.
 
 ## Verification
 
-- [ ] Target language project set up with test framework
-- [ ] Utility function tests passing (date, currency, string operations)
-- [ ] Validation logic tests passing (SSN, ZIP, age check)
-- [ ] Financial calculation tests passing (PMT, interest, amortization)
-- [ ] Transaction rule tests passing (deposit, withdrawal, transfer constraints)
-- [ ] Batch processing logic tests passing (fees, overdue detection)
-- [ ] Authentication rule tests passing
-- [ ] All tests green -- this is your safety net for Stage 4
+- Tests cover successful transfer and the required rejection cases
+- Expected outcomes cite the original code or an observed COBOL run
+- Tests inspect balances and transaction evidence, with the original precision
+- The working note distinguishes executed parity checks from source-derived
+  expectations
+
+## Stretch Tasks
+
+Characterize utilities, customer validation, interest and loan calculations,
+batch behavior, and authentication. These are outside the transfer-only core.
+
+## What Copilot Helps With vs. What Requires Your Judgment
+
+Copilot can draft test tables and scaffolding. You must check that the expected
+result comes from the original program rather than the generated replacement.
+That distinction matters before Stage 4 uses these tests as its safety net.
 
 ---
 
-Previous: [Stage 1: Code Archaeology](stage-1-archaeology.md) | Next: [Stage 3: Feature Evolution](stage-3-evolution.md)
+Previous: [Stage 1: Code Archaeology](stage-1-archaeology.md) | Next: [Stage 3: Feature Evolution (Optional)](stage-3-evolution.md)

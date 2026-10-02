@@ -48,6 +48,15 @@ These are carried over from the original MUMPS system and exist in the COBOL cod
 - The days-difference calculation treats all months as 30 days
 - Transfer locking order was fixed in 2018 (ticket #3887) to always lock the lower account ID first
 
+## Modernization Core
+
+The modernization core covers account transfer only. Synthetic presentation
+cases live in `fixtures/transfer-ui-cases.json`; map their placeholder accounts
+to your target's test data. They describe UI states, not banking rules. Derive
+rules from the unchanged COBOL source and characterization evidence. The
+[track stages](../../../tracks/challenge-18-cobol-modernization-track/stages.md)
+define the required work.
+
 ## Default credentials
 
 After initialization, log in with:

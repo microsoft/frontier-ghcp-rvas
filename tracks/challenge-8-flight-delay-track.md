@@ -1,6 +1,6 @@
 # Challenge 8 Track: Full-Stack Flight Delay Predictor
 
-**Duration:** 8-12 hours
+**Duration:** 4-6 hours (five-hour core; advanced work is optional)
 
 **Difficulty:** ⭐⭐⭐
 
@@ -30,6 +30,7 @@
 - **TypeScript / JavaScript** -- frontend application
 - Framework of your choice (React, Svelte, Vue, or vanilla)
 - **Vite** -- frontend build tooling (provided)
+- **Impeccable** -- Participant-installed skill for reviewing the prediction flow
 
 ## Getting Started
 
@@ -38,6 +39,14 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 ### Open and Inspect the Challenge
 
 Navigate to `challenges/challenge-8-flight-delay/`. A dedicated devcontainer is provided at `.devcontainer/challenge-8-flight-delay/` with Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS. Read through the starter notebook and scaffolding across all three layers before writing any instructions.
+
+### Install and Use Impeccable
+
+Follow the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
+after clean setup. Preflight `client/src/main.ts`. In Stage 3, review the airport
+selection and prediction result from the client folder. Fix one usability
+problem without changing the model or API contract. **Show probability as an
+estimate, never a guaranteed outcome.**
 
 ### Repository Instructions for This Track
 

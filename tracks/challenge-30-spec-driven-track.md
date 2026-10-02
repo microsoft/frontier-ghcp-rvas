@@ -29,6 +29,7 @@ Copilot require network access. Do not use real employee or customer data.
 - Plain HTML, CSS, and JavaScript
 - Node's test runner and Playwright
 - GitHub Spec Kit 1.0.9 and GitHub Copilot CLI 1.0.88-1
+- Impeccable for reviewing the changed approval state in the existing UI
 
 Your team owns a small service-request application. Employees can create drafts
 and submit them. The UI works and the baseline tests pass. **There is no
@@ -67,6 +68,16 @@ The store is in memory. Restarting the server resets the demo data. The identity
 selector is not authentication: anyone can choose any demo user. Keep the app
 local and forwarded port 5080 private. Real authentication and durable storage
 are outside this challenge.
+
+### Install and Use Impeccable
+
+After clean setup and Spec Kit initialization, follow the
+[shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it).
+Preflight `public/index.html`. In Stage 5, review only the intermediate approval
+state in the existing UI. **One approval out of two must remain visibly pending.**
+Record accepted requirements in the existing feature specification and browser
+tests. Spec Kit still owns the delivery workflow; do not start a separate design
+workflow or change the frontend framework.
 
 ### Repository Instructions for This Track
 

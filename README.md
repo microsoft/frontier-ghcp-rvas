@@ -10,6 +10,12 @@ agents and skills is optional there.
 
 In the other tracks, participants author **custom skills for reusable workflows**
 and refine them throughout the session. Ordinary chat prompts remain useful for one-off requests.
+Challenges **4, 8, 9, 10, 18, 27, 29, and 30** also use Impeccable for a focused
+UI review tied to the existing user journey. Participants install the skill
+with `npx`; no Impeccable extension is required. The
+[shared setup](tracks/getting-started.md#5-install-impeccable-when-your-track-uses-it)
+includes discovery and launcher checks. Each selected track keeps heavier
+features outside its 4--6-hour core.
 The Backlog Generator's first stage is now
 [Spec-to-Backlog Skill](tracks/challenge-15-backlog-generator-track/stage-1-skill.md);
 links to its former `stage-1-prompt` page need updating.
@@ -38,11 +44,11 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 - 🔧 **[Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)** - REST APIs, authentication, testing | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 - 📊 **[Challenge 2: ML & AI Track](./tracks/challenge-2-ml-ai-track.md)** - Data analysis, ML models, feature engineering | **Outcome:** Build AI-Powered Capabilities
 - ☁️ **[Challenge 3: DevOps Track](./tracks/challenge-3-devops-track.md)** - Infrastructure as Code, containers, CI/CD | **Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
-- 🎨 **[Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)** - React, TypeScript, modern UI | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
+- 🎨 **[Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)** - Accessible React dashboard, Impeccable design reviews (4-6 hours) | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 - 🔍 **[Challenge 5: QA & Testing Track](./tracks/challenge-5-qa-track.md)** - AI-assisted testing, test planning, Copilot for QA workflows | **Outcome:** Raise Quality and Confidence
 - 🤖 **[Challenge 6: Agentic Workflows Track](./tracks/challenge-6-agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows | **Outcomes:** Automate Delivery and Ops Toil, Build AI-Powered Capabilities
 - 🧩 **[Challenge 7: Copilot SDK Track](./tracks/challenge-7-copilot-sdk-track.md)** - Build a Copilot SDK application (advanced) | **Outcome:** Build AI-Powered Capabilities
-- ✈️ **[Challenge 8: Flight Delay Predictor Track](./tracks/challenge-8-flight-delay-track.md)** - Full-stack ML app (advanced) | **Outcomes:** Ship Product Features Faster, Build AI-Powered Capabilities
+- ✈️ **[Challenge 8: Flight Delay Predictor Track](./tracks/challenge-8-flight-delay-track.md)** - One model, API, and reviewed prediction UI (4-6 hours) | **Outcomes:** Ship Product Features Faster, Build AI-Powered Capabilities
 - 🏢 **[Challenge 9: Cross-Functional Team Sprint](./tracks/challenge-9-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people) | **Outcome:** Ship Product Features Faster
 - 🥾 **[Challenge 10: Technical Team Sprint](./tracks/challenge-10-tech-sprint-track.md)** - Technical team sprint from spec to deployment (2-4 developers) | **Outcome:** Ship Product Features Faster
 - 🏦 **[Challenge 11: Legacy MUMPS Modernization](./tracks/challenge-11-mumps-modernization-track.md)** - Reverse-engineer and translate a MUMPS banking system (solo, advanced) | **Outcome:** Modernize Legacy Systems
@@ -52,7 +58,7 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 - 📝 **[Challenge 15: Backlog Generator](./tracks/challenge-15-backlog-generator-track.md)** - Convert requirement specs into structured backlogs with MCP | **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
 - 🖥️ **[Challenge 16: Ops Assistant](./tracks/challenge-16-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling | **Outcome:** Automate Delivery and Ops Toil
 - 🚀 **[Challenge 17: Spec-to-Ship Accelerator](./tracks/challenge-17-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code | **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
-- 🏗️ **[Challenge 18: COBOL Banking Modernization](./tracks/challenge-18-cobol-modernization-track.md)** - Reverse-engineer and modernize a COBOL banking system into a full-stack web app | **Outcome:** Modernize Legacy Systems
+- 🏗️ **[Challenge 18: COBOL Banking Modernization](./tracks/challenge-18-cobol-modernization-track.md)** - Characterize and modernize one COBOL transfer journey (4-6 hours) | **Outcome:** Modernize Legacy Systems
 - 🔧 **[Challenge 19: WCF Banking Modernization](./tracks/challenge-19-wcf-modernization-track.md)** - Understand a legacy WCF SOAP banking service and migrate it to a REST API | **Outcome:** Modernize Legacy Systems
 - 💻 **[Challenge 20: PowerShell Automation](./tracks/challenge-20-powershell-automation-track.md)** - Fix, test, document, and package PowerShell scripts for real sysadmin work | **Outcomes:** Automate Delivery and Ops Toil, Modernize Legacy Systems
 - ☁️ **[Challenge 21: Azure Terraform Track](./tracks/challenge-21-azure-terraform-track.md)** - Build an Azure Terraform foundation with modules, identity, policy checks, and CI guardrails | **Outcome:** Stand Up Cloud Platform Foundations
@@ -320,7 +326,9 @@ Build infrastructure for a Node.js app across 5 stages: multi-stage Dockerfile w
 **Skills**: React, TypeScript, Component design, State management
 **Copilot Focus**: Component scaffolding, TypeScript types, CSS styling
 
-Build a task dashboard across 5 stages: responsive layout with React Router, state management with Context/useReducer and undo support, drag-and-drop Kanban with keyboard shortcuts and themes, find and fix 5 accessibility violations in a pre-built component, then integrate with a REST API and achieve >80% test coverage.
+Build an accessible task dashboard with validated CRUD and delete undo. Use
+Impeccable for a critique-and-fix cycle, then connect a mocked API and test the
+task flow. Drag-and-drop, offline support, and Storybook are optional.
 
 ---
 
@@ -350,22 +358,28 @@ Build a Release Notes Agent powered by the GitHub Copilot SDK. The agent fetches
 ### [Challenge 8: Full-Stack Flight Delay Predictor](./challenges/challenge-8-flight-delay/) ([Track](./tracks/challenge-8-flight-delay-track.md))
 
 **Team**: Full-Stack Developers, Advanced Participants
-**Duration**: 8-12 hours (extended challenge)
+**Duration**: 4-6 hours (five-hour core)
 **Skills**: Python, pandas, scikit-learn, Flask/FastAPI, TypeScript, frontend frameworks
 **Copilot Focus**: End-to-end development -- data science in notebooks, API scaffolding, frontend generation, cross-domain debugging
 
-Build a complete application that predicts flight delay probability. Explore a real FAA dataset, train an ML model, serve it through a REST API, and create a frontend where users select a day and airport to see their delay risk.
+Build one baseline flight-delay model, serve it through a REST API, and create a
+frontend where users select a day and airport. Use Impeccable to improve the
+prediction flow while keeping probability wording accurate. Extra models,
+charts, and Azure deployment are optional.
 
 ---
 
 ### [Challenge 9: Cross-Functional Team Sprint (CityPulse)](./challenges/challenge-9-team-sprint/) ([Track](./tracks/challenge-9-team-sprint-track.md))
 
 **Team**: Cross-functional team of 4-6 (Product Owner, Backend Dev, Frontend Dev, QA, DevOps, optional BA)
-**Duration**: 8 hours (team challenge)
+**Duration**: 4-6 hours (five-hour team core)
 **Skills**: GitHub Spark, GitHub Issues/Projects, Express.js/FastAPI, React/Vue, Playwright, Docker, Azure, Terraform
 **Copilot Focus**: Every role uses Copilot -- PO for user stories and planning, developers for code generation, QA for test automation, DevOps for infrastructure
 
-Build CityPulse, a civic engagement platform, from scratch as a cross-functional team running a simulated agile sprint. The PO ideates with GitHub Spark and manages the backlog via GitHub Issues while developers, QA, and DevOps work in parallel across two sprints -- building a REST API, a frontend UI, automated tests, CI/CD pipelines, and deploying to Azure. Ends with a team demo and retrospective.
+Build CityPulse as a cross-functional team. The core covers reports and upcoming
+events, with an integrated API and tests. Use Impeccable for one QA-verified UI
+improvement and finish with a tested demo. Dashboard analytics and Azure
+deployment without a prepared environment are optional.
 
 > This challenge requires a team. It is not designed for solo participants.
 
@@ -374,11 +388,14 @@ Build CityPulse, a civic engagement platform, from scratch as a cross-functional
 ### [Challenge 10: Technical Team Sprint (TrailMate)](./challenges/challenge-10-tech-sprint/) ([Track](./tracks/challenge-10-tech-sprint-track.md))
 
 **Team**: Technical team of 2-4 (Backend Dev, Frontend Dev, DevOps required; QA optional -- no PO or BA)
-**Duration**: 8 hours (team challenge)
+**Duration**: 4-6 hours (five-hour team core)
 **Skills**: Express.js/FastAPI, React/Vue, Playwright, Docker, Azure, Terraform, GitHub Issues/Projects
 **Copilot Focus**: Every technical role uses Copilot -- developers for code generation, QA for test automation, DevOps for infrastructure
 
-Build TrailMate, a trail management platform for a regional parks authority, from a provided functional specification. Unlike the Cross-Functional Team Sprint, there is no product discovery phase and no business stakeholders. The team reads the spec, writes a technical specification, breaks work into GitHub Issues, and self-organizes across two sprints -- building a REST API, a frontend UI, automated tests, CI/CD pipelines, and deploying to Azure. Ends with a team demo and retrospective.
+Build TrailMate from the provided specification. The core covers trail browsing
+and condition reporting, with API integration and tests. Use Impeccable to
+improve status and warning clarity. Finish with a tested demo; analytics and
+Azure deployment without a prepared environment are optional.
 
 > This challenge requires a team. It is not designed for solo participants.
 
@@ -464,11 +481,14 @@ Compress the full development lifecycle for a billing module on an existing mult
 ### [Challenge 18: COBOL Banking Modernization](./challenges/challenge-18-cobol-banking/) ([Track](./tracks/challenge-18-cobol-modernization-track.md))
 
 **Team**: Solo or pair (any developer role)
-**Duration**: 8-12 hours (Advanced)
+**Duration**: 4-6 hours (five-hour core)
 **Skills**: COBOL (no prior experience needed), Node.js/TypeScript or Java, React, reverse engineering, testing
 **Copilot Focus**: Legacy code comprehension with `/explain`, cross-language translation, characterization test generation, full-stack modernization
 
-Reverse-engineer and modernize a core banking system written in COBOL -- the language that still runs the majority of the world's banking transactions. The system handles customer management, deposit accounts, teller transactions, consumer loans, interest calculation, and end-of-day batch processing. Understand the code, build characterization tests, extend it with new features, and translate it into a modern React + Node.js/Java web application while preserving every business rule.
+Trace and characterize one COBOL account-transfer workflow, then expose it
+through a local API and React UI. Use Impeccable to review the teller journey
+without changing characterized behavior. Full-system translation and new
+banking features are optional.
 
 ---
 

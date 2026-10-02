@@ -4,6 +4,10 @@
 
 Build the core UI pages. Use mocked data while the API is being built, then swap to real API calls when the backend is ready.
 
+Use Impeccable's `shape` to plan the trail list/detail journey. Keep the status
+and warning rules from the functional specification. Spend this time within
+the existing UI planning budget.
+
 ## Tasks
 
 ### Trail List Page
@@ -11,6 +15,7 @@ Build the core UI pages. Use mocked data while the API is being built, then swap
 - Fetch and display all trails from `GET /api/trails`
 - Show name, difficulty badge, distance, elevation, and status indicator per trail
 - Color-coded status indicators (Open = green, Caution = yellow, Closed = red)
+- Text labels distinguish all three states without relying on color
 - Click a trail to navigate to its detail page
 
 ### Trail Detail Page
@@ -19,6 +24,7 @@ Build the core UI pages. Use mocked data while the API is being built, then swap
 - Display all trail fields (description, difficulty, distance, elevation, estimated time, park, status)
 - Show recent condition reports inline below the trail information
 - Visual warning if the trail has High-severity reports
+- A readable severity label and report details accompany the warning
 
 ### Condition Report Form
 
@@ -51,6 +57,7 @@ Generate mock data while waiting for the API:
 - [ ] Condition report form submitting data (to API or console)
 - [ ] Navigation between pages working
 - [ ] PRs opened and linked to their GitHub Issues
+- [ ] Trail status and high-severity warnings meet the specification's UI acceptance criteria
 
 ---
 

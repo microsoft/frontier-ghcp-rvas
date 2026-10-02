@@ -4,15 +4,22 @@
 
 | Stage | Name | Duration | What Happens |
 |-------|------|----------|--------------|
-| 1 | [Discovery and Sprint Planning](stage-1-discovery-planning.md) | 1.5 hours | PO ideates with GitHub Spark, writes stories, team plans Sprint 1 |
-| 2 | [Sprint 1 -- Core Features](stage-2-sprint-1-build.md) | 3 hours | Parallel build: API, UI, tests, infrastructure |
-| 3 | [Sprint 2 -- Integration and Polish](stage-3-sprint-2-integration.md) | 2 hours | Advanced features, integration, bug fixing, deployment |
-| 4 | [Ship and Demo](stage-4-deploy-demo.md) | 1.5 hours | Production deployment, final testing, demo, retrospective |
-| 5 | [Agentic Workflows](stage-5-agentic-workflows.md) | 1.5 hours | Add AI-powered repository automation with GitHub Agentic Workflows |
+| 1 | [Discovery and Sprint Planning](stage-1-discovery-planning.md) | 60 min | Setup, Spark handover, core stories, manual skill install |
+| 2 | [Sprint 1 -- Core Features](stage-2-sprint-1-build.md) | 120 min | Parallel build: report/event API, UI, tests |
+| 3 | [Sprint 2 -- Integration and Polish](stage-3-sprint-2-integration.md) | 90 min | Integration, one QA-verified Impeccable improvement |
+| 4 | [Ship and Demo](stage-4-deploy-demo.md) | 30 min | Tested demo and retrospective |
+| 5 | [Agentic Workflows](stage-5-agentic-workflows.md) | Optional | Repository automation outside the core |
 
 Work within each stage happens **in parallel** across roles. Each stage file has a "Jump to Your Role" table so you only read what applies to you.
 
-> **Short on time?** Cut Sprint 2 scope: skip authentication and the dashboard, focus on deploying the core report and event features. This shaves roughly 1.5 hours off the total. Stage 5 (Agentic Workflows) is also optional and can be skipped if time is tight.
+**The five-hour core schedule takes precedence over full-backlog estimates in
+role pages.** Select report and event stories during planning; treat analytics,
+authentication, and Stage 5 as stretch work. Demonstrate locally if an Azure
+deployment environment is not already prepared. Include the UI review within
+bug-fix time, not as another stage.
+
+For four hours, preflight tooling and cap discovery at 30 minutes and
+integration at 60 minutes. Keep real API wiring, tests, and the required review.
 
 ## Follow Your Role
 

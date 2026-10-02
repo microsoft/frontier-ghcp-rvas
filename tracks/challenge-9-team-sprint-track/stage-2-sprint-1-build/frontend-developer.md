@@ -4,6 +4,10 @@
 
 Build the core UI pages. Use mocked data while the API is being built, then swap to real API calls when the backend is ready.
 
+Use Impeccable's `shape` on the report-submission journey before building it.
+Work inside the exported frontend and preserve the Spark handover contract.
+Keep the review within the stage's UI planning time.
+
 ## Tasks
 
 ### Report Submission Form
@@ -18,6 +22,7 @@ Build the core UI pages. Use mocked data while the API is being built, then swap
 - Fetch and display all reports from `GET /api/reports`
 - Show title, category, status, and submission date per report
 - Color-coded status badges (submitted = yellow, in progress = blue, resolved = green)
+- Text labels for every status, including Acknowledged; color is supplementary
 - Click a report to view its details
 
 ### Events List Page
@@ -50,6 +55,7 @@ Generate mock data while waiting for the API:
 - [ ] Events list page rendering data
 - [ ] Navigation between pages working
 - [ ] PRs opened and linked to their GitHub Issues
+- [ ] The form and status labels match the stakeholder brief's UI acceptance criteria
 
 ---
 

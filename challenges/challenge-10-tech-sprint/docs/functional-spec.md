@@ -56,6 +56,17 @@ A dashboard page showing:
 
 Optional for the first version. If time allows, add user registration and login so that condition reports are associated with a user. Protect write endpoints behind authentication.
 
+## UI Acceptance Criteria
+
+- Open, Caution, and Closed each have a text label; color is supplementary.
+- High-severity reports have a readable warning on both list and detail views.
+  The warning explains the reported condition without inventing a closure rule.
+- Long descriptions stay readable on a narrow screen without hiding status
+  or the report action.
+- A hiker can identify status and warnings before reaching the report form.
+- One reviewed UI improvement has before-and-after evidence in the feature PR
+  and preserves condition-report submission.
+
 ## Data Model
 
 The specification assumes two core entities and their relationship:
@@ -111,8 +122,8 @@ These are suggestions. The team can adjust the API design during technical plann
 
 - The platform must be a web application (accessible from a browser)
 - It must work on both desktop and mobile screens
-- The team has 8 hours to deliver a working version
-- Deploy to a cloud environment (Azure preferred)
+- The team has a five-hour core, with up to six hours for debugging
+- Demonstrate locally; Azure deployment is optional unless an environment is already prepared
 - There is no existing infrastructure -- you are starting from scratch
 
 ## Success Criteria
@@ -122,7 +133,7 @@ The demo will be evaluated based on:
 1. Can a hiker browse the trail directory and filter trails?
 2. Can a hiker submit a condition report for a trail?
 3. Does the trail detail page show recent condition reports?
-4. Is the application deployed and accessible online?
+4. Can the team demonstrate the integrated application locally or on Azure?
 5. Does the project have automated tests?
 6. Does the team have a CI/CD pipeline?
 

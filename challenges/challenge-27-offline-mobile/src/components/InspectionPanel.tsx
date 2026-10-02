@@ -80,6 +80,7 @@ export function InspectionPanel({
         onChangeText={setNotes}
         placeholder="What did you find?"
         style={[styles.input, styles.notes]}
+        testID="inspection-notes"
         value={notes}
       />
       <View style={styles.tools}>
@@ -90,7 +91,7 @@ export function InspectionPanel({
           <Text style={styles.toolText}>Add location</Text>
         </Pressable>
       </View>
-      <Pressable onPress={save} style={styles.saveButton}>
+      <Pressable onPress={save} style={styles.saveButton} testID="inspection-save">
         <Text style={styles.saveText}>Save inspection offline</Text>
       </Pressable>
     </View>

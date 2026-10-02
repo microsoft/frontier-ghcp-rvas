@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Accessibility Audit Exercise
 // This component has 5 intentional accessibility violations.
 // Find and fix all of them to achieve WCAG 2.1 AA compliance.

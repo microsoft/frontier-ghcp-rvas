@@ -3,12 +3,13 @@ number: 10
 title: Technical Team Sprint
 category: team-sprints
 difficulty: advanced
-duration_minutes: 540
-description: Deliver a complete application from specification to production with a technical team using GitHub Copilot across all technical roles.
+duration_minutes: 300
+description: Deliver a trail application with a technical team and use Impeccable to improve status and warning clarity.
 focus: End-to-end application development with a technical team -- from a provided specification to production deployment -- using GitHub Copilot across every technical role
 tags:
   - team-sprints
   - advanced
+  - impeccable
 prerequisites: []
 track_url: tracks/challenge-10-tech-sprint-track.md
 contents_url: tracks/challenge-10-tech-sprint-track/stages.md

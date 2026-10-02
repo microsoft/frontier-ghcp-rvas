@@ -117,3 +117,51 @@ and its [Learning Hub](https://awesome-copilot.github.com/) to see how other
 teams structure customizations. Use the examples to understand the available
 patterns, then author artifacts that fit your challenge. Installing a
 community artifact does not complete this exercise.
+
+## 5. Install Impeccable When Your Track Uses It
+
+Challenges **4, 8, 9, 10, 18, 27, 29, and 30** use Impeccable for a focused UI
+review. Follow this section only for those tracks. Participants install the
+skill themselves; no Impeccable extension or automatic devcontainer install
+is required.
+
+Complete clean setup first. From the **repository root**, run the
+[official installer](https://github.com/pbakaus/impeccable#installation):
+
+```bash
+npx impeccable install --providers=github --scope=project
+```
+
+The flags select GitHub Copilot and a project-local installation. You need Node.js
+with npm and network access to the skill and engine downloads. The installer adds
+`.github/skills/impeccable/`, its engine, supplied agents, and Copilot hooks.
+Review these files and requested permissions. Keep the supporting references
+with `SKILL.md`; do not install another global or extension copy.
+
+1. Confirm that `.github/skills/impeccable/SKILL.md` exists and inspect its
+   command table.
+2. Reload VS Code and open Copilot Chat in Agent mode, or restart Copilot CLI.
+   Confirm that the installed skill is discoverable.
+3. Use the skill's hook management to turn automatic hooks off at the repository
+   root. Check the reported status. These tracks use explicit reviews.
+4. Request a read-only review of a source file named by your track. Check that
+   Copilot reads the installed skill and its references, works in the intended
+   application folder, and leaves the source unchanged.
+
+**Facilitators must preflight the same environment participants will use.**
+Installation success alone does not prove discovery or launcher execution,
+including in Codespaces. Resolve those failures before the session.
+
+When using the skill, initialize product context in the application folder,
+not the repository's documentation site. Keep the brief focused on the existing
+user journey and constraints. Inspect generated context files for accuracy.
+In team tracks, preserve the agreed specification or exported prototype.
+
+Budget **15--25 minutes within the stage's existing review time** for one
+critique-and-fix cycle. Record the problem and accepted or rejected feedback in
+the existing pull request or acceptance evidence. Compare the same state and
+viewport before and after a visual change. Preserve behavior and rerun affected
+checks. Do not create a separate workshop report or commit runtime caches.
+
+Impeccable's feedback is advisory. Browser checks and automated tests remain
+required; a design review does not establish accessibility compliance.

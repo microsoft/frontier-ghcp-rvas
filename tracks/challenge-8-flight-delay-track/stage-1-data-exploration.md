@@ -1,6 +1,6 @@
 # Stage 1: Data Exploration and Model Building
 
-**Duration:** 3-4 hours
+**Duration:** 90 minutes
 **Focus:** Jupyter Notebook, data science, machine learning
 
 ## Objective
@@ -30,9 +30,7 @@ Before you open the notebook, use your full setup: keep your repository instruct
 3. **Explore** -- Create visualizations:
    - Delay rates by day of week
    - Delay rates by destination airport (top 20 busiest)
-   - Delay distribution by carrier
-   - Correlation heatmap for numerical features
-4. **Feature Engineering** -- Select features for the model. At minimum use `DayOfWeek` and `DestAirportID`. Optionally add `Carrier`, `Month`, `CRSDepTime`, or engineered features.
+4. **Feature Engineering** -- Use `DayOfWeek` and `DestAirportID` in the core. Keep their order and encoding consistent with the API. Extra features and plots are Stage 4 stretch work.
 5. **Train Model** -- Train a classification model (e.g., Logistic Regression, Random Forest, Gradient Boosting) to predict `ArrDel15`.
 6. **Evaluate** -- Report accuracy, precision, recall, F1-score, and display a confusion matrix.
 7. **Export** -- Save the trained model to `model.pkl` using pickle or joblib. Extract unique destination airports (ID + name) and save to `airports.csv`.
@@ -55,7 +53,7 @@ Before you open the notebook, use your full setup: keep your repository instruct
 
 - [ ] Dataset loaded and inspected
 - [ ] Missing values identified and handled
-- [ ] At least 4 visualizations created
+- [ ] Two visualizations created
 - [ ] Model trained and evaluated (report metrics)
 - [ ] `model.pkl` saved to disk
 - [ ] `airports.csv` created with airport IDs and names

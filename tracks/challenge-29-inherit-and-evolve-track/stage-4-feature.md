@@ -25,6 +25,12 @@ SQLite storage.
    reviewer if it focuses on formatting and misses a booking conflict.
 6. Restart the application and check saved requests. Run the solution tests,
    then walk through the employee and admin UI.
+7. Use 15--25 minutes of the existing UI review time for Impeccable's `critique`
+   of the waitlist flow. Make pending and confirmed states distinct and explain
+   blocked confirmation. Preserve the Razor layout and date rules. Fix one
+   useful finding, rerun the browser journey, and record the decision in the
+   existing working note or feature PR. The starter's `equipment-status` test
+   hook identifies availability labels; prefer semantic locators for actions.
 
 ### Acceptance Criteria
 
@@ -71,6 +77,7 @@ booking, real authentication, or a new application architecture.
   restart.
 - Existing browse, reserve, list, and cancel workflows still work.
   `dotnet test EquipmentBooking.sln` passes.
+- The reviewed UI shows pending versus confirmed requests and blocked-confirmation reasons without a redesign
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 

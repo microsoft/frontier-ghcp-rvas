@@ -12,7 +12,7 @@ clean_github_and_meta() {
   mkdir -p "$github_dir"
 
   local instructions_file="$REPO_ROOT/.github/copilot-instructions.md"
-  > "$instructions_file"
+  : > "$instructions_file"
   echo "[OK] Created empty .github/copilot-instructions.md"
 
   local agents_dir="$REPO_ROOT/.github/agents"

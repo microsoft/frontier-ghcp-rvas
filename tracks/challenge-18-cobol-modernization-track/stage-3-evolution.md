@@ -1,15 +1,20 @@
-# Stage 3: Feature Evolution
+# Stage 3: Feature Evolution (Optional)
 
-**Duration:** 1.5-2 hours
+**Duration:** Optional, outside the core budget
 **Focus:** Extending the system with new features to test your understanding
 
 ## Objective
 
 Prove you understand the system by extending it. Add new features that require touching multiple modules and maintaining consistency with the existing data model, business rules, and coding patterns. You can do this in COBOL (if you have GnuCOBOL set up) or in your target language (if you already started translating in Stage 2).
 
+For the five-hour core, skip this stage and continue to
+[Stage 4](stage-4-modernization.md). Do not add a new banking rule while
+characterizing or translating the original transfer workflow.
+
 ## Choose Your Features
 
-Pick **at least two** from the list below. Each one exercises a different part of the system.
+Pick one feature if you continue beyond the core. Each exercises a different
+part of the system.
 
 ### Feature A: Multi-Currency Support
 
@@ -82,7 +87,7 @@ Add a transaction search that works across all accounts:
 
 ## Verification
 
-- [ ] At least two features selected and designed
+- [ ] One feature selected and designed
 - [ ] Features implemented with proper data model changes
 - [ ] Tests written and passing for new features
 - [ ] Existing tests still pass (no regressions)

@@ -1,26 +1,31 @@
 # Stage 3: Advanced Interactions
 
-**Difficulty:** ⭐⭐ | **Time:** 60-90 min
+**Difficulty:** ⭐⭐ | **Time:** 30 min
 
-Add polish and interactivity that goes beyond basic CRUD.
+Make the task form's feedback clear and handle an empty task list.
 
 ## Tasks
 
-1. Dark/light theme with system preference detection (`prefers-color-scheme`) and localStorage persistence. Theme applies to all components.
-2. Drag-and-drop Kanban board view: tasks can be dragged between status columns (Todo, In Progress, Done). Dropping a task in a column updates its status.
-3. Keyboard shortcuts: `n` to open new task form, `Escape` to close modals, arrow keys to navigate the task list, `d` to delete the selected task.
-4. Toast notification system: success, error, and info variants. Auto-dismiss after 5 seconds with option to dismiss manually.
-5. Loading skeleton components (not spinners) for all data-loading states.
+1. Show a useful empty state with an accessible action to create the first task.
+2. Make validation messages explain how to fix the input. Preserve entered values after a failed submission.
+3. Use Impeccable's `critique` on the task creation flow. Apply a useful recommendation or explain why the current behavior should stay.
+4. Make dialog dismissal work with Escape and return focus to the trigger. Keep the delete undo action keyboard-accessible.
 
-If your UI agent or scaffolding skill leaves the Kanban board half-wired or conflicts with the Stage 2 state model, refine that customization before generating another pass.
+If your UI agent or custom skill produces feedback that conflicts with the Stage 2 state model, refine that customization before another pass.
 
 ## Verification
 
-- Theme persists across page reload
-- Drag-and-drop updates task status in state
-- All keyboard shortcuts work (test each one)
-- Toasts auto-dismiss after 5 seconds and can be manually closed
-- Skeleton components display while loading (simulate with a delay)
+- An empty list explains the next action
+- Invalid input has a clear inline error without losing entered values
+- Dialog dismissal returns focus; delete undo works with the keyboard
+- The review does not change task data or break validation
+
+## Stretch Tasks
+
+- Add a dark/light theme with system preference detection and persistence.
+- Build a drag-and-drop Kanban board with a keyboard-accessible way to change status.
+- Add task-list shortcuts that do not intercept typing in form fields.
+- Add loading skeletons after connecting the API in Stage 5.
 
 ---
 
