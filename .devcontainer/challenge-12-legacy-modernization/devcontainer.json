@@ -26,6 +26,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-12-legacy-modernization && cd challenges/challenge-12-legacy-modernization && mvn dependency:resolve -q || true",
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-12-legacy-modernization && cd challenges/challenge-12-legacy-modernization && (mvn dependency:resolve -q || { echo 'Warning: Maven dependencies were not resolved. Retry before building the application.' >&2; })",
 	"remoteUser": "vscode"
 }

@@ -143,6 +143,12 @@ The GitHub Pages deployment workflow automatically builds and deploys the site f
 2. **Set up your environment** using the prerequisites and devcontainer guidance in your chosen track file.
 3. **Work through the stages** in the track, delivering a demonstrable result at the end.
 
+**Use a disposable clone for a predefined challenge.** First-time setup keeps
+the selected starter and guides, removes the website and facilitator material,
+and replaces the root README with a single challenge entry point. Rebuilding
+preserves participant files and Copilot customizations. The full template and
+BYOC kit remain in this source repository.
+
 ### Option 2: Bring Your Own Challenge
 
 1. **Define your outcome** using the **[Outcome Canvas](./byoc/outcome-canvas.md)**.
@@ -198,23 +204,18 @@ The environment is pre-configured with:
 - kubectl
 - All necessary VS Code extensions
 
-### Step 3: Clean Start (CRITICAL)
+### Step 3: Prepare Your Challenge Workspace
 
-The `.github/` directory contains instructions, agents, and skills used by GitHub Copilot Adoption delivery session organizers. Run the cleanup script to reset it before you begin.
+If you opened the selected challenge's devcontainer, setup has already prepared
+the workspace. Follow the challenge link in the generated root README.
 
-**Linux / macOS / Codespaces:**
+For manual setup, follow
+[Getting Started](./tracks/getting-started.md#manual-setup-without-a-devcontainer).
+First-time setup resets the template's Copilot customizations and detaches its
+git remote. Repeating setup for the same challenge preserves your work.
 
-```bash
-./scripts/clean-start.sh
-```
-
-**Windows (PowerShell):**
-
-```powershell
-.\scripts\clean-start.ps1
-```
-
-This empties `.github/copilot-instructions.md`, removes existing agents and skills, and detaches the git remote so you don't accidentally push to the template repo. After running the script, add your own project-specific instructions (see your Track guide for examples).
+**Do not run `clean-start` after you begin.** It resets Copilot customizations,
+including installed skills.
 
 ### Step 4: Verify Your Setup
 

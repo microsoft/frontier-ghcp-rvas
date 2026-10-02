@@ -161,7 +161,6 @@ the answer.
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
-- [Facilitator Guide](../FACILITATOR_GUIDE.md)
 - [SQL Server execution plans](https://learn.microsoft.com/sql/relational-databases/performance/execution-plans)
 - [Azure SQL performance guidance](https://learn.microsoft.com/azure/azure-sql/database/performance-guidance)
 - [Online index operations](https://learn.microsoft.com/sql/relational-databases/indexes/perform-index-operations-online)

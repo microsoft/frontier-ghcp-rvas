@@ -2,6 +2,12 @@
 
 This folder contains dedicated DevContainer configurations for each GitHub Copilot Adoption challenge.
 
+**Use a disposable clone.** First-time setup keeps the selected challenge and
+its guides, removes template-only material, and rewrites the root README with
+one start link. Rebuilding preserves participant files and Copilot customizations.
+Older prepared workspaces keep their existing layout. Use a fresh clone to switch
+challenges or get the slimmer layout.
+
 ## Available Configurations
 
 Select the configuration that matches the challenge you are working on.

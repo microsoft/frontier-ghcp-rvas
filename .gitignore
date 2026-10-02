@@ -63,6 +63,7 @@ yarn-error.log*
 tmp/
 temp/
 *.tmp
+.devcontainer/.workspace-prepared
 
 # Jupyter Notebook
 .ipynb_checkpoints

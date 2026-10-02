@@ -147,7 +147,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [MCP Servers Guide](../docs/mcp-servers.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
-- [Facilitator Guide](../FACILITATOR_GUIDE.md)
 
 ---
 

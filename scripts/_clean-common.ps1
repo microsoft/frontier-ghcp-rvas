@@ -46,10 +46,7 @@ function Invoke-CleanGitHubAndMeta {
 
     # ── Clean non-participant top-level directories and files ───────────
 
-    # Note: byoc/ (Bring Your Own Challenge kit) is intentionally
-    # NOT removed here. It is facilitator-facing reference material and is
-    # preserved by design in participant workspaces for context about the
-    # outcome-driven model.
+    # Challenge-specific pruning belongs in setup-challenge.ps1.
 
     $CopilotDir = Join-Path $RepoRoot ".copilot"
     if (Test-Path $CopilotDir) {

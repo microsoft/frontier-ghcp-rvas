@@ -20,6 +20,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-6-agentic-workflows && gh extension install github/gh-aw || true",
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-6-agentic-workflows && (gh extension install github/gh-aw || { echo 'Warning: gh-aw installation failed. Check the extension before starting.' >&2; })",
 	"remoteUser": "node"
 }

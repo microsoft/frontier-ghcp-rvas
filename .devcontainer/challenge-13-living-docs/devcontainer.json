@@ -25,6 +25,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-13-living-docs && cd challenges/challenge-13-living-docs && mvn dependency:resolve -q || true",
+	"postCreateCommand": "bash scripts/setup-challenge.sh challenge-13-living-docs && cd challenges/challenge-13-living-docs && (mvn dependency:resolve -q || { echo 'Warning: Maven dependencies were not resolved. Retry before building the application.' >&2; })",
 	"remoteUser": "vscode"
 }

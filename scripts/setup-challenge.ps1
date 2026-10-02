@@ -1,9 +1,8 @@
 #
 # setup-challenge.ps1 -- Prepare the workspace for a single challenge.
 #
-# Keeps only the challenge folder, track files, and devcontainer config
-# needed for the given challenge. Everything else is removed so users
-# see a clean, focused workspace.
+# Keeps the selected challenge and its guides, removing template-only material.
+# Repeat setup preserves participant files and Copilot customizations.
 #
 # Also runs the clean-start logic (creates empty repository instructions,
 # agent, and skill locations; removes samples; detaches the git remote).
@@ -145,6 +144,23 @@ $TrackFilePath = Join-Path $RepoRoot "tracks/$TrackFileName.md"
 $TrackDirPath = Join-Path $RepoRoot "tracks/$TrackDirName"
 $ChallengePath = Join-Path $RepoRoot "challenges/$ChallengeDir"
 $DevcontainerPath = Join-Path $RepoRoot ".devcontainer/$Challenge"
+$PreparedPath = Join-Path $RepoRoot ".devcontainer/.workspace-prepared"
+
+if (Test-Path -LiteralPath $PreparedPath) {
+    if (-not (Test-Path -LiteralPath $PreparedPath -PathType Leaf)) {
+        throw "Invalid workspace marker at '$PreparedPath'."
+    }
+    $PreparedChallenge = Get-Content -LiteralPath $PreparedPath -Raw
+    if ([string]::IsNullOrWhiteSpace($PreparedChallenge)) {
+        throw "Invalid workspace marker at '$PreparedPath'."
+    }
+    $PreparedChallenge = $PreparedChallenge.Trim()
+    if ($PreparedChallenge -ne $Challenge) {
+        throw "This workspace is prepared for '$PreparedChallenge'. Use a fresh clone for '$Challenge'."
+    }
+    Write-Host "[SKIP] Workspace already prepared for $Challenge; keeping participant files and customizations."
+    exit 0
+}
 
 $MissingPaths = @()
 if (-not (Test-Path $ChallengePath -PathType Container)) {
@@ -164,6 +180,14 @@ if ($MissingPaths.Count -gt 0) {
     Write-Host "Error: setup files are missing for '$Challenge':" -ForegroundColor Red
     $MissingPaths | ForEach-Object { Write-Host "  $_" -ForegroundColor Red }
     exit 1
+}
+
+# Older setup versions removed these files without writing a marker.
+if (-not (Test-Path (Join-Path $RepoRoot "tracks/README.md")) -and
+    -not (Test-Path (Join-Path $RepoRoot "CONTRIBUTING.md"))) {
+    [System.IO.File]::WriteAllText($PreparedPath, "$Challenge`n")
+    Write-Host "[SKIP] Existing participant workspace detected; keeping files and customizations."
+    exit 0
 }
 
 Write-Host "=== Challenge Setup: $Challenge ===" -ForegroundColor Cyan
@@ -220,25 +244,32 @@ $ReadmePath = Join-Path $DevcontainerDir "README.md"
 
 This workspace is configured for **$Challenge**.
 
-The devcontainer setup has already installed all prerequisites and
-cleaned up files from other challenges.
+Setup keeps the selected challenge and its guides.
+Rebuilding preserves participant files and Copilot customizations.
 "@ | Set-Content -Path $ReadmePath
 Write-Host "[OK] Updated .devcontainer/README.md" -ForegroundColor Green
 
 # Remove files that are not for participants
-foreach ($RemoveFile in @("CONTRIBUTING.md")) {
-    $RemovePath = Join-Path $RepoRoot $RemoveFile
-    if (Test-Path $RemovePath) {
-        Remove-Item -Path $RemovePath -Force
-        Write-Host "[CLEAN] Removed $RemoveFile" -ForegroundColor DarkGray
+foreach ($RemoveDir in @("web", "byoc")) {
+    $RemovePath = Join-Path $RepoRoot $RemoveDir
+    if (Test-Path -LiteralPath $RemovePath) {
+        Remove-Item -LiteralPath $RemovePath -Recurse -Force
+        Write-Host "[CLEAN] Removed $RemoveDir/" -ForegroundColor DarkGray
     }
 }
 
-# Preserve facilitator-facing reference material
-# byoc/ (Bring Your Own Challenge authoring kit) is
-# reference material for facilitators to understand the outcome-driven
-# model and adapt challenges. It is intentionally preserved in the
-# workspace for context, not removed to minimize participant clutter.
+foreach ($RemoveFile in @(
+    "CONTRIBUTING.md", "AGENTS.md", "CONTEXT.md", "FACILITATOR_GUIDE.md",
+    "learning-paths.json", "role-collections.json", "docs/index.md",
+    "docs/challenges", "docs/tracks", "docs/TROUBLESHOOTING.md",
+    "scripts/setup-challenge.test.mjs"
+)) {
+    $RemovePath = Join-Path $RepoRoot $RemoveFile
+    if (Test-Path -LiteralPath $RemovePath) {
+        Remove-Item -LiteralPath $RemovePath -Force
+        Write-Host "[CLEAN] Removed $RemoveFile" -ForegroundColor DarkGray
+    }
+}
 
 # Replace root README with a focused version
 $RootReadme = Join-Path $RepoRoot "README.md"
@@ -246,25 +277,14 @@ $RootReadme = Join-Path $RepoRoot "README.md"
 @"
 # GitHub Copilot Adoption
 
-This workspace is set up for your challenge. Everything you don't need
-has been removed so you can focus on the task at hand.
+**[Start your challenge](tracks/$TrackFileName.md)**.
 
-## Your Track
+Your track explains the stages and links to the starter in
+``challenges/$ChallengeDir/``.
 
-**[Start here: tracks/$TrackFileName.md](tracks/$TrackFileName.md)**
+## Setup and Help
 
-If this is your first time, read [Getting Started](tracks/getting-started.md) first.
-
-## Quick Copilot Check
-
-Before you begin, verify Copilot is working:
-
-1. Look at the bottom-right of VS Code -- the Copilot icon should say "Ready"
-2. Press ``Ctrl+Shift+I`` (or ``Cmd+Shift+I`` on Mac) to open Chat
-3. Ask: "Hello, are you working?"
-
-## Resources
-
+- [Shared setup](tracks/getting-started.md)
 - [Copilot Guide](docs/copilot-guide.md)
 - [Prompt Engineering Guide](docs/prompt-engineering.md)
 - [MCP Servers Guide](docs/mcp-servers.md)
@@ -272,12 +292,9 @@ Before you begin, verify Copilot is working:
 "@ | Set-Content -Path $RootReadme
 Write-Host "[OK] Replaced root README.md" -ForegroundColor Green
 
+[System.IO.File]::WriteAllText($PreparedPath, "$Challenge`n")
+
 Write-Host ""
 Write-Host "Done. Your workspace is ready for: $Challenge" -ForegroundColor Green
 Write-Host ""
-Write-Host "Next steps:"
-Write-Host "  1. Read tracks/$TrackFileName.md for the full challenge walkthrough"
-Write-Host "  2. Start with tracks/getting-started.md if this is your first time"
-Write-Host "  3. Create repository instructions in .github/copilot-instructions.md"
-Write-Host "  4. Create a custom agent in .github/agents/"
-Write-Host "  5. Create a custom skill in .github/skills/"
+Write-Host "Start with tracks/$TrackFileName.md."

@@ -108,7 +108,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
-- [Facilitator Guide](../FACILITATOR_GUIDE.md)
 
 ---
 

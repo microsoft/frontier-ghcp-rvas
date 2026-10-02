@@ -16,18 +16,24 @@ Each challenge has its own devcontainer configuration under `.devcontainer/`.
 When you open the repository in a devcontainer through Codespaces or VS Code
 Dev Containers, pick the configuration that matches your challenge.
 
-The devcontainer automatically:
+On first setup, the devcontainer:
 
-- Installs all tools and dependencies for your challenge
+- Runs the tool and dependency installation for your challenge
 - Removes challenge folders, track files, and devcontainer configurations you
   do not need
+- Removes the documentation website, full catalog, and facilitator material
 - Clears `.github/copilot-instructions.md` so you start fresh
 - Removes sample agents and skills from `.github/`
 - Detaches the git remote so you do not accidentally push to the template
   repository
 
-After the container finishes building, your workspace contains only the files
-relevant to your track. Continue with step 2.
+**Open the root README and follow its challenge link.** The selected starter
+and track remain, along with shared help and required configuration.
+
+Rebuilding a prepared workspace skips cleanup and preserves your files,
+including installed skills and Copilot customizations. Older prepared
+workspaces are also preserved; use a fresh clone to get the slimmer layout.
+Use a separate clone to switch challenges.
 
 ### Manual Setup (Without a DevContainer)
 
@@ -48,10 +54,12 @@ Windows PowerShell:
 
 Run the script without arguments to see the full list of challenge names.
 
-The script performs the same cleanup as the devcontainer. It removes unrelated
-challenges, tracks, and devcontainer configurations and resets `.github/`. You
-still need to install language-specific dependencies yourself, such as with
-`npm install` or `pip install`.
+The script performs the same first-time cleanup as the devcontainer. Running it
+again for the same challenge preserves your work. You still need to install
+language-specific dependencies yourself, such as with `npm install` or
+`pip install`.
+
+Do not run `clean-start` after you begin: it resets Copilot customizations.
 
 ## 2. Open and Inspect the Challenge
 

@@ -115,7 +115,6 @@ to study similar artifacts, then write versions that fit this challenge.
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
-- [Facilitator Guide](../FACILITATOR_GUIDE.md)
 
 ---
 

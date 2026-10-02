@@ -146,7 +146,6 @@ The script checks the expected artifact structure, Mermaid source, ADR count and
 - [Copilot Guide](../docs/copilot-guide.md)
 - [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
-- [Facilitator Guide](../FACILITATOR_GUIDE.md)
 
 ---
 

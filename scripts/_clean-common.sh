@@ -45,10 +45,7 @@ clean_github_and_meta() {
 
   # ── Clean non-participant top-level directories and files ───────────
 
-  # Note: byoc/ (Bring Your Own Challenge kit) is intentionally
-  # NOT removed here. It is facilitator-facing reference material and is
-  # preserved by design in participant workspaces for context about the
-  # outcome-driven model.
+  # Challenge-specific pruning belongs in setup-challenge.sh.
 
   if [[ -d "$REPO_ROOT/.copilot" ]]; then
     rm -rf "$REPO_ROOT/.copilot"

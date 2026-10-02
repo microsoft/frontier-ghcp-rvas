@@ -2,9 +2,8 @@
 #
 # setup-challenge.sh -- Prepare the workspace for a single challenge.
 #
-# Keeps only the challenge folder, track files, and devcontainer config
-# needed for the given challenge. Everything else is removed so users
-# see a clean, focused workspace.
+# Keeps the selected challenge and its guides, removing template-only material.
+# Repeat setup preserves participant files and Copilot customizations.
 #
 # Also runs the clean-start logic (creates empty repository instructions,
 # agent, and skill locations; removes samples; detaches the git remote).
@@ -164,6 +163,25 @@ TRACK_FILE_PATH="$REPO_ROOT/tracks/${TRACK_FILE_NAME}.md"
 TRACK_DIR_PATH="$REPO_ROOT/tracks/$TRACK_DIR_NAME"
 CHALLENGE_PATH="$REPO_ROOT/challenges/$CHALLENGE_DIR"
 DEVCONTAINER_PATH="$REPO_ROOT/.devcontainer/$CHALLENGE_KEY"
+PREPARED_PATH="$REPO_ROOT/.devcontainer/.workspace-prepared"
+
+if [[ -e "$PREPARED_PATH" ]]; then
+  if [[ ! -f "$PREPARED_PATH" ]]; then
+    echo "Error: invalid workspace marker at '$PREPARED_PATH'." >&2
+    exit 1
+  fi
+  PREPARED_CHALLENGE="$(<"$PREPARED_PATH")"
+  if [[ -z "$PREPARED_CHALLENGE" ]]; then
+    echo "Error: invalid workspace marker at '$PREPARED_PATH'." >&2
+    exit 1
+  fi
+  if [[ "$PREPARED_CHALLENGE" != "$CHALLENGE_KEY" ]]; then
+    echo "Error: this workspace is prepared for '$PREPARED_CHALLENGE'. Use a fresh clone for '$CHALLENGE_KEY'." >&2
+    exit 1
+  fi
+  echo "[SKIP] Workspace already prepared for $CHALLENGE_KEY; keeping participant files and customizations."
+  exit 0
+fi
 
 MISSING_PATHS=()
 [[ -d "$CHALLENGE_PATH" ]] || MISSING_PATHS+=("challenges/$CHALLENGE_DIR")
@@ -175,6 +193,13 @@ if (( ${#MISSING_PATHS[@]} > 0 )); then
   echo "Error: setup files are missing for '$CHALLENGE_KEY':" >&2
   printf "  %s\n" "${MISSING_PATHS[@]}" >&2
   exit 1
+fi
+
+# Older setup versions removed these files without writing a marker.
+if [[ ! -e "$REPO_ROOT/tracks/README.md" && ! -e "$REPO_ROOT/CONTRIBUTING.md" ]]; then
+  printf '%s\n' "$CHALLENGE_KEY" > "$PREPARED_PATH"
+  echo "[SKIP] Existing participant workspace detected; keeping files and customizations."
+  exit 0
 fi
 
 echo "=== Challenge Setup: $CHALLENGE_KEY ==="
@@ -249,48 +274,43 @@ cat > "$REPO_ROOT/.devcontainer/README.md" <<EOF
 
 This workspace is configured for **$CHALLENGE_KEY**.
 
-The devcontainer setup has already installed all prerequisites and
-cleaned up files from other challenges.
+Setup keeps the selected challenge and its guides.
+Rebuilding preserves participant files and Copilot customizations.
 EOF
 echo "[OK] Updated .devcontainer/README.md"
 
 # ── Remove files that are not for participants ─────────────────────
 
-if [[ -f "$REPO_ROOT/CONTRIBUTING.md" ]]; then
-  rm -f "$REPO_ROOT/CONTRIBUTING.md"
-  echo "[CLEAN] Removed CONTRIBUTING.md"
-fi
+for dir in web byoc; do
+  if [[ -e "$REPO_ROOT/$dir" || -L "$REPO_ROOT/$dir" ]]; then
+    rm -rf -- "${REPO_ROOT:?}/$dir"
+    echo "[CLEAN] Removed $dir/"
+  fi
+done
 
-# ── Preserve facilitator-facing reference material ─────────────────
-# byoc/ (Bring Your Own Challenge authoring kit) is
-# reference material for facilitators to understand the outcome-driven
-# model and adapt challenges. It is intentionally preserved in the
-# workspace for context, not removed to minimize participant clutter.
+for file in CONTRIBUTING.md AGENTS.md CONTEXT.md FACILITATOR_GUIDE.md \
+  learning-paths.json role-collections.json docs/index.md \
+  docs/challenges docs/tracks docs/TROUBLESHOOTING.md \
+  scripts/setup-challenge.test.mjs; do
+  if [[ -e "$REPO_ROOT/$file" || -L "$REPO_ROOT/$file" ]]; then
+    rm -f -- "$REPO_ROOT/$file"
+    echo "[CLEAN] Removed $file"
+  fi
+done
 
 # ── Replace root README with a focused version ──────────────────────
 
 cat > "$REPO_ROOT/README.md" <<EOF
 # GitHub Copilot Adoption
 
-This workspace is set up for your challenge. Everything you don't need
-has been removed so you can focus on the task at hand.
+**[Start your challenge](tracks/${TRACK_FILE_NAME}.md)**.
 
-## Your Track
+Your track explains the stages and links to the starter in
+\`challenges/$CHALLENGE_DIR/\`.
 
-**[Start here: tracks/${TRACK_FILE_NAME}.md](tracks/${TRACK_FILE_NAME}.md)**
+## Setup and Help
 
-If this is your first time, read [Getting Started](tracks/getting-started.md) first.
-
-## Quick Copilot Check
-
-Before you begin, verify Copilot is working:
-
-1. Look at the bottom-right of VS Code -- the Copilot icon should say "Ready"
-2. Press \`Ctrl+Shift+I\` (or \`Cmd+Shift+I\` on Mac) to open Chat
-3. Ask: "Hello, are you working?"
-
-## Resources
-
+- [Shared setup](tracks/getting-started.md)
 - [Copilot Guide](docs/copilot-guide.md)
 - [Prompt Engineering Guide](docs/prompt-engineering.md)
 - [MCP Servers Guide](docs/mcp-servers.md)
@@ -298,14 +318,11 @@ Before you begin, verify Copilot is working:
 EOF
 echo "[OK] Replaced root README.md"
 
+printf '%s\n' "$CHALLENGE_KEY" > "$PREPARED_PATH"
+
 # ── Summary ─────────────────────────────────────────────────────────
 
 echo ""
 echo "Done. Your workspace is ready for: $CHALLENGE_KEY"
 echo ""
-echo "Next steps:"
-echo "  1. Read tracks/$TRACK_FILE_NAME.md for the full challenge walkthrough"
-echo "  2. Start with tracks/getting-started.md if this is your first time"
-echo "  3. Create repository instructions in .github/copilot-instructions.md"
-echo "  4. Create a custom agent in .github/agents/"
-echo "  5. Create a custom skill in .github/skills/"
+echo "Start with tracks/$TRACK_FILE_NAME.md."
