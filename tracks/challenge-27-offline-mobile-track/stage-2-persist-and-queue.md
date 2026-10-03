@@ -1,4 +1,4 @@
-# Stage 2: Persist and Queue Work
+# Stage 2: Persist and queue work
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 75-90 min
 
@@ -31,7 +31,7 @@ queue order are correct.
 - Malformed local data follows a documented recovery path
 - Core persistence and queue tests run in Node
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can implement storage adapters and serialization tests quickly. You
 must choose compaction, ordering, migration, and recovery rules. Those rules

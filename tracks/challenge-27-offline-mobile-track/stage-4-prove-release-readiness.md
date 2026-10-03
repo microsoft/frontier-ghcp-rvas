@@ -1,4 +1,4 @@
-# Stage 4: Prove Release Readiness
+# Stage 4: Prove release readiness
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
@@ -28,7 +28,7 @@
 - Permission and degraded-mode behavior are covered without an emulator
 - The release-readiness checklist contains evidence and exact limitations
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot is useful for test tables and fixture setup. You decide whether the
 evidence matches the real risks. A large test count does not compensate for a

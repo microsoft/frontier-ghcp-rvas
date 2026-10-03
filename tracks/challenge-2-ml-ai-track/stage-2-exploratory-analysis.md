@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
-Visualization without interpretation is decoration. Every plot needs to answer a question.
+Each plot must answer a question about churn and include your interpretation.
 
 ## Tasks
 

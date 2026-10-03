@@ -1,4 +1,4 @@
-# Stage 4: Full-Stack Modernization
+# Stage 4: Full-stack modernization
 
 **Duration:** 165 minutes, including a 15--25 minute UI review
 **Focus:** One local account-transfer API and React journey
@@ -42,14 +42,14 @@ present a one-workflow demo as a production banking replacement.
 - One UI review has before-and-after evidence and a documented decision
 - Keyboard use works and the UI change preserves the characterized rules
 
-## Stretch Tasks
+## Stretch tasks
 
 Add account management or customer search, then translate other workflows
 with their own characterization tests. Login, loan screens, reports, and an
 admin panel are optional. Scope any technical-debt fix separately and update
 its tests before changing the original expectation.
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can scaffold API and React code. Impeccable can identify confusing
 feedback. You decide whether the result preserves the original behavior and

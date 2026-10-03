@@ -1,10 +1,10 @@
-# Stage 3: Fix the Cancellation Defect
+# Stage 3: Fix the cancellation defect
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 75 min
 
 ## Tasks
 
-### Support Ticket
+### Support ticket
 
 > Operations: A cancelled booking sometimes still blocks equipment. The laser
 > level has a cancelled reservation for October 10 to October 12, 2030, but
@@ -44,7 +44,7 @@
 - Active conflicts and maintenance remain enforced; adjacent bookings work.
 - `dotnet test EquipmentBooking.sln` passes.
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can suggest causes and draft a test. You decide whether the test
 reproduces the user's problem and whether the patch fixes the cause. A passing

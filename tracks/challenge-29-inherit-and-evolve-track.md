@@ -1,13 +1,13 @@
-# Challenge 29 Track: Inherit and Evolve an Application
+# Challenge 29 track: Inherit and evolve an application
 
 **Duration:** 4-6 hours (300-minute target)
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** Understanding an unfamiliar C# application, fixing a reported defect
-with regression evidence, and adding a small waitlist feature
+**Focus:** Learn an unfamiliar C# application, fix a reported defect with
+regression evidence, and add a small waitlist feature
 
-## Who Is This For
+## Who is this for
 
 - C# developers taking over an existing application
 - Engineers practicing code discovery and review with GitHub Copilot
@@ -22,7 +22,7 @@ with regression evidence, and adding a small waitlist feature
 You do not need prior knowledge of this codebase. No Azure subscription,
 credentials, or external services are required.
 
-## Technology Stack
+## Technology stack
 
 - .NET 10 and ASP.NET Core
 - Server-rendered Razor UI
@@ -48,7 +48,7 @@ booking from October 10 to October 12, 2030 uses October 10 and 11; a booking
 starting October 12 does not overlap it. Scenarios must work independently of
 the current date.
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md), with the warning below.
 
@@ -57,7 +57,7 @@ Follow the [common setup steps](getting-started.md), with the warning below.
 > Use a disposable clone with a clean worktree. The devcontainer runs setup
 > automatically; do not run the clean-start script again after container setup.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Work in
 [`challenges/challenge-29-inherit-and-evolve/`](../challenges/challenge-29-inherit-and-evolve/).
@@ -77,7 +77,7 @@ Keep one short working note, wherever your team normally keeps engineering
 notes. Add source references during discovery and extend it with the final
 change summary. There is no separate report for each stage.
 
-### Install and Use Impeccable
+### Install and use Impeccable
 
 Follow the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it).
 Preflight `src/EquipmentBooking.Web/Pages/Index.cshtml`. In Stage 4, review only
@@ -85,7 +85,7 @@ the new waitlist flow after it works. Preserve Razor and the existing visual
 style. Make pending and confirmed states distinct, and explain blocked admin
 confirmation. Keep date rules and eligibility in the application's tests.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Author `.github/copilot-instructions.md` from facts you verify in this starter.
 Describe the stack, local-only boundary, date-range meaning, and commands used
@@ -93,7 +93,7 @@ to check changes. Record the existing project conventions after discovery.
 Require evidence for claims about behavior and keep unrelated refactoring out
 of the task. Do not record a suspected cause as a fact.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 Start with one small agent. The second brief is optional.
 
@@ -105,7 +105,7 @@ Start with one small agent. The second brief is optional.
   the cancellation fix and waitlist work to check preserved behavior. Limit
   its scope to this change rather than a general redesign.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 Author the regression-test skill for this session. The second brief is an
 optional extension if you find yourself repeating the same manual checks.
@@ -123,7 +123,7 @@ Use the [shared examples guidance](getting-started.md#4-learn-from-examples-then
 to study authoring patterns. Write your own artifacts; these briefs describe
 their job, not their contents.
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Give Copilot one workflow to trace and require source references.
 - Run a claimed behavior yourself before relying on it.

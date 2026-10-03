@@ -1,14 +1,14 @@
-# Challenge 22 Track: Secure Release Review
+# Challenge 22 track: Secure release review
 
 **Duration:** 4-6 hours
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** Reviewing and hardening a .NET 8 release candidate across trust
+**Focus:** Review and harden a .NET 8 release candidate across trust
 boundaries, authorization, input handling, configuration, dependencies, and
 security logging
 
-## Who Is This For
+## Who is this for
 
 - Application security engineers reviewing code before release
 - Senior .NET developers responsible for security-sensitive APIs
@@ -22,7 +22,7 @@ security logging
 - Basic experience with automated tests and package management
 - Ability to separate release blockers from risks that can be tracked
 
-## Technology Stack
+## Technology stack
 
 - .NET 8 and ASP.NET Core Minimal APIs
 - xUnit and `WebApplicationFactory`
@@ -35,11 +35,11 @@ endpoints. Its data and tokens are synthetic. Several security decisions are
 deliberately weak, but the challenge does not require destructive testing or
 exploit automation.
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first, then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Work in
 [`challenges/challenge-22-secure-release/`](../challenges/challenge-22-secure-release/).
@@ -61,7 +61,7 @@ Create these participant artifacts under `deliverables/`:
 The documents should point to code, tests, commands, or captured output. A list
 of generic security advice is not enough.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should describe the API's trust model,
 data sensitivity, supported roles, release constraints, and test conventions.
@@ -69,7 +69,7 @@ State that all testing stays local, demo values must never be replaced with
 real credentials, and generated changes need evidence before they are accepted.
 Also define how your team labels release blockers and residual risks.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 - **Threat Model Reviewer** -- Takes the endpoint inventory, data flows, and
   proposed trust boundaries. It challenges missing actors, assets, abuse cases,
@@ -82,7 +82,7 @@ Also define how your team labels release blockers and residual risks.
   and the draft checklist. It finds unsupported conclusions and unclear release
   gates. Use it in the final stage.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 - **Endpoint Security Review Skill** -- A repeatable pass from route inventory
   through actor, authentication, authorization, input, output, and logging
@@ -97,7 +97,7 @@ Also define how your team labels release blockers and residual risks.
 Use the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own)
 to study similar artifacts, then write versions that fit this challenge.
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Ask for an endpoint and trust-boundary inventory before asking for fixes.
 - Keep review prompts narrow enough that you can verify every claim in code.

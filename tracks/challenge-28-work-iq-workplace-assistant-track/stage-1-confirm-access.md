@@ -1,12 +1,12 @@
-# Stage 1: Confirm Access and Set the Boundary
+# Stage 1: Confirm access and set the boundary
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
 ## Tasks
 
-Use the Customization Trio from the start. Put the stable boundaries in
-repository instructions, ask the Scope Guardian agent to review the scope, and
-run the Scoped Workplace Retrieval skill before making a Work IQ request.
+Put stable boundaries in repository instructions. Have the Scope Guardian
+agent review the scope, then run the Scoped Workplace Retrieval skill before
+making a Work IQ request.
 
 1. Complete
    `docs/preflight-checklist.md` with the participant, delivery lead, and
@@ -37,7 +37,7 @@ run the Scoped Workplace Retrieval skill before making a Work IQ request.
 - No credentials, access tokens, or workplace content are committed to the
   repository
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can test availability and help organize the boundary. You decide if the
 information belongs in the handoff and if the audience should receive it.

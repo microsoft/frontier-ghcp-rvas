@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Provision Azure infrastructure using Terraform with proper variable management.
+Provision Azure infrastructure using Terraform. Define variables for configurable values.
 
 ## Tasks
 

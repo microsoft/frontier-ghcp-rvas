@@ -1,14 +1,13 @@
-# Challenge 26 Track: Developer Onboarding Repair
+# Challenge 26 track: Developer onboarding repair
 
 **Duration:** 4-6 hours
 
 **Difficulty:** ⭐⭐ to ⭐⭐⭐
 
-**Focus:** Repairing developer onboarding documentation by testing reader
-tasks, settling audience and terminology decisions, correcting examples
-against working software, and adding lightweight editorial checks
+**Focus:** Test onboarding tasks, resolve audience and terminology conflicts,
+verify examples against the software, and add editorial checks
 
-## Who Is This For
+## Who is this for
 
 - Technical writers who maintain developer documentation
 - Developer educators who build hands-on onboarding material
@@ -22,14 +21,14 @@ against working software, and adding lightweight editorial checks
 - Familiarity with task-oriented documentation
 - No prior knowledge of the Launchpad CLI or SDK
 
-## Technology Stack
+## Technology stack
 
 - **TypeScript and Node.js 22** -- the working CLI and SDK behind the docs
 - **Node.js test runner** -- local SDK and command-line tests
 - **Markdown** -- the fragmented onboarding content
 - **Small Node.js scripts** -- link and command-example validation
 
-## What You Are Repairing
+## What you are repairing
 
 Launchpad is a small developer setup tool with a CLI and SDK. The software
 works, but the documentation does not. Pages came from different team wikis
@@ -43,12 +42,12 @@ Documentation challenge, which focuses on generating reference material from
 code and release changes. Here, automation supports the editorial work rather
 than defining it.
 
-## Getting Started
+## Getting started
 
-Follow the [common setup steps](getting-started.md) first. Draft the
-Customization Trio before you begin the first reader test.
+Follow the [common setup steps](getting-started.md) first. Draft repository
+instructions, custom agents, and skills before the first reader test.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Navigate to
 [`challenges/challenge-26-developer-onboarding/`](../challenges/challenge-26-developer-onboarding/).
@@ -56,7 +55,7 @@ Start at `docs/index.md`, but do not assume it points to everything useful.
 Run the code tests before changing documentation so you can separate software
 behavior from documentation defects.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should establish:
 
@@ -69,7 +68,7 @@ Your `.github/copilot-instructions.md` should establish:
 Describe stable decisions only. Stage-specific requests belong in your work
 notes, not repository instructions.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 - **Onboarding Reader Agent** -- Reviews a journey from one named audience's
   perspective and reports blockers, assumptions, and missing context. Give it
@@ -81,7 +80,7 @@ notes, not repository instructions.
   navigation, progressive disclosure, and duplicate content. Give it the
   proposed audience/task map and page tree during Stage 2.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 - **Onboarding Test Skill** -- A repeatable clean-room pass that records the
   reader goal, starting page, commands attempted, observed result, and blocker.
@@ -97,7 +96,7 @@ Use the shared
 to study patterns, then author customizations for this challenge. Do not copy
 a generic documentation agent and treat it as complete.
 
-## Required Participant Artifacts
+## Required participant artifacts
 
 By the end of the challenge, the repository should contain:
 
@@ -109,7 +108,7 @@ By the end of the challenge, the repository should contain:
 - Automated local link and example checks
 - An editorial maintenance workflow with owners and review triggers
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Give Copilot a reader, goal, starting page, and evidence. "Improve these
   docs" is too vague to produce a useful review.

@@ -2,7 +2,7 @@
 
 **Time: Full 3 hours (active throughout)**
 
-You are not idle during the build stage. Your job is to keep the team unblocked and the backlog healthy.
+Answer developer questions, review PRs, and keep the backlog current during the build.
 
 ## Tasks
 

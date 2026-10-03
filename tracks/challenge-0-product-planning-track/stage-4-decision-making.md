@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Real product work involves trade-offs, conflicting priorities, and imperfect information. This stage introduces all three.
+Decide which requests fit the release budget and explain the trade-offs to stakeholders.
 
 ## Tasks
 
@@ -24,7 +24,7 @@ Real product work involves trade-offs, conflicting priorities, and imperfect inf
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot generates thorough pro/con lists for ADRs and can suggest cost comparisons for buy-vs-build. But deciding which stakeholder request to cut (and writing a diplomatic but honest explanation), choosing a multi-tenancy model that fits TaskFlow's specific situation, and making a buy-vs-build call with imperfect cost data are decisions that require product and business judgment.
+Copilot can draft option comparisons and cost estimates. Check those estimates before using them. You must decide which requests to fund, choose a multi-tenancy model for TaskFlow, and explain your buy-vs-build recommendation.
 
 ---
 

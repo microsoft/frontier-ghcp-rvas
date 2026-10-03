@@ -1,4 +1,4 @@
-# Stage 2: Discover the Application
+# Stage 2: Discover the application
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60 min
 
@@ -41,7 +41,7 @@ booking problem and where a feature could change existing behavior.
   questions are visibly marked.
 - Application code is still unchanged.
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can follow references and draft a map. You must check that it traced
 the path the application actually runs. A confident summary without evidence

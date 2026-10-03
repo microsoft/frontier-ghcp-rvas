@@ -1,4 +1,4 @@
-# Stage 1: Establish the Baseline
+# Stage 1: Establish the baseline
 
 **Duration:** 30 minutes
 

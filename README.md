@@ -2,7 +2,9 @@
 
 ![GitHub Copilot Adoption banner](docs/images/rvas-banner.jpg)
 
-GitHub Copilot Adoption helps your team **drive real work outcomes** with GitHub Copilot, then build lasting adoption across your organization. Choose from **31 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a GitHub Copilot Adoption delivery session on your own codebase.
+Use GitHub Copilot to deliver work your team needs. Choose from **31 challenges**
+with starter code and track guides, or bring your own app. Use the session to
+find practices your team can keep using.
 
 Sessions use repository instructions, custom agents, and custom skills tailored
 to the work. Challenge 30 adopts Spec Kit's supplied workflow; authoring custom
@@ -14,21 +16,24 @@ Challenges **4, 8, 9, 10, 18, 27, 29, and 30** also use Impeccable for a focused
 UI review tied to the existing user journey. Participants install the skill
 with `npx`; no Impeccable extension is required. The
 [shared setup](tracks/getting-started.md#5-install-impeccable-when-your-track-uses-it)
-includes discovery and launcher checks. Each selected track keeps heavier
-features outside its 4--6-hour core.
+includes discovery and launcher checks. Each selected track keeps optional
+features outside its 4-6-hour core.
 The Backlog Generator's first stage is now
 [Spec-to-Backlog Skill](tracks/challenge-15-backlog-generator-track/stage-1-skill.md);
 links to its former `stage-1-prompt` page need updating.
 
-## Two Ways to Run a GitHub Copilot Adoption Delivery Session
+## Two ways to run a GitHub Copilot Adoption delivery session
 
-### Option 1: Pick a Worked-Example Challenge
+### Option 1: pick a worked-example challenge
 
-Choose one of the **31 challenge tracks** below. Each challenge maps to a specific business outcome and provides starter code, a devcontainer, and a progression path through real work. Use these to learn outcome-driven AI-assisted development patterns you can apply to your own work.
+Choose a challenge below. Each has a defined outcome, starter code, a
+devcontainer, and stages that guide the work.
 
-### Option 2: Bring Your Own Challenge
+### Option 2: bring your own challenge
 
-Run a GitHub Copilot Adoption delivery session on your own app or repository. The **[Bring Your Own Challenge (BYOC) kit](./byoc/)** provides a canvas to define your target outcome, templates to author a custom challenge, and a facilitator runbook to guide your session. This turns the session into working time that delivers a measurable result for your team.
+Use the **[Bring Your Own Challenge (BYOC) kit](./byoc/)** to plan a session on
+your team's codebase. Define the result, prepare the work, and decide how you
+will demonstrate it.
 
 See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
@@ -36,9 +41,10 @@ See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
 The repository includes **31 challenge tracks** organized by the outcomes they help you deliver:
 
-### Challenges by Outcome
+### Challenges by outcome
 
-Each challenge below drives a measurable business outcome -- shipping features, modernizing legacy systems, raising quality, automating delivery, standing up platform foundations, or building AI-powered capabilities. Delivering that outcome is what makes the case for wider Copilot adoption.
+Choose by the work you need to deliver. At the end, show what changed and how
+Copilot helped.
 
 - 📋 **[Challenge 0: Product Planning Track](./tracks/challenge-0-product-planning-track.md)** - Product planning, backlog management, documentation (no code) | **Outcome:** Ship Product Features Faster
 - 🔧 **[Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)** - REST APIs, authentication, testing | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
@@ -46,21 +52,21 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 - ☁️ **[Challenge 3: DevOps Track](./tracks/challenge-3-devops-track.md)** - Infrastructure as Code, containers, CI/CD | **Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
 - 🎨 **[Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)** - Accessible React dashboard, Impeccable design reviews (4-6 hours) | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 - 🔍 **[Challenge 5: QA & Testing Track](./tracks/challenge-5-qa-track.md)** - AI-assisted testing, test planning, Copilot for QA workflows | **Outcome:** Raise Quality and Confidence
-- 🤖 **[Challenge 6: Agentic Workflows Track](./tracks/challenge-6-agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows | **Outcomes:** Automate Delivery and Ops Toil, Build AI-Powered Capabilities
+- 🧩 **[Challenge 6: Agentic Workflows Track](./tracks/challenge-6-agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows | **Outcomes:** Automate Delivery and Ops Toil, Build AI-Powered Capabilities
 - 🧩 **[Challenge 7: Copilot SDK Track](./tracks/challenge-7-copilot-sdk-track.md)** - Build a Copilot SDK application (advanced) | **Outcome:** Build AI-Powered Capabilities
 - ✈️ **[Challenge 8: Flight Delay Predictor Track](./tracks/challenge-8-flight-delay-track.md)** - One model, API, and reviewed prediction UI (4-6 hours) | **Outcomes:** Ship Product Features Faster, Build AI-Powered Capabilities
-- 🏢 **[Challenge 9: Cross-Functional Team Sprint](./tracks/challenge-9-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people) | **Outcome:** Ship Product Features Faster
-- 🥾 **[Challenge 10: Technical Team Sprint](./tracks/challenge-10-tech-sprint-track.md)** - Technical team sprint from spec to deployment (2-4 developers) | **Outcome:** Ship Product Features Faster
-- 🏦 **[Challenge 11: Legacy MUMPS Modernization](./tracks/challenge-11-mumps-modernization-track.md)** - Reverse-engineer and translate a MUMPS banking system (solo, advanced) | **Outcome:** Modernize Legacy Systems
-- 🔄 **[Challenge 12: Legacy Code Modernization](./tracks/challenge-12-legacy-modernization-track.md)** - Reverse-engineer and modernize an undocumented Java application | **Outcome:** Modernize Legacy Systems
-- 📄 **[Challenge 13: Living Documentation](./tracks/challenge-13-living-docs-track.md)** - Automate javadoc, diagrams, changelogs, and PR doc reviews | **Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
-- 🔩 **[Challenge 14: Pipeline Factory](./tracks/challenge-14-pipeline-factory-track.md)** - Build CI/CD pipelines, debug broken deployments, generate runbooks | **Outcome:** Automate Delivery and Ops Toil
-- 📝 **[Challenge 15: Backlog Generator](./tracks/challenge-15-backlog-generator-track.md)** - Convert requirement specs into structured backlogs with MCP | **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
-- 🖥️ **[Challenge 16: Ops Assistant](./tracks/challenge-16-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling | **Outcome:** Automate Delivery and Ops Toil
-- 🚀 **[Challenge 17: Spec-to-Ship Accelerator](./tracks/challenge-17-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code | **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
-- 🏗️ **[Challenge 18: COBOL Banking Modernization](./tracks/challenge-18-cobol-modernization-track.md)** - Characterize and modernize one COBOL transfer journey (4-6 hours) | **Outcome:** Modernize Legacy Systems
+- 🧩 **[Challenge 9: Cross-Functional Team Sprint](./tracks/challenge-9-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people) | **Outcome:** Ship Product Features Faster
+- 🔧 **[Challenge 10: Technical Team Sprint](./tracks/challenge-10-tech-sprint-track.md)** - Technical team sprint from spec to deployment (2-4 developers) | **Outcome:** Ship Product Features Faster
+- 🔧 **[Challenge 11: Legacy MUMPS Modernization](./tracks/challenge-11-mumps-modernization-track.md)** - Reverse-engineer and translate a MUMPS banking system (solo, advanced) | **Outcome:** Modernize Legacy Systems
+- 🔧 **[Challenge 12: Legacy Code Modernization](./tracks/challenge-12-legacy-modernization-track.md)** - Reverse-engineer and modernize an undocumented Java application | **Outcome:** Modernize Legacy Systems
+- 📋 **[Challenge 13: Living Documentation](./tracks/challenge-13-living-docs-track.md)** - Automate javadoc, diagrams, changelogs, and PR doc reviews | **Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
+- 🔧 **[Challenge 14: Pipeline Factory](./tracks/challenge-14-pipeline-factory-track.md)** - Build CI/CD pipelines, debug broken deployments, generate runbooks | **Outcome:** Automate Delivery and Ops Toil
+- 📋 **[Challenge 15: Backlog Generator](./tracks/challenge-15-backlog-generator-track.md)** - Convert requirement specs into structured backlogs with MCP | **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
+- 🔧 **[Challenge 16: Ops Assistant](./tracks/challenge-16-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling | **Outcome:** Automate Delivery and Ops Toil
+- 🔧 **[Challenge 17: Spec-to-Ship Accelerator](./tracks/challenge-17-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code | **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
+- 🔧 **[Challenge 18: COBOL Banking Modernization](./tracks/challenge-18-cobol-modernization-track.md)** - Characterize and modernize one COBOL transfer journey (4-6 hours) | **Outcome:** Modernize Legacy Systems
 - 🔧 **[Challenge 19: WCF Banking Modernization](./tracks/challenge-19-wcf-modernization-track.md)** - Understand a legacy WCF SOAP banking service and migrate it to a REST API | **Outcome:** Modernize Legacy Systems
-- 💻 **[Challenge 20: PowerShell Automation](./tracks/challenge-20-powershell-automation-track.md)** - Fix, test, document, and package PowerShell scripts for real sysadmin work | **Outcomes:** Automate Delivery and Ops Toil, Modernize Legacy Systems
+- 🔧 **[Challenge 20: PowerShell Automation](./tracks/challenge-20-powershell-automation-track.md)** - Fix, test, document, and package PowerShell scripts for real sysadmin work | **Outcomes:** Automate Delivery and Ops Toil, Modernize Legacy Systems
 - ☁️ **[Challenge 21: Azure Terraform Track](./tracks/challenge-21-azure-terraform-track.md)** - Build an Azure Terraform foundation with modules, identity, policy checks, and CI guardrails | **Outcome:** Stand Up Cloud Platform Foundations
 - 🔍 **[Challenge 22: Secure Release Review](./tracks/challenge-22-secure-release-track.md)** - Review and harden a .NET release candidate with evidence-based security gates | **Outcome:** Raise Quality and Confidence
 - 🧩 **[Challenge 23: Merger Integration Architecture](./tracks/challenge-23-merger-architecture-track.md)** - Define Azure system boundaries, integration contracts, and transition decisions after a merger | **Outcome:** Stand Up Cloud Platform Foundations
@@ -76,8 +82,7 @@ Each challenge below drives a measurable business outcome -- shipping features, 
 
 Coaches who need a focused workshop path can use the site's Challenge Set Builder and Learning Paths pages to select challenges and generate a single shareable student URL.
 
-Each track provides its own stage progression with specific guidance, tips, and
-learning objectives.
+Each track explains its stages and verification criteria.
 
 The documentation site also groups challenges into 13 enterprise Role
 Collections. Use the **Roles** page to find relevant work for product,
@@ -89,9 +94,10 @@ operations, QA, and architecture roles.
 Duration varies by track. Challenge 29 takes **4-6 hours**, with a five-hour core.
 Check the selected track for its time budget.
 
-## Documentation Site
+## Documentation site
 
-The repository includes a bespoke static documentation site in the `web/` directory. The site is dependency-free and built with vanilla HTML, CSS, and JavaScript.
+The static documentation site lives in `web/`. It uses HTML, CSS, and JavaScript
+with no build dependencies.
 
 To build the site data locally:
 
@@ -135,13 +141,13 @@ Then open `http://localhost:8000/index.html` in your browser.
 
 The GitHub Pages deployment workflow automatically builds and deploys the site from `.github/workflows/deploy-site.yml` on every push to `main`.
 
-## Getting Started
+## Getting started
 
-### Option 1: Work a Challenge Track
+### Option 1: work a challenge track
 
-1. **Choose a challenge** that drives an outcome you want to produce. See **[tracks/README.md](./tracks/README.md)** for the full catalog organized by outcome.
-2. **Set up your environment** using the prerequisites and devcontainer guidance in your chosen track file.
-3. **Work through the stages** in the track, delivering a demonstrable result at the end.
+1. Choose a challenge from [tracks/README.md](./tracks/README.md).
+2. Set up your environment using the track's prerequisites and devcontainer.
+3. Work through the stages and demonstrate the result.
 
 **Use a disposable clone for a predefined challenge.** First-time setup keeps
 the selected starter and guides, removes the website and facilitator material,
@@ -149,7 +155,7 @@ and replaces the root README with a single challenge entry point. Rebuilding
 preserves participant files and Copilot customizations. The full template and
 BYOC kit remain in this source repository.
 
-### Option 2: Bring Your Own Challenge
+### Option 2: bring your own challenge
 
 1. **Define your outcome** using the **[Outcome Canvas](./byoc/outcome-canvas.md)**.
 2. **Author your challenge** using the templates in **[byoc/templates/](./byoc/templates/)** (if you need a custom progression; otherwise skip this and work directly on your app).
@@ -160,13 +166,13 @@ See the **[BYOC Kit README](./byoc/README.md)** for the end-to-end flow and a wo
 
 ---
 
-### Step 1: Choose Your Track
+### Step 1: choose your track
 
 **Not sure which track?** See the **[Track Selection Guide](./tracks/README.md)** for help choosing.
 
 **Running a coached session?** Use the site's Challenge Set Builder or Learning Paths pages to prepare a curated challenge set and share one student URL with participants.
 
-### Step 2: Set Up Environment
+### Step 2: set up environment
 
 #### Prerequisites
 
@@ -174,7 +180,7 @@ See the **[BYOC Kit README](./byoc/README.md)** for the end-to-end flow and a wo
 - GitHub Codespaces enabled (recommended) OR
 - Local development environment with VS Code and GitHub Copilot extension
 
-#### Start Hacking
+#### Open the workspace
 
 **Option A: GitHub Codespaces (Recommended)**
 
@@ -204,7 +210,7 @@ The environment is pre-configured with:
 - kubectl
 - All necessary VS Code extensions
 
-### Step 3: Prepare Your Challenge Workspace
+### Step 3: prepare your challenge workspace
 
 If you opened the selected challenge's devcontainer, setup has already prepared
 the workspace. Follow the challenge link in the generated root README.
@@ -217,7 +223,7 @@ git remote. Repeating setup for the same challenge preserves your work.
 **Do not run `clean-start` after you begin.** It resets Copilot customizations,
 including installed skills.
 
-### Step 4: Verify Your Setup
+### Step 4: verify your setup
 
 Before starting, make sure Copilot is working:
 
@@ -230,15 +236,15 @@ Before starting, make sure Copilot is working:
 
 1. Create a new file (e.g., `test.js`)
 2. Type: `// function to add two numbers`
-3. You should see Copilot suggestions appear!
+3. Check that Copilot suggests code.
 
 **Test Chat:**
 
 1. Press `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Shift+I` (Mac)
 2. Type: "Hello, are you working?"
-3. Copilot should respond!
+3. Check that Copilot responds.
 
-### Step 5: Start Your Track
+### Step 5: start your track
 
 Once your environment is ready:
 
@@ -246,30 +252,30 @@ Once your environment is ready:
 2. Follow the recommended challenge sequence
 3. Use the track-specific tips and guidance
 
-## Skills You'll Build While Driving Outcomes
+## Skills you'll build while driving outcomes
 
-As you work through these challenges, you'll build proficiency with GitHub Copilot's capabilities as a by-product of delivering real work:
+The challenges give you practice with these Copilot capabilities:
 
-### 1. **Chat & Agentic Capabilities**
+### 1. Chat and agentic capabilities
 
 - `/explain`, `/fix`, `/tests` commands
 - **Agentic Mode** - Autonomous multi-step task execution
 - **Planning Mode** - High-level architectural reasoning
 - Workspace context chat
 
-### 2. **Repository Instructions**
+### 2. Repository Instructions
 
 - Stable project context and constraints
 - Coding, testing, and review conventions
 - Mid-session refinement based on what the team learns
 
-### 3. **Custom Agents and Skills**
+### 3. Custom Agents and skills
 
 - **MCP Servers** - Connect external tools and data
 - **Custom Agents** - Build and use specialized assistants
 - **Custom Skills** - Capture repeatable workflows
 
-### 4. **Inline Suggestions**
+### 4. Inline suggestions
 
 - Code completion
 - Multi-line suggestions
@@ -277,7 +283,7 @@ As you work through these challenges, you'll build proficiency with GitHub Copil
 
 ## Challenges
 
-**Tip:** Instead of choosing challenges individually, we recommend following a [role-based track](./tracks/README.md) for a structured learning experience!
+Use the [track catalog](./tracks/README.md) to choose by role or outcome.
 
 All 31 challenges are available, and each track has a dedicated challenge:
 
@@ -287,7 +293,11 @@ All 31 challenges are available, and each track has a dedicated challenge:
 **Skills**: Markdown, GitHub Issues, GitHub Projects, Pull Requests
 **Copilot Focus**: Long-form writing, brainstorming, GitHub MCP server for issue/PR management
 
-Plan the next major release of a task management platform across 5 progressive stages. Start with competitive analysis and quantified personas, then write and critique user stories, build feature specs aligned to real API endpoints, resolve conflicting stakeholder requests under a fixed budget, and produce a production-grade release plan with risk matrices, rollback strategies, and monitoring specs. No application code required.
+Plan the next release of a task management platform in five stages. Analyze
+competitors and define personas with measurable needs. Write and review user
+stories, then build feature specs aligned to real API endpoints. Resolve
+conflicting stakeholder requests within a fixed budget. Finish with a release
+plan that covers risk, rollback, and monitoring. No application code is required.
 
 ---
 
@@ -348,9 +358,12 @@ Test the eShop application across 5 stages: explore the app with Copilot and Pla
 **Team**: Experienced developers (any role) who finished a standard track
 **Duration**: 8-12 hours (Advanced)
 **Skills**: Node.js, TypeScript, Copilot SDK, GitHub API, custom tool definitions
-**Copilot Focus**: Building *with* the Copilot agent runtime -- sessions, streaming, custom tools, MCP integration
+**Copilot Focus**: Build with the Copilot agent runtime using sessions, streaming, custom tools, and MCP integration
 
-Build a Release Notes Agent powered by the GitHub Copilot SDK. The agent fetches merged PRs, categorizes changes, generates a structured changelog through iterative conversation, and publishes a draft GitHub Release -- all using custom tools, streaming responses, and multi-turn sessions.
+Build a Release Notes Agent with the GitHub Copilot SDK. It fetches merged PRs
+and categorizes changes. Refine the changelog through conversation, then publish
+a draft GitHub Release. Use custom tools, streaming responses, and multi-turn
+sessions.
 
 > ⚠️ **Challenge 7 is significantly harder and longer than the standard challenges.**
 
@@ -361,7 +374,7 @@ Build a Release Notes Agent powered by the GitHub Copilot SDK. The agent fetches
 **Team**: Full-Stack Developers, Advanced Participants
 **Duration**: 4-6 hours (five-hour core)
 **Skills**: Python, pandas, scikit-learn, Flask/FastAPI, TypeScript, frontend frameworks
-**Copilot Focus**: End-to-end development -- data science in notebooks, API scaffolding, frontend generation, cross-domain debugging
+**Copilot Focus**: Data science in notebooks, API and frontend generation, debugging across the stack
 
 Build one baseline flight-delay model, serve it through a REST API, and create a
 frontend where users select a day and airport. Use Impeccable to improve the
@@ -375,7 +388,7 @@ charts, and Azure deployment are optional.
 **Team**: Cross-functional team of 4-6 (Product Owner, Backend Dev, Frontend Dev, QA, DevOps, optional BA)
 **Duration**: 4-6 hours (five-hour team core)
 **Skills**: GitHub Spark, GitHub Issues/Projects, Express.js/FastAPI, React/Vue, Playwright, Docker, Azure, Terraform
-**Copilot Focus**: Every role uses Copilot -- PO for user stories and planning, developers for code generation, QA for test automation, DevOps for infrastructure
+**Copilot Focus**: PO planning and user stories, developer code generation, QA test automation, DevOps infrastructure
 
 Build CityPulse as a cross-functional team. The core covers reports and upcoming
 events, with an integrated API and tests. Use Impeccable for one QA-verified UI
@@ -388,10 +401,10 @@ deployment without a prepared environment are optional.
 
 ### [Challenge 10: Technical Team Sprint (TrailMate)](./challenges/challenge-10-tech-sprint/) ([Track](./tracks/challenge-10-tech-sprint-track.md))
 
-**Team**: Technical team of 2-4 (Backend Dev, Frontend Dev, DevOps required; QA optional -- no PO or BA)
+**Team**: Technical team of 2-4, with Backend Dev, Frontend Dev, and DevOps responsibilities. QA is optional; no PO or BA is required.
 **Duration**: 4-6 hours (five-hour team core)
 **Skills**: Express.js/FastAPI, React/Vue, Playwright, Docker, Azure, Terraform, GitHub Issues/Projects
-**Copilot Focus**: Every technical role uses Copilot -- developers for code generation, QA for test automation, DevOps for infrastructure
+**Copilot Focus**: Developer code generation, QA test automation, DevOps infrastructure
 
 Build TrailMate from the provided specification. The core covers trail browsing
 and condition reporting, with API integration and tests. Use Impeccable to
@@ -409,7 +422,10 @@ Azure deployment without a prepared environment are optional.
 **Skills**: Any modern language (PSL, Java, Python, C#, TypeScript), reverse engineering, testing, financial domain knowledge
 **Copilot Focus**: Legacy code comprehension with `/explain`, cross-language translation, characterization test generation, architecture documentation
 
-Reverse-engineer and translate a core banking system written in MUMPS -- a language most developers have never seen. The system handles customer management, deposit accounts, teller transactions, consumer loans, interest calculation, and end-of-day batch processing across 12 routines and ~2,500 lines of code. Understand it, test it, extend it, and translate it to a modern language while preserving every business rule.
+Reverse-engineer a MUMPS banking system with 12 routines and about 2,500 lines
+of code. It handles customers, deposit accounts, teller transactions, consumer
+loans, interest, and end-of-day batches. Test and extend the system, then
+translate it to a modern language while preserving its business rules.
 
 ---
 
@@ -420,7 +436,12 @@ Reverse-engineer and translate a core banking system written in MUMPS -- a langu
 **Skills**: Java 8/17, Spring Boot, Maven, REST APIs, SQL
 **Copilot Focus**: Legacy code comprehension with `/explain`, security auditing, characterization testing, framework migration
 
-Reverse-engineer and modernize the Acme Bank Account Manager -- an undocumented Java 8 / Spring Boot 1.5 banking application built by a contractor who left in 2018. The code has SQL injection vulnerabilities, deprecated libraries (Log4j 1.x, Apache HttpClient 4.x), no service layer, no tests, and business logic buried in controllers. Recover the business rules, audit for security issues, write characterization tests, and migrate to Spring Boot 3.x / Java 17+.
+Modernize the Acme Bank Account Manager, an undocumented Java 8 / Spring Boot
+1.5 application whose contractor left in 2018. It has SQL injection
+vulnerabilities and deprecated libraries, including Log4j 1.x and Apache
+HttpClient 4.x. Business logic lives in controllers, with no service layer or
+tests. Recover the business rules, audit security, and write characterization
+tests before migrating to Spring Boot 3.x / Java 17+.
 
 ---
 
@@ -431,7 +452,10 @@ Reverse-engineer and modernize the Acme Bank Account Manager -- an undocumented 
 **Skills**: Java, Javadoc, Mermaid diagrams, Markdown
 **Copilot Focus**: Bulk javadoc generation, architecture diagrams, changelog workflow skills, custom agents for PR documentation review
 
-Automate the documentation of the Widget Corp Inventory Manager -- a Java application with stale javadoc, a changelog that stopped being updated two versions ago, and zero architecture diagrams. Generate accurate javadoc, create Mermaid diagrams for architecture and data model, build a repeatable changelog workflow, and create an agent that reviews PRs for documentation completeness.
+Update the Widget Corp Inventory Manager's stale javadoc and changelog, which
+stopped two versions ago. Add Mermaid diagrams for the architecture and data
+model. Build a repeatable changelog workflow and an agent that reviews PRs for
+missing documentation.
 
 ---
 
@@ -464,7 +488,11 @@ Convert three use case specifications of increasing complexity (Password Reset, 
 **Skills**: Log analysis concepts, incident management, basic Node.js (optional)
 **Copilot Focus**: Custom agents for log analysis, incident routing and runbook workflow skills, error-to-plain-language translation
 
-Build AI-assisted operations tooling for the Order Gateway -- a critical e-commerce service. Analyze two days of production logs containing payment timeouts, database deadlocks, connection pool exhaustion, and OutOfMemoryErrors. Create a log analysis agent that explains errors in plain language for non-technical support staff, build an incident routing skill that maps errors to responsible teams, and generate troubleshooting runbooks from historical incident data.
+Build operations tooling for the Order Gateway e-commerce service. Analyze two
+days of logs containing payment timeouts, database deadlocks, connection pool
+exhaustion, and OutOfMemoryErrors. Create an agent that explains errors to
+non-technical support staff. Build an incident routing skill that maps errors
+to responsible teams, then generate runbooks from historical incident data.
 
 ---
 
@@ -473,9 +501,13 @@ Build AI-assisted operations tooling for the Order Gateway -- a critical e-comme
 **Team**: Solo or pair (tech leads, senior developers)
 **Duration**: 6-8 hours
 **Skills**: Full SDLC concepts, Node.js, GitHub Actions
-**Copilot Focus**: End-to-end workflow skills -- spec to backlog to technical analysis to code to tests to CI pipeline, custom agents for test specification
+**Copilot Focus**: Workflow skills for specifications, backlogs, technical analysis, implementation, tests, and CI; custom agents for test specifications
 
-Compress the full development lifecycle for a billing module on an existing multi-tenant SaaS platform. Start with a functional requirements document and an existing tenant management API. Build skills that convert the spec into work items and carry each handoff forward, generate a technical analysis against the existing codebase, implement the billing module from generated stories, create test specifications with a custom agent, and wire up a CI pipeline.
+Deliver a billing module for an existing multi-tenant SaaS platform. Start
+with its functional requirements and tenant management API. Build skills that
+convert the spec into work items and support each handoff. Analyze the existing
+code, implement the stories, and use a custom agent to create test
+specifications. Finish with a CI pipeline.
 
 ---
 
@@ -511,7 +543,10 @@ Reverse-engineer a legacy WCF banking service (Meridian Savings Bank) built circ
 **Skills**: PowerShell 7+, Pester 5, PSScriptAnalyzer, Az module, GitHub Actions
 **Copilot Focus**: Script comprehension, bug detection, error handling, test generation, module packaging, CI pipeline creation
 
-Take three inherited PowerShell scripts from the fictional Contoso IT team -- a stale account finder, a disk cleanup tool, and an Azure resource tagger -- and bring them up to production standard. Use Copilot to understand the code, fix bugs, add error handling and logging, write Pester tests, run static analysis, and wire everything into a GitHub Actions CI pipeline.
+Repair three inherited PowerShell scripts from the fictional Contoso IT team.
+They find stale accounts, clean disks, and tag Azure resources. Fix their bugs,
+add error handling and logging, and write Pester tests. Run static analysis
+and add a GitHub Actions CI pipeline.
 
 ---
 
@@ -632,37 +667,35 @@ implement the approval rules. No deployment or external issue tracker is needed.
 
 ---
 
-## Learning Resources
+## Learning resources
 
-### Examples & Templates
+### Examples and templates
 
 Use the [shared examples guidance](./tracks/getting-started.md#4-learn-from-examples-then-write-your-own)
 to find current examples. Search for terms that match the artifact you need,
 such as "repository instructions", "custom agent", or "workflow skill".
 
-### GitHub Copilot Documentation
+### GitHub Copilot documentation
 
 - [Copilot Guide](./docs/copilot-guide.md)
 - [Prompt Engineering Guide](./docs/prompt-engineering.md)
 - [MCP Servers Guide](./docs/mcp-servers.md)
 
-### Quick Tips
+### Quick tips
 
-**Getting the Most from Copilot:**
+Describe the expected behavior and reference existing code. Refine suggestions
+through conversation, and review generated code before accepting it.
+Use `/explain`, `/fix`, and `/tests` for focused requests.
 
-1. **Be Specific**: Detailed prompts yield better results
-2. **Provide Context**: Reference existing code and patterns
-3. **Iterate**: Refine suggestions through conversation
-4. **Use Chat Commands**: Use `/explain`, `/fix`, `/tests`, and natural language for documentation
-5. **Review Suggestions**: Always understand generated code
-6. **Keyboard Shortcuts**:
- - `Tab` - Accept suggestion
- - `Esc` - Dismiss suggestion
- - `Alt+]` - Next suggestion
- - `Alt+[` - Previous suggestion
- - `Ctrl+Shift+I` - Open Copilot Chat
+| Shortcut | Action |
+|----------|--------|
+| `Tab` | Accept suggestion |
+| `Esc` | Dismiss suggestion |
+| `Alt+]` | Next suggestion |
+| `Alt+[` | Previous suggestion |
+| `Ctrl+Shift+I` | Open Copilot Chat |
 
-### Tips for Success
+### Tips for success
 
 1. **Write Clear Comments**
 
@@ -672,13 +705,11 @@ such as "repository instructions", "custom agent", or "workflow skill".
 
    ```
 
-2. **Use Chat Freely** - Ask Copilot: "What does this code do?", "How can I improve this?"
+2. Ask Copilot to explain code you do not understand.
+3. Review generated code and test its behavior.
+4. Refine your request when a suggestion misses the requirements.
 
-3. **Review Everything** - Understand all generated code, test thoroughly
-
-4. **Iterate** - First suggestion not perfect? Refine your prompt or try different approaches
-
-### Common Issues
+### Common issues
 
 | Problem | Solution |
 |---------|----------|
@@ -686,9 +717,9 @@ such as "repository instructions", "custom agent", or "workflow skill".
 | Wrong suggestions | Be more specific, provide more context, try chat instead |
 | Environment issues | Codespaces: rebuild container; Local: check tool versions |
 
-## Session Format
+## Session format
 
-### Track-Based Learning (Recommended)
+### Track-based learning
 
 **Choose a track** based on your role and follow the curated path:
 
@@ -699,36 +730,32 @@ such as "repository instructions", "custom agent", or "workflow skill".
 
 See **[Tracks Overview](./tracks/README.md)** to choose your path.
 
-### Alternative: Individual Challenges
+### Alternative: individual challenges
 
-Prefer to explore on your own?
+Choose challenges based on your interests. Each includes starter code and
+objectives, with optional tasks for further work.
 
-- Choose 2-3 challenges based on your interests
-- Each challenge includes starter code and objectives
-- Progressive difficulty with bonus tasks
-
-### Team Showcase (1-2 hours)
+### Team demos (1-2 hours)
 
 - Present your solutions
 - Share interesting Copilot interactions
 - Discuss productivity gains and learnings
 - Compare experiences across different tracks
 
-### Best Practices Session (1 hour)
+### Best practices session (1 hour)
 
 - Review common patterns
 - Share tips and tricks discovered
 - Q&A with Copilot experts
 
-## Success Metrics
+## Success metrics
 
-A successful GitHub Copilot Adoption delivery session produces:
+Each team should demonstrate its result and explain the impact, such as time
+saved or risk reduced. Record how Copilot helped and which practices the team
+will use in daily work.
 
-- **A demonstrable outcome** for each team -- working code, a shipped feature, modernized infrastructure, or documented automation.
-- **Articulated business impact** -- participants can state the outcome they drove and why it matters (faster delivery, reduced risk, lower toil).
-- **A path to adoption** -- the team can explain how they used Copilot to drive the outcome and has a concrete plan to apply the patterns to daily work, which is what turns a single session into sustained adoption.
-
-Track activity metrics (Copilot usage, chat interactions) as supporting evidence, but judge success by the work result and the follow-on adoption plan.
+Copilot usage and chat counts can support that evidence. **Judge success by
+the work delivered**, not tool activity.
 
 ## Collaboration
 
@@ -746,7 +773,7 @@ After completing the session, please share:
 - Productivity improvements you experienced
 - Features you found most valuable
 
-## Next Steps
+## Next steps
 
 After the session:
 
@@ -756,9 +783,9 @@ After the session:
 4. Share knowledge with your organization
 5. Measure and track productivity improvements
 
-## Support & Resources
+## Support and resources
 
-### Quick Links
+### Quick links
 
 - **[Choose Your Track](./tracks/README.md)** - Outcome-driven learning paths organized by role and outcome
 - **[Bring Your Own Challenge Kit](./byoc/README.md)** - Run a GitHub Copilot Adoption delivery session on your own codebase
@@ -767,19 +794,8 @@ After the session:
 - **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For GitHub Copilot Adoption delivery session organizers
 - **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content
 
-### Need Help?
+### Help
 
-- **Which track?** See [Track Selection Guide](./tracks/README.md)
-- **Technical Issues**: Check [Troubleshooting Guide](./TROUBLESHOOTING.md)
-- **Copilot Questions**: Use Copilot Chat in VS Code
-- **General Help**: Review the `/docs` folder
-- **Found a Bug**: Create an issue in this repository
-
----
-
-**Getting started:**
-
-1. [Choose Your Track](./tracks/README.md)
-2. Follow the [Setup Instructions](#step-2-set-up-environment) above
-3. [Verify Your Setup](#step-4-verify-your-setup)
-4. Start your first challenge!
+Use the [Track Selection Guide](./tracks/README.md) to choose a challenge and
+the [Troubleshooting Guide](./TROUBLESHOOTING.md) for setup problems.
+Report bugs through this repository's issues.

@@ -1,8 +1,8 @@
-# Stage 2: Incident Routing
+# Stage 2: Incident routing
 
 **Duration:** 1.5-2 hours
 
-**Focus:** Building a skill that routes issues to the correct team based on error patterns
+**Focus:** Build a skill that routes issues to the correct team based on error patterns
 
 ## Tasks
 
@@ -23,7 +23,7 @@
    - A JWT signature failure (should route to Security Team)
    - A warehouse API connectivity issue (should route to Integrations Team)
 
-4. **Test with ambiguous or compound errors.** Give the skill a log excerpt that contains multiple interrelated errors (e.g., slow queries causing pool exhaustion causing API failures). Verify it identifies the root cause team, not just the symptom team.
+4. Test a log excerpt with interrelated errors, such as slow queries that exhaust the connection pool and cause API failures. Verify that the skill routes to the team responsible for the root cause.
 
 5. **Check incident history correlation.** When a new error matches a past incident, the routing recommendation should cite that incident and its resolution. For example, a match to INC-2025-0051 should identify the database-index fix and suggest checking for a regression. State when no historical match is supported.
 

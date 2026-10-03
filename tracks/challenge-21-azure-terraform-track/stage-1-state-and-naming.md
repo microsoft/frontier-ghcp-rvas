@@ -1,10 +1,10 @@
-# Stage 1: State and Naming Baseline
+# Stage 1: State and naming baseline
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
 You inherited a flat Terraform directory with hard-coded names, no remote state, and no agreement on tags. Fix the foundation before you build anything larger on top of it.
 
-## Scenario Notes
+## Scenario notes
 
 The team agrees that remote state is required, but not much else is settled. The platform lead wants names that sort cleanly by environment. The application team wants short names that are easy to read in the Azure portal. Finance wants every resource tagged with owner, cost center, environment, and data classification. Azure storage account names are less forgiving than everyone remembers.
 
@@ -12,7 +12,7 @@ Resolve the naming and tagging tension before you touch the rest of the platform
 
 ## Tasks
 
-Before you touch the backend config, use the full setup: keep your repository instructions open for the naming and tagging rules you settle on, bring in the Terraform Reviewer agent for the module and naming judgment calls, and run your plan review skill on the first `terraform plan` rather than eyeballing the diff yourself.
+Record naming and tagging rules in your repository instructions. Use the Terraform Reviewer agent to check module and naming choices, then run the plan review skill on the first `terraform plan`. Check its findings yourself.
 
 1. Use `terraform/azure/` as the working Terraform root. Provision the storage account and blob container you want to use for Terraform state, and document the bootstrap order in `docs/platform-notes.md`.
 2. Configure the main environment in `terraform/azure/` to use the remote backend. Remove hard-coded resource names and replace them with locals, variables, and a tagging baseline that fits the stakeholder notes.
@@ -20,7 +20,7 @@ Before you touch the backend config, use the full setup: keep your repository in
 4. Add a short naming decision section to `docs/platform-notes.md`. Include one Azure naming limit you designed around and one stakeholder request you narrowed or deferred.
 5. Keep the layout ready for later stages. At minimum, `terraform/azure/` should stay the environment root, while reusable code belongs under `modules/`.
 
-## Review Gate
+## Review gate
 
 Before moving on, ask Copilot to critique your naming and backend design. Do not ask it to rewrite everything. Ask it to find conflicts with Azure limits, weak tag coverage, and places where the backend bootstrap order would confuse a teammate.
 
@@ -32,9 +32,9 @@ Before moving on, ask Copilot to critique your naming and backend design. Do not
 - Naming and tag inputs are centralized instead of repeated across resources
 - `docs/platform-notes.md` explains the bootstrap order, naming rules, tag baseline, and unresolved assumptions
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
-Copilot is useful here for provider blocks, backend structure, and repetitive variable declarations. The judgment call is your naming model: you need names that work across Azure limits, regions, and environments without becoming unreadable six months from now. If Copilot proposes a naming pattern, make it justify the pattern against Azure constraints before you keep it.
+Copilot can draft provider blocks, backend configuration, and variable declarations. You must check that the naming pattern remains readable and meets Azure limits across regions and environments.
 
 ---
 

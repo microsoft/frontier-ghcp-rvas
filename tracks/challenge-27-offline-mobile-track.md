@@ -1,13 +1,13 @@
-# Challenge 27 Track: Offline Field Service App
+# Challenge 27 track: Offline field service app
 
 **Duration:** 4-6 hours
 
 **Difficulty:** ⭐⭐ to ⭐⭐⭐
 
-**Focus:** Making a React Native field-service workflow dependable when
+**Focus:** Make a React Native field-service workflow dependable when
 connectivity and device capabilities cannot be assumed
 
-## Who Is This For
+## Who is this for
 
 - Mobile developers working with React Native or Expo
 - Frontend engineers moving into local-first mobile workflows
@@ -24,7 +24,7 @@ connectivity and device capabilities cannot be assumed
 An emulator, app store account, and Azure subscription are optional. The Expo
 web target and Node test suite cover the required work.
 
-## Technology Stack
+## Technology stack
 
 - **React Native and Expo** for the mobile application
 - **TypeScript** for UI, state, storage, and synchronization code
@@ -33,13 +33,13 @@ web target and Node test suite cover the required work.
 - **Mocked Azure Functions contract** for job retrieval and queued action sync
 - **Impeccable** for a focused review of inspection and sync feedback
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first. The challenge expects
 you to create repository instructions, a specialist agent, and a reusable
 skill before the implementation settles.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Open [`challenges/challenge-27-offline-mobile/`](../challenges/challenge-27-offline-mobile/)
 and run the fixture validation, typecheck, and tests. Then start the Expo web
@@ -51,7 +51,7 @@ fixtures. It is not release-ready. Refresh the web app after saving an
 inspection, force a conflict, and try both permission buttons. Those failures
 define the work.
 
-### Install and Use Impeccable
+### Install and use Impeccable
 
 Follow the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it).
 Preflight `src/components/InspectionPanel.tsx`. In Stage 3, review feedback for
@@ -59,7 +59,7 @@ local saves and synchronization failures in the Expo web target. Keep React
 Native components and the chosen conflict policy. **Web review does not prove
 native accessibility**; record any native-device checks still outstanding.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should capture:
 
@@ -71,7 +71,7 @@ Your `.github/copilot-instructions.md` should capture:
 - Accessibility expectations for React Native controls and status changes
 - The requirement that core state and synchronization tests run in Node
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 - **Offline Data Reviewer** -- Reviews a proposed storage and queue design for
   data-loss paths, ordering mistakes, and restart behavior. Give it the design
@@ -84,7 +84,7 @@ Your `.github/copilot-instructions.md` should capture:
   Give it fixture results, queue behavior, and the chosen policy; ask it to find
   cases where technician work can disappear or be applied twice.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 - **Offline Journey Check** -- A repeatable sequence that saves work, simulates
   restart, changes network fixtures, synchronizes, and records any data loss.
@@ -95,7 +95,7 @@ Your `.github/copilot-instructions.md` should capture:
   failure evidence, and updates the release-readiness checklist without
   treating optional Azure deployment as a release requirement.
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Ask Copilot to trace one technician action from the form to local storage and
   through synchronization. A generic architecture summary will miss ordering
@@ -106,7 +106,7 @@ Your `.github/copilot-instructions.md` should capture:
   both copies of the work under the proposed policy.
 - Test the offline fixture before the happy path. A local-first app that only
   works online is still an online app.
-- Use accessibility review on state changes, not just static controls. Queue,
+- Review accessibility for state changes as well as static controls. Queue,
   sync, permission, and conflict feedback all need understandable announcements.
 
 ## Resources

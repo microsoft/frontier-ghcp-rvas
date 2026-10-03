@@ -1,4 +1,4 @@
-# Stage 4: Add the Waitlist
+# Stage 4: Add the waitlist
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 105 min
 
@@ -32,7 +32,7 @@ SQLite storage.
    existing working note or feature PR. The starter's `equipment-status` test
    hook identifies availability labels; prefer semantic locators for actions.
 
-### Acceptance Criteria
+### Acceptance criteria
 
 - An employee can join the waitlist for a specific equipment item and a valid
   whole-day range already occupied by a reservation. Invalid ranges show a
@@ -79,7 +79,7 @@ booking, real authentication, or a new application architecture.
   `dotnet test EquipmentBooking.sln` passes.
 - The reviewed UI shows pending versus confirmed requests and blocked-confirmation reasons without a redesign
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can draft persistence changes and suggest edge-case tests. You decide
 what eligibility means and must prove confirmation cannot double-book

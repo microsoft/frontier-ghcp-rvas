@@ -1,11 +1,11 @@
 id: challenge-20
 number: 20
-title: PowerShell Automation
+title: PowerShell automation
 category: workflow-automation
 difficulty: intermediate
 duration_minutes: 300
 description: Write, debug, test, document, and automate PowerShell scripts for real system administration work with GitHub Copilot.
-focus: Using GitHub Copilot to write, debug, test, document, and automate PowerShell scripts for real sysadmin work
+focus: Use GitHub Copilot to write, debug, test, document, and automate PowerShell scripts for system administration
 tags:
   - workflow-automation
   - advanced

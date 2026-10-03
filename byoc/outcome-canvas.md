@@ -1,8 +1,9 @@
 # Outcome Canvas
 
-Use this worksheet to define the outcome you want to drive in your GitHub Copilot Adoption delivery session. Fill in each section before you start work.
+Use this worksheet to define what you will deliver in the session. Fill it in
+before you start work.
 
-## Target Outcome
+## Target outcome
 
 **Type of Outcome (pick one or define custom):**
 
@@ -20,7 +21,7 @@ _Example: "Migrate the customer search API from the legacy .NET Framework servic
 
 ---
 
-## Current Pain / Baseline
+## Current problem and baseline
 
 **What problem are you solving?**
 
@@ -28,11 +29,11 @@ _Describe the current state. What's broken, slow, manual, risky, or missing?_
 
 **Why does it matter?**
 
-_Business impact of the current pain: time wasted, risk of failure, quality issues, blocked work._
+_Describe the impact, such as wasted time, failure risk, quality issues, or blocked work._
 
 ---
 
-## Definition of Done
+## Definition of done
 
 **What does "done" look like at the end of the session?**
 
@@ -76,7 +77,7 @@ _Anything you cannot change? (existing APIs, backwards compatibility, deployment
 
 ---
 
-## App / Repository in Scope
+## App or repository in scope
 
 **Name:**
 
@@ -92,7 +93,7 @@ _Languages, frameworks, hosting, dependencies._
 
 ---
 
-## Customization Trio Design Inputs
+## Customization Trio design inputs
 
 The facilitator uses these notes to prepare a tailored Design Brief for each
 part of the Customization Trio. Capture what matters in this repository without
@@ -136,7 +137,7 @@ quality bar._
 
 ---
 
-## Demo Plan
+## Demo plan
 
 **What will you show at the end?**
 
@@ -150,7 +151,7 @@ _How will you prove the outcome was delivered? Live demo, screenshots, test resu
 
 ---
 
-## Success Measurement
+## Success measurement
 
 **How will you measure the business impact?**
 
@@ -168,4 +169,4 @@ _What artifacts prove the impact? (metrics, test output, logs, benchmark results
 
 ## Notes
 
-_Any additional context, risks, open questions, or dependencies._
+_Record context, risks, open questions, or dependencies not covered above._

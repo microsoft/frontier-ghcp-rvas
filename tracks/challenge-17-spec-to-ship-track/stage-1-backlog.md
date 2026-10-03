@@ -1,16 +1,16 @@
-# Stage 1: Spec to Backlog
+# Stage 1: Spec to backlog
 
 **Duration:** 1.5-2 hours
 
-**Focus:** Building a skill that converts the billing module spec into structured work items
+**Focus:** Build a skill that converts the billing module spec into structured work items
 
 ## Tasks
 
-Use your repository instructions for the existing app's conventions and the Requirements Analyst agent for the first structuring pass. Build on the Spec-to-Backlog skill from setup throughout this stage.
+Use your repository instructions for the existing app's conventions. Have the Requirements Analyst agent draft the work items, then check coverage with the Spec-to-Backlog skill from setup.
 
-1. **Study the requirements document.** Read `specs/billing-module-requirements.md` thoroughly. Identify the natural Epic boundaries: subscription management, usage metering, invoice generation, payment processing, and admin/dashboard features.
+1. Read `specs/billing-module-requirements.md`. Identify Epic boundaries for subscription management, usage metering, invoice generation, payment processing, and admin/dashboard features.
 
-2. **Build the spec-to-backlog skill.** Create or refine `.github/skills/spec-to-backlog/SKILL.md` for a repeatable conversion and coverage-review workflow that:
+2. Create or refine `.github/skills/spec-to-backlog/SKILL.md` to repeat the conversion and coverage checks. It should:
    - Takes the requirements document as input via `#file`
    - Produces Epics aligned with functional areas
    - Produces User Stories under each Epic with Given/When/Then acceptance criteria
@@ -19,9 +19,9 @@ Use your repository instructions for the existing app's conventions and the Requ
    - Identifies dependencies between Stories (e.g., payment method management must exist before invoice payment)
    - Flags open questions from the spec
 
-3. **Use the skill.** Generate the full backlog for the billing module. Save the output to `docs/generated-backlog.md` in the challenge folder.
+3. Use the skill to generate the full billing backlog. Save it to `docs/generated-backlog.md` in the challenge folder.
 
-4. **Review for completeness.** Walk through each section of the spec and verify:
+4. Check each section of the spec against the backlog:
    - All plan structures and transitions are covered
    - All metering requirements have Stories
    - The invoice lifecycle (DRAFT to FINALIZED to PAID/OVERDUE) is fully covered
@@ -31,7 +31,7 @@ Use your repository instructions for the existing app's conventions and the Requ
    - Events from section 9 have corresponding Stories
    - Data retention from section 10 is addressed
 
-5. **Refine the skill.** Address the coverage gaps and generate the backlog again. Check it against the requirements before moving to technical analysis.
+5. Refine the skill to address coverage gaps, then generate the backlog again. Check it against the requirements before moving to technical analysis.
 
 ## Verification
 

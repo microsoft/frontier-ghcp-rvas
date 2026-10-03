@@ -1,11 +1,11 @@
 id: challenge-19
 number: 19
-title: Legacy WCF Banking Modernization
+title: Legacy WCF banking modernization
 category: legacy-modernization
 difficulty: advanced
 duration_minutes: 480
 description: Reverse-engineer a WCF banking SOAP service and rebuild it as a modern REST API with GitHub Copilot.
-focus: WCF contract archaeology, SOAP service comprehension, characterization testing, and REST API modernization -- using GitHub Copilot to reverse-engineer a banking SOAP service and rebuild it as a modern REST API
+focus: Use GitHub Copilot to trace a banking SOAP service, characterize its behavior, and migrate it to a REST API
 tags:
   - legacy-modernization
   - advanced

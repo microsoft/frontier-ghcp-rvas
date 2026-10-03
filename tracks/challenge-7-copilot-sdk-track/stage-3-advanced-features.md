@@ -8,13 +8,13 @@ The agent can now fetch PRs and generate a changelog. In this stage you add MCP 
 
 1. **MCP server integration**
     - Configure the session to connect to the GitHub MCP server
-    - Use MCP to let the agent read repository files -- specifically `CHANGELOG.md` (to match the existing format and voice), CI workflow configs (to check pipeline status), and `package.json` or equivalent version files
+    - Use MCP to read `CHANGELOG.md` for format and voice, CI workflow configs for pipeline status, and `package.json` or equivalent version files
     - Combine MCP-provided tools with your custom tools in a single session
     - Test that the agent can answer questions like "What format does the existing changelog use?" by reading the actual file
 
 2. **Release manager persona**
     - Define a custom agent with a system prompt that constrains behavior: "You are a release manager. Be precise about breaking changes. Flag any PR that lacks a description or linked issue. Format changelogs consistently."
-    - Configure which tools this agent has access to -- it should only use the release-related tools, not general-purpose file system or shell tools
+    - Restrict the agent to release-related tools. Exclude general-purpose file system and shell tools.
     - Experiment with how different model choices affect the quality of categorization and changelog writing
 
 3. **Iterative refinement**
@@ -25,7 +25,7 @@ The agent can now fetch PRs and generate a changelog. In this stage you add MCP 
 
 4. **Publishing tools**
     - Create a `create_draft_release` tool that uses Octokit to create a GitHub Release in draft state with the generated notes, attached to the target tag
-    - Create a `check_ci_status` tool that fetches the CI check status for the release branch or tag -- the agent should warn if checks are failing before publishing
+    - Create a `check_ci_status` tool for the release branch or tag. The agent should warn about failing checks before publishing.
     - The agent should confirm before publishing: "The changelog has 12 PRs across 4 categories. CI is green on main. Create a draft release tagged v2.4.0?"
     - After publishing, the agent should print the URL of the draft release
 

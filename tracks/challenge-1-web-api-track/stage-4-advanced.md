@@ -6,7 +6,7 @@ This stage introduces a broken v2 API module and advanced features.
 
 ## Tasks
 
-1. **Bug hunt**: Import the module from `stage-4-bugs/v2-routes.js` (or `v2_routes.py`). It contains 3 intentional bugs -- a security vulnerability, a missing authorization check, and a pagination logic error. Find and fix all three. Document each bug (what it is, why it is dangerous, and how you fixed it).
+1. Import `stage-4-bugs/v2-routes.js` (or `v2_routes.py`) and fix its 3 intentional bugs, which include a security vulnerability, a missing authorization check, and a pagination logic error. Document each bug, its risk, and the fix.
 2. Real-time notifications via WebSocket: when a task is modified, notify the task's assignee in real time.
 3. File attachments on tasks: `POST /tasks/:id/attachments` for upload, `GET /tasks/:id/attachments/:fileId` for download. Enforce a 5MB file size limit.
 4. Audit log: record every mutation (create, update, delete) with who made the change, which field changed, before/after values, and timestamp. Make the audit log queryable via `GET /tasks/:id/audit`.
@@ -22,7 +22,7 @@ This stage introduces a broken v2 API module and advanced features.
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can generate WebSocket boilerplate, rate limiting middleware, and audit log schemas. But identifying the 3 bugs in the v2 module requires reading and reasoning about code -- Copilot alone may not spot the security vulnerability or the off-by-one pagination error without guidance.
+Copilot can generate WebSocket boilerplate, rate limiting middleware, and audit log schemas. Read the v2 module and verify all 3 bugs yourself. Copilot may miss the security vulnerability or the off-by-one pagination error.
 
 ---
 

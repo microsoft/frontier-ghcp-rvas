@@ -1,4 +1,4 @@
-# Stage 4: Implement and Verify
+# Stage 4: Implement and verify
 
 **Duration:** 105 minutes
 
@@ -11,8 +11,8 @@
 2. **Check behavior at the API boundary.** Exercise an eligible manager's
    decision and denied actions. In particular, prove that an employee cannot
    decide and that a manager cannot approve their own request. Inspect tests
-   for assertions about persisted in-memory state after a rejected operation,
-   not just the response status.
+   for assertions about persisted in-memory state after a rejected operation
+   as well as the response status.
 
 3. **Finish the browser flow.** A manager should be able to find a submitted
    request and record a decision. The requester should see the outcome and

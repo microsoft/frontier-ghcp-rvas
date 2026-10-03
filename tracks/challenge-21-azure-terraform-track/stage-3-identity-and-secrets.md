@@ -1,10 +1,10 @@
-# Stage 3: Identity and Secrets
+# Stage 3: Identity and secrets
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
-The platform exists, but it still is not safe to hand to an application team. This stage adds the identity and secret wiring that usually turns a quick demo environment into a real platform conversation.
+Add managed identity and secret access before handing the platform to the application team.
 
-## Scenario Notes
+## Scenario notes
 
 The app team wants one identity it can reuse across environments. Security prefers a narrower identity per environment. Operations wants secret rotation to avoid code changes. Nobody has written down which secret values the app actually needs.
 
@@ -20,7 +20,7 @@ Before writing more HCL, decide what the app should be allowed to read and how t
 
 If your Azure Identity agent or plan review skill proposes broad access or a generic Key Vault design, refine that customization before writing `docs/identity-review.md`.
 
-## Review Gate
+## Review gate
 
 Ask Copilot to review the identity and Key Vault plan for least privilege. Make it compare system-assigned and user-assigned identity for this scenario, then check whether your Terraform exposes sensitive values through variables, outputs, or example files.
 
@@ -32,9 +32,9 @@ Ask Copilot to review the identity and Key Vault plan for least privilege. Make 
 - Outputs expose references that are safe to share, not sensitive values
 - `docs/identity-review.md` explains the selected identity model and the permissions you avoided
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
-Copilot will generate identity blocks and Key Vault wiring, but it is not reliable at least-privilege decisions. You need to decide what the application actually needs, because Azure will happily let you ship a wider access model than necessary. Use Copilot to pressure-test the access model, not to bless it.
+Copilot can draft identity blocks and Key Vault access configuration. You decide which permissions the application needs. Have Copilot review the access model, then verify each grant yourself.
 
 ---
 

@@ -1,11 +1,11 @@
 id: challenge-16
 number: 16
-title: Ops Assistant
+title: Ops assistant
 category: workflow-automation
 difficulty: intermediate
 duration_minutes: 420
-description: Build AI-assisted operations tooling for log analysis, error routing, troubleshooting, and deployment automation with GitHub Copilot.
-focus: Building AI-assisted operations tooling -- log analysis agents, error-to-team routing, troubleshooting aids, and deployment automation -- using Copilot
+description: Build operations tools with GitHub Copilot for log analysis, incident routing, troubleshooting, and deployment automation.
+focus: Build operations tools with Copilot for log analysis, incident routing, troubleshooting, and deployment automation
 tags:
   - workflow-automation
   - advanced

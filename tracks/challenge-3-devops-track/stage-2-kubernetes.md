@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
-Deploy the application to Kubernetes with production-grade configuration.
+Configure the Kubernetes deployment with resource limits, health probes, and network controls.
 
 ## Tasks
 

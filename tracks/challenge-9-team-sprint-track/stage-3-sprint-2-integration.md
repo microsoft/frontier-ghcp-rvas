@@ -3,7 +3,7 @@
 **Duration:** 90 minutes for core integration and review
 **Focus:** Integration, advanced features, bug fixing, deployment preparation
 
-Sprint 2 builds on the core features from Sprint 1. The priority shifts: integrate the frontend with the real backend, fix bugs that QA found, add advanced features where capacity allows, and get the first deployment working.
+Connect the frontend to the backend and fix bugs from Sprint 1. Add advanced features only if time allows, then prepare the first deployment.
 
 ## Sprint 2 Planning (first 10 minutes)
 
@@ -37,7 +37,7 @@ A brief 5-minute check-in:
 
 This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication. Focus on getting a working report submission flow running end-to-end in the Codespace.
 
-If the shared repository instructions or the sprint board sync skill are producing conflicting guidance across roles, such as backend and frontend drifting from the same API contract, revise them together as a team now, before Sprint 2 wraps up, rather than living with the mismatch through the demo.
+If repository instructions or the sprint board sync skill give roles conflicting guidance, revise them together before the demo. Check that backend and frontend use the same API contract.
 
 ---
 

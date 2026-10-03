@@ -1,14 +1,14 @@
-# Stage 3: Repair and Test the Core Journey
+# Stage 3: Repair and test the core journey
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 90-120 min
 
 ## Tasks
 
-This is the midpoint refinement pass for your Customization Trio. Update the
+At the midpoint, refine your customizations. Update the
 repository instructions with terminology decisions that should persist. Tighten
 the Technical Accuracy Reviewer agent around the discrepancies you missed in
 Stage 1. Extend the Example Verification skill to capture expected output or
-exit status, not just whether a command starts.
+exit status as well as whether a command starts.
 
 1. Rewrite `docs/getting-started.md` as a tested quickstart for a named
    audience. State prerequisites, use the supported Node.js version, provide
@@ -41,7 +41,7 @@ exit status, not just whether a command starts.
 - Navigation and terminology follow the recorded decisions
 - The repeated reader journeys complete without undocumented steps
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can draft from verified facts and compare examples with source. You
 still decide the teaching sequence, how much output to show, what belongs in a

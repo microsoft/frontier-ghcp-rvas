@@ -2,11 +2,11 @@
 
 **Difficulty:** ⭐ | **Time:** 60-90 min
 
-This stage establishes the foundation. You need a product brief that goes beyond generic descriptions and demonstrates real market understanding.
+Write a product brief that explains TaskFlow's market position and uses measurable goals.
 
 ## Tasks
 
-Before you draft anything, put your setup to work: keep `.github/copilot-instructions.md` open as the baseline context on TaskFlow, bring in whichever product agent you built for positioning and KPI judgment, and run your document critique or story-writing skill instead of writing every section from a blank prompt.
+Before drafting, open `.github/copilot-instructions.md` for TaskFlow's context. Use your product agent to review positioning and KPIs. Apply your document critique or story-writing skill to the draft.
 
 1. **Complete the product brief** in [docs/product-brief.md](../../challenges/challenge-0-product-planning/docs/product-brief.md). Fill in every section.
 
@@ -27,7 +27,7 @@ Before you draft anything, put your setup to work: keep `.github/copilot-instruc
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can draft persona descriptions, suggest KPI categories, and generate competitive comparisons. But the positioning strategy (where TaskFlow fits in the market), the specific numeric targets for KPIs, and the choice of competitive axes require your judgment about what matters for this product.
+Copilot can draft personas and competitive comparisons or suggest KPI categories. You must decide where TaskFlow fits in the market, choose the comparison axes, and set numeric targets.
 
 ---
 

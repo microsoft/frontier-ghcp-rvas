@@ -4,7 +4,7 @@
     {
       "id": "product-business",
       "name": "Product and Business",
-      "description": "Turn a rough idea into work a team can understand, estimate, and ship.",
+      "description": "Write product plans and backlogs, then coordinate delivery and project handoffs.",
       "challenge_ids": [
         "challenge-0",
         "challenge-9",
@@ -16,7 +16,7 @@
     {
       "id": "frontend",
       "name": "Frontend Developer",
-      "description": "Build interfaces people can use and connect them to the services behind the product.",
+      "description": "Build accessible interfaces, connect APIs, and test offline workflows.",
       "challenge_ids": [
         "challenge-4",
         "challenge-8",
@@ -29,7 +29,7 @@
     {
       "id": "backend",
       "name": "Backend and API Developer",
-      "description": "Build APIs and integrations, or replace a backend that has outlived its original design.",
+      "description": "Build APIs and integrations, or migrate legacy backend services.",
       "challenge_ids": [
         "challenge-1",
         "challenge-7",
@@ -52,7 +52,7 @@
     {
       "id": "full-stack",
       "name": "Full-stack Developer",
-      "description": "Take a feature from the interface through the service layer and into a working environment.",
+      "description": "Implement features across the UI and backend, with tests for the complete workflow.",
       "challenge_ids": [
         "challenge-1",
         "challenge-4",
@@ -70,7 +70,7 @@
     {
       "id": "data-ai-ml",
       "name": "Data, AI, and ML Practitioner",
-      "description": "Work with data and models, then put them inside software that solves a clear problem.",
+      "description": "Train and serve prediction models, build AI repository automation, and use the Copilot SDK.",
       "challenge_ids": [
         "challenge-2",
         "challenge-6",
@@ -81,7 +81,7 @@
     {
       "id": "qa-testing",
       "name": "QA and Testing",
-      "description": "Find the weak spots in a release and add checks that catch them before users do.",
+      "description": "Test user workflows, reproduce defects, and add regression coverage.",
       "challenge_ids": [
         "challenge-5",
         "challenge-9",
@@ -99,7 +99,7 @@
     {
       "id": "devops-platform",
       "name": "DevOps, Platform, SRE, and Cloud",
-      "description": "Build Azure environments that can be deployed repeatedly and operated without constant manual repair.",
+      "description": "Build Azure environments and automate deployment, monitoring, and incident response.",
       "challenge_ids": [
         "challenge-3",
         "challenge-6",
@@ -119,7 +119,7 @@
     {
       "id": "it-operations",
       "name": "Sysadmin, IT Operations, and Support",
-      "description": "Automate routine administration and give support teams better tools for incident work.",
+      "description": "Automate administration with PowerShell and build tools for log analysis and incident routing.",
       "challenge_ids": [
         "challenge-3",
         "challenge-14",
@@ -132,7 +132,7 @@
     {
       "id": "tech-lead-architect",
       "name": "Tech Lead and Architect",
-      "description": "Make the technical decisions that keep a modernization or delivery effort moving in one direction.",
+      "description": "Plan migrations and integrations, review contracts, and record architecture decisions.",
       "challenge_ids": [
         "challenge-6",
         "challenge-7",
@@ -159,7 +159,7 @@
     {
       "id": "security",
       "name": "Security",
-      "description": "Review real release risks and produce enough evidence to approve, fix, or stop the release.",
+      "description": "Review authorization, dependencies, and release risks. Support release decisions with test evidence.",
       "challenge_ids": [
         "challenge-5",
         "challenge-6",
@@ -173,7 +173,7 @@
     {
       "id": "database-engineering",
       "name": "Database Engineering",
-      "description": "Fix slow workloads and move data safely as applications and Azure environments change around them.",
+      "description": "Tune SQL workloads, test schema migrations, and preserve data during modernization.",
       "challenge_ids": [
         "challenge-1",
         "challenge-12",
@@ -186,7 +186,7 @@
     {
       "id": "documentation-enablement",
       "name": "Documentation and Enablement",
-      "description": "Write guidance that a new team member can follow without asking what the author meant.",
+      "description": "Repair onboarding guides and automate documentation checks and PR reviews.",
       "challenge_ids": [
         "challenge-0",
         "challenge-13",
@@ -199,7 +199,7 @@
     {
       "id": "mobile-development",
       "name": "Mobile Development",
-      "description": "Build mobile workflows that still make sense when the network disappears halfway through a job.",
+      "description": "Build mobile workflows that preserve work during network failures and synchronization conflicts.",
       "challenge_ids": [
         "challenge-4",
         "challenge-8",

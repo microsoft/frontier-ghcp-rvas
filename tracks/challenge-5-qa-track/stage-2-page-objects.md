@@ -2,13 +2,13 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
-You have a test plan. Now you'll use Copilot to turn those test scenarios into working automated tests. The starter code includes some tests with intentional bugs -- a good exercise in using Copilot to diagnose and fix failures.
+Use Copilot to turn your test plan into automated tests. Diagnose and fix the intentional bugs in the starter tests.
 
 ## Tasks
 
 1. **Run the starter tests**: Execute `npx playwright test` from the `challenges/challenge-5-qa` directory. The tests will fail. Read the error messages carefully.
 
-2. **Use Copilot to debug**: Open `tests/pages/LoginPage.ts` -- it contains 3 intentional bugs. Instead of trying to fix them yourself, paste each error message into Copilot Chat and ask for help. Example prompts:
+2. Open `tests/pages/LoginPage.ts`, which contains 3 intentional bugs. Paste each error into Copilot Chat and ask for help. Example prompts:
    - "This test is timing out on `usernameInput.waitFor`. What could be wrong with the selector?"
    - "This test passes sometimes and fails sometimes. What causes flaky behavior?"
    - "This test crashes with `innerText() failed`. What's a safer way to get text that might not exist?"
@@ -32,7 +32,7 @@ You have a test plan. Now you'll use Copilot to turn those test scenarios into w
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot is strong at reading error messages and suggesting fixes. It can generate test code from a plain-English description. But you need to judge whether the generated test actually tests the right thing. A test that always passes isn't a useful test. Review assertions carefully -- does the test catch the bug it claims to catch?
+Copilot can suggest fixes from error messages and generate tests from plain-English descriptions. Review the assertions and check that each test fails when the intended behavior is broken.
 
 ---
 

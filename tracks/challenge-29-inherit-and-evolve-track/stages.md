@@ -1,4 +1,4 @@
-# Inherit and Evolve an Application: Stages
+# Inherit and evolve an application: Stages
 
 ## Stages
 

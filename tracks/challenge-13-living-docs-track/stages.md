@@ -11,7 +11,7 @@
 
 Stages 1-3 can be done in any order. Stage 4 builds on the skills and artifacts from the earlier stages.
 
-> **Short on time?** Focus on Stages 1 and 2. Generated javadoc and architecture diagrams deliver the most immediate value to the team.
+> **Short on time?** Complete Stages 1 and 2 to document the code and architecture.
 
 ---
 

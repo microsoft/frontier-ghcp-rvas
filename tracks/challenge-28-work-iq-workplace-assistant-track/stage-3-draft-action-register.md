@@ -1,4 +1,4 @@
-# Stage 3: Draft a Reviewed Action Register
+# Stage 3: Draft a reviewed action register
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 75-90 min
 
@@ -11,9 +11,8 @@
    instead of replacing evidence with an unverified summary.
 3. Mark inferred statements and unresolved gaps clearly. Do not create an owner
    or date when the source does not provide one.
-4. Draft a short handoff for the delivery lead. It should state the decision
-   position, work that needs follow-up, and the issues that need a human
-   decision.
+4. Draft a short handoff for the delivery lead. State the current decisions,
+   follow-up work, and unresolved issues that need a human decision.
 5. Use the Handoff Editor agent to check that the document remains concise
    without removing evidence or uncertainty.
 6. Update repository instructions and the Evidence-to-Action Register skill
@@ -27,7 +26,7 @@
 - The delivery handoff identifies the reviewer and intended audience
 - The draft proposes no write action without an approval step
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can make the register readable and find duplicates. You decide what
 counts as a decision, whether evidence supports the claim, and which issues

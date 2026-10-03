@@ -1,7 +1,7 @@
 # Stage 2: Sprint 1 -- Core Features
 
 **Duration:** 120 minutes for the selected core stories
-**Focus:** Parallel development of core features -- API, UI, tests, and infrastructure
+**Focus:** Develop the core API, UI, tests, and infrastructure in parallel
 
 Everyone works in parallel on their assigned Sprint 1 stories. Use GitHub Issues for questions and PRs for code review. The PO stays active on the board, triaging and reviewing throughout.
 
@@ -30,7 +30,7 @@ If anyone is blocked, resolve it immediately. If the frontend developer needs th
 
 ## Copilot Tips for This Stage
 
-**Backend -- generate CRUD fast:**
+Backend developers can generate a router from the API spec:
 
 Ask Copilot to scaffold an entire router from your API spec document. Reference the spec file in your prompt for context:
 
@@ -38,21 +38,21 @@ Ask Copilot to scaffold an entire router from your API spec document. Reference 
 "Read docs/api-spec.md and generate an Express.js router for the Reports endpoints with input validation."
 ```
 
-**Frontend -- mock data while waiting for the API:**
+Frontend developers can generate mock data while waiting for the API:
 
 ```typescript
 // Generate an array of 5 sample CityPulse reports with realistic civic issues
 // Include: id, title, description, category, location, status, createdAt
 ```
 
-**QA -- generate page objects from the running app:**
+QA engineers can generate page objects from the running app:
 
 ```text
 "Create a Playwright page object for the Report Submission page with selectors for title input,
 description textarea, category dropdown, location input, and submit button."
 ```
 
-**DevOps -- generate devcontainer config with Copilot:**
+DevOps engineers can generate a devcontainer configuration:
 
 ```text
 "Create a devcontainer.json that includes Node 20, Python 3.11,

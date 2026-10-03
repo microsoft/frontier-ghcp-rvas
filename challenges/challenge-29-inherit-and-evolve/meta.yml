@@ -1,11 +1,11 @@
 id: challenge-29
 number: 29
-title: Inherit and Evolve an Application
+title: Inherit and evolve an application
 category: core-tracks
 difficulty: intermediate
 duration_minutes: 300
 description: Learn an unfamiliar equipment-booking application, fix a reported cancellation defect, and add a waitlist without breaking existing behavior.
-focus: Code comprehension, defect investigation, regression testing, and feature delivery with GitHub Copilot
+focus: Learn an unfamiliar C# application, fix a reported defect with regression evidence, and add a small waitlist feature
 tags:
   - application-maintenance
   - dotnet

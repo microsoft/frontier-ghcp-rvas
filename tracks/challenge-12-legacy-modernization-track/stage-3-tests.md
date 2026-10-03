@@ -8,7 +8,7 @@
 
 1. **Set up the test infrastructure.** Add JUnit 5 and Spring Boot Test dependencies. Create a test configuration that initializes the H2 database with the existing schema and seed data.
 
-2. **Write characterization tests for account operations.** Test current behavior, not ideal behavior. If a SQL injection vulnerability exists, your test should document that you can query with injected SQL -- it captures the reality. Cover:
+2. Write characterization tests for current account behavior. If a SQL injection vulnerability exists, record it with a test that queries using injected SQL. Cover:
    - Listing accounts (with and without type filter)
    - Creating an account (minimum balance rules for CHK and SAV, interest rate tiers, max 5 accounts per customer)
    - Account creation with invalid customer ID

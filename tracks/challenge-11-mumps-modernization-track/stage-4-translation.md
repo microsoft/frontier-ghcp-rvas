@@ -5,17 +5,17 @@
 
 ## Objective
 
-Translate the core banking system from MUMPS to your chosen modern language. The translated system must pass all characterization tests from Stage 2. This is not a rewrite from scratch -- it is a faithful translation that preserves every business rule, validation, and calculation while adopting modern language patterns.
+Translate the core banking system from MUMPS to your chosen modern language. Preserve all business rules, validations, and calculations while using the target language's conventions. The translation must pass all Stage 2 characterization tests.
 
 ## Translation Strategy
 
-There are two valid approaches. Pick the one that matches your preference.
+Choose one of these approaches:
 
-**Bottom-up:** Start with utilities and data-access, then build up to business logic, then add the service layer. This is safer -- each layer can be tested independently.
+Bottom-up translation starts with utilities and data access, followed by business logic and the service layer. Test each layer independently.
 
-**Module-by-module:** Translate one MUMPS routine at a time (e.g., all of BNKUTIL, then BNKCUST, then BNKACCT). This keeps the mental context tight.
+Module-by-module translation handles one routine at a time (e.g., BNKUTIL, then BNKCUST, then BNKACCT). This limits how much code you need to consider at once.
 
-Either way, run your characterization tests continuously. Every green test is proof that a piece of business logic survived the translation intact.
+Run characterization tests throughout translation. Passing tests show that the covered behaviors match.
 
 ## Tasks
 
@@ -70,9 +70,9 @@ Either way, run your characterization tests continuously. Every green test is pr
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-**Copilot is good at:** Converting MUMPS syntax to your target language line-by-line, generating class skeletons from your architecture decisions, producing repository / DAO implementations from the data model, rewriting utility functions.
+Copilot can translate syntax and utilities, generate class skeletons, and draft repository or DAO implementations.
 
-**You decide:** The overall architecture (Copilot generates what you describe -- describe well), how to handle the impedance mismatch between MUMPS globals and your persistence model, when a MUMPS behavior is a bug vs. intentional (your characterization tests resolve this), and what "idiomatic" means in your target language.
+You choose the architecture and how to map MUMPS globals to your persistence model. Use characterization tests to record existing behavior, then decide which quirks are bugs and how to apply target-language conventions.
 
 ## Verification
 

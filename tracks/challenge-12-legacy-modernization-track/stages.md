@@ -9,9 +9,9 @@
 | 3 | [Test Harness](stage-3-tests.md) | 1.5-2 hours | Write characterization tests that capture current behavior |
 | 4 | [Migration](stage-4-migration.md) | 2-3 hours | Upgrade to Spring Boot 3.x, replace deprecated libraries, fix architecture |
 
-Each stage builds on the previous. The archaeology stage is foundational -- if you skip understanding the code, the migration will introduce regressions.
+Complete the stages in order. Document the original behavior before migrating it.
 
-> **Short on time?** Focus on Stages 1 and 3. Understanding the code and writing tests delivers value even without the migration.
+> **Short on time?** Complete Stages 1 and 3 to document the code and test its behavior without migrating it.
 
 ---
 

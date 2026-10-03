@@ -10,7 +10,7 @@
 | 4 | [AI-Driven Testing with Playwright MCP](stage-4-ai-driven.md) | ⭐⭐⭐ | 60-90 min | MCP-generated tests, comparison of AI vs manual approaches |
 | 5 | [Reporting, Analysis, and Test Strategy](stage-5-quality-gates.md) | ⭐⭐⭐ | 60-90 min | Custom reporter, flakiness analysis, test strategy document |
 
-Every stage is designed so Copilot does the heavy lifting on code. Your job is to guide it with good prompts, verify the output makes sense, and apply your QA judgment to decide what to test and whether the tests are actually useful.
+Use Copilot to write test code. Decide what to test, review the assertions, and verify the results.
 
 > **Short on time?** Focus on Stages 1-3. These cover the core Copilot-assisted QA workflow. Stages 4-5 add depth but are not required.
 

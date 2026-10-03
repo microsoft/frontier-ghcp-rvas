@@ -23,7 +23,7 @@ The dataset (`data/flights.csv`) contains ~272,000 records of US flights from 20
 
 ## Requirements
 
-Before you open the notebook, use your full setup: keep your repository instructions open for the project's goal and conventions, bring in the data scientist agent you built for feature and model judgment, and run your end-to-end wiring or leakage-check skill as you go rather than checking for leakage only at the end.
+Open your repository instructions for the project's goal and conventions. Use your data scientist agent to review features and model choices. Run your end-to-end wiring or leakage-check skill throughout the stage.
 
 1. **Load & Inspect** -- Load `data/flights.csv`, display shape, column types, first rows, summary statistics.
 2. **Clean** -- Identify null/missing values and handle them (e.g., replace with 0 or drop).
@@ -44,7 +44,7 @@ Before you open the notebook, use your full setup: keep your repository instruct
 
 ## Copilot Tips for This Stage
 
-- Start each notebook cell with a descriptive comment -- Copilot uses this as context.
+- Start each notebook cell with a descriptive comment to give Copilot context.
 - Use `/explain` to understand ML concepts like precision vs. recall.
 - Ask Copilot: *"What's the best model for binary classification on imbalanced data?"*
 - Use Agent Mode (`Ctrl+Alt+I`) to generate entire analysis blocks from natural language.

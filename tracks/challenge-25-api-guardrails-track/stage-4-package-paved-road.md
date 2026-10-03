@@ -1,10 +1,10 @@
-# Stage 4: Package the Paved Road
+# Stage 4: Package the paved road
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
-Guardrails only work when a service team can discover them, run them locally,
-and understand what happens after a check fails. Package the standard as an
-onboarding route rather than a pile of platform files.
+A service team must be able to find the checks, run them locally, and respond
+to failures. Write onboarding instructions that connect the standards to
+those tasks.
 
 ## Tasks
 
@@ -39,7 +39,7 @@ onboarding route rather than a pile of platform files.
 - `npm test` and the blocking proposal check pass
 - Azure deployment is clearly optional
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can test the package for missing links and unclear steps. You decide
 which operational signals matter, who responds, and how much process a service

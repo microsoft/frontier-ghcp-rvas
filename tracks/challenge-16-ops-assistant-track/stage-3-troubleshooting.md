@@ -1,8 +1,8 @@
-# Stage 3: Troubleshooting Aids
+# Stage 3: Troubleshooting aids
 
 **Duration:** 1-1.5 hours
 
-**Focus:** Creating troubleshooting decision trees and runbooks from historical data
+**Focus:** Create troubleshooting decision trees and runbooks from historical data
 
 ## Tasks
 

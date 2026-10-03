@@ -1,10 +1,13 @@
-# GitHub Copilot Adoption Delivery Session Tracks Overview
+# GitHub Copilot Adoption Delivery Session tracks overview
 
-Pick a challenge track that matches the work you want to deliver, or use the **[Bring Your Own Challenge (BYOC) kit](../byoc/)** to run a session on your own app or repository. Each track drives a specific business outcome -- the root README explains the full approach.
+Pick a track that matches the work you need to deliver. To use your own app or
+repository, start with the **[Bring Your Own Challenge kit](../byoc/)**.
 
 The **31 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
-Coaches can use the GitHub Copilot Adoption site's Challenge Set Builder and Learning Paths pages to create a shorter URL-only set for a workshop. The builder selects complete challenges only, so the track guides stay the source of truth for stages and role pages.
+Coaches can use the site's Challenge Set Builder or Learning Paths pages to
+share a selected set with one URL. The builder selects whole challenges.
+Use the track guides for stages and role-specific work.
 
 Each track starts with an overview page for audience, setup, tips, and resources. Its linked contents page lists the stages and any role-specific paths. Stage pages include previous and next links for reading the track on GitHub.
 
@@ -19,7 +22,7 @@ Impeccable skill for one focused UI review. Follow the
 [shared installation checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
 and the selected track's review scope.
 
-## Challenges by Role
+## Challenges by role
 
 Role Collections group relevant challenges without implying a required order.
 Some challenges appear in more than one collection because the work crosses
@@ -144,21 +147,22 @@ team boundaries.
   [10](./challenge-10-tech-sprint-track.md),
   [27](./challenge-27-offline-mobile-track.md)
 
-## Challenges by Outcome
+## Challenges by outcome
 
-Tracks are grouped by the outcome they drive. Each grouping below reflects the kind of work result the track produces.
+Choose a group based on the result you need.
 
-### Ship Product Features Faster
+### Ship product features faster
 
-Move from requirements to working, demoable software across the stack.
+Plan features and build software you can demonstrate.
 
-### 📋 [Challenge 0: Product Planning Track](./challenge-0-product-planning-track.md)
+### [Challenge 0: Product Planning Track](./challenge-0-product-planning-track.md)
 
 **Outcome:** Ship Product Features Faster
 
 **Best for:** Product Owners, Business Analysts, Project Managers, Scrum Masters, Program Managers
 
-**Focus:** Planning the next major release of a task management platform -- competitive analysis, user stories, feature specs, stakeholder negotiation, release planning. No code required.
+Plan a task management release. Analyze competitors, write user stories and
+feature specs, negotiate scope, and prepare the release plan. No code is required.
 
 **Your Challenge:** Challenge 0 - Product Planning (TaskFlow v2.0)
 
@@ -166,13 +170,14 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### 🔧 [Challenge 1: Web API Track](./challenge-1-web-api-track.md)
+### [Challenge 1: Web API Track](./challenge-1-web-api-track.md)
 
 **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 
 **Best for:** Backend Engineers, API Developers, Web Service Developers
 
-**Focus:** Building a task management REST API across 5 stages -- CRUD, JWT auth, persistence, debugging, production readiness with load testing and observability.
+Build a task management API in five stages. Add CRUD, JWT authentication, and
+persistence. Debug the supplied defects, then add load tests and observability.
 
 **Your Challenge:** Challenge 1 - REST API Builder
 
@@ -180,13 +185,14 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### 🎨 [Challenge 4: Frontend Track](./challenge-4-frontend-track.md)
+### [Challenge 4: Frontend Track](./challenge-4-frontend-track.md)
 
 **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 
 **Best for:** Frontend Developers, UI/UX Engineers, React Developers
 
-**Focus:** Build an accessible task dashboard with CRUD and a mocked API. Use Impeccable for one required critique-and-fix cycle and final UI polish.
+Build an accessible task dashboard with CRUD and a mocked API. Use Impeccable
+for a critique-and-fix cycle and final UI review.
 
 **Your Challenge:** Challenge 4 - Accessible Task Dashboard with Impeccable
 
@@ -194,7 +200,7 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### ✈️ [Challenge 8: Flight Delay Predictor Track](./challenge-8-flight-delay-track.md)
+### [Challenge 8: Flight Delay Predictor Track](./challenge-8-flight-delay-track.md)
 
 **Outcomes:** Ship Product Features Faster, Build AI-Powered Capabilities
 
@@ -208,7 +214,7 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### 🏢 [Challenge 9: Cross-Functional Team Sprint](./challenge-9-team-sprint-track.md)
+### [Challenge 9: Cross-Functional Team Sprint](./challenge-9-team-sprint-track.md)
 
 **Outcome:** Ship Product Features Faster
 
@@ -222,7 +228,7 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### 🥾 [Challenge 10: Technical Team Sprint](./challenge-10-tech-sprint-track.md)
+### [Challenge 10: Technical Team Sprint](./challenge-10-tech-sprint-track.md)
 
 **Outcome:** Ship Product Features Faster
 
@@ -236,7 +242,7 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### 📝 [Challenge 15: Backlog Generator](./challenge-15-backlog-generator-track.md)
+### [Challenge 15: Backlog Generator](./challenge-15-backlog-generator-track.md)
 
 **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
 
@@ -250,13 +256,15 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### 🚀 [Challenge 17: Spec-to-Ship Accelerator](./challenge-17-spec-to-ship-track.md)
+### [Challenge 17: Spec-to-Ship Accelerator](./challenge-17-spec-to-ship-track.md)
 
 **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
 
 **Best for:** Tech leads and senior developers who manage the full lifecycle from requirements to deployed code
 
-**Focus:** Compressing the full development lifecycle for a billing module -- spec to backlog, technical analysis, implementation, test specifications, CI pipeline, all producing reusable Copilot artifacts.
+Deliver a billing module from a specification. Build a backlog, analyze the
+existing code, implement the work, and add tests and CI. Reuse the Copilot
+customizations you develop along the way.
 
 **Your Challenge:** Challenge 17 - Billing Module Spec-to-Ship
 
@@ -264,13 +272,15 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### 🎨 [Challenge 27: Offline Field Service App](./challenge-27-offline-mobile-track.md)
+### [Challenge 27: Offline Field Service App](./challenge-27-offline-mobile-track.md)
 
 **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
 
 **Best for:** Mobile developers, frontend engineers, test engineers, and technical leads working on offline field workflows
 
-**Focus:** Making a React Native inspection workflow survive restarts, network failures, permission denial, and synchronization conflicts while keeping core tests runnable in Node.
+Make a React Native inspection workflow preserve work across restarts, network
+failures, permission denial, and synchronization conflicts. Keep core tests
+runnable in Node.
 
 **Your Challenge:** Challenge 27 - Offline Field Service App
 
@@ -278,13 +288,14 @@ Move from requirements to working, demoable software across the stack.
 
 ---
 
-### 📋 [Challenge 28: Work IQ Workplace Assistant](./challenge-28-work-iq-workplace-assistant-track.md)
+### [Challenge 28: Work IQ Workplace Assistant](./challenge-28-work-iq-workplace-assistant-track.md)
 
 **Outcomes:** Automate Delivery and Ops Toil, Ship Product Features Faster
 
 **Best for:** Delivery leads, technical leads, developers, and information governance partners who need a reviewed view of active project work
 
-**Focus:** Retrieving approved Microsoft 365 context with Microsoft Work IQ, turning it into an evidence-backed action register, and requiring human approval before any write action.
+Retrieve approved Microsoft 365 context with Microsoft Work IQ and use it to
+build an action register with evidence. Require human approval before any write.
 
 **Your Challenge:** Challenge 28 - Work IQ Workplace Assistant
 
@@ -298,9 +309,8 @@ Move from requirements to working, demoable software across the stack.
 
 **Best for:** C# developers taking over an unfamiliar application, working solo or in pairs
 
-**Focus:** Understanding a working equipment-booking app, fixing a cancellation
-defect with a regression test, and adding a waitlist through the existing UI and
-backend.
+Trace a working equipment-booking app. Fix a cancellation defect with a
+regression test, then add a waitlist through its UI and backend.
 
 **Your Challenge:** Challenge 29 - Equipment Booking
 
@@ -314,9 +324,8 @@ backend.
 
 **Best for:** Developers and technical leads adopting spec-driven development
 
-**Focus:** Using Spec Kit with Copilot CLI to clarify an approval feature,
-implement it in an existing TypeScript app, and update the same specification
-when the approval rules change.
+Use Spec Kit with Copilot CLI to clarify and implement an approval feature in
+an existing TypeScript app. Update the same specification when the rules change.
 
 **Your Challenge:** Challenge 30 - Service Desk
 
@@ -324,17 +333,19 @@ when the approval rules change.
 
 ---
 
-### Modernize Legacy Systems
+### Modernize legacy systems
 
 Reverse-engineer, characterize, and migrate legacy codebases to modern platforms.
 
-### 🏦 [Challenge 11: Legacy MUMPS Modernization](./challenge-11-mumps-modernization-track.md)
+### [Challenge 11: Legacy MUMPS Modernization](./challenge-11-mumps-modernization-track.md)
 
 **Outcome:** Modernize Legacy Systems
 
 **Best for:** Developers who enjoy reverse-engineering unfamiliar codebases and tackling legacy modernization challenges
 
-**Focus:** Reverse-engineering and translating a core banking system written in MUMPS -- a language most developers have never seen. 12 routines, ~2,500 lines, covering customer management, deposits, loans, interest calculation, batch processing. Understand, test, extend, translate to modern language.
+Reverse-engineer a MUMPS banking system with 12 routines and about 2,500 lines
+of code. It handles customers, deposits, loans, interest, and batch processing.
+Test and extend it, then translate it to a modern language.
 
 **Your Challenge:** Challenge 11 - MUMPS Core Banking Modernization
 
@@ -342,13 +353,16 @@ Reverse-engineer, characterize, and migrate legacy codebases to modern platforms
 
 ---
 
-### 🔄 [Challenge 12: Legacy Code Modernization](./challenge-12-legacy-modernization-track.md)
+### [Challenge 12: Legacy Code Modernization](./challenge-12-legacy-modernization-track.md)
 
 **Outcome:** Modernize Legacy Systems
 
 **Best for:** Developers who inherit undocumented Java applications and need to recover business knowledge, fix security issues, and migrate to modern frameworks
 
-**Focus:** Reverse-engineering and modernizing the Acme Bank Account Manager -- undocumented Java 8 / Spring Boot 1.5 banking app with SQL injection vulnerabilities, deprecated libraries, no tests. Recover business rules, audit security, write characterization tests, migrate to Spring Boot 3.x / Java 17+.
+Modernize the undocumented Acme Bank Account Manager, built with Java 8 and
+Spring Boot 1.5. Recover its business rules and audit its SQL injection risks
+and deprecated libraries. Add characterization tests before migrating to
+Spring Boot 3.x / Java 17+.
 
 **Your Challenge:** Challenge 12 - Acme Bank Legacy Modernization
 
@@ -356,7 +370,7 @@ Reverse-engineer, characterize, and migrate legacy codebases to modern platforms
 
 ---
 
-### 🏗️ [Challenge 18: COBOL Banking Modernization](./challenge-18-cobol-modernization-track.md)
+### [Challenge 18: COBOL Banking Modernization](./challenge-18-cobol-modernization-track.md)
 
 **Outcome:** Modernize Legacy Systems
 
@@ -370,13 +384,15 @@ Reverse-engineer, characterize, and migrate legacy codebases to modern platforms
 
 ---
 
-### 🔧 [Challenge 19: WCF Banking Modernization](./challenge-19-wcf-modernization-track.md)
+### [Challenge 19: WCF Banking Modernization](./challenge-19-wcf-modernization-track.md)
 
 **Outcome:** Modernize Legacy Systems
 
 **Best for:** .NET developers who work with WCF or SOAP services and need to modernize them to REST
 
-**Focus:** Reverse-engineering a legacy WCF banking service (Meridian Savings Bank) built circa 2010-2012, running on CoreWCF and .NET 8. Understand service contracts, data contracts, fault conditions, then port business logic to REST API using ASP.NET Core Web API.
+Reverse-engineer the Meridian Savings Bank WCF service, built around 2010-2012
+and now running on CoreWCF and .NET 8. Trace service contracts, data contracts,
+and faults before moving the business logic to an ASP.NET Core REST API.
 
 **Your Challenge:** Challenge 19 - WCF Banking Modernization (Meridian Savings Bank)
 
@@ -384,13 +400,15 @@ Reverse-engineer, characterize, and migrate legacy codebases to modern platforms
 
 ---
 
-### 💻 [Challenge 20: PowerShell Automation](./challenge-20-powershell-automation-track.md)
+### [Challenge 20: PowerShell Automation](./challenge-20-powershell-automation-track.md)
 
 **Outcomes:** Automate Delivery and Ops Toil, Modernize Legacy Systems
 
 **Best for:** Sysadmins, IT Pros, and infrastructure engineers who write PowerShell to manage Windows environments or Azure resources
 
-**Focus:** Taking three inherited PowerShell scripts (stale account finder, disk cleanup, Azure resource tagger) and bringing them to production standard -- bug fixes, error handling, Pester tests, static analysis, CI pipeline.
+Repair inherited PowerShell scripts for stale accounts, disk cleanup, and Azure
+resource tagging. Add error handling and Pester tests, then run static analysis
+and CI.
 
 **Your Challenge:** Challenge 20 - Contoso IT PowerShell Automation
 
@@ -398,17 +416,19 @@ Reverse-engineer, characterize, and migrate legacy codebases to modern platforms
 
 ---
 
-### Raise Quality and Confidence
+### Raise quality and confidence
 
 Improve test coverage, accessibility, documentation, or reliability.
 
-### 🔍 [Challenge 5: QA & Testing Track](./challenge-5-qa-track.md)
+### [Challenge 5: QA & Testing Track](./challenge-5-qa-track.md)
 
 **Outcome:** Raise Quality and Confidence
 
 **Best for:** QA Engineers, Quality Assurance Specialists, Manual Testers
 
-**Focus:** Testing the eShop application across 5 stages -- explore with Copilot and Playwright MCP, debug and generate automated tests, expand coverage with page objects, compare AI-driven vs human-guided testing, build reporting and test strategy.
+Test eShop with Copilot and Playwright MCP. Debug and generate automated tests,
+then expand coverage with page objects. Compare AI-driven and human-guided
+testing, and finish with reporting and a test strategy.
 
 **Your Challenge:** Challenge 5 - QA & Test Automation
 
@@ -416,13 +436,14 @@ Improve test coverage, accessibility, documentation, or reliability.
 
 ---
 
-### 📄 [Challenge 13: Living Documentation](./challenge-13-living-docs-track.md)
+### [Challenge 13: Living Documentation](./challenge-13-living-docs-track.md)
 
 **Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
 
-**Best for:** Teams where documentation is always out of date and maintaining it is a manual burden nobody enjoys
+**Best for:** Java teams maintaining stale documentation by hand
 
-**Focus:** Automating documentation of the Widget Corp Inventory Manager -- generate javadoc, create Mermaid diagrams, build a changelog workflow skill, create a documentation review agent for PRs.
+Update Widget Corp's javadoc and add Mermaid diagrams. Build a changelog skill
+and a PR documentation review agent.
 
 **Your Challenge:** Challenge 13 - Widget Corp Living Documentation
 
@@ -430,13 +451,14 @@ Improve test coverage, accessibility, documentation, or reliability.
 
 ---
 
-### 🔍 [Challenge 22: Secure Release Review](./challenge-22-secure-release-track.md)
+### [Challenge 22: Secure Release Review](./challenge-22-secure-release-track.md)
 
 **Outcome:** Raise Quality and Confidence
 
 **Best for:** Application security engineers, senior .NET developers, technical leads, and platform engineers
 
-**Focus:** Reviewing a .NET 8 payments API, prioritizing security findings, proving narrow remediations with tests, and producing evidence for a release decision.
+Review a .NET 8 payments API and prioritize security findings. Prove fixes with
+tests and collect evidence for the release decision.
 
 **Your Challenge:** Challenge 22 - Secure Release Review
 
@@ -444,13 +466,14 @@ Improve test coverage, accessibility, documentation, or reliability.
 
 ---
 
-### 📊 [Challenge 24: Peak-Load Database Rescue](./challenge-24-database-rescue-track.md)
+### [Challenge 24: Peak-Load Database Rescue](./challenge-24-database-rescue-track.md)
 
 **Outcomes:** Raise Quality and Confidence, Stand Up Cloud Platform Foundations
 
 **Best for:** Database administrators, database reliability engineers, data platform engineers, and operations engineers
 
-**Focus:** Diagnosing a SQL Server workload, measuring safe tuning changes, and shipping an Azure SQL-compatible schema migration with operational evidence.
+Diagnose a SQL Server workload and measure tuning changes. Ship an Azure
+SQL-compatible schema migration with operational evidence.
 
 **Your Challenge:** Challenge 24 - Peak-Load Database Rescue
 
@@ -458,17 +481,19 @@ Improve test coverage, accessibility, documentation, or reliability.
 
 ---
 
-### Automate Delivery and Ops Toil
+### Automate delivery and ops toil
 
 Replace manual, repetitive delivery or operations work with repeatable automation.
 
-### ☁️ [Challenge 3: DevOps Track](./challenge-3-devops-track.md)
+### [Challenge 3: DevOps Track](./challenge-3-devops-track.md)
 
 **Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
 
 **Best for:** DevOps Engineers, SREs, Platform Engineers, Cloud Engineers
 
-**Focus:** Building infrastructure for a Node.js app across 5 stages -- Docker Compose, Kubernetes with HPA and NetworkPolicy, Terraform for Azure (ACR, AKS), debug broken Key Vault module, CI/CD with blue/green deployment and DR runbook.
+Build infrastructure for a Node.js app. Use Docker Compose, Kubernetes with
+HPA and NetworkPolicy, and Terraform for Azure ACR and AKS. Debug a Key Vault
+module, then add CI/CD with blue/green deployment and a disaster recovery runbook.
 
 **Your Challenge:** Challenge 3 - Infrastructure as Code
 
@@ -476,13 +501,14 @@ Replace manual, repetitive delivery or operations work with repeatable automatio
 
 ---
 
-### 🤖 [Challenge 6: Agentic Workflows Track](./challenge-6-agentic-workflows-track.md)
+### [Challenge 6: Agentic Workflows Track](./challenge-6-agentic-workflows-track.md)
 
 **Outcomes:** Automate Delivery and Ops Toil, Build AI-Powered Capabilities
 
 **Best for:** Developers and DevOps engineers who want to automate repository maintenance with AI-powered workflows
 
-**Focus:** Building and operating GitHub Agentic Workflows -- Markdown-defined, AI-powered automation running in GitHub Actions for triage, code quality, documentation, CI monitoring, and security.
+Build GitHub Agentic Workflows in Markdown and run them in GitHub Actions.
+Automate triage, code quality, documentation, CI monitoring, and security checks.
 
 **Your Challenge:** Challenge 6 - GitHub Agentic Workflows
 
@@ -490,13 +516,15 @@ Replace manual, repetitive delivery or operations work with repeatable automatio
 
 ---
 
-### 🔩 [Challenge 14: Pipeline Factory](./challenge-14-pipeline-factory-track.md)
+### [Challenge 14: Pipeline Factory](./challenge-14-pipeline-factory-track.md)
 
 **Outcome:** Automate Delivery and Ops Toil
 
 **Best for:** DevOps engineers and developers who build and maintain CI/CD pipelines, or teams that still deploy manually
 
-**Focus:** Building CI/CD pipelines for TaskBoard, a kanban app that currently deploys via a shell script with commented-out scp commands. Create GitHub Actions workflows, debug 5 deliberate bugs, build reusable templates, generate deployment gates with rollback.
+Replace TaskBoard's shell-script deployment with GitHub Actions. Debug five
+deliberate bugs, build reusable workflow templates, and add deployment gates
+with rollback.
 
 **Your Challenge:** Challenge 14 - TaskBoard Pipeline Factory
 
@@ -504,13 +532,15 @@ Replace manual, repetitive delivery or operations work with repeatable automatio
 
 ---
 
-### 🖥️ [Challenge 16: Ops Assistant](./challenge-16-ops-assistant-track.md)
+### [Challenge 16: Ops Assistant](./challenge-16-ops-assistant-track.md)
 
 **Outcome:** Automate Delivery and Ops Toil
 
 **Best for:** Support teams, L1/L2 ops, and SREs who triage production incidents by manually reading logs
 
-**Focus:** Building AI-assisted operations tooling for the Order Gateway -- analyze production logs (payment timeouts, deadlocks, connection pool exhaustion), create a log analysis agent, build an incident routing skill, generate troubleshooting runbooks.
+Analyze Order Gateway logs for payment timeouts, deadlocks, and connection pool
+exhaustion. Build a log analysis agent and incident routing skill. Generate
+runbooks from the incident evidence.
 
 **Your Challenge:** Challenge 16 - Order Gateway Ops Assistant
 
@@ -518,13 +548,14 @@ Replace manual, repetitive delivery or operations work with repeatable automatio
 
 ---
 
-### 📋 [Challenge 26: Developer Onboarding Repair](./challenge-26-developer-onboarding-track.md)
+### [Challenge 26: Developer Onboarding Repair](./challenge-26-developer-onboarding-track.md)
 
 **Outcomes:** Raise Quality and Confidence, Automate Delivery and Ops Toil
 
 **Best for:** Technical writers, developer educators, developer experience practitioners, and engineers who maintain onboarding docs
 
-**Focus:** Testing reader tasks, rebuilding information architecture, correcting CLI and SDK examples, and adding lightweight editorial checks.
+Test onboarding tasks against the working CLI and SDK. Repair page organization
+and examples, then add checks that catch documentation errors.
 
 **Your Challenge:** Challenge 26 - Developer Onboarding Repair
 
@@ -532,17 +563,19 @@ Replace manual, repetitive delivery or operations work with repeatable automatio
 
 ---
 
-### Stand Up Cloud Platform Foundations
+### Stand up cloud platform foundations
 
 Provision and harden Azure infrastructure baselines with IaC, identity, and policy guardrails.
 
-### ☁️ [Challenge 21: Azure Terraform Track](./challenge-21-azure-terraform-track.md)
+### [Challenge 21: Azure Terraform Track](./challenge-21-azure-terraform-track.md)
 
 **Outcome:** Stand Up Cloud Platform Foundations
 
 **Best for:** Platform engineers, cloud engineers, and developers who need to build and review Azure infrastructure in Terraform
 
-**Focus:** Building an Azure Terraform foundation across 5 stages -- bootstrap remote state and naming rules, provision platform around Container Apps, wire managed identity and Key Vault, refactor into reusable modules, add CI guardrails and drift response.
+Build Azure infrastructure with Terraform. Set up remote state and naming,
+provision Container Apps, and connect managed identity and Key Vault. Extract
+reusable modules, then add CI checks and a drift response runbook.
 
 **Your Challenge:** Challenge 21 - Azure Terraform Foundation
 
@@ -550,13 +583,14 @@ Provision and harden Azure infrastructure baselines with IaC, identity, and poli
 
 ---
 
-### 🧩 [Challenge 23: Merger Integration Architecture](./challenge-23-merger-architecture-track.md)
+### [Challenge 23: Merger Integration Architecture](./challenge-23-merger-architecture-track.md)
 
 **Outcome:** Stand Up Cloud Platform Foundations
 
 **Best for:** Solution and enterprise architects, integration leads, platform leads, and technical program leads
 
-**Focus:** Turning conflicting merger evidence into Azure system boundaries, integration contracts, architecture decisions, and a sequenced transition plan.
+Resolve conflicting merger evidence. Define Azure system boundaries and
+integration contracts, record architecture decisions, and plan the transition.
 
 **Your Challenge:** Challenge 23 - Merger Integration Architecture
 
@@ -564,13 +598,14 @@ Provision and harden Azure infrastructure baselines with IaC, identity, and poli
 
 ---
 
-### ☁️ [Challenge 25: Enterprise API Guardrails](./challenge-25-api-guardrails-track.md)
+### [Challenge 25: Enterprise API Guardrails](./challenge-25-api-guardrails-track.md)
 
 **Outcomes:** Automate Delivery and Ops Toil, Stand Up Cloud Platform Foundations
 
 **Best for:** API platform engineers, Azure platform engineers, technical leads, and developer experience engineers
 
-**Focus:** Governing OpenAPI contracts with standards, Azure API Management policies, automated checks, observability requirements, and a clear onboarding path.
+Set standards for OpenAPI contracts and Azure API Management policies. Add
+automated checks and observability requirements, then document API onboarding.
 
 **Your Challenge:** Challenge 25 - Enterprise API Guardrails
 
@@ -578,17 +613,19 @@ Provision and harden Azure infrastructure baselines with IaC, identity, and poli
 
 ---
 
-### Build AI-Powered Capabilities
+### Build AI-powered capabilities
 
 Develop and ship ML models, intelligent agents, or AI-driven features.
 
-### 📊 [Challenge 2: ML & AI Track](./challenge-2-ml-ai-track.md)
+### [Challenge 2: ML & AI Track](./challenge-2-ml-ai-track.md)
 
 **Outcome:** Build AI-Powered Capabilities
 
 **Best for:** Data Scientists, ML Engineers, Data Analysts
 
-**Focus:** Predicting customer churn across 5 stages -- discover data quality issues, create visualizations with hypothesis testing, train models with cost-sensitive evaluation, compare imbalance techniques with SHAP interpretability, deploy prediction API with drift detection and model card.
+Predict customer churn. Find data quality issues and test hypotheses with
+visualizations. Train models with cost-sensitive evaluation, compare imbalance
+techniques using SHAP, and deploy an API with drift detection and a model card.
 
 **Your Challenge:** Challenge 2 - ML & Data Analysis (Jupyter Notebooks)
 
@@ -596,13 +633,15 @@ Develop and ship ML models, intelligent agents, or AI-driven features.
 
 ---
 
-### 🧩 [Challenge 7: Copilot SDK Track](./challenge-7-copilot-sdk-track.md)
+### [Challenge 7: Copilot SDK Track](./challenge-7-copilot-sdk-track.md)
 
 **Outcome:** Build AI-Powered Capabilities
 
 **Best for:** Experienced developers who want to embed Copilot's agent runtime in custom apps
 
-**Focus:** Building a Release Notes Agent powered by the GitHub Copilot SDK. Fetch merged PRs, categorize changes, generate structured changelog through iterative conversation, publish draft GitHub Release -- all using custom tools, streaming responses, multi-turn sessions.
+Build a Release Notes Agent with the Copilot SDK. Fetch and categorize merged
+PRs, refine the changelog through conversation, and publish a draft GitHub
+Release. Use custom tools, streaming responses, and multi-turn sessions.
 
 **Your Challenge:** Challenge 7 - Copilot SDK
 
@@ -610,9 +649,9 @@ Develop and ship ML models, intelligent agents, or AI-driven features.
 
 ---
 
-## Which Track Should I Choose?
+## Which track should i choose?
 
-### By Outcome
+### By outcome
 
 **Want to ship features faster?** Challenges 0, 1, 4, 8, 9, 10, 15, 17, 27, 29, 30
 
@@ -626,38 +665,21 @@ Develop and ship ML models, intelligent agents, or AI-driven features.
 
 **Want to build AI-powered capabilities?** Challenges 2, 6, 7, 8
 
-### By Role
+### By role
 
-1. **What's your primary role?**
+Use the [role collections](#challenges-by-role) above to find relevant work.
+For team delivery, choose Challenge 9 with product and engineering roles, or
+Challenge 10 for a technical team working from a supplied specification.
 
-### By Role
+Check the selected track's time budget. In a short session, focus on its core
+stages and leave optional tasks for later.
 
-Pick the track that matches your primary role, or choose by outcome if you want to deliver a specific result regardless of role.
+### Not sure? start here
 
-1. **What's your primary role?**
-   - Backend/API Developer → Backend Track
-   - Data Scientist/ML → Data Science Track
-   - DevOps/Infrastructure → DevOps Track
-   - Frontend/UI Developer → Frontend Track
-   - QA/Test Engineer → QA Tester Track
-   - Product Owner/BA/PM → Product Owner & BA Track
-   - Cross-functional team (PO + devs + QA + DevOps)? → Challenge 9: Team Sprint
-   - Technical team (devs + DevOps, optionally QA, no PO)? → Challenge 10: Technical Team Sprint
-   - Want to automate repository maintenance with AI? → Challenge 6: Agentic Workflows Track
+Start with Challenge 1 for API development or Challenge 0 for product planning.
+Choose by outcome if you already know what you want to deliver.
 
-2. **How much time do you have?**
-   - 4 hours → Choose any track, focus on core stages
-   - 6 hours → Complete full track
-   - Full day → Combine multiple tracks (e.g., Backend + Frontend) or tackle an advanced challenge
-
-### Not Sure? Start Here
-
-- **New to Copilot?** → Challenge 1: Web API Track (most beginner-friendly for developers) or Challenge 0: Product Planning Track (for non-developers)
-- **Want to deliver a specific outcome?** → See the outcome groupings above
-- **Want breadth?** → Combine Challenges 1 + 4 (Backend + Frontend)
-- **Want depth?** → Choose your specialty track or an advanced challenge
-
-## Bring Your Own Challenge
+## Bring your own challenge
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
@@ -692,9 +714,9 @@ Pick the track that matches your primary role, or choose by outcome if you want 
 | 🔧 **Challenge 29: Inherit and Evolve** | ⭐⭐ | 4-6h | .NET 10, Razor Pages, SQLite, xUnit | Challenge 29 |
 | 🔧 **Challenge 30: Spec-Driven Feature Delivery** | ⭐⭐ | 4-6h | Spec Kit, Copilot CLI, TypeScript, Playwright | Challenge 30 |
 
-## What Skills You'll Build
+## What skills you'll build
 
-All tracks help you build proficiency with GitHub Copilot as a by-product of driving outcomes:
+The tracks give you practice with:
 
 - GitHub Copilot core features (inline suggestions, chat)
 - Effective prompt engineering
@@ -704,31 +726,30 @@ All tracks help you build proficiency with GitHub Copilot as a by-product of dri
 - Code generation and acceleration
 - Testing and documentation with Copilot
 
-Plus track-specific practices.
+## Getting started
 
-## Getting Started
+### IMPORTANT: create a fresh repository
 
-### IMPORTANT: Create a Fresh Repository
-
-> **Critical:** Do NOT work directly in this GitHub Copilot Adoption repository! See [Getting Started](./getting-started.md) for the setup flow and workspace preparation steps.
+> **Use a disposable clone.** First-time setup removes unrelated content and
+> resets template customizations. Follow [Getting Started](./getting-started.md).
 
 **[Follow the Setup Instructions](./getting-started.md)** - includes an interactive setup script.
 
 ---
 
-### 1. Choose Your Track
+### 1. Choose your track
 
 Click on the track link above to read the detailed guide.
 
-### 2. Review Prerequisites
+### 2. Review prerequisites
 
 Each track lists required knowledge and tools.
 
-### 3. Set Up Your Workspace
+### 3. Set up your workspace
 
 Follow the **[Setup Instructions](./getting-started.md)** to create your fresh repository.
 
-### 4. Follow the Track Guide
+### 4. Follow the track guide
 
 Each track provides:
 
@@ -738,39 +759,38 @@ Each track provides:
 - Tips specific to that domain
 - Tailored briefs for repository instructions, custom agents, and custom skills
 
-### 5. Start Your First Challenge
+### 5. Start your first challenge
 
-Begin with the required challenge for your track!
+Open the track's contents page and start the first stage.
 
-## Sample Schedules
+## Sample schedules
 
-### Full Day (8 hours)
+### Full day (8 hours)
 
-Perfect for combining multiple tracks (e.g., Backend + Frontend) or completing challenges in depth.
+Complete the chosen track and use remaining time for optional work.
 
-### Half Day (4 hours)
+### Half day (4 hours)
 
 Focus on the core required challenge in your chosen track.
 
 ### Custom
 
-Mix and match challenges across tracks based on your interests!
+Choose challenges that fit the team's work and available time.
 
-## Tips for Success
+## Tips for success
 
-### 1. Stick to Your Track (Initially)
+### 1. Stick to your track (initially)
 
 - Start with your primary track
 - Complete at least the required challenge
-- This keeps things focused
 
-### 2. Branch Out Later
+### 2. Branch out later
 
-- Finished your track early? Try another!
+- Finish the core before adding optional work or another challenge
 - Want full-stack experience? Combine Backend + Frontend tracks
 - Mix challenges that interest you
 
-### 3. Use Track Resources
+### 3. Use track resources
 
 - Each track has specific tips for that domain
 - Customization briefs tailored to the technology
@@ -782,7 +802,7 @@ Mix and match challenges across tracks based on your interests!
 - Share discoveries
 - Help each other learn
 
-## Track Resources
+## Track resources
 
 Each track includes:
 
@@ -799,7 +819,7 @@ Plus access to:
 - [Prompt Engineering](../docs/prompt-engineering.md)
 - [MCP Servers](../docs/mcp-servers.md)
 
-## For Teams
+## For teams
 
 ### If you're doing this as a team
 
@@ -807,7 +827,7 @@ Plus access to:
 
 - Choose track based on team's primary role
 - Work together, share learnings
-- Present unified solution
+- Present the result together
 
 **Option 2: Different Tracks**
 
@@ -821,20 +841,19 @@ Plus access to:
 - Divide challenges among team members
 - Integrate API and UI at the end
 
-## Success Metrics
+## Success metrics
 
 A successful track completion means:
 
-- [] Delivered a demonstrable outcome (working code, deployed feature, modernized app, or documented automation)
-- [] Can articulate the business impact of the outcome (faster delivery, reduced risk, lower toil)
-- [] Used Copilot features to accelerate the work and can explain the patterns
-- [] Ready to apply the patterns to your own projects
+- [ ] Demonstrate the result with working code, tests, or documentation
+- [ ] Explain its impact, such as time saved or risk reduced
+- [ ] Explain how Copilot helped and what the team will reuse
 
 Activity metrics (Copilot usage, chat interactions) are supporting evidence, not the goal.
 
-## After Your Track
+## After your track
 
-### Next Steps
+### Next steps
 
 1. **Complete the track** - Finish required challenges
 2. **Try more challenges** - Go deeper in your domain
@@ -842,22 +861,22 @@ Activity metrics (Copilot usage, chat interactions) are supporting evidence, not
 4. **Apply to real work** - Use Copilot in your projects
 5. **Share learnings** - Help others in your organization
 
-### Cross-Track Learning
+### Cross-track learning
 
 - Backend devs: Try Frontend track to understand full picture
 - Frontend devs: Try Backend to understand APIs better
 - Everyone: Try DevOps to understand deployment
 
-## Need Help?
+## Need help?
 
 - **Track-specific questions?** Check your track guide
 - **General Copilot help?** See [Copilot Guide](../docs/copilot-guide.md)
 - **Technical issues?** Check [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - **Stuck on challenge?** Ask Copilot Chat or facilitator
 
-## Quick Links
+## Quick links
 
-### Track Guides
+### Track guides
 
 - [Challenge 0: Product Planning Track](./challenge-0-product-planning-track.md)
 - [Challenge 1: Web API Track](./challenge-1-web-api-track.md)
@@ -869,14 +888,11 @@ Activity metrics (Copilot usage, chat interactions) are supporting evidence, not
 - [Challenge 7: Copilot SDK Track](./challenge-7-copilot-sdk-track.md)
 - [Challenge 8: Flight Delay Predictor Track](./challenge-8-flight-delay-track.md)
 
-### General Resources
+### General resources
 
-- [Documentation Home](../docs/index.md)
 - [Facilitator Guide](../FACILITATOR_GUIDE.md)
 - [Documentation Home](../docs/index.md)
 
 ---
 
-Choose your track above and get started.
-
-Not sure? Start with [Challenge 1: Web API Track](./challenge-1-web-api-track.md) -- it's the most beginner-friendly.
+For a first API challenge, use [Challenge 1](./challenge-1-web-api-track.md).

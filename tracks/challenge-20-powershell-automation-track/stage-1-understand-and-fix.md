@@ -1,4 +1,4 @@
-# Stage 1: Understanding and Fixing Existing Scripts
+# Stage 1: Understanding and fixing existing scripts
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
@@ -6,10 +6,10 @@ The `scripts/` folder has three PowerShell scripts inherited from a colleague wh
 
 ## Tasks
 
-Before you open the first script, use the full setup: keep your repository instructions open for your error-handling and logging conventions, bring in the PowerShell Expert agent for flagging anti-patterns, and run your script refactor skill instead of fixing issues one at a time with no consistent pass.
+Use your repository instructions for error-handling and logging conventions. Have the PowerShell Expert agent flag anti-patterns, then run the script refactor skill to check each change.
 
 1. Open `scripts/Get-StaleAccounts.ps1`. Use Copilot (`/explain`) to describe what the script does and what each parameter controls. Identify the date calculation bug and fix it.
-2. Open `scripts/Invoke-DiskCleanup.ps1`. Ask Copilot to list every issue it can see. Note the missing output and missing error handling -- you will fix these in Stage 2, but at minimum make the script syntactically correct and runnable.
+2. Open `scripts/Invoke-DiskCleanup.ps1`. Have Copilot identify issues, then check its findings. Make the script syntactically correct and runnable. Record the missing output and error handling for Stage 2.
 3. Open `scripts/Set-AzureResourceTags.ps1`. Ask Copilot to explain the risk of calling `Connect-AzAccount` without a `ServicePrincipal` or managed identity context in an automated script. Note what it says for Stage 3.
 4. Add comment-based help (`<# .SYNOPSIS ... #>`) to `Get-StaleAccounts.ps1` using Copilot. Verify it appears when you run `Get-Help Get-StaleAccounts`.
 
@@ -19,9 +19,9 @@ Before you open the first script, use the full setup: keep your repository instr
 - `Get-Help Get-StaleAccounts` shows a `.SYNOPSIS` and at least one `.PARAMETER` entry
 - All three scripts parse without errors (`$null = [System.Management.Automation.Language.Parser]::ParseFile('path', [ref]$null, [ref]$null)` returns no parse errors)
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
-Copilot will catch the date arithmetic bug and explain what `AddDays` with a positive vs. negative argument does. It will also generate comment-based help that looks correct. What it cannot tell you is whether 90 days is the right threshold for your organization's stale account policy -- that decision belongs to your IAM team.
+Copilot can explain how positive and negative `AddDays` arguments affect the date and draft comment-based help. Verify both against the script. Your IAM team decides whether 90 days is the right stale-account threshold.
 
 ---
 

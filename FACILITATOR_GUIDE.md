@@ -1,24 +1,27 @@
-# Facilitator Guide
+# Facilitator guide
 
 ## Overview
 
-This GitHub Copilot Adoption delivery session helps teams **drive real work outcomes** with GitHub Copilot, then build lasting adoption. Your role as facilitator is to guide participants to define a measurable outcome, work through the stages that deliver it, and demonstrate the business impact at the end.
+Help teams define what to deliver, use Copilot during the work, and demonstrate
+the result. At the end, ask what changed and which practices they can use again.
 
 Participants can either pick a **worked-example challenge** from the
 [track catalog](./tracks/README.md) or **bring their own app/repository**.
 See the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for guidance
 on customer-codebase sessions.
 
-## Pre-Session Setup (1 week before)
+## Pre-session setup
 
-### 1. **Verify Prerequisites**
+Start one week before the session.
+
+### 1. Verify prerequisites
 
 - [ ] All participants have GitHub accounts
 - [ ] GitHub Copilot licenses are provisioned
 - [ ] Codespaces are enabled for the organization
 - [ ] Test the devcontainer setup
 
-### 2. **Environment Preparation**
+### 2. Prepare the environment
 
 ```bash
 
@@ -32,11 +35,11 @@ on customer-codebase sessions.
 
 ```
 
-### 3. **Understand the Track Structure**
+### 3. Review the tracks
 
-Review the seven core tracks:
+Review the tracks your participants will use.
 
-**Core Tracks (4-6 hours):**
+**Core tracks:**
 
 - [ ] [Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)
 - [ ] [Challenge 2: ML & AI Track](./tracks/challenge-2-ml-ai-track.md)
@@ -44,14 +47,14 @@ Review the seven core tracks:
 - [ ] [Challenge 4: Frontend Track](./tracks/challenge-4-frontend-track.md)
 - [ ] [Challenge 5: QA & Testing Track](./tracks/challenge-5-qa-track.md)
 
-**Challenge 7-18 Tracks:**
+**SDK, full-stack, and team tracks:**
 
 - [ ] [Copilot SDK Track](./tracks/challenge-7-copilot-sdk-track.md)
 - [ ] [Flight Delay Predictor Track](./tracks/challenge-8-flight-delay-track.md)
 - [ ] [Cross-Functional Team Sprint Track](./tracks/challenge-9-team-sprint-track.md)
 - [ ] [Technical Team Sprint Track](./tracks/challenge-10-tech-sprint-track.md)
 
-### 4. **Communication**
+### 4. Send session details
 
 Send participants:
 
@@ -62,14 +65,16 @@ Send participants:
 - [ ] Setup instructions
 - [ ] Slack/Teams channel for questions
 
-## Day of the Session
+## Day of the session
 
-### Opening Session (30 min)
+### Opening session
+
+Allow 30 minutes.
 
 **Welcome & Introduction (10 min)**
 
 - Introduce GitHub Copilot
-- Frame the session as **outcome-driven work** -- participants will deliver a demonstrable result, not just learn features
+- Ask participants to deliver a result they can demonstrate
 - Explain the two paths: pick a worked-example challenge, or bring your own app and define your own outcome
 - Review schedule
 - Show the [Tracks Overview](./tracks/README.md) and the [BYOC kit](./byoc/)
@@ -88,9 +93,11 @@ Send participants:
 - For BYOC: point them to [Outcome Canvas](./byoc/outcome-canvas.md)
 - Direct them to [Tracks Guide](./tracks/README.md) or [BYOC README](./byoc/README.md)
 
-### Challenge Time (4-5 hours)
+### Challenge time
 
-**Recommended Flow (Outcome-Based):**
+Allow 4-5 hours.
+
+**Recommended flow:**
 
 1. Participants define or choose their outcome
 2. Work through the challenge stages (or their own app) to deliver it
@@ -102,19 +109,23 @@ Send participants:
 
 - Don't solve problems directly
 - Guide participants to use Copilot
-- Keep the conversation tied to the outcome: "What are you trying to deliver? How will you demo it?"
-- Share interesting outcome-driven patterns with the group
+- Ask what participants are trying to deliver and how they will demonstrate it
+- Share Copilot techniques that helped a team complete its work
 
-### Mid-Day Check-in (15 min)
+### Mid-day check-in
+
+Allow 15 minutes.
 
 Around lunch, gather everyone:
 
 - Quick poll: What outcome are you working on? What stage?
-- Share 2-3 outcome wins from different teams
+- Have 2-3 teams show their progress
 - Address common issues
-- Reinforce outcome focus: "Show me what you're delivering"
+- Ask teams to show what works so far
 
-### Showcase Session (1-2 hours)
+### Demo session
+
+Allow 1-2 hours.
 
 **Format Options:**
 
@@ -128,7 +139,7 @@ Around lunch, gather everyone:
 **Option B: Demo Stations**
 
 - Set up tables for each outcome theme
-- Participants showcase their work and explain the impact
+- Participants show their work and explain the impact
 - Informal walk-around format
 
 **Option C: Presentations**
@@ -143,7 +154,7 @@ Around lunch, gather everyone:
 - 2-minute rapid-fire presentations
 - Focus on the outcome and one key Copilot pattern
 
-### Wrap-Up Session (30 min)
+### Wrap-up session (30 min)
 
 **Outcome Review (15 min)**
 
@@ -160,9 +171,9 @@ Around lunch, gather everyone:
 - Use the **[Outcome Scorecard](./byoc/outcome-scorecard.md)** for future work sessions
 - Track impact over time
 
-## Facilitation Tips
+## Facilitation tips
 
-### Encouraging Copilot Usage
+### Encouraging Copilot usage
 
 **Good Prompts:**
 
@@ -176,7 +187,7 @@ Around lunch, gather everyone:
 - Writing code for participants
 - Skipping the Copilot learning
 
-### Common Issues & Solutions
+### Common issues & solutions
 
 **Issue: "Copilot isn't suggesting anything"**
 
@@ -194,9 +205,7 @@ Around lunch, gather everyone:
 
 **Issue: "I don't understand the generated code"**
 
-- Perfect! Use `/explain`
-- This is a learning opportunity
-- Review together with participant
+- Use `/explain` and review the code with the participant
 
 **Issue: "Challenge is too hard/easy"**
 
@@ -207,18 +216,17 @@ Around lunch, gather everyone:
 
 **Issue: "I picked the wrong track"**
 
-- It's okay to switch tracks!
+- Switch tracks if the work is a poor fit
 - Help them find a better fit
 - Suggest starting the recommended challenge for new track
 
-### Time Management
+### Time management
 
 **If running behind:**
 
-- Focus on required challenges in the track
-- Skip optional challenges
+- Focus on required stages and skip optional work
 - Focus on quality over quantity
-- Extend showcase if needed
+- Extend demo time if needed
 
 **If ahead of schedule:**
 
@@ -226,73 +234,85 @@ Around lunch, gather everyone:
 - Try challenges from another track
 - Explore advanced features
 
-## Track-Specific Facilitation Guide
+## Track-specific facilitation guide
 
-### Backend Developer Track
+### Backend developer track
 
 **Common challenges:**
 
-- Participants get stuck on JWT token validation errors, usually because they've hardcoded the secret or forgotten to check `Authorization` header casing. Ask them to paste the error into Copilot Chat and describe the flow -- it usually surfaces the missing piece quickly.
-- Test setup (Jest or pytest) stalls when participants skip the package install step or can't find the right test config. Point them to the existing test file in the starter code and ask Copilot to explain it before writing new tests.
+- For JWT validation errors, ask participants to check the configured secret
+  and `Authorization` header handling. Have them give Copilot the error and
+  request flow, without sharing secrets.
+- If Jest or pytest setup stalls, check dependencies and test configuration.
+  Ask Copilot to explain an existing starter test before adding new ones.
 
 **Facilitation tips:**
 
-- This is the most forgiving track for new Copilot users. The starter code is intentionally simple, so Copilot suggestions are accurate and easy to evaluate.
+- The simple starter makes this track a useful starting point for new Copilot users.
 - When someone gets a long Copilot suggestion they don't understand, stop them and use `/explain` before accepting it. This is a better learning moment than accepting and moving on.
-- If participants finish Stage 3 early, push them to Stage 4's bug hunt rather than polishing earlier stages -- debugging with Copilot is more instructive than adding more CRUD endpoints.
+- If participants finish Stage 3 early, move to Stage 4's bug hunt before
+  adding more CRUD endpoints.
 
-### Data Science & ML Track
+### Data science & ML track
 
 **Common challenges:**
 
-- Feature engineering decisions block participants who expect Copilot to make the choices for them. Redirect: ask them to write a comment explaining what the feature should capture, then let Copilot suggest code for it.
+- If participants expect Copilot to choose features for them, ask them to
+  describe what each feature should capture before requesting code.
 - Jupyter notebook inline suggestions can be slow or absent if the kernel is restarting. If suggestions stop appearing, have them save, restart the kernel, and re-run prior cells.
 
 **Facilitation tips:**
 
-- Copilot works better in notebooks when cells are small and comments describe intent. Participants who write one giant cell get worse suggestions. Ask them to split by logical step and add a comment at the top of each.
-- The ML model quality is not the goal -- the goal is using Copilot to move through the data pipeline faster. Don't let participants spend more than 30 minutes tuning hyperparameters.
-- `/explain` on scikit-learn estimators is unusually good. Show this early to build confidence.
+- Ask participants to split notebook cells by logical step and describe their intent.
+- Keep hyperparameter tuning within 30 minutes so participants can complete
+  the data pipeline and evaluate the model.
+- Demonstrate `/explain` on a scikit-learn estimator early in the session.
 
-### DevOps & Platform Track
+### DevOps & platform track
 
 **Common challenges:**
 
 - Cloud credentials are the most common blocker. Verify before the session that sandbox accounts have the necessary roles assigned. If someone hits an auth error mid-session, have them switch to the local Docker path while you resolve it.
-- Terraform state errors (locked state, missing backend) confuse participants who've never used Terraform. Ask Copilot to explain the error message -- it usually gives a clear diagnosis and a `terraform force-unlock` or `terraform init` fix.
+- For Terraform state errors, ask Copilot to explain the message and check
+  whether the backend is initialized. Verify who owns a lock before considering
+  `terraform force-unlock`.
 
 **Facilitation tips:**
 
 - This track has the highest setup complexity. Do a dry run with the devcontainer before the session, especially for the Terraform stages.
-- Participants often paste Terraform errors into inline chat rather than the Chat view. The Chat view gives better responses for multi-line error output -- redirect them there.
+- Use the Chat view for multi-line Terraform errors.
 - CI/CD stage failures in GitHub Actions are easier to debug by fetching the raw log URL and pasting it into Copilot Chat than by reading the folded UI.
 
-### Frontend Developer Track
+### Frontend developer track
 
 **Common challenges:**
 
-- TypeScript type errors from generated components are the most common friction point. Participants accept a suggestion, get a red underline, and don't know why. Ask them to hover the error and use `/fix` in inline chat -- this closes the loop fast.
-- State management decisions (where to put state, when to lift it) stall participants who don't have a React mental model yet. Ask them to describe what the component should do in a comment; Copilot usually picks a reasonable approach.
+- For generated TypeScript errors, inspect the editor diagnostic and use
+  `/fix` in inline chat. Review the fix before accepting it.
+- Before deciding where React state belongs, ask participants to describe
+  which components need it and what should happen when it changes.
 
 **Facilitation tips:**
 
 - Component generation works well when participants open an existing component as a reference tab before prompting. Tell them: "Show Copilot what you already have before asking for something new."
-- The accessibility stage (Stage 4) is easy to skip but high-value for demonstrating Copilot's breadth. Prompt: "Ask Copilot to audit this component for ARIA issues."
+- Keep time for accessibility checks. Ask Copilot to review ARIA usage, then
+  verify the component in the browser.
 - Participants who came from a non-TypeScript background benefit from asking Copilot to explain inferred types rather than adding `any` casts. Set that expectation early.
 
-### QA Tester Track
+### QA tester track
 
 **Common challenges:**
 
 - Playwright installation and browser download takes 2-3 minutes the first time and participants think it's stuck. Let them know it's downloading browser binaries.
 - Page Object Model patterns are unfamiliar to participants who've only written procedural tests. Have them open an existing POM file from the starter code and ask Copilot to explain the pattern before generating new pages.
-- Flaky tests are usually caused by missing `await` or a hard-coded timeout. Ask Copilot to review the failing test for race conditions -- it catches most of these.
+- For flaky tests, check for missing `await` and hard-coded timeouts. Ask
+  Copilot to review the failure for race conditions.
 
 **Facilitation tips:**
 
-- The Playwright MCP integration (Stage 3) is the most impressive demo in this track. Reserve time for it and make sure the dev server is running before they start.
+- Reserve time for Playwright MCP and start the dev server before using it.
 - Test generation with `/tests` works best when the function under test has a clear signature and docstring. If suggestions are vague, ask participants to add a one-line comment describing the expected behavior first.
-- This track rewards participants who think like testers, not just developers. Encourage them to ask: "What would break this?" rather than "Does this work?".
+- Ask participants to test failure cases as well as the expected flow.
 
 ### Challenge 7: Copilot SDK Track
 
@@ -329,7 +349,7 @@ Around lunch, gather everyone:
 
 - Coordinating between PO, developers, QA, and DevOps in parallel
 - Managing scope when multiple people contribute to the same codebase
-- The Spark handover -- converting a prototype into a development repo
+- Converting the Spark prototype into a development repository
 
 **Facilitation tips:**
 
@@ -349,14 +369,14 @@ Around lunch, gather everyone:
 **Facilitation tips:**
 
 - Requires a team of 4 technical people, not for solo participants
-- No business roles -- the spec is provided, so the team jumps straight to technical planning
+- The supplied specification lets the team start with technical planning
 - Encourage the team to write a clear technical spec before coding
-- Watch for teams that skip the planning phase and dive into code too early
+- Keep teams from skipping technical planning
 - Help the team self-organize by suggesting one person manage the project board
 
-## Challenge & Track Difficulty Guide
+## Challenge & track difficulty guide
 
-### By Track Difficulty
+### By track difficulty
 
 **Beginner-Friendly Tracks:**
 
@@ -379,7 +399,7 @@ Around lunch, gather everyone:
 - Cross-Functional Team Sprint Track (4-6 people, all roles)
 - Technical Team Sprint Track (4 developers/engineers, no business roles)
 
-### By Individual Challenge
+### By individual challenge
 
 **Beginner-Friendly:**
 
@@ -399,7 +419,7 @@ Around lunch, gather everyone:
 - Challenge 7: Copilot SDK (building SDK applications)
 - Challenge 8: Flight Delay Predictor (full-stack ML app)
 
-## Metrics to Track
+## Metrics to track
 
 Ask participants to note:
 
@@ -410,9 +430,9 @@ Ask participants to note:
 - Time spent
 - Supporting evidence: percentage of code generated by Copilot, chat interactions
 
-## Post-Session
+## Post-session
 
-### Follow-Up (within 1 week)
+### Follow-up (within 1 week)
 
 **Send to Participants:**
 
@@ -426,11 +446,11 @@ Ask participants to note:
 
 - Outcome clarity and achievement
 - Business impact realized
-- Copilot effectiveness in driving the outcome
+- Where Copilot helped or slowed the work
 - Patterns discovered
 - Overall experience
 
-## BYOC Sessions
+## BYOC sessions
 
 If you're running a GitHub Copilot Adoption delivery session on a customer's own app or repository, see the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for:
 
@@ -439,19 +459,19 @@ If you're running a GitHub Copilot Adoption delivery session on a customer's own
 - Timeboxes and checkpoints for custom challenges
 - Outcome review and scorecard facilitation
 
-### Share Results
+### Share results
 
 Create a summary:
 
 - Participation stats
 - Productivity gains reported
-- Common learnings
-- Success stories
+- Practices teams can reuse
+- Results teams demonstrated
 - Areas for improvement
 
-## Sample Schedule
+## Sample schedule
 
-### Full Day (8 hours)
+### Full day (8 hours)
 
 ```text
 09:00 - 09:30   Welcome & Copilot Demo
@@ -466,7 +486,7 @@ Create a summary:
 
 ```
 
-### Half Day (4 hours)
+### Half day (4 hours)
 
 ```text
 09:00 - 09:20   Welcome & Quick Demo
@@ -477,45 +497,40 @@ Create a summary:
 
 ```
 
-## Resources for Facilitators
+## Resources for facilitators
 
-### Preparation Materials
+### Preparation materials
 
-- Read all challenge READMEs
+- Read the selected track and stage guides
 - Complete at least 2 challenges yourself
 - Review documentation
 - Test the Codespace setup
 
-### During Event
+### During event
 
 - Keep docs open: `docs/` folder
 - Have solutions ready (for reference only)
 - Monitor Slack/Teams for questions
 - Take photos/notes for recap
 
-### Backup Plans
+### Backup plans
 
 - Network issues: Local development setup
 - Codespace quota: Local Docker
 - Copilot outage: Focus on manual learning, reschedule
 
-## Success Criteria
+## Success criteria
 
-A successful GitHub Copilot Adoption delivery session means:
+Each team demonstrates its result and explains the impact. Participants
+identify where Copilot helped and which practices they will use in daily work.
+Use activity metrics as supporting evidence, not the main measure of success.
 
-- Each team delivered a **demonstrable outcome** (working code, shipped feature, modernized system, or automated process)
-- Participants can **articulate the business impact** (faster delivery, reduced risk, lower toil, improved quality)
-- Teams used Copilot to accelerate the work and can **explain the patterns** they applied
-- Participants leave with a **plan to adopt** these patterns in daily work, so the session drives lasting Copilot adoption rather than a one-off result
-
-Track activity metrics (Copilot usage percentage, chat interactions) as supporting evidence, but measure success by the outcomes delivered and the business impact produced.
-
-## Questions & Support
+## Questions & support
 
 For facilitation questions:
 
 - Review this guide
-- Check challenge READMEs
+- Check the selected track guide
 - Consult docs folder
 - Ask in organizer chat
 

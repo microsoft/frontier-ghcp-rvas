@@ -77,7 +77,7 @@ Add a global transaction search that works across all accounts:
 ## Copilot Tips for This Stage
 
 - Describe the feature to Copilot in banking terms first, then ask for the implementation. "Add a scheduled transfers table that the EOD batch picks up and executes" gives better results than "add a cron job."
-- If implementing in MUMPS, ask Copilot to generate code that follows the existing style -- point it at an existing routine as a reference.
+- For MUMPS implementation, give Copilot an existing routine as a style reference.
 - Use agent mode to scaffold the full feature (data model + business logic + menu integration + tests) in one pass, then refine.
 
 ## Verification

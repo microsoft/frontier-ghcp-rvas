@@ -1,4 +1,4 @@
-# Spec-Driven Feature Delivery with GitHub Spec Kit: Stages
+# Spec-driven feature delivery with GitHub Spec Kit: Stages
 
 ## Stages
 

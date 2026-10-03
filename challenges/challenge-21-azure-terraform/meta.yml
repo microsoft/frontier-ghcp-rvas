@@ -4,8 +4,8 @@ title: Azure Terraform
 category: azure-platform
 difficulty: intermediate
 duration_minutes: 300
-description: Build and defend an Azure platform baseline with Terraform using remote state, modules, identity, policy, and CI guardrails.
-focus: Building and defending an Azure platform baseline with Terraform -- remote state, reusable modules, identity, policy checks, CI guardrails, and plan review discipline
+description: Build and review an Azure Terraform baseline with remote state, modules, identity controls, policy checks, and CI gates.
+focus: Build and review an Azure Terraform baseline with remote state, reusable modules, identity controls, policy checks, and CI gates
 tags:
   - azure-platform
   - advanced

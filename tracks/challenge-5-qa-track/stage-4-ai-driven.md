@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-You've been guiding Copilot with specific prompts. Now let Copilot take the lead -- use the Playwright MCP server to have it autonomously explore the application and generate tests from what it observes.
+Use the Playwright MCP server to let Copilot explore the app and generate tests without predefined selectors or steps.
 
 ## Tasks
 
@@ -35,7 +35,7 @@ You've been guiding Copilot with specific prompts. Now let Copilot take the lead
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-MCP can explore an application and produce tests faster than you can write prompts. But the tests it generates tend to verify what the app *does* rather than what the app *should* do. A test that confirms the current behavior is a snapshot, not a quality check. Your judgment determines whether a behavior is correct, whether an edge case matters, and whether a test would catch a real regression.
+MCP-generated tests may reproduce current behavior without checking whether it is correct. Review each test against the requirements and check that it would catch a regression.
 
 ---
 

@@ -5,7 +5,7 @@ category: core-tracks
 difficulty: advanced
 duration_minutes: 420
 description: Build AI-powered repository automation using Markdown-defined workflows running in GitHub Actions.
-focus: Build and operate GitHub Agentic Workflows -- Markdown-defined, AI-powered repository automation running in GitHub Actions
+focus: Build and operate GitHub Agentic Workflows, Markdown-defined repository automation that uses AI in GitHub Actions
 tags:
   - core-tracks
   - core

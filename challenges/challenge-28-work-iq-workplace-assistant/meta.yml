@@ -1,11 +1,11 @@
 id: challenge-28
 number: 28
-title: Work IQ Workplace Assistant
+title: Work IQ workplace assistant
 category: workflow-automation
 difficulty: intermediate
 duration_minutes: 300
 description: Build a permission-aware workplace handoff workflow that turns Microsoft 365 context into a reviewed action register.
-focus: Microsoft Work IQ, GitHub Copilot CLI, Microsoft Entra authentication, permission-aware retrieval, and human-reviewed workplace handoffs
+focus: Turn approved Microsoft 365 project context into a reviewed handoff with Microsoft Work IQ and GitHub Copilot CLI
 tags:
   - workflow-automation
   - work-iq

@@ -3,9 +3,9 @@
 **Duration:** 60 minutes for the core; role-page estimates cover the extended backlog
 **Focus:** Product ideation, backlog creation, tooling setup, sprint planning
 
-This stage sets the foundation. The PO drives ideation while everyone else sets up their development environment and tooling. The stage ends with a sprint planning session where the team commits to Sprint 1 scope.
+The PO develops the product idea while the rest of the team sets up tooling. End the stage with a planning session to agree on Sprint 1 scope.
 
-Before role setup begins, make sure the team's shared `.github/copilot-instructions.md` actually captures the CityPulse context everyone needs, and agree together on one shared custom skill, like the sprint board sync or Discovery Handoff sequence, so the whole team works from the same repeatable process instead of everyone improvising their own.
+Before setup, check that `.github/copilot-instructions.md` describes CityPulse for all roles. Agree on one shared custom skill, such as sprint board sync or Discovery Handoff.
 
 ## Jump to Your Role
 
@@ -22,11 +22,11 @@ Find your role and follow the link for your detailed task list:
 
 ## The Spark Handover
 
-Before sprint planning, the PO exports the GitHub Spark prototype into a GitHub repository and shares the link with the team. This exported repo is the contract between the PO and the developers -- it captures the screens, user flows, and data model that the team agreed to build.
+Before sprint planning, the PO exports the GitHub Spark prototype to a GitHub repository and shares the link. The export defines the agreed screens, user flows, and data model.
 
 Every team member should clone the repo and review it. The frontend developer should pay close attention to the component structure and page layouts. The backend developer should look at the data model and API patterns implied by the UI.
 
-Once the Spark prototype lands in a repo, the team does not go back to Spark. All further changes happen through the normal development workflow: branches, pull requests, code review. The Spark app was a rapid ideation tool. From this point on, the repository is the single source of truth.
+After export, make all changes in the repository through branches, pull requests, and code review. Do not return to Spark; the repository is now the source of truth.
 
 ## Sync Point: Sprint Planning Meeting (at ~1:00)
 
@@ -34,7 +34,7 @@ At the 1-hour mark, everyone pauses setup and joins a 30-minute planning session
 
 1. PO walks through the backlog and GitHub Project board (10 min)
 2. Each role picks their Sprint 1 stories (10 min)
-3. Team resolves blockers and dependencies -- for example, frontend needs the API spec, QA needs seed data (5 min)
+3. Resolve blockers and dependencies, such as the frontend's API spec and QA's seed data (5 min)
 4. Agree on a mid-sprint standup time (5 min)
 
 After planning, everyone should have clear tasks and an unblocked path into Sprint 1.

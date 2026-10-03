@@ -1,13 +1,13 @@
-# Challenge 30 Track: Spec-Driven Feature Delivery with GitHub Spec Kit
+# Challenge 30 track: Spec-driven feature delivery with GitHub Spec Kit
 
 **Duration:** 4-6 hours (five-hour core)
 
 **Difficulty:** ⭐⭐
 
-**Focus:** Using GitHub Spec Kit with Copilot CLI to implement an approval
-feature, then keep its specification useful when the rules change
+**Focus:** Use GitHub Spec Kit with Copilot CLI to implement an approval
+feature and update its specification when the rules change
 
-## Who Is This For
+## Who is this for
 
 - Developers who want to try spec-driven development on an existing application
 - Tech leads evaluating a shared requirements-to-code workflow
@@ -23,7 +23,7 @@ feature, then keep its specification useful when the rules change
 The app needs no Azure subscription or external service. Tool installation and
 Copilot require network access. Do not use real employee or customer data.
 
-## Technology Stack
+## Technology stack
 
 - Node.js 22, TypeScript, and Express
 - Plain HTML, CSS, and JavaScript
@@ -40,7 +40,7 @@ and respond to a rule change. Keep the same feature specification current as
 the code evolves. Challenge 17 focuses on authoring custom delivery workflows;
 this track uses Spec Kit's supplied workflow.
 
-## Getting Started
+## Getting started
 
 Read the [shared setup guidance](getting-started.md), then follow Stage 1.
 **This track is an exception to the required custom-agent and custom-skill
@@ -51,7 +51,7 @@ authoring exercises.** Use the Spec Kit skills rather than rebuilding them.
 > customizations. Use a disposable clone with a clean worktree. Do not run
 > `clean-start` or the shared setup script again after initializing Spec Kit.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 The starter is in
 [`challenges/challenge-30-spec-driven/`](../challenges/challenge-30-spec-driven/).
@@ -64,12 +64,12 @@ the starter folder. Run application commands with the explicit path shown in
 Stage 1. This keeps generated `.specify/`, `.github/skills/`, and `specs/`
 artifacts in one place.
 
-The store is in memory. Restarting the server resets the demo data. The identity
-selector is not authentication: anyone can choose any demo user. Keep the app
+The store is in memory. Restarting the server resets the demo data. Anyone
+can choose any demo user; the identity selector provides no authentication. Keep the app
 local and forwarded port 5080 private. Real authentication and durable storage
 are outside this challenge.
 
-### Install and Use Impeccable
+### Install and use Impeccable
 
 After clean setup and Spec Kit initialization, follow the
 [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it).
@@ -79,14 +79,14 @@ Record accepted requirements in the existing feature specification and browser
 tests. Spec Kit still owns the delivery workflow; do not start a separate design
 workflow or change the frontend framework.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Write only the project context Copilot needs: application location, build and
 test commands, and local-only boundaries. Derive conventions from the code.
 Use the Spec Kit constitution for agreed engineering principles. Refer to those
 principles rather than maintaining a second copy in repository instructions.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 These are optional. Use Spec Kit first.
 
@@ -97,7 +97,7 @@ These are optional. Use Spec Kit first.
   change. It should find behavior that no longer matches the agreed criteria,
   without expanding the feature.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 The installed `speckit-*` skills handle the required workflow. Do not rewrite
 them. If you finish the core work, consider one complementary skill:
@@ -113,7 +113,7 @@ Use the [shared examples guidance](getting-started.md#4-learn-from-examples-then
 only if you choose an optional customization. No finished definitions are
 provided.
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Invoke each Spec Kit skill separately in Copilot CLI. The `/speckit-*`
   names are agent skills, not shell commands.

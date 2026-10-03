@@ -1,4 +1,4 @@
-# Stage 1: Inventory Consumer Risk
+# Stage 1: Inventory consumer risk
 
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
@@ -8,8 +8,7 @@ convention wins.
 
 ## Tasks
 
-Use the full customization trio early in this stage. Keep repository
-instructions open while you work, use the Contract Comparison skill for the
+Keep repository instructions open while you work. Use the Contract Comparison skill for the
 first inventory pass, and give the API Governance Reviewer both the contracts
 and consumer notes. Check its findings against the files instead of accepting
 the report as fact.
@@ -40,7 +39,7 @@ the report as fact.
   documentation gaps
 - No recommendation depends on changing application business logic
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can compare large contracts quickly and organize repeated differences.
 You decide whether a difference is harmful, which consumers pay for it, and

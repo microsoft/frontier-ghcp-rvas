@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Tests exist. Now make them useful to your team: build reporting, analyze flakiness, and create a test strategy that captures what you've learned.
+Build a test reporter, investigate flaky tests, and document your test strategy.
 
 ## Tasks
 
@@ -17,7 +17,7 @@ Tests exist. Now make them useful to your team: build reporting, analyze flakine
 3. **Complete the test strategy**: Open `docs/test-strategy-template.md` and complete it. Use Copilot as a thinking partner:
    - "Based on a shopping e-commerce application with login, catalog, cart, and checkout, help me fill out a test strategy. Which areas are highest risk?"
    - "Create a traceability matrix mapping these user stories to test cases: [list your test scenarios]."
-   The strategy should reflect your experience from Stages 1-4 -- what worked, what was hard, where Copilot saved time.
+   Base the strategy on Stages 1-4. Record what worked, what was hard, and where Copilot saved time.
 
 4. **Copilot effectiveness review**: Add a section to your test strategy called "Copilot for QA -- Observations." Based on your hands-on experience across all stages, answer:
    - Which QA tasks did Copilot handle well?

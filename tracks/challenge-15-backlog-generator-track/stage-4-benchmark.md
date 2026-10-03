@@ -26,7 +26,7 @@
    - Are open questions flagged?
    - Are non-functional requirements captured?
 
-4. **Run the refinement agent on all three.** Use the agent from Stage 2 to review all three generated backlogs. Compare the gap analysis across specs -- does the agent catch similar types of gaps consistently?
+4. **Run the refinement agent on all three.** Use the agent from Stage 2 to review each backlog. Check whether it catches similar types of gaps consistently across specs.
 
 5. **Multi-person test (if your team has multiple people).** Have two team members independently use the same skill on the same spec. Compare coverage and structure. Record any differences; a reusable skill does not guarantee identical output.
 

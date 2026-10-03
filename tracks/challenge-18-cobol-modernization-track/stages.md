@@ -1,4 +1,4 @@
-# Legacy COBOL Banking Modernization: Stages
+# Legacy COBOL banking modernization: Stages
 
 ## Stages
 

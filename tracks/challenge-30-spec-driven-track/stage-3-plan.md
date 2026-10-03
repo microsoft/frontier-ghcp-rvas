@@ -1,4 +1,4 @@
-# Stage 3: Plan Against the Existing App
+# Stage 3: Plan against the existing app
 
 **Duration:** 45 minutes
 

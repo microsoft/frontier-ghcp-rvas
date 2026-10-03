@@ -4,7 +4,7 @@
 
 ## Tasks
 
-Before you start writing stories, put the Product and Analysis Agent from your setup to real use: run early feature ideas past it for trade-off framing before they reach the backlog, instead of treating the backlog as a first draft.
+Review feature ideas and trade-offs with your Product and Analysis Agent before writing backlog stories.
 
 1. **Read the stakeholder brief** -- Open the [stakeholder brief](../../../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) and internalize the requirements. This is your specification from the "client."
 
@@ -18,10 +18,10 @@ Before you start writing stories, put the Product and Analysis Agent from your s
 
    What this repo represents:
    - It is the **contract** between the PO and the developers. The screens, data model, and user flows captured in the Spark export define what the team agreed to build.
-   - Developers will clone this repo, study the generated code, and use it as a reference -- or as a starting point they adapt into the real application architecture.
+   - Developers clone the repo and use its code as a reference or adapt it into the application architecture.
    - The frontend developer in particular should review the component structure and page layout, then decide what to keep, what to rewrite, and what to throw away.
 
-   > **There is no way back.** Once the Spark prototype is exported to the repo, the team works from real code in a real repository. You do not go back to iterating in GitHub Spark. Any further changes go through the normal development workflow -- branches, PRs, code review. The Spark app served its purpose: rapid ideation. From this point forward, the repo is the source of truth.
+   > **Do not return to Spark after export.** Make further changes through branches, PRs, and code review. The repository is the source of truth.
 
 4. **Write the product vision** -- Create `docs/product-vision.md` in the challenge folder. Include: problem statement, target users, key features for this sprint, and what success looks like.
 

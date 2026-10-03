@@ -10,9 +10,9 @@
 | 4 | [CI Monitoring and ChatOps](stage-4-ci-monitoring-chatops.md) | 1.5 hours | CI Doctor, ChatOps commands |
 | 5 | [Security and Advanced Patterns](stage-5-security-advanced.md) | 1.5 hours | Security scan, custom workflow, workflow optimization |
 
-Each stage builds on the previous one. By Stage 5, you will have a repository with a comprehensive suite of agentic workflows covering triage, quality, documentation, CI, and security.
+Complete the stages in order to build workflows for triage, code quality, documentation, CI monitoring, and security.
 
-> **Short on time?** Complete Stages 1-3 for a solid foundation. Stages 4-5 add depth but are not required for the core experience.
+> **Short on time?** Complete Stages 1-3. Stages 4-5 are optional.
 
 ---
 

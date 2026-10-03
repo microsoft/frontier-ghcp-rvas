@@ -4,17 +4,17 @@
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** End-to-end product development in a cross-functional team -- from ideation to production deployment -- using GitHub Copilot across every role
+**Focus:** Develop a product from ideation to production deployment with a cross-functional team using GitHub Copilot
 
 > This track requires a team. It is not designed for solo participants. Gather 4-6 people from different disciplines and run through it together.
 
-## Who Is This For
+## Who is this for
 
 - Teams of 4-6 people from different disciplines who want to build a complete application together
 - Organizations that want to simulate a real agile sprint powered by GitHub Copilot
 - Groups with mixed experience across product, development, QA, and operations
 
-## Team Composition
+## Team composition
 
 Each person takes exactly one role. The minimum viable team is 4 people.
 
@@ -41,7 +41,7 @@ Each team member needs skills matching their assigned role:
 
 All participants need a GitHub account with Copilot access.
 
-## Technology Stack
+## Technology stack
 
 The team chooses their stack together. Recommended options:
 
@@ -53,22 +53,22 @@ The team chooses their stack together. Recommended options:
 - **Collaboration:** GitHub Issues, GitHub Projects, GitHub Spark
 - **UI review:** Impeccable, installed manually by the frontend developer
 
-## How This Track Works
+## How this track works
 
-This is not a typical sequential track. The team works in parallel, like a real agile sprint.
+The team works in parallel within each stage.
 
 The challenge runs as a simulated sprint cycle:
 
-1. **Discovery** -- The PO prototypes an idea with GitHub Spark, exports the result into a GitHub repository (the handover), writes stories, and creates a backlog on GitHub Issues. The exported repo becomes the contract between the PO and the development team -- once it lands in a repo, there is no going back to Spark. Everyone else sets up tooling and project scaffolding.
+1. The PO prototypes an idea with GitHub Spark, exports it to a GitHub repository, and creates stories and a backlog in GitHub Issues. The export becomes the development contract. Do not return to Spark after handover. Other roles set up tooling and project scaffolding.
 2. **Sprint 1** -- All roles work in parallel on their piece. Developers build core features (using the Spark handover repo as reference), QA writes tests, DevOps sets up infrastructure, the PO manages the board and reviews PRs.
 3. **Sprint 2** -- The team integrates, adds advanced features, fixes bugs, and starts deploying.
 4. **Ship and Demo** -- Production deployment, final testing, demo, retrospective.
 
-The PO and BA stay involved the entire time -- not just at the start. They manage the backlog, triage bugs, review work for acceptance criteria, and prepare the demo. GitHub Issues is the primary communication channel between roles.
+The PO and BA manage the backlog throughout the sprint. They triage bugs, review acceptance criteria, and prepare the demo. Use GitHub Issues to communicate between roles.
 
 ## The Challenge: CityPulse
 
-Your team is building **CityPulse** -- a civic engagement platform. A fictional city government has hired your team to build a web application where residents can:
+Build CityPulse, a civic engagement platform for a fictional city government. Residents should be able to:
 
 - **Report local issues** (potholes, broken streetlights, graffiti, noise complaints)
 - **Browse community events** (posted by the city or by residents)
@@ -82,17 +82,17 @@ with API integration and a tested demo. Work in parallel. Keep the dashboard,
 authentication, and agentic workflows outside the core. Azure deployment is a
 stretch task if the team has not prepared an environment before the session.
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Navigate to `challenges/challenge-9-team-sprint/`. Read the [stakeholder brief](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) as a team before starting Stage 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-9-team-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
 
-### Install and Use Impeccable
+### Install and use Impeccable
 
 The frontend developer follows the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
 after clean setup. Preflight a source file in the exported frontend. Use `shape`
@@ -101,39 +101,39 @@ reports list in Stage 3. Preserve the Spark handover contract. QA checks one
 accepted improvement against the story's acceptance criteria; the dashboard
 stays optional.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Repository instructions are shared, not role-specific. Each team member should contribute to one `.github/copilot-instructions.md`. At minimum include:
 
 - The project name (CityPulse) and what it does
 - The team's chosen tech stack (backend framework, frontend framework, database)
 - Code conventions the team agreed on (naming, file structure, API patterns)
-- Non-negotiable: the exported Spark handover repo is the contract -- do not roll back to Spark once development starts
+- Non-negotiable: work from the exported Spark handover repo and do not return to Spark once development starts
 
 Individual team members can also maintain role-specific context in their agent definitions.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
-Agents are role-specific -- each person builds the one matching their role, informed by the shared repository instructions above:
+Each person builds an agent for their role using the shared repository instructions:
 
-- **Product and Analysis Agent** -- Helps the PO and BA turn stakeholder input into backlog-ready work: user stories, testable acceptance criteria, data definitions, dashboard metrics, and release notes. Give it a feature idea, stakeholder note, or draft criterion; it returns the product artifact in the team's agreed format and flags ambiguity. Use it throughout Discovery and refinement, not for code-level design.
-- **Engineering Conventions Agent** -- Applies CityPulse's technical conventions on whichever layer its owner works: REST resource shapes, status codes, and the data model for backend developers, or component patterns and styling approach for frontend developers. Give it an endpoint or component description; it proposes the shape consistent with the rest of the app. Backend and frontend developers each build their own instance scoped to their layer; use it when designing new work, not for writing its tests.
-- **Quality and Infrastructure Agent** -- Applies delivery judgment on whichever side its owner covers: Playwright E2E coverage with page object patterns for QA, or devcontainer configuration, GitHub Actions, and environment setup for DevOps. Give it a working feature or an infrastructure requirement; it proposes the test list or the pipeline/devcontainer shape. QA and DevOps each build their own instance scoped to their responsibility; use it once a feature is testable or when the environment needs to change.
+- The PO and BA use a Product and Analysis Agent to draft stories, acceptance criteria, data definitions, dashboard metrics, and release notes from stakeholder input. It should follow the team's format and flag ambiguity.
+- Backend and frontend developers each create an Engineering Conventions Agent for their layer. It should propose endpoints or components that follow CityPulse's API, data model, component, and styling conventions.
+- QA and DevOps each create a Quality and Infrastructure Agent for their responsibility. QA uses it to review Playwright E2E coverage and page objects for working features. DevOps uses it to review devcontainers, GitHub Actions, and environment changes.
 
 Agree on the roster during sprint planning so everyone builds against the same project context.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
-Workflow skills are shared team assets, not tied to one role. Agree on these together so board hygiene and handoffs stay consistent no matter who does the work:
+Agree on shared workflow skills to keep board updates and handoffs consistent:
 
-- **Sprint Board Sync Skill** -- A repeatable sequence run after every merge: update the issue's status, link the PR, and note any scope change discovered during implementation. Keeps GitHub Issues honest without a separate status meeting.
-- **Discovery Handoff Skill** -- The fixed sequence for turning the Spark prototype into the development contract: export it into the repository, confirm the exported structure matches what developers need, and document anything explicitly out of scope. Run once, at the Discovery-to-Sprint 1 boundary.
+- A Sprint Board Sync Skill updates issue status, links the PR, and records scope changes after each merge.
+- A Discovery Handoff Skill checks the Spark export against the development team's needs and records what is out of scope before Sprint 1.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "team sprint agents", "issue sync skill", and "cross-functional instructions" before you draft your own.
 
 ---
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - **PO:** Write a rough story first, then ask Copilot to sharpen it. Use the GitHub MCP server to batch-create Issues from your stories file.
 - **Developers:** Describe the API contract or component structure in a comment before generating. The specifics (field names, status codes, prop types) matter more than length.

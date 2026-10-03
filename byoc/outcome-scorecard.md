@@ -1,8 +1,10 @@
 # Outcome Scorecard
 
-Use this scorecard to document the outcome you delivered and the business impact it produced. Fill it in at the end of your GitHub Copilot Adoption delivery session. This replaces activity metrics (Copilot usage percentage, chat interactions) as the primary success measure.
+Fill in this scorecard at the end of the session. Record what you delivered
+and its impact. **Measure the result**, with Copilot usage and chat counts as
+supporting evidence.
 
-## Outcome Statement
+## Outcome statement
 
 **What did you deliver?**
 
@@ -20,7 +22,7 @@ _One-sentence description of the outcome._
 
 ---
 
-## Acceptance Criteria
+## Acceptance criteria
 
 **Definition of Done (from your Outcome Canvas):**
 
@@ -34,7 +36,7 @@ List the acceptance criteria you defined at the start. Mark each as met or not m
 
 ---
 
-## Evidence and Demo
+## Evidence and demo
 
 **What artifacts did you produce?**
 
@@ -54,7 +56,7 @@ _Links to the work: PR URL, deployed service URL, test report, video recording, 
 
 ---
 
-## Business Impact (Before/After)
+## Business impact
 
 **Before:**
 
@@ -75,7 +77,7 @@ _Measure the improvement. Examples: time saved, response time reduced, test cove
 
 ---
 
-## How Copilot Accelerated the Work
+## How Copilot helped
 
 **Patterns Used:**
 
@@ -94,11 +96,12 @@ _What Copilot features or patterns helped you deliver this outcome?_
 
 **Estimated Time Saved:**
 
-_How much faster was this work with Copilot compared to manual effort?_
+_Estimate the time saved compared with doing the same work without Copilot.
+State how you made the estimate._
 
 ---
 
-## Lessons Learned
+## Lessons learned
 
 **What worked well?**
 
@@ -112,11 +115,11 @@ without treating Customization Trio completion as an outcome criterion._
 
 ---
 
-## Next Steps
+## Next steps
 
 **Follow-On Work:**
 
-_What's left to do to fully productionize this outcome?_
+_What work remains before this can run in production?_
 
 - [ ]
 - [ ]
@@ -127,7 +130,7 @@ _How will you apply these patterns to your daily work?_
 
 ---
 
-## Supporting Activity Metrics (Optional)
+## Supporting activity metrics
 
 These are supporting evidence, not the primary success measure.
 

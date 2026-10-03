@@ -1,4 +1,4 @@
-# Ops Assistant: Stages
+# Ops assistant: Stages
 
 ## Stages
 
@@ -11,7 +11,7 @@
 
 Stage 1 is the foundation. Complete Stages 2 and 3 before Stage 4's combined ops workflow, which reuses their skills.
 
-> **Short on time?** Focus on Stages 1 and 2. A log analysis agent and an incident routing skill are the tools with the most immediate impact on daily operations.
+> **Short on time?** Focus on Stages 1 and 2 to build log analysis and incident routing tools.
 
 ---
 

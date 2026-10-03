@@ -23,7 +23,7 @@ integration at 60 minutes. Keep real API wiring, tests, and the required review.
 
 ## Follow Your Role
 
-Each stage contains detailed tasks for every role, broken into separate pages. Pick your role below to see all five stages at a glance -- or go to a specific stage and find your role there.
+Use the tables below to follow your role through all five stages, or open a stage page and choose your role there.
 
 ### Product Owner
 

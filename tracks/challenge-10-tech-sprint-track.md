@@ -4,17 +4,17 @@
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** End-to-end application development with a technical team -- from a provided specification to production deployment -- using GitHub Copilot across every technical role
+**Focus:** Develop an application from a provided specification to production deployment with a technical team using GitHub Copilot
 
-> This track is designed for teams of up to 4 developers/engineers. It works with 2, 3, or 4 people -- smaller teams just combine roles. See the Team Composition section below.
+> This track supports 2-4 developers or engineers. Smaller teams combine roles as described below.
 
-## Who Is This For
+## Who is this for
 
 - Teams of 2-4 developers and engineers who want to build a complete application together from a given specification
 - Organizations that want to simulate a real agile sprint powered by GitHub Copilot, with no business stakeholders in the room
 - Groups with strong technical skills across backend, frontend, and operations (QA is a bonus if you have the headcount)
 
-## Team Composition
+## Team composition
 
 The track supports teams of 2-4 people. Each person takes one or more roles depending on team size.
 
@@ -27,15 +27,15 @@ The track supports teams of 2-4 people. Each person takes one or more roles depe
 
 There is no Product Owner or Business Analyst in this track. The functional specification is provided upfront. The team self-organizes using GitHub Issues and a shared project board.
 
-### Adapting to Your Team Size
+### Adapting to your team size
 
-**4 people** -- one role each, the ideal setup.
+With 4 people, assign one role each.
 
-**3 people** -- drop the QA Engineer role. Developers write their own tests (unit and integration), and the DevOps engineer adds basic E2E smoke tests to the CI pipeline. Skip the QA-specific pages in each stage.
+With 3 people, omit the QA Engineer role. Developers write unit and integration tests; DevOps adds basic E2E smoke tests to CI. Skip the QA-specific stage pages.
 
-**2 people** -- one person covers both Backend and Frontend (simplify the UI scope), the other covers DevOps. Skip QA entirely. Focus on getting a working deployment with core features rather than full coverage.
+With 2 people, one covers Backend and Frontend with a smaller UI scope; the other covers DevOps. Skip the QA role and focus on deploying core features rather than full coverage.
 
-A full-stack developer can also split the Backend and Frontend work however they want -- there is no strict boundary. The role pages are there to organize tasks, not to lock anyone into a lane.
+A full-stack developer can cover both backend and frontend work. Use the role pages to organize tasks.
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ Each team member needs skills matching their assigned role:
 
 All participants need a GitHub account with Copilot access.
 
-## Technology Stack
+## Technology stack
 
 The team chooses their stack together. Recommended options:
 
@@ -60,9 +60,9 @@ The team chooses their stack together. Recommended options:
 - **Collaboration:** GitHub Issues, GitHub Projects
 - **UI review:** Impeccable, installed manually by the frontend developer
 
-## How This Track Works
+## How this track works
 
-This track differs from the Cross-Functional Team Sprint (Challenge 9) in one key way: you skip the product discovery phase. Instead, the team receives a detailed functional specification and jumps straight into technical planning.
+Unlike Challenge 9, this track starts with a provided functional specification. The team begins with technical planning instead of product discovery.
 
 The challenge runs as a simulated sprint cycle:
 
@@ -75,7 +75,7 @@ The team self-manages the backlog throughout. Each developer triages their own d
 
 ## The Challenge: TrailMate
 
-Your team is building **TrailMate** -- a trail management platform for a regional parks authority. The parks department wants a web application where:
+Build TrailMate, a trail management platform for a regional parks authority. The parks department wants a web application where:
 
 - **Hikers browse trails** with difficulty ratings, distance, elevation, and current conditions
 - **Hikers report trail conditions** (fallen trees, flooding, erosion, wildlife, snow/ice)
@@ -90,17 +90,17 @@ dashboard analytics, authentication, and agentic workflows outside the core.
 Azure deployment is a stretch task if the team has not prepared an environment
 before the session.
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Navigate to `challenges/challenge-10-tech-sprint/`. Read the [functional specification](../challenges/challenge-10-tech-sprint/docs/functional-spec.md) as a team before starting Stage 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-10-tech-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
 
-### Install and Use Impeccable
+### Install and use Impeccable
 
 The frontend developer follows the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
 after clean setup. Preflight a source file in the chosen frontend. In Stages
@@ -109,40 +109,40 @@ clear without color, and check high-severity warnings at a narrow viewport.
 Keep status rules in the functional specification; the skill must not invent
 a new policy.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Repository instructions are shared, not role-specific. The team should build one `.github/copilot-instructions.md` together. At minimum include:
 
 - The project name (TrailMate) and what it does
 - The team's chosen tech stack (backend framework, frontend framework, database)
 - Code conventions the team agreed on (naming, file structure, API patterns)
-- Non-negotiable: the functional spec is the source of truth -- flag any story that contradicts it instead of quietly reinterpreting it
+- Non-negotiable: treat the functional spec as the source of truth and flag stories that contradict it
 
 Individual team members can also maintain role-specific context in their agent definitions.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
-Agents are role-specific -- each person builds the one matching their role, informed by the shared repository instructions above:
+Each person builds an agent for their role using the shared repository instructions:
 
-- **Engineering Conventions Agent** -- Applies TrailMate's technical conventions on whichever layer its owner works: REST resource shapes, status codes, and the data model for backend developers, or component patterns and styling approach for frontend developers. Give it an endpoint or component description; it proposes the shape consistent with the rest of the app. Backend and frontend developers each build their own instance scoped to their layer; use it when designing new work, not for writing its tests.
-- **Trail Delivery Agent** -- Applies TrailMate's delivery judgment on whichever side its owner covers: trail browsing, condition reporting, status transitions, and dashboard flows for QA, or the app's devcontainer, GitHub Actions, and deployment path for DevOps. Give it a working TrailMate scenario or infrastructure requirement; it returns the risk-focused test set or environment change needed to keep that scenario deployable. QA and DevOps each build an instance scoped to their responsibility; use it after a cross-layer feature becomes testable or when its runtime path changes.
+- Backend and frontend developers each create an Engineering Conventions Agent for their layer. It should propose endpoints or components that follow TrailMate's API, data model, component, and styling conventions.
+- QA and DevOps each create a Trail Delivery Agent for their responsibility. QA uses it to review tests for trail browsing, condition reporting, status transitions, and dashboard flows. DevOps uses it to review the devcontainer, GitHub Actions, and deployment requirements for those features.
 
 Agree on the roster during the planning phase so everyone builds against the same project context.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 Workflow skills are shared team assets, not tied to one role:
 
-- **Spec-to-Issues Skill** -- A repeatable sequence using the GitHub MCP server: read the functional spec, break it into stories and tasks, and create the matching GitHub Issues in one pass rather than one at a time.
-- **Sprint Board Sync Skill** -- A fixed sequence run after every merge: update the issue's status, link the PR, and note any scope change discovered during implementation.
+- A Spec-to-Issues Skill converts the functional spec into stories and tasks and creates matching GitHub Issues through MCP.
+- A Sprint Board Sync Skill updates issue status, links the PR, and records scope changes after each merge.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "team sprint agents", "spec to issues skill", and "technical planning instructions" before you draft your own.
 
 ---
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
-- Use the GitHub MCP server to convert your functional spec into Issues quickly -- point Copilot at the spec file and ask it to break features into stories.
+- Point Copilot at the functional spec and use GitHub MCP to create Issues from its features.
 - **Developers:** Describe API contracts and component props in terms of the project domain (trails, difficulty ratings, conditions) rather than generic CRUD.
 - **QA:** Describe the user flow first ("submit a trail condition report, verify it appears"), then ask for the Playwright test.
 - **DevOps:** State the target infrastructure (stages, base image, constraints) and let Copilot generate the manifest.

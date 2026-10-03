@@ -1,8 +1,8 @@
-# Stage 1: Contract Archaeology
+# Stage 1: Contract archaeology
 
 **Duration:** 2-3 hours
 
-**Focus:** Understanding WCF contracts, mapping service operations, documenting business rules and fault conditions
+**Focus:** Understand WCF contracts, map service operations, and document business rules and fault conditions
 
 ## Objective
 
@@ -10,7 +10,7 @@ Understand the Meridian Savings Bank WCF service well enough to describe every o
 
 ## Tasks
 
-Before you read a single contract, use the full setup: keep your repository instructions open for the WCF conventions and your REST target, bring in the WCF Analyst agent for the parts of the fault catalog that need judgment calls, and run your WSDL verification skill once the service is up instead of assuming SOAP responses are correct without checking.
+Use your repository instructions for WCF conventions and the REST target. Have the WCF Analyst agent review uncertain fault mappings. Once the service starts, run the WSDL verification skill to check its SOAP responses.
 
 1. **Get oriented on WCF fundamentals.** Before reading service code, spend 15-20 minutes getting context. Ask Copilot to explain:
    - What `ServiceContract`, `OperationContract`, `DataContract`, `DataMember`, and `FaultContract` attributes do
@@ -35,12 +35,12 @@ Before you read a single contract, use the full setup: keep your repository inst
 4. **Catalog all fault conditions.** `ServiceFault` is the only fault type, but the `ErrorCode` field distinguishes them. For each service operation:
    - List all `ErrorCode` values that can be returned
    - Document the exact condition that triggers each code
-   - Decide what HTTP status code each should map to in a REST API -- write down your reasoning
+   - Choose and justify an HTTP status code for each fault in the REST API
 
 5. **Trace three workflows end-to-end.** Pick three operations and trace from the caller through the service implementation to the data store:
    - A `Deposit` with sufficient funds
    - A `Withdraw` that triggers `INSUFFICIENT_FUNDS`
-   - A `GetAmortizationSchedule` -- trace the calculation and verify the formula
+   - A `GetAmortizationSchedule`, including the calculation and formula
 
 6. **Identify technical debt.** The service implementations contain intentional legacy patterns and bugs (some documented in `docs/system-context.md`, some not). Find and document:
    - Validation gaps
@@ -50,7 +50,7 @@ Before you read a single contract, use the full setup: keep your repository inst
    - Hardcoded values that should be configurable
    - Missing error handling
 
-7. **Write a service inventory document.** Create `docs/service-inventory.md` in the challenge folder with:
+7. Create `docs/service-inventory.md` in the challenge folder with:
    - All three service contracts, all operations, all data contracts
    - Fault catalog: each `ErrorCode`, when it occurs, proposed HTTP mapping
    - Business rules discovered in the implementations

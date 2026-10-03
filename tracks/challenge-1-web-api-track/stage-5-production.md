@@ -24,7 +24,7 @@ Prepare the API for production deployment.
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot generates OpenAPI specs, logging middleware, and test boilerplate efficiently. But calibrating load test thresholds, designing graceful shutdown sequences, and ensuring the spec accurately reflects your API (not a generic template) require manual verification and tuning.
+Copilot can draft OpenAPI specs, logging middleware, and tests. Verify the load test thresholds and shutdown behavior. Check that the spec describes your API.
 
 ---
 

@@ -1,4 +1,4 @@
-# Stage 3: Handle Field Failures
+# Stage 3: Handle field failures
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 75-90 min
 
@@ -45,7 +45,7 @@ adding broad mobile advice.
 - One UI review improves sync or recovery feedback without changing queue behavior
 - Web evidence is labeled as web evidence; outstanding native checks remain explicit
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can scaffold Expo permission adapters and accessibility properties. It
 cannot decide whether a dispatcher update should beat a technician's offline

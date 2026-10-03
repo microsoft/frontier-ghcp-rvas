@@ -1,9 +1,9 @@
-# Work IQ Preflight Checklist
+# Work IQ preflight checklist
 
 Complete this checklist before starting. The workflow uses live Microsoft 365
 data, so a local devcontainer alone is not enough.
 
-## Tenant and Billing
+## Tenant and billing
 
 - [ ] The Microsoft Entra tenant is enabled for Work IQ.
 - [ ] A Copilot Studio usage-based billing plan is connected to an Azure
@@ -11,7 +11,7 @@ data, so a local devcontainer alone is not enough.
 - [ ] The participant is assigned to that billing plan.
 - [ ] An administrator has granted consent for the Work IQ application.
 
-## Participant Access
+## Participant access
 
 - [ ] The participant has a Microsoft 365 account in the enabled tenant.
 - [ ] The participant can access the project emails, meetings, Teams messages,
@@ -20,14 +20,14 @@ data, so a local devcontainer alone is not enough.
 - [ ] The participant can complete Microsoft Entra sign-in in a browser from
   their development environment.
 
-## Device and Network
+## Device and network
 
 - [ ] Node.js is available.
 - [ ] The device uses a supported Windows, Linux, macOS, or WSL environment.
 - [ ] The network allows access to Microsoft Entra authentication and the Work
   IQ service endpoint.
 
-## Data Safety
+## Data safety
 
 - [ ] The delivery lead has named the project scope and time range.
 - [ ] The group has agreed where the reviewed handoff may be stored.
@@ -36,5 +36,5 @@ data, so a local devcontainer alone is not enough.
 - [ ] The group has chosen a reviewer who approves the handoff before any
   write action is attempted.
 
-If a Tenant and Billing or Participant Access item is incomplete, stop here.
+If a Tenant and billing or Participant access item is incomplete, stop here.
 Work with the tenant administrator before scheduling the challenge.

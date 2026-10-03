@@ -1,4 +1,4 @@
-# Stage 4: Sequence the Transition
+# Stage 4: Sequence the transition
 
 **Duration:** 60-75 minutes
 
@@ -6,11 +6,11 @@
 
 ## Objective
 
-Turn the target into a path that the merged company can fund and operate. Show how authority, user experience, and integration paths change between now and the target.
+Plan how the merged company will reach the target architecture. Show how authority, user experience, and integration paths change at each stage.
 
 ## Tasks
 
-1. **Copy the roadmap template.** Create `deliverables/migration-roadmap.md`.
+1. Copy the roadmap template to `deliverables/migration-roadmap.md`.
 
 2. **Define transition states.** Include the current state, at least two intermediate states, and the target. For each state, name:
    - customer or staff experience
@@ -24,11 +24,11 @@ Turn the target into a path that the merged company can fund and operate. Show h
 
 4. **Respect organizational constraints.** Account for the HPC holiday freeze, NMN month-end protection, six-person architecture and engineering team, separate source-system teams, and the first combined financial close.
 
-5. **Plan dual running.** State where two paths or stores operate together, how results reconcile, who investigates differences, and when dual running ends.
+5. State where two paths or stores operate together, how results reconcile, who investigates differences, and when dual running ends.
 
 6. **Plan retirement evidence.** A source or integration path can retire only after recovery drills, contract adoption, observability coverage, data reconciliation, and business acceptance meet named thresholds.
 
-7. **Build the risk register.** Include risks from customer matching, authorization, schema drift, duplicate events, stale reads, reporting corrections, regional data handling, source-team capacity, and cutover timing.
+7. Add risks from customer matching, authorization, schema drift, duplicate events, stale reads, reporting corrections, regional data handling, source-team capacity, and cutover timing to the risk register.
 
 8. **Run the Transition Risk skill.** Apply it to each wave. Reject any wave without independent rollback or measurable exit conditions. Refine the skill if it checks task completion but misses business continuity.
 
@@ -43,7 +43,7 @@ cd challenges/challenge-23-merger-architecture
 
 Fix structural findings. Then perform a human review for architectural coherence, because a script cannot determine whether a boundary or migration choice is responsible.
 
-## Required Output
+## Required output
 
 Complete `deliverables/migration-roadmap.md` and make any final consistency updates to the other artifacts.
 

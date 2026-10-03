@@ -1,24 +1,23 @@
-# Challenge 24 Track: Peak-Load Database Rescue
+# Challenge 24 track: Peak-load database rescue
 
 **Duration:** 4-6 hours
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** Diagnosing a SQL Server 2022 workload, reducing measured query cost,
-and shipping an Azure SQL-compatible schema change without breaking active
+**Focus:** Diagnose a SQL Server 2022 workload, reduce measured query cost,
+and ship an Azure SQL-compatible schema change without breaking active
 readers or writers
 
-## Who Is This For
+## Who is this for
 
 - Database administrators responsible for SQL Server or Azure SQL
 - Database reliability engineers who investigate load-related incidents
 - Senior data platform engineers who review indexing and migration safety
 - Operations engineers who need useful database evidence and recovery steps
 
-This is a database rescue, not an application rewrite. The transaction model
-and query result contracts stay in place. Your job is to make the database
-behave predictably under load and leave the next on-call DBA with enough
-evidence to operate it.
+Keep the transaction model and query result contracts unchanged. Make the
+database behave predictably under load, and leave enough evidence for the
+next on-call DBA to operate it.
 
 ## Prerequisites
 
@@ -35,7 +34,7 @@ evidence to operate it.
 > authoritative T-SQL artifact, validates evidence fixtures, and runs the
 > verifier tests without starting a database.
 
-## Technology Stack
+## Technology stack
 
 - **SQL Server 2022 Developer** -- optional local runtime in Docker
 - **Azure SQL Database** -- optional compatibility and deployment target
@@ -44,13 +43,13 @@ evidence to operate it.
 - **Python 3.12** -- artifact and evidence consistency checks
 - **VS Code SQL Server extension** -- query execution and plan inspection
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first. Draft your own
 repository instructions, custom agents, and custom skills before tuning the
 workload.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Work in
 [`challenges/challenge-24-database-rescue/`](../challenges/challenge-24-database-rescue/).
@@ -91,7 +90,7 @@ docker compose down
 Keep the work local through the first three stages. Azure SQL validation is an
 optional final check, not a prerequisite.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should capture stable database rules:
 
@@ -110,7 +109,7 @@ Your `.github/copilot-instructions.md` should capture stable database rules:
 Write the rules in your own words. They should guide review without prescribing
 the answer.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 - **Query Plan Reviewer** -- Reviews one query, its plan, and before/after
   measurements. It should identify likely causes and challenge unsupported
@@ -124,7 +123,7 @@ the answer.
   over during peak load. It should flag missing thresholds, vague stop
   conditions, and recovery steps that depend on the original author.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 - **Query Evidence Loop** -- Repeats the same controlled cycle for one query:
   establish conditions, capture reads and timing, inspect the plan, change one
@@ -138,7 +137,7 @@ the answer.
   index usage, and migration progress evidence in a fixed order while avoiding
   expensive monitoring queries during an incident.
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Give Copilot the query, plan, and measurements together. A query without its
   evidence invites generic indexing advice.

@@ -22,7 +22,7 @@
      github:
    ```
 
-   In the Markdown body, describe what "simplification" means for your CityPulse codebase -- which directories to focus on, what language the backend uses, and any patterns to preserve.
+   Describe the source directories, backend language, and patterns to preserve in the workflow body. Define what counts as a useful simplification for CityPulse.
 
 2. **Create a test improver workflow** -- Write a workflow that runs daily, assesses test coverage, identifies under-tested areas of the backend, and opens a PR adding meaningful tests. Reference the [Daily Test Improver](https://github.com/githubnext/agentics/blob/main/docs/daily-test-improver.md).
 

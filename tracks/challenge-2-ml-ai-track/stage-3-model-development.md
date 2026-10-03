@@ -19,7 +19,7 @@ If your data science agent or notebook skill falls back to generic accuracy inst
 - 4+ models trained using Pipeline objects
 - Cross-validation scores include mean and std dev
 - Hyperparameter tuning documents search space and best params
-- Custom cost-sensitive scorer is used in tuning (not just standard accuracy)
+- Tuning uses the custom cost-sensitive scorer rather than standard accuracy
 
 ---
 

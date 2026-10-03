@@ -11,7 +11,7 @@
 
 Stages 1 and 2 are the core. Stage 3 requires an Atlassian Cloud account. Stage 4 tests the backlog skill on all three specs.
 
-> **Short on time?** Focus on Stages 1 and 2 with just the Password Reset spec. A working spec-to-backlog skill and a refinement agent are the most valuable deliverables.
+> **Short on time?** Complete Stages 1 and 2 with the Password Reset spec to build and test the conversion skill and refinement agent.
 
 ---
 

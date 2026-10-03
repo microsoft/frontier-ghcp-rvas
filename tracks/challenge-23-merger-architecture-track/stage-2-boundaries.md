@@ -1,4 +1,4 @@
-# Stage 2: Choose Boundaries and Patterns
+# Stage 2: Choose boundaries and patterns
 
 **Duration:** 60-75 minutes
 
@@ -42,7 +42,7 @@ Turn the current-state map into target boundaries. Compare realistic integration
 
 9. **Identify ADR candidates.** Pick three or four decisions that would be expensive or confusing to reverse. Good candidates have competing options and evidence on both sides.
 
-## Required Output
+## Required output
 
 Update the capability map and context diagram. Add a short pattern comparison section to the capability map or a clearly linked companion section in the same file.
 

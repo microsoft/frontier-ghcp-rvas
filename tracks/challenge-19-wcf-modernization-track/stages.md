@@ -1,4 +1,4 @@
-# Legacy WCF Banking Modernization: Stages
+# Legacy WCF banking modernization: Stages
 
 ## Stages
 
@@ -9,9 +9,9 @@
 | 3 | [REST API Migration](stage-3-migration.md) | 2-3 hours | Build an ASP.NET Core Web API that replaces each WCF service operation |
 | 4 | [Integration and Hardening](stage-4-hardening.md) | 1-2 hours | Wire up tests against the REST API, fix gaps, add Swagger, write migration notes |
 
-Each stage builds on the previous. Stage 1 is not optional -- if you do not understand the contracts and faults going in, Stage 3 will produce a broken API that silently drops business rules.
+Complete Stage 1 before migration. Use its contract and fault inventory to check that Stage 3 preserves the service's business rules.
 
-> **Short on time?** Focus on Stages 1 and 3. Translate `AccountService` only -- skip `LoanService` and `TransactionService`. Run manual REST tests instead of Stage 4's full test suite.
+> **Short on time?** Focus on Stages 1 and 3. Translate only `AccountService`, skipping `LoanService` and `TransactionService`. Run manual REST tests instead of Stage 4's full test suite.
 
 ---
 

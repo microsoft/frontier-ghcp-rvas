@@ -1,4 +1,4 @@
-# Stage 3: Build Enforceable Guardrails
+# Stage 3: Build enforceable guardrails
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 90-105 min
 
@@ -37,7 +37,7 @@ runtime controls consistently.
    `npm test`. Optional: import the policies into a non-production Azure API
    Management instance after all local checks pass.
 
-At the midpoint, refine the customization trio. Tighten repository instructions
+At the midpoint, refine your customizations. Tighten repository instructions
 where they allowed ambiguous generated artifacts. Update the APIM Policy
 Reviewer with the failure modes you found. Change the Policy Validation skill
 so it runs your approved rules and policy paths, not only the starter checks.
@@ -54,7 +54,7 @@ so it runs your approved rules and policy paths, not only the starter checks.
   standard
 - Mock smoke tests still pass, proving the source services were not rebuilt
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot is good at turning a precise rule into a parser check and explaining
 APIM policy syntax. You still need to review false positives, policy execution

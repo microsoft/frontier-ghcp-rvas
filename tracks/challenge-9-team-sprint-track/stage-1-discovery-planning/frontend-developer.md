@@ -4,7 +4,7 @@
 
 ## Tasks
 
-Plan to actually use the ui-builder agent for the component-structure judgment calls it's meant for, not just to check the box of creating it.
+Use your ui-builder agent to review component structure.
 
 1. **Set up the frontend project** -- Choose a framework (React + Vite recommended). Scaffold the project:
    - Initialize with `npm create vite@latest` (or equivalent)
@@ -12,7 +12,7 @@ Plan to actually use the ui-builder agent for the component-structure judgment c
    - Create a basic layout component (header, sidebar, main content area)
    - Add a placeholder home page
 
-2. **Review the Spark handover repo** -- The PO exported the GitHub Spark prototype into a repository. Clone it and study the generated code. This repo is the contract -- it defines the screens, data model, and user flows the team agreed to build. Decide what to keep as-is, what to adapt into your chosen framework, and what to rewrite from scratch. Use the Spark-generated components as a visual and structural reference, not necessarily as production code.
+2. Clone the Spark handover repo and study the generated code. It defines the agreed screens, data model, and user flows. Decide which components to keep, adapt, or rewrite for your chosen framework. Treat the export as a visual and structural reference; you do not have to use its code in production.
 
 3. **Write custom instructions** -- Add frontend context to `.github/copilot-instructions.md`: framework, component patterns, styling approach (Tailwind, CSS modules, etc.).
 

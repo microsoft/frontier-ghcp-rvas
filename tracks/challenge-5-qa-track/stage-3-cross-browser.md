@@ -14,11 +14,11 @@ Login tests are passing. Now expand coverage to the core shopping flow and run t
    - "Write a Playwright test that logs in, browses the catalog, adds a product to the basket, then verifies the basket shows the correct item and quantity."
    Review the generated test. Does it follow a realistic user flow? Adjust prompts and regenerate if needed.
 
-3. **Run across browsers**: The `playwright.config.ts` already includes Chromium, Firefox, and WebKit. Run `npx playwright test` -- it will execute on all browsers. If tests fail on some browsers but not others, paste the error into Copilot Chat and ask for help diagnosing browser-specific issues.
+3. Run `npx playwright test` on Chromium, Firefox, and WebKit, which are already configured in `playwright.config.ts`. Give Copilot any browser-specific errors and ask it to help diagnose them.
 
-4. **Mobile viewport testing**: Run tests against the Pixel 5 mobile profile (already configured in `playwright.config.ts`). At this viewport width the product grid reflows and filter links stack vertically. Ask Copilot to help you write assertions that verify the catalog still renders products and that filter links remain interactive at mobile sizes. If any test relies on hover behavior, it will break on a touch device profile -- ask Copilot how to handle that difference.
+4. Run tests on the Pixel 5 profile in `playwright.config.ts`. The product grid reflows and filter links stack vertically at this width. Ask Copilot to draft assertions that verify products render and filters remain interactive. Review tests that depend on hover and adapt them for touch input.
 
-5. **Screenshot comparison**: Ask Copilot to add screenshot capture to key test steps (catalog page, basket page). Save them to a `screenshots/` directory. Compare screenshots across browsers manually -- note any layout differences.
+5. Ask Copilot to capture the catalog and basket pages during tests. Save the images to `screenshots/` and compare layouts across browsers.
 
 If your Playwright agent or selector skill produces generic page objects, mismatched selectors, or assertions that miss mobile quirks, revise that customization before the cross-browser run.
 
@@ -32,7 +32,7 @@ If your Playwright agent or selector skill produces generic page objects, mismat
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot generates page objects and browser configuration well. But when a test passes on Chromium and fails on WebKit, diagnosing the root cause (timing, rendering, event handling) takes testing experience. Copilot can suggest fixes, but you need to verify they actually solve the problem rather than just masking it.
+Copilot can draft page objects and browser configuration. For browser-specific failures, check timing, rendering, and event handling. Verify that each fix resolves the cause rather than hiding the failure.
 
 ---
 

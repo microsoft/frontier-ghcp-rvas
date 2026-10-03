@@ -1,4 +1,4 @@
-# Stage 2: Set the Platform Standard
+# Stage 2: Set the platform standard
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 75-90 min
 
@@ -41,7 +41,7 @@ compatibility effect are clear.
 - Each breaking proposal includes a consumer migration obligation
 - The documents make clear that product teams still own implementation
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can find gaps between the documents and flag inconsistent wording. It
 cannot decide the support window your organization can honor or which

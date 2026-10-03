@@ -10,7 +10,7 @@
 | 4 | [Class Imbalance and Interpretability](stage-4-class-imbalance.md) | ⭐⭐⭐ | 60-90 min | Imbalance comparison table, SHAP analysis, business recommendations |
 | 5 | [Deployment Pipeline and Monitoring](stage-5-deployment.md) | ⭐⭐⭐ | 60-90 min | Prediction API, drift detection, model card |
 
-The dataset is intentionally messy. Copilot can generate pandas and scikit-learn code efficiently, but discovering subtle data quality issues, interpreting SHAP values for business decisions, and building drift detection require your analytical judgment.
+The dataset is intentionally messy. Use Copilot to draft pandas and scikit-learn code, then check the cleaning results, SHAP interpretations, and drift detection.
 
 > **Short on time?** Skip hypothesis testing in Stage 2, train 3 models instead of 4 in Stage 3, do only SHAP analysis in Stage 4, and skip the API + drift detection in Stage 5.
 

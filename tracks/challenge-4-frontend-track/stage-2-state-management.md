@@ -6,7 +6,7 @@ Replace static data with real state management. Users must be able to create, ed
 
 ## Tasks
 
-1. Implement state management using Context API with `useReducer`. All task state goes through a single reducer -- no scattered `useState` calls for task data.
+1. Implement state management using Context API with `useReducer`. Keep all task state in a single reducer rather than separate `useState` calls.
 2. Task CRUD: create, edit, and delete with confirmation dialogs on destructive actions.
 3. Form validation: title required (3-100 characters), due date must be in the future, description max 500 characters. Show validation errors inline.
 4. Show local changes immediately. Add API failure handling when you connect the mocked backend in Stage 5.

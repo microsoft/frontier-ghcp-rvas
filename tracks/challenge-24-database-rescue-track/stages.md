@@ -1,4 +1,4 @@
-# Peak-Load Database Rescue: Stages
+# Peak-load database rescue: Stages
 
 ## Stages
 
@@ -9,7 +9,7 @@
 | 3 | [Design and Test the Compatible Migration](stage-3-compatible-migration.md) | ⭐⭐⭐ | 70-90 min | Expand, bounded backfill, compatibility tests, reconciliation, and gated contract plan |
 | 4 | [Package Operations and Recovery](stage-4-operations-and-recovery.md) | ⭐⭐⭐ | 55-70 min | Rollback, monitoring queries, final reconciliation, and an operations runbook |
 
-The sequence is deliberate. First make the failure repeatable. Then tune what
+First make the failure repeatable. Then tune what
 the evidence supports. Only after the workload is stable should you rehearse
 the schema change and package it for another DBA to operate.
 

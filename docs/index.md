@@ -1,24 +1,24 @@
 # Documentation
 
-Reference material for GitHub Copilot Adoption. Start here, then jump into a track.
+Use these guides during setup and challenge work.
 
 ## Guides
 
-- [GitHub Copilot Guide](./copilot-guide.md) -- what Copilot is, agents, tools, and context mentions.
-- [Prompt Engineering Guide](./prompt-engineering.md) -- how to write effective prompts for Agent mode.
-- [MCP Servers Guide](./mcp-servers.md) -- extend Copilot with external tools and data through Model Context Protocol servers.
-- [Troubleshooting Guide](./TROUBLESHOOTING.md) -- common issues and fixes.
+- [GitHub Copilot guide](./copilot-guide.md) explains agents, tools, and context mentions.
+- [Prompt engineering guide](./prompt-engineering.md) covers requests for Agent mode.
+- [MCP servers guide](./mcp-servers.md) covers external tools and data.
+- [Troubleshooting guide](./TROUBLESHOOTING.md) covers common failures.
 
-## Pick a Track
+## Pick a track
 
-- [Tracks overview](../tracks/README.md) -- all role-based tracks and how to choose one.
-- [Getting started](../tracks/getting-started.md) -- shared setup: clean start, custom instructions, and agents.
-- [Challenges](../challenges/) -- starter code for every challenge.
+- [Tracks overview](../tracks/README.md) groups challenges by role and outcome.
+- [Getting started](../tracks/getting-started.md) covers shared setup and the Customization Trio.
+- [Challenges](../challenges/) contains the starter code.
 
 ## Project
 
-- [Repository home](../README.md) -- overview, challenge catalog, and learning paths.
-- [Facilitator Guide](../FACILITATOR_GUIDE.md) -- running the event.
+- [Repository home](../README.md) lists challenges and learning paths.
+- [Facilitator guide](../FACILITATOR_GUIDE.md) covers session preparation and delivery.
 
 ---
 

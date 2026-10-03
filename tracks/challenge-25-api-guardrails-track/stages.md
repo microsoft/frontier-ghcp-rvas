@@ -1,4 +1,4 @@
-# Enterprise API Guardrails: Stages
+# Enterprise API guardrails: Stages
 
 ## Stages
 

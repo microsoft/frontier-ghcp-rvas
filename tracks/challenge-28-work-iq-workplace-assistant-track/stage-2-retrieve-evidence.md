@@ -1,4 +1,4 @@
-# Stage 2: Retrieve Evidence and Map the Handoff
+# Stage 2: Retrieve evidence and map the handoff
 
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
@@ -25,7 +25,7 @@
 - Contradictory information and missing fields remain visible
 - The evidence review identifies no unsupported factual claims
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can group related evidence and spot recurring topics. You decide which
 sources belong in scope, whether the support is good enough, and when to stop.

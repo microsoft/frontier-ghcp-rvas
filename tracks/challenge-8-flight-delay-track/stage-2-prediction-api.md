@@ -43,14 +43,14 @@ If your API agent or wiring skill produces a generic endpoint contract with wron
 ## Getting Started
 
 1. Navigate to `challenges/challenge-8-flight-delay/server/`.
-2. Open `app.py` -- it contains a description of what to build.
+2. Read the requirements in `app.py`.
 3. Copy your `model.pkl` and `airports.csv` (from Stage 1) into the `server/` folder.
 4. Install dependencies: `pip install -r requirements.txt`.
 5. Use Copilot to implement the endpoints.
 
 ## Copilot Tips for This Stage
 
-- Start the file with a multi-line comment describing your API -- Copilot uses this to generate endpoint code.
+- Describe the API in a multi-line comment before asking Copilot to generate endpoints.
 - Ask Copilot: *"Create a Flask API that loads a scikit-learn model and serves predictions"*.
 - Use Agent Mode for scaffolding, then refine individual endpoints.
 - Ask Copilot to add Swagger/OpenAPI documentation if using FastAPI.

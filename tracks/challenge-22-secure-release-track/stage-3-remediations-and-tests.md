@@ -1,4 +1,4 @@
-# Stage 3: Targeted Remediations and Security Tests
+# Stage 3: Targeted remediations and security tests
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 90-110 min
 
@@ -38,7 +38,7 @@ it does not keep a clear failing-test-to-fix evidence chain.
 - The package audit result is captured and interpreted
 - `deliverables/remediation-and-tests.md` links findings to tests and changes
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can draft policies, validators, and tests. You decide whether the
 control belongs at authentication, role, resource, or domain level. Keep each

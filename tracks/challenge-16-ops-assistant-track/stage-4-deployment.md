@@ -1,8 +1,8 @@
-# Stage 4: Deployment Automation
+# Stage 4: Deployment automation
 
 **Duration:** 1.5-2 hours
 
-**Focus:** Generating deployment checklists and post-deploy smoke tests
+**Focus:** Generate deployment checklists and post-deploy smoke tests
 
 ## Tasks
 

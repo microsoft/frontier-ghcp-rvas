@@ -3,9 +3,9 @@
 **Duration:** 60 minutes for the core; role-page estimates cover the extended backlog
 **Focus:** Read the specification, create a technical spec, set up tooling, break work into Issues, plan Sprint 1
 
-This stage replaces the product discovery step found in other team tracks. The functional specification is already written -- your job is to turn it into a technical plan and get everything ready to build.
+Turn the provided functional specification into a technical plan and set up the development environment.
 
-Before role setup begins, make sure the team's shared `.github/copilot-instructions.md` actually captures the TrailMate context everyone needs, and agree on one shared custom skill, like the spec-to-issues or sprint board sync sequence, so backlog creation and handoffs stay consistent across roles instead of everyone building their own process.
+Before setup, check that `.github/copilot-instructions.md` describes TrailMate for all roles. Agree on one shared skill, such as spec-to-issues or sprint board sync, to keep handoffs consistent.
 
 ## Jump to Your Role
 
@@ -24,7 +24,7 @@ Everyone reads the functional specification together:
 
 1. Open `challenges/challenge-10-tech-sprint/docs/functional-spec.md`
 2. Read through the entire document as a team (10 minutes)
-3. Discuss any questions or ambiguities -- resolve them now, not mid-sprint
+3. Resolve questions or ambiguities before the sprint
 4. Assign one person to fill in `challenges/challenge-10-tech-sprint/docs/technical-spec-template.md` during Stage 1, with contributions from everyone
 
 ## Creating the Backlog
@@ -36,7 +36,7 @@ Since there is no Product Owner, the team creates the GitHub Issues together. Du
 3. Label each Issue with its epic, priority, and size
 4. The team reviews the Issues together and resolves any overlaps or gaps
 
-Use Copilot to speed this up -- paste the functional spec into chat and ask it to generate user stories for each epic, and use GitHub MCP Server to automatically create the Issues.
+Ask Copilot to draft user stories from the functional spec. Use GitHub MCP Server to create the Issues.
 
 ## Sync Point: Sprint Planning Meeting (at ~1:00)
 
@@ -44,7 +44,7 @@ At the 1-hour mark, everyone pauses setup and joins a 30-minute planning session
 
 1. Walk through the GitHub Project board and review the Issues (10 min)
 2. Each role picks their Sprint 1 stories (10 min)
-3. Resolve blockers and dependencies -- for example, the frontend needs the API spec, QA needs seed data (5 min)
+3. Resolve blockers and dependencies, such as the frontend's API spec and QA's seed data (5 min)
 4. Agree on a mid-sprint standup time (5 min)
 
 After planning, everyone should have clear tasks and an unblocked path into Sprint 1.

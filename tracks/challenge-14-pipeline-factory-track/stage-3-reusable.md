@@ -19,7 +19,7 @@
    - Environment parameter (staging, production)
    - Environment-specific secrets passed as inputs
    - Health check URL to validate after deployment
-   - Automatic rollback if the health check fails (conceptual -- use workflow conditions)
+   - Conceptual automatic rollback on health check failure, expressed through workflow conditions
 
 4. **Refactor your Stage 1 workflows.** Update `ci.yml` and `build.yml` to call the reusable workflows instead of duplicating steps. Verify they still work the same way.
 

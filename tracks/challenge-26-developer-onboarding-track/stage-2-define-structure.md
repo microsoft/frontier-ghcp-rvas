@@ -1,4 +1,4 @@
-# Stage 2: Define Audience, Structure, and Language
+# Stage 2: Define audience, structure, and language
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
@@ -34,7 +34,7 @@ that fits on one page is better than a broad guide nobody can test.
   documented
 - High-priority inventory items have destinations and acceptance criteria
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can find inconsistent terms and compare the proposed tree with common
 documentation patterns. You decide the audience boundaries, where conceptual

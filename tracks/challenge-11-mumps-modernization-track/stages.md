@@ -9,7 +9,7 @@
 | 3 | [Feature Evolution](stage-3-evolution.md) | 1.5-2 hours | Extend the system with new features (in MUMPS or target language) |
 | 4 | [Language Translation](stage-4-translation.md) | 2.5-3 hours | Translate the full system to your chosen modern language |
 
-Each stage builds on the previous. The archaeology stage is critical -- if you skip understanding the code, the translation stage will produce a broken system.
+Complete the stages in order. Document the original behavior before translating it.
 
 > **Short on time?** Focus on Stages 1 and 4. Translate the core transaction module (BNKTXN) and account module (BNKACCT) rather than the full system. Skip Stage 3 entirely.
 

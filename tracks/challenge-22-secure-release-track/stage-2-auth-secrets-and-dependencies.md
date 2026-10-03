@@ -1,4 +1,4 @@
-# Stage 2: Identity, Secrets, and Dependencies
+# Stage 2: Identity, secrets, and dependencies
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 70-85 min
 
@@ -39,7 +39,7 @@ serious than others.
 - Secret review uses only the synthetic starter value
 - Priorities explain why one finding ranks above another
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot is good at locating route policies and tracing configuration reads. It
 can also overstate scanner output. You own severity, reachability, confidence,

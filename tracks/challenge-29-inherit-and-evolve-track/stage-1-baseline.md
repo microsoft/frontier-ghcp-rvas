@@ -1,4 +1,4 @@
-# Stage 1: Establish the Baseline
+# Stage 1: Establish the baseline
 
 **Difficulty:** ⭐⭐ | **Time:** 30 min
 
@@ -46,7 +46,7 @@ The local database is
 challenge folder. `Booking__DatabasePath` overrides that location; relative
 override paths resolve against the web project's content root.
 
-### Seeded Lab Data
+### Seeded lab data
 
 The UI defaults to October 10 through October 12, 2030, regardless of the
 current date. The thermal camera has a reservation for that range. The laser
@@ -57,7 +57,7 @@ meter starts under maintenance.
 The employee choices are Alex Morgan, Sam Rivera, and Taylor Chen. These are
 synthetic identities, not authenticated users.
 
-### Optional Docker Run
+### Optional Docker run
 
 Use a **host terminal** outside the devcontainer for the simplest Docker path.
 It needs a running Docker daemon. Stop any web process on port 5080, then run
@@ -101,7 +101,7 @@ your development environment.
 deliberately present, and the starter checks are not a waitlist acceptance
 suite.
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can explain launch output and help find entry points. You decide
 whether a failure comes from setup or the application. Keep what you observed

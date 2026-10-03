@@ -1,4 +1,4 @@
-# Stage 3: Make the Architecture Reviewable
+# Stage 3: Make the architecture reviewable
 
 **Duration:** 90-105 minutes
 
@@ -43,7 +43,7 @@ Produce enough architecture detail for security, operations, delivery, and sourc
 
 9. **Run the validator.** It may still fail because the roadmap is incomplete, but the Mermaid, ADR, and contract findings for this stage should be clear.
 
-## Required Output
+## Required output
 
 - `deliverables/architecture-context.mmd`
 - `deliverables/architecture-containers.mmd`

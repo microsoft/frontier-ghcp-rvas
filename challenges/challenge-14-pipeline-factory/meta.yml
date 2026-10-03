@@ -5,7 +5,7 @@ category: workflow-automation
 difficulty: intermediate
 duration_minutes: 420
 description: Build CI/CD pipelines from scratch, standardize deployment processes, and debug broken builds with GitHub Copilot.
-focus: Building CI/CD pipelines from scratch, standardizing build and deploy processes, debugging broken deployments, and generating incident runbooks -- all with Copilot
+focus: Use Copilot to build CI/CD pipelines, standardize build and deploy processes, debug deployments, and write incident runbooks
 tags:
   - workflow-automation
   - advanced

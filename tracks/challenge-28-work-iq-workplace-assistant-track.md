@@ -1,13 +1,13 @@
-# Challenge 28 Track: Work IQ Workplace Assistant
+# Challenge 28 track: Work IQ workplace assistant
 
 **Duration:** 4-6 hours
 
 **Difficulty:** ⭐⭐ to ⭐⭐⭐
 
-**Focus:** Turning approved Microsoft 365 project context into a reviewed
+**Focus:** Turn approved Microsoft 365 project context into a reviewed
 handoff with Microsoft Work IQ and GitHub Copilot CLI
 
-## Who Is This For
+## Who is this for
 
 - Delivery leads trying to get a straight answer on decisions and follow-up work
 - Technical leads who piece together meetings, messages, and documents
@@ -37,7 +37,7 @@ Complete the
 before the session. Missing tenant enablement, billing, or consent means the
 session should wait for the tenant administrator.
 
-## Technology Stack
+## Technology stack
 
 - **Microsoft Work IQ** -- permission-aware access to Microsoft 365 context
 - **GitHub Copilot CLI** -- the MCP client used to retrieve and reason over
@@ -47,7 +47,7 @@ session should wait for the tenant administrator.
   and documents
 - **Markdown** -- the reviewed project handoff and action register
 
-## What You Are Building
+## What you are building
 
 Pick one project and one recent time range. Retrieve the context that answers a
 real delivery question, then turn it into an action register backed by sources.
@@ -58,12 +58,12 @@ Keep the workflow read-only until someone has reviewed the result. Sending a
 message, creating a task, changing a document, or updating a calendar comes
 later, if the team decides it is worth doing.
 
-## Getting Started
+## Getting started
 
-Start with the [common setup steps](getting-started.md). Define the
-Customization Trio before connecting Work IQ to project data.
+Start with the [common setup steps](getting-started.md). Define repository
+instructions, agents, and skills before connecting Work IQ to project data.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Open
 [`challenges/challenge-28-work-iq-workplace-assistant/`](../challenges/challenge-28-work-iq-workplace-assistant/).
@@ -80,7 +80,7 @@ Microsoft Entra ID, and check that the Work IQ MCP server is available before
 Stage 1. Use the current Microsoft Learn guidance. Never commit local
 authentication or MCP configuration.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should cover:
 
@@ -94,7 +94,7 @@ The administrator owns tenant-wide policy and access decisions. Keep repository
 instructions to stable workflow boundaries. Do not put credentials or personal
 data there.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 - **Evidence Reviewer Agent** -- Reads a draft handoff and finds claims without
   a source, unsupported owners, invented dates, and blurred lines between facts
@@ -105,7 +105,7 @@ data there.
   register without filling holes with assumptions. Use it after the scope and
   evidence reviews.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 - **Scoped Workplace Retrieval Skill** -- Captures the project boundary, time
   range, sources, and intended output before retrieval starts. Run it first.
@@ -121,7 +121,7 @@ Use the shared
 to study patterns, then write customizations for this challenge. A generic
 workplace prompt or agent is not ready for a production workflow.
 
-## Required Participant Artifacts
+## Required participant artifacts
 
 By the end of the challenge, the repository should contain:
 
@@ -132,7 +132,7 @@ By the end of the challenge, the repository should contain:
 - A short delivery handoff that labels facts, inferences, and gaps
 - A review record for the output before any write action
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Start with one project, a recent time range, and one source. Add another
   source only when you can name the gap it fills.

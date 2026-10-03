@@ -1,11 +1,11 @@
 id: challenge-26
 number: 26
-title: Developer Onboarding Repair
+title: Developer onboarding repair
 category: workflow-automation
 difficulty: intermediate
 duration_minutes: 300
 description: Repair fragmented developer documentation so a new reader can complete real CLI and SDK onboarding tasks.
-focus: Testing reader journeys, rebuilding information architecture, correcting task documentation, and adding lightweight editorial checks with GitHub Copilot
+focus: Test onboarding tasks, resolve audience and terminology conflicts, verify examples against the software, and add editorial checks
 tags:
   - developer-experience
   - onboarding

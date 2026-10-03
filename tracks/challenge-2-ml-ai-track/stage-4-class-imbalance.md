@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-The dataset has class imbalance. Address it rigorously and explain your model to the business.
+Compare ways to handle class imbalance and explain the model's predictions to the business.
 
 ## Tasks
 
@@ -20,7 +20,7 @@ The dataset has class imbalance. Address it rigorously and explain your model to
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot generates SMOTE code, SHAP plot boilerplate, and metric comparison tables efficiently. But deciding which metric matters most for the business, interpreting SHAP dependence plots to find actionable patterns, and writing recommendations that a product team could act on require domain understanding.
+Copilot can generate SMOTE code, SHAP plots, and metric comparison tables. Choose the metric that fits the churn prediction business case. Interpret the plots and write recommendations the product team can act on.
 
 ---
 

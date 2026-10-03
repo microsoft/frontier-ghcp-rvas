@@ -1,4 +1,4 @@
-# BYOC Example Walkthrough
+# BYOC example walkthrough
 
 This walkthrough shows how a facilitator can use the BYOC kit with a team's
 real repository. It uses an internal task management API as the example, but it
@@ -7,8 +7,7 @@ does not provide finished customizations for participants to copy.
 ## Scenario
 
 The team owns a Node.js task API with no authentication, limited tests, and
-plain-text logs. They want to make a production deployment possible during a
-six-hour GitHub Copilot Adoption delivery session.
+plain-text logs. They have six hours to prepare it for production deployment.
 
 The outcome is to add authentication, raise test coverage, and introduce
 structured logging without changing the existing task schema.
@@ -29,7 +28,7 @@ The facilitator and repository owner record:
 These last three inputs are preparation notes. They are not Repository
 Instructions, a Custom Agent, or a Custom Skill.
 
-## 2. Decide Whether the Session Needs Challenge Pages
+## 2. Decide whether the session needs challenge pages
 
 This session can run directly from the Outcome Canvas because the work is
 limited to one repository and one day.
@@ -49,7 +48,7 @@ The facilitator turns the canvas notes into three short Design Briefs. Each
 brief states the intended outcome, audience, constraints, and quality bar. It
 does not contain a completed artifact or ready-to-paste wording.
 
-### Repository Instructions Brief
+### Repository Instructions brief
 
 The brief points participants toward stable facts they should verify in the
 repository:
@@ -63,7 +62,7 @@ repository:
 Participants decide what belongs in Repository Instructions after inspecting
 the actual files.
 
-### Custom Agent Brief
+### Custom Agent brief
 
 The brief identifies where specialist judgment matters:
 
@@ -75,7 +74,7 @@ The brief identifies where specialist judgment matters:
 Participants define the Custom Agent's responsibility and boundaries from the
 repository evidence they find.
 
-### Custom Skill Brief
+### Custom Skill brief
 
 The brief identifies one repeatable procedure, such as validating a protected
 API change from implementation through tests and operational evidence. It asks
@@ -93,14 +92,14 @@ does not prescribe its content.
 For mechanics and authoring resources, use the
 [shared getting started guide](../tracks/getting-started.md).
 
-## 4. Run the Session
+## 4. Run the session
 
-### Opening and Initial Drafting
+### Opening and initial drafting
 
 The facilitator states the outcome, reviews the acceptance criteria, and
 confirms that everyone can run the API and its tests.
 
-Participants then spend 20--30 minutes across the opening and the start of work
+Participants then spend 20-30 minutes across the opening and the start of work
 time on the Customization Trio:
 
 1. Inspect the repository areas named in the briefs.
@@ -110,7 +109,7 @@ time on the Customization Trio:
 
 This is part of the working session, not a separate submission exercise.
 
-### Work Time
+### Work time
 
 The team moves through four timeboxes:
 
@@ -123,11 +122,11 @@ Participants use Repository Instructions throughout the work. They use the
 Custom Agent when a decision needs specialist judgment and the Custom Skill
 when its Use Cue appears.
 
-At the midpoint, the facilitator gives a short reminder: refine the
-Customization Trio using what the repository and implementation work have
-revealed. There is no formal check, approval, or submission.
+At the midpoint, the facilitator asks participants to refine the
+Customization Trio based on what they have learned. This is a reminder, not
+a formal review or submission.
 
-### Demo and Outcome Review
+### Demo and outcome review
 
 The team demonstrates:
 
@@ -141,7 +140,7 @@ Repository Instructions, Custom Agents, and Custom Skills can be listed as
 reusable patterns produced during the work, but completing all three is not an
 acceptance criterion for the product outcome.
 
-## 5. Apply the Pattern to Another Repository
+## 5. Apply the pattern to another repository
 
 For the next BYOC session:
 

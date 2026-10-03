@@ -1,4 +1,4 @@
-# Stage 4: Pester Tests and Static Analysis
+# Stage 4: Pester tests and static analysis
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
@@ -17,9 +17,11 @@ The `tests/` folder has Pester scaffold files with empty `It` blocks. Fill them 
 - The test for the "unreachable machine" scenario returns `Status = 'Failed'` without throwing
 - `Invoke-ScriptAnalyzer -Path scripts/ -Severity Warning,Error` returns no results
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
-Copilot is good at generating Pester `Mock` setups -- but it cannot know which cmdlets your script actually calls deep inside `Invoke-Command` remote blocks. You need to read the script closely and mock the right things. Pay attention to the scope: mocks inside a `BeforeAll` block do not automatically apply inside `Invoke-Command` scriptblocks.
+Copilot can draft Pester `Mock` setups. Check which cmdlets the remote
+`Invoke-Command` blocks actually call and mock those dependencies. Mocks inside
+`BeforeAll` do not automatically apply inside `Invoke-Command` scriptblocks.
 
 ---
 

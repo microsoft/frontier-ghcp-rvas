@@ -1,4 +1,4 @@
-# Offline Field Service App: Stages
+# Offline field service app: Stages
 
 ## Stages
 
@@ -9,9 +9,8 @@
 | 3 | [Handle Field Failures](stage-3-handle-field-failures.md) | ⭐⭐⭐ | 75-90 min | Conflict policy, permission degraded modes, accessibility fixes, and failure handling |
 | 4 | [Prove Release Readiness](stage-4-prove-release-readiness.md) | ⭐⭐⭐ | 60-75 min | State and integration tests plus a completed release-readiness checklist |
 
-The stages follow the work rather than the screens. First trace where a field
-action can fail. Then make local data durable, decide what synchronization
-means, and finish with evidence that runs without an emulator.
+Trace where a field action can fail before changing persistence. Define
+synchronization behavior, then test it without an emulator.
 
 > **Short on time?** Complete Stages 1, 2, and the queue and conflict tests from
 > Stage 4. Do not skip durable local storage.

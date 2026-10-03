@@ -1,8 +1,8 @@
-# Stage 3: Code Generation
+# Stage 3: Code generation
 
 **Duration:** 2-2.5 hours
 
-**Focus:** Using Copilot to implement the billing module from the generated stories
+**Focus:** Use Copilot to implement the billing module from the generated stories
 
 ## Tasks
 

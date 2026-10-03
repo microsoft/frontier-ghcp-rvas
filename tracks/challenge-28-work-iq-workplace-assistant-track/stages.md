@@ -1,4 +1,4 @@
-# Work IQ Workplace Assistant: Stages
+# Work IQ workplace assistant: Stages
 
 ## Stages
 

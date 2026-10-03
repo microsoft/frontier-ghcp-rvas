@@ -1,12 +1,14 @@
-# Model Context Protocol (MCP) Servers
+# Model Context Protocol (MCP) servers
 
-Extend GitHub Copilot's capabilities by connecting it to external tools, data sources, and services through MCP servers.
+Connect Copilot to external tools and data through MCP servers.
 
 ## What is MCP?
 
-**Model Context Protocol (MCP)** is an open standard that enables AI assistants like GitHub Copilot to securely connect to external systems. MCP servers provide **tools** that Copilot can invoke during Agent mode to accomplish tasks.
+Model Context Protocol is an open standard for connecting AI assistants to
+external systems. MCP servers expose tools that Copilot can call in Agent mode.
+Review each server's permissions and data access before enabling it.
 
-## Why Use MCP?
+## Why use MCP?
 
 | Without MCP | With MCP |
 |-------------|----------|
@@ -18,9 +20,10 @@ Extend GitHub Copilot's capabilities by connecting it to external tools, data so
 
 ## MCP in VS Code
 
-MCP support is **generally available** in VS Code 1.102+. VS Code provides multiple ways to discover, install, and manage MCP servers.
+MCP support is generally available in VS Code 1.102+. You can install servers
+from the registry or configure them directly.
 
-### How MCP Works with Copilot
+### How MCP works with Copilot
 
 ```text
 ┌──────────────────┐
@@ -43,11 +46,11 @@ MCP support is **generally available** in VS Code 1.102+. VS Code provides multi
 
 ---
 
-## Installing MCP Servers
+## Installing MCP servers
 
-### Option 1: GitHub MCP Server Registry (Recommended)
+### Option 1: GitHub MCP server registry (recommended)
 
-VS Code integrates with the GitHub MCP server registry for easy discovery:
+Use the GitHub MCP server registry in VS Code:
 
 1. Enable the gallery in settings:
 
@@ -63,7 +66,7 @@ VS Code integrates with the GitHub MCP server registry for easy discovery:
 
 4. Browse and install servers directly
 
-### Option 2: Configuration File (mcp.json)
+### Option 2: configuration file (mcp.json)
 
 Create `.vscode/mcp.json` in your workspace:
 
@@ -103,20 +106,20 @@ Create `.vscode/mcp.json` in your workspace:
 code --add-mcp '{"name":"playwright","command":"npx","args":["@playwright/mcp@latest"]}'
 ```
 
-### Option 4: User Configuration
+### Option 4: user configuration
 
 For MCP servers you want across all workspaces, use MCP: Open User Configuration command.
 
 ---
 
-## Popular MCP Servers
+## Popular MCP servers
 
 | Server | Purpose | Installation |
 |--------|---------|--------------|
 | **Playwright** | Browser automation for testing | `npx @playwright/mcp@latest` |
 | **GitHub** | GitHub API access | `npx @modelcontextprotocol/server-github` |
 | **Atlassian Rovo** | Jira, Confluence, Compass access | Remote server (see below) |
-| **Filesystem** | Enhanced file operations | `npx @modelcontextprotocol/server-filesystem` |
+| **Filesystem** | File operations | `npx @modelcontextprotocol/server-filesystem` |
 | **PostgreSQL** | Database queries | `npx @modelcontextprotocol/server-postgres` |
 | **Fetch** | HTTP requests | `npx @modelcontextprotocol/server-fetch` |
 | **Memory** | Persistent memory | `npx @modelcontextprotocol/server-memory` |
@@ -125,18 +128,19 @@ For MCP servers you want across all workspaces, use MCP: Open User Configuration
 
 ## Atlassian Rovo MCP Server (Jira & Confluence)
 
-The **Atlassian Rovo MCP Server** is a cloud-based remote MCP server that connects your Atlassian Cloud products (Jira, Confluence, and Compass) to AI assistants like GitHub Copilot.
+The Atlassian Rovo MCP Server connects Copilot to Jira, Confluence, and Compass
+in Atlassian Cloud.
 
-For more information and how to run it, please refer to [this document](https://github.com/mcp/atlassian/atlassian-mcp-server).
+See the [server documentation](https://github.com/mcp/atlassian/atlassian-mcp-server) for setup.
 
-### What You Can Do
+### What you can do
 
-- **Jira**: Search issues, create/update work items, bulk create from notes
-- **Confluence**: Summarize pages, create documentation, navigate spaces
-- **Compass**: Query service dependencies, create components
-- **Cross-product**: Link Jira tickets to Confluence pages, find related docs
+- Search and update Jira issues, or create work items from notes.
+- Read Confluence spaces, summarize pages, and create documentation.
+- Query Compass service dependencies and create components.
+- Link Jira tickets to Confluence pages and find related documentation.
 
-### Example Workflows
+### Example workflows
 
 ```text
 "Find all open bugs in Project Alpha"
@@ -176,26 +180,27 @@ The Atlassian Rovo MCP Server is a **remote server** that requires the `mcp-remo
 3. Grant permissions for the requested Atlassian products
 4. Tokens are session-based and respect your existing Jira/Confluence permissions
 
-### Security Features
+### Security features
 
-- **OAuth 2.1**: Secure authentication with scoped tokens
-- **Permission-based**: Only accesses data you have permission to view
-- **HTTPS/TLS 1.2+**: All traffic encrypted
-- **Audit logging**: Actions logged for compliance
+- OAuth 2.1 uses scoped authentication tokens.
+- Data access follows your existing permissions.
+- HTTPS/TLS 1.2+ encrypts traffic.
+- Audit logs record actions for compliance.
 
-### Beta Limitations
+### Beta limitations
 
 - Rate limits apply (higher for Premium/Enterprise plans)
 - Some custom Jira fields may not be recognized
 - Workspace switching not available in single session
 
-For full documentation: [Atlassian Rovo MCP Server Guide](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/)
+See the [Atlassian Rovo MCP Server Guide](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/).
 
 ---
 
-## Using MCP Tools in Chat
+## Using MCP tools in chat
 
-Once configured, enable MCP tools via **Configure Tools** in Agent mode. Copilot automatically selects relevant tools based on your prompt:
+Enable MCP tools through **Configure Tools** in Agent mode. Copilot selects
+tools based on your request.
 
 ```text
 "List my open GitHub issues and create a summary"
@@ -218,7 +223,7 @@ For details on tool approvals and security, see the [Copilot Guide](./copilot-gu
 
 ---
 
-## MCP Resources and Prompts
+## MCP resources and prompts
 
 ### Resources
 
@@ -236,9 +241,9 @@ Type `/mcp.servername.promptname` in chat to invoke.
 
 ---
 
-## Creating Your Own MCP Server
+## Creating your own MCP server
 
-### Basic Structure
+### Basic structure
 
 ```typescript
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
@@ -290,7 +295,7 @@ async function main() {
 main();
 ```
 
-### Configuration for Development
+### Configuration for development
 
 Add to `.vscode/mcp.json`:
 
@@ -313,12 +318,12 @@ Add to `.vscode/mcp.json`:
 
 Enable development mode for:
 
-- **watch**: Auto-restart on file changes
-- **debug**: Enable VS Code debugger attachment
+- `watch` restarts the server when files change.
+- `debug` allows the VS Code debugger to attach.
 
 ---
 
-### Complete Server Example
+### Complete server example
 
 ```javascript
 server.setRequestHandler(ListToolsRequestSchema, async () => {
@@ -396,7 +401,7 @@ Or install via VS Code CLI:
 code --add-mcp '{"name":"my-server","command":"node","args":["path/to/your/mcp-server.js"]}'
 ```
 
-## Example: GitHub MCP Server
+## Example: GitHub MCP server
 
 ```typescript
 // github-mcp-server.ts
@@ -520,7 +525,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 });
 ```
 
-## Example: Database MCP Server
+## Example: database MCP server
 
 ```typescript
 // database-mcp-server.ts
@@ -626,7 +631,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
 Once your MCP server is configured, you can ask Copilot questions that require external data:
 
-### Example Queries
+### Example queries
 
 ```text
 "What are the open pull requests in this repository?"
@@ -645,9 +650,9 @@ Once your MCP server is configured, you can ask Copilot questions that require e
 → Copilot uses multiple MCP servers
 ```
 
-## Best Practices
+## Best practices
 
-### 1. **Security**
+### 1. Security
 
 - Never expose sensitive operations
 - Validate all inputs
@@ -668,7 +673,7 @@ const result = await pool.query(
 );
 ```
 
-### 2. **Error Handling**
+### 2. Error handling
 
 ```typescript
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
@@ -686,7 +691,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 });
 ```
 
-### 3. **Performance**
+### 3. Performance
 
 - Implement caching
 - Limit result sizes
@@ -707,7 +712,7 @@ async function getCachedData(key: string, fetcher: () => Promise<any>) {
 }
 ```
 
-### 4. **Documentation**
+### 4. Documentation
 
 Provide clear tool descriptions:
 
@@ -732,17 +737,17 @@ Provide clear tool descriptions:
 }
 ```
 
-## Testing MCP Servers
+## Testing MCP servers
 
-### 1. **MCP Inspector**
+### 1. MCP Inspector
 
 ```bash
 npx @modelcontextprotocol/inspector node your-mcp-server.js
 ```
 
-Opens a UI to test your MCP server interactively.
+The inspector opens a UI for testing your server.
 
-### 2. **Unit Tests**
+### 2. Unit tests
 
 ```typescript
 import { describe, it, expect } from 'vitest';
@@ -768,7 +773,7 @@ describe('MCP Server', () => {
 });
 ```
 
-## Common Use Cases
+## Common use cases
 
 1. **Development Tools**
    - Code search
@@ -778,7 +783,7 @@ describe('MCP Server', () => {
 2. **Data Access**
    - Database queries
    - File system access
-   - Cloud storage
+   - Azure storage
 
 3. **External Services**
    - GitHub/GitLab
@@ -792,31 +797,31 @@ describe('MCP Server', () => {
    - Company-specific workflows
 
 5. **Infrastructure**
-   - Cloud provider APIs
+   - Azure APIs
    - Monitoring systems
    - Log aggregators
 
 ## Troubleshooting
 
-### MCP Server Not Connecting?
+### MCP server not connecting?
 
 1. Check server is running: `node your-server.js`
 2. Verify VS Code settings path
 3. Check server logs
 4. Restart VS Code
 
-### Tools Not Appearing?
+### Tools not appearing?
 
 1. Verify `ListToolsRequestSchema` handler
 2. Check tool schema format
 3. Review MCP server logs
 
-### Poor Responses?
+### Poor responses?
 
 1. Improve tool descriptions
 2. Add more context in responses
 3. Format data clearly
-4. Handle errors gracefully
+4. Return explicit errors when a tool fails
 
 ---
 

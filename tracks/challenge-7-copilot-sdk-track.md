@@ -6,9 +6,9 @@
 
 **Focus:** Building a Release Notes Agent from scratch using the GitHub Copilot SDK
 
-> ⚠️ **Challenge 7 is significantly harder and longer than the standard 4-6 hour tracks.** It is designed for experienced developers who have completed a standard track (or equivalent) and want a deeper challenge that goes beyond using Copilot -- to **building with its engine**.
+> ⚠️ **Challenge 7 takes longer than the standard 4-6 hour tracks.** It requires experience from a standard track or equivalent work. You will build an application with Copilot's agent runtime.
 
-## Who Is This For
+## Who is this for
 
 - Developers who finished a standard track and want more
 - Backend engineers interested in AI-powered tooling
@@ -23,31 +23,31 @@
 - Understanding of event-driven and streaming patterns
 - Copilot CLI installed and authenticated (`copilot --version` should work)
 
-## Technology Stack
+## Technology stack
 
 - **Runtime:** Node.js (LTS) with TypeScript
-- **SDK:** `@github/copilot-sdk` -- programmatic access to Copilot's agent runtime (sessions, streaming, custom tools)
-- **GitHub API:** `@octokit/rest` -- for querying PRs, releases, tags, commits, and CI status
-- **Copilot CLI:** Required as the backend server -- the SDK communicates with it via JSON-RPC
+- **SDK:** `@github/copilot-sdk` for sessions, streaming, and custom tools in Copilot's agent runtime
+- **GitHub API:** `@octokit/rest` to query PRs, releases, tags, commits, and CI status
+- **Copilot CLI:** Required backend server, connected to the SDK over JSON-RPC
 - **Deployment:** Azure (App Service or Container Apps) for the final application
 
-## What You Are Building
+## What you are building
 
-**"ship-it" -- a Release Notes Agent.** Given a repository and a reference point (a tag, a date, or a commit SHA), this CLI agent analyzes all merged pull requests, categorizes the changes, generates a structured changelog, and can publish a draft GitHub Release. The workflow is conversational -- a team lead can review the generated notes, ask for adjustments ("move this PR to the highlights section", "add a migration guide for the breaking change"), and iterate until they are satisfied. When everything looks right, they say "publish it" and the agent creates the release.
+Build "ship-it", a Release Notes Agent. Given a repository and a reference point (a tag, a date, or a commit SHA), it analyzes merged pull requests, categorizes changes, generates a changelog, and can publish a draft GitHub Release. A team lead reviews the notes through conversation and requests adjustments ("move this PR to the highlights section", "add a migration guide for the breaking change"). Once satisfied, they say "publish it" and the agent creates the release.
 
-This is the kind of repetitive-but-judgement-requiring task where an agent with tools genuinely outperforms a plain script. Nobody likes writing release notes by hand, but a script can't categorize changes intelligently or draft human-readable summaries. The SDK sits right in the middle.
+Use SDK tools to fetch repository data and let the user correct generated categories and summaries before publication.
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
-Open the folder `challenges/challenge-7-copilot-sdk/` in your workspace. Read through the starter files before writing any instructions -- this track has no stage scaffolding beyond the SDK itself, so the structure you find is the structure you work with.
+Open `challenges/challenge-7-copilot-sdk/` and read the starter files before writing instructions. There is no stage scaffolding beyond the SDK.
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-7-copilot-sdk/`. It includes Node.js LTS, Copilot CLI, and GitHub CLI. Open the command palette (`F1` > **Dev Containers: Reopen in Container**) and select **challenge-7-copilot-sdk** when prompted.
 
-### Install and Run
+### Install and run
 
 ```bash
 cd challenges/challenge-7-copilot-sdk
@@ -67,11 +67,11 @@ and then do a `/login` command in Copilot Chat to login into GitHub Copilot.
 
 The SDK manages the CLI process lifecycle automatically. You do not need to start the CLI server manually.
 
-### Research the SDK First
+### Research the SDK first
 
-Before writing any code, use the `/research` slash command in Copilot Chat to gather current documentation for `@github/copilot-sdk`. The SDK is new enough that Copilot's built-in training may be incomplete, and researching it upfront gives you accurate material to build your custom instructions from. Stage 1 walks through this in detail -- it is the first task and everything else builds on it.
+Before writing code, use `/research` in Copilot Chat to gather current documentation for `@github/copilot-sdk`. Copilot's training may not cover the current SDK. Use the research to write accurate custom instructions. This is the first task in Stage 1.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should cover:
 
@@ -81,28 +81,28 @@ Your `.github/copilot-instructions.md` should cover:
 - That the deployment target is Azure only (App Service or Container Apps)
 - That categorization and changelog logic must stay correctable through conversation, not hardcoded silently
 
-### Suggested Custom Agents
+### Suggested custom agents
 
-The custom agent you create here helps you write and debug the SDK application itself. It is not ship-it, the Release Notes Agent your code builds and runs through the SDK -- that one is the project's deliverable and lives in your application's runtime, not in `.github/agents/`.
+Your custom agent helps you write and debug the SDK application. The Release Notes Agent, ship-it, runs through the SDK in your application, not in `.github/agents/`.
 
-- **SDK Pairing Agent** -- Knows the `@github/copilot-sdk` session and event model well enough to help design tool schemas and handler wiring. Give it a tool description; it proposes the schema and event flow for you to review. Use it while building the CLI application, not while it's running.
-- **Changelog Style Agent** -- Applies judgment on categorization and tone for generated release notes: what counts as a breaking change, how to phrase a migration note, and what belongs in highlights. Give it a batch of categorized PRs; it drafts notes for you to adjust. Use it when tuning ship-it's output, not its plumbing.
+- Use an SDK Pairing Agent to propose tool schemas and handler event flows using the `@github/copilot-sdk` session model while building the CLI.
+- Use a Changelog Style Agent to review categories and release note wording, including breaking changes, migration notes, and highlights.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
-- **SDK Research Skill** -- A fixed sequence for gathering current documentation with the `/research` command before writing code: pull the docs, note API surface that differs from Copilot's training data, and turn findings into your custom instructions. Run it once at the start, during Stage 1.
-- **Tool Registration Skill** -- A repeatable pattern for adding a new tool to the agent: define the schema, register the handler, wire it into the session, and verify it appears in a test conversation. Use it every time ship-it needs a new capability.
+- An SDK Research Skill gathers current documentation with `/research` and identifies API changes to record in custom instructions. Run it at the start of Stage 1.
+- A Tool Registration Skill adds tools consistently and verifies that each is available in a test conversation, with its schema and handler connected to the session.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "copilot sdk", "typescript agent tool", and "release notes automation" before you draft your own.
 
 ---
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Use `/explain` on the SDK types to understand the session event model before writing handlers.
 - Start with a concrete tool schema ("a tool that fetches merged PRs between two refs") rather than asking Copilot to design the whole architecture at once.
-- Agent mode works well for scaffolding tool registration and event handling in one pass -- describe all the tools you need and let it wire up the schemas, handlers, and session registration together.
-- For the changelog formatter, ask Copilot for templates matching established formats like Keep a Changelog -- it gives better output with a known target.
+- Describe the tools you need before asking Agent mode to scaffold their schemas, handlers, and session registration.
+- Give the changelog formatter a known target, such as Keep a Changelog.
 
 ## Resources
 
@@ -116,7 +116,7 @@ For SDK cookbook patterns and language-specific instruction examples, use the
 [shared examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own)
 and search for "copilot sdk cookbook" or the SDK language you are using.
 
-### GitHub Documentation
+### GitHub documentation
 
 - [Copilot CLI Installation](https://docs.github.com/en/copilot/how-tos/copilot-cli/install-copilot-cli)
 - [Copilot SDK Overview](https://docs.github.com/en/copilot/how-tos/copilot-sdk)

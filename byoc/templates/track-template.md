@@ -2,7 +2,7 @@
 
 **Duration:** {{DURATION}} hours | **Difficulty:** {{DIFFICULTY}} | **Focus:** {{SHORT_FOCUS}}
 
-## Who Is This For
+## Who is this for
 
 - {{TARGET_ROLE_1}}
 - {{TARGET_ROLE_2}}
@@ -14,20 +14,20 @@
 - {{PREREQUISITE_2}}
 - {{PREREQUISITE_3}}
 
-## Technology Stack
+## Technology stack
 
 - {{TECH_1}}
 - {{TECH_2}}
 - {{TECH_3}}
 
-## Getting Started
+## Getting started
 
 Follow the [shared getting started guide](./getting-started.md) for setup,
 authoring mechanics, and resources. The sections below are tailored Design
 Briefs. They describe what each customization should cover without supplying a
 finished artifact.
 
-### Open and Inspect
+### Open and inspect
 
 {{DESCRIBE_WHAT_PARTICIPANTS_MUST_INSPECT_IN_THE_REAL_REPOSITORY_AND_WHAT_EVIDENCE_THEY_SHOULD_GATHER_BEFORE_AUTHORING_CUSTOMIZATIONS}}
 
@@ -43,7 +43,7 @@ finished artifact.
 
 {{DESCRIBE_THE_REPEATABLE_PROCEDURES_USE_CUES_INPUTS_OUTPUTS_CONSTRAINTS_AND_QUALITY_BAR_RELEVANT_TO_THIS_CHALLENGE}}
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 {{DESCRIBE_PRACTICAL_COPILOT_USAGE_PATTERNS_SPECIFIC_TO_THIS_TRACK}}
 

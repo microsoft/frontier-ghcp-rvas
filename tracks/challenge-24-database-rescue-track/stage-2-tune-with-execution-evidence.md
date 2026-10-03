@@ -1,4 +1,4 @@
-# Stage 2: Tune with Execution Evidence
+# Stage 2: Tune with execution evidence
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 70-90 min
 
@@ -47,7 +47,7 @@ is to challenge your explanation.
 - The diagnosis explains plan changes rather than reporting timing alone
 - No table, constraint, or compatibility column is removed for performance
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot is good at spotting non-SARGable predicates and drafting candidate
 indexes. It tends to over-index when it sees queries one at a time. You decide

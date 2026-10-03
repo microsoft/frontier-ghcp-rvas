@@ -1,18 +1,16 @@
-# Stage 1: Trust Boundaries and Threats
+# Stage 1: Trust boundaries and threats
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 55-70 min
 
-The release review starts with the system, not a scanner. Work out who can call
-the API, what they can reach, and which data changes hands before ranking code
-findings.
+Before ranking findings, identify who can call the API, what they can reach,
+and which data crosses each trust boundary.
 
 ## Tasks
 
 Use your repository instructions during the first code walk. Give the Threat
 Model Reviewer agent your endpoint inventory and assumptions, then use the
 Endpoint Security Review skill on one identity route, one payment route, and one
-admin route. This is a review cue, not permission to copy a generated threat
-model.
+admin route. Write your own threat model and verify generated claims.
 
 1. Run the starter tests and application. Record the baseline commands and
    results in `deliverables/threat-model.md`.
@@ -36,7 +34,7 @@ model.
   separate controls
 - The document labels synthetic data and local-only testing clearly
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can inventory routes and suggest abuse cases. You decide which trust
 boundaries are real, which assumptions are safe enough for release, and which

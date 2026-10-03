@@ -1,14 +1,14 @@
-# Stage 2: Characterization Tests
+# Stage 2: Characterization tests
 
 **Duration:** 1.5-2 hours
 
-**Focus:** Writing tests that document and lock in the WCF service's current behavior before any migration work starts
+**Focus:** Write tests that capture the WCF service's current behavior before migration
 
 ## Objective
 
-Write a test suite that captures what the WCF service currently does -- correct behavior, bugs, and all. These tests become your safety net for Stage 3. If your new REST API passes all of them, you know the business logic survived the migration intact.
+Write a test suite that captures the WCF service's current behavior, including bugs. Use it in Stage 3 to check that the REST API preserves the covered behavior.
 
-You are testing the running WCF service over HTTP, not the implementation classes directly. The goal is behavioral coverage, not line coverage.
+Test the running WCF service over HTTP. Cover observable behavior rather than implementation lines.
 
 ## Tasks
 
@@ -46,18 +46,18 @@ You are testing the running WCF service over HTTP, not the implementation classe
 
 6. **Test fault conditions.** Write at least one test per `ErrorCode`:
    - `ACCOUNT_NOT_FOUND`, `CUSTOMER_NOT_FOUND`
-   - `INSUFFICIENT_FUNDS` (savings -- no overdraft, checking -- beyond -$500)
+   - `INSUFFICIENT_FUNDS` (savings has no overdraft; checking cannot go below -$500)
    - `ACCOUNT_CLOSED` and `ACCOUNT_FROZEN` (customer 1004 has a frozen account)
    - `INVALID_AMOUNT` (zero or negative)
    - `LOAN_NOT_FOUND`, `LOAN_CLOSED`
 
 7. **Test edge cases that expose known issues.** Document what you find, not what you expect:
-   - Deposit a negative amount -- what actually happens?
+   - Deposit a negative amount and record what happens
    - Transfer between the same account
-   - Amortization schedule date sequence -- does `AddDays(30)` vs `AddMonths(1)` matter for a short term?
+   - Compare `AddDays(30)` and `AddMonths(1)` in the amortization schedule date sequence for a short term
    - Statement summary for a date range with no transactions
 
-If your Banking Domain agent or WSDL skill produces a generic characterization test or misses the frozen-account edge case, refine that customization before trusting the test as a migration safety net.
+If your Banking Domain agent or WSDL skill produces a generic characterization test or misses the frozen-account edge case, refine it before using the test to check migration behavior.
 
 ## Verification
 
@@ -66,7 +66,7 @@ If your Banking Domain agent or WSDL skill produces a generic characterization t
 - [ ] `LoanService`: all operations have at least one passing test
 - [ ] `TransactionService`: all operations have at least one passing test
 - [ ] Every `ErrorCode` has a test that verifies the fault is thrown under the correct condition
-- [ ] Edge case tests written for the documented bugs -- tests pass against current behavior (even if behavior is wrong)
+- [ ] Edge case tests cover documented bugs and pass against current behavior, even when that behavior is wrong
 - [ ] All tests pass against the running WCF service
 
 ---

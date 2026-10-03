@@ -1,14 +1,14 @@
-# Stage 4: Modules and Environment Promotion
+# Stage 4: Modules and environment promotion
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
-The Terraform now works, but it still reads like a one-off build. This stage turns it into something another team could reuse for dev and prod without copying files and hoping for the best.
+Refactor the working Terraform into modules another team can reuse for dev and prod without copying resource blocks.
 
-## Scenario Notes
+## Scenario notes
 
 Dev needs to stay cheap and easy to reset. Prod needs tighter defaults, clearer approvals, and fewer surprises. The platform lead wants reusable modules, but the app team still needs to understand the call sites without becoming Terraform specialists.
 
-Your goal is reuse with restraint. A module boundary should make review easier, not hide every decision behind variables.
+A module boundary should make review easier. Keep decisions visible at the call site.
 
 ## Tasks
 
@@ -18,7 +18,7 @@ Your goal is reuse with restraint. A module boundary should make review easier, 
 4. Write `docs/environment-promotion.md` with the differences between dev and prod, what requires approval, and what can change through a pull request alone.
 5. Review the module inputs and outputs. Cut anything that exists only because it was convenient during the first draft.
 
-## Review Gate
+## Review gate
 
 Ask Copilot to compare your module layout against the original flat layout. The review should call out which abstraction made the code easier to review, which one made it harder, and whether any output leaks implementation detail.
 
@@ -30,9 +30,9 @@ Ask Copilot to compare your module layout against the original flat layout. The 
 - The plan output is still readable after modularization
 - `docs/environment-promotion.md` defines dev and prod differences without turning the challenge into a full landing-zone build
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
-Copilot is good at extracting repeated blocks into modules. The hard part is resisting the urge to over-abstract. If a module only saves three lines and makes the call site harder to read, it is probably not helping. Ask Copilot to find the abstraction that should be deleted, not just the one it can create.
+Copilot can extract repeated blocks into modules. You decide whether the result is easier to review. Remove a module if it saves little code and makes the call site harder to read.
 
 ---
 

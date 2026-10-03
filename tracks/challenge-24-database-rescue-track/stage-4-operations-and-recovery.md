@@ -1,4 +1,4 @@
-# Stage 4: Package Operations and Recovery
+# Stage 4: Package operations and recovery
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 55-70 min
 
@@ -50,7 +50,7 @@ would have. If it asks the author what a step means, the runbook is not done.
 - Optional Azure SQL results include exact compatibility and service-tier
   assumptions
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can turn your scripts into a checklist and point out missing branches.
 It cannot set an acceptable blocking duration, decide how much mismatch is

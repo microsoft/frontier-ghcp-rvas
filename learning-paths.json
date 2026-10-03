@@ -16,7 +16,7 @@
     {
       "id": "full-stack-mastery",
       "name": "Full-Stack Product Delivery",
-      "description": "Build a feature from the API to the interface, then test it the way a real user would.",
+      "description": "Build a feature with an API and interface, then test the user workflow.",
       "challenge_ids": [
         "challenge-1",
         "challenge-4",
@@ -29,7 +29,7 @@
     {
       "id": "legacy-modernization",
       "name": "Legacy System Modernization",
-      "description": "Read unfamiliar MUMPS, COBOL, and WCF systems, protect their behavior with tests, and replace them safely.",
+      "description": "Trace legacy banking systems in MUMPS, Java, COBOL, and WCF. Write characterization tests before migrating them.",
       "challenge_ids": [
         "challenge-11",
         "challenge-12",
@@ -64,7 +64,7 @@
     {
       "id": "ai-ml-path",
       "name": "AI and ML Capabilities",
-      "description": "Work with data, train a model, and build software that uses AI where it earns its place.",
+      "description": "Train a model, then build repository automation and an application with the Copilot SDK.",
       "challenge_ids": [
         "challenge-2",
         "challenge-6",
@@ -74,7 +74,7 @@
     {
       "id": "azure-infrastructure",
       "name": "Azure Platform Engineering",
-      "description": "Create Azure infrastructure your team can deploy again, review, and operate without guesswork.",
+      "description": "Build Azure infrastructure with Terraform, automate administration with PowerShell, and tune SQL workloads.",
       "challenge_ids": [
         "challenge-3",
         "challenge-20",
@@ -97,7 +97,7 @@
     {
       "id": "secure-software-delivery",
       "name": "Secure Software Delivery",
-      "description": "Find release risks, fix the ones that matter, and add tests that keep them from coming back.",
+      "description": "Review release risks and test proposed fixes. Automate recurring checks with GitHub Agentic Workflows.",
       "challenge_ids": [
         "challenge-5",
         "challenge-22",

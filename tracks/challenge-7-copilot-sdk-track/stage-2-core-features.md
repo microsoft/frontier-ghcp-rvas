@@ -2,7 +2,7 @@
 
 **Estimated:** 3-4 hours
 
-This is where the agent gets its hands dirty. You will build the custom tools that fetch PR data from GitHub, teach the agent to categorize changes, and have it generate a structured changelog -- all through natural conversation.
+Build tools to fetch PR data from GitHub. Let the user review change categories and generate a changelog through conversation.
 
 ## Tasks
 
@@ -22,7 +22,7 @@ This is where the agent gets its hands dirty. You will build the custom tools th
     - Through conversation with the agent, establish categorization rules: features, bug fixes, breaking changes, dependency updates, internal/chore
     - The agent should categorize each PR based on its labels, title prefix (e.g., `feat:`, `fix:`, `breaking:`), and body content
     - When a PR is ambiguous, the agent should ask the user: "PR #412 touches the auth module but has no labels. Is this a feature or a fix?"
-    - Build this as a multi-turn flow -- the agent proposes categories, the user approves or overrides
+    - Build a multi-turn flow where the agent proposes categories and the user approves or overrides them
 
 4. **Changelog generation**
     - Once all PRs are categorized, the agent generates a structured changelog with sections for each category
@@ -37,7 +37,7 @@ If ship-it's categorization is generic or mishandles ambiguous PRs, refine the r
 - Asking "What changes are in this release?" triggers the `get_merged_prs` tool and returns real data from the target repo
 - The agent categorizes PRs and asks about ambiguous ones before finalizing
 - The generated changelog is well-structured with separate sections for features, fixes, breaking changes, and other categories
-- The conversation flows naturally -- no explicit commands needed, the agent decides when to call tools
+- The agent decides when to call tools from the conversation without requiring explicit commands
 
 ---
 

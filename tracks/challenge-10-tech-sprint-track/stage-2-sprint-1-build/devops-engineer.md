@@ -2,7 +2,7 @@
 
 **Time: Full 3 hours**
 
-Build the infrastructure that will take the application from setup to a smooth development environment inside GitHub Codespaces.
+Set up the services and CI checks the team needs in GitHub Codespaces.
 
 ## Tasks
 

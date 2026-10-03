@@ -1,4 +1,4 @@
-# Stage 4: Apply the Approval Gate
+# Stage 4: Apply the approval gate
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
@@ -27,7 +27,7 @@
 - Any future write action has its own explicit approval and verification plan
 - The recurring workflow names an owner and boundary-review trigger
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can compare the draft with the evidence map and prepare a review record.
 You approve the final content, decide where it belongs, and authorize any

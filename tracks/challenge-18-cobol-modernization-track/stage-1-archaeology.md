@@ -1,4 +1,4 @@
-# Stage 1: Code Archaeology
+# Stage 1: Code archaeology
 
 **Duration:** 45 minutes
 **Focus:** Trace one transfer workflow before changing its implementation
@@ -29,12 +29,12 @@ unclear, and run your business-rule documentation skill as you trace it.
 - Successful and rejected paths are traced through their observable effects
 - Open questions distinguish suspected defects from behavior to preserve
 
-## Stretch Tasks
+## Stretch tasks
 
 Map every program and ISAM file, trace deposit and end-of-day batch workflows,
 and build a broader technical-debt inventory. Keep this outside the core.
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can explain paragraphs and propose a workflow map. You decide whether
 the explanation matches the actual file operations. A plausible summary is

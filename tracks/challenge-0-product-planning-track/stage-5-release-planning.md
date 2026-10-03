@@ -2,11 +2,11 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 90-120 min
 
-A release plan is not just a list of features and dates. It is a risk management document, a communication tool, and a rollback strategy.
+Plan the release milestones, assess risks, and define how to roll back each milestone.
 
 ## Tasks
 
-1. **Complete the release plan** in [docs/release-plan.md](../../challenges/challenge-0-product-planning/docs/release-plan.md). Map milestones to your GitHub Milestones and Issues. Every milestone must be independently shippable -- if you stopped after milestone 1, customers would get something useful.
+1. Complete the release plan in [docs/release-plan.md](../../challenges/challenge-0-product-planning/docs/release-plan.md). Map milestones to GitHub Milestones and Issues. Each milestone must be independently shippable and useful to customers.
 
 2. **Risk matrix** -- Replace the simple risk table with a proper probability-vs-severity matrix. Use a 3x3 or 5x5 grid. Each risk must have a probability score, severity score, composite score, mitigation plan, and trigger condition (what observable event tells you the risk is materializing).
 
@@ -34,7 +34,7 @@ A release plan is not just a list of features and dates. It is a risk management
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can draft release notes, generate Gantt diagram syntax, and suggest monitoring metrics. But calibrating risk probabilities to your specific project, designing realistic rollback strategies (not generic ones), writing external release notes that actually sound like they are for customers (not engineers), and setting monitoring thresholds that would trigger the right response require experience and context.
+Copilot can draft release notes and Gantt diagrams or suggest monitoring metrics. Check risk estimates against your project, verify that rollback steps are workable, and set monitoring thresholds that trigger a useful response. Customer release notes should explain what customers need to know.
 
 ---
 

@@ -6,7 +6,7 @@
 
 **Focus:** Build an accessible task dashboard with GitHub Copilot and use Impeccable to improve one user flow
 
-## Who Is This For
+## Who is this for
 
 - Frontend Developers and UI/UX Engineers
 - React Developers
@@ -23,7 +23,7 @@
 - A current VS Code version with Copilot Chat access and a trusted workspace
 - Network access to npm and Impeccable's skill and engine downloads
 
-## Technology Stack
+## Technology stack
 
 - **React 18+** -- UI framework
 - **TypeScript** -- Type safety
@@ -32,24 +32,24 @@
 - **Testing** -- Vitest and React Testing Library; MSW for API mocking
 - **Impeccable** -- An external design skill installed by participants with npx
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Use the dedicated devcontainer at `.devcontainer/challenge-4-frontend/`. It installs the frontend tooling. **Install Impeccable yourself after the common clean setup**, which removes existing customizations. The devcontainer does not install it for you.
 
 Navigate to `challenges/challenge-4-frontend/`, install dependencies (`npm install`), and start the dev server (`npm run dev`). Read `src/App.tsx`, the task types, and `src/fixtures/tasks.ts` before writing instructions. The app is an empty shell; the fixtures provide mixed statuses and a long title for layout reviews. Work through the stages in order.
 
-### Install and Check Impeccable
+### Install and check Impeccable
 
 Follow the [shared Impeccable installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it).
 Use `src/App.tsx` in the challenge folder for the read-only preflight.
 Keep your own custom skill separate from the supplied skill, and do not edit
 Impeccable's files to hold project instructions.
 
-### Use Impeccable on This Track
+### Use Impeccable on this track
 
 Keep Impeccable's working directory at `challenges/challenge-4-frontend/` so it reviews the task dashboard rather than the repository's documentation site. Initialize its product context there before planning the UI. Describe the intended users and their main task; inspect any generated context files for accuracy.
 
@@ -59,7 +59,7 @@ Use `shape` before building the layout, then `critique` to review the first work
 
 Impeccable's feedback is advisory. Check the rendered app yourself, and keep keyboard testing and axe checks as separate requirements.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should cover:
 
@@ -70,16 +70,16 @@ Your `.github/copilot-instructions.md` should cover:
 - Intended users, the main task flow, and visual constraints that Impeccable must respect
 - Non-negotiable: every interactive component ships keyboard-navigable, not retrofitted later
 
-### Suggested Custom Agents
+### Suggested custom agents
 
-- **React Developer Agent** -- Applies judgment on component structure: when to split a component, which hook fits the state need, and how prop types should shape the API. Give it a feature description; it proposes the component breakdown. Use it when starting a new component, not for styling decisions.
-- **UI Stylist Agent** -- Focuses on visual and responsive design judgment: layout approach, breakpoints, and animation restraint. Give it a component and its intended look; it proposes the styling approach. Use it once the component's behavior works.
-- **Accessibility Expert Agent** -- Applies WCAG judgment: keyboard navigation, focus order, and ARIA usage that fits the actual markup. Give it a rendered component or its JSX; it flags gaps. Use it before considering a component done.
+- Use a React Developer Agent to propose component boundaries, hooks, and prop types from a feature description.
+- Use a UI Stylist Agent to review layout, breakpoints, and animation for a working component.
+- Use an Accessibility Expert Agent to check a rendered component or its JSX for keyboard navigation, focus order, and ARIA issues before marking it done.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
-- **Component Test Scaffolding Skill** -- A repeatable sequence that generates a test file matching a component's props and states: render, interaction, and snapshot cases in the same order every time. Use it right after a component's first working version.
-- **Type-First Scaffolding Skill** -- A fixed workflow that starts from a TypeScript interface and generates the component shell, prop destructuring, and default state from it. Use it before writing any JSX, so the types drive the implementation.
+- A Component Test Scaffolding Skill generates render, interaction, and snapshot tests for a component's props and states after its first working version.
+- A Type-First Scaffolding Skill creates a component shell, prop destructuring, and default state from a TypeScript interface before you write JSX.
 
 Impeccable supplies general design guidance. Author a small project-specific skill for a repeatable check that matters to this dashboard, such as reviewing task-form states. Define what it checks and what evidence it returns. Avoid copying Impeccable's commands into a second skill.
 
@@ -87,11 +87,11 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Define your TypeScript interfaces first, then generate the components that use them. Types give Copilot much better context.
 - Describe a component's props and behavior in a comment before asking Copilot to generate it. A few lines of intent produce better JSX than a vague prompt.
-- Keep the file you're testing open when asking for test cases -- Copilot reads it as context.
+- Keep the file you're testing open when asking for test cases so Copilot can use it as context.
 - For state management hooks, outline the public API (what it returns, what side effects it has) before generating the implementation.
 - Give Impeccable a specific page or flow to review. Apply the smallest useful change and rerun the relevant checks.
 

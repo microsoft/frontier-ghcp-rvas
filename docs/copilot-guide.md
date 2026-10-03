@@ -1,10 +1,12 @@
-# GitHub Copilot Guide
+# GitHub Copilot guide
 
 ## What is GitHub Copilot?
 
-GitHub Copilot is an AI assistant built into VS Code. In Agent mode it reads files, runs terminal commands you approve, catches errors, and retries -- handling multi-step tasks with less back-and-forth than inline completions alone.
+GitHub Copilot is an AI assistant built into VS Code. In Agent mode, it reads
+files, runs approved terminal commands, and retries after errors. It can work
+through tasks that require changes to several files.
 
-## Three Ways to Interact
+## Ways to interact
 
 | Method | Access | Best For |
 |--------|--------|----------|
@@ -18,33 +20,35 @@ Agents define how Copilot behaves during a conversation. VS Code includes four b
 
 | Agent | Description | Best For |
 |-------|-------------|----------|
-| **Agent** | Full autonomous mode -- edit files, run commands, self-correct | Multi-file implementations, complex tasks |
+| **Agent** | Edit files, run commands, and retry after errors | Multi-file implementations, complex tasks |
 | **Plan** | Read-only planning mode | Architecture decisions, task planning |
 | **Ask** | Q&A mode for questions and explanations | Learning, understanding code, research |
 | **Edit** | Focused file editing with inline changes | Quick edits to specific files |
 
 Switch agents by clicking the agent picker dropdown in the Chat view.
 
-### Agent Mode
+### Agent mode
 
-Agent mode is Copilot's most capable mode. It can:
+Agent mode can:
 
 - Create and modify multiple files
 - Run terminal commands automatically
 - Recognize errors and fix them
 - Iterate until your task is complete
-- Infer additional work needed
+- Identify related work needed to complete the task
 
 When Agent makes changes, review them inline in the editor. Accept good changes, reject others, and ask for modifications. Use Chat's undo to revert if needed.
 
-### Tool Approvals
+### Tool approvals
 
 Agent requests permission before modifying files, running terminal commands, or invoking MCP tools. Approval options:
 
-- **Allow** -- run once
-- **Allow for Session** -- run during this session
-- **Allow for Workspace** -- always allow in this workspace
-- **Skip** -- don't run this tool
+| Approval | Effect |
+|----------|--------|
+| Allow | Run once |
+| Allow for Session | Allow during this session |
+| Allow for Workspace | Allow in this workspace |
+| Skip | Do not run the tool |
 
 You can auto-approve safe commands in settings:
 
@@ -61,7 +65,7 @@ You can auto-approve safe commands in settings:
 }
 ```
 
-## Adding Context with # Mentions
+## Adding context with # mentions
 
 Use `#` to give Copilot specific context:
 
@@ -77,7 +81,7 @@ Use `#` to give Copilot specific context:
 
 Tools extend what Copilot can do. Access them via the **Configure Tools** button in Agent mode.
 
-### Built-in Tools
+### Built-in tools
 
 | Tool | Description |
 |------|-------------|
@@ -86,11 +90,11 @@ Tools extend what Copilot can do. Access them via the **Configure Tools** button
 | `#usages` | Find code usages |
 | `#changes` | Access git changes |
 
-### MCP Tools
+### MCP tools
 
 Install additional capabilities through MCP (Model Context Protocol) servers. See [MCP Servers Guide](./mcp-servers.md) for setup and configuration.
 
-### Slash Commands
+### Slash commands
 
 | Command | Purpose |
 |---------|---------|
@@ -100,25 +104,22 @@ Install additional capabilities through MCP (Model Context Protocol) servers. Se
 | `/new` | Create new files/projects |
 | `/clear` | Clear chat history |
 
-## Inline Suggestions
+## Inline suggestions
 
 While typing, Copilot suggests completions:
 
-- **Accept**: Press `Tab`
-- **Dismiss**: Press `Esc`
-- **Next suggestion**: `Alt+]` / `Option+]`
-- **Previous suggestion**: `Alt+[` / `Option+[`
+- Press `Tab` to accept or `Esc` to dismiss.
+- Use `Alt+]` / `Option+]` for the next suggestion.
+- Use `Alt+[` / `Option+[` for the previous suggestion.
 
-Write a comment describing what you need, then press Enter -- Copilot will suggest an implementation.
+Write a comment describing what you need, then press Enter to request a suggestion.
 
-## Language Models
+## Language models
 
 Click the model picker in Chat to switch models:
 
-- **GPT-4o** -- good general-purpose choice for most coding tasks
-- **Claude Sonnet** -- tends to follow complex, multi-constraint instructions more precisely
-- **Gemini** -- lower latency, useful when you're iterating quickly
-- **o1/o3** -- slower but useful for tasks that need step-by-step logical planning (architecture decisions, algorithm design); not worth it for routine code generation
+Choose a model based on the task and compare the results against your
+requirements. Available models and their performance change over time.
 
 ## Customizing Copilot
 
@@ -144,19 +145,19 @@ Start with the
 It explains how to inspect the challenge, keep the three artifacts distinct,
 and learn from examples without copying them.
 
-## Security Checklist
+## Security checklist
 
 Before committing Copilot-generated code, verify:
 
 - You understand what the code does
 - No hardcoded secrets or credentials (use environment variables)
-- Inputs are validated and sanitized
-- Database queries are parameterized (no string interpolation)
-- Errors are handled appropriately
-- Security implications are reviewed (SQL injection, XSS, CSRF, auth bypasses)
-- Tests are included or updated
+- The code validates and sanitizes inputs
+- Database queries use parameters instead of string interpolation
+- Error handling reports failures without leaking sensitive data
+- You have reviewed SQL injection, XSS, CSRF, and authorization risks
+- Tests cover the changed behavior
 
-## Keyboard Shortcuts
+## Keyboard shortcuts
 
 | Action | Windows/Linux | Mac |
 |--------|---------------|-----|
@@ -167,10 +168,10 @@ Before committing Copilot-generated code, verify:
 | Next suggestion | `Alt+]` | `Option+]` |
 | Previous suggestion | `Alt+[` | `Option+[` |
 
-## Next Steps
+## Next steps
 
-- [Prompt Engineering Guide](./prompt-engineering.md) -- write effective prompts
-- [MCP Servers Guide](./mcp-servers.md) -- extend Copilot with external tools
+- [Prompt Engineering Guide](./prompt-engineering.md) explains how to write focused requests.
+- [MCP Servers Guide](./mcp-servers.md) covers external tools.
 
 ---
 

@@ -1,4 +1,4 @@
-# Stage 3: Design and Test the Compatible Migration
+# Stage 3: Design and test the compatible migration
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 70-90 min
 
@@ -49,7 +49,7 @@ available through the stated compatibility window and rollback rehearsal.
 - The old `Email` column remains available during the challenge
 - Azure SQL online-operation assumptions are explicit and optional to validate
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can draft guards, batching loops, and comparison queries. It cannot
 choose a safe batch size without observing log use, lock duration, and workload

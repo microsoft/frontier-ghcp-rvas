@@ -11,7 +11,7 @@
 
 Stages 1 and 2 can be done in either order. Stages 3 and 4 build on the workflows created in Stage 1.
 
-> **Short on time?** Focus on Stages 1 and 2. A working CI pipeline and a fixed staging environment are the most impactful deliverables.
+> **Short on time?** Complete Stages 1 and 2 to build CI and fix the staging environment.
 
 ---
 

@@ -1,4 +1,4 @@
-# Stage 2: Characterization Testing
+# Stage 2: Characterization testing
 
 **Duration:** 60 minutes
 **Focus:** Capture transfer behavior before translation
@@ -33,16 +33,16 @@ as the authority for banking rules.
 - The working note distinguishes executed parity checks from source-derived
   expectations
 
-## Stretch Tasks
+## Stretch tasks
 
 Characterize utilities, customer validation, interest and loan calculations,
 batch behavior, and authentication. These are outside the transfer-only core.
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can draft test tables and scaffolding. You must check that the expected
 result comes from the original program rather than the generated replacement.
-That distinction matters before Stage 4 uses these tests as its safety net.
+Stage 4 relies on these tests to check that translation preserves behavior.
 
 ---
 

@@ -1,11 +1,11 @@
 id: challenge-18
 number: 18
-title: Legacy COBOL Banking Modernization
+title: Legacy COBOL banking modernization
 category: legacy-modernization
 difficulty: advanced
 duration_minutes: 300
 description: Characterize one COBOL transfer workflow, modernize it through an API and React UI, and review the teller journey with Impeccable.
-focus: Transfer-workflow comprehension, behavior parity, and bounded full-stack modernization
+focus: Trace and characterize a COBOL account-transfer workflow, then expose it through an API and a React UI
 tags:
   - legacy-modernization
   - advanced

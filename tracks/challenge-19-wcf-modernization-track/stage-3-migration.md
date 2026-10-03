@@ -1,14 +1,14 @@
-# Stage 3: REST API Migration
+# Stage 3: REST API migration
 
 **Duration:** 2-3 hours
 
-**Focus:** Building an ASP.NET Core Web API that replaces each WCF service operation, preserving all business logic
+**Focus:** Build an ASP.NET Core Web API that replaces each WCF service operation and preserves its business logic
 
 ## Objective
 
-Rewrite the Meridian Savings Bank service as a REST API using ASP.NET Core Web API (.NET 8). The new API must match the behavior captured in the Stage 2 tests. You are not wrapping the WCF service -- you are porting the business logic into modern patterns.
+Port the Meridian Savings Bank business logic to a REST API using ASP.NET Core Web API (.NET 8). The new API must match the behavior captured in the Stage 2 tests.
 
-Decide up front whether to fix the known bugs (see `docs/system-context.md`) as part of migration, or preserve them to match the characterization tests exactly. Either choice is valid -- but make it deliberately and document it.
+Before migrating, decide whether to fix the known bugs (see `docs/system-context.md`) or preserve them to match the characterization tests. Document the choice.
 
 ## Tasks
 
@@ -27,9 +27,9 @@ Decide up front whether to fix the known bugs (see `docs/system-context.md`) as 
    - Configure a global exception handler to translate domain exceptions to HTTP responses
 
 3. **Build the data layer.** Choose a persistence approach:
-   - In-memory dictionaries/lists (simplest -- mirrors what the WCF service uses)
+   - In-memory dictionaries/lists, matching the WCF service's approach
    - Entity Framework Core with SQLite (more realistic production path)
-   - Either is fine -- document your choice in the project README
+   - Document your choice in the migration notes
    - Seed the same 5 customers, accounts, loans, and transactions as the WCF service
 
 4. **Implement `AccountController`.** Map each `AccountService` operation:
@@ -62,9 +62,9 @@ Decide up front whether to fix the known bugs (see `docs/system-context.md`) as 
    - Fetch customer 1001's accounts
    - Attempt to withdraw more than the savings account balance
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
-**Copilot is reliable for:**
+Copilot can help with:
 
 - Generating controller skeletons from your endpoint design description
 - Translating WCF service implementation methods to C# service classes
@@ -74,10 +74,10 @@ Decide up front whether to fix the known bugs (see `docs/system-context.md`) as 
 
 **Requires your judgment:**
 
-- Deciding the REST resource model -- WCF operations map to REST in multiple valid ways
+- Choosing a REST resource model from the possible mappings of WCF operations
 - Deciding whether to fix bugs during migration or preserve them (and which bugs are bugs vs. undocumented features)
 - Deciding what "Transfer" means atomically in a REST context
-- Validating that Copilot's business logic translation is actually correct -- it will not know about the documented quirks
+- Checking Copilot's translation against the documented quirks and characterized behavior
 
 ## Verification
 

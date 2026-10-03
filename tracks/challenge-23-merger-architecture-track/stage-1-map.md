@@ -1,4 +1,4 @@
-# Stage 1: Map the Merger
+# Stage 1: Map the merger
 
 **Duration:** 60-75 minutes
 
@@ -6,7 +6,7 @@
 
 ## Objective
 
-Build a shared picture of what the two organizations actually own. The output is not a target architecture. It is a map of capabilities, authority, conflicts, and boundaries that the target must respect.
+Map the capabilities and authority each organization owns. Record the conflicts and boundaries the target architecture must respect.
 
 ## Tasks
 
@@ -35,9 +35,9 @@ Build a shared picture of what the two organizations actually own. The output is
 
 8. **Use the Boundary Analyst agent.** Ask it to inspect the map for collapsed responsibilities, ambiguous ownership, and unsupported assumptions. Keep findings that point to evidence. Reject generic suggestions.
 
-9. **Refine the Customization Trio.** Update repository instructions if Copilot assumes implementation work or ignores evidence provenance. Tighten the Boundary Analyst brief if it only repeats the inventory. Record what the Transition Risk skill will need from the future roadmap.
+9. **Refine your customizations.** Update repository instructions if Copilot assumes implementation work or ignores evidence sources. Tighten the Boundary Analyst brief if it only repeats the inventory. Record what the Transition Risk skill will need from the roadmap.
 
-## Required Output
+## Required output
 
 Complete `deliverables/capability-boundary-map.md` with:
 

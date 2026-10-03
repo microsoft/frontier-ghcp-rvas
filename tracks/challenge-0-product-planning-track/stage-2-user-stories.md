@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
-Writing user stories is easy. Writing good ones is harder. This stage tests whether you can tell the difference.
+Review flawed user stories, then write stories with testable acceptance criteria.
 
 ## Tasks
 
@@ -31,7 +31,7 @@ Writing user stories is easy. Writing good ones is harder. This stage tests whet
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot generates user story text and acceptance criteria quickly. It can also apply the INVEST acronym. But identifying what is wrong with someone else's story (the critique exercise), deciding whether a story is truly "Must have" vs. "Should have," and writing persuasive rationale for prioritization decisions require product thinking.
+Copilot can draft stories and acceptance criteria and check them against INVEST. You must review the flaws in each story and justify its priority.
 
 ---
 

@@ -1,4 +1,4 @@
-# Stage 5: Hand Over the Change
+# Stage 5: Hand over the change
 
 **Difficulty:** ⭐⭐ | **Time:** 30 min
 
@@ -41,7 +41,7 @@ your existing working note instead of writing a new report.
 - Remaining limitations are explicit. No real credentials or external
   services were introduced.
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can summarize the diff and find missing evidence references. You
 decide whether the result meets the acceptance criteria. Be clear about any

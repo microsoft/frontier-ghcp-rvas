@@ -1,12 +1,12 @@
-# Stage 4: Test Specs and Pipeline
+# Stage 4: Test specs and pipeline
 
 **Duration:** 1.5-2 hours
 
-**Focus:** Generating test specification documents and a CI pipeline
+**Focus:** Generate test specification documents and a CI pipeline
 
 ## Tasks
 
-1. **Build a test spec agent.** Create `.github/agents/test-spec-writer.agent.md` that:
+1. Create `.github/agents/test-spec-writer.agent.md` with these capabilities:
    - Takes user stories (from Stage 1) as input
    - Produces a test specification document for each story
    - Each test spec includes: test ID, description, preconditions, test steps, expected results, and priority
@@ -24,7 +24,7 @@
    - Include negative tests (invalid inputs, unauthorized access)
    - Are structured consistently across stories
 
-4. **Create a CI pipeline.** Create `.github/workflows/ci.yml` that:
+4. Create `.github/workflows/ci.yml` with these requirements:
    - Runs on pull requests and pushes to main
    - Installs dependencies
    - Runs the unit tests from Stage 3

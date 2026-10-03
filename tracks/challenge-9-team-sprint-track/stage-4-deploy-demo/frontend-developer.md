@@ -6,7 +6,7 @@
 
 1. **Fix critical UI bugs** -- Address any issues from QA's final pass.
 
-2. **Visual polish** -- Spacing, color consistency, loading states, empty states. Small details that make the demo look professional.
+2. Review spacing, color consistency, loading states, and empty states. Fix remaining UI issues before the demo.
 
 3. **Demo contribution** -- Walk through the UI: component structure, responsive behavior, how Copilot helped with component generation and styling.
 

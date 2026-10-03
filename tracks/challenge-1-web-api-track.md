@@ -6,7 +6,7 @@
 
 **Focus:** Building APIs and backend services with GitHub Copilot
 
-## Who Is This For
+## Who is this for
 
 - Backend Engineers and API Developers
 - Web Service Developers
@@ -18,22 +18,22 @@
 - Familiarity with either JavaScript/Node.js or Python
 - Basic testing concepts
 
-## Technology Stack
+## Technology stack
 
 - **Node.js** with Express.js OR **Python** with FastAPI
 - JWT for authentication
 - Testing frameworks (Jest/Mocha or pytest)
 - OpenAPI/Swagger for documentation
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Navigate to `challenges/challenge-1-web-api/` and choose either `node-express` or `python-fastapi`. Open the starter files (`app.js` or `main.py`, `models/`) to understand the structure and existing conventions before you write any instructions, then work through the stages in order.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should cover:
 
@@ -43,25 +43,25 @@ Your `.github/copilot-instructions.md` should cover:
 - API patterns and authentication approach
 - Non-negotiable: keep the chosen framework and auth approach fixed once Copilot has scaffolded around it
 
-### Suggested Custom Agents
+### Suggested custom agents
 
-- **API Developer Agent** -- Applies REST design judgment: resource modeling, status codes, and error handling conventions for a new endpoint. Give it an endpoint description; it recommends the route shape and edge cases to handle. Use it when designing an endpoint, not for writing its tests.
-- **Test Writer Agent** -- Focuses on coverage judgment: which paths, edge cases, and failure modes are worth testing for a given route. Give it a working handler; it proposes a test list plus the code. Use it after a route works, to harden it.
-- **Code Reviewer Agent** -- Applies a quality and security lens across the codebase: injection risks, weak validation, and inconsistent error handling. Give it a diff or file; it returns findings, not a rewrite. Use it before opening a PR.
+- Use an API Developer Agent to recommend resource shapes, status codes, error handling, and edge cases from an endpoint description.
+- Use a Test Writer Agent to propose and implement tests for a working handler, including failure paths.
+- Use a Code Reviewer Agent before opening a PR to review a file or diff for injection risks, weak validation, and inconsistent error handling. It should return findings rather than rewrite the code.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
-- **Endpoint Scaffolding Skill** -- A consistent sequence for adding a new resource: route file, handler, input validation, and a matching test stub, generated in the same order every time. Use it whenever you start a new endpoint so every resource follows the same shape.
-- **API Contract Sync Skill** -- A repeatable check that walks every route and compares it against the OpenAPI/Swagger spec, flagging drift and updating the spec to match. Run it after any route change, not as a one-time setup step.
+- An Endpoint Scaffolding Skill adds a route file, handler, input validation, and test stub in a consistent format for each new resource.
+- An API Contract Sync Skill checks routes against the OpenAPI/Swagger spec and updates the spec after route changes.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "REST API agent", "test generation skill", and "OpenAPI instructions" before you draft your own.
 
 ---
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Write a short comment above each function describing the endpoint, expected inputs, and error cases. Copilot uses these as a spec.
-- Reference existing files in your prompts ("follow the pattern in routes/auth.js") -- this gives Copilot more to work with than a blank request.
+- Reference existing files in your prompts ("follow the pattern in routes/auth.js") to give Copilot a concrete example.
 - Highlight a working route and ask for tests. Copilot picks up on patterns in open files better than starting from nothing.
 - When you hit an unfamiliar library or auth flow, use `/explain` on the relevant code to get a quick breakdown.
 

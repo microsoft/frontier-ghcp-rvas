@@ -1,4 +1,4 @@
-# Stage 2: Specify the Approval Feature
+# Stage 2: Specify the approval feature
 
 **Duration:** 60 minutes
 

@@ -8,7 +8,7 @@
 
    In the Markdown body, specify which documentation files to target (README, component docs, API usage examples) and the tone or style to use.
 
-2. **Create an accessibility review workflow** -- Write a workflow that uses the [Daily Accessibility Review](https://github.com/githubnext/agentics/blob/main/docs/daily-accessibility-review.md) pattern. It should create an issue with accessibility findings -- contrast ratios, missing ARIA labels, keyboard navigation gaps -- based on reviewing the frontend code.
+2. Create a workflow using the [Daily Accessibility Review](https://github.com/githubnext/agentics/blob/main/docs/daily-accessibility-review.md) pattern. It should review frontend code and create an issue for contrast, ARIA, and keyboard navigation findings.
 
    ```yaml
    on:

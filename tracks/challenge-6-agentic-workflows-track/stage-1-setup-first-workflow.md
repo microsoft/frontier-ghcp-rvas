@@ -5,7 +5,7 @@
 
 ## Tasks
 
-Before you write your first workflow file, use your own setup, not just the one you're building: keep your repository instructions open for the target repo's context, bring in the Workflow Author agent you created locally to help draft the frontmatter, and run your compile-and-verify skill after every edit. That local agent is a tool you use while authoring -- it is separate from the Daily Repo Status workflow itself, which runs unattended in GitHub Actions once you push it.
+Open your repository instructions for the target repo's context. Use your local Workflow Author agent to draft the frontmatter and run your compile-and-verify skill after every edit. That agent helps you author files; the Daily Repo Status workflow runs unattended in GitHub Actions after you push it.
 
 1. **Prepare your GitHub repository** -- You need a repository with real code, a CI pipeline, and some open issues to get meaningful results from agentic workflows. If you completed a previous challenge, push that code to a new GitHub repository. Otherwise, fork a repository with active development. Confirm that GitHub Actions is enabled on the repository.
 

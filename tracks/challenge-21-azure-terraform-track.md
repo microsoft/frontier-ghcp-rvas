@@ -1,12 +1,12 @@
-# Challenge 21 Track: Azure Terraform
+# Challenge 21 track: Azure Terraform
 
 **Duration:** 4-6 hours
 
 **Difficulty:** ⭐⭐ to ⭐⭐⭐
 
-**Focus:** Building and defending an Azure platform baseline with Terraform -- remote state, reusable modules, identity, policy checks, CI guardrails, and plan review discipline
+**Focus:** Build and review an Azure Terraform baseline with remote state, reusable modules, identity controls, policy checks, and CI gates
 
-## Who Is This For
+## Who is this for
 
 - Platform engineers standardizing Azure environments
 - DevOps engineers who manage Terraform in real repositories
@@ -23,7 +23,7 @@
 
 > ⚠️ **No Azure subscription?** You can still complete most of the track by focusing on `terraform fmt`, `terraform validate`, module structure, variable design, and pipeline generation. Treat the live `plan` and `apply` steps as design exercises if you cannot provision resources.
 
-## Technology Stack
+## Technology stack
 
 - **Terraform** -- Infrastructure as Code
 - **AzureRM provider** -- Azure resource provisioning
@@ -32,19 +32,19 @@
 - **Azure Key Vault and Managed Identity** -- secrets and identity
 - **GitHub Actions** -- validation and deployment workflow
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Navigate to `challenges/challenge-21-azure-terraform/`. The challenge is built around a small internal operations app that needs a clean Azure foundation before rollout to multiple regions. Focus on `terraform/azure/`, `modules/`, and `docs/` rather than application code.
 
 This challenge should use its own devcontainer at `.devcontainer/challenge-21-azure-terraform/` so the Terraform, Azure CLI, and validation tooling stay isolated from the other tracks.
 
-The starter scaffold includes constrained Terraform inputs, a TFLint configuration, a pull request validation workflow, and evidence files under `docs/`. Read all of it before writing any instructions -- these files are intentionally incomplete, because the work is deciding what the team should accept, block, or document.
+The starter includes constrained Terraform inputs, TFLint configuration, a pull request validation workflow, and evidence under `docs/`. Read these files before writing instructions. They are intentionally incomplete; you must decide what the team should accept, block, or document.
 
-#### Working Scenario
+#### Working scenario
 
 You are taking over infrastructure for an internal operations app. The app is not mission-critical yet, but it handles operational data that the team does not want exposed. Three stakeholders have left you with requirements that do not line up cleanly:
 
@@ -54,7 +54,7 @@ You are taking over infrastructure for an internal operations app. The app is no
 
 Your job is to make the smallest responsible Azure baseline and explain the trade-offs. Do not build a full enterprise landing zone. Do not accept generated HCL until you can explain the plan it produces.
 
-#### Required Participant Artifacts
+#### Required participant artifacts
 
 Create these files under `challenges/challenge-21-azure-terraform/docs/` as you work:
 
@@ -66,7 +66,7 @@ Create these files under `challenges/challenge-21-azure-terraform/docs/` as you 
 
 Keep the notes short. A reviewer should be able to tell why you made each decision without reading every Terraform file.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should cover:
 
@@ -77,13 +77,13 @@ Your `.github/copilot-instructions.md` should cover:
 - Promotion rules between dev and prod, including who approves applies
 - Non-negotiable: no secrets in source control, and no `apply` without a reviewed plan
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 - **Terraform Reviewer Agent** -- Applies judgment on module shape, variable hygiene, and plan readability. Give it a module or plan; it returns findings, not a rewrite. Use it before any apply.
 - **Azure Identity Agent** -- Checks managed identity, RBAC, and Key Vault access design against least privilege. Give it the identity and access configuration; it flags overly broad grants. Use it when designing or reviewing identity changes.
 - **CI Guardrail Agent** -- Reviews GitHub Actions, policy checks, and drift handling for the pipeline. Give it a workflow file; it flags missing gates. Use it when the pipeline itself changes.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 - **Plan Review Skill** -- A fixed sequence: run `terraform plan`, read the diff before accepting it, flag any replacement or destroy operation, and record the decision in `plan-review.md`.
 - **Module Variable Audit Skill** -- A repeatable pass over a module's variables checking each has a description, type, validation, and a sensible default before the module gets reused elsewhere.
@@ -92,16 +92,16 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ---
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Use Copilot as a reviewer before you use it as a generator. Ask it to compare two designs, find plan risks, and challenge your assumptions.
 - Start each Terraform file with a short comment describing the resources, naming rules, and environment assumptions. Copilot does better when the infrastructure intent is explicit.
-- Ask Copilot to explain a `terraform plan` diff before you accept it. That is the fastest way to catch an accidental replacement or a missing dependency.
-- When generating variables, ask for descriptions, validation, and sensible defaults in the same prompt. Otherwise you usually get empty shells.
-- Have Copilot review modules for implicit dependencies and output sprawl. Terraform that technically works can still be miserable to maintain.
+- Ask Copilot to explain a `terraform plan` diff, then check for accidental replacements and missing dependencies before accepting it.
+- Check generated variables for descriptions, validation, and sensible defaults.
+- Have Copilot review modules for implicit dependencies and unnecessary outputs.
 - For GitHub Actions, tell Copilot which steps should block merges and which ones are advisory. It will otherwise treat every check as equal.
 - If a generated resource looks plausible but unfamiliar, ask Copilot which Azure API or provider schema it is relying on. That often exposes outdated suggestions quickly.
-- Before applying, write down one generated suggestion you rejected and why. This is the part of the challenge that proves you understand the infrastructure.
+- Before applying, record one generated suggestion you rejected and why.
 
 ## Resources
 

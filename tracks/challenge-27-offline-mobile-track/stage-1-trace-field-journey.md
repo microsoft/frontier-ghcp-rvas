@@ -1,13 +1,12 @@
-# Stage 1: Trace the Field Journey
+# Stage 1: Trace the field journey
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
 ## Tasks
 
-Use the full customization trio at the start. Keep your repository instructions
-open while you map the code boundaries, ask the Offline Data Reviewer to
-challenge the first map, and run the Offline Journey Check against the starter
-before proposing a fix.
+Use repository instructions while mapping code boundaries. Have the Offline
+Data Reviewer challenge the map, then run the Offline Journey Check against
+the starter before proposing a fix.
 
 1. Run `npm run validate:fixtures`, `npm run typecheck`, and `npm test` from the
    challenge folder. Start `npm run web` if you want to inspect the UI without
@@ -25,7 +24,7 @@ before proposing a fix.
    handling, permission denial, degraded operation, and accessibility. Keep
    Azure deployment and emulator testing outside the required path.
 
-Refine one part of the trio after the trace. If the review missed a data-loss
+Refine one customization after the trace. If the review missed a data-loss
 path, tighten the agent's scope. If the journey check could not reproduce a
 failure consistently, add the missing fixture step to the skill.
 
@@ -38,7 +37,7 @@ failure consistently, add the missing fixture step to the skill.
 - Acceptance criteria state what survives restart and how conflicts are shown
 - Required work can be validated in Expo web or Node
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can trace imports and summarize state transitions. You decide which
 copy of data is authoritative, how much stale work is safe to show, and what a

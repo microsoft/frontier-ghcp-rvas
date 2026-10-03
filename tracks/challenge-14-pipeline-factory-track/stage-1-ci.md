@@ -6,7 +6,7 @@
 
 ## Tasks
 
-Before you write the first workflow file, use the full setup: keep your repository instructions open for your deployment conventions, bring in the Pipeline Architect agent for structuring the workflow, and run your config drift or pipeline stage skill instead of writing each job from a blank file.
+Open your repository instructions for deployment conventions. Use your Pipeline Architect agent to review workflow structure and apply your config drift or pipeline stage skill as you add jobs.
 
 1. **Set up linting for the API.** Add ESLint to the `api-service`. Use Copilot to generate an `.eslintrc.json` configuration appropriate for a Node.js/Express project. Fix any linting errors in `server.js`.
 

@@ -3,15 +3,15 @@
 **Duration:** 1.5 hours
 **Focus:** Add GitHub Agentic Workflows to your deployed repository for continuous AI-driven maintenance
 
-> This stage requires your code to be pushed to a GitHub repository with GitHub Actions enabled. Agentic workflows run as GitHub Actions workflows -- they cannot run locally.
+> Push your code to a GitHub repository with GitHub Actions enabled. Agentic workflows execute in GitHub Actions and cannot run locally.
 
-Your application is deployed and working. Now you turn the repository into a self-maintaining project. GitHub Agentic Workflows let you describe automation in plain Markdown, and a coding agent executes it inside GitHub Actions with read-only permissions and safe outputs.
+Add repository maintenance workflows with GitHub Agentic Workflows. Describe each job in Markdown; a coding agent runs it in GitHub Actions with read-only permissions and safe outputs.
 
-By the end of this stage, your repository will have at least three agentic workflows running on a schedule or triggered by events -- monitoring CI, improving code quality, and keeping documentation current.
+Create at least three scheduled or event-triggered workflows for CI monitoring, code quality, and documentation updates.
 
 ## Before You Start
 
-1. Make sure all code is pushed to a GitHub repository (not just local).
+1. Push all code to a GitHub repository.
 2. Install the `gh-aw` CLI extension:
 
    ```bash

@@ -5,7 +5,7 @@ category: workflow-automation
 difficulty: intermediate
 duration_minutes: 420
 description: Automate documentation generation for code, architecture, changelogs, and stakeholder summaries using Copilot skills and agents.
-focus: Automating documentation generation -- javadoc, architecture diagrams, changelogs, and stakeholder-facing summaries -- using Copilot skills and agents
+focus: Use Copilot skills and agents to generate javadoc, architecture diagrams, changelogs, and stakeholder summaries
 tags:
   - workflow-automation
   - advanced

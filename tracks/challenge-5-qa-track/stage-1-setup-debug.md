@@ -2,13 +2,13 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
-Before writing any tests, you need to know what you're testing. In this stage you'll explore the eShop application using Copilot and the Playwright MCP server, then build a test plan.
+Explore eShop manually and with the Playwright MCP server, then build a test plan.
 
 ## Tasks
 
-Before you write a single test, put the full setup to work: keep your repository instructions open for the eShop and Playwright context, bring in the test planning agent you built for flow and risk judgment, and use your selector discovery skill as you explore instead of guessing at selectors from memory.
+Open your repository instructions for the eShop and Playwright context. Use your test planning agent to review flows and risks. Apply your selector discovery skill to the live pages.
 
-1. **Explore the app manually**: Open the running eShop application in your browser. Click through the main flows: browse the catalog, view a product, log in, add items to the cart. Take notes on what you see -- page names, key elements, forms, buttons, navigation patterns.
+1. Open the running eShop app in your browser. Browse the catalog, view a product, log in, and add items to the cart. Note page names, key elements, forms, buttons, and navigation patterns.
 
 2. **Ask Copilot about the app**: Open the `app/` folder in VS Code. Use Copilot Chat to ask questions about the application. Try prompts like:
    - "What are the main user-facing pages in this application?"
@@ -36,7 +36,7 @@ Before you write a single test, put the full setup to work: keep your repository
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can read the codebase and describe what it finds. Playwright MCP can navigate pages and report element structures. But deciding which flows matter most, which edge cases are worth testing, and how to prioritize -- that's QA judgment. Copilot gives you raw material; you shape it into a testing strategy.
+Copilot can describe the codebase, and Playwright MCP can report page elements. Check those reports against the app. You decide which flows and edge cases to test first.
 
 ---
 

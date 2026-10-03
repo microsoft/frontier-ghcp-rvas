@@ -1,4 +1,4 @@
-# Challenge {{NUMBER}} Contents
+# Challenge {{NUMBER}} contents
 
 [Back to Challenge {{NUMBER}} Overview](../challenge-{{NUMBER}}-{{SLUG}}-track.md)
 

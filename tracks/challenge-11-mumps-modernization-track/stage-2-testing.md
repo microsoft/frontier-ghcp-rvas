@@ -5,15 +5,15 @@
 
 ## Objective
 
-Write a comprehensive test suite in your target language that documents and verifies the banking system's current behavior. These tests become the safety net for Stage 4 -- if your translation passes all characterization tests, you can be confident the business logic is preserved.
+Write tests in your target language that capture the banking system's current behavior. Use them in Stage 4 to check the translated business logic.
 
 You are not testing the MUMPS code directly. Instead, you are reimplementing the testable business logic (calculations, validations, data transformations) in your target language and writing tests against those implementations.
 
 ## Tasks
 
-1. **Set up your target language project.** Create a new project in the challenge folder for your chosen language (e.g., `psl/`, `java/`, `python/`, `typescript/`). Set up a test framework (JUnit 5, pytest, Jest, xUnit -- whatever fits your language). Define the project structure you will use for the full translation in Stage 4.
+1. Create a target-language project in the challenge folder (e.g., `psl/`, `java/`, `python/`, `typescript/`). Set up a suitable test framework such as JUnit 5, pytest, Jest, or xUnit. Define the structure for the full Stage 4 translation.
 
-2. **Test the utility functions.** Start with `BNKUTIL.m` -- the simplest module. Implement and test:
+2. Start with utility functions in `BNKUTIL.m`, the simplest module. Implement and test:
    - Date formatting (`FMTDT`): YYYYMMDD to MM/DD/YYYY
    - Date validation (`VALDATE`): valid and invalid dates, leap years
    - Month addition (`ADDMON`): edge cases around year boundaries and month-end clamping
@@ -26,7 +26,7 @@ You are not testing the MUMPS code directly. Instead, you are reimplementing the
    - SSN masking (`MASKSSN`): full SSN, short input
    - Adult age check (`ISADULT`): exactly 18, under 18, birthday edge cases
 
-4. **Test the financial calculations.** These are the critical ones. From `BNKLOAN.m` and `BNKINTR.m`:
+4. **Test the financial calculations** from `BNKLOAN.m` and `BNKINTR.m`:
    - Monthly payment calculation (`CALCPMT`): verify against known PMT formula values. Test with P=$25,000 R=8.5% N=60, P=$75,000 R=8.5% N=120, and the 0% edge case.
    - Interest portion calculation (`INTPART`): verify the monthly interest split
    - Amortization schedule: verify that the full schedule sums correctly (total payments = principal + total interest)
@@ -55,9 +55,9 @@ If your Translation agent or business-rule skill misses a MUMPS rounding quirk o
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-**Copilot is good at:** Generating test boilerplate, producing edge case lists from a business rule description, translating a MUMPS formula into your language, scaffolding the test project structure.
+Copilot can draft tests and edge case lists, translate formulas, and set up the test project.
 
-**You decide:** Which behaviors are intentional vs. accidental (is the month-end interest posting at day >= 28 a bug or a feature?), what level of precision to test financial calculations at, and how to model the MUMPS global database in your target language's type system.
+You decide whether behaviors such as interest posting at day >= 28 are intentional. Choose the precision for financial tests and how to model MUMPS globals in your target language.
 
 ## Verification
 
@@ -68,7 +68,7 @@ If your Translation agent or business-rule skill misses a MUMPS rounding quirk o
 - [ ] Transaction rule tests passing (deposit, withdrawal, transfer constraints)
 - [ ] Batch processing logic tests passing (fees, overdue detection)
 - [ ] Authentication rule tests passing
-- [ ] All tests green -- this is your safety net for Stage 4
+- [ ] All tests pass before Stage 4
 
 ---
 

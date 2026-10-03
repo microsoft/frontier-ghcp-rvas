@@ -1,12 +1,12 @@
-# Stage 4: Integration and Hardening
+# Stage 4: Integration and hardening
 
 **Duration:** 1-2 hours
 
-**Focus:** Running characterization tests against the REST API, fixing behavior gaps, adding Swagger, writing migration notes
+**Focus:** Run characterization tests against the REST API, fix behavior gaps, complete Swagger documentation, and write migration notes
 
 ## Objective
 
-Adapt the Stage 2 characterization tests to run against your new REST API. Every test that passed against the WCF service should pass against the REST API -- if it does not, the migration dropped a business rule. Fix the gaps, add API documentation, and produce a migration notes document that a consuming team could use to update their clients.
+Adapt the Stage 2 characterization tests to the REST API. Investigate failures against the original behavior and any intentional changes. Fix migration gaps, complete the API documentation, and write migration notes that consuming teams can use to update their clients.
 
 ## Tasks
 
@@ -14,11 +14,11 @@ Adapt the Stage 2 characterization tests to run against your new REST API. Every
    - Add a configuration flag or test base class that points tests at either the WCF service or the REST API
    - Replace WCF channel factory calls with `HttpClient` calls
    - Replace `FaultException<ServiceFault>` assertions with HTTP status code assertions
-   - Keep business logic assertions identical -- only the transport layer changes
+   - Keep business logic assertions identical; change only the transport layer
 
 2. **Run all tests against the REST API.** Fix any failures:
    - If a test fails, investigate whether the REST API is missing business logic, or the test needs to account for a legitimate behavior difference
-   - Do not change test assertions to pass -- change the REST API implementation
+   - Fix the REST API implementation rather than weakening test assertions
    - Document any behavior differences you chose to keep intentionally
 
 3. **Write integration tests across controllers.** Test scenarios that span multiple operations:
@@ -34,13 +34,13 @@ Adapt the Stage 2 characterization tests to run against your new REST API. Every
    - Error response schema is documented
    - The Swagger UI is accessible at `/swagger` and allows trying out endpoints
 
-5. **Write a migration notes document.** Create `docs/migration-notes.md` with:
-   - **Endpoint mapping table** -- each WCF operation name alongside its REST equivalent (verb + path)
-   - **Data type changes** -- SOAP `DateTime` serialization vs. JSON ISO 8601, `decimal` vs. JSON numbers
-   - **Error handling changes** -- `FaultException<ServiceFault>` replaced by HTTP status codes; include a mapping table
-   - **Breaking changes** -- anything a WCF client cannot do in REST without a code change
-   - **Intentional behavior changes** -- bugs you fixed, conventions you updated
-   - **Deprecation guidance** -- if you were deploying this, when would the WCF service be shut down?
+5. Create `docs/migration-notes.md` with:
+   - A table mapping each WCF operation to its REST verb and path
+   - Data type changes, including SOAP `DateTime` vs. JSON ISO 8601 and `decimal` vs. JSON numbers
+   - A table mapping `FaultException<ServiceFault>` errors to HTTP status codes
+   - Breaking changes that require WCF clients to change their code
+   - Intentional behavior changes, including fixed bugs and updated conventions
+   - Deprecation guidance that states when a deployed WCF service could be shut down
 
 6. **Validate the full system end-to-end.** Run through one complete workflow manually:
    - Start both services (WCF and REST)

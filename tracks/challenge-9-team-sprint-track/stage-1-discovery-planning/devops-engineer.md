@@ -4,7 +4,7 @@
 
 ## Tasks
 
-Plan to actually consult the infra-engineer agent on judgment calls like resource limits and CI structure, not just to have it exist alongside the pipeline.
+Use your infra-engineer agent to review resource limits and CI structure.
 
 1. **Set up the repository structure** -- Define branching strategy (trunk-based or feature branches). Write a short doc in `docs/branching-strategy.md` with the team's agreement on PR conventions.
 

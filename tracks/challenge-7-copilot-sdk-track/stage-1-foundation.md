@@ -2,22 +2,22 @@
 
 **Estimated:** 2-3 hours
 
-In this stage you start by researching the SDK and building an accurate instructions file, then set up the SDK, get a working streaming connection, and build the first piece of domain logic: accepting a repository and reference point, then confirming the release scope with the user.
+Research the SDK and write an accurate instructions file. Set up a streaming connection, then accept a repository and reference point and confirm the release scope with the user.
 
 ## Tasks
 
-Before you research the SDK, use the full trio: keep your repository instructions open as the baseline you're building toward, bring in the SDK Pairing agent you create locally to help design tool schemas, and run your SDK research skill to turn what you find into that instructions file. That pairing agent helps you build ship-it -- it is not ship-it itself, which is the release notes agent your code creates and runs through the SDK at runtime.
+Use your SDK research skill to gather facts for the repository instructions. Keep those instructions open and use your local SDK Pairing agent to review tool schemas. The pairing agent helps build ship-it; ship-it itself runs through the SDK in your application.
 
 1. **Research the SDK and build your instructions file**
     - Open Copilot Chat and use the `/research` slash command to pull current documentation, API references, and known issues for `@github/copilot-sdk`
     - Cover at minimum: `CopilotClient` initialization and options, session lifecycle, all streaming event types, custom tool schema format, the JSON-RPC communication model between the SDK and Copilot CLI, and any known caveats or version-specific changes
     - Save the output as a document in the project (e.g., `docs/sdk-research.md`)
     - Turn that document into a Copilot instructions file (`.github/copilot-instructions.md` or a scoped `.instructions.md`) so every subsequent Copilot interaction has accurate SDK context baked in
-    - The SDK is recent and moves fast; training data lags real-world releases, so skipping this step means risking time lost chasing APIs that changed or never existed
+    - Check the installed SDK version against the documentation. Training data may describe APIs that changed or never existed
 
 2. **Client setup and first message**
     - Install the SDK: `npm install @github/copilot-sdk tsx`
-    - Make sure you have run `gh auth login` before starting -- the SDK uses GitHub CLI credentials by default (`useLoggedInUser: true`). Without this, session creation will fail with "Session was not created with authentication info or custom provider". If you can't use `gh auth login`, pass a `GITHUB_TOKEN` explicitly: `new CopilotClient({ githubToken: process.env.GITHUB_TOKEN })`
+    - Run `gh auth login` before starting. The SDK uses GitHub CLI credentials by default (`useLoggedInUser: true`). Without authentication, session creation fails with "Session was not created with authentication info or custom provider". If you can't use `gh auth login`, pass `GITHUB_TOKEN` explicitly with `new CopilotClient({ githubToken: process.env.GITHUB_TOKEN })`.
     - Create a `CopilotClient` and verify it can connect to the Copilot CLI backend
     - Create a session with `client.createSession({ model: "gpt-4.1" })`
     - Send a simple prompt using `session.sendAndWait()` and print the response

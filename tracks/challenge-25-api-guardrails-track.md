@@ -1,18 +1,18 @@
-# Challenge 25 Track: Enterprise API Guardrails
+# Challenge 25 track: Enterprise API guardrails
 
 **Duration:** 4-6 hours
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** Governing API contracts across teams with standards, Azure API
+**Focus:** Govern API contracts across teams with standards, Azure API
 Management policies, automated checks, observability, and onboarding
 
-## Who Is This For
+## Who is this for
 
 - API platform engineers who review contracts from several product teams
 - Platform engineers who operate Azure API Management
 - Technical leads defining API lifecycle and consumer expectations
-- Developer experience engineers building a paved road for API publishers
+- Developer experience engineers defining the publishing process for API teams
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ An Azure subscription is optional. The required work runs locally. If you have
 an Azure API Management instance, you can test deployment after the local
 artifacts pass.
 
-## Technology Stack
+## Technology stack
 
 - **OpenAPI 3.0** for source contracts and normalized proposals
 - **Node.js** for mock services, smoke tests, and contract checks
@@ -34,16 +34,15 @@ artifacts pass.
 - **Azure API Management** for the optional deployment path
 - **Azure Monitor and Application Insights** for observability requirements
 
-This challenge starts where an application API challenge stops. You will not
-rebuild handlers or domain logic. The product teams keep ownership of their
-services. You own the standards, review evidence, runtime controls, and
-developer path used before those services enter the shared platform.
+The product teams keep ownership of their services. Do not rebuild handlers
+or domain logic. You own the standards, review evidence, runtime controls, and
+publishing process for the shared platform.
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first, then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Open
 [`challenges/challenge-25-api-guardrails/`](../challenges/challenge-25-api-guardrails/).
@@ -65,7 +64,7 @@ known conflicts without failing. Those findings are evidence, not the answer.
 Use `.devcontainer/challenge-25-api-guardrails/` if you want the repository to
 install Node.js and the editor extensions for you.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your repository instructions should capture stable facts that apply throughout
 the work:
@@ -84,7 +83,7 @@ Do not turn the instructions into the API standards document. They should
 guide the session, while the standards remain a reviewed participant
 deliverable.
 
-### Suggested Custom Agents
+### Suggested custom agents
 
 - **API Governance Reviewer** -- Reviews a contract or change proposal against
   the standards and consumer risks you provide. Use it during inventory and
@@ -97,7 +96,7 @@ deliverable.
   order, failure behavior, identity boundaries, and accidental data exposure.
   Use it before optional deployment. It must not request or emit credentials.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
 - **Contract Comparison Skill** -- Takes a set of OpenAPI files and produces a
   repeatable difference inventory across naming, pagination, errors,
@@ -112,17 +111,17 @@ deliverable.
 These briefs describe purpose and boundaries. Write the actual customization
 artifacts yourself after inspecting the starter.
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Ask for a comparison table before asking for recommendations. Mixing facts
   and policy too early hides the real conflicts.
-- Give Copilot the consumer notes alongside the contracts. A naming difference
-  matters because clients pay for it, not because one style is fashionable.
+- Give Copilot the consumer notes alongside the contracts. Review naming
+  differences for their effect on clients.
 - Make breaking-change classifications explain which consumer behavior fails.
 - Ask Copilot to challenge policy ordering and error paths in APIM XML.
 - Keep generated identity examples abstract until your team has approved the
   Microsoft Entra ID audience, scopes, and claims model.
-- Treat a passing parser as the floor. Review policy intent and contract
+- A passing parser checks syntax. Review policy intent and contract
   semantics separately.
 - Keep exceptions visible. A standard with no exception process usually turns
   into an undocumented exception process.

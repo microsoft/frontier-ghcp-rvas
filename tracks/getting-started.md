@@ -1,4 +1,4 @@
-# Getting Started
+# Getting started
 
 These steps apply to every track. Start with a clean workspace, inspect the
 challenge, and then prepare the Copilot customizations you will use during the
@@ -8,9 +8,9 @@ session.
 initialization. It uses supplied Spec Kit skills; authoring custom agents and
 skills is optional. Complete cleanup before initialization, never afterward.
 
-## 1. Start from a Clean Workspace
+## 1. Start from a clean workspace
 
-### Open in a DevContainer (Recommended)
+### Open in a DevContainer (recommended)
 
 Each challenge has its own devcontainer configuration under `.devcontainer/`.
 When you open the repository in a devcontainer through Codespaces or VS Code
@@ -35,7 +35,7 @@ including installed skills and Copilot customizations. Older prepared
 workspaces are also preserved; use a fresh clone to get the slimmer layout.
 Use a separate clone to switch challenges.
 
-### Manual Setup (Without a DevContainer)
+### Manual setup (without a DevContainer)
 
 If you are not using a devcontainer, run the setup script with your challenge
 name.
@@ -59,9 +59,9 @@ again for the same challenge preserves your work. You still need to install
 language-specific dependencies yourself, such as with `npm install` or
 `pip install`.
 
-Do not run `clean-start` after you begin: it resets Copilot customizations.
+**Do not run `clean-start` after you begin.** It resets Copilot customizations.
 
-## 2. Open and Inspect the Challenge
+## 2. Open and inspect the challenge
 
 Follow the **Open the Challenge** link in your track. Before creating any
 customizations, inspect the starter code, tests, configuration, and supporting
@@ -75,8 +75,8 @@ includes cloud examples, use Azure only.
 
 ## 3. Draft the Customization Trio
 
-Set aside 20--30 minutes to draft three challenge-specific artifacts. They
-serve different purposes and should not repeat the same content.
+Set aside 20-30 minutes to draft three challenge-specific artifacts. Each has
+a different job. Avoid repeating content between them.
 
 ### Repository Instructions
 
@@ -118,7 +118,7 @@ See GitHub's
 [custom skill authoring documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills)
 for current authoring guidance.
 
-## 4. Learn from Examples, Then Write Your Own
+## 4. Learn from examples, then write your own
 
 Inspect [github/awesome-copilot](https://github.com/github/awesome-copilot)
 and its [Learning Hub](https://awesome-copilot.github.com/) to see how other
@@ -126,7 +126,7 @@ teams structure customizations. Use the examples to understand the available
 patterns, then author artifacts that fit your challenge. Installing a
 community artifact does not complete this exercise.
 
-## 5. Install Impeccable When Your Track Uses It
+## 5. Install Impeccable when your track uses it
 
 Challenges **4, 8, 9, 10, 18, 27, 29, and 30** use Impeccable for a focused UI
 review. Follow this section only for those tracks. Participants install the
@@ -156,16 +156,16 @@ with `SKILL.md`; do not install another global or extension copy.
    Copilot reads the installed skill and its references, works in the intended
    application folder, and leaves the source unchanged.
 
-**Facilitators must preflight the same environment participants will use.**
-Installation success alone does not prove discovery or launcher execution,
-including in Codespaces. Resolve those failures before the session.
+**Facilitators must check the environment participants will use.** Test skill
+discovery and launcher execution, including in Codespaces. Resolve failures
+before the session.
 
 When using the skill, initialize product context in the application folder,
 not the repository's documentation site. Keep the brief focused on the existing
 user journey and constraints. Inspect generated context files for accuracy.
 In team tracks, preserve the agreed specification or exported prototype.
 
-Budget **15--25 minutes within the stage's existing review time** for one
+Budget **15-25 minutes within the stage's existing review time** for one
 critique-and-fix cycle. Record the problem and accepted or rejected feedback in
 the existing pull request or acceptance evidence. Compare the same state and
 viewport before and after a visual change. Preserve behavior and rerun affected

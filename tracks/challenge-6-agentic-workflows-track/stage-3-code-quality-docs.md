@@ -28,11 +28,11 @@
    - Is the scope appropriate (not too broad, not trivial)?
    - Are there any incorrect changes?
 
-   If a PR is not useful, refine the workflow instructions and re-run. This iterative refinement is a core part of working with agentic workflows.
+   If a PR is not useful, revise the workflow instructions and re-run.
 
 5. **Compile, commit, and push** -- Run `gh aw compile` after each new or modified workflow.
 
-If the workflow's first PR is generic -- vague simplifications, shallow tests, or docs that restate code -- refine the repository instructions, your participant-side Workflow Author agent, or its verification skill before rerunning the separate GitHub Actions workflow.
+If the first PR contains vague simplifications, shallow tests, or docs that restate code, revise your repository instructions, local Workflow Author agent, or verification skill. Then rerun the GitHub Actions workflow.
 
 ## Verification
 

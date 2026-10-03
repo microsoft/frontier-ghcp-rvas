@@ -1,11 +1,11 @@
 id: challenge-25
 number: 25
-title: Enterprise API Guardrails
+title: Enterprise API guardrails
 category: azure-platform
 difficulty: advanced
 duration_minutes: 300
 description: Establish reusable Azure API standards and delivery controls for teams publishing enterprise services.
-focus: Governing API contracts across teams with standards, Azure API Management policies, automated checks, observability, and onboarding
+focus: Govern API contracts across teams with standards, Azure API Management policies, automated checks, observability, and onboarding
 tags:
   - azure-api-management
   - api-governance

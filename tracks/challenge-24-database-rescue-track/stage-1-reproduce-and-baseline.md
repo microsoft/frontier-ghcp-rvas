@@ -1,4 +1,4 @@
-# Stage 1: Reproduce and Baseline
+# Stage 1: Reproduce and baseline
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 55-70 min
 
@@ -46,7 +46,7 @@ If you use an isolated local container and reset state, record that action.
 - Query result contracts are written down before tuning
 - At least one unsupported or overly risky tuning idea is explicitly rejected
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can explain plan operators and organize measurements. It cannot tell
 whether two runs were comparable unless you provide the conditions. You own

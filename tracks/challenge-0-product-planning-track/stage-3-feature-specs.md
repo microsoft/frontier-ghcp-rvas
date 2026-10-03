@@ -2,13 +2,13 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 75-90 min
 
-A spec is only useful if it is complete, consistent, and connects to the real system. This stage pushes you beyond filling in templates.
+A feature spec must describe how the feature fits the existing system and resolve conflicting requirements.
 
 ## Tasks
 
 1. **Write two feature specs** -- Pick the two most important features from your backlog. For each, copy [docs/feature-spec.md](../../challenges/challenge-0-product-planning/docs/feature-spec.md) to a new file and fill in every section.
 
-2. **API alignment** -- One of your two specs must be for a feature that builds on the existing REST API (Challenge 1). Map the feature's requirements to specific API endpoints that exist today. Identify gaps -- what new endpoints, fields, or behaviors would the engineering team need to add? Document these as "API Change Requests" within the spec.
+2. Map one feature spec to the existing REST API from Challenge 1. Identify the endpoints it uses and any new endpoints, fields, or behaviors needed. Document the gaps as "API Change Requests" in the spec.
 
 3. **Diagrams** -- Each spec must include at least two Mermaid diagrams: a **sequence diagram** showing system interactions, and a **state diagram** showing the lifecycle of the primary entity (e.g., a notification's states: created, sent, read, dismissed).
 
@@ -18,7 +18,7 @@ A spec is only useful if it is complete, consistent, and connects to the real sy
 
 6. **Open a Pull Request** for your specs on a branch. Write a PR description that summarizes the features and calls out open questions.
 
-If your agent or writing skill produces a generic first-pass spec -- vague NFRs, interchangeable personas, or weak acceptance criteria -- tighten that customization before asking it to revise the draft.
+If your agent or writing skill produces vague NFRs, interchangeable personas, or weak acceptance criteria, revise the customization before asking it to revise the draft.
 
 ## Verification
 
@@ -31,7 +31,7 @@ If your agent or writing skill produces a generic first-pass spec -- vague NFRs,
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot generates Mermaid diagrams, drafts requirement lists, and structures spec documents well. But mapping features to existing API endpoints (which requires reading Challenge 1's code or documentation), spotting contradictions between requirements, and writing NFRs that are genuinely measurable (not just rephrased vaguely) require real analytical work.
+Copilot can draft requirements and Mermaid diagrams. Read Challenge 1's code or documentation to check the API mapping. Review the requirements for contradictions and make sure each NFR can be measured.
 
 ---
 

@@ -1,11 +1,11 @@
-# Starter Architecture Notes
+# Starter architecture notes
 
 The app has a React Native view layer, a small reducer, local storage behind an
 interface, and a client that mimics two Azure Functions operations. The fixture
 selector in the app switches between a stable connection, no signal, a flaky
 warehouse connection, and a version conflict.
 
-The seams are intentional:
+The starter leaves these gaps for you to address:
 
 - `src/storage/localStore.ts` only survives for the current JavaScript session.
 - `src/sync/offlineQueue.ts` has no durable queue, retries, idempotency rule, or

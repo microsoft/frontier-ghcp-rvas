@@ -1,10 +1,10 @@
-# Stage 5: Policy, CI, and Drift Response
+# Stage 5: Policy, CI, and drift response
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
-The last step is making the Terraform safe to live in a shared repository. The goal is not just automation. It is giving the next engineer enough signal to trust a plan before it reaches production.
+Add CI checks and review evidence so another engineer can assess a plan before it reaches production.
 
-## Scenario Notes
+## Scenario notes
 
 Your team has already seen two kinds of trouble: a manual portal change that did not match Terraform, and a failed apply that left part of an environment updated. Developers want CI feedback that is fast. Operations wants enough evidence to decide whether to import, revert, or repair.
 
@@ -19,9 +19,9 @@ Build the smallest workflow and runbook that would help during those incidents.
 5. Write `docs/drift-response.md` covering how the team should detect drift, compare Azure state against Terraform state, decide whether to import or replace resources, and recover if an apply fails mid-change.
 6. Include one failure drill in the runbook. You can use `docs/drift-incident-evidence.md` as the starting evidence, then decide whether the response should import, revert, revise Terraform, or block for review.
 
-## Review Gate
+## Review gate
 
-Ask Copilot to review the workflow like an incident-prone teammate would: where could credentials leak, which steps are too slow for pull requests, which failures should block, and what the runbook does not explain clearly enough.
+Have Copilot review the workflow for credential leaks, slow pull request steps, missing blocking checks, and unclear runbook instructions.
 
 ## Verification
 
@@ -32,9 +32,9 @@ Ask Copilot to review the workflow like an incident-prone teammate would: where 
 - `docs/plan-review.md` includes a CI or policy review note with a blocking-versus-advisory decision
 - `docs/drift-response.md` includes a realistic failure drill and a recovery decision point
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
-Copilot can write most of the GitHub Actions YAML, but it will not decide your operational risk tolerance. You need to choose what blocks a merge, what only warns, and how much manual approval your team actually wants before an apply. Use Copilot to attack the workflow and runbook before you trust either one.
+Copilot can draft GitHub Actions YAML and review the runbook. Your team decides which failures block merges and who must approve an apply.
 
 ---
 

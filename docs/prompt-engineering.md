@@ -1,10 +1,10 @@
-# Prompt Engineering for GitHub Copilot
+# Prompt engineering for GitHub Copilot
 
 How to write effective prompts for Copilot's Agent mode in VS Code. For an overview of agents, tools, and context mentions, see the [Copilot Guide](./copilot-guide.md).
 
-## Core Principles
+## Core principles
 
-### 1. Be Specific
+### 1. Be specific
 
 **Vague:**
 
@@ -23,7 +23,7 @@ Create a REST API for task management with:
 - OpenAPI documentation
 ```
 
-### 2. Provide Examples
+### 2. Provide examples
 
 **Abstract:**
 
@@ -40,7 +40,7 @@ Create email validation that:
 - Uses regex pattern matching
 ```
 
-### 3. Break Down Complex Tasks
+### 3. Break down complex tasks
 
 For large tasks, guide the agent through steps:
 
@@ -54,9 +54,9 @@ Implement user authentication:
 After each step, run tests before proceeding.
 ```
 
-## Prompt Patterns
+## Prompt patterns
 
-### Pattern 1: The Specification Pattern
+### Pattern 1: the specification pattern
 
 Define complete requirements upfront:
 
@@ -72,7 +72,7 @@ Create a 'calculateShippingCost' function that:
 - Include unit tests
 ```
 
-### Pattern 2: The Reference Pattern
+### Pattern 2: the reference pattern
 
 Point to existing code as examples:
 
@@ -84,7 +84,7 @@ create a ProductService that:
 - Follows the same test structure
 ```
 
-### Pattern 3: The Constraint Pattern
+### Pattern 3: the constraint pattern
 
 Define what NOT to do:
 
@@ -97,7 +97,7 @@ Create a SQL query to get users:
 - Order by created_at DESC
 ```
 
-### Pattern 4: The Workflow Pattern
+### Pattern 4: the workflow pattern
 
 Define a sequence of agent actions:
 
@@ -112,9 +112,9 @@ Set up a new feature:
 7. Update API documentation
 ```
 
-## Advanced Techniques
+## Advanced techniques
 
-### Multi-Turn Conversations
+### Multi-turn conversations
 
 Build context over multiple messages:
 
@@ -126,7 +126,7 @@ Turn 4: Add tests for the cache
 Turn 5: Run the tests and fix any failures
 ```
 
-### Combining Tools
+### Combining tools
 
 ```text
 Using #fetch to get the Express.js documentation and 
@@ -134,7 +134,7 @@ Using #fetch to get the Express.js documentation and
 middleware that rate-limits requests to 100/minute per IP.
 ```
 
-### Self-Verification
+### Self-verification
 
 Ask Agent to verify its own work:
 
@@ -156,7 +156,7 @@ class UserAuthenticationService {
 }
 ```
 
-### Leveraging Code Above
+### Use existing code
 
 ```python
 # Copilot learns from code you've already written
@@ -172,7 +172,7 @@ def process_refund(refund_id: str) -> RefundResult:
     # Copilot will suggest similar pattern
 ```
 
-## Language-Specific Tips
+## Language-specific tips
 
 ### JavaScript/TypeScript
 
@@ -222,9 +222,9 @@ def calculate_discount(
 -- Get total revenue per user for the last 30 days, only completed orders
 ```
 
-## Real-World Examples
+## Real-world examples
 
-### Example 1: API Endpoint
+### Example 1: API endpoint
 
 ```python
 # Create FastAPI endpoint for user registration:
@@ -241,7 +241,7 @@ def calculate_discount(
 async def register_user(user_data: UserCreate):
 ```
 
-### Example 2: React Component
+### Example 2: React component
 
 ```typescript
 /**
@@ -264,7 +264,7 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch, placeholder, isLoading }) => {
 ```
 
-### Example 3: Data Processing
+### Example 3: data processing
 
 ```python
 # Transform raw customer data:
@@ -279,62 +279,62 @@ import pandas as pd
 def transform_customer_data(raw_data: list[dict]) -> pd.DataFrame:
 ```
 
-## Reusable Workflows
+## Reusable workflows
 
 Use **custom skills** when a task needs a repeatable workflow. Keep ordinary
 chat messages for one-off requests and follow-up questions.
 
 Choose the work your skill should cover:
 
-- **Test generation:** identify behavior and edge cases, generate tests in the
-  project's framework, then check the results against the requested coverage.
-- **Code review:** assess a diff against project conventions and report findings
-  with code evidence. Leave specialist judgment to the relevant custom agent.
-- **Refactoring:** identify the behavior to preserve, make the scoped change,
-  and use tests to check compatibility.
+- For test generation, identify behavior and edge cases. Generate tests in the
+  project's framework and check their coverage.
+- For code review, assess the diff against project conventions and support
+  findings with code evidence. Use the relevant custom agent for specialist judgment.
+- For refactoring, define the behavior to preserve and use tests to check
+  compatibility after the change.
 
 Define the inputs and expected results before authoring the skill. Follow the
 [shared skill guidance](../tracks/getting-started.md#custom-skill) for artifact
 structure, then use your track's brief to decide what the workflow must achieve.
 
-## Common Pitfalls
+## Common pitfalls
 
-### Pitfall 1: Too Vague
+### Pitfall 1: too vague
 
 ```javascript
 // bad function
 ```
 
-**Problem:** Copilot has no idea what you want.
+State what the function should do.
 
-### Pitfall 2: Assuming Knowledge
+### Pitfall 2: assuming knowledge
 
 ```python
 # implement the algorithm
 ```
 
-**Problem:** Which algorithm? For what purpose?
+Name the algorithm and explain what it should compute.
 
-### Pitfall 3: No Constraints
+### Pitfall 3: no constraints
 
 ```typescript
 // fetch user data
 ```
 
-**Problem:** From where? What format? Error handling?
+Name the data source, response format, and expected error handling.
 
-### Pitfall 4: Over-Complicating
+### Pitfall 4: over-complicating
 
 ```python
 # Create a sophisticated, enterprise-grade, highly scalable, fault-tolerant,
 # microservices-based authentication system with blockchain integration
 ```
 
-**Problem:** Too complex for a single prompt. Break it down!
+Split the request into smaller tasks that you can review and test.
 
-## Iterative Prompting
+## Iterative prompting
 
-Copilot works best with iteration:
+Refine the request when the first suggestion misses a requirement.
 
 **Round 1:**
 
@@ -342,7 +342,7 @@ Copilot works best with iteration:
 // Create function to validate email
 ```
 
-**Copilot suggests basic validation**
+Review the basic validation Copilot suggests.
 
 **Round 2:**
 
@@ -352,7 +352,7 @@ Copilot works best with iteration:
 // Return specific error messages for different validation failures
 ```
 
-**Better result!**
+Check the revised code against both requirements.
 
 **Round 3: Use Chat**
 
@@ -361,25 +361,23 @@ Copilot works best with iteration:
 [Refine based on explanation]
 ```
 
-## Measuring Success
+## Measuring success
 
-Good prompts lead to:
+Check whether the generated code:
 
-- First suggestion is usable (maybe needs minor tweaks)
-- Code follows project patterns
-- Includes error handling
-- Has appropriate types/validation
-- Requires minimal modification
+- Meets the requested behavior
+- Follows project patterns
+- Handles errors
+- Uses the expected types and validation
 
-Poor prompts lead to:
+Revise the request or provide more context when:
 
-- Need to cycle through many suggestions
-- Generated code doesn't compile
-- Missing critical functionality
-- Inconsistent with project style
-- Requires complete rewrite
+- You keep rejecting suggestions
+- Generated code does not compile
+- Required behavior is missing
+- The code conflicts with project conventions
 
-## Practice Exercises
+## Practice exercises
 
 Try improving these prompts:
 
@@ -392,7 +390,7 @@ Try improving these prompts:
 3. **Before:** `// API call`
    **After:** _[Your improved version]_
 
-## Cheat Sheet
+## Cheat sheet
 
 ```text
 Specific > Vague

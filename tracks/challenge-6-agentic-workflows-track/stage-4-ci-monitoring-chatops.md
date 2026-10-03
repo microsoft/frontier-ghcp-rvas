@@ -44,7 +44,7 @@
      github:
    ```
 
-3. **Create a ChatOps `/ask` command** -- Write a command-triggered workflow based on [Repo Ask](https://github.com/githubnext/agentics/blob/main/docs/repo-ask.md). When someone comments `/ask <question>` on an issue, the agent should research the repository (code, issues, PRs, docs) and post an answer as a comment. This turns your repository into a searchable knowledge base.
+3. **Create a ChatOps `/ask` command** -- Write a command-triggered workflow based on [Repo Ask](https://github.com/githubnext/agentics/blob/main/docs/repo-ask.md). When someone comments `/ask <question>` on an issue, the agent should research the repository (code, issues, PRs, docs) and post an answer as a comment.
 
 4. **Test the ChatOps workflows** -- Create a test issue and try the `/plan` and `/ask` commands. Verify that the agent responds with useful output. Test edge cases: vague issues, multi-part questions, issues that reference external resources.
 

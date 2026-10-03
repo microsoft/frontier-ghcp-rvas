@@ -1,4 +1,4 @@
-# Stage 4: Release Evidence and Residual Risk
+# Stage 4: Release evidence and residual risk
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
@@ -36,7 +36,7 @@ automatically mean it must wait.
 - `bash scripts/validate-deliverables.sh` passes
 - Final `dotnet restore`, `dotnet build`, and `dotnet test` commands pass
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can find missing links between findings and evidence. It cannot accept
 risk for the team. The release recommendation belongs to the accountable

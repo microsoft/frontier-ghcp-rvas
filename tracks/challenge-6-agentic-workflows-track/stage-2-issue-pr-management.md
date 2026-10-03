@@ -18,7 +18,7 @@
 
 3. **Create a contribution check workflow** -- Write a workflow based on [Contribution Check](https://github.com/githubnext/agentics/blob/main/docs/contribution-check.md) that periodically reviews open pull requests against contribution guidelines. If you don't have a `CONTRIBUTING.md`, create a minimal one first. The workflow should create a report issue listing PRs that need attention.
 
-4. **Create a Grumpy Reviewer workflow (stretch)** -- Write a ChatOps-style workflow based on [Grumpy Reviewer](https://github.com/githubnext/agentics/blob/main/docs/grumpy-reviewer.md) that triggers when someone comments `/review` on a pull request. The agent should perform an opinionated code review -- focusing on naming, complexity, error handling, and testing -- and post its findings as a PR comment.
+4. As a stretch task, create a ChatOps workflow based on [Grumpy Reviewer](https://github.com/githubnext/agentics/blob/main/docs/grumpy-reviewer.md). It should respond to `/review` comments on PRs with findings about naming, complexity, error handling, and testing.
 
    ```yaml
    on:

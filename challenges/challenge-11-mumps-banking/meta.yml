@@ -5,7 +5,7 @@ category: legacy-modernization
 difficulty: advanced
 duration_minutes: 600
 description: Reverse-engineer and modernize legacy MUMPS code through comprehension, characterization testing, and language translation with GitHub Copilot.
-focus: Legacy code comprehension, characterization testing, feature evolution, and language translation -- using GitHub Copilot to tame a codebase most developers have never seen
+focus: Use GitHub Copilot to understand legacy code, write characterization tests, extend features, and translate MUMPS to a modern language
 tags:
   - legacy-modernization
   - advanced

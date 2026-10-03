@@ -6,7 +6,7 @@ Containerize the Node.js application and set up a local development workflow.
 
 ## Tasks
 
-Before you touch the Dockerfile, make sure you're using the full setup: keep your repository instructions open for the Azure and security constraints, bring in the agent you built for container or Kubernetes judgment, and run your pipeline scaffolding skill instead of writing each stage from scratch.
+Before editing the Dockerfile, open your repository instructions for Azure and security constraints. Use your container or Kubernetes agent to review the design. Apply your pipeline scaffolding skill as you add stages.
 
 1. Complete the multi-stage Dockerfile in `app/Dockerfile`. Use `node:18-alpine` as base. Include a non-root user, optimized layer caching, and minimal final image.
 2. Create a Docker Compose file (`docker-compose.yml`) for local development with hot-reload: volume mount the source directory, use nodemon for file watching.

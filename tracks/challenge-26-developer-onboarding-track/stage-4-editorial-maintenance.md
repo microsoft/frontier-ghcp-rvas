@@ -1,4 +1,4 @@
-# Stage 4: Add Editorial Checks and Maintenance
+# Stage 4: Add editorial checks and maintenance
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
@@ -35,7 +35,7 @@ reference pages. Keep them local, quick, and understandable.
   retest cadence
 - Deferred issues remain visible with priority and ownership
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can write small parsers and suggest workflow triggers. You decide which
 examples are safe to execute, what level of automation the team can maintain,

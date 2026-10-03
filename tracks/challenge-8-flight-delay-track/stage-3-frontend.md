@@ -35,10 +35,10 @@ Create a user-facing web application that allows someone to select a day of the 
 
 ## Copilot Tips for This Stage
 
-- Describe your UI in comments before writing code -- Copilot will generate component structures.
+- Describe the UI in comments before asking Copilot to generate components.
 - Ask Copilot: *"Create a form with a dropdown for airports and days, with a submit button"*.
 - Use `/fix` if you run into CORS or fetch issues.
-- Ask Copilot to add styling -- describe what you want in natural language.
+- Describe the styling you want in natural language.
 
 ## Success Criteria
 

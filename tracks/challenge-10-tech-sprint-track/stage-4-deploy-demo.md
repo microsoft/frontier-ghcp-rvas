@@ -8,7 +8,7 @@ deployment tasks below remain stretch work; a local demo still requires
 integration and test evidence.
 **Focus:** Production deployment, final testing, demo, retrospective
 
-The final stretch. The team polishes the application, runs final tests on the production environment, and delivers a demo. Without a PO, the team picks one person to lead the demo -- usually the frontend developer, since they can walk through the UI naturally.
+Run final tests and finish UI fixes before the demo. Choose one team member to lead it, usually the frontend developer.
 
 ## Jump to Your Role
 
@@ -57,7 +57,7 @@ The team is done when:
 - [ ] Demo has been delivered
 - [ ] Retrospective has been discussed
 
-There is no next stage. The sprint is over. If time allows, continue to [Stage 5: Agentic Workflows](stage-5-agentic-workflows.md) to add AI-powered repository automation.
+If time allows, continue to the optional [Stage 5: Agentic Workflows](stage-5-agentic-workflows.md).
 
 ---
 

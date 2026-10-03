@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-A model that exists only in a notebook is not deployed. Make it usable.
+Expose the model through an API that accepts raw customer data.
 
 ## Tasks
 

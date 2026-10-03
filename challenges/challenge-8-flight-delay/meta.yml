@@ -5,7 +5,7 @@ category: core-tracks
 difficulty: advanced
 duration_minutes: 300
 description: Build one flight-delay model and API, then review the integrated prediction UI with Impeccable.
-focus: Full-stack application development -- data science, API engineering, and frontend -- with GitHub Copilot
+focus: Build a full-stack application with data science, API engineering, and frontend work using GitHub Copilot
 tags:
   - advanced-tracks
   - advanced

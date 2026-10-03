@@ -1,4 +1,4 @@
-# PowerShell Automation: Stages
+# PowerShell automation: Stages
 
 ## Stages
 
@@ -10,7 +10,9 @@
 | 4 | [Pester Tests and Static Analysis](stage-4-pester-tests.md) | ⭐⭐⭐ | 45-60 min | Passing Pester tests and clean PSScriptAnalyzer output |
 | 5 | [Module and CI Pipeline](stage-5-module-and-ci.md) | ⭐⭐⭐ | 45-60 min | PowerShell module with manifest and GitHub Actions CI |
 
-Copilot is strong at generating valid PowerShell syntax and filling in Pester test bodies. It is less reliable on environment-specific details (your AD schema, your Azure naming conventions) -- those require your judgment. The tagging compliance script in Stage 3 requires decisions about idempotency that Copilot will flag but not make for you.
+Check generated PowerShell and Pester tests against your AD schema and Azure
+naming rules. In Stage 3, you decide which tag differences require a change and
+test that repeated runs make no unnecessary updates.
 
 > **Short on time?** Complete Stages 1 and 2 for a solid introduction, then pick either Stage 4 (testing) or Stage 5 (CI) based on what matters more to your team.
 

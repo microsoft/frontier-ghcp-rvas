@@ -2,11 +2,11 @@
 
 **Duration:** 1.5-2 hours
 
-**Focus:** Generating accurate, comprehensive javadoc for all classes and public methods
+**Focus:** Write accurate javadoc for all classes and public methods
 
 ## Tasks
 
-Before generating any javadoc, use your setup: keep your repository instructions open for your documentation conventions, bring in the agent you built for reviewing documentation completeness, and run your javadoc accuracy skill class by class instead of accepting the first draft Copilot proposes for a method.
+Open your repository instructions for documentation conventions. Use your documentation reviewer agent and run the javadoc accuracy skill for each class before accepting generated text.
 
 1. **Audit the existing documentation.** Go through each Java file and note what already has javadoc (even if it is stale or incomplete) vs. what has none. The `Product` class has a stub; everything else is bare.
 

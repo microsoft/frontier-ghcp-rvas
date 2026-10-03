@@ -4,11 +4,11 @@
 
 **Difficulty:** ⭐⭐⭐
 
-**Focus:** Build and operate GitHub Agentic Workflows -- Markdown-defined, AI-powered repository automation running in GitHub Actions
+**Focus:** Build and operate GitHub Agentic Workflows, Markdown-defined repository automation that uses AI in GitHub Actions
 
-> This track requires a GitHub repository with GitHub Actions enabled. All work happens on GitHub -- agentic workflows cannot run locally.
+> This track requires a GitHub repository with GitHub Actions enabled. Agentic workflows execute on GitHub and cannot run locally.
 
-## Who Is This For
+## Who is this for
 
 - Developers and DevOps engineers who want to automate repository maintenance with AI
 - Teams exploring "Continuous AI" as a complement to CI/CD
@@ -21,7 +21,7 @@
 - A GitHub account with Copilot access
 - A GitHub repository with real code to work with (from a previous challenge or a fork of an open-source project)
 
-## Technology Stack
+## Technology stack
 
 - **GitHub Agentic Workflows** (`gh-aw` CLI extension)
 - **GitHub Actions** (runtime environment for agentic workflows)
@@ -29,11 +29,11 @@
 - **GitHub Copilot** (or Claude/Codex as the agent engine)
 - **GitHub CLI** (`gh`) for workflow management
 
-## Getting Started
+## Getting started
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
-### Open and Inspect the Challenge
+### Open and inspect the challenge
 
 Navigate to `challenges/challenge-6-agentic-workflows/`. Read the [functional specification](../challenges/challenge-6-agentic-workflows/docs/functional-spec.md) before starting Stage 1.
 
@@ -41,9 +41,9 @@ You need a GitHub repository to work in. If you do not have one ready, see the [
 
 A dedicated devcontainer is provided at `.devcontainer/challenge-6-agentic-workflows/` with Node.js LTS, Python 3.11, GitHub CLI, and the `gh-aw` extension.
 
-> **GitHub is required.** Agentic workflows run as GitHub Actions -- all workflow files must be pushed to a GitHub repository. You will create workflow files locally (or in a Codespace), but they only execute on GitHub after you push.
+> **GitHub is required.** Create workflow files locally or in a Codespace, then push them to a GitHub repository to run them in GitHub Actions.
 
-### Repository Instructions for This Track
+### Repository instructions for this track
 
 Your `.github/copilot-instructions.md` should describe:
 
@@ -52,29 +52,29 @@ Your `.github/copilot-instructions.md` should describe:
 - Security constraints: read-only permissions, safe outputs only, scoped labels
 - Non-negotiable: no workflow gets write access or secrets it doesn't need for its stated purpose
 
-### Suggested Custom Agents
+### Suggested custom agents
 
-The agents below are custom Copilot agents you run locally to help author and review workflow files. They are not the agentic workflows themselves -- those run unattended in GitHub Actions using an agent engine (Copilot, Claude, or Codex) you configure per workflow, and building them is what this track has you do.
+Use the custom Copilot agents below locally to author and review workflow files. The workflows you build run unattended in GitHub Actions with an agent engine (Copilot, Claude, or Codex) configured per workflow.
 
-- **Workflow Author Agent** -- Knows the `gh-aw` frontmatter schema, safe-output types, and permission model well enough to help draft and debug workflow Markdown files. Give it a description of the automation you want; it proposes frontmatter and structure for you to review. Use it while authoring, before you compile.
-- **Security Reviewer Agent** -- Applies a permissions lens to a finished workflow file: scope creep, missing safe-output constraints, and prompt injection exposure from untrusted input. Give it a draft or compiled workflow; it returns findings. Use it before pushing a workflow to GitHub.
+- Use a Workflow Author Agent to draft and debug Markdown workflows using the `gh-aw` frontmatter schema, safe outputs, and permission model. Review its draft before compiling.
+- Use a Security Reviewer Agent to check draft or compiled workflows for excessive permissions, missing safe-output limits, and prompt injection risks before pushing.
 
-### Suggested Custom Skills
+### Suggested custom skills
 
-- **Workflow Compile and Verify Skill** -- A fixed sequence after every edit: run `gh aw compile` to regenerate the lock file, diff the generated permissions against what you intended, and confirm the trigger conditions match the automation's purpose. Run it before every push.
-- **Safe-Output Audit Skill** -- A repeatable pass over a workflow's outputs (issues, comments, PRs) that checks each one is scoped to the minimum labels and permissions needed. Use it whenever a workflow gains a new output type.
+- A Workflow Compile and Verify Skill runs `gh aw compile` after edits and checks the lock file's permissions and triggers against the intended workflow. Run it before each push.
+- A Safe-Output Audit Skill checks that issues, comments, and PRs use only the required labels and permissions. Run it when adding an output type.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "agentic workflow", "repository automation skill", and "GitHub Actions security instructions" before you draft your own.
 
 ---
 
-## Tips for Using Copilot on This Track
+## Tips for using Copilot on this track
 
 - Ask Copilot to generate workflow Markdown files by describing what you want in natural language: "Create an agentic workflow that triages new issues by assigning labels and posting a summary comment."
-- Use the [Agentics gallery](https://github.com/githubnext/agentics) as a reference -- paste a gallery workflow into chat and ask Copilot to adapt it for your repository.
+- Use the [Agentics gallery](https://github.com/githubnext/agentics) as a reference and ask Copilot to adapt a workflow for your repository.
 - When writing workflow instructions, be specific about your codebase: mention the language, framework, directory structure, and naming conventions. Generic instructions produce generic results.
 - Use `gh aw compile` after every change to regenerate the lock file. The lock file is what GitHub Actions actually runs.
-- Always review workflow output (issues, PRs, comments) before trusting it. Agentic workflows are powerful but not perfect -- human review is part of the design.
+- Review generated issues, PRs, and comments before accepting workflow output.
 
 ## Resources
 

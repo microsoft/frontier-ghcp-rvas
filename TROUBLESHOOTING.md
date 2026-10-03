@@ -1,10 +1,10 @@
-# Troubleshooting Guide
+# Troubleshooting guide
 
-Common issues and solutions for GitHub Copilot Adoption.
+Use this guide to diagnose setup and Copilot problems.
 
-## GitHub Copilot Issues
+## GitHub Copilot issues
 
-### Copilot Not Showing Suggestions
+### Copilot not showing suggestions
 
 **Symptoms:**
 
@@ -13,22 +13,10 @@ Common issues and solutions for GitHub Copilot Adoption.
 
 **Solutions:**
 
-1. **Check Copilot Status**
- - Look at bottom-right corner of VS Code
- - Click the Copilot icon
- - Should show "Ready" status
-
-2. **Verify Sign-In**
- - Click Copilot icon → "Sign in to GitHub"
- - Complete authentication
- - Restart VS Code
-
-3. **Check Extension**
- - Go to Extensions (Ctrl+Shift+X)
- - Search "GitHub Copilot"
- - Ensure both extensions installed:
- - GitHub Copilot
- - GitHub Copilot Chat
+1. Click the Copilot icon at the bottom right of VS Code. Check for "Ready".
+2. If signed out, select "Sign in to GitHub", authenticate, and restart VS Code.
+3. Open Extensions with `Ctrl+Shift+X`. Check that GitHub Copilot and GitHub
+   Copilot Chat are installed.
 
 4. **Enable Inline Suggestions**
 
@@ -38,16 +26,10 @@ Common issues and solutions for GitHub Copilot Adoption.
 
    ```
 
-5. **Restart VS Code**
- - Close completely
- - Reopen
- - Wait 30 seconds
+5. Close and reopen VS Code, then wait 30 seconds.
+6. Check your internet connection by opening <https://github.com>.
 
-6. **Check Internet Connection**
-   - Copilot requires internet
-   - Test: open <https://github.com>
-
-### Copilot Chat Not Responding
+### Copilot chat not responding
 
 **Symptoms:**
 
@@ -56,22 +38,12 @@ Common issues and solutions for GitHub Copilot Adoption.
 
 **Solutions:**
 
-1. **Reload Window**
- - `Ctrl+Shift+P` → "Developer: Reload Window"
+1. Open the command palette with `Ctrl+Shift+P` and run "Developer: Reload Window".
+2. Check that Copilot is signed in and has no error status.
+3. Try inline chat with `Ctrl+I` in the editor.
+4. Clear chat history with the trash icon and start a new conversation.
 
-2. **Check Copilot Status**
- - Ensure signed in
- - Check no error icons
-
-3. **Try Inline Chat Instead**
- - Press `Ctrl+I` in the editor
- - Sometimes more reliable
-
-4. **Clear Chat History**
- - Click trash icon in chat
- - Start new conversation
-
-### Suggestions Not Relevant
+### Suggestions not relevant
 
 **Symptoms:**
 
@@ -92,21 +64,13 @@ Common issues and solutions for GitHub Copilot Adoption.
 
    ```
 
-2. **Provide Context**
- - Add type hints (TypeScript, Python)
- - Reference existing patterns
- - Include example input/output
+2. Provide type hints, reference existing patterns, and include example inputs
+   and outputs.
+3. Explain the expected behavior in Copilot Chat. Refine the request when the
+   response misses a requirement.
+4. Add the relevant imports and types to the current file.
 
-3. **Use Copilot Chat**
- - Explain your requirements in detail
- - Ask for specific implementation
- - Iterate based on response
-
-4. **Check File Context**
- - Copilot looks at current file
- - Add relevant imports/types at top
-
-### Copilot Using Old Patterns
+### Copilot using old patterns
 
 **Symptoms:**
 
@@ -141,9 +105,9 @@ Common issues and solutions for GitHub Copilot Adoption.
 
    ```
 
-## Codespaces Issues
+## Codespaces issues
 
-### Codespace Won't Start
+### Codespace won't start
 
 **Symptoms:**
 
@@ -152,24 +116,12 @@ Common issues and solutions for GitHub Copilot Adoption.
 
 **Solutions:**
 
-1. **Wait and Retry**
- - Sometimes takes 5+ minutes
- - Don't refresh during creation
+1. Allow at least five minutes for creation. Do not refresh while it runs.
+2. If creation remains stuck, delete the failed Codespace and create another.
+3. Check your available hours at <https://github.com/settings/billing>.
+4. Try Chrome or Edge with browser extensions disabled.
 
-2. **Delete and Recreate**
- - Go to Codespaces page
- - Delete the stuck codespace
- - Create a new one
-
-3. **Check Quota**
- - You might be out of free hours
- - Check: github.com/settings/billing
-
-4. **Try Different Browser**
- - Chrome/Edge recommended
- - Disable browser extensions
-
-### Codespace is Slow
+### Codespace is slow
 
 **Symptoms:**
 
@@ -178,24 +130,12 @@ Common issues and solutions for GitHub Copilot Adoption.
 
 **Solutions:**
 
-1. **Check Internet Speed**
- - Need stable connection
- - Test: speedtest.net
+1. Check your connection speed and stability.
+2. Close unused tabs and other Codespaces.
+3. Run "Codespaces: Rebuild Container" from the command palette and wait for completion.
+4. If needed, stop the Codespace, select a larger machine type, and restart it.
 
-2. **Close Unused Tabs**
- - Each tab uses resources
- - Close other Codespaces
-
-3. **Rebuild Container**
- - `Ctrl+Shift+P` → "Codespaces: Rebuild Container"
- - Wait for rebuild
-
-4. **Use Larger Machine Type**
- - Stop Codespace
- - Change machine type in settings
- - Restart
-
-### Extensions Not Loading
+### Extensions not loading
 
 **Symptoms:**
 
@@ -204,18 +144,11 @@ Common issues and solutions for GitHub Copilot Adoption.
 
 **Solutions:**
 
-1. **Wait for Post-Create Script**
- - Takes 2-3 minutes after Codespace starts
- - Check terminal for completion
+1. Wait 2-3 minutes for the post-create script. Check the terminal for completion.
+2. Search Extensions for "GitHub Copilot" and install it if missing.
+3. If configured extensions still fail, run "Codespaces: Rebuild Container".
 
-2. **Manually Install**
- - Extensions → Search "GitHub Copilot"
- - Install manually
-
-3. **Rebuild Container**
- - `Ctrl+Shift+P` → "Codespaces: Rebuild Container"
-
-## Challenge-Specific Issues
+## Challenge-specific issues
 
 ### Challenge 1: Web API
 
@@ -404,9 +337,9 @@ npx playwright install
 
 ```
 
-## General Development Issues
+## General development issues
 
-### VS Code Performance
+### VS Code performance
 
 **Slow Performance**
 
@@ -426,7 +359,7 @@ npx playwright install
 
 ```
 
-### Git Issues
+### Git issues
 
 **Permission Denied**
 
@@ -453,7 +386,7 @@ git stash pop
 
 ```
 
-### Terminal Issues
+### Terminal issues
 
 **Command Not Found**
 
@@ -481,18 +414,13 @@ bash script.sh
 
 ```
 
-## Getting Help
+## Getting help
 
-### Self-Help Steps
+### Self-help steps
 
-1. **Check Error Message**
- - Read the full error
- - Copy error text for searching
-
-2. **Search This Guide**
- - Use Ctrl+F to find keywords
-
-3. **Ask Copilot**
+1. Read the full error and copy it for searching.
+2. Search this guide with `Ctrl+F`.
+3. Give Copilot the error and describe what you were trying to do.
 
 ```text
    Open Copilot Chat (Ctrl+Shift+I):
@@ -501,42 +429,23 @@ bash script.sh
 
    ```
 
-4. **Check Documentation**
- - Challenge README
- - Tool documentation
- - GitHub issues
+4. Check the track guide, tool documentation, and GitHub issues.
 
-### During the Session
+### During the session
 
-1. **Ask in Chat**
- - Slack/Teams channel
- - Other participants might know
+1. Post the error and relevant context in the session's Slack or Teams channel.
+2. Ask a facilitator and share your screen if needed.
+3. Pair with another participant to trace the failure.
 
-2. **Flag a Facilitator**
- - They're here to help!
- - Share your screen if needed
-
-3. **Pair with Someone**
- - Two heads better than one
- - Different perspective helps
-
-### Emergency Fallback
+### Emergency fallback
 
 **If All Else Fails:**
 
-1. **Switch Challenges**
- - Try a different one
- - Come back later
+1. Try another challenge while the blocker is resolved.
+2. Use the prepared local environment if Codespaces is unavailable, or vice versa.
+3. Continue the parts you can run and record the blocked work.
 
-2. **Local Instead of Codespace**
- - Or vice versa
- - Different environment might work
-
-3. **Skip and Learn**
- - Focus on what works
- - Learn from others later
-
-## Prevention Tips
+## Prevention tips
 
 **Do:**
 
@@ -553,27 +462,14 @@ bash script.sh
 - Skip documentation
 - Work in isolation when stuck
 
-## Still Stuck?
+## Still stuck?
 
 If this guide doesn't help:
 
-1. **Create GitHub Issue**
- - Describe the problem
- - Include error messages
- - Share what you tried
-
-2. **Contact Organizers**
- - Use provided contact method
- - Include troubleshooting steps tried
-
-3. **Document for Others**
- - Note solution when found
- - Help improve this guide
+1. Create an issue with the error, reproduction steps, and fixes you have tried.
+2. Contact the organizers through the session channel.
+3. Record the solution once found so others can reuse it.
 
 ---
-
-Troubleshooting is part of learning.
-
-Most issues have simple solutions. Stay calm and debug systematically!
 
 [Back to Main](./docs/index.md) | [Tracks](./tracks/README.md)

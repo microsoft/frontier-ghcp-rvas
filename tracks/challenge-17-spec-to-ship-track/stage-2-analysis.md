@@ -1,12 +1,12 @@
-# Stage 2: Technical Analysis
+# Stage 2: Technical analysis
 
 **Duration:** 1-1.5 hours
 
-**Focus:** Generating a technical analysis from the spec and the existing codebase
+**Focus:** Generate a technical analysis from the spec and the existing codebase
 
 ## Tasks
 
-1. **Study the existing app.** Read `existing-app/src/server.js`. Understand the current data model (tenants, users), the API patterns, and the code conventions.
+1. Read `existing-app/src/server.js`. Trace the tenant and user data model, API patterns, and code conventions.
 
 2. **Build the technical analysis skill.** Create `.github/skills/technical-analysis/SKILL.md` for a workflow that checks the spec against the codebase and uses the Technical Analyst agent to assess design choices. The skill:
    - Takes the spec (`#file:billing-module-requirements.md`) and the existing codebase (`@workspace` or specific `#file` references)
@@ -19,9 +19,9 @@
      - Risk assessment (what could go wrong, what is complex)
      - Recommended implementation order (what to build first)
 
-3. **Use the skill.** Generate the technical analysis. Save it to `docs/technical-analysis.md` in the challenge folder.
+3. Use the skill to generate the technical analysis. Save it to `docs/technical-analysis.md` in the challenge folder.
 
-4. **Validate against the spec.** Check that the technical analysis is consistent with the requirements:
+4. Check the technical analysis against the requirements:
    - Are all API endpoints from the spec accounted for?
    - Does the database schema support all the data requirements?
    - Are the authorization rules addressed in the design?

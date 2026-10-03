@@ -5,7 +5,7 @@
 
 ## Objective
 
-Go beyond the basics. These are optional challenges for teams who finish early or want to push further.
+Choose these optional tasks if you finish the core work early.
 
 ## Advanced Challenges
 

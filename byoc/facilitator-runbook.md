@@ -1,15 +1,18 @@
-# BYOC Facilitator Runbook
+# BYOC facilitator runbook
 
-This runbook describes how to run an outcome-driven GitHub Copilot Adoption delivery session on a customer's own app or repository. Use this when participants are working on their own codebase instead of a pre-built challenge.
+Use this runbook when participants work on their own app or repository.
+Agree on what to deliver before preparing the session.
 
-## Pre-Session Prep (1-2 weeks before)
+## Pre-session preparation
 
-### 1. Define the Outcome
+Start 1-2 weeks before the session.
+
+### 1. Define the outcome
 
 Work with the team to fill in the **[Outcome Canvas](./outcome-canvas.md)**:
 
 - Target type of outcome
-- Current pain and baseline metrics
+- Current problem and baseline metrics
 - Definition of done with concrete acceptance criteria
 - Constraints (time, team size, architecture, access)
 - Stable repository context and constraints for Repository Instructions
@@ -40,7 +43,7 @@ Use the
 [shared getting started guide](../tracks/getting-started.md)
 for authoring mechanics and resources.
 
-### 3. Choose the Session Pages
+### 3. Choose the session pages
 
 For a reusable challenge, author the page set before the session:
 
@@ -51,9 +54,9 @@ For a reusable challenge, author the page set before the session:
    next link.
 
 Use `byoc/templates/` as the starting point. For a one-time session with a clear
-plan, the Outcome Canvas can stand on its own.
+plan, the Outcome Canvas is enough.
 
-### 4. Environment and Access
+### 4. Environment and access
 
 **Codebase Access:**
 
@@ -63,7 +66,7 @@ plan, the Outcome Canvas can stand on its own.
 
 **Development Environment:**
 
-- Option A: Create a **devcontainer** for the app. See `devcontainers/` in this repo for examples. Include all dependencies, tooling, and pre-create scripts.
+- Option A: Create a **devcontainer** for the app. See `.devcontainer/` in this repo for examples. Include required dependencies, tools, and setup scripts.
 - Option B: Provide a **local setup script** (install dependencies, seed data, start services).
 - Option C: Use **GitHub Codespaces** with a custom devcontainer.
 
@@ -73,7 +76,7 @@ plan, the Outcome Canvas can stand on its own.
 - [ ] Test data is available
 - [ ] CI/CD pipelines are accessible (if in scope for the outcome)
 
-### 5. Pre-Session Communication
+### 5. Pre-session communication
 
 Send participants:
 
@@ -83,11 +86,11 @@ Send participants:
 - [ ] Environment setup instructions
 - [ ] Any pre-reading (existing architecture docs, ADRs, relevant code paths)
 - [ ] Schedule with timeboxes
-- [ ] Reminder: the goal is to deliver a demonstrable outcome, not just explore
+- [ ] The result participants should deliver and demonstrate
 
-## Day-Of Structure
+## Session structure
 
-### Opening and Initial Drafting
+### Opening and initial drafting
 
 **Outcome Framing:**
 
@@ -104,14 +107,16 @@ Send participants:
 
 **Customization Trio Drafting:**
 
-- Set aside 20--30 minutes across the opening and the start of work time
+- Set aside 20-30 minutes across the opening and the start of work time
 - Have participants inspect the real repository before they write
 - Ask them to author Repository Instructions, a Custom Agent, and a Custom Skill
   from the briefs and repository evidence
 - Keep the drafting time inside the session schedule rather than adding a
   separate exercise
 
-### Work Time (4-5 hours)
+### Work time
+
+Allow 4-5 hours.
 
 **Timeboxes:**
 
@@ -136,14 +141,16 @@ At each checkpoint, gather the team briefly (5 min):
 **Facilitator Tips:**
 
 - Keep the conversation tied to the outcome: "How does this move you toward the definition of done?"
-- Don't solve technical problems directly -- guide participants to use Copilot
+- Guide participants to use Copilot instead of solving problems for them
 - If someone is stuck, ask: "What would you need to demo this part? Work backward from that."
-- Share patterns as you see them: "Team A just used `/explain` to understand a legacy module -- that might help you too."
+- Share specific techniques that help, such as using `/explain` to understand
+  a legacy module
 - At the midpoint, remind participants to refine the Customization Trio using
-  what they have learned from the repository and the work so far. This is not a
-  check, review gate, or submission.
+  what they have learned. This is a reminder, not a review gate or submission.
 
-### Demo and Outcome Review (1 hour)
+### Demo and outcome review
+
+Allow one hour.
 
 **Demo (30 min):**
 
@@ -168,55 +175,52 @@ Walk through the **[Outcome Scorecard](./outcome-scorecard.md)** as a group or h
 - What would you do differently next time?
 - How will you apply this to your next sprint?
 
-## Post-Session Follow-Up
+## Post-session follow-up
 
-### Within 1 Week
+### Within one week
 
 - [ ] Send filled-in **[Outcome Scorecard](./outcome-scorecard.md)** to participants
 - [ ] Collect feedback: Was the outcome clear? Did you deliver it? What was the business impact?
 - [ ] Share the patterns discovered with the broader team
 - [ ] Schedule a follow-up session if the outcome was not fully delivered
 
-### Measuring Success
+### Measuring success
 
-A successful BYOC session produces:
+Each team should demonstrate its result and explain the impact. Record useful
+Repository Instructions, Custom Agents, Custom Skills, and working practices
+for future work. Copilot usage and chat counts are supporting evidence.
 
-- **A demonstrable outcome** -- working code, shipped feature, modernized system, automated process
-- **Articulated business impact** -- time saved, risk reduced, quality improved, toil eliminated
-- **Reusable patterns** -- Repository Instructions, Custom Agents, Custom
-  Skills, and working practices that the team can apply to future work
+## Common problems
 
-Activity metrics (Copilot usage percentage, chat interactions) are supporting evidence, not the goal.
+### Unclear outcome
 
-## Common Challenges and Mitigations
+Participants aren't sure what "done" means, so the work drifts.
 
-### Challenge: Outcome is Too Vague
+Refine the canvas. Define 3-5 acceptance criteria that can be checked yes or no.
 
-**Symptoms:** Participants aren't sure what "done" looks like. Work drifts.
+### Slow environment setup
 
-**Mitigation:** Stop and refine the outcome. Fill in the canvas more concretely. Define 3-5 acceptance criteria that can be checked yes/no.
+Participants spend the first hour installing dependencies or debugging the devcontainer.
 
-### Challenge: Environment Setup Takes Too Long
+Test the environment before the session. Provide a working devcontainer or
+setup script, with a prepared Codespace or sandbox as a backup.
 
-**Symptoms:** First hour is spent installing dependencies, debugging devcontainer issues.
+### Too much work for the session
 
-**Mitigation:** Pre-test the environment. Provide a working devcontainer or setup script. Have a backup plan (cloud-hosted sandbox, pre-configured Codespace).
+At the first checkpoint, the team can see it will not finish.
 
-### Challenge: Outcome is Too Ambitious
+Reduce the scope and update the acceptance criteria. Keep a result the team
+can demonstrate and explain what remains.
 
-**Symptoms:** Clear from the first checkpoint that the team won't finish.
+### Investigation without a result
 
-**Mitigation:** Adjust the definition of done mid-session. Deliver a smaller slice of the outcome and call it a success if the impact is still demonstrable.
+Participants keep investigating without producing working artifacts or planning a demo.
 
-### Challenge: Participants Treat It as Exploration, Not Delivery
+Ask what the team can demonstrate in two hours. Choose a small part to finish first.
 
-**Symptoms:** Lots of investigation, no working artifacts. No demo plan.
+## Example timeboxes
 
-**Mitigation:** Reinforce the outcome framing at every checkpoint. Ask: "What will you demo in 2 hours?" Push for incremental delivery.
-
-## Example Timeboxes for Common Outcomes
-
-### Modernize Legacy System (6 hours)
+### Modernize legacy system (6 hours)
 
 - 0:00 - 1:00: Understand the legacy code
 - 1:00 - 2:30: Write characterization tests
@@ -224,7 +228,7 @@ Activity metrics (Copilot usage percentage, chat interactions) are supporting ev
 - 4:00 - 5:00: Integrate and verify behavior parity
 - 5:00 - 6:00: Demo and scorecard
 
-### Ship Product Feature (4 hours)
+### Ship product feature (4 hours)
 
 - 0:00 - 0:30: Review the spec and existing code
 - 0:30 - 2:00: Implement the feature (API + UI)
@@ -232,7 +236,7 @@ Activity metrics (Copilot usage percentage, chat interactions) are supporting ev
 - 3:00 - 3:30: Deploy to staging or demo environment
 - 3:30 - 4:00: Demo and scorecard
 
-### Automate Delivery (4 hours)
+### Automate delivery (4 hours)
 
 - 0:00 - 0:30: Document the current manual process
 - 0:30 - 2:00: Build the automation (script, CI workflow, runbook)
@@ -240,13 +244,11 @@ Activity metrics (Copilot usage percentage, chat interactions) are supporting ev
 - 3:00 - 3:30: Run it on a real use case
 - 3:30 - 4:00: Demo and scorecard
 
-## Integration with Worked-Example Challenges
+## Integration with worked-example challenges
 
-The 22 worked-example challenges in this repository are reference implementations of this runbook. If a customer's outcome is similar to an existing challenge, you can:
+If the customer's work resembles an existing challenge, you can:
 
 - Use the challenge track file as a template for your session structure
 - Adapt the stage progression to fit the customer's app
 - Reference the verification steps as acceptance criteria
 - Show the challenge as a worked example before the session
-
-The difference: in a BYOC session, participants work on their own codebase and deliver a real business result instead of completing a tutorial.

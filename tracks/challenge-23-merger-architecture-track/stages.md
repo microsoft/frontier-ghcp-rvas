@@ -1,4 +1,4 @@
-# Merger Integration Architecture: Stages
+# Merger integration architecture: Stages
 
 ## Stages
 

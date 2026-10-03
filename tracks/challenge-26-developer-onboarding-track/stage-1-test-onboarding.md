@@ -1,13 +1,12 @@
-# Stage 1: Test Onboarding and Map Failures
+# Stage 1: Test onboarding and map failures
 
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 ## Tasks
 
-Use the Customization Trio from the start. Keep your repository instructions
-available as the evidence and style baseline, use the Onboarding Reader agent
-for one defined audience journey, and run your Onboarding Test skill so each
-attempt records the same facts.
+Use repository instructions as the evidence and style baseline. Have the
+Onboarding Reader agent review one audience journey, and use the Onboarding
+Test skill to record the same facts for each attempt.
 
 1. Run `npm install`, `npm run build`, and `npm test` in the challenge folder.
    Confirm that the CLI and SDK work before judging the documentation.
@@ -24,11 +23,10 @@ attempt records the same facts.
 5. Create `docs/issue-inventory.md`. Give each issue a location, reader impact,
    evidence, priority, and proposed destination. Separate factual defects from
    information architecture and style problems.
-6. Run `npm run docs:check`. Note what the scripts catch and, just as
-   importantly, which broken examples they ignore.
+6. Run `npm run docs:check`. Record which defects the scripts catch and which
+   broken examples they miss.
 
-Do not rewrite pages yet. A precise failure map prevents the loudest page from
-consuming the whole repair.
+Do not rewrite pages yet. Use the failure map to prioritize repairs.
 
 ## Verification
 
@@ -39,7 +37,7 @@ consuming the whole repair.
 - Every high-priority issue cites observed behavior or source code
 - The checker coverage gap is recorded as an issue
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## What Copilot helps with vs. what requires your judgment
 
 Copilot can compare claims across files and organize repeated findings. You
 decide which reader tasks matter first, how much context a newcomer needs, and

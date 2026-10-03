@@ -1,4 +1,4 @@
-# Stage 5: Change the Rules
+# Stage 5: Change the rules
 
 **Duration:** 60 minutes
 

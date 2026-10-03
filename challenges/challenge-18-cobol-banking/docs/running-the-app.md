@@ -1,10 +1,12 @@
-# Running the COBOL Banking Application
+# Running the COBOL banking application
 
-Running the COBOL code is **optional** for this challenge -- you can read and work with the `.cbl` files without compiling. But if you want to see the system in action, here is how.
+Running the COBOL code is **optional**. You can inspect the `.cbl` files without
+compiling them. Use these steps to compare the running program with your
+source-derived expectations.
 
 ## Prerequisites
 
-You need **GnuCOBOL** installed. On Debian/Ubuntu:
+Install GnuCOBOL. On Debian/Ubuntu:
 
 ```bash
 sudo apt-get update
@@ -25,7 +27,7 @@ cobc --version
 
 You should see `cobc (GnuCOBOL)` followed by a version number. Version 3.1.2 or later is recommended.
 
-## Compiling the Programs
+## Compiling the programs
 
 All commands run from the `challenges/challenge-18-cobol-banking/` directory.
 
@@ -36,7 +38,9 @@ cobc -x -free programs/BNKINIT.cbl
 ./BNKINIT
 ```
 
-This creates ISAM data files in `data/` and loads seed data (customers, accounts, transactions, loans, users, and system configuration). It **clears all existing data** and creates fresh records, so only run it when you want a clean slate.
+This creates ISAM files in `data/` and loads seed customers, accounts,
+transactions, loans, users, and system configuration. It **clears all existing
+data**, so run it only when you intend to reset the records.
 
 ### Step 2: Compile the main application
 
@@ -70,30 +74,35 @@ This launches the main menu. Log in with one of the default accounts:
 | `teller2` | `teller123` | TELLER -- can process transactions |
 | `auditor1` | `audit123` | AUDITOR -- read-only access to reports and audit logs |
 
-## Quick Walkthrough
+## Quick walkthrough
 
 After logging in as `admin`, try these operations to get oriented:
 
-1. **View customers** -- Select option 1 (Customer Management), then search or view by ID.
-2. **Check an account balance** -- Option 2 (Account Management), then balance inquiry.
-3. **Make a deposit** -- Log in as `teller1`, option 3 (Transactions), then deposit.
-4. **Run end-of-day batch** -- Log in as `admin`, option 6. This calculates interest, checks loans, and charges fees.
-5. **View reports** -- Option 5 for statements and portfolio summaries.
+1. View customers with option 1 (Customer Management), then search or view by ID.
+2. Check an account balance with option 2 (Account Management), then balance inquiry.
+3. Make a deposit as `teller1` with option 3 (Transactions), then deposit.
+4. Run the end-of-day batch as `admin` with option 6. This calculates interest, checks loans, and charges fees.
+5. View statements and portfolio summaries with option 5.
 
-## Stopping the Application
+## Stopping the application
 
 Type `Q` at the main menu to log out and exit.
 
 ## Troubleshooting
 
-**"cobc: command not found"** -- GnuCOBOL is not installed. See Prerequisites above.
+If `cobc` is not found, install GnuCOBOL as described under Prerequisites.
 
-**Compilation errors about copybooks** -- Make sure you are running the compile command from the `challenges/challenge-18-cobol-banking/` directory so the relative `copybooks/` paths resolve correctly.
+For copybook compilation errors, run the compile command from
+`challenges/challenge-18-cobol-banking/` so relative `copybooks/` paths resolve.
 
-**"file not found" at runtime** -- The `data/` directory must exist. Run `mkdir -p data` if it is missing, then run `./BNKINIT` to create the ISAM files.
+For a runtime "file not found" error, check that `data/` exists. Run
+`mkdir -p data` if it is missing, then `./BNKINIT` to create the ISAM files.
 
-**"module 'BNKAUTH' not found"** -- You compiled BNKMAIN without linking the other modules. See Step 2 above for the full compile command.
+If `BNKAUTH` is not found, recompile BNKMAIN with the other modules linked.
+Use the full command in Step 2.
 
-**"BNKINIT already loaded" or stale data** -- Run `./BNKINIT` again to reset everything. This is destructive -- it wipes all data files and reloads seed data.
+For "BNKINIT already loaded" or stale data, run `./BNKINIT` to reset the records.
+**This wipes all data files** and reloads seed data.
 
-**Garbled terminal output** -- Some terminals handle the DISPLAY output differently. Make sure your terminal supports standard COBOL console I/O. If columns look off, widen your terminal to at least 120 characters.
+For garbled DISPLAY output, check that your terminal supports standard COBOL
+console I/O. If columns are misaligned, widen it to at least 120 characters.

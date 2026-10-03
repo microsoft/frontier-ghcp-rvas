@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Automate everything and plan for failure.
+Automate deployment and document rollback and disaster recovery procedures.
 
 ## Tasks
 

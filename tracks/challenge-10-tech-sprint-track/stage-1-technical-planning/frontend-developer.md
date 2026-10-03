@@ -4,7 +4,7 @@
 
 ## Tasks
 
-Plan to actually use the ui-builder agent for the component-structure judgment calls the trail list and detail pages need, not just to check the box of creating it.
+Use your ui-builder agent to review the trail list and detail page components.
 
 1. **Set up the frontend project** -- Choose a framework (React + Vite recommended). Scaffold the project:
    - Initialize with `npm create vite@latest` (or equivalent)

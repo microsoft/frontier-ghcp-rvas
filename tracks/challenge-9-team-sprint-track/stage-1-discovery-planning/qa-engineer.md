@@ -4,7 +4,7 @@
 
 ## Tasks
 
-Plan to lean on the test-engineer agent for judgment on which flows and edge cases matter most, not just to generate boilerplate test code.
+Use your test-engineer agent to prioritize flows and edge cases.
 
 1. **Set up the test framework** -- Initialize a Playwright project:
    - `npm init playwright@latest`

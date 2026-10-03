@@ -1,4 +1,4 @@
-# Spec-to-Ship Accelerator: Stages
+# Spec-to-ship accelerator: Stages
 
 ## Stages
 
@@ -9,7 +9,7 @@
 | 3 | [Code Generation](stage-3-code.md) | 2-2.5 hours | Use Copilot to implement the billing module from the generated stories |
 | 4 | [Test Specs and Pipeline](stage-4-tests-pipeline.md) | 1.5-2 hours | Generate test specifications and a CI pipeline |
 
-Each stage produces an artifact that feeds into the next. Stage 1 produces work items; Stage 2 analyzes impact; Stage 3 implements; Stage 4 validates.
+Use the Stage 1 work items in Stage 2's technical analysis. Implement against that analysis in Stage 3, then validate the result in Stage 4.
 
 > **Short on time?** Focus on Stages 1 and 2. The spec-to-backlog and technical analysis skills are the most reusable artifacts. You can demonstrate the code generation and testing in a follow-up session.
 

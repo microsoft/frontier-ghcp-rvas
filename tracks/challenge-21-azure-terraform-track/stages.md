@@ -10,9 +10,9 @@
 | 4 | [Modules and Environment Promotion](stage-4-modules-and-environments.md) | ⭐⭐⭐ | 60-75 min | Reusable modules, environment rules, validation checks, and promotion notes |
 | 5 | [Policy, CI, and Drift Response](stage-5-policy-ci-and-drift.md) | ⭐⭐⭐ | 60-75 min | GitHub Actions plan workflow, policy gates, and a drift response runbook |
 
-The stages follow the order most teams hit in real work: get state under control, stand up the platform, lock down identity, turn the layout into something reusable, then add the checks that stop bad changes from slipping through.
+Configure state before provisioning the platform. Add identity controls, extract reusable modules, then define CI and recovery checks.
 
-> **Short on time?** Complete Stages 1, 2, and 5. That gives you a usable Azure Terraform baseline, a real hosting target, and the pipeline guardrails most teams need first.
+> **Short on time?** Complete Stages 1, 2, and 5 for a Terraform baseline, hosting target, and CI checks.
 
 ---
 

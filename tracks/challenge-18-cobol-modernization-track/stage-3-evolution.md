@@ -1,7 +1,7 @@
-# Stage 3: Feature Evolution (Optional)
+# Stage 3: Feature evolution (optional)
 
 **Duration:** Optional, outside the core budget
-**Focus:** Extending the system with new features to test your understanding
+**Focus:** Extend the system with new features to test your understanding
 
 ## Objective
 
@@ -11,12 +11,12 @@ For the five-hour core, skip this stage and continue to
 [Stage 4](stage-4-modernization.md). Do not add a new banking rule while
 characterizing or translating the original transfer workflow.
 
-## Choose Your Features
+## Choose your features
 
 Pick one feature if you continue beyond the core. Each exercises a different
 part of the system.
 
-### Feature A: Multi-Currency Support
+### Feature A: Multi-currency support
 
 Add support for accounts denominated in EUR and GBP in addition to USD. This requires:
 
@@ -25,7 +25,7 @@ Add support for accounts denominated in EUR and GBP in addition to USD. This req
 - Currency display in all reports and statements
 - A restriction: Fixed Deposits must remain in their original currency
 
-### Feature B: Scheduled Transfers
+### Feature B: Scheduled transfers
 
 Add a recurring transfer capability:
 
@@ -34,7 +34,7 @@ Add a recurring transfer capability:
 - Integration into the batch module to execute due transfers during EOD processing
 - Proper error handling when a scheduled transfer fails (insufficient funds)
 
-### Feature C: Account Statements by Email
+### Feature C: Account statements by email
 
 Add the ability to generate a statement and "send" it (write to a file in a customer-specific directory):
 
@@ -43,7 +43,7 @@ Add the ability to generate a statement and "send" it (write to a file in a cust
 - Add a menu option and a batch option (monthly auto-generation)
 - Include all transactions for the billing period
 
-### Feature D: Overdraft Protection Linking
+### Feature D: Overdraft protection linking
 
 Allow a savings account to be linked as overdraft protection for a checking account:
 
@@ -52,7 +52,7 @@ Allow a savings account to be linked as overdraft protection for a checking acco
 - Record both transactions (the transfer and the original withdrawal)
 - A menu option to link/unlink the protection account
 
-### Feature E: Interest Rate Tiers
+### Feature E: Interest rate tiers
 
 Replace the flat savings interest rate with tiered rates based on balance:
 
@@ -63,7 +63,7 @@ Replace the flat savings interest rate with tiered rates based on balance:
 
 Update the interest calculation module and the reporting module to reflect tiers.
 
-### Feature F: Transaction Search
+### Feature F: Transaction search
 
 Add a transaction search that works across all accounts:
 
@@ -79,10 +79,10 @@ Add a transaction search that works across all accounts:
 3. **Write tests** for the new functionality, following the same patterns from Stage 2.
 4. **Update your architecture document** from Stage 1 to reflect the additions.
 
-## Copilot Tips for This Stage
+## Copilot tips for this stage
 
 - Describe the feature to Copilot in banking terms first, then ask for the implementation. "Add a scheduled transfers file that the EOD batch picks up and executes" gives better results than "add a cron job."
-- If implementing in COBOL, ask Copilot to generate code that follows the existing style -- point it at an existing program as a reference.
+- If implementing in COBOL, reference an existing program so Copilot can follow its style.
 - Use agent mode to scaffold the full feature (data model + business logic + menu integration + tests) in one pass, then refine.
 
 ## Verification

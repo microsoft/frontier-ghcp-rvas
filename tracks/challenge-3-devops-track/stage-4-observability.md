@@ -20,7 +20,7 @@ This stage includes a broken Terraform module that you must debug.
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot generates Terraform resources, pod security contexts, and CronJob manifests well. But debugging the broken Key Vault module requires understanding Azure identity models and Terraform resource dependencies -- Copilot may generate plausible but incorrect fixes if the root cause is not identified first.
+Copilot can generate Terraform resources and Kubernetes manifests. Identify the Key Vault module's root cause before accepting a fix. Check the Azure identities and Terraform resource dependencies.
 
 ---
 

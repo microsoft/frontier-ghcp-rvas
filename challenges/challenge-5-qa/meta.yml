@@ -5,7 +5,7 @@ category: core-tracks
 difficulty: intermediate
 duration_minutes: 420
 description: Test real applications through test planning, exploratory testing, automation, and debugging with GitHub Copilot.
-focus: Using GitHub Copilot to test a real application -- test planning, test generation, debugging, and reporting
+focus: Use GitHub Copilot to plan, generate, debug, and report tests for a real application
 tags:
   - core-tracks
   - core

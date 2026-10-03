@@ -5,7 +5,7 @@ category: team-sprints
 difficulty: advanced
 duration_minutes: 300
 description: Deliver a trail application with a technical team and use Impeccable to improve status and warning clarity.
-focus: End-to-end application development with a technical team -- from a provided specification to production deployment -- using GitHub Copilot across every technical role
+focus: Develop an application from a provided specification to production deployment with a technical team using GitHub Copilot
 tags:
   - team-sprints
   - advanced

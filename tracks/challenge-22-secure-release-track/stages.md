@@ -1,4 +1,4 @@
-# Secure Release Review: Stages
+# Secure release review: Stages
 
 ## Stages
 
@@ -9,9 +9,8 @@
 | 3 | [Targeted Remediations and Security Tests](stage-3-remediations-and-tests.md) | ⭐⭐⭐ | 90-110 min | Narrow fixes with security regression tests and recorded results |
 | 4 | [Release Evidence and Residual Risk](stage-4-release-evidence-and-risk.md) | ⭐⭐⭐ | 60-75 min | Residual-risk record, secure-release checklist, and release recommendation |
 
-The work follows a release review rather than a vulnerability scavenger hunt.
-Map what crosses trust boundaries, prove the important gaps, repair a focused
-set, then decide whether the remaining risk is acceptable.
+Map the trust boundaries and prove the security gaps. Fix a focused set, then
+decide whether the remaining risk is acceptable for release.
 
 > **Short on time?** Complete Stages 1, 2, and 4, then remediate one
 > release-blocking finding from Stage 3 with a regression test.

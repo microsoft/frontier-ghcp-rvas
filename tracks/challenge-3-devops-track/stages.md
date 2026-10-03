@@ -10,7 +10,7 @@
 | 4 | [Observability and Security Hardening](stage-4-observability.md) | ⭐⭐⭐ | 60-90 min | Fix broken Key Vault module, pod security, metrics endpoint |
 | 5 | [CI/CD Pipeline and Deployment Strategy](stage-5-cicd.md) | ⭐⭐⭐ | 60-90 min | GitHub Actions, blue/green deployment, DR runbook |
 
-The application is already complete -- your job is the infrastructure. Copilot generates valid Dockerfile, YAML, and HCL syntax, but Stage 4 requires debugging broken Terraform and Stage 5 requires deployment strategy decisions that need operational judgment.
+The application is complete. Build the infrastructure, verify the generated Dockerfile, YAML, and HCL, and test the Terraform fixes. Choose a deployment strategy that fits the service.
 
 > **Short on time?** Skip NetworkPolicy in Stage 2, skip remote state in Stage 3, do only the Key Vault debug in Stage 4, and focus on the GitHub Actions workflow only in Stage 5.
 
