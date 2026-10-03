@@ -28,8 +28,24 @@ for (const file of sourceFiles) {
     cpSync(source, target);
   }
 }
-execFileSync('git', ['init', '--quiet'], { cwd: template });
+execFileSync('git', ['init', '--quiet', '--initial-branch=main'], { cwd: template });
+execFileSync('git', ['config', 'user.name', 'Setup tests'], { cwd: template });
+execFileSync('git', ['config', 'user.email', 'setup-tests@example.invalid'], { cwd: template });
+execFileSync('git', ['config', 'gc.auto', '0'], { cwd: template });
+execFileSync('git', ['config', 'maintenance.auto', 'false'], { cwd: template });
+execFileSync('git', ['add', '-A'], { cwd: template });
+execFileSync('git', ['commit', '--quiet', '-m', 'Setup fixture'], { cwd: template });
 execFileSync('git', ['remote', 'add', 'origin', '/template'], { cwd: template });
+execFileSync('git', ['remote', 'set-url', '--push', 'origin', '/template-push'], { cwd: template });
+execFileSync('git', ['remote', 'add', 'upstream', '/upstream'], { cwd: template });
+execFileSync('git', ['config', 'branch.autoSetupMerge', 'always'], { cwd: template });
+
+function gitOutput(workspace, ...args) {
+  return execFileSync('git', args, { cwd: workspace, encoding: 'utf8' }).trim();
+}
+
+const initialCommit = gitOutput(template, 'rev-parse', 'HEAD');
+const initialRemotes = gitOutput(template, 'remote', '-v');
 
 function mapping(name) {
   const block = setup.match(new RegExp(`declare -A ${name}=\\(([\\s\\S]*?)\\n\\)`))[1];
@@ -67,9 +83,9 @@ function fixture(t) {
   return workspace;
 }
 
-function run(runner, workspace, key) {
+function run(runner, workspace, key, env = {}) {
   return spawnSync(runner.command, runner.args(key), {
-    cwd: workspace, encoding: 'utf8', timeout: 30_000
+    cwd: workspace, encoding: 'utf8', timeout: 30_000, env: { ...process.env, ...env }
   });
 }
 
@@ -105,7 +121,15 @@ for (const runner of runners) {
       assert.equal(readFileSync(join(workspace, '.github/copilot-instructions.md'), 'utf8'), '');
       assert.deepEqual(readdirSync(join(workspace, '.github/agents')), ['.gitkeep']);
       assert.deepEqual(readdirSync(join(workspace, '.github/skills')), ['.gitkeep']);
-      assert.equal(execFileSync('git', ['remote'], { cwd: workspace, encoding: 'utf8' }), '');
+      const branch = gitOutput(workspace, 'branch', '--show-current');
+      const id = key.split('-')[1];
+      assert.match(branch, new RegExp(`^challenge-${id}-[a-f0-9]{12}$`));
+      assert.equal(gitOutput(workspace, 'remote', '-v'), initialRemotes);
+      assert.equal(gitOutput(workspace, 'rev-parse', 'HEAD'), initialCommit);
+      assert.equal(gitOutput(workspace, 'rev-parse', 'main'), initialCommit);
+      assert.equal(spawnSync('git', ['config', '--get', `branch.${branch}.remote`], {
+        cwd: workspace
+      }).status, 1);
 
       const starterFiles = trackedFiles.filter(file => file.startsWith(`challenges/${challenge}/`));
       for (const file of starterFiles) {
@@ -124,6 +148,7 @@ for (const runner of runners) {
       }
       const readme = readFileSync(join(workspace, 'README.md'), 'utf8');
       assert.equal((readme.match(/\[Start your challenge\]/g) ?? []).length, 1);
+      assert(readme.includes(branch));
       for (const target of markdownLinks('README.md', workspace)) {
         assert(existsSync(target), `Broken participant README link: ${target}`);
       }
@@ -139,8 +164,10 @@ for (const runner of runners) {
         mkdirSync(dirname(join(workspace, file)), { recursive: true });
         writeFileSync(join(workspace, file), 'participant content\n');
       }
-      execFileSync('git', ['remote', 'add', 'origin', '/participant-owned'], { cwd: workspace });
+      execFileSync('git', ['remote', 'set-url', 'origin', '/participant-owned'], { cwd: workspace });
       assertSuccess(run(runner, workspace, key));
+      assert.equal(gitOutput(workspace, 'branch', '--show-current'), branch);
+      assert.equal(gitOutput(workspace, 'branch', '--format=%(refname:short)').split('\n').length, 2);
 
       const otherKey = Object.keys(challengeMap).find(candidate => candidate !== key);
       const switched = run(runner, workspace, otherKey);
@@ -155,6 +182,7 @@ for (const runner of runners) {
       assert.equal(readFileSync(join(workspace, marker), 'utf8'), `${key}\n`);
       assert.equal(readFileSync(join(workspace, 'FACILITATOR_GUIDE.md'), 'utf8'),
         'older workspace content\n');
+      assert.equal(gitOutput(workspace, 'branch', '--show-current'), branch);
       for (const file of participantFiles) {
         assert.equal(readFileSync(join(workspace, file), 'utf8'), 'participant content\n');
       }
@@ -190,6 +218,86 @@ for (const runner of runners) {
       assert.equal(execFileSync('git', ['remote', 'get-url', 'origin'], {
         cwd: workspace, encoding: 'utf8'
       }).trim(), '/template');
+      assert.equal(gitOutput(workspace, 'branch', '--show-current'), 'main');
+    });
+
+  test(`${runner.name}: detached checkout keeps edits and creates a unique branch`,
+    { skip: runner.skip }, t => {
+      const branches = [];
+      for (let i = 0; i < 2; i++) {
+        const workspace = fixture(t);
+        execFileSync('git', ['switch', '--detach', '--quiet'], { cwd: workspace });
+        const starter = 'challenges/challenge-4-frontend/participant.txt';
+        writeFileSync(join(workspace, starter), 'uncommitted participant work\n');
+        writeFileSync(join(workspace, 'LICENSE'), 'local license edit\n');
+        assertSuccess(run(runner, workspace, 'challenge-4-frontend'));
+        const branch = gitOutput(workspace, 'branch', '--show-current');
+        assert.match(branch, /^challenge-4-[a-f0-9]{12}$/);
+        branches.push(branch);
+        assert.equal(readFileSync(join(workspace, starter), 'utf8'),
+          'uncommitted participant work\n');
+        assert.equal(readFileSync(join(workspace, 'LICENSE'), 'utf8'), 'local license edit\n');
+        assert.equal(gitOutput(workspace, 'rev-parse', 'HEAD'), initialCommit);
+        assert.equal(gitOutput(workspace, 'remote', '-v'), initialRemotes);
+
+        execFileSync('git', ['switch', '--quiet', '-c', 'participant-work'], { cwd: workspace });
+        assertSuccess(run(runner, workspace, 'challenge-4-frontend'));
+        assert.equal(gitOutput(workspace, 'branch', '--show-current'), 'participant-work');
+      }
+      assert.notEqual(branches[0], branches[1]);
+    });
+
+  test(`${runner.name}: missing Git history stops setup before cleanup`,
+    { skip: runner.skip }, t => {
+      const workspace = fixture(t);
+      rmSync(join(workspace, '.git'), { recursive: true });
+      execFileSync('git', ['init', '--quiet', '--initial-branch=main'], { cwd: workspace });
+      const instructions = readFileSync(join(workspace, '.github/copilot-instructions.md'));
+      const result = run(runner, workspace, 'challenge-4-frontend');
+      assert.notEqual(result.status, 0);
+      assert.match(result.stdout + result.stderr, /at least one commit/);
+      assert(existsSync(join(workspace, 'web')));
+      assert(existsSync(join(workspace, 'CONTRIBUTING.md')));
+      assert(!existsSync(join(workspace, marker)));
+      assert.deepEqual(readFileSync(join(workspace, '.github/copilot-instructions.md')), instructions);
+    });
+
+  test(`${runner.name}: branch creation failure stops setup before cleanup`,
+    { skip: runner.skip }, t => {
+      const workspace = fixture(t);
+      const bin = join(workspace, 'test-bin');
+      mkdirSync(bin);
+      writeFileSync(join(bin, 'git'),
+        '#!/bin/sh\nif [ "$3" = "switch" ]; then echo "Branch creation failed" >&2; exit 23; fi\nexec "$REAL_GIT" "$@"\n',
+        { mode: 0o755 });
+      const realGit = execFileSync('bash', ['-c', 'command -v git'], { encoding: 'utf8' }).trim();
+      const instructions = readFileSync(join(workspace, '.github/copilot-instructions.md'));
+      const result = run(runner, workspace, 'challenge-4-frontend', {
+        PATH: `${bin}:${process.env.PATH}`, REAL_GIT: realGit
+      });
+      assert.notEqual(result.status, 0);
+      assert.match(result.stdout + result.stderr, /Branch creation failed/);
+      assert(existsSync(join(workspace, 'web')));
+      assert(existsSync(join(workspace, 'CONTRIBUTING.md')));
+      assert(!existsSync(join(workspace, marker)));
+      assert.deepEqual(readFileSync(join(workspace, '.github/copilot-instructions.md')), instructions);
+      assert.equal(gitOutput(workspace, 'branch', '--show-current'), 'main');
+      assert.equal(gitOutput(workspace, 'remote', '-v'), initialRemotes);
+    });
+
+  test(`${runner.name}: standalone clean-start keeps the current branch and remotes`,
+    { skip: runner.skip }, t => {
+      const workspace = fixture(t);
+      assertSuccess(run(runner, workspace, 'challenge-4-frontend'));
+      const branch = gitOutput(workspace, 'branch', '--show-current');
+      const args = runner.name === 'Bash' ? ['scripts/clean-start.sh'] :
+        ['-NoLogo', '-NoProfile', '-File', 'scripts/clean-start.ps1'];
+      assertSuccess(spawnSync(runner.command, args, {
+        cwd: workspace, encoding: 'utf8', timeout: 30_000
+      }));
+      assert.equal(gitOutput(workspace, 'branch', '--show-current'), branch);
+      assert.equal(gitOutput(workspace, 'remote', '-v'), initialRemotes);
+      assert.equal(gitOutput(workspace, 'rev-parse', 'main'), initialCommit);
     });
 }
 

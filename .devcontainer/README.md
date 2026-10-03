@@ -4,7 +4,11 @@ This folder contains dedicated DevContainer configurations for each GitHub Copil
 
 **Use a disposable clone.** First-time setup keeps the selected challenge and
 its guides, removes template-only material, and rewrites the root README with
-one start link. Rebuilding preserves participant files and Copilot customizations.
+one start link. It keeps Git remotes and switches to
+`challenge-<id>-<random suffix>` before cleanup. Setup does not commit or push.
+Check `git remote -v` before pushing.
+
+Rebuilding preserves the current branch, participant files, and Copilot customizations.
 Older prepared workspaces keep their existing layout. Use a fresh clone to switch
 challenges or get the slimmer layout.
 

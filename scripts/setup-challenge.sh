@@ -6,7 +6,7 @@
 # Repeat setup preserves participant files and Copilot customizations.
 #
 # Also runs the clean-start logic (creates empty repository instructions,
-# agent, and skill locations; removes samples; detaches the git remote).
+# agent, and skill locations; removes samples; keeps git remotes).
 #
 # Usage:
 #   ./scripts/setup-challenge.sh <devcontainer-folder-name>
@@ -210,6 +210,18 @@ echo "  Track folder:     tracks/$TRACK_DIR_NAME"
 echo "  DevContainer:     .devcontainer/$CHALLENGE_KEY"
 echo ""
 
+if ! git -C "$REPO_ROOT" rev-parse --verify HEAD >/dev/null 2>&1; then
+  echo "Error: setup requires a Git checkout with at least one commit. No cleanup was performed." >&2
+  exit 1
+fi
+
+CHALLENGE_ID="${CHALLENGE_KEY#challenge-}"
+CHALLENGE_ID="${CHALLENGE_ID%%-*}"
+BRANCH_SUFFIX="$(od -An -N6 -tx1 /dev/urandom | tr -d ' \n')"
+WORK_BRANCH="challenge-$CHALLENGE_ID-$BRANCH_SUFFIX"
+git -C "$REPO_ROOT" switch --no-track -c "$WORK_BRANCH"
+echo "[OK] Created work branch '$WORK_BRANCH'; git remotes are unchanged."
+
 # ── Clean .github and non-participant artifacts ─────────────────────
 
 clean_github_and_meta
@@ -275,7 +287,8 @@ cat > "$REPO_ROOT/.devcontainer/README.md" <<EOF
 This workspace is configured for **$CHALLENGE_KEY**.
 
 Setup keeps the selected challenge and its guides.
-Rebuilding preserves participant files and Copilot customizations.
+Git remotes are unchanged. Work starts on \`$WORK_BRANCH\`.
+Rebuilding preserves your current branch, files, and Copilot customizations.
 EOF
 echo "[OK] Updated .devcontainer/README.md"
 
@@ -307,6 +320,9 @@ cat > "$REPO_ROOT/README.md" <<EOF
 
 Your track explains the stages and links to the starter in
 \`challenges/$CHALLENGE_DIR/\`.
+
+Setup created \`$WORK_BRANCH\` and kept your Git remotes.
+Check \`git remote -v\` before pushing. Setup does not push or commit changes.
 
 ## Setup and Help
 

@@ -217,8 +217,11 @@ the workspace. Follow the challenge link in the generated root README.
 
 For manual setup, follow
 [Getting Started](./tracks/getting-started.md#manual-setup-without-a-devcontainer).
-First-time setup resets the template's Copilot customizations and detaches its
-git remote. Repeating setup for the same challenge preserves your work.
+First-time setup resets the template's Copilot customizations and creates a
+branch named `challenge-<id>-<random suffix>`, such as `challenge-4-a1b2c3d4e5f6`.
+It keeps all Git remotes and does not commit or push changes. Check
+`git remote -v` before pushing. Repeating setup for the same challenge preserves
+your current branch and work.
 
 **Do not run `clean-start` after you begin.** It resets Copilot customizations,
 including installed skills.

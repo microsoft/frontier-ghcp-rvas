@@ -5,7 +5,7 @@
 # Repeat setup preserves participant files and Copilot customizations.
 #
 # Also runs the clean-start logic (creates empty repository instructions,
-# agent, and skill locations; removes samples; detaches the git remote).
+# agent, and skill locations; removes samples; keeps git remotes).
 #
 # Usage:
 #   .\scripts\setup-challenge.ps1 -Challenge <devcontainer-folder-name>
@@ -198,6 +198,20 @@ Write-Host "  Track folder:     tracks/$TrackDirName"
 Write-Host "  DevContainer:     .devcontainer/$Challenge"
 Write-Host ""
 
+git -C $RepoRoot rev-parse --verify HEAD *> $null
+if ($LASTEXITCODE -ne 0) {
+    throw "Setup requires a Git checkout with at least one commit. No cleanup was performed."
+}
+
+$ChallengeId = $Challenge.Split("-")[1]
+$BranchSuffix = [Guid]::NewGuid().ToString("N").Substring(0, 12)
+$WorkBranch = "challenge-$ChallengeId-$BranchSuffix"
+git -C $RepoRoot switch --no-track -c $WorkBranch
+if ($LASTEXITCODE -ne 0) {
+    throw "Could not create work branch '$WorkBranch'. No cleanup was performed."
+}
+Write-Host "[OK] Created work branch '$WorkBranch'; git remotes are unchanged." -ForegroundColor Green
+
 # Clean .github and non-participant artifacts
 Invoke-CleanGitHubAndMeta
 
@@ -245,7 +259,8 @@ $ReadmePath = Join-Path $DevcontainerDir "README.md"
 This workspace is configured for **$Challenge**.
 
 Setup keeps the selected challenge and its guides.
-Rebuilding preserves participant files and Copilot customizations.
+Git remotes are unchanged. Work starts on ``$WorkBranch``.
+Rebuilding preserves your current branch, files, and Copilot customizations.
 "@ | Set-Content -Path $ReadmePath
 Write-Host "[OK] Updated .devcontainer/README.md" -ForegroundColor Green
 
@@ -281,6 +296,9 @@ $RootReadme = Join-Path $RepoRoot "README.md"
 
 Your track explains the stages and links to the starter in
 ``challenges/$ChallengeDir/``.
+
+Setup created ``$WorkBranch`` and kept your Git remotes.
+Check ``git remote -v`` before pushing. Setup does not push or commit changes.
 
 ## Setup and Help
 

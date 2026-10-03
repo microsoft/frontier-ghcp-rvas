@@ -75,14 +75,4 @@ clean_github_and_meta() {
     echo "[SKIP] .gitattributes not found"
   fi
 
-  # ── Remove git remote origin ────────────────────────────────────────
-
-  if git -C "$REPO_ROOT" remote get-url origin &>/dev/null; then
-    local remote_url
-    remote_url=$(git -C "$REPO_ROOT" remote get-url origin)
-    git -C "$REPO_ROOT" remote remove origin
-    echo "[OK] Removed git remote 'origin' (was: $remote_url)"
-  else
-    echo "[SKIP] No git remote 'origin' found"
-  fi
 }

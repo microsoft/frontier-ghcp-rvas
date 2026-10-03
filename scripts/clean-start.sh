@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# clean-start.sh -- Reset the .github directory and git remote for a fresh GitHub Copilot Adoption delivery session start.
+# clean-start.sh -- Reset Copilot customizations for a fresh delivery session.
 #
 # What it does:
 #   1. Creates an empty .github/copilot-instructions.md
@@ -9,8 +9,7 @@
 #   4. Removes Squad workflows from .github/workflows/
 #   5. Removes .github/prompts/
 #   6. Removes .copilot/, .squad/, .playwright-mcp/, .gitattributes
-#   7. Removes the git remote "origin" so you don't accidentally push to the template repo
-#   8. Stages and commits the cleaned state so you start with a clean working tree
+#   7. Stages and commits the cleaned state on the current branch, keeping git remotes
 #
 # Usage:
 #   chmod +x scripts/clean-start.sh
@@ -37,8 +36,8 @@ echo "[OK] Committed clean state to local repo"
 echo ""
 echo "Done. Your repo is clean and committed locally."
 echo "Next steps:"
-echo "  1. Add your own remote:  git remote add origin <your-repo-url>"
+echo "  1. Check the target repository and branch:  git remote -v && git branch --show-current"
 echo "  2. Create repository instructions in .github/copilot-instructions.md"
 echo "  3. Create a custom agent in .github/agents/"
 echo "  4. Create a custom skill in .github/skills/"
-echo "  5. Push when ready:      git push -u origin main"
+echo "  5. Push your current branch when ready:    git push -u origin HEAD"

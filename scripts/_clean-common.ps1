@@ -80,17 +80,4 @@ function Invoke-CleanGitHubAndMeta {
         Write-Host "[SKIP] .gitattributes not found" -ForegroundColor Yellow
     }
 
-    # ── Remove git remote origin ────────────────────────────────────────
-
-    try {
-        $RemoteUrl = git -C $RepoRoot remote get-url origin 2>$null
-        if ($LASTEXITCODE -eq 0) {
-            git -C $RepoRoot remote remove origin
-            Write-Host "[OK] Removed git remote 'origin' (was: $RemoteUrl)" -ForegroundColor Green
-        } else {
-            Write-Host "[SKIP] No git remote 'origin' found" -ForegroundColor Yellow
-        }
-    } catch {
-        Write-Host "[SKIP] No git remote 'origin' found" -ForegroundColor Yellow
-    }
 }

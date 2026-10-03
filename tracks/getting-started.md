@@ -24,14 +24,18 @@ On first setup, the devcontainer:
 - Removes the documentation website, full catalog, and facilitator material
 - Clears `.github/copilot-instructions.md` so you start fresh
 - Removes sample agents and skills from `.github/`
-- Detaches the git remote so you do not accidentally push to the template
-  repository
+- Creates and switches to `challenge-<id>-<random suffix>` from the current
+  commit, keeping all Git remotes and leaving the branch without an upstream
 
 **Open the root README and follow its challenge link.** The selected starter
 and track remain, along with shared help and required configuration.
 
-Rebuilding a prepared workspace skips cleanup and preserves your files,
-including installed skills and Copilot customizations. Older prepared
+**Check `git remote -v` before pushing.** Setup does not commit or push changes.
+Branch creation requires a Git checkout with at least one commit and works
+when Codespaces opens a detached commit.
+
+Rebuilding a prepared workspace skips cleanup and preserves your current
+branch and files, including installed skills and Copilot customizations. Older prepared
 workspaces are also preserved; use a fresh clone to get the slimmer layout.
 Use a separate clone to switch challenges.
 
