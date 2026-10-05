@@ -303,7 +303,7 @@ done
 
 for file in CONTRIBUTING.md AGENTS.md CONTEXT.md FACILITATOR_GUIDE.md \
   learning-paths.json role-collections.json docs/index.md \
-  docs/challenges docs/tracks docs/TROUBLESHOOTING.md \
+  docs/challenges docs/tracks \
   scripts/setup-challenge.test.mjs; do
   if [[ -e "$REPO_ROOT/$file" || -L "$REPO_ROOT/$file" ]]; then
     rm -f -- "$REPO_ROOT/$file"

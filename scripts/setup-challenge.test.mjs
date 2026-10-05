@@ -14,7 +14,10 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const setup = readFileSync(join(root, 'scripts/setup-challenge.sh'), 'utf8');
 const trackedFiles = execFileSync('git', ['ls-files'], { cwd: root, encoding: 'utf8' })
   .trim().split('\n');
-const sourceFiles = [...new Set([...trackedFiles, 'scripts/setup-challenge.test.mjs'])];
+const sourceFiles = [...new Set([
+  ...trackedFiles.filter(file => existsSync(join(root, file))),
+  'scripts/setup-challenge.test.mjs'
+])];
 const template = mkdtempSync(join(tmpdir(), 'participant-setup-template-'));
 after(() => rmSync(template, { recursive: true, force: true }));
 
@@ -59,7 +62,7 @@ const marker = '.devcontainer/.workspace-prepared';
 const removed = [
   'web', 'byoc', 'CONTRIBUTING.md', 'AGENTS.md', 'CONTEXT.md',
   'FACILITATOR_GUIDE.md', 'learning-paths.json', 'role-collections.json',
-  'docs/index.md', 'docs/challenges', 'docs/tracks', 'docs/TROUBLESHOOTING.md',
+  'docs/index.md', 'docs/challenges', 'docs/tracks',
   'scripts/setup-challenge.test.mjs', '.github/workflows', '.github/prompts'
 ];
 const retained = [
@@ -303,6 +306,24 @@ for (const runner of runners) {
 
 const bash = execFileSync('bash', ['-c', 'command -v bash'], { encoding: 'utf8' }).trim();
 for (const key of Object.keys(challengeMap)) {
+  test(`${key}: container installs Copilot CLI`, () => {
+    const config = JSON.parse(readFileSync(
+      join(root, `.devcontainer/${key}/devcontainer.json`), 'utf8')
+      .replace(/^\s*\/\/.*$/gm, ''));
+    if (key === 'challenge-30-spec-driven') {
+      assert.equal(config.postCreateCommand,
+        'bash .devcontainer/challenge-30-spec-driven/setup.sh');
+      const setupScript = readFileSync(
+        join(root, '.devcontainer/challenge-30-spec-driven/setup.sh'), 'utf8');
+      assert.match(setupScript,
+        /npm --prefix "\$challenge\/\.tools\/copilot" install --no-audit --no-fund @github\/copilot@1\.0\.88-1/);
+      assert.ok(config.remoteEnv.PATH.includes(
+        '/challenges/challenge-30-spec-driven/.tools/copilot/node_modules/.bin:'));
+    } else {
+      assert.deepEqual(config.features['ghcr.io/devcontainers/features/copilot-cli:1'], {});
+    }
+  });
+
   test(`${key}: container setup failure is not masked`, t => {
     const workspace = mkdtempSync(join(tmpdir(), 'participant-setup-command-'));
     t.after(() => rmSync(workspace, { recursive: true, force: true }));

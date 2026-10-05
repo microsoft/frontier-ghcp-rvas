@@ -7,7 +7,7 @@ Use these guides during setup and challenge work.
 - [GitHub Copilot guide](./copilot-guide.md) explains agents, tools, and context mentions.
 - [Prompt engineering guide](./prompt-engineering.md) covers requests for Agent mode.
 - [MCP servers guide](./mcp-servers.md) covers external tools and data.
-- [Troubleshooting guide](./TROUBLESHOOTING.md) covers common failures.
+- [Troubleshooting guide](../TROUBLESHOOTING.md) covers common failures.
 
 ## Pick a track
 
@@ -22,4 +22,4 @@ Use these guides during setup and challenge work.
 
 ---
 
-[Copilot Guide](./copilot-guide.md) | [Prompt Engineering](./prompt-engineering.md) | [MCP Servers](./mcp-servers.md) | [Troubleshooting](./TROUBLESHOOTING.md)
+[Copilot Guide](./copilot-guide.md) | [Prompt Engineering](./prompt-engineering.md) | [MCP Servers](./mcp-servers.md) | [Troubleshooting](../TROUBLESHOOTING.md)

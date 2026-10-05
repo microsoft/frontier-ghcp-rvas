@@ -203,6 +203,7 @@ See the **[BYOC Kit README](./byoc/README.md)** for the end-to-end flow and a wo
 
 The environment is pre-configured with:
 
+- GitHub Copilot CLI (`copilot`) in every challenge configuration
 - Node.js (LTS)
 - Python 3.11
 - Docker

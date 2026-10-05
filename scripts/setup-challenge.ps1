@@ -276,7 +276,7 @@ foreach ($RemoveDir in @("web", "byoc")) {
 foreach ($RemoveFile in @(
     "CONTRIBUTING.md", "AGENTS.md", "CONTEXT.md", "FACILITATOR_GUIDE.md",
     "learning-paths.json", "role-collections.json", "docs/index.md",
-    "docs/challenges", "docs/tracks", "docs/TROUBLESHOOTING.md",
+    "docs/challenges", "docs/tracks",
     "scripts/setup-challenge.test.mjs"
 )) {
     $RemovePath = Join-Path $RepoRoot $RemoveFile

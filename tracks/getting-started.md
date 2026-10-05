@@ -16,6 +16,10 @@ Each challenge has its own devcontainer configuration under `.devcontainer/`.
 When you open the repository in a devcontainer through Codespaces or VS Code
 Dev Containers, pick the configuration that matches your challenge.
 
+**GitHub Copilot CLI is installed in every challenge container.** Run `copilot`
+in the workspace terminal and sign in when prompted. Rebuild an existing
+Codespace or devcontainer to pick up the installation.
+
 On first setup, the devcontainer:
 
 - Runs the tool and dependency installation for your challenge
