@@ -2,6 +2,7 @@
 	"name": "Challenge 13 - Living Documentation",
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
 	"features": {
+		"ghcr.io/devcontainers/features/copilot-cli:1": {},
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "21",
 			"installMaven": "true",

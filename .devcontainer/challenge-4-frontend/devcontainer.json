@@ -2,6 +2,7 @@
 	"name": "Challenge 4 - Frontend",
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:20",
 	"features": {
+		"ghcr.io/devcontainers/features/copilot-cli:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
 	"customizations": {

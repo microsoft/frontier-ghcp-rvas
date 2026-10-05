@@ -2,6 +2,11 @@
 
 This folder contains dedicated DevContainer configurations for each GitHub Copilot Adoption challenge.
 
+**Every configuration installs GitHub Copilot CLI.** Open a terminal and run
+`copilot` to sign in and start a session. Rebuild an existing Codespace or
+devcontainer to pick up the installation. Challenge 30 keeps its pinned CLI
+version for the Spec Kit workflow.
+
 **Use a disposable clone.** First-time setup keeps the selected challenge and
 its guides, removes template-only material, and rewrites the root README with
 one start link. It keeps Git remotes and switches to

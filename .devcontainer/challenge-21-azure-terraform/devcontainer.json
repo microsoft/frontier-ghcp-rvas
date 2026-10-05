@@ -10,6 +10,7 @@
 	// download with a SHA256 checksum only (no GPG, no keyserver). devcontainer.json
 	// supports JSONC, so these comments are valid here.
 	"features": {
+		"ghcr.io/devcontainers/features/copilot-cli:1": {},
 		"ghcr.io/devcontainers/features/azure-cli:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
