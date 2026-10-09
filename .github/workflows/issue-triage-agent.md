@@ -11,10 +11,6 @@ on:
 permissions:
   issues: read
 
-sandbox:
-  agent:
-    sudo: false
-
 tools:
   cli-proxy: true
   github:
@@ -38,6 +34,8 @@ List open issues in ${{ github.repository }} that have no labels. For each unlab
 Skip issues that:
 - Already have any of these labels
 - Have been assigned to any user (especially non-bot users)
+
+Issues whose content is redacted or hidden by the integrity filter (typically issues opened by bots or non-members) are expected and not a failure. Treat them as skipped. If no issue can be triaged, call `noop` with a short explanation. Do not call `report_incomplete` for filtered or redacted issues.
 
 After adding the label to an issue, mention the issue author in a comment using this format (follow shared/reporting.md guidelines):
 
