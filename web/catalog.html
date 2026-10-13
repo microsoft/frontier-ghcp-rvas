@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Challenge Catalog - GitHub Copilot Adoption</title>
-  <meta name="description" content="Browse 31 GitHub Copilot challenges by category and difficulty." />
+  <meta name="description" content="Browse 31 GitHub Copilot challenges by category, difficulty, and tag." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=6" />
   <link rel="stylesheet" href="assets/css/shell.css" />
   <link rel="icon" href="assets/img/logo-mark-white.png" type="image/png" />
 </head>
@@ -44,7 +44,7 @@
       <div class="wrap">
         <span class="eyebrow">Challenge catalog</span>
         <h1 id="catalogHeading" style="margin-top:14px">Choose a challenge.</h1>
-        <p>Filter by category, difficulty, or keyword. Open any challenge to see the work, setup, and expected result.</p>
+        <p id="catalogCopy">Filter by category, difficulty, tag, or keyword. Open any challenge to see the work, setup, and expected result.</p>
         <p style="margin-top:18px"><a class="btn btn-primary btn-sm" href="builder.html">Build a custom set for your team</a></p>
       </div>
     </section>
@@ -71,11 +71,19 @@
     </div>
 
     <section class="section-tight" aria-labelledby="gridLabel">
-      <div class="wrap">
-        <h2 class="sr-only" id="gridLabel">Challenge list</h2>
-        <div id="grid" role="list" aria-label="Challenges">
-          <div class="empty" role="status">Loading challenges…</div>
+      <div class="wrap catalog-layout">
+        <div class="catalog-results">
+          <h2 class="sr-only" id="gridLabel">Challenge list</h2>
+          <div id="grid" role="list" aria-label="Challenges">
+            <div class="empty" role="status">Loading challenges…</div>
+          </div>
         </div>
+        <aside class="tag-cloud-panel" aria-labelledby="tagCloudHeading">
+          <div class="tag-cloud-kicker">Browse another way</div>
+          <h2 id="tagCloudHeading">Tags</h2>
+          <p>Select a tag to show the sessions that use it.</p>
+          <div class="tag-cloud" id="tagCloud" aria-label="Filter challenges by tag"></div>
+        </aside>
       </div>
     </section>
 
@@ -99,8 +107,8 @@
   </footer>
 
   <script src="assets/js/marked.min.js?v=4"></script>
-  <script src="assets/js/core.js?v=5"></script>
-  <script src="assets/js/catalog.js?v=4"></script>
+  <script src="assets/js/core.js?v=6"></script>
+  <script src="assets/js/catalog.js?v=5"></script>
   <script src="assets/js/shell.js"></script>
 </body>
 </html>

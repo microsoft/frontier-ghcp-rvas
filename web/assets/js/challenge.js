@@ -121,6 +121,17 @@
       starterLink.rel = 'noopener';
     }
 
+    const codespacesLink = document.getElementById('codespacesLink');
+    if (codespacesLink && c.devcontainer_path) {
+      const query = new URLSearchParams({ devcontainer_path: c.devcontainer_path });
+      codespacesLink.href = 'https://codespaces.new/microsoft/frontier-ghcp-rvas?' + query.toString();
+      codespacesLink.target = '_blank';
+      codespacesLink.rel = 'noopener';
+      codespacesLink.title = 'Open the Codespaces creation page with this challenge configuration selected';
+    } else if (codespacesLink) {
+      codespacesLink.style.display = 'none';
+    }
+
     const prereqPanel = document.getElementById('prereqPanel');
     const prereqList = document.getElementById('prereqList');
     if (prereqPanel && prereqList) {
@@ -147,7 +158,7 @@
       const tags = c.tags || [];
       if (tags.length) {
         tagsList.innerHTML = tags
-          .map((t) => `<span class="badge badge-tag">${FP.esc(t)}</span>`)
+          .map((t) => `<a class="badge badge-tag tag-link" href="${FP.catalogTagUrl(t)}">${FP.esc(t)}</a>`)
           .join('');
         tagsList.style.display = 'flex';
         tagsList.style.flexWrap = 'wrap';

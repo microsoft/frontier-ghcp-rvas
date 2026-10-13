@@ -57,6 +57,7 @@ const CATEGORY_CONFIG = {
 /* ─── Paths ──────────────────────────────────────────────────────────────── */
 const ROOT                = path.resolve(__dirname, '..');
 const CHALLENGES_DIR      = path.join(ROOT, 'challenges');
+const DEVCONTAINERS_DIR   = path.join(ROOT, '.devcontainer');
 const TRACKS_DIR          = path.join(ROOT, 'tracks');
 const DOCS_DIR            = path.join(ROOT, 'docs');
 const OUT_DATA_DIR        = path.join(__dirname, 'assets', 'data');
@@ -66,6 +67,14 @@ const LEARNING_PATHS_PATH = path.join(ROOT, 'learning-paths.json');
 const ROLE_COLLECTIONS_PATH = path.join(ROOT, 'role-collections.json');
 const FACILITATOR_PATH    = path.join(ROOT, 'FACILITATOR_GUIDE.md');
 const TROUBLESHOOT_PATH   = path.join(ROOT, 'TROUBLESHOOTING.md');
+const CONTENT_PAGES       = [
+  { slug: 'copilot-guide', source: path.join(DOCS_DIR, 'copilot-guide.md') },
+  { slug: 'prompt-engineering', source: path.join(DOCS_DIR, 'prompt-engineering.md') },
+  { slug: 'mcp-servers', source: path.join(DOCS_DIR, 'mcp-servers.md') },
+  { slug: 'facilitator-guide', source: FACILITATOR_PATH },
+  { slug: 'troubleshooting', source: TROUBLESHOOT_PATH },
+  { slug: 'getting-started', source: path.join(TRACKS_DIR, 'getting-started.md') }
+];
 
 /* ─── Repository (for resolving relative links in guides) ─────────────────── */
 const REPO_URL    = 'https://github.com/microsoft/frontier-ghcp-rvas';
@@ -177,6 +186,27 @@ function ensureDir(dir) {
 function collectChallenges() {
   const challenges = [];
   const errors = [];
+  const devcontainersByNumber = new Map();
+
+  for (const entry of readDirSafe(DEVCONTAINERS_DIR)) {
+    if (!entry.isDirectory()) continue;
+    const match = entry.name.match(/^challenge-(\d+)-/);
+    if (!match) continue;
+
+    const challengeNumber = Number(match[1]);
+    const configPath = path.join(DEVCONTAINERS_DIR, entry.name, 'devcontainer.json');
+    if (!fs.existsSync(configPath)) continue;
+
+    if (devcontainersByNumber.has(challengeNumber)) {
+      errors.push(`Multiple devcontainer configurations found for challenge ${challengeNumber}`);
+      continue;
+    }
+
+    devcontainersByNumber.set(
+      challengeNumber,
+      path.relative(ROOT, configPath).replace(/\\/g, '/')
+    );
+  }
 
   for (const entry of readDirSafe(CHALLENGES_DIR)) {
     if (!entry.isDirectory()) continue;
@@ -218,6 +248,11 @@ function collectChallenges() {
         errors.push(`${slug}/meta.yml: missing 'contents_url' field`);
         continue;
       }
+      const devcontainerPath = devcontainersByNumber.get(meta.number);
+      if (!devcontainerPath) {
+        errors.push(`${slug}/meta.yml: no matching devcontainer configuration for challenge ${meta.number}`);
+        continue;
+      }
 
       const challenge = {
         id: meta.id,
@@ -234,6 +269,7 @@ function collectChallenges() {
         track_url: meta.track_url,
         contents_url: meta.contents_url,
         starter_path: `challenges/${slug}/`,
+        devcontainer_path: devcontainerPath,
         pages: []
       };
 
@@ -280,7 +316,7 @@ function challengePageUrl(challengeId, pageId, hash) {
 
 /* Rewrite markdown links, but not images. `publishedPages` maps normalized
  * absolute source paths to page IDs. */
-function rewriteChallengeLinks(content, fragmentDir, challengeId, publishedPages) {
+function rewriteChallengeLinks(content, fragmentDir, challengeId, publishedPages, contentPages) {
   const LINK_RE = /(!?)\[((?:[^\]\\]|\\.)*)\]\(\s*([^()\s]+)((?:\s+"[^"]*")?)\s*\)/g;
   return content.replace(LINK_RE, (full, bang, text, target, title) => {
     if (bang) return full;
@@ -302,6 +338,9 @@ function rewriteChallengeLinks(content, fragmentDir, challengeId, publishedPages
     const key = absTarget.replace(/\\/g, '/').toLowerCase();
     if (!isDir && publishedPages.has(key)) {
       return `[${text}](${challengePageUrl(challengeId, publishedPages.get(key), hash)}${title})`;
+    }
+    if (!isDir && contentPages.has(key)) {
+      return `[${text}](${contentPages.get(key)}${hash}${title})`;
     }
     return `[${text}](${repoUrlFor(relToRoot, isDir)}${hash}${title})`;
   });
@@ -497,6 +536,7 @@ function collectChallengePages(challenge) {
 function buildChallengePages(challenges) {
   const errors = [];
   const collected = [];
+  const contentPages = publishedContentPages();
 
   for (const ch of challenges) {
     const result = collectChallengePages(ch);
@@ -520,7 +560,8 @@ function buildChallengePages(challenges) {
         withoutFooter,
         path.dirname(definition.sourcePath),
         item.challenge.id,
-        item.sources
+        item.sources,
+        contentPages
       );
       const outputPath = path.join(pagesDir, `${definition.id}.md`);
       ensureDir(path.dirname(outputPath));
@@ -545,10 +586,10 @@ function publishedChallengePages(challenges) {
   return pages;
 }
 
-function publishedContentPages(pages) {
+function publishedContentPages() {
   const published = new Map();
 
-  for (const page of pages) {
+  for (const page of CONTENT_PAGES) {
     const sourcePath = page.source.replace(/\\/g, '/').toLowerCase();
     published.set(sourcePath, `guide.html?p=${encodeURIComponent(page.slug)}`);
   }
@@ -591,18 +632,9 @@ function rewriteContentPageLinks(content, sourcePath, challengePages, contentPag
 function buildContentPages(challenges) {
   ensureDir(OUT_PAGES_DIR);
   const challengePages = publishedChallengePages(challenges);
+  const contentPages = publishedContentPages();
 
-  const pages = [
-    { slug: 'copilot-guide', source: path.join(DOCS_DIR, 'copilot-guide.md') },
-    { slug: 'prompt-engineering', source: path.join(DOCS_DIR, 'prompt-engineering.md') },
-    { slug: 'mcp-servers', source: path.join(DOCS_DIR, 'mcp-servers.md') },
-    { slug: 'facilitator-guide', source: FACILITATOR_PATH },
-    { slug: 'troubleshooting', source: TROUBLESHOOT_PATH },
-    { slug: 'getting-started', source: path.join(TRACKS_DIR, 'getting-started.md') }
-  ];
-  const contentPages = publishedContentPages(pages);
-
-  for (const page of pages) {
+  for (const page of CONTENT_PAGES) {
     const content = readFileSafe(page.source);
     if (content) {
       const rewritten = rewriteContentPageLinks(content, page.source, challengePages, contentPages);

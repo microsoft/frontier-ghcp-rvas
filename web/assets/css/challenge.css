@@ -73,9 +73,45 @@
   padding: 2px;
 }
 
+.tag-link {
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.tag-link:hover {
+  color: var(--c-accent);
+  background: var(--c-900);
+  border-color: var(--c-accent);
+  transform: translateY(-1px);
+}
+
+.tag-link:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+.challenge-launch-actions {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.challenge-launch-actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+
 #starterLink {
-  margin-bottom: 0 !important;
   background: var(--cat-color, var(--c-accent));
+}
+
+.codespaces-link {
+  border-color: var(--cat-color, var(--c-accent));
+  color: var(--cat-color, var(--c-accent));
+}
+
+.codespaces-link:hover {
+  background: var(--cat-color, var(--c-accent));
+  color: #fff;
 }
 
 .ch-info-panel {

@@ -86,6 +86,10 @@
     return 'catalog.html?cat=' + encodeURIComponent(catId);
   };
 
+  FP.catalogTagUrl = function (tag) {
+    return 'catalog.html?tag=' + encodeURIComponent(tag);
+  };
+
   FP.guideUrl = function (slug) {
     return 'guide.html?p=' + encodeURIComponent(slug);
   };

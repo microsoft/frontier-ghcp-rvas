@@ -6,6 +6,7 @@
   let _categories = [];
   let _activeCat = null;
   let _activeDiff = null;
+  let _activeTag = null;
   let _query = '';
 
   async function init() {
@@ -18,6 +19,7 @@
 
     buildCategoryChips();
     buildDiffChips();
+    buildTagCloud();
     initSearch();
     applyUrlState();
     render();
@@ -25,7 +27,7 @@
 
   const DIFFS = ['beginner', 'intermediate', 'advanced'];
 
-  /* Seed filter state from the URL query string (?cat=&difficulty=&q=) and
+  /* Seed filter state from the URL query string (?cat=&difficulty=&tag=&q=) and
      reflect it on the chips + search input before the first render. Invalid
      values are ignored rather than applied. */
   function applyUrlState() {
@@ -34,6 +36,12 @@
 
     const diff = FP.qp('difficulty');
     if (diff && DIFFS.indexOf(diff) !== -1) _activeDiff = diff;
+
+    const tag = FP.qp('tag');
+    if (tag) {
+      const matchingTag = allTags().find((item) => item.name.toLowerCase() === tag.toLowerCase());
+      if (matchingTag) _activeTag = matchingTag.name;
+    }
 
     const q = (FP.qp('q') || '').trim();
     if (q) {
@@ -58,6 +66,11 @@
       b.classList.toggle('active', on);
       b.setAttribute('aria-pressed', String(on));
     });
+    document.querySelectorAll('#tagCloud .tag-cloud-item').forEach((b) => {
+      const on = b.dataset.tag === _activeTag;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
   }
 
   /* Keep the address bar in sync with the active filters so the view is
@@ -66,6 +79,7 @@
     const q = new URLSearchParams();
     if (_activeCat) q.set('cat', _activeCat);
     if (_activeDiff) q.set('difficulty', _activeDiff);
+    if (_activeTag) q.set('tag', _activeTag);
     if (_query) q.set('q', _query);
     const qs = q.toString();
     const url = window.location.pathname + (qs ? '?' + qs : '');
@@ -113,6 +127,53 @@
     });
   }
 
+  function allTags() {
+    const counts = new Map();
+    _all.forEach((challenge) => {
+      (challenge.tags || []).forEach((tag) => {
+        const key = tag.toLowerCase();
+        const current = counts.get(key);
+        counts.set(key, {
+          name: current ? current.name : tag,
+          count: (current ? current.count : 0) + 1
+        });
+      });
+    });
+    return Array.from(counts.values()).sort((a, b) =>
+      b.count - a.count || a.name.localeCompare(b.name)
+    );
+  }
+
+  function buildTagCloud() {
+    const container = document.getElementById('tagCloud');
+    if (!container) return;
+
+    const tags = allTags();
+    const maxCount = Math.max(...tags.map((tag) => tag.count), 1);
+    const minCount = Math.min(...tags.map((tag) => tag.count), 1);
+    const range = Math.max(maxCount - minCount, 1);
+
+    container.innerHTML = tags.map((tag) => {
+      const weight = (tag.count - minCount) / range;
+      const size = (0.76 + weight * 0.34).toFixed(2);
+      return `<button class="tag-cloud-item" type="button" data-tag="${FP.esc(tag.name)}"
+        aria-pressed="false" style="--tag-size:${size}rem">
+        <span>${FP.esc(tag.name)}</span>
+        <span class="tag-cloud-count">${tag.count}</span>
+      </button>`;
+    }).join('');
+
+    container.querySelectorAll('.tag-cloud-item').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const tag = btn.dataset.tag;
+        _activeTag = _activeTag === tag ? null : tag;
+        syncChipState();
+        syncUrl();
+        render();
+      });
+    });
+  }
+
   function initSearch() {
     const input = document.getElementById('searchInput');
     if (!input) return;
@@ -129,6 +190,7 @@
         input.value = '';
         _activeCat = null;
         _activeDiff = null;
+        _activeTag = null;
         syncChipState();
         syncUrl();
         render();
@@ -140,6 +202,7 @@
     return _all.filter((c) => {
       if (_activeCat && c.category !== _activeCat) return false;
       if (_activeDiff && c.difficulty !== _activeDiff) return false;
+      if (_activeTag && !(c.tags || []).some((tag) => tag.toLowerCase() === _activeTag.toLowerCase())) return false;
       if (_query) {
         const hay = [c.title, c.description, c.category_name, ...(c.tags || [])]
           .join(' ').toLowerCase();
@@ -155,6 +218,8 @@
     if (!grid) return;
 
     const items = filtered();
+
+    renderHeading();
 
     if (countEl) countEl.textContent = items.length + ' challenge' + (items.length === 1 ? '' : 's');
 
@@ -189,6 +254,21 @@
 
     grid.innerHTML = html;
     FP.initReveal();
+  }
+
+  function renderHeading() {
+    const heading = document.getElementById('catalogHeading');
+    const copy = document.getElementById('catalogCopy');
+    if (!heading || !copy) return;
+
+    if (_activeTag) {
+      heading.textContent = 'Challenges tagged "' + _activeTag + '"';
+      copy.textContent = 'These sessions use ' + _activeTag + '. Add another filter or choose a challenge to open its full guide.';
+      return;
+    }
+
+    heading.textContent = 'Choose a challenge.';
+    copy.textContent = 'Filter by category, difficulty, tag, or keyword. Open any challenge to see the work, setup, and expected result.';
   }
 
   function challengeCard(c) {
