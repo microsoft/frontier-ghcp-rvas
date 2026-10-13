@@ -104,13 +104,14 @@
   background: var(--cat-color, var(--c-accent));
 }
 
-.codespaces-link {
+.challenge-launch-actions .codespaces-link {
   border-color: var(--cat-color, var(--c-accent));
   color: var(--cat-color, var(--c-accent));
 }
 
-.codespaces-link:hover {
-  background: var(--cat-color, var(--c-accent));
+.challenge-launch-actions .codespaces-link:hover {
+  background-color: var(--cat-color, var(--c-accent));
+  border-color: var(--cat-color, var(--c-accent));
   color: #fff;
 }
 
