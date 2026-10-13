@@ -90,6 +90,38 @@
     return 'catalog.html?tag=' + encodeURIComponent(tag);
   };
 
+  FP.resolveRepositoryUrl = function (href, repository) {
+    if (!href || !repository || !repository.url || !repository.template_url) return href;
+    if (href !== repository.template_url && !href.startsWith(repository.template_url + '/')) return href;
+
+    let suffix = href.slice(repository.template_url.length);
+    const templateBranch = repository.template_branch || 'main';
+    for (const kind of ['blob', 'tree']) {
+      const prefix = '/' + kind + '/' + templateBranch + '/';
+      if (suffix.startsWith(prefix)) {
+        suffix = '/' + kind + '/' + encodeURIComponent(repository.branch || 'main') + '/' + suffix.slice(prefix.length);
+        break;
+      }
+    }
+    return repository.url + suffix;
+  };
+
+  FP.applyRepositoryLinks = async function () {
+    try {
+      const data = await FP.loadData();
+      const repository = data.repository;
+      if (!repository) return;
+
+      document.querySelectorAll('a[href]').forEach((link) => {
+        const href = link.getAttribute('href');
+        const resolved = FP.resolveRepositoryUrl(href, repository);
+        if (resolved !== href) link.setAttribute('href', resolved);
+      });
+    } catch (e) {
+      // Keep the canonical fallback links when site metadata is unavailable.
+    }
+  };
+
   FP.guideUrl = function (slug) {
     return 'guide.html?p=' + encodeURIComponent(slug);
   };
@@ -319,6 +351,7 @@
     FP.initNav();
     FP.applyKiosk();
     FP.initReveal();
+    FP.applyRepositoryLinks();
   });
 
 })();

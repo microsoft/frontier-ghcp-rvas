@@ -27,6 +27,11 @@ jobs:
           node-version: '22'
 
       - name: Build platform data
+        env:
+          SITE_REPOSITORY: ${{ github.repository }}
+          SITE_REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
+          SITE_REPOSITORY_SERVER_URL: ${{ github.server_url }}
+          SITE_REPOSITORY_BRANCH: ${{ github.event.repository.default_branch }}
         run: node web/build.js
 
       - name: Upload Pages artifact

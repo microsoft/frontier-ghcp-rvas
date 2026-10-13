@@ -52,7 +52,7 @@
 
     applyCategoryColor(challenge.category);
     renderHero(challenge, data.categories || [], selectedPage);
-    renderSidebar(challenge, allChallenges);
+    renderSidebar(challenge, allChallenges, data.repository);
     renderChallengePages(challenge, selectedPage);
     renderInfoPanel(challenge, data.categories || []);
     applyKioskLinks();
@@ -112,19 +112,21 @@
     }
   }
 
-  function renderSidebar(c, allChallenges) {
+  function renderSidebar(c, allChallenges, repository) {
     const starterLink = document.getElementById('starterLink');
-    if (starterLink && c.starter_path) {
-      const repoUrl = 'https://github.com/microsoft/frontier-ghcp-rvas';
-      starterLink.href = repoUrl + '/tree/main/' + c.starter_path;
+    if (starterLink && c.starter_path && repository?.url) {
+      const branch = encodeURIComponent(repository.branch || 'main');
+      starterLink.href = repository.url + '/tree/' + branch + '/' + c.starter_path;
       starterLink.target = '_blank';
       starterLink.rel = 'noopener';
+    } else if (starterLink) {
+      starterLink.style.display = 'none';
     }
 
     const codespacesLink = document.getElementById('codespacesLink');
-    if (codespacesLink && c.devcontainer_path) {
+    if (codespacesLink && c.devcontainer_path && repository?.codespaces_url) {
       const query = new URLSearchParams({ devcontainer_path: c.devcontainer_path });
-      codespacesLink.href = 'https://codespaces.new/microsoft/frontier-ghcp-rvas?' + query.toString();
+      codespacesLink.href = repository.codespaces_url + '?' + query.toString();
       codespacesLink.target = '_blank';
       codespacesLink.rel = 'noopener';
       codespacesLink.title = 'Open the Codespaces creation page with this challenge configuration selected';

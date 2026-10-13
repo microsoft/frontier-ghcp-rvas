@@ -77,8 +77,15 @@ const CONTENT_PAGES       = [
 ];
 
 /* ─── Repository (for resolving relative links in guides) ─────────────────── */
-const REPO_URL    = 'https://github.com/microsoft/frontier-ghcp-rvas';
-const REPO_BRANCH = 'main';
+const CANONICAL_REPO_NWO = 'microsoft/frontier-ghcp-rvas';
+const CANONICAL_REPO_URL = `https://github.com/${CANONICAL_REPO_NWO}`;
+const REPO_SERVER_URL = (process.env.SITE_REPOSITORY_SERVER_URL || 'https://github.com').replace(/\/+$/, '');
+const REPO_NWO = process.env.SITE_REPOSITORY || CANONICAL_REPO_NWO;
+const REPO_URL = (process.env.SITE_REPOSITORY_URL || `${REPO_SERVER_URL}/${REPO_NWO}`).replace(/\/+$/, '');
+const REPO_BRANCH = process.env.SITE_REPOSITORY_BRANCH || 'main';
+const CODESPACES_URL = REPO_SERVER_URL === 'https://github.com'
+  ? `https://codespaces.new/${REPO_NWO}`
+  : '';
 
 /* ─── Minimal YAML parser ────────────────────────────────────────────────────
  * Handles only the locked meta.yml contract: scalar key-value pairs, block
@@ -807,6 +814,15 @@ function main() {
   const platform = {
     generated_by: 'web/build.js',
     source: 'challenges/*/meta.yml',
+    repository: {
+      nwo: REPO_NWO,
+      url: REPO_URL,
+      branch: REPO_BRANCH,
+      server_url: REPO_SERVER_URL,
+      codespaces_url: CODESPACES_URL,
+      template_url: CANONICAL_REPO_URL,
+      template_branch: 'main'
+    },
     count: challenges.length,
     categories,
     challenges
