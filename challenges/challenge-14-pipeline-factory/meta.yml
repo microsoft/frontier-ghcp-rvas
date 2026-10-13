@@ -7,9 +7,10 @@ duration_minutes: 420
 description: Build CI/CD pipelines from scratch, standardize deployment processes, and debug broken builds with GitHub Copilot.
 focus: Use Copilot to build CI/CD pipelines, standardize build and deploy processes, debug deployments, and write incident runbooks
 tags:
-  - workflow-automation
-  - advanced
-  - ci-cd
+  - devops
+  - automation
+  - security
+  - operations
 prerequisites: []
 track_url: tracks/challenge-14-pipeline-factory-track.md
 contents_url: tracks/challenge-14-pipeline-factory-track/stages.md

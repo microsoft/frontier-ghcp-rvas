@@ -7,9 +7,10 @@ duration_minutes: 420
 description: Automate the conversion of requirement specs into structured backlogs using Copilot and the Atlassian MCP server.
 focus: Automating the conversion of requirement specifications into structured project backlogs using Copilot skills, agents, and the Atlassian MCP server
 tags:
-  - workflow-automation
-  - advanced
-  - backlog
+  - planning
+  - automation
+  - documentation
+  - mcp
 prerequisites: []
 track_url: tracks/challenge-15-backlog-generator-track.md
 contents_url: tracks/challenge-15-backlog-generator-track/stages.md

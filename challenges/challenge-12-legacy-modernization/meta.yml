@@ -8,8 +8,8 @@ description: Reverse-engineer undocumented Java code, recover business logic, an
 focus: Reverse-engineering undocumented Java code, recovering business logic, migrating to modern frameworks, and capturing knowledge in Copilot-readable formats
 tags:
   - legacy-modernization
-  - advanced
-  - legacy
+  - testing
+  - architecture
 prerequisites: []
 track_url: tracks/challenge-12-legacy-modernization-track.md
 contents_url: tracks/challenge-12-legacy-modernization-track/stages.md

@@ -7,8 +7,10 @@ duration_minutes: 420
 description: Build operations tools with GitHub Copilot for log analysis, incident routing, troubleshooting, and deployment automation.
 focus: Build operations tools with Copilot for log analysis, incident routing, troubleshooting, and deployment automation
 tags:
-  - workflow-automation
-  - advanced
+  - operations
+  - automation
+  - devops
+  - azure
 prerequisites: []
 track_url: tracks/challenge-16-ops-assistant-track.md
 contents_url: tracks/challenge-16-ops-assistant-track/stages.md

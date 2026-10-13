@@ -7,10 +7,11 @@ duration_minutes: 300
 description: Use Spec Kit to implement approvals and update the rules. Review the intermediate approval UI with Impeccable and keep the specification and tests aligned.
 focus: Use GitHub Spec Kit with Copilot CLI to implement an approval feature and update its specification when the rules change
 tags:
-  - spec-driven-development
+  - spec-driven
   - spec-kit
-  - copilot-cli
-  - typescript
+  - planning
+  - frontend
+  - testing
   - impeccable
 outcomes:
   - ship-features

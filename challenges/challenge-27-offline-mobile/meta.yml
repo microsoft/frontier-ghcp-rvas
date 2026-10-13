@@ -7,9 +7,9 @@ duration_minutes: 300
 description: Build a dependable offline mobile workflow and use Impeccable to review inspection and recovery feedback.
 focus: Make a React Native field-service workflow dependable when connectivity and device capabilities cannot be assumed
 tags:
-  - mobile-development
-  - offline-first
-  - field-service
+  - frontend
+  - mobile
+  - testing
   - impeccable
 outcomes:
   - ship-features

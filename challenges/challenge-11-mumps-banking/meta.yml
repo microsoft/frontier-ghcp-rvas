@@ -8,9 +8,6 @@ description: Reverse-engineer and modernize legacy MUMPS code through comprehens
 focus: Use GitHub Copilot to understand legacy code, write characterization tests, extend features, and translate MUMPS to a modern language
 tags:
   - legacy-modernization
-  - advanced
-  - legacy
-  - mumps
   - testing
 prerequisites: []
 track_url: tracks/challenge-11-mumps-modernization-track.md

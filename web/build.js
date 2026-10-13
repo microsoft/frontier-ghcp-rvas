@@ -674,13 +674,34 @@ function loadRoleCollections() {
 function validateReferences(challenges, paths, roles, roleLoadError) {
   const errors = [];
   const challengeIds = new Set(challenges.map(c => c.id));
+  const tagCounts = new Map();
 
   for (const ch of challenges) {
+    const challengeTags = new Set();
+    for (const tag of ch.tags) {
+      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(tag)) {
+        errors.push(`Challenge ${ch.id}: tag '${tag}' must be a lowercase URL-safe slug`);
+      }
+      if (challengeTags.has(tag)) {
+        errors.push(`Challenge ${ch.id}: duplicate tag '${tag}'`);
+        continue;
+      }
+      challengeTags.add(tag);
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    }
+
     for (const prereq of ch.prerequisites) {
       if (!challengeIds.has(prereq)) {
         errors.push(`Challenge ${ch.id}: prerequisite '${prereq}' does not exist`);
       }
     }
+  }
+
+  const singleUseTags = [...tagCounts].filter(([, count]) => count === 1);
+  if (singleUseTags.length * 4 > tagCounts.size) {
+    errors.push(
+      `Tag taxonomy: ${singleUseTags.length} of ${tagCounts.size} tags are used once; single-use tags must not exceed 25%`
+    );
   }
 
   for (const p of paths) {

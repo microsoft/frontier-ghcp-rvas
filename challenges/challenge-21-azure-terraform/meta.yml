@@ -7,10 +7,11 @@ duration_minutes: 300
 description: Build and review an Azure Terraform baseline with remote state, modules, identity controls, policy checks, and CI gates.
 focus: Build and review an Azure Terraform baseline with remote state, reusable modules, identity controls, policy checks, and CI gates
 tags:
-  - azure-platform
-  - advanced
   - azure
-  - terraform
+  - devops
+  - architecture
+  - security
+  - operations
 prerequisites: []
 track_url: tracks/challenge-21-azure-terraform-track.md
 contents_url: tracks/challenge-21-azure-terraform-track/stages.md

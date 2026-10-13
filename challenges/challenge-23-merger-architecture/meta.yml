@@ -7,10 +7,11 @@ duration_minutes: 300
 description: Design an Azure integration foundation that connects systems inherited through a company merger.
 focus: Use merger evidence to define system boundaries, integration contracts, Azure architecture decisions, and a transition plan
 tags:
-  - azure-integration
-  - solution-architecture
-  - mergers
-  - advanced
+  - architecture
+  - azure
+  - planning
+  - collaboration
+  - documentation
 outcomes:
   - platform-foundation
   - architecture-decisions

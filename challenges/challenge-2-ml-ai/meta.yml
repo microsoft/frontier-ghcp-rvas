@@ -7,9 +7,9 @@ duration_minutes: 420
 description: Develop machine learning models and AI applications through data analysis and model development with GitHub Copilot.
 focus: Data analysis, machine learning, and AI development with GitHub Copilot
 tags:
-  - core-tracks
-  - core
-  - ml
+  - ai-ml
+  - data
+  - automation
 prerequisites: []
 track_url: tracks/challenge-2-ml-ai-track.md
 contents_url: tracks/challenge-2-ml-ai-track/stages.md

@@ -8,10 +8,8 @@ description: Characterize one COBOL transfer workflow, modernize it through an A
 focus: Trace and characterize a COBOL account-transfer workflow, then expose it through an API and a React UI
 tags:
   - legacy-modernization
-  - advanced
-  - cobol
-  - legacy
   - testing
+  - frontend
   - impeccable
 prerequisites: []
 track_url: tracks/challenge-18-cobol-modernization-track.md

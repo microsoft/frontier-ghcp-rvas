@@ -7,10 +7,10 @@ duration_minutes: 300
 description: Learn an unfamiliar equipment-booking application, fix a reported cancellation defect, and add a waitlist without breaking existing behavior.
 focus: Learn an unfamiliar C# application, fix a reported defect with regression evidence, and add a small waitlist feature
 tags:
-  - application-maintenance
+  - legacy-modernization
   - dotnet
-  - debugging
-  - full-stack
+  - frontend
+  - testing
   - impeccable
 outcomes:
   - ship-features

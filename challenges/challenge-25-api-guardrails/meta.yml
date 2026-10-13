@@ -7,10 +7,12 @@ duration_minutes: 300
 description: Establish reusable Azure API standards and delivery controls for teams publishing enterprise services.
 focus: Govern API contracts across teams with standards, Azure API Management policies, automated checks, observability, and onboarding
 tags:
-  - azure-api-management
-  - api-governance
-  - openapi
-  - delivery-automation
+  - api
+  - security
+  - azure
+  - devops
+  - automation
+  - architecture
 outcomes:
   - platform-foundation
   - automate-delivery

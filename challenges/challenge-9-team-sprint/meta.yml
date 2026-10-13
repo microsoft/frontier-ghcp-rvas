@@ -7,8 +7,10 @@ duration_minutes: 300
 description: Build a product with a cross-functional team and use Impeccable for a focused, QA-verified report-flow improvement.
 focus: Develop a product from ideation to production deployment with a cross-functional team using GitHub Copilot
 tags:
-  - team-sprints
-  - advanced
+  - collaboration
+  - planning
+  - frontend
+  - testing
   - impeccable
 prerequisites: []
 track_url: tracks/challenge-9-team-sprint-track.md

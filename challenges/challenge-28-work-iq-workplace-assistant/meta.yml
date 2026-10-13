@@ -7,11 +7,10 @@ duration_minutes: 300
 description: Build a permission-aware workplace handoff workflow that turns Microsoft 365 context into a reviewed action register.
 focus: Turn approved Microsoft 365 project context into a reviewed handoff with Microsoft Work IQ and GitHub Copilot CLI
 tags:
-  - workflow-automation
+  - automation
+  - collaboration
   - work-iq
-  - microsoft-365
   - mcp
-  - workplace-context
 outcomes:
   - automate-delivery
   - ship-features

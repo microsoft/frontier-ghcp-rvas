@@ -7,8 +7,11 @@ duration_minutes: 300
 description: Deliver a trail application with a technical team and use Impeccable to improve status and warning clarity.
 focus: Develop an application from a provided specification to production deployment with a technical team using GitHub Copilot
 tags:
-  - team-sprints
-  - advanced
+  - collaboration
+  - planning
+  - devops
+  - frontend
+  - testing
   - impeccable
 prerequisites: []
 track_url: tracks/challenge-10-tech-sprint-track.md

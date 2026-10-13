@@ -7,8 +7,9 @@ duration_minutes: 420
 description: Build AI-powered repository automation using Markdown-defined workflows running in GitHub Actions.
 focus: Build and operate GitHub Agentic Workflows, Markdown-defined repository automation that uses AI in GitHub Actions
 tags:
-  - core-tracks
-  - core
+  - automation
+  - ai-ml
+  - devops
 prerequisites: []
 track_url: tracks/challenge-6-agentic-workflows-track.md
 contents_url: tracks/challenge-6-agentic-workflows-track/stages.md

@@ -7,8 +7,11 @@ duration_minutes: 420
 description: Implement Infrastructure as Code with Terraform, containerization, Kubernetes, and CI/CD pipelines using GitHub Copilot.
 focus: Infrastructure as Code, containerization, and deployment automation with GitHub Copilot
 tags:
-  - core-tracks
-  - core
+  - devops
+  - azure
+  - automation
+  - security
+  - operations
 prerequisites: []
 track_url: tracks/challenge-3-devops-track.md
 contents_url: tracks/challenge-3-devops-track/stages.md

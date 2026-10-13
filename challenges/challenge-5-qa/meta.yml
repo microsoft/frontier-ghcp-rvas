@@ -7,10 +7,8 @@ duration_minutes: 420
 description: Test real applications through test planning, exploratory testing, automation, and debugging with GitHub Copilot.
 focus: Use GitHub Copilot to plan, generate, debug, and report tests for a real application
 tags:
-  - core-tracks
-  - core
-  - qa
   - testing
+  - automation
 prerequisites: []
 track_url: tracks/challenge-5-qa-track.md
 contents_url: tracks/challenge-5-qa-track/stages.md

@@ -7,10 +7,10 @@ duration_minutes: 300
 description: Diagnose and stabilize a SQL Server workload before validating the result against Azure SQL.
 focus: Diagnose a SQL Server 2022 workload, reduce measured query cost, and ship an Azure SQL-compatible schema change without breaking active readers or writers
 tags:
-  - azure-sql
-  - sql-server
-  - database-performance
-  - database-reliability
+  - data
+  - testing
+  - azure
+  - operations
 outcomes:
   - raise-quality
   - platform-foundation

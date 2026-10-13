@@ -7,8 +7,9 @@ duration_minutes: 600
 description: Build a Release Notes Agent from scratch using the GitHub Copilot SDK runtime.
 focus: Building a Release Notes Agent from scratch using the GitHub Copilot SDK
 tags:
-  - advanced-tracks
-  - advanced
+  - ai-ml
+  - api
+  - copilot-sdk
 prerequisites: []
 track_url: tracks/challenge-7-copilot-sdk-track.md
 contents_url: tracks/challenge-7-copilot-sdk-track/stages.md

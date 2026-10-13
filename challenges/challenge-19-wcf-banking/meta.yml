@@ -8,10 +8,10 @@ description: Reverse-engineer a WCF banking SOAP service and rebuild it as a mod
 focus: Use GitHub Copilot to trace a banking SOAP service, characterize its behavior, and migrate it to a REST API
 tags:
   - legacy-modernization
-  - advanced
   - api
-  - legacy
   - testing
+  - dotnet
+  - architecture
 prerequisites: []
 track_url: tracks/challenge-19-wcf-modernization-track.md
 contents_url: tracks/challenge-19-wcf-modernization-track/stages.md

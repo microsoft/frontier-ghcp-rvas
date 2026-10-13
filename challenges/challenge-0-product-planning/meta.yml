@@ -7,10 +7,9 @@ duration_minutes: 420
 description: Plan products, shape and manage backlogs, and produce documentation using GitHub Copilot and GitHub's collaboration features.
 focus: Product planning, backlog management, and documentation using GitHub Copilot and GitHub's collaboration features
 tags:
-  - core-tracks
-  - core
-  - backlog
-  - docs
+  - planning
+  - collaboration
+  - documentation
 prerequisites: []
 track_url: tracks/challenge-0-product-planning-track.md
 contents_url: tracks/challenge-0-product-planning-track/stages.md
