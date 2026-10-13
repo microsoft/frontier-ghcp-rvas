@@ -203,6 +203,16 @@ function collectChallenges() {
     const challengeNumber = Number(match[1]);
     const configPath = path.join(DEVCONTAINERS_DIR, entry.name, 'devcontainer.json');
     if (!fs.existsSync(configPath)) continue;
+    const config = readFileSafe(configPath) || '';
+    const usesFloatingUbuntu = /"image"\s*:\s*"mcr\.microsoft\.com\/devcontainers\/base:ubuntu"/.test(config);
+    const dockerInDocker = config.match(
+      /"ghcr\.io\/devcontainers\/features\/docker-in-docker:[^"]+"\s*:\s*(\{[^{}]*\})/s
+    );
+    if (usesFloatingUbuntu && dockerInDocker && !/"moby"\s*:\s*false/.test(dockerInDocker[1])) {
+      errors.push(
+        `${path.relative(ROOT, configPath)}: Docker-in-Docker on the floating base:ubuntu image must set "moby": false`
+      );
+    }
 
     if (devcontainersByNumber.has(challengeNumber)) {
       errors.push(`Multiple devcontainer configurations found for challenge ${challengeNumber}`);
