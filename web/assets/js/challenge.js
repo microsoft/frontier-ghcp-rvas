@@ -99,11 +99,15 @@
 
     const meta = document.getElementById('challengeMeta');
     if (meta) {
+      const tagLinks = (c.tags || [])
+        .slice(0, 3)
+        .map((tag) => `<a class="badge badge-tag tag-link" href="${FP.catalogTagUrl(tag)}">${FP.esc(tag)}</a>`)
+        .join('');
       meta.innerHTML = `
         <span class="badge cat-${FP.esc(c.category)}" style="--cat-color:${color}">${FP.esc(catName)}</span>
         ${FP.diffBadge(c.difficulty)}
         ${FP.durBadge(c.duration_minutes)}
-        ${FP.tagBadges(c.tags || [], 3)}`;
+        ${tagLinks}`;
     }
 
     const focus = document.getElementById('challengeFocus');
