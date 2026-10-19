@@ -31,7 +31,7 @@ If your agent or writing skill produces vague NFRs, interchangeable personas, or
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can draft requirements and Mermaid diagrams. Read Challenge 1's code or documentation to check the API mapping. Review the requirements for contradictions and make sure each NFR can be measured.
+Copilot can draft requirements and Mermaid diagrams. Read Challenge 1's code or documentation to check the API mapping. Review the requirements for contradictions and confirm that each NFR can be measured.
 
 ---
 

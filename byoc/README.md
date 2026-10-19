@@ -1,7 +1,7 @@
 # Bring your own challenge kit
 
-Use this kit to run a GitHub Copilot Adoption delivery session on your team's
-codebase. Define what to deliver and how to demonstrate it.
+Use this kit to plan and run a GitHub Copilot Adoption delivery session on your
+team's codebase. Define the deliverable and how you will demonstrate it.
 
 ## What's in the kit
 
@@ -48,7 +48,7 @@ Use the **[Outcome Canvas](./outcome-canvas.md)** to document:
 - The stable context, specialist judgment, and repeatable procedure that should
   shape the Customization Trio
 
-The facilitator turns those inputs into three tailored Design Briefs.
+The facilitator uses those inputs to prepare three tailored Design Briefs.
 Participants then inspect the real repository and author Repository
 Instructions, a Custom Agent, and a Custom Skill. The
 [shared getting started guide](../tracks/getting-started.md)
@@ -73,15 +73,15 @@ If you already have a clear path, skip this step and work directly on your app.
 
 ### 3. Run your session
 
-Follow the **[Facilitator Runbook](./facilitator-runbook.md)** to:
+Use the **[Facilitator Runbook](./facilitator-runbook.md)** to:
 
 - Prepare the environment and codebase access
 - Prepare Design Briefs without supplying completed customizations
 - Reserve 20-30 minutes for participants to inspect the repository and draft
   the Customization Trio
 - Set timeboxes and checkpoints
-- Guide the work session
-- Guide the demo and outcome review
+- Run the work session
+- Run the demo and outcome review
 
 ### 4. Score the outcome
 
@@ -111,9 +111,13 @@ The worked-example challenges show how to apply this format. Each challenge:
 ## Quick start
 
 1. Open the **[Outcome Canvas](./outcome-canvas.md)** and fill it in for your app,
-   including the Customization Trio design inputs
-2. If you need a progression path, copy the overview, contents, and stage templates from **[templates/](./templates/)** and wire their navigation in order
-3. Prepare the three tailored Design Briefs
-4. Set up your environment (devcontainer, local dev, or Codespaces)
-5. Run the session following the **[Facilitator Runbook](./facilitator-runbook.md)**
-6. Demo the result and fill in the **[Outcome Scorecard](./outcome-scorecard.md)**
+   including the Customization Trio design inputs.
+2. If you need a progression path, copy the overview, contents, and stage
+   templates from **[templates/](./templates/)** and connect their navigation
+   in order.
+3. Prepare the three tailored Design Briefs.
+4. Set up your environment (devcontainer, local dev, or Codespaces).
+5. Run the session with the
+   **[Facilitator Runbook](./facilitator-runbook.md)**.
+6. Demo the result and fill in the
+   **[Outcome Scorecard](./outcome-scorecard.md)**.

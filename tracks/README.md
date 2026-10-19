@@ -728,7 +728,7 @@ The tracks give you practice with:
 
 ## Getting started
 
-### IMPORTANT: create a fresh repository
+### Create a fresh repository
 
 > **Use a disposable clone.** First-time setup removes unrelated content and
 > resets template customizations. Follow [Getting Started](./getting-started.md).

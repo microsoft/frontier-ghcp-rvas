@@ -8,7 +8,7 @@
 
 Use your Product and Analysis Agent to review acceptance criteria and metrics before adding them to the backlog.
 
-1. **Help the PO refine acceptance criteria** -- Review each user story and tighten the criteria. Make sure they are testable and specific enough that QA can write tests against them.
+1. **Help the PO refine acceptance criteria** -- Review each user story and tighten the criteria. Confirm that they are testable and specific enough for QA to write tests against them.
 
 2. **Create the data model document** -- Create `docs/data-model.md`. Define the entities (Report, Event, User), their fields, and relationships. Share with backend and frontend developers.
 

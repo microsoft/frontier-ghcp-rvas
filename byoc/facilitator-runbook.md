@@ -36,8 +36,8 @@ Briefs:
 - Custom Skill: repeatable procedure, Use Cues, inputs, outputs, constraints,
   and quality bar
 
-Keep each brief specific to the customer's repository, but do not author the
-customization for participants. They must inspect the real repository, confirm
+Keep each brief specific to the customer's repository. Do not author the
+customization for participants. They must inspect the real repository, check
 the brief against what they find, and write the three artifacts themselves.
 Use the
 [shared getting started guide](../tracks/getting-started.md)
@@ -162,7 +162,8 @@ Each participant or team shows:
 
 **Outcome Scorecard (20 min):**
 
-Walk through the **[Outcome Scorecard](./outcome-scorecard.md)** as a group or have each team fill one in:
+Review the **[Outcome Scorecard](./outcome-scorecard.md)** as a group, or have
+each team complete one:
 
 - Outcome statement
 - Acceptance criteria met (yes/no with evidence)

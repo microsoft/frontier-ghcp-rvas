@@ -10,7 +10,7 @@
 
 3. **Help with deployment** -- If the DevOps engineer hit any deployment issues, pair on resolving them.
 
-4. **Demo contribution** -- Be ready to show the API layer: endpoint design, test results, specific Copilot prompts that worked well.
+4. **Demo contribution** -- Show the API layer: endpoint design, test results, and specific Copilot prompts that worked well.
 
 ## Verification
 

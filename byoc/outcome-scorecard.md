@@ -1,8 +1,8 @@
 # Outcome Scorecard
 
-Fill in this scorecard at the end of the session. Record what you delivered
-and its impact. **Measure the result**, with Copilot usage and chat counts as
-supporting evidence.
+At the end of the session, record what you delivered and its impact.
+**Measure the result**, with Copilot usage and chat counts as supporting
+evidence.
 
 ## Outcome statement
 

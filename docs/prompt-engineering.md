@@ -1,6 +1,8 @@
 # Prompt engineering for GitHub Copilot
 
-How to write effective prompts for Copilot's Agent mode in VS Code. For an overview of agents, tools, and context mentions, see the [Copilot Guide](./copilot-guide.md).
+Write focused requests for Copilot's Agent mode in VS Code. For an overview of
+agents, tools, and context mentions, see the
+[Copilot Guide](./copilot-guide.md).
 
 ## Core principles
 
@@ -42,7 +44,7 @@ Create email validation that:
 
 ### 3. Break down complex tasks
 
-For large tasks, guide the agent through steps:
+For large tasks, give the agent a sequence:
 
 ```text
 Implement user authentication:
@@ -86,7 +88,7 @@ create a ProductService that:
 
 ### Pattern 3: the constraint pattern
 
-Define what NOT to do:
+State what the agent must not do:
 
 ```text
 Create a SQL query to get users:
@@ -136,7 +138,7 @@ middleware that rate-limits requests to 100/minute per IP.
 
 ### Self-verification
 
-Ask Agent to verify its own work:
+Ask Agent to verify its work:
 
 ```text
 Create a user registration endpoint, then:
@@ -342,7 +344,7 @@ Refine the request when the first suggestion misses a requirement.
 // Create function to validate email
 ```
 
-Review the basic validation Copilot suggests.
+Review the suggested validation.
 
 **Round 2:**
 

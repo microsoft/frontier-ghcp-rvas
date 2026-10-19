@@ -12,7 +12,7 @@
 
 4. **Write release notes** -- Draft `docs/release-notes.md` covering the shipped API endpoints, known limitations, and anything the team decided to defer.
 
-5. **Demo contribution** -- Be ready to show the API layer: endpoint design, test results, specific Copilot prompts that worked well.
+5. **Demo contribution** -- Show the API layer: endpoint design, test results, and specific Copilot prompts that worked well.
 
 ## Verification
 

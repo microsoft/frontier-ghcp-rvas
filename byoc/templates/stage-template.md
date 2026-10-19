@@ -17,7 +17,7 @@
 - {{PASS_CRITERION_2}}
 - {{PASS_CRITERION_3}}
 
-## What Copilot helps with vs. what requires your judgment
+## What Copilot can help with and what you must decide
 
 **Copilot helps with:**
 

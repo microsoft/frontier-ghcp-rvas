@@ -18,7 +18,7 @@ Test the tools and categorization logic, then package the agent for distribution
     - Set up a clean `npm run build` that produces a ready-to-run artifact
     - Configure environment variables for `GITHUB_TOKEN` and any MCP server settings
     - Document the setup steps so other team members can run the agent from a fresh Codespace
-    - Make sure the build output works without dev dependencies installed
+    - Verify that the build output works without dev dependencies installed
 
 ## Verification
 

@@ -1,13 +1,15 @@
 # Spec-to-Ship Accelerator -- System Context
 
-This challenge simulates the full development lifecycle from a functional specification to a deployed feature. You start with two things:
+Take a functional specification through the full development lifecycle to a
+deployed feature. Start with:
 
 1. A detailed **functional requirements document** (`specs/billing-module-requirements.md`) describing a billing module for a multi-tenant SaaS platform
 2. An **existing application** (`existing-app/`) -- a simple tenant management API that needs the billing module added
 
-## The Problem
+## Current Process
 
-In many organizations, the journey from a requirements document to running code involves multiple manual steps:
+Moving from a requirements document to running code often involves several
+manual steps:
 
 - A product owner or tech lead manually creates Features, User Stories, Tasks, and Test Cases in the project management tool
 - A developer writes a technical analysis document assessing the impact on the existing codebase
@@ -16,11 +18,13 @@ In many organizations, the journey from a requirements document to running code 
 - Test specification documents are created manually
 - A CI pipeline must be configured for the new module
 
-Each step is done by a different person, in a different tool, with no automated linkage between them. Requirements drift, tests miss edge cases, and time-to-market stretches.
+Different people complete these steps in different tools, with no automated
+linkage between them. Requirements drift, tests miss edge cases, and delivery
+takes longer.
 
-## What You Will Build
+## Deliverables
 
-An end-to-end Copilot-assisted pipeline that compresses this lifecycle:
+Build a Copilot-assisted pipeline for the full lifecycle:
 
 1. **Spec to Backlog**: A skill that converts the requirements doc into structured work items and checks coverage
 2. **Spec to Technical Analysis**: A skill that checks the spec against the existing codebase and documents the required changes

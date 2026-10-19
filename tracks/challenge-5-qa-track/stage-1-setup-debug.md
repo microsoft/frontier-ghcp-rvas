@@ -22,7 +22,7 @@ Open your repository instructions for the eShop and Playwright context. Use your
    - "Browse the catalog and tell me how many products are displayed"
    Compare what MCP reports with what you saw manually.
 
-4. **Create a test plan**: Based on your exploration, create a file called `docs/test-plan.md` in the challenge folder. Use Copilot to help you draft it. Include:
+4. **Create a test plan**: Based on your exploration, create a file called `docs/test-plan.md` in the challenge folder. Use Copilot to draft it. Include:
    - A list of the main user flows (login, browse catalog, add to cart, checkout)
    - For each flow, 3-5 test scenarios (both happy path and error cases)
    - A risk ranking: which flows are most critical if they break?

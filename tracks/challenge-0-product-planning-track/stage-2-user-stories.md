@@ -18,7 +18,7 @@ Review flawed user stories, then write stories with testable acceptance criteria
 
    You can create issues in several ways:
    - **GitHub.com** -- Create them directly in the Issues tab of your repository.
-   - **Copilot Chat** -- Ask Copilot to help draft issue bodies from your stories file, then paste into GitHub.
+   - **Copilot Chat** -- Ask Copilot to draft issue bodies from your stories file, then paste into GitHub.
    - **GitHub CLI** -- Run `gh issue create` from the terminal if you prefer the command line.
 
 ## Verification

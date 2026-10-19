@@ -49,7 +49,7 @@ A dedicated devcontainer is provided at `.devcontainer/challenge-15-backlog-gene
 
 #### Atlassian MCP Server (optional)
 
-If your team uses Atlassian Cloud (Jira / Confluence), you can connect Copilot to it via the Atlassian Rovo MCP Server. See the [MCP Servers Guide](../docs/mcp-servers.md#atlassian-rovo-mcp-server-jira-confluence) for setup instructions. This enables Stage 3 of the challenge, where you push generated backlog items directly to Jira.
+If your team uses Atlassian Cloud (Jira / Confluence), you can connect Copilot to it via the Atlassian Rovo MCP Server. See the [MCP Servers Guide](../docs/mcp-servers.md#atlassian-rovo-mcp-server-jira-confluence) for setup instructions. You need this connection for Stage 3, where you push generated backlog items directly to Jira.
 
 ### Repository instructions for this track
 

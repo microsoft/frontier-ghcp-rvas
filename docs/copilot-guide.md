@@ -37,7 +37,9 @@ Agent mode can:
 - Iterate until your task is complete
 - Identify related work needed to complete the task
 
-When Agent makes changes, review them inline in the editor. Accept good changes, reject others, and ask for modifications. Use Chat's undo to revert if needed.
+When Agent makes changes, review them inline in the editor. Accept the changes
+you want, reject the others, and ask for revisions. Use Chat's undo to revert
+changes if needed.
 
 ### Tool approvals
 
@@ -112,7 +114,8 @@ While typing, Copilot suggests completions:
 - Use `Alt+]` / `Option+]` for the next suggestion.
 - Use `Alt+[` / `Option+[` for the previous suggestion.
 
-Write a comment describing what you need, then press Enter to request a suggestion.
+Write a comment describing the code you need, then press Enter to request a
+suggestion.
 
 ## Language models
 
@@ -168,7 +171,7 @@ Before committing Copilot-generated code, verify:
 | Next suggestion | `Alt+]` | `Option+]` |
 | Previous suggestion | `Alt+[` | `Option+[` |
 
-## Next steps
+## Related guides
 
 - [Prompt Engineering Guide](./prompt-engineering.md) explains how to write focused requests.
 - [MCP Servers Guide](./mcp-servers.md) covers external tools.

@@ -1,15 +1,17 @@
 # Ops Assistant -- System Context
 
-This challenge puts you in the shoes of a support team that handles incidents for the Order Gateway -- a critical service that processes customer orders, payments, and notifications for an e-commerce platform.
+The support team handles incidents for the Order Gateway, a critical service
+that processes customer orders, payments, and notifications for an e-commerce
+platform.
 
-## What You Have
+## Source Material
 
 - **Log files** (`logs/`): Two days of production logs from the Order Gateway service. The logs contain a mix of normal operations, warnings, and several failure patterns.
 - **Incident history** (`incidents/`): Past incidents with root cause analysis, resolution steps, and team assignments.
 - **Team routing guide** (`docs/team-routing.md`): A table mapping error patterns to responsible teams.
 - **Sample app** (`app/`): A simplified version of the Order Gateway for testing your ops tooling against a running service.
 
-## The Problem
+## Current Process
 
 The support team that operates this service has limited deep technical knowledge. When issues happen, they must:
 
@@ -19,11 +21,12 @@ The support team that operates this service has limited deep technical knowledge
 4. Wait for developers to write and deploy fixes
 5. Manually run deployment and verification steps
 
-This is slow, error-prone, and creates a bottleneck, especially during off-hours when senior engineers are not immediately available.
+This process is slow and error-prone. It also creates a bottleneck during
+off-hours when senior engineers are not immediately available.
 
-## What You Will Build
+## Deliverables
 
-An AI-assisted operations toolkit using Copilot:
+Build an AI-assisted operations toolkit using Copilot:
 
 - **Agents** that can analyze log files and explain errors in plain language
 - **Skills** that route issues to the correct team based on error evidence and produce runbooks or deployment checklists

@@ -108,7 +108,8 @@ code --add-mcp '{"name":"playwright","command":"npx","args":["@playwright/mcp@la
 
 ### Option 4: user configuration
 
-For MCP servers you want across all workspaces, use MCP: Open User Configuration command.
+To use an MCP server across all workspaces, run the **MCP: Open User
+Configuration** command.
 
 ---
 
@@ -316,7 +317,7 @@ Add to `.vscode/mcp.json`:
 
 ### Debugging
 
-Enable development mode for:
+Development mode supports:
 
 - `watch` restarts the server when files change.
 - `debug` allows the VS Code debugger to attach.
@@ -629,7 +630,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
 ## Using MCP with Copilot
 
-Once your MCP server is configured, you can ask Copilot questions that require external data:
+Ask Copilot questions that require external data:
 
 ### Example queries
 
@@ -805,7 +806,7 @@ describe('MCP Server', () => {
 
 ### MCP server not connecting?
 
-1. Check server is running: `node your-server.js`
+1. Check that the server is running: `node your-server.js`
 2. Verify VS Code settings path
 3. Check server logs
 4. Restart VS Code
@@ -813,7 +814,7 @@ describe('MCP Server', () => {
 ### Tools not appearing?
 
 1. Verify `ListToolsRequestSchema` handler
-2. Check tool schema format
+2. Check the tool schema format
 3. Review MCP server logs
 
 ### Poor responses?

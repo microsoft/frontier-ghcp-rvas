@@ -1,7 +1,6 @@
 # Outcome Canvas
 
-Use this worksheet to define what you will deliver in the session. Fill it in
-before you start work.
+Use this worksheet before the session to define what you will deliver.
 
 ## Target outcome
 

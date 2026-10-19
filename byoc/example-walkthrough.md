@@ -1,8 +1,8 @@
 # BYOC example walkthrough
 
-This walkthrough shows how a facilitator can use the BYOC kit with a team's
-real repository. It uses an internal task management API as the example, but it
-does not provide finished customizations for participants to copy.
+This walkthrough applies the BYOC kit to a team's real repository. The example
+uses an internal task management API but does not provide finished
+customizations for participants to copy.
 
 ## Scenario
 
@@ -135,7 +135,7 @@ The team demonstrates:
 - Structured logs with request correlation
 - A deployable result using the approved environment
 
-The Outcome Scorecard records the delivered outcome and business impact.
+Use the Outcome Scorecard to record the delivered outcome and business impact.
 Repository Instructions, Custom Agents, and Custom Skills can be listed as
 reusable patterns produced during the work, but completing all three is not an
 acceptance criterion for the product outcome.

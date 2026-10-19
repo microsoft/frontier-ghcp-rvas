@@ -2,9 +2,14 @@
 
 ## Overview
 
-This challenge is about building a suite of GitHub Agentic Workflows for repository automation. Unlike other challenges where you build an application, here you build the automation layer that keeps a repository healthy, documented, and well-maintained -- using AI agents that run inside GitHub Actions.
+Build a suite of GitHub Agentic Workflows for repository automation. Instead of
+building an application, you will build an automation layer that handles
+repository maintenance and documentation through AI agents running in GitHub
+Actions.
 
-You will work with the **TrailMate** codebase (or any existing repository with real code, tests, and issues). Your goal is to add agentic workflows that handle triage, code quality, documentation, CI monitoring, security, and reporting -- all defined in plain Markdown.
+Use the **TrailMate** codebase or another repository with real code, tests, and
+issues. Add agentic workflows for triage, code quality, documentation, CI
+monitoring, security, and reporting. Define each workflow in plain Markdown.
 
 ## What Are GitHub Agentic Workflows
 
@@ -19,7 +24,7 @@ The agent cannot write to the repository directly. Instead, it produces structur
 
 ## Required Capabilities
 
-Your repository should have the following agentic workflows by the end of the challenge:
+Add the following agentic workflows to the repository:
 
 ### 1. Issue Triage (event-triggered)
 

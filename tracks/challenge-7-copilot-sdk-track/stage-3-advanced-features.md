@@ -2,7 +2,7 @@
 
 **Estimated:** 2-3 hours
 
-The agent can now fetch PRs and generate a changelog. In this stage you add MCP integration so it can read repository files, define a constrained release-manager persona, and give it write tools to actually publish the release.
+The agent can now fetch PRs and generate a changelog. Add MCP integration so it can read repository files, define a constrained release-manager persona, and give it write tools to publish the release.
 
 ## Tasks
 

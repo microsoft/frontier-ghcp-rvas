@@ -1,6 +1,8 @@
 # Azure Terraform Platform Scenario
 
-You are inheriting a small internal platform stack used by an app team that deploys a containerized API into Azure. The original author left after getting the first version working.
+You inherit a small internal platform stack used by an app team that deploys a
+containerized API into Azure. The original author left after getting the first
+version working.
 
 The team needs this Terraform code cleaned up before it can become the standard for new environments. Their requirements are simple:
 
@@ -11,7 +13,9 @@ The team needs this Terraform code cleaned up before it can become the standard 
 - Consistent tags for owner, environment, cost center, and data classification
 - A delivery path that supports plan review before apply
 
-The code in this challenge is close enough to be useful, but not ready to trust. Some defaults are intentionally debatable. Your job is to use Copilot to understand the stack, tighten the guardrails, and write down the trade-offs you keep.
+The code works as a starting point but is not ready for shared use. Some
+defaults are intentionally debatable. Use Copilot to understand the stack,
+tighten the guardrails, and document the trade-offs you keep.
 
 ## Current Tensions
 

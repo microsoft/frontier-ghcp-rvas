@@ -61,7 +61,7 @@ Run characterization tests throughout translation. Passing tests show that the c
 
 5. **Run your characterization tests.** Every test from Stage 2 should pass against the translated code. Fix any discrepancies by comparing the MUMPS logic with your translation.
 
-6. **Fix the known technical debt.** Now that the code is in a language you control:
+6. **Fix the known technical debt in the translated code:**
    - Replace the hardcoded maintenance fee with a configurable value
    - Fix the month-end interest posting to use actual calendar month-end dates
    - Implement proper password hashing (bcrypt, argon2, or equivalent)

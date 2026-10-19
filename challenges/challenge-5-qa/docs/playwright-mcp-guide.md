@@ -1,6 +1,7 @@
 # Playwright MCP Integration Guide
 
-This guide explains how to set up and use the **Microsoft Playwright MCP Server** with GitHub Copilot for AI-driven testing.
+Use the **Microsoft Playwright MCP Server** with GitHub Copilot to explore web
+applications and generate tests.
 
 ## What is Playwright MCP?
 
@@ -10,7 +11,7 @@ The **Playwright MCP Server** (`@playwright/mcp`) is an official Microsoft packa
 
 ### 1. Run the MCP Server
 
-The Playwright MCP server can be run directly via npx (no installation needed):
+Run the Playwright MCP server directly with npx. No installation is needed:
 
 ```bash
 npx @playwright/mcp@latest
@@ -102,7 +103,7 @@ Explore the settings page and create tests for form validation.
 
 ### Bug Hunting Commands
 
-Use AI to find potential issues:
+Ask Copilot to check for potential issues:
 
 ```text
 Navigate through the checkout flow and report any usability issues.

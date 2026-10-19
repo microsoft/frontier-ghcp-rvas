@@ -22,7 +22,7 @@
 
 ## Technology stack
 
-No traditional development stack. You will work with:
+This track uses:
 
 - **GitHub Issues** for user stories and backlog items
 - **GitHub Projects** for boards and milestone tracking

@@ -1,6 +1,8 @@
 # Backlog Generator -- System Context
 
-This challenge simulates the real-world pain of converting requirement documents into structured project backlogs. The `specs/` directory contains three use case specifications written in the style of Confluence wiki pages.
+Convert requirement documents into structured project backlogs. The `specs/`
+directory contains three use case specifications written in the style of
+Confluence wiki pages.
 
 ## What You Have
 
@@ -19,11 +21,14 @@ Today, a product owner or tech lead reads each spec and manually creates:
 - **Technical Tasks** under each story
 - **Test Cases** for QA
 
-This manual process takes hours per spec. Different people produce different structures for the same spec. Acceptance criteria vary in quality and completeness. Dependencies get missed. The result is inconsistent, slow, and frustrating.
+This manual process takes hours per spec. Different people produce different
+structures for the same spec. Acceptance criteria vary in quality and
+completeness, and dependencies get missed.
 
-## What You Will Build
+## Deliverables
 
-Copilot-based automation that turns a spec document into a structured backlog, using:
+Build Copilot-based automation that turns a spec document into a structured
+backlog. Use:
 
 - Custom skills (`.github/skills/`) for repeatable backlog conversion and reviewed Jira publishing
 - Custom agents (`.github/agents/`) for refinement and gap analysis

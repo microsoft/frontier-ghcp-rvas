@@ -25,7 +25,7 @@ Update the GitHub Actions workflow:
 
 ### Harden the Dev Environment
 
-Now that backend and frontend are both running, make the environment reliable for the whole team:
+Make the running backend and frontend reliable for the whole team:
 
 - Add health check scripts that verify each service is up before tests run
 - Configure port forwarding in the devcontainer so teammates can preview the app
@@ -34,7 +34,7 @@ Now that backend and frontend are both running, make the environment reliable fo
 
 ### Environment Configuration
 
-Set up `.env` files for local development. Document which environment variables each service needs in `docs/env-vars.md`. Make sure `.env` is in `.gitignore` and provide a `.env.example` instead.
+Set up `.env` files for local development. Document which environment variables each service needs in `docs/env-vars.md`. Add `.env` to `.gitignore` and provide a `.env.example` instead.
 
 ## Copilot Tips
 
