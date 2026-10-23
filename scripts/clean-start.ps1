@@ -8,7 +8,8 @@
 #   4. Removes Squad workflows from .github/workflows/
 #   5. Removes .github/prompts/
 #   6. Removes .copilot/, .squad/, .playwright-mcp/, .gitattributes
-#   7. Stages and commits the cleaned state on the current branch, keeping git remotes
+#   7. Empties .agents/skills/ and removes skills-lock.json
+#   8. Stages and commits the cleaned state on the current branch, keeping git remotes
 #
 # Usage:
 #   .\scripts\clean-start.ps1

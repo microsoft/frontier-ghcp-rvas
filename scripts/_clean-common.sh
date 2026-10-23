@@ -27,6 +27,22 @@ clean_github_and_meta() {
     -exec rm -rf -- {} +
   echo "[OK] Reset .github/skills/"
 
+  local shared_skills_dir="$REPO_ROOT/.agents/skills"
+  if [[ -d "$shared_skills_dir" ]]; then
+    find "$shared_skills_dir" -mindepth 1 -maxdepth 1 \
+      -exec rm -rf -- {} +
+    echo "[OK] Reset .agents/skills/"
+  else
+    echo "[SKIP] .agents/skills/ not found"
+  fi
+
+  if [[ -f "$REPO_ROOT/skills-lock.json" ]]; then
+    rm -f "$REPO_ROOT/skills-lock.json"
+    echo "[OK] Removed skills-lock.json"
+  else
+    echo "[SKIP] skills-lock.json not found"
+  fi
+
   local workflows_dir="$REPO_ROOT/.github/workflows"
   if [[ -d "$workflows_dir" ]]; then
     rm -rf "${workflows_dir:?}"

@@ -104,6 +104,33 @@ function markdownLinks(file, workspace) {
 }
 
 for (const runner of runners) {
+  test(`${runner.name}: initial setup clears shared skills and their lockfile`,
+    { skip: runner.skip }, t => {
+      const workspace = fixture(t);
+      const skillsDir = join(workspace, '.agents/skills');
+      mkdirSync(join(skillsDir, 'sample/references'), { recursive: true });
+      writeFileSync(join(skillsDir, 'sample/SKILL.md'), 'template skill\n');
+      writeFileSync(join(skillsDir, 'sample/references/guide.md'), 'template reference\n');
+      writeFileSync(join(skillsDir, '.hidden'), 'hidden skill metadata\n');
+      writeFileSync(join(skillsDir, '.gitkeep'), '');
+      writeFileSync(join(workspace, '.agents/config.json'), '{}\n');
+      writeFileSync(join(workspace, 'skills-lock.json'), '{}\n');
+
+      assertSuccess(run(runner, workspace, 'challenge-4-frontend'));
+      assert.deepEqual(readdirSync(skillsDir), []);
+      assert(!existsSync(join(workspace, 'skills-lock.json')));
+      assert.equal(readFileSync(join(workspace, '.agents/config.json'), 'utf8'), '{}\n');
+
+      mkdirSync(join(skillsDir, 'participant'));
+      writeFileSync(join(skillsDir, 'participant/SKILL.md'), 'participant skill\n');
+      writeFileSync(join(workspace, 'skills-lock.json'), '{"participant":true}\n');
+      assertSuccess(run(runner, workspace, 'challenge-4-frontend'));
+      assert.equal(readFileSync(join(skillsDir, 'participant/SKILL.md'), 'utf8'),
+        'participant skill\n');
+      assert.equal(readFileSync(join(workspace, 'skills-lock.json'), 'utf8'),
+        '{"participant":true}\n');
+    });
+
   for (const [key, challenge] of Object.entries(challengeMap)) {
     test(`${runner.name}: ${key} cleanup and repeat setup`, { skip: runner.skip }, t => {
       const workspace = fixture(t);

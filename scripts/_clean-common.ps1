@@ -28,6 +28,23 @@ function Invoke-CleanGitHubAndMeta {
         Remove-Item -Recurse -Force
     Write-Host "[OK] Reset .github/skills/" -ForegroundColor Green
 
+    $SharedSkillsDir = Join-Path $RepoRoot ".agents/skills"
+    if (Test-Path -LiteralPath $SharedSkillsDir -PathType Container) {
+        Get-ChildItem -LiteralPath $SharedSkillsDir -Force |
+            Remove-Item -Recurse -Force
+        Write-Host "[OK] Reset .agents/skills/" -ForegroundColor Green
+    } else {
+        Write-Host "[SKIP] .agents/skills/ not found" -ForegroundColor Yellow
+    }
+
+    $SkillsLockFile = Join-Path $RepoRoot "skills-lock.json"
+    if (Test-Path -LiteralPath $SkillsLockFile -PathType Leaf) {
+        Remove-Item -LiteralPath $SkillsLockFile -Force
+        Write-Host "[OK] Removed skills-lock.json" -ForegroundColor Green
+    } else {
+        Write-Host "[SKIP] skills-lock.json not found" -ForegroundColor Yellow
+    }
+
     $WorkflowsDir = Join-Path $RepoRoot ".github\workflows"
     if (Test-Path $WorkflowsDir) {
         Remove-Item -Path $WorkflowsDir -Recurse -Force
