@@ -150,7 +150,6 @@ By the end of the challenge, the repository should contain:
 - [Microsoft Work IQ CLI](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq-cli)
 - [Connect GitHub Copilot CLI to Work IQ](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/quickstart/github-copilot-cli)
 - [Work IQ overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/)
-- [Copilot Guide](../docs/copilot-guide.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

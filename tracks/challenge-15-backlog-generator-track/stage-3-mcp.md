@@ -8,7 +8,7 @@
 
 ## Tasks
 
-1. **Set up the Atlassian MCP server.** Follow the instructions in the [MCP Servers Guide](../../docs/mcp-servers.md#atlassian-rovo-mcp-server-jira-confluence) to configure the Atlassian Rovo MCP server in your `.vscode/mcp.json`. Complete the OAuth authentication flow.
+1. **Set up the Atlassian MCP server.** Follow the [Atlassian setup instructions](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/) to configure the Atlassian Rovo MCP server in your `.vscode/mcp.json`. Complete the OAuth authentication flow.
 
 2. **Explore the available tools.** In Agent mode, ask Copilot what Atlassian MCP tools are available. Familiarize yourself with the tools for creating Jira issues, searching issues, and reading Confluence pages.
 

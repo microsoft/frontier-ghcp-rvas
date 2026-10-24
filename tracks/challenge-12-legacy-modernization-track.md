@@ -80,8 +80,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 ## Resources
 
 - [Spring Boot 1.x to 3.x Migration Guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Migration-Guide)
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

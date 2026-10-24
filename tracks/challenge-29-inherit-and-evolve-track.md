@@ -134,8 +134,6 @@ their job, not their contents.
 
 ## Resources
 
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

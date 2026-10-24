@@ -111,8 +111,6 @@ Your `.github/copilot-instructions.md` should capture:
 
 ## Resources
 
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

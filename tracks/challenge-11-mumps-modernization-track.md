@@ -83,8 +83,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - [MUMPS Language Overview (Wikipedia)](https://en.wikipedia.org/wiki/MUMPS)
 - [YottaDB Documentation](https://docs.yottadb.com/)
 - [MUMPS Programming Language Tutorial](https://www.cs.uni.edu/~okane/)
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

@@ -128,8 +128,6 @@ artifacts yourself after inspecting the starter.
 
 ## Resources
 
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Azure API Management policy reference](https://learn.microsoft.com/azure/api-management/api-management-policies)
 - [Azure API Management policy expressions](https://learn.microsoft.com/azure/api-management/api-management-policy-expressions)
 - [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)

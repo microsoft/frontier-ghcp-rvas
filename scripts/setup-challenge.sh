@@ -294,7 +294,7 @@ echo "[OK] Updated .devcontainer/README.md"
 
 # ── Remove files that are not for participants ─────────────────────
 
-for dir in web byoc; do
+for dir in web; do
   if [[ -e "$REPO_ROOT/$dir" || -L "$REPO_ROOT/$dir" ]]; then
     rm -rf -- "${REPO_ROOT:?}/$dir"
     echo "[CLEAN] Removed $dir/"
@@ -327,9 +327,6 @@ Check \`git remote -v\` before pushing. Setup does not push or commit changes.
 ## Setup and Help
 
 - [Shared setup](tracks/getting-started.md)
-- [Copilot Guide](docs/copilot-guide.md)
-- [Prompt Engineering Guide](docs/prompt-engineering.md)
-- [MCP Servers Guide](docs/mcp-servers.md)
 - [Troubleshooting](TROUBLESHOOTING.md)
 EOF
 echo "[OK] Replaced root README.md"

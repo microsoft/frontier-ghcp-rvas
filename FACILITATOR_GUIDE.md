@@ -5,10 +5,8 @@
 Help teams define what to deliver, use Copilot during the work, and demonstrate
 the result. At the end, ask what changed and which practices they can use again.
 
-Participants can either pick a **worked-example challenge** from the
-[track catalog](./tracks/README.md) or **bring their own app/repository**.
-See the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for guidance
-on customer-codebase sessions.
+Participants choose a **worked-example challenge** from the
+[track catalog](./tracks/README.md).
 
 ## Pre-session setup
 
@@ -61,7 +59,6 @@ Send participants:
 - [ ] Repository link
 - [ ] **[Tracks Overview](./tracks/README.md)** - Ask them to review before the event
 - [ ] Session schedule
-- [ ] Pre-reading: `docs/copilot-guide.md`
 - [ ] Setup instructions
 - [ ] Slack/Teams channel for questions
 
@@ -75,9 +72,8 @@ Allow 30 minutes.
 
 - Introduce GitHub Copilot
 - Ask participants to deliver a result they can demonstrate
-- Explain the two paths: pick a worked-example challenge, or bring your own app and define your own outcome
 - Review schedule
-- Show the [Tracks Overview](./tracks/README.md) and the [BYOC kit](./byoc/)
+- Show the [Tracks Overview](./tracks/README.md)
 
 **Demo: Copilot Basics (15 min)**
 
@@ -86,13 +82,10 @@ Allow 30 minutes.
 - Quick example of workspace context
 - Show MCP servers (briefly)
 
-**Track or Outcome Selection (5 min)**
+**Track Selection (5 min)**
 
-- Help participants choose their worked-example track OR define their own outcome
-- For worked examples: suggest a track based on the result participants need
-  to deliver or their role
-- For BYOC: point them to [Outcome Canvas](./byoc/outcome-canvas.md)
-- Direct them to [Tracks Guide](./tracks/README.md) or [BYOC README](./byoc/README.md)
+- Suggest a track based on the result participants need to deliver or their role
+- Direct them to the [Tracks Guide](./tracks/README.md)
 
 ### Challenge time
 
@@ -100,8 +93,8 @@ Allow 4-5 hours.
 
 **Recommended flow:**
 
-1. Participants define or choose their outcome
-2. Work through the challenge stages (or their own app) to deliver it
+1. Participants choose a challenge and review its outcome
+2. Work through the challenge stages to deliver it
 3. Work individually or in pairs
 4. Facilitators rotate to help teams stay focused on the outcome
 5. Encourage using Copilot Chat for help
@@ -169,7 +162,6 @@ Allow 1-2 hours.
 **Next Steps (10 min)**
 
 - Apply these patterns to your own projects
-- Use the **[Outcome Scorecard](./byoc/outcome-scorecard.md)** for future work sessions
 - Track impact over time
 
 ## Facilitation tips
@@ -441,7 +433,6 @@ Ask participants to note:
 
 - [ ] Thank you email
 - [ ] Feedback survey (include outcome-driven questions: What did you deliver? What was the business impact?)
-- [ ] Link to **[Outcome Scorecard](./byoc/outcome-scorecard.md)** for future work sessions
 - [ ] Additional resources
 - [ ] Next steps for continued use
 
@@ -452,15 +443,6 @@ Ask participants to note:
 - Where Copilot helped or slowed the work
 - Patterns discovered
 - Overall experience
-
-## BYOC sessions
-
-If you're running a GitHub Copilot Adoption delivery session on a customer's own app or repository, see the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)** for:
-
-- How to run outcome-definition workshops
-- Environment and devcontainer guidance for customer codebases
-- Timeboxes and checkpoints for custom challenges
-- Outcome review and scorecard facilitation
 
 ### Share results
 
@@ -536,7 +518,3 @@ For facilitation questions:
 - Check the selected track guide
 - Consult docs folder
 - Ask in organizer chat
-
----
-
-For outcome review and scorecard facilitation, see the [BYOC Facilitator Runbook](./byoc/facilitator-runbook.md).

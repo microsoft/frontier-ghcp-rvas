@@ -131,7 +131,6 @@ provided.
 - [Copilot integration and invocation syntax](https://github.github.io/spec-kit/reference/integrations.html)
 - [Adopting Spec Kit in existing code](https://github.github.io/spec-kit/guides/existing-projects.html)
 - [Evolving specifications](https://github.github.io/spec-kit/guides/evolving-specs.html)
-- [Copilot Guide](../docs/copilot-guide.md)
 
 The track uses the pinned versions above. Upstream documentation can change;
 check the installed skills before copying command syntax from another version.

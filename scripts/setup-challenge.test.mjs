@@ -60,15 +60,14 @@ const challengeMap = mapping('CHALLENGE_MAP');
 const trackMap = mapping('TRACK_FILE_MAP');
 const marker = '.devcontainer/.workspace-prepared';
 const removed = [
-  'web', 'byoc', 'CONTRIBUTING.md', 'AGENTS.md', 'CONTEXT.md',
+  'web', 'CONTRIBUTING.md', 'AGENTS.md', 'CONTEXT.md',
   'FACILITATOR_GUIDE.md', 'learning-paths.json', 'role-collections.json',
   'docs/index.md', 'docs/challenges', 'docs/tracks',
   'scripts/setup-challenge.test.mjs', '.github/workflows', '.github/prompts'
 ];
 const retained = [
   'LICENSE', 'CODE_OF_CONDUCT.md', 'SECURITY.md', 'TROUBLESHOOTING.md',
-  'tracks/getting-started.md', 'docs/copilot-guide.md',
-  'docs/prompt-engineering.md', 'docs/mcp-servers.md', '.vscode/mcp.json'
+  'tracks/getting-started.md', '.vscode/mcp.json'
 ];
 const runners = [
   { name: 'Bash', command: 'bash', args: key => ['scripts/setup-challenge.sh', key] },
@@ -255,7 +254,7 @@ for (const runner of runners) {
       assert.notEqual(run(runner, workspace, 'unknown-challenge').status, 0);
       unlinkSync(join(workspace, `tracks/${trackMap[key]}.md`));
       assert.notEqual(run(runner, workspace, key).status, 0);
-      for (const file of ['web', 'byoc', 'CONTRIBUTING.md']) {
+      for (const file of ['web', 'CONTRIBUTING.md']) {
         assert(existsSync(join(workspace, file)));
       }
       assert(!existsSync(join(workspace, marker)));

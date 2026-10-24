@@ -15,7 +15,7 @@ Reads `challenges/*/meta.yml`, `learning-paths.json`,
 - `web/assets/data/paths.json` -- curated learning paths
 - `web/assets/data/roles.json` -- curated enterprise role collections
 - `web/assets/data/challenges/<id>/pages/<page-id>.md` -- one Markdown payload per challenge page
-- `web/assets/data/pages/<slug>.md` -- content docs
+- `web/assets/data/pages/<slug>.md` -- setup, troubleshooting, and facilitator instructions
 
 The `assets/data/` directory is generated and git-ignored.
 
@@ -51,7 +51,10 @@ as a separate payload at
 - `set.html` -- curated set landing page
 - `paths.html` -- learning paths overview
 - `roles.html` -- challenges grouped by enterprise role
-- `guide.html` -- content guide renderer
+- `guide.html` -- setup, troubleshooting, and facilitator instructions (defaults to Getting Started)
+
+Run `node --test web/guide.test.mjs` to check these documentation routes and
+confirm that rebuilds remove stale content.
 
 ## Shared shell
 

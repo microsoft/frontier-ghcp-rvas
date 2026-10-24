@@ -83,8 +83,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - [The Agentics Gallery](https://github.com/githubnext/agentics)
 - [Peli's Agent Factory](https://github.github.com/gh-aw/blog/2026-01-12-welcome-to-pelis-agent-factory/)
 - [Security Architecture](https://github.github.com/gh-aw/introduction/architecture/)
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

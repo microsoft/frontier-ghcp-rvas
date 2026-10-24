@@ -103,8 +103,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - [COBOL Language Overview (Wikipedia)](https://en.wikipedia.org/wiki/COBOL)
 - [GnuCOBOL Documentation](https://gnucobol.sourceforge.io/)
 - [COBOL Tutorial (Tutorialspoint)](https://www.tutorialspoint.com/cobol/index.htm)
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

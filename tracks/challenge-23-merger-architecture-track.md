@@ -143,8 +143,6 @@ The script checks the expected artifact structure, Mermaid source, ADR count and
 - [Azure API Management](https://learn.microsoft.com/azure/api-management/)
 - [Azure Service Bus](https://learn.microsoft.com/azure/service-bus-messaging/)
 - [Microsoft Entra architecture](https://learn.microsoft.com/entra/architecture/architecture)
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

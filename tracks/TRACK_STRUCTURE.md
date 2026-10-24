@@ -200,9 +200,6 @@ In agent-heavy challenges, distinguish a Custom Agent that helps a participant
 author or review work from the runtime agent, agent engine, or automated
 workflow that the challenge builds or operates.
 
-For BYOC sessions, the facilitator prepares the tailored agent and skill
-briefs. Participants use those briefs to author their own artifacts.
-
 Challenge 30 is a narrow exception: participants adopt Spec Kit's supplied
 workflow. Keep the required overview subsections, but mark custom agent and
 skill briefs as optional. Do not require them to rebuild Spec Kit's workflow.
@@ -235,9 +232,6 @@ skill briefs as optional. Do not require them to rebuild Spec Kit's workflow.
 
 Business outcome framing belongs in the facilitator guide, learning paths, and
 website. The overview explains what work gets done and how to execute it.
-
-For customers authoring their own challenges, templates are available under
-`byoc/templates/`.
 
 ## Writing Style
 

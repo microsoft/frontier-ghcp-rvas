@@ -80,8 +80,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 - [Mermaid Diagramming Syntax](https://mermaid.js.org/intro/)
 - [Javadoc Best Practices](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

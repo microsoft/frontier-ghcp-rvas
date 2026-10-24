@@ -124,8 +124,6 @@ and search for "copilot sdk cookbook" or the SDK language you are using.
 
 ### General
 
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

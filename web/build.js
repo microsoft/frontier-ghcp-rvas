@@ -68,9 +68,6 @@ const ROLE_COLLECTIONS_PATH = path.join(ROOT, 'role-collections.json');
 const FACILITATOR_PATH    = path.join(ROOT, 'FACILITATOR_GUIDE.md');
 const TROUBLESHOOT_PATH   = path.join(ROOT, 'TROUBLESHOOTING.md');
 const CONTENT_PAGES       = [
-  { slug: 'copilot-guide', source: path.join(DOCS_DIR, 'copilot-guide.md') },
-  { slug: 'prompt-engineering', source: path.join(DOCS_DIR, 'prompt-engineering.md') },
-  { slug: 'mcp-servers', source: path.join(DOCS_DIR, 'mcp-servers.md') },
   { slug: 'facilitator-guide', source: FACILITATOR_PATH },
   { slug: 'troubleshooting', source: TROUBLESHOOT_PATH },
   { slug: 'getting-started', source: path.join(TRACKS_DIR, 'getting-started.md') }
@@ -613,7 +610,6 @@ function publishedContentPages() {
 
   published.set(path.join(DOCS_DIR, 'index.md').replace(/\\/g, '/').toLowerCase(), 'index.html');
   published.set(path.join(TRACKS_DIR, 'README.md').replace(/\\/g, '/').toLowerCase(), 'catalog.html');
-  published.set(path.join(ROOT, 'byoc').replace(/\\/g, '/').toLowerCase(), 'byoc.html');
 
   return published;
 }
@@ -647,6 +643,7 @@ function rewriteContentPageLinks(content, sourcePath, challengePages, contentPag
 }
 
 function buildContentPages(challenges) {
+  fs.rmSync(OUT_PAGES_DIR, { recursive: true, force: true });
   ensureDir(OUT_PAGES_DIR);
   const challengePages = publishedChallengePages(challenges);
   const contentPages = publishedContentPages();

@@ -84,8 +84,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Reusable Workflows](https://docs.github.com/en/actions/sharing-automations/reusing-workflows)
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

@@ -3,18 +3,21 @@
   'use strict';
 
   const guides = [
-    { slug: 'copilot-guide', title: 'Copilot Guide' },
-    { slug: 'prompt-engineering', title: 'Prompt Engineering' },
-    { slug: 'mcp-servers', title: 'MCP Servers' },
-    { slug: 'facilitator-guide', title: 'Facilitator Guide' },
+    { slug: 'getting-started', title: 'Getting Started' },
     { slug: 'troubleshooting', title: 'Troubleshooting' },
-    { slug: 'getting-started', title: 'Getting Started' }
+    { slug: 'facilitator-guide', title: 'Facilitator Guide' }
   ];
 
   async function init() {
-    const slug = FP.qp('p') || 'copilot-guide';
+    const slug = FP.qp('p') || 'getting-started';
 
     renderSidebar(slug);
+    const page = guides.find((guide) => guide.slug === slug);
+    if (!page) {
+      FP.renderError('guideContent', 'Page not found.');
+      return;
+    }
+    document.title = page.title + ' - GitHub Copilot Adoption';
     await loadGuide(slug);
   }
 
@@ -40,9 +43,9 @@
       const res = await fetch(mdUrl, { cache: 'no-cache' });
       if (!res.ok) {
         if (res.status === 404) {
-          FP.renderError(content, 'Guide not found.');
+          FP.renderError(content, 'Page not found.');
         } else {
-          FP.renderError(content, `Could not load guide (${res.status}).`);
+          FP.renderError(content, `Could not load page (${res.status}).`);
         }
         return;
       }

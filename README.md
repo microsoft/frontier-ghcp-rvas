@@ -3,7 +3,7 @@
 ![GitHub Copilot Adoption banner](docs/images/rvas-banner.jpg)
 
 Use GitHub Copilot to deliver work your team needs. Choose from **31 challenges**
-with starter code and track guides, or bring your own app. Use the session to
+with starter code and track guides. Use the session to
 find practices your team can keep using.
 
 Sessions use repository instructions, custom agents, and custom skills tailored
@@ -22,20 +22,10 @@ The Backlog Generator's first stage is now
 [Spec-to-Backlog Skill](tracks/challenge-15-backlog-generator-track/stage-1-skill.md);
 links to its former `stage-1-prompt` page need updating.
 
-## Two ways to run a GitHub Copilot Adoption delivery session
-
-### Option 1: pick a worked-example challenge
+## Choose a challenge
 
 Choose a challenge below. Each has a defined outcome, starter code, a
 devcontainer, and stages that guide the work.
-
-### Option 2: bring your own challenge
-
-Use the **[Bring Your Own Challenge (BYOC) kit](./byoc/)** to plan a session on
-your team's codebase. Define the result, prepare the work, and decide how you
-will demonstrate it.
-
-See **[byoc/README.md](./byoc/README.md)** for the full kit.
 
 ## Overview
 
@@ -102,7 +92,8 @@ with no build dependencies.
 
 The homepage starts with role selection, then explains how to open a track,
 prepare the environment, and work through its stages. The catalog, learning
-paths, Challenge Set Builder, and BYOC pages remain available through navigation.
+paths, and Challenge Set Builder pages remain available through navigation.
+The site also includes setup, troubleshooting, and facilitator instructions.
 
 To build the site data locally:
 
@@ -148,8 +139,6 @@ The GitHub Pages deployment workflow automatically builds and deploys the site f
 
 ## Getting started
 
-### Option 1: work a challenge track
-
 1. Choose a challenge from [tracks/README.md](./tracks/README.md).
 2. Set up your environment using the track's prerequisites and devcontainer.
 3. Work through the stages and demonstrate the result.
@@ -159,17 +148,8 @@ the selected starter and guides, removes the website and facilitator material,
 and replaces the root README with a single challenge entry point. It also removes
 `.impeccable/`, root `PRODUCT.md` and `DESIGN.md`, template skills and agents,
 and `.github/hooks/impeccable.json`. Rebuilding
-preserves participant files and Copilot customizations. The full template and
-BYOC kit remain in this source repository.
-
-### Option 2: bring your own challenge
-
-1. **Define your outcome** using the **[Outcome Canvas](./byoc/outcome-canvas.md)**.
-2. **Author your challenge** using the templates in **[byoc/templates/](./byoc/templates/)** (if you need a custom progression; otherwise skip this and work directly on your app).
-3. **Run your session** following the **[BYOC Facilitator Runbook](./byoc/facilitator-runbook.md)**.
-4. **Measure success** using the **[Outcome Scorecard](./byoc/outcome-scorecard.md)**.
-
-See the **[BYOC Kit README](./byoc/README.md)** for the end-to-end flow and a worked example.
+preserves participant files and Copilot customizations. The full template
+remains in this source repository.
 
 ---
 
@@ -718,12 +698,6 @@ Use the [shared examples guidance](./tracks/getting-started.md#4-learn-from-exam
 to find current examples. Search for terms that match the artifact you need,
 such as "repository instructions", "custom agent", or "workflow skill".
 
-### GitHub Copilot documentation
-
-- [Copilot Guide](./docs/copilot-guide.md)
-- [Prompt Engineering Guide](./docs/prompt-engineering.md)
-- [MCP Servers Guide](./docs/mcp-servers.md)
-
 ### Quick tips
 
 Describe the expected behavior and reference existing code. Refine suggestions
@@ -831,7 +805,6 @@ After the session:
 ### Quick links
 
 - **[Choose Your Track](./tracks/README.md)** - Outcome-driven learning paths organized by role and outcome
-- **[Bring Your Own Challenge Kit](./byoc/README.md)** - Run a GitHub Copilot Adoption delivery session on your own codebase
 - **Challenge Set Builder** - Available on the published site; coaches can curate challenge sets and generate student URLs
 - **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
 - **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For GitHub Copilot Adoption delivery session organizers

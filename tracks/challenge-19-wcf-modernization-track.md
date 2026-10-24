@@ -122,8 +122,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - [WCF documentation (Microsoft Learn)](https://learn.microsoft.com/dotnet/framework/wcf/)
 - [ASP.NET Core Web API documentation](https://learn.microsoft.com/aspnet/core/web-api/)
 - [Azure API Management documentation](https://learn.microsoft.com/azure/api-management/)
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 
 ---

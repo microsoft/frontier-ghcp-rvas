@@ -14,7 +14,7 @@ within a delivery session.
 
 Coaches are the secondary audience. They help participants select challenges,
 curate challenge sets, share student URLs, and run sessions on predefined
-challenges or a team's own codebase.
+challenges.
 
 ## Product Purpose
 
@@ -22,8 +22,8 @@ Help teams adopt GitHub Copilot by delivering work they need, rather than
 practicing isolated prompts. A successful session produces a demonstrable result
 and practices the team can keep using.
 
-The product includes the documentation site, challenge starter code, track
-guides, and Bring Your Own Challenge (BYOC) session kit.
+The product includes the documentation site, challenge starter code, and track
+guides.
 
 ## Positioning
 
@@ -32,8 +32,6 @@ development environments, staged guides, and verification criteria. Participants
 develop repository instructions, custom agents, and custom skills in the context
 of the work. Individual tracks define exceptions, including the supplied
 Spec Kit workflow.
-
-BYOC applies the session approach to a team's own application.
 
 ## Operating Context
 
@@ -90,7 +88,7 @@ Stage, Repository Instructions, Custom Agent, and Custom Skill.
 
 - `README.md` and `CONTEXT.md`: product scope, delivery approach, and terminology.
 - `tracks/` and `challenges/`: session guides, starter code, and challenge metadata.
-- `byoc/` and `FACILITATOR_GUIDE.md`: planning and delivery material for coaches.
+- `FACILITATOR_GUIDE.md`: planning and delivery material for coaches.
 - `learning-paths.json` and `role-collections.json`: curated challenge selections.
 - `web/`: the existing site implementation and its build script.
 - `web/assets/img/` and `docs/images/rvas-banner.jpg`: existing identity assets.

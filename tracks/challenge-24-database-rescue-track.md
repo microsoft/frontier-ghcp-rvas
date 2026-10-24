@@ -157,8 +157,6 @@ the answer.
 
 ## Resources
 
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering Guide](../docs/prompt-engineering.md)
 - [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - [SQL Server execution plans](https://learn.microsoft.com/sql/relational-databases/performance/execution-plans)
 - [Azure SQL performance guidance](https://learn.microsoft.com/azure/azure-sql/database/performance-guidance)

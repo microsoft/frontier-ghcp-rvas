@@ -1,7 +1,6 @@
 # GitHub Copilot Adoption Delivery Session tracks overview
 
-Pick a track that matches the work you need to deliver. To use your own app or
-repository, start with the **[Bring Your Own Challenge kit](../byoc/)**.
+Pick a track that matches the work you need to deliver.
 
 The **31 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
 
@@ -683,7 +682,7 @@ stages and leave optional tasks for later.
 Start with Challenge 1 for API development or Challenge 0 for product planning.
 Choose by outcome if you already know what you want to deliver.
 
-## Bring your own challenge
+## Track comparison
 
 | Track | Difficulty | Duration | Technologies | Challenge |
 |-------|-----------|----------|--------------|----------|
@@ -817,12 +816,6 @@ Each track includes:
 - Success metrics
 - Additional challenges
 
-Plus access to:
-
-- [Copilot Guide](../docs/copilot-guide.md)
-- [Prompt Engineering](../docs/prompt-engineering.md)
-- [MCP Servers](../docs/mcp-servers.md)
-
 ## For teams
 
 ### If you're doing this as a team
@@ -874,7 +867,6 @@ Activity metrics (Copilot usage, chat interactions) are supporting evidence, not
 ## Need help?
 
 - **Track-specific questions?** Check your track guide
-- **General Copilot help?** See [Copilot Guide](../docs/copilot-guide.md)
 - **Technical issues?** Check [Troubleshooting Guide](../TROUBLESHOOTING.md)
 - **Stuck on challenge?** Ask Copilot Chat or facilitator
 

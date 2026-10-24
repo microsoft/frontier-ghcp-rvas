@@ -265,7 +265,7 @@ Rebuilding preserves your current branch, files, and Copilot customizations.
 Write-Host "[OK] Updated .devcontainer/README.md" -ForegroundColor Green
 
 # Remove files that are not for participants
-foreach ($RemoveDir in @("web", "byoc")) {
+foreach ($RemoveDir in @("web")) {
     $RemovePath = Join-Path $RepoRoot $RemoveDir
     if (Test-Path -LiteralPath $RemovePath) {
         Remove-Item -LiteralPath $RemovePath -Recurse -Force
@@ -303,9 +303,6 @@ Check ``git remote -v`` before pushing. Setup does not push or commit changes.
 ## Setup and Help
 
 - [Shared setup](tracks/getting-started.md)
-- [Copilot Guide](docs/copilot-guide.md)
-- [Prompt Engineering Guide](docs/prompt-engineering.md)
-- [MCP Servers Guide](docs/mcp-servers.md)
 - [Troubleshooting](TROUBLESHOOTING.md)
 "@ | Set-Content -Path $RootReadme
 Write-Host "[OK] Replaced root README.md" -ForegroundColor Green

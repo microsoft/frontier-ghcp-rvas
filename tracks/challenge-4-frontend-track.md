@@ -97,7 +97,6 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Resources
 
-- [Copilot Guide](../docs/copilot-guide.md)
 - [Impeccable source and installation](https://github.com/pbakaus/impeccable)
 
 ---
