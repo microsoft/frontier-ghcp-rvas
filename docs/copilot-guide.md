@@ -94,7 +94,8 @@ Tools extend what Copilot can do. Access them via the **Configure Tools** button
 
 ### MCP tools
 
-Install additional capabilities through MCP (Model Context Protocol) servers. See [MCP Servers Guide](./mcp-servers.md) for setup and configuration.
+Connect Copilot to additional tools through MCP (Model Context Protocol)
+servers. See [MCP Servers Guide](./mcp-servers.md) for setup and configuration.
 
 ### Slash commands
 
@@ -119,10 +120,9 @@ suggestion.
 
 ## Language models
 
-Click the model picker in Chat to switch models:
-
-Choose a model based on the task and compare the results against your
-requirements. Available models and their performance change over time.
+Use the model picker in Chat to switch models. Choose a model based on the task
+and compare the results against your requirements. Available models and their
+performance change over time.
 
 ## Customizing Copilot
 

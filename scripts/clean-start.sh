@@ -10,7 +10,8 @@
 #   5. Removes .github/prompts/
 #   6. Removes .copilot/, .squad/, .playwright-mcp/, .gitattributes
 #   7. Empties .agents/skills/ and removes skills-lock.json
-#   8. Stages and commits the cleaned state on the current branch, keeping git remotes
+#   8. Removes .impeccable/, root PRODUCT.md and DESIGN.md, and the Impeccable hook
+#   9. Stages and commits the cleaned state on the current branch, keeping git remotes
 #
 # Usage:
 #   chmod +x scripts/clean-start.sh

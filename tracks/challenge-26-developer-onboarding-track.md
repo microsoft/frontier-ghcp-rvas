@@ -35,9 +35,9 @@ works, but the documentation does not. Pages came from different team wikis
 and releases. They disagree about commands, supported runtimes, audience,
 terminology, and what the tool changes on a developer's machine.
 
-Your measure of success is reader task completion. A new API or web developer
-should be able to choose the right profile, verify the tool, generate a setup
-plan, and use the SDK without guessing. This differs from the Living
+Measure success by whether readers can complete their tasks. A new API or web
+developer should be able to choose the right profile, verify the tool, generate
+a setup plan, and use the SDK without guessing. This differs from the Living
 Documentation challenge, which focuses on generating reference material from
 code and release changes. Here, automation supports the editorial work rather
 than defining it.

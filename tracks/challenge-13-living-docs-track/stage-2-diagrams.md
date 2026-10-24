@@ -6,7 +6,7 @@
 
 ## Tasks
 
-1. **Create a system architecture diagram.** A high-level Mermaid diagram showing the components: HTTP clients, controllers, database, and any external systems. Show the data flow between them.
+1. **Create a system architecture diagram.** Use a high-level Mermaid diagram to show the components: HTTP clients, controllers, database, and any external systems. Show the data flow between them.
 
 2. **Create an entity-relationship diagram.** Read the SQL schema (or infer it from the `JdbcTemplate` queries in the controllers) and produce a Mermaid ERD showing all tables, columns, and relationships.
 

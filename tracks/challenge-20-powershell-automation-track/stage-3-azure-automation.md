@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
-The tagging script in `scripts/Set-AzureResourceTags.ps1` runs interactively with `Connect-AzAccount`, overwrites existing tags without checking them, and provides no feedback. This stage turns it into a safe, automatable compliance script.
+The tagging script in `scripts/Set-AzureResourceTags.ps1` runs interactively with `Connect-AzAccount`, overwrites existing tags without checking them, and provides no feedback. Refactor it to run safely as an automated compliance script.
 
 ## Tasks
 

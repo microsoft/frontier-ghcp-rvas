@@ -13,6 +13,9 @@ one start link. It keeps Git remotes and switches to
 `challenge-<id>-<random suffix>` before cleanup. Setup does not commit or push.
 Check `git remote -v` before pushing.
 
+First-time setup also removes `.impeccable/`, root `PRODUCT.md` and `DESIGN.md`,
+template skills and agents, and `.github/hooks/impeccable.json`.
+
 Rebuilding preserves the current branch, participant files, and Copilot customizations.
 Older prepared workspaces keep their existing layout. Use a fresh clone to switch
 challenges or get the slimmer layout.

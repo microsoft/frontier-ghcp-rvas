@@ -45,6 +45,16 @@ function Invoke-CleanGitHubAndMeta {
         Write-Host "[SKIP] skills-lock.json not found" -ForegroundColor Yellow
     }
 
+    foreach ($Artifact in @(".impeccable", "PRODUCT.md", "DESIGN.md", ".github/hooks/impeccable.json")) {
+        $ArtifactPath = Join-Path $RepoRoot $Artifact
+        if (Test-Path -LiteralPath $ArtifactPath) {
+            Remove-Item -LiteralPath $ArtifactPath -Recurse -Force
+            Write-Host "[OK] Removed $Artifact" -ForegroundColor Green
+        } else {
+            Write-Host "[SKIP] $Artifact not found" -ForegroundColor Yellow
+        }
+    }
+
     $WorkflowsDir = Join-Path $RepoRoot ".github\workflows"
     if (Test-Path $WorkflowsDir) {
         Remove-Item -Path $WorkflowsDir -Recurse -Force

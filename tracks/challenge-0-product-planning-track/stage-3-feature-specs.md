@@ -14,7 +14,7 @@ A feature spec must describe how the feature fits the existing system and resolv
 
 4. **Measurable NFRs** -- Every non-functional requirement must have a specific, testable threshold. Not "the feature should be fast" but "notification delivery latency p95 < 3 seconds measured from event trigger to client receipt."
 
-5. **Spec review exercise** -- Open [docs/bad-feature-spec.md](../../challenges/challenge-0-product-planning/docs/bad-feature-spec.md). It contains a pre-written feature spec with 5 intentional problems (a missing edge case, two contradictory requirements, an undefined technical term used without explanation, an unmeasurable NFR, and a missing dependency). Find all five, document each problem, and write the corrected version.
+5. **Spec review exercise** -- Open [docs/bad-feature-spec.md](../../challenges/challenge-0-product-planning/docs/bad-feature-spec.md). It contains a pre-written feature spec with 5 intentional problems (a missing edge case, two contradictory requirements, an undefined technical term, an unmeasurable NFR, and a missing dependency). Find all five, document each problem, and write the corrected version.
 
 6. **Open a Pull Request** for your specs on a branch. Write a PR description that summarizes the features and calls out open questions.
 

@@ -5,7 +5,7 @@
 
 ## Objective
 
-Prove you understand the system by extending it. Add new features that require touching multiple modules and maintaining consistency with the existing data model, business rules, and coding patterns. You can do this in COBOL (if you have GnuCOBOL set up) or in your target language (if you already started translating in Stage 2).
+Show your understanding of the system by adding features that change multiple modules. Keep them consistent with the existing data model, business rules, and coding patterns. You can do this in COBOL (if you have GnuCOBOL set up) or in your target language (if you already started translating in Stage 2).
 
 For the five-hour core, skip this stage and continue to
 [Stage 4](stage-4-modernization.md). Do not add a new banking rule while

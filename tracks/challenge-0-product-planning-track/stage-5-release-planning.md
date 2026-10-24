@@ -8,7 +8,7 @@ Plan the release milestones, assess risks, and define how to roll back each mile
 
 1. Complete the release plan in [docs/release-plan.md](../../challenges/challenge-0-product-planning/docs/release-plan.md). Map milestones to GitHub Milestones and Issues. Each milestone must be independently shippable and useful to customers.
 
-2. **Risk matrix** -- Replace the simple risk table with a proper probability-vs-severity matrix. Use a 3x3 or 5x5 grid. Each risk must have a probability score, severity score, composite score, mitigation plan, and trigger condition (what observable event tells you the risk is materializing).
+2. **Risk matrix** -- Replace the simple risk table with a probability-vs-severity matrix. Use a 3x3 or 5x5 grid. Each risk must have a probability score, severity score, composite score, mitigation plan, and trigger condition (what observable event tells you the risk is materializing).
 
 3. **Mermaid Gantt chart** -- Add a Mermaid Gantt diagram to the release plan showing all milestones, their features, dependencies between features, and a critical path. The Gantt must reflect realistic durations (matching your stakeholder budget from Stage 4).
 

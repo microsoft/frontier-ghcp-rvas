@@ -11,7 +11,7 @@
 ## Who is this for
 
 - Teams of 4-6 people from different disciplines who want to build a complete application together
-- Organizations that want to simulate a real agile sprint powered by GitHub Copilot
+- Organizations that want to simulate an agile sprint using GitHub Copilot
 - Groups with mixed experience across product, development, QA, and operations
 
 ## Team composition

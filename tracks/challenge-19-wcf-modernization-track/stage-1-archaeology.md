@@ -6,7 +6,7 @@
 
 ## Objective
 
-Understand the Meridian Savings Bank WCF service well enough to describe every operation, every data contract, and every fault condition to someone who has never worked with WCF. You start with the service contract interfaces, trace through the implementations, and produce a written inventory that will guide every decision in Stage 3.
+Document every operation, data contract, and fault condition in the Meridian Savings Bank WCF service for someone who has never worked with WCF. Start with the service contract interfaces, trace the implementations, and write an inventory to guide every decision in Stage 3.
 
 ## Tasks
 

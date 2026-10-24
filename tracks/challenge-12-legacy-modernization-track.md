@@ -10,7 +10,7 @@
 
 - Developers who inherit and maintain systems they did not build
 - Engineers dealing with outdated Java applications (Spring Boot 1.x, Java 8, deprecated libraries)
-- Teams where the original developer has left and documentation is missing or nonexistent
+- Teams where the original developer has left and documentation is missing
 - Anyone who wants to practice using Copilot as a knowledge recovery tool
 
 ## Prerequisites

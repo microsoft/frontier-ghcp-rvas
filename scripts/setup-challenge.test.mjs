@@ -104,6 +104,30 @@ function markdownLinks(file, workspace) {
 }
 
 for (const runner of runners) {
+  test(`${runner.name}: initial setup removes Impeccable context, skills, agents, and hooks`,
+    { skip: runner.skip }, t => {
+      const workspace = fixture(t);
+      const impeccableFiles = [
+        '.impeccable/config.json', '.impeccable/live/sessions/example.json',
+        'PRODUCT.md', 'DESIGN.md', '.github/skills/impeccable/SKILL.md',
+        '.agents/skills/impeccable/SKILL.md',
+        '.github/agents/impeccable-documenter.agent.md',
+        '.github/hooks/impeccable.json'
+      ];
+      for (const file of impeccableFiles) {
+        mkdirSync(dirname(join(workspace, file)), { recursive: true });
+        writeFileSync(join(workspace, file), 'template content\n');
+      }
+      writeFileSync(join(workspace, '.github/hooks/participant.json'), '{}\n');
+
+      assertSuccess(run(runner, workspace, 'challenge-4-frontend'));
+      for (const file of [...impeccableFiles, '.impeccable']) {
+        assert(!existsSync(join(workspace, file)), `Unexpected Impeccable leftover: ${file}`);
+      }
+      assert.equal(readFileSync(join(workspace, '.github/hooks/participant.json'), 'utf8'),
+        '{}\n');
+    });
+
   test(`${runner.name}: initial setup clears shared skills and their lockfile`,
     { skip: runner.skip }, t => {
       const workspace = fixture(t);
@@ -187,7 +211,8 @@ for (const runner of runners) {
         'README.md', 'AGENTS.md', '.github/copilot-instructions.md',
         '.github/agents/reviewer.agent.md', '.github/skills/impeccable/SKILL.md',
         '.github/skills/impeccable/engine/launcher', '.github/hooks/impeccable.json',
-        '.impeccable/config.json', `challenges/${challenge}/participant.txt`,
+        '.agents/skills/impeccable/SKILL.md', '.impeccable/config.json',
+        'PRODUCT.md', 'DESIGN.md', `challenges/${challenge}/participant.txt`,
         `tracks/${trackMap[key]}.md`
       ];
       for (const file of participantFiles) {

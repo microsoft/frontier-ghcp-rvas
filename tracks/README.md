@@ -9,7 +9,9 @@ Coaches can use the site's Challenge Set Builder or Learning Paths pages to
 share a selected set with one URL. The builder selects whole challenges.
 Use the track guides for stages and role-specific work.
 
-Each track starts with an overview page for audience, setup, tips, and resources. Its linked contents page lists the stages and any role-specific paths. Stage pages include previous and next links for reading the track on GitHub.
+Each track starts with an overview covering audience, setup, tips, and resources.
+Follow its link to the contents page for stages and any role-specific paths.
+Use the previous and next links to move between stage pages on GitHub.
 
 Sessions use a customization trio: repository instructions, custom agents, and
 custom skills tailored to each challenge.
@@ -248,7 +250,9 @@ for a critique-and-fix cycle and final UI review.
 
 **Best for:** Product owners, tech leads, and scrum masters who manually convert requirement documents into structured backlogs
 
-**Focus:** Converting use case specifications into structured backlogs (Epics, Stories, Tasks, Test Cases) using workflow skills, refinement agents, and the Atlassian MCP server.
+**Focus:** Convert use case specifications into structured backlogs (Epics,
+Stories, Tasks, Test Cases) using workflow skills, refinement agents, and the
+Atlassian MCP server.
 
 **Your Challenge:** Challenge 15 - Spec-to-Backlog Automation
 
@@ -826,7 +830,7 @@ Plus access to:
 **Option 1: Everyone on Same Track**
 
 - Choose track based on team's primary role
-- Work together, share learnings
+- Work together and share what you learn
 - Present the result together
 
 **Option 2: Different Tracks**
@@ -859,7 +863,7 @@ Activity metrics (Copilot usage, chat interactions) are supporting evidence, not
 2. **Try more challenges** - Go deeper in your domain
 3. **Explore another track** - Broaden your skills
 4. **Apply to real work** - Use Copilot in your projects
-5. **Share learnings** - Help others in your organization
+5. **Share what you learned** - Help others in your organization
 
 ### Cross-track learning
 

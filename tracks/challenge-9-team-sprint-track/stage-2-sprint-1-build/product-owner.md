@@ -18,7 +18,7 @@ Answer developer questions, review PRs, and keep the backlog current during the 
    - Dashboard page with charts and statistics
    - Report status notifications
 
-5. **Update the project board** -- Move Issues through columns as work progresses. The board should reflect reality at any moment.
+5. **Update the project board** -- Move Issues through columns as work progresses so the board always shows the current status.
 
 6. **Write end-user help content** -- Draft a `docs/user-guide.md` with instructions for how a resident would use CityPulse. This doubles as a test of whether the product makes sense from a user's perspective.
 

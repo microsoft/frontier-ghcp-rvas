@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-This stage introduces a broken v2 API module and advanced features.
+Fix the broken v2 API module and add advanced features.
 
 ## Tasks
 

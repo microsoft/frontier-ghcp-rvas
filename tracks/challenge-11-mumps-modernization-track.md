@@ -75,7 +75,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - MUMPS is in Copilot's training data, but it is not a primary language. Expect Copilot to need more guidance than usual. Paste code blocks and ask for line-by-line explanations.
 - Use `@workspace` and `#file` to point Copilot at specific routines.
 - Describe the business rule first ("this function calculates monthly loan payment using the PMT formula"), then ask for its equivalent in the target language.
-- Agent mode is strong for generating test scaffolding. Describe the test scenarios and let Copilot wire up the framework.
+- Use Agent mode to generate test scaffolding. Describe the test scenarios and let Copilot wire up the framework.
 - The `/explain` command works on MUMPS files. Use it on the dense routines (BNKTXN, BNKINTR) to build your understanding.
 
 ## Resources

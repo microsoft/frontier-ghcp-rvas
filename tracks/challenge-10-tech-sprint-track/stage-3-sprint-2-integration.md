@@ -7,7 +7,7 @@ Connect the frontend to the backend and fix bugs from Sprint 1. Add advanced fea
 
 ## Sprint 2 Planning (first 10 minutes)
 
-Quick self-organized planning. Do not spend more than 10 minutes on this.
+The team organizes planning. Keep it within 10 minutes.
 
 1. **Carry-over** -- Anything unfinished from Sprint 1 gets highest priority.
 2. **Bug fixes** -- QA filed bugs. The team decides together which are Sprint 2 fixes and which go to a known-issues list.
@@ -33,7 +33,7 @@ A brief 5-minute check-in:
 - Are there any deployment blockers?
 - What will be ready for the demo vs. what will not?
 
-This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication. Focus on getting a working trail directory and condition reporting flow running end-to-end in the Codespace.
+This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication. Focus on making the trail directory and condition reporting flow work end-to-end in the Codespace.
 
 If repository instructions or the sprint board sync skill give roles conflicting guidance, revise them together before the demo. Check that backend and frontend use the same trail data model.
 

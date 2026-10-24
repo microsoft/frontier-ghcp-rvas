@@ -5,7 +5,7 @@
 
 ## Objective
 
-Explore the FAA flights dataset, clean it, perform exploratory data analysis, and train a classification model that predicts whether a flight arriving at a given airport on a given day of the week will be delayed by more than 15 minutes.
+Explore and clean the FAA flights dataset, then perform exploratory data analysis. Train a classification model that predicts whether a flight arriving at a given airport on a given day of the week will be delayed by more than 15 minutes.
 
 ## Dataset
 

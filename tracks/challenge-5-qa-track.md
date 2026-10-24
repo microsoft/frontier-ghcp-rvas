@@ -34,7 +34,7 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-5-qa/`. You will not build an application in this track. Instead, you will test an existing one (eShop) using Copilot as your testing assistant. Browse the running application's pages before writing any instructions or tests.
+Navigate to `challenges/challenge-5-qa/`. Test the existing eShop application with Copilot as your testing assistant; you will not build an application. Browse the running application's pages before writing any instructions or tests.
 
 #### Setup: Target application
 

@@ -28,6 +28,8 @@ On first setup, the devcontainer:
 - Removes the documentation website, full catalog, and facilitator material
 - Clears `.github/copilot-instructions.md` so you start fresh
 - Removes sample agents and skills from `.github/`
+- Removes `.impeccable/`, root `PRODUCT.md` and `DESIGN.md`, shared skills under
+  `.agents/skills/`, and `.github/hooks/impeccable.json`
 - Creates and switches to `challenge-<id>-<random suffix>` from the current
   commit, keeping all Git remotes and leaving the branch without an upstream
 

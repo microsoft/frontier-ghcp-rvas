@@ -9,7 +9,7 @@
 ## Who is this for
 
 - Tech leads and senior developers who manage the full cycle from spec intake to production deployment
-- Teams where multiple manual handoffs (PM to dev to QA to ops) slow down time-to-market
+- Teams where multiple manual handoffs (PM to dev to QA to ops) delay releases
 - Developers who write technical analysis documents, create work items, generate tests, and configure pipelines
 - Anyone who wants a reusable Copilot workflow for feature delivery
 

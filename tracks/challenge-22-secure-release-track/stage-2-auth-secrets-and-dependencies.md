@@ -42,8 +42,8 @@ serious than others.
 ## What Copilot helps with vs. what requires your judgment
 
 Copilot is good at locating route policies and tracing configuration reads. It
-can also overstate scanner output. You own severity, reachability, confidence,
-and the decision to block or accept a risk.
+can also overstate scanner output. You assess severity, reachability, and
+confidence, and decide whether to block or accept a risk.
 
 ---
 

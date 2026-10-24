@@ -10,16 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css?v=5" />
   <link rel="stylesheet" href="assets/css/shell.css" />
+  <link rel="stylesheet" href="assets/css/home.css?v=1" />
   <link rel="icon" href="assets/img/logo-mark-white.png" type="image/png" />
 </head>
-<body>
+<body class="home-page">
+
+  <a class="home-skip" href="#mainContent">Skip to content</a>
 
   <header class="nav" role="banner">
     <div class="nav-inner">
       <a class="brand" href="index.html" aria-label="GitHub Copilot Adoption - Home">
           <img src="assets/img/logo-full.png" alt="RVAP" class="rvap-nav-logo" height="32">
         </a>
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="index.html" aria-current="page">Home</a>
         <a href="catalog.html">Catalog</a>
         <a href="builder.html">Builder</a>
@@ -38,166 +41,55 @@
     </div>
   </header>
 
-  <main>
+  <main id="mainContent">
 
-    <!-- ═══════════════════════ HERO ══════════════════════════════ -->
     <section class="hero" aria-labelledby="heroHeading">
-      <svg class="hero-compass" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-width="0.6" stroke-opacity="0.15" stroke-dasharray="4 8"/>
-        <circle cx="200" cy="200" r="140" stroke="currentColor" stroke-width="0.4" stroke-opacity="0.10"/>
-        <circle cx="200" cy="200" r="80"  stroke="currentColor" stroke-width="0.4" stroke-opacity="0.12"/>
-        <path d="M200 60 A140 140 0 0 1 340 200" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
-        <path d="M340 200 A140 140 0 0 1 200 340" stroke="#f87171" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
-        <path d="M200 340 A140 140 0 0 1 60 200"  stroke="#a78bfa" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
-        <path d="M60 200 A140 140 0 0 1 200 60"   stroke="#fb923c" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
-        <line x1="200" y1="20"  x2="200" y2="380" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.10"/>
-        <line x1="20"  y1="200" x2="380" y2="200" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.10"/>
-        <circle cx="200" cy="200" r="5" fill="#1A77E3" fill-opacity="0.8"/>
-        <circle cx="200" cy="200" r="12" stroke="#1A77E3" stroke-width="1" stroke-opacity="0.3"/>
-        <circle cx="200" cy="60"  r="5" fill="#38bdf8" fill-opacity="0.7"/>
-        <circle cx="340" cy="200" r="5" fill="#f87171" fill-opacity="0.7"/>
-        <circle cx="200" cy="340" r="5" fill="#a78bfa" fill-opacity="0.7"/>
-        <circle cx="60"  cy="200" r="5" fill="#fb923c" fill-opacity="0.7"/>
-      </svg>
       <div class="wrap hero-grid">
         <div>
-          <span class="eyebrow">RVAS, GitHub Copilot Adoption</span>
           <h1 id="heroHeading">Learn Copilot by<br><span class="accent">shipping real work.</span></h1>
           <p class="lede">
             Build a feature, review a release, modernize a service, or deploy Azure
-            infrastructure. The catalog has 31
-            challenges across 5 categories.
+            infrastructure. Start with a challenge that fits your role.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#categories">
-              Explore categories
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a class="btn btn-ghost" href="catalog.html">Browse all challenges</a>
-          </div>
-
-          <div class="stats stats-4" aria-label="Session statistics">
-            <div class="stat">
-              <span class="stat-num" id="stat-challenges">—</span>
-              <span class="stat-lbl">Challenges</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num" data-count="5">5</span>
-              <span class="stat-lbl">Categories</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num" id="stat-paths">—</span>
-              <span class="stat-lbl">Learning paths</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num" id="stat-hours">—</span>
-              <span class="stat-lbl">Guided hours</span>
-            </div>
-          </div>
         </div>
 
-        <div class="hero-modules" aria-label="Category overview">
-          <div class="hero-mod-card cat-core-tracks">
-            <div class="mod-name">Core Tracks</div>
-            <div class="mod-count" id="stat-core">— challenges</div>
-          </div>
-          <div class="hero-mod-card cat-team-sprints">
-            <div class="mod-name">Team Sprints</div>
-            <div class="mod-count" id="stat-sprints">— challenges</div>
-          </div>
-          <div class="hero-mod-card cat-legacy-modernization">
-            <div class="mod-name">Legacy Modernization</div>
-            <div class="mod-count" id="stat-legacy">— challenges</div>
-          </div>
-          <div class="hero-mod-card cat-workflow-automation">
-            <div class="mod-name">Workflow Automation</div>
-            <div class="mod-count" id="stat-automation">— challenges</div>
-          </div>
-          <div class="hero-mod-card cat-azure-platform">
-            <div class="mod-name">Azure Platform</div>
-            <div class="mod-count" id="stat-azure">— challenges</div>
-          </div>
+        <div class="home-start" aria-labelledby="startHeading">
+          <h2 id="startHeading">Find your challenge.</h2>
+          <p id="roleHint">Choose the role closest to yours to see relevant challenges.</p>
+          <form id="roleForm" action="roles.html" hidden>
+            <label for="roleSelect">Your role</label>
+            <select id="roleSelect" name="role" aria-describedby="roleHint" required disabled>
+              <option value="" disabled selected>Choose a role</option>
+            </select>
+            <button class="btn btn-primary" id="roleSubmit" type="submit" disabled>Find challenges</button>
+          </form>
+          <div class="home-role-status" id="roleStatus" role="status" hidden>Loading roles...</div>
+          <p class="home-catalog-link"><a href="catalog.html">Browse all challenges</a> if you already know what you want.</p>
+          <noscript><p>Enable JavaScript to browse challenges here, or <a href="https://github.com/microsoft/frontier-ghcp-rvas/tree/main/tracks">read the track guides on GitHub</a>.</p></noscript>
         </div>
       </div>
     </section>
 
-    <section class="section" id="roles" aria-labelledby="rolesHeading">
+    <section class="section home-next" aria-labelledby="nextHeading">
       <div class="wrap">
-        <div class="shead reveal">
-          <div>
-            <span class="eyebrow">Challenges by role</span>
-            <h2 id="rolesHeading" style="margin-top:14px">Start with the work you do.</h2>
-            <p>Choose your role to find relevant challenges. Some appear in several collections because they involve more than one team.</p>
-          </div>
-          <a class="link" href="roles.html">View all role collections →</a>
-        </div>
-        <div class="role-summary-grid" id="roleGrid">
-          <div class="empty">Loading roles…</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════ CATEGORIES ════════════════════════ -->
-    <section class="section" id="categories" aria-labelledby="categoriesHeading">
-      <div class="wrap">
-        <div class="shead reveal">
-          <div>
-            <span class="eyebrow">Challenge categories</span>
-            <h2 id="categoriesHeading" style="margin-top:14px">What do you want to work on?</h2>
-            <p>Start with product delivery, legacy modernization, workflow automation, or Azure platform work. If you want the full team involved, choose a team sprint.</p>
-          </div>
-          <a class="link" href="catalog.html">
-            See all challenges
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <div class="module-grid" id="categoryGrid">
-          <div class="empty">Loading categories…</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════ LEARNING PATHS ════════════════════ -->
-    <section class="section-tight" id="paths" aria-labelledby="pathsHeading">
-      <div class="wrap">
-        <div class="shead reveal">
-          <div>
-            <span class="eyebrow">Learning paths</span>
-            <h2 id="pathsHeading" style="margin-top:14px">Follow a path, or choose your own.</h2>
-            <p>Each path lists related challenges in order. Follow it or select the challenges your team needs.</p>
-          </div>
-          <a class="link" href="paths.html">View all paths →</a>
-        </div>
-        <div class="outcome-grid" id="pathsGrid">
-          <div class="empty">Loading learning paths…</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════ FEATURED CHALLENGE ════════════════ -->
-    <section class="section-tight" id="featured" aria-labelledby="featuredHeading">
-      <div class="wrap">
-        <div class="shead reveal">
-          <div>
-            <span class="eyebrow">Start here</span>
-            <h2 id="featuredHeading" style="margin-top:14px">New here? Start with this one.</h2>
-          </div>
-          <a class="link" href="catalog.html?difficulty=beginner">See all beginner challenges →</a>
-        </div>
-        <div id="featuredChallenge" style="display:flex;flex-direction:column;gap:16px;max-width:520px"></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════ ENVIRONMENT SETUP ═════════════════ -->
-    <section class="section-tight" id="setup" aria-labelledby="setupHeading">
-      <div class="wrap">
-        <div class="shead reveal">
-          <div>
-            <span class="eyebrow">Before you begin</span>
-            <h2 id="setupHeading" style="margin-top:14px">Environment setup.</h2>
-            <p>Use the shared setup guide, then follow your selected track's environment instructions.</p>
-          </div>
-          <a class="link" href="guide.html?p=getting-started">See getting started guide →</a>
+        <h2 id="nextHeading">From challenge to working result.</h2>
+        <ol class="home-steps">
+          <li>
+            <h3>Choose work that fits</h3>
+            <p>Compare the scope, prerequisites, and time budget before picking a challenge.</p>
+          </li>
+          <li>
+            <h3>Open the track</h3>
+            <p>Read its overview and follow its environment instructions. The <a href="guide.html?p=getting-started">getting started guide</a> covers shared setup.</p>
+          </li>
+          <li>
+            <h3>Build and demonstrate</h3>
+            <p>Follow the stages and their checks. Finish by showing what changed and how Copilot helped.</p>
+          </li>
+        </ol>
+        <div class="home-other">
+          <p><strong>Working with a coach?</strong> Use the challenge-set link they shared.</p>
+          <p><a href="byoc.html">Work on your own app</a> or <a href="builder.html">plan a session for your team</a>.</p>
         </div>
       </div>
     </section>
@@ -221,9 +113,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/marked.min.js?v=4"></script>
   <script src="assets/js/core.js?v=7"></script>
-  <script src="assets/js/home.js?v=5"></script>
-  <script src="assets/js/shell.js"></script>
+  <script src="assets/js/home.js?v=6"></script>
 </body>
 </html>

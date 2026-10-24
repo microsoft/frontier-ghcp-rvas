@@ -37,7 +37,7 @@ At the 1-hour mark, everyone pauses setup and joins a 30-minute planning session
 3. Resolve blockers and dependencies, such as the frontend's API spec and QA's seed data (5 min)
 4. Agree on a mid-sprint standup time (5 min)
 
-After planning, everyone should have clear tasks and an unblocked path into Sprint 1.
+After planning, everyone should know their Sprint 1 tasks and have no blockers.
 
 ---
 

@@ -4,8 +4,8 @@
 
 ## Tasks
 
-1. **Use `/speckit-implement` on the reviewed task list.** Work in small enough
-   changes to inspect the generated code. Keep the starter's existing
+1. **Use `/speckit-implement` on the reviewed task list.** Keep changes small
+   enough to inspect the generated code. Keep the starter's existing
    validation and explicit error responses.
 
 2. **Check behavior at the API boundary.** Exercise an eligible manager's

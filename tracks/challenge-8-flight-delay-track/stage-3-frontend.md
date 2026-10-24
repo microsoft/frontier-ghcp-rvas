@@ -5,7 +5,7 @@
 
 ## Objective
 
-Create a user-facing web application that allows someone to select a day of the week and a destination airport, and then see the predicted probability of their flight being delayed.
+Create a web application where users select a day of the week and a destination airport, then see the predicted probability of their flight being delayed.
 
 ## Requirements
 

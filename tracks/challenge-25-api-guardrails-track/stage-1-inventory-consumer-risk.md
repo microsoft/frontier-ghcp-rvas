@@ -25,7 +25,7 @@ the report as fact.
    migration risk.
 5. Create `deliverables/inventory.md`. Include a contract comparison table,
    risk rating, affected consumers, evidence location, and recommended order
-   of decision. Separate verified behavior from assumptions.
+   for making decisions. Separate verified behavior from assumptions.
 6. Mark issues that belong to service owners rather than the platform. Do not
    propose rebuilding any service.
 

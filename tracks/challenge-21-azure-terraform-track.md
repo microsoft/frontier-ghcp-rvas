@@ -79,7 +79,7 @@ Your `.github/copilot-instructions.md` should cover:
 
 ### Suggested custom agents
 
-- **Terraform Reviewer Agent** -- Applies judgment on module shape, variable hygiene, and plan readability. Give it a module or plan; it returns findings, not a rewrite. Use it before any apply.
+- **Terraform Reviewer Agent** -- Reviews module shape, variable hygiene, and plan readability. Give it a module or plan; it returns findings, not a rewrite. Use it before any apply.
 - **Azure Identity Agent** -- Checks managed identity, RBAC, and Key Vault access design against least privilege. Give it the identity and access configuration; it flags overly broad grants. Use it when designing or reviewing identity changes.
 - **CI Guardrail Agent** -- Reviews GitHub Actions, policy checks, and drift handling for the pipeline. Give it a workflow file; it flags missing gates. Use it when the pipeline itself changes.
 

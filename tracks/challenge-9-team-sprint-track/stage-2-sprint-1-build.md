@@ -30,9 +30,7 @@ If anyone is blocked, resolve it immediately. If the frontend developer needs th
 
 ## Copilot Tips for This Stage
 
-Backend developers can generate a router from the API spec:
-
-Ask Copilot to scaffold an entire router from your API spec document. Reference the spec file in your prompt for context:
+Backend developers can ask Copilot to scaffold an entire router from the API spec. Reference the spec file in your prompt for context:
 
 ```text
 "Read docs/api-spec.md and generate an Express.js router for the Reports endpoints with input validation."

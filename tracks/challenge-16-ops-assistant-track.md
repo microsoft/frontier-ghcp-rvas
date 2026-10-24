@@ -9,7 +9,7 @@
 ## Who is this for
 
 - Support engineers and L1/L2 ops teams who triage production incidents
-- Operations teams with limited deep technical knowledge of the applications they support
+- Operations teams without deep technical knowledge of the applications they support
 - SREs who want to reduce incident response time
 - Teams that currently diagnose issues by manually reading log files
 

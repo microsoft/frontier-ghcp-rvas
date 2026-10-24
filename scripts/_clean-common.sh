@@ -43,6 +43,17 @@ clean_github_and_meta() {
     echo "[SKIP] skills-lock.json not found"
   fi
 
+  local artifact artifact_path
+  for artifact in .impeccable PRODUCT.md DESIGN.md .github/hooks/impeccable.json; do
+    artifact_path="$REPO_ROOT/$artifact"
+    if [[ -e "$artifact_path" || -L "$artifact_path" ]]; then
+      rm -rf -- "$artifact_path"
+      echo "[OK] Removed $artifact"
+    else
+      echo "[SKIP] $artifact not found"
+    fi
+  done
+
   local workflows_dir="$REPO_ROOT/.github/workflows"
   if [[ -d "$workflows_dir" ]]; then
     rm -rf "${workflows_dir:?}"

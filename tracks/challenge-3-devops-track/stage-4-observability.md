@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-This stage includes a broken Terraform module that you must debug.
+Debug the broken Terraform module.
 
 ## Tasks
 

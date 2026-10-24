@@ -10,7 +10,7 @@ Use your repository instructions for the existing app's conventions. Have the Re
 
 1. Read `specs/billing-module-requirements.md`. Identify Epic boundaries for subscription management, usage metering, invoice generation, payment processing, and admin/dashboard features.
 
-2. Create or refine `.github/skills/spec-to-backlog/SKILL.md` to repeat the conversion and coverage checks. It should:
+2. Create or refine `.github/skills/spec-to-backlog/SKILL.md` to repeat the conversion and coverage checks. The skill:
    - Takes the requirements document as input via `#file`
    - Produces Epics aligned with functional areas
    - Produces User Stories under each Epic with Given/When/Then acceptance criteria

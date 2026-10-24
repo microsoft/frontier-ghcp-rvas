@@ -35,7 +35,7 @@ The codebase is a **legacy banking SOAP service** for a fictional bank called Me
 
 The system handles customer account management, consumer loans, and transaction processing through `AccountService`, `LoanService`, and `TransactionService`. It follows classic WCF conventions, with service contracts on interfaces, data contracts on DTOs, fault contracts on every operation, and `BasicHttpBinding` for all endpoints.
 
-Some operations have documented bugs (see `docs/system-context.md`). Some have undocumented quirks. Everything you learn about the system, you learn from reading the contracts, tracing the implementations, and studying the context document.
+Some operations have documented bugs (see `docs/system-context.md`). Some have undocumented quirks. Learn about the system by reading the contracts, tracing the implementations, and studying the context document.
 
 ## Getting started
 
@@ -78,7 +78,7 @@ A demo client is included at `src/Meridian.Banking.Client`. With the service run
 dotnet run --project src/Meridian.Banking.Client
 ```
 
-It sends a real SOAP request to `GetCustomerProfile` for customer ID 1001 and prints the raw HTTP status and response body. This is a quick sanity check that the service is accepting SOAP messages correctly. The client uses raw HTTP rather than a generated proxy, so you can also read its source to see what a well-formed SOAP envelope looks like for this service.
+It sends a real SOAP request to `GetCustomerProfile` for customer ID 1001 and prints the raw HTTP status and response body. Use it to check that the service accepts SOAP messages correctly. The client uses raw HTTP rather than a generated proxy, so you can also read its source to see what a well-formed SOAP envelope looks like for this service.
 
 ### Repository instructions for this track
 

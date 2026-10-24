@@ -11,7 +11,7 @@
 ## Who is this for
 
 - Teams of 2-4 developers and engineers who want to build a complete application together from a given specification
-- Organizations that want to simulate a real agile sprint powered by GitHub Copilot, with no business stakeholders in the room
+- Organizations that want to simulate an agile sprint using GitHub Copilot, with no business stakeholders in the room
 - Groups with strong technical skills across backend, frontend, and operations (QA is a bonus if you have the headcount)
 
 ## Team composition
@@ -131,7 +131,7 @@ Agree on the roster during the planning phase so everyone builds against the sam
 
 ### Suggested custom skills
 
-Workflow skills are shared team assets, not tied to one role:
+Share workflow skills across roles:
 
 - A Spec-to-Issues Skill converts the functional spec into stories and tasks and creates matching GitHub Issues through MCP.
 - A Sprint Board Sync Skill updates issue status, links the PR, and records scope changes after each merge.

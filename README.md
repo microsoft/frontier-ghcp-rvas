@@ -80,7 +80,8 @@ Copilot helped.
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
-Coaches who need a focused workshop path can use the site's Challenge Set Builder and Learning Paths pages to select challenges and generate a single shareable student URL.
+Coaches can use the site's Challenge Set Builder and Learning Paths pages to
+select challenges for a focused session and share one student URL.
 
 Each track explains its stages and verification criteria.
 
@@ -98,6 +99,10 @@ Check the selected track for its time budget.
 
 The static documentation site lives in `web/`. It uses HTML, CSS, and JavaScript
 with no build dependencies.
+
+The homepage starts with role selection, then explains how to open a track,
+prepare the environment, and work through its stages. The catalog, learning
+paths, Challenge Set Builder, and BYOC pages remain available through navigation.
 
 To build the site data locally:
 
@@ -151,7 +156,9 @@ The GitHub Pages deployment workflow automatically builds and deploys the site f
 
 **Use a disposable clone for a predefined challenge.** First-time setup keeps
 the selected starter and guides, removes the website and facilitator material,
-and replaces the root README with a single challenge entry point. Rebuilding
+and replaces the root README with a single challenge entry point. It also removes
+`.impeccable/`, root `PRODUCT.md` and `DESIGN.md`, template skills and agents,
+and `.github/hooks/impeccable.json`. Rebuilding
 preserves participant files and Copilot customizations. The full template and
 BYOC kit remain in this source repository.
 
@@ -311,7 +318,10 @@ plan that covers risk, rollback, and monitoring. No application code is required
 **Skills**: Express.js/FastAPI, API design, error handling, testing
 **Copilot Focus**: Inline completion, `/tests` command, workspace chat
 
-Build a task management REST API across 5 progressive stages: basic CRUD, JWT authentication with role-based access, SQLite persistence with data relationships, debugging a broken v2 API module (3 intentional bugs), and production readiness with load testing, caching, and structured logging.
+Build a task management REST API across 5 stages. Start with basic CRUD, add
+JWT authentication with role-based access, then add SQLite persistence with
+data relationships. Debug 3 intentional bugs in a broken v2 API module. Finish
+with load testing, caching, and structured logging to prepare for production.
 
 ---
 
@@ -321,7 +331,11 @@ Build a task management REST API across 5 progressive stages: basic CRUD, JWT au
 **Skills**: Python, pandas, scikit-learn, data visualization
 **Copilot Focus**: Jupyter notebooks integration, `/explain` for algorithms, code generation
 
-Predict customer churn across 5 stages: discover 7+ hidden data quality issues, create visualizations with statistical hypothesis testing, train models with cost-sensitive evaluation using sklearn Pipelines, compare imbalance techniques with SHAP interpretability, and deploy a prediction API with drift detection and a model card.
+Predict customer churn across 5 stages. Find 7+ hidden data quality issues and
+create visualizations with statistical hypothesis testing. Train models with
+cost-sensitive evaluation using sklearn Pipelines, then compare imbalance
+techniques with SHAP interpretability. Deploy a prediction API with drift
+detection and a model card.
 
 ---
 
@@ -331,7 +345,11 @@ Predict customer churn across 5 stages: discover 7+ hidden data quality issues, 
 **Skills**: Terraform, Docker, Kubernetes, CI/CD
 **Copilot Focus**: Infrastructure patterns, documentation generation, best practices
 
-Build infrastructure for a Node.js app across 5 stages: multi-stage Dockerfile with Docker Compose, Kubernetes with HPA and NetworkPolicy, Terraform for Azure (ACR, AKS) with variables and remote state, debug a broken Key Vault module and add observability, then create a CI/CD pipeline with blue/green deployment and a DR runbook.
+Build infrastructure for a Node.js app across 5 stages. Start with a multi-stage
+Dockerfile and Docker Compose, then add Kubernetes with HPA and NetworkPolicy.
+Use Terraform for Azure (ACR, AKS) with variables and remote state. Debug a
+broken Key Vault module and add observability. Finish with a CI/CD pipeline,
+blue/green deployment, and a DR runbook.
 
 ---
 
@@ -353,7 +371,11 @@ task flow. Drag-and-drop, offline support, and Storybook are optional.
 **Skills**: Test planning, test case design, bug reporting (no coding experience required)
 **Copilot Focus**: AI-assisted test generation, Playwright MCP exploration, Copilot-driven debugging
 
-Test the eShop application across 5 stages: explore the app with Copilot and Playwright MCP to build a test plan, use Copilot to debug and generate your first automated tests, expand coverage across browsers with Copilot-generated page objects, compare AI-driven vs human-guided testing approaches, then build reporting and a test strategy document.
+Test the eShop application across 5 stages. Explore it with Copilot and
+Playwright MCP to build a test plan. Use Copilot to debug and generate your
+first automated tests, then expand coverage across browsers with
+Copilot-generated page objects. Compare AI-driven and human-guided testing
+approaches. Finish with reporting and a test strategy document.
 
 ---
 
@@ -470,7 +492,11 @@ missing documentation.
 **Skills**: GitHub Actions, Node.js, Shell scripting, CI/CD concepts
 **Copilot Focus**: Workflow generation, `/fix` for debugging broken deployments, reusable workflow design, incident runbook skills
 
-Build CI/CD pipelines for TaskBoard, a kanban app that currently deploys via a shell script with commented-out scp commands. Create GitHub Actions workflows, debug 5 deliberate bugs in a broken staging deployment, build reusable workflow templates, and generate deployment gates with rollback mechanisms and incident runbooks.
+Build CI/CD pipelines for TaskBoard, a kanban app that currently deploys via a
+shell script with commented-out scp commands. Create GitHub Actions workflows
+and debug 5 deliberate bugs in a broken staging deployment. Build reusable
+workflow templates, then generate deployment gates with rollback mechanisms
+and incident runbooks.
 
 ---
 
@@ -481,7 +507,12 @@ Build CI/CD pipelines for TaskBoard, a kanban app that currently deploys via a s
 **Skills**: Agile concepts (Epics, Stories, Acceptance Criteria), Jira/Confluence (optional)
 **Copilot Focus**: Spec-to-backlog workflow skills, custom agents for refinement, Atlassian Rovo MCP server for Jira/Confluence integration
 
-Convert three use case specifications of increasing complexity (Password Reset, Notification Preferences, Inventory Reorder) into structured backlogs. Build a reusable skill that produces Epics, Stories, Tasks, and Test Cases following INVEST criteria. Create a refinement agent that reviews generated backlogs for gaps. Optionally push items directly to Jira using the Atlassian MCP server.
+Convert three use case specifications of increasing complexity into structured
+backlogs: Password Reset, Notification Preferences, and Inventory Reorder.
+Build a reusable skill that produces Epics, Stories, Tasks, and Test Cases
+following INVEST criteria. Create a refinement agent that reviews generated
+backlogs for gaps. Optionally push items directly to Jira using the Atlassian
+MCP server.
 
 ---
 
@@ -536,7 +567,11 @@ banking features are optional.
 **Skills**: C#, WCF/SOAP concepts, ASP.NET Core Web API, REST design, xUnit
 **Copilot Focus**: SOAP service contract comprehension, fault contract analysis, REST migration, characterization testing
 
-Reverse-engineer a legacy WCF banking service (Meridian Savings Bank) built circa 2010-2012, now running on CoreWCF and .NET 8. Understand the service contracts, data contracts, and fault conditions, then port the business logic to a REST API using ASP.NET Core Web API. The service has real bugs to find and real decisions to make about whether to preserve or fix them during migration.
+Reverse-engineer the legacy Meridian Savings Bank WCF service, built circa 2010-2012
+and now running on CoreWCF and .NET 8. Understand its service contracts, data
+contracts, and fault conditions, then port the business logic to a REST API
+using ASP.NET Core Web API. Find the bugs and decide whether to preserve or fix
+them during migration.
 
 ---
 
@@ -560,7 +595,11 @@ and add a GitHub Actions CI pipeline.
 **Skills**: Terraform, Azure networking, managed identity, Key Vault, GitHub Actions
 **Copilot Focus**: Infrastructure review, plan explanation, module extraction, CI workflow generation
 
-Build an Azure Terraform foundation across 5 stages: bootstrap remote state and naming rules, provision a small Azure platform around Container Apps, wire managed identity and Key Vault, refactor the configuration into reusable modules for multiple environments, then add CI guardrails and a drift response runbook.
+Build an Azure Terraform foundation across 5 stages. Bootstrap remote state
+and naming rules, then provision a small Azure platform around Container Apps.
+Connect managed identity and Key Vault. Refactor the configuration into
+reusable modules for multiple environments, then add CI guardrails and a drift
+response runbook.
 
 ---
 
@@ -743,7 +782,7 @@ objectives, with optional tasks for further work.
 
 - Present your solutions
 - Share interesting Copilot interactions
-- Discuss productivity gains and learnings
+- Discuss productivity gains and lessons learned
 - Compare experiences across different tracks
 
 ### Best practices session (1 hour)

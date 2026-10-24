@@ -6,7 +6,7 @@
 
 ## Tasks
 
-Use your repository instructions for backlog conventions and the Backlog Architect agent for the first structuring pass. Refine the Spec-to-Backlog Conversion skill from setup as you work through the specs.
+Use your repository instructions for backlog conventions. Have the Backlog Architect agent structure the first draft. Refine the Spec-to-Backlog Conversion skill from setup as you work through the specs.
 
 1. **Study the source material.** Read `uc-password-reset.md` carefully. Identify the natural groupings (Epic-level themes), the individual capabilities (Story-level), and the implementation details (Task-level).
 
@@ -15,7 +15,7 @@ Use your repository instructions for backlog conventions and the Backlog Archite
    - Acceptance Criteria format: Given/When/Then or checklist?
    - Should each Story have estimated effort? Technical notes? Dependencies?
 
-3. **Build the backlog skill.** Create or refine `.github/skills/spec-to-backlog/SKILL.md` for a repeatable conversion and coverage-review workflow that:
+3. **Build the backlog skill.** Create or refine `.github/skills/spec-to-backlog/SKILL.md` for a repeatable workflow that converts specs and checks coverage. The skill:
    - Takes a use case specification as input (referenced via `#file`)
    - Produces Epics with description and business value
    - Produces User Stories under each Epic with acceptance criteria

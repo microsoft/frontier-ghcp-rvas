@@ -8,7 +8,7 @@
 
 1. **Study the routing guide.** Read `docs/team-routing.md`. Note the mapping between error patterns and teams, and the escalation path.
 
-2. **Build the incident routing skill.** Extend the Historical Pattern Match skill from setup in `.github/skills/route-incident/SKILL.md`. Use the Incident Router agent to assess ownership while the skill follows a repeatable evidence-checking workflow that:
+2. **Build the incident routing skill.** Extend the Historical Pattern Match skill from setup in `.github/skills/route-incident/SKILL.md`. Use the Incident Router agent to assess ownership. The skill should use a repeatable workflow to check evidence. The workflow:
    - Takes an error log excerpt or a description of a problem
    - Matches the error against known patterns from the routing guide
    - Recommends which team should investigate

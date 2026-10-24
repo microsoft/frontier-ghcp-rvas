@@ -44,7 +44,7 @@ as a separate payload at
 
 ## Pages
 
-- `index.html` -- home page (categories + learning paths + featured challenge)
+- `index.html` -- role-based challenge finder and guidance for starting a track
 - `catalog.html` -- challenge catalog
 - `challenge.html` -- paged challenge content and navigation
 - `builder.html` -- curated set builder
@@ -97,12 +97,15 @@ Use `.cat-<id>` CSS class + `style="--cat-color:<color>"` for category-specific 
 ## Role collections
 
 `role-collections.json` is the source of truth for the Roles page and homepage
-role cards. Each role has a stable ID, name, description, and curated list of
+role selector. Each role has a stable ID, name, description, and curated list of
 challenge IDs.
 
 The build fails when a role is empty, contains duplicate or unknown challenge
 IDs, or leaves a challenge without a role. Role order is editorial relevance,
 not a prerequisite sequence.
+
+Run `node --test scripts/homepage.test.mjs` from the repository root to check the
+homepage role finder.
 
 ## Serving locally
 

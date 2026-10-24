@@ -9,7 +9,7 @@
 ## Who is this for
 
 - Developers who spend too much time writing and updating documentation
-- Teams where documentation is always out of date because maintaining it is a manual burden
+- Teams whose documentation is always out of date because they maintain it manually
 - Engineers who want to build documentation workflows that stay in sync with code changes
 - Tech leads responsible for producing release notes, architecture diagrams, or stakeholder reports
 

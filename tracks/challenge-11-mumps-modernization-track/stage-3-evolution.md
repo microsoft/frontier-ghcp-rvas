@@ -5,7 +5,7 @@
 
 ## Objective
 
-Prove you understand the system by extending it. Add new features that require touching multiple modules and maintaining consistency with the existing data model, business rules, and coding patterns. You can do this in MUMPS (if you have YottaDB running) or in your target language (if you already started translating in Stage 2).
+Show your understanding of the system by adding features that change multiple modules. Keep them consistent with the existing data model, business rules, and coding patterns. You can do this in MUMPS (if you have YottaDB running) or in your target language (if you already started translating in Stage 2).
 
 ## Choose Your Features
 

@@ -12,7 +12,7 @@ Use your SDK research skill to gather facts for the repository instructions. Kee
     - Open Copilot Chat and use the `/research` slash command to pull current documentation, API references, and known issues for `@github/copilot-sdk`
     - Cover at minimum: `CopilotClient` initialization and options, session lifecycle, all streaming event types, custom tool schema format, the JSON-RPC communication model between the SDK and Copilot CLI, and any known caveats or version-specific changes
     - Save the output as a document in the project (e.g., `docs/sdk-research.md`)
-    - Turn that document into a Copilot instructions file (`.github/copilot-instructions.md` or a scoped `.instructions.md`) so every subsequent Copilot interaction has accurate SDK context baked in
+    - Turn that document into a Copilot instructions file (`.github/copilot-instructions.md` or a scoped `.instructions.md`) so every subsequent Copilot interaction has accurate SDK context
     - Check the installed SDK version against the documentation. Training data may describe APIs that changed or never existed
 
 2. **Client setup and first message**

@@ -24,7 +24,7 @@
 
 4. **Use Copilot's `/fix` command.** Try `/fix` on the broken `server.js` and see how many of the 5 bugs it catches directly. Note which ones it finds and which ones require more context.
 
-5. **Add preventive tests.** Write tests specifically designed to catch these 5 bugs. If the staging code is ever broken in these ways again, the tests should fail.
+5. **Add preventive tests.** Write tests that catch these 5 bugs. If the staging code is ever broken in these ways again, the tests should fail.
 
 If your Deploy Debugger agent or pipeline skill gives a generic explanation or misses the root cause, refine that customization with the symptom and affected file before writing the incident note.
 

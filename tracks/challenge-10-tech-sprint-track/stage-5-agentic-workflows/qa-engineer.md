@@ -23,7 +23,7 @@
      github:
    ```
 
-2. **Create a daily QA workflow** -- Write a workflow based on [Daily Adhoc QA](https://github.com/githubnext/agentics/blob/main/docs/daily-qa.md) that performs exploratory quality checks on the codebase. The workflow should look for common issues: unhandled error states, missing input validation, inconsistent API responses, and report its findings as a GitHub Issue.
+2. **Create a daily QA workflow** -- Write a workflow based on [Daily Adhoc QA](https://github.com/githubnext/agentics/blob/main/docs/daily-qa.md) that performs exploratory quality checks on the codebase. The workflow should look for common issues: unhandled error states, missing input validation, and inconsistent API responses. It should report its findings as a GitHub Issue.
 
 3. **Compile and commit** -- Run `gh aw compile` for each workflow. Commit and push both `.md` and `.lock.yml` files.
 

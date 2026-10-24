@@ -63,7 +63,7 @@ The SDK needs a valid GitHub identity to create sessions. Run:
 copilot
 ```
 
-and then do a `/login` command in Copilot Chat to login into GitHub Copilot.
+Then run `/login` in Copilot Chat to sign in to GitHub Copilot.
 
 The SDK manages the CLI process lifecycle automatically. You do not need to start the CLI server manually.
 

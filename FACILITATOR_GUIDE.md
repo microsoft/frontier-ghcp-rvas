@@ -89,7 +89,8 @@ Allow 30 minutes.
 **Track or Outcome Selection (5 min)**
 
 - Help participants choose their worked-example track OR define their own outcome
-- For worked examples: suggest track based on outcome they want to drive or their role
+- For worked examples: suggest a track based on the result participants need
+  to deliver or their role
 - For BYOC: point them to [Outcome Canvas](./byoc/outcome-canvas.md)
 - Direct them to [Tracks Guide](./tracks/README.md) or [BYOC README](./byoc/README.md)
 
@@ -134,7 +135,7 @@ Allow 1-2 hours.
 - Group participants by the outcome they delivered
 - Each team presents their result and the business impact
 - Compare approaches across similar outcomes
-- Share outcome-driven Copilot patterns
+- Share Copilot patterns that helped deliver the result
 
 **Option B: Demo Stations**
 
@@ -249,7 +250,8 @@ Allow 1-2 hours.
 **Facilitation tips:**
 
 - The simple starter makes this track a useful starting point for new Copilot users.
-- When someone gets a long Copilot suggestion they don't understand, stop them and use `/explain` before accepting it. This is a better learning moment than accepting and moving on.
+- If participants do not understand a long Copilot suggestion, have them use
+  `/explain` before accepting it.
 - If participants finish Stage 3 early, move to Stage 4's bug hunt before
   adding more CRUD endpoints.
 
@@ -297,7 +299,8 @@ Allow 1-2 hours.
 - Component generation works well when participants open an existing component as a reference tab before prompting. Tell them: "Show Copilot what you already have before asking for something new."
 - Keep time for accessibility checks. Ask Copilot to review ARIA usage, then
   verify the component in the browser.
-- Participants who came from a non-TypeScript background benefit from asking Copilot to explain inferred types rather than adding `any` casts. Set that expectation early.
+- For participants new to TypeScript, set the expectation early: ask Copilot to
+  explain inferred types rather than adding `any` casts.
 
 ### QA tester track
 
