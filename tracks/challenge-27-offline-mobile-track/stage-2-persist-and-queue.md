@@ -33,9 +33,9 @@ queue order are correct.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can implement storage adapters and serialization tests quickly. You
-must choose compaction, ordering, migration, and recovery rules. Those rules
-determine whether a technician's last hour of work is safe.
+Copilot can implement storage adapters and serialization tests. You must choose
+compaction, ordering, migration, and recovery rules that preserve technician
+work.
 
 ---
 

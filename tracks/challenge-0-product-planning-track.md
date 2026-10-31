@@ -22,8 +22,6 @@
 
 ## Technology stack
 
-This track uses:
-
 - **GitHub Issues** for user stories and backlog items
 - **GitHub Projects** for boards and milestone tracking
 - **Markdown** for all documentation (product briefs, specs, ADRs, release plans)
@@ -76,10 +74,10 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for using Copilot on this track
 
-- Write a rough draft first, then ask Copilot to tighten it. Copilot refines ideas better than it invents them from nothing.
+- Write a rough draft first, then ask Copilot to tighten it.
 - Use the GitHub MCP server to create a batch of Issues from a finished stories file.
-- ADRs double as thinking tools. Listing options and trade-offs often makes the right choice obvious before you finish writing.
-- In the critique exercises, Copilot spots surface-level issues well. Contradictions, priority conflicts, and untestable criteria are on you.
+- Use ADRs to compare options and trade-offs before deciding.
+- In the critique exercises, check for contradictions, priority conflicts, and untestable criteria yourself.
 
 ## Resources
 

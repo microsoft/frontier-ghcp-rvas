@@ -31,9 +31,9 @@
 
 The codebase is a core banking system for the fictional First National Bank, described as "in production" since 1997. It handles customer management, deposit accounts (savings, checking, fixed deposits), teller transactions, consumer loans, interest calculation, end-of-day batch processing, and audit logging.
 
-The code is spread across 12 MUMPS routines totaling roughly 2,500 lines. Some routines are well-commented; others read like someone was in a hurry. There are dead code paths, hardcoded values that should be configurable, a comment about a "temporary fix" from 2012, and business logic that becomes clear only after tracing through multiple files.
+The code spans 12 MUMPS routines totaling roughly 2,500 lines, with uneven comments. There are dead code paths, hardcoded values that should be configurable, a comment about a "temporary fix" from 2012, and business logic that becomes clear only after tracing through multiple files.
 
-A minimal context document is provided. Everything else you learn about the system, you learn from the code.
+A minimal context document is provided. Learn the rest from the code.
 
 ## Getting started
 
@@ -72,7 +72,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for using Copilot on this track
 
-- MUMPS is in Copilot's training data, but it is not a primary language. Expect Copilot to need more guidance than usual. Paste code blocks and ask for line-by-line explanations.
+- MUMPS is in Copilot's training data, but it is not a primary language. Paste code blocks and ask for line-by-line explanations.
 - Use `@workspace` and `#file` to point Copilot at specific routines.
 - Describe the business rule first ("this function calculates monthly loan payment using the PMT formula"), then ask for its equivalent in the target language.
 - Use Agent mode to generate test scaffolding. Describe the test scenarios and let Copilot wire up the framework.

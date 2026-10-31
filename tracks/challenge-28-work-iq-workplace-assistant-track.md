@@ -136,8 +136,7 @@ By the end of the challenge, the repository should contain:
 
 - Start with one project, a recent time range, and one source. Add another
   source only when you can name the gap it fills.
-- Put source references beside the claim they support. A neat summary without
-  evidence is difficult to trust.
+- Put source references beside the claim they support.
 - Have Copilot flag unknown owners and dates. Do not turn partial context into
   confident-looking assignments.
 - The signed-in user's permissions are a boundary. They are not a reason to

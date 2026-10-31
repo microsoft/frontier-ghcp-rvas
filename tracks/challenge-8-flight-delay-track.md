@@ -80,7 +80,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - This track spans Python, Flask, and TypeScript. When switching layers, a comment describing the context ("Flask prediction endpoint" or "React form component") helps Copilot stay oriented.
 - For the API, describe endpoint inputs and responses in comments before generating code.
 - For CORS or model-loading errors, give Copilot the full traceback.
-- For the frontend, describe the form fields and data flow in a comment. Copilot generates better UI code when it knows what API it's calling.
+- For the frontend, describe the form fields and API data flow in a comment.
 
 ## Resources
 

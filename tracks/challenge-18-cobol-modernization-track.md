@@ -32,7 +32,7 @@
 
 ## What you are working with
 
-The codebase is a **core banking system** for a fictional bank called First National Bank. It has been "in production" since 1997 and shows its age. The system handles customer management, deposit accounts (savings, checking, fixed deposits), teller transactions, consumer loans, interest calculation, end-of-day batch processing, and audit logging.
+The codebase is a **core banking system** for a fictional bank called First National Bank. It has been "in production" since 1997. The system handles customer management, deposit accounts (savings, checking, fixed deposits), teller transactions, consumer loans, interest calculation, end-of-day batch processing, and audit logging.
 
 The code is spread across multiple COBOL programs and copybooks totaling roughly 2,500 lines. Some programs are well-commented; others read like someone was in a hurry. There are dead code paths, hardcoded values that should be configurable, a comment about a "temporary fix" from 2012, and business logic that becomes clear only after tracing through multiple files.
 

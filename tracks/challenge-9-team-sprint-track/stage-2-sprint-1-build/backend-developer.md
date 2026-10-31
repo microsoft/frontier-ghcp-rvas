@@ -2,7 +2,7 @@
 
 **Time: Full 3 hours**
 
-Build the core API endpoints. Open a separate PR for each logical feature and link it to the relevant GitHub Issue.
+Build the core API endpoints.
 
 ## Tasks
 

@@ -72,7 +72,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 - Ask Copilot to generate workflow Markdown files by describing what you want in natural language: "Create an agentic workflow that triages new issues by assigning labels and posting a summary comment."
 - Use the [Agentics gallery](https://github.com/githubnext/agentics) as a reference and ask Copilot to adapt a workflow for your repository.
-- When writing workflow instructions, be specific about your codebase: mention the language, framework, directory structure, and naming conventions. Generic instructions produce generic results.
+- When writing workflow instructions, specify the language, framework, directory structure, and naming conventions.
 - Use `gh aw compile` after every change to regenerate the lock file. The lock file is what GitHub Actions actually runs.
 - Review generated issues, PRs, and comments before accepting workflow output.
 

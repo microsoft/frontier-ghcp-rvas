@@ -64,8 +64,6 @@ The team chooses their stack together. Recommended options:
 
 Unlike Challenge 9, this track starts with a provided functional specification. The team begins with technical planning instead of product discovery.
 
-The challenge runs as a simulated sprint cycle:
-
 1. **Technical Planning** -- The team reads the provided functional specification, writes a technical specification, breaks work into GitHub Issues, and plans Sprint 1. Everyone sets up tooling and project scaffolding in parallel.
 2. **Sprint 1** -- All roles work in parallel on their piece. Developers build core features, QA writes tests, DevOps sets up infrastructure.
 3. **Sprint 2** -- The team integrates, adds advanced features, fixes bugs, and deploys.

@@ -60,9 +60,9 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for using Copilot on this track
 
-- Write a short comment above each function describing the endpoint, expected inputs, and error cases. Copilot uses these as a spec.
+- Write a short comment above each function describing the endpoint, expected inputs, and error cases.
 - Reference existing files in your prompts ("follow the pattern in routes/auth.js") to give Copilot a concrete example.
-- Highlight a working route and ask for tests. Copilot picks up on patterns in open files better than starting from nothing.
+- Highlight a working route and ask for tests so Copilot can follow its patterns.
 - When you hit an unfamiliar library or auth flow, use `/explain` on the relevant code to get a quick breakdown.
 
 ## Resources

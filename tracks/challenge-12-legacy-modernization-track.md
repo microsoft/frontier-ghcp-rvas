@@ -75,7 +75,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - For migration, work module by module rather than everything at once. Have Copilot generate the updated `pom.xml` first, then tackle each controller.
 - Use `@workspace` to help Copilot understand cross-file relationships when business logic spans multiple controllers.
 - Create `.github/copilot-instructions.md` early to record the business rules and target stack.
-- Agent mode works well for generating test scaffolding. Describe the scenario and let Copilot build the test class.
+- Describe the test scenario and use Agent mode to build the test class.
 
 ## Resources
 

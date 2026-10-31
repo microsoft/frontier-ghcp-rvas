@@ -24,7 +24,6 @@ Use the Playwright MCP server to let Copilot explore the app and generate tests 
 4. **Application behavior under edge conditions**: Ask Copilot to test what happens when things go wrong. Use prompts like:
    - "Write a Playwright test that simulates a slow network and checks if the catalog page shows a loading state."
    - "Write a test that verifies the app handles a server error gracefully when adding to the cart."
-   These are the kinds of scenarios QA testers think of that AI tools often miss on their own.
 
 ## Verification
 

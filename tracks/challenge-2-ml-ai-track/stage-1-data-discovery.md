@@ -2,8 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
-The dataset has 7+ distinct data quality problems. Your job is to find every one of them
-without being told what to look for.
+Find all 7+ distinct data quality problems in the dataset.
 
 ## Tasks
 

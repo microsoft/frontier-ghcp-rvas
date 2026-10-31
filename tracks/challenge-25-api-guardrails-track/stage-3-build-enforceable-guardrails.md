@@ -52,7 +52,7 @@ so it runs your approved rules and policy paths, not only the starter checks.
 - Policies contain no secrets, keys, tokens, tenant IDs, or live backend URLs
 - Identity, versioning, error, and correlation behavior matches the written
   standard
-- Mock smoke tests still pass, proving the source services were not rebuilt
+- Mock smoke tests still pass, and the source services remain unchanged
 
 ## What Copilot helps with vs. what requires your judgment
 

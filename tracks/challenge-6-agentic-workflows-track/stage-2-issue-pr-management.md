@@ -40,9 +40,9 @@
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-**Copilot helps with:** generating the frontmatter schema, writing the Markdown body based on your description, adapting gallery examples to your project.
+Copilot can generate the frontmatter schema, draft the Markdown body from your description, and adapt gallery examples to your project.
 
-**Your judgment:** deciding the right label taxonomy for your project, defining what each priority level means, scoping safe outputs (how many comments, which labels are allowed), and reviewing triage accuracy.
+You decide the label taxonomy and priority definitions, scope safe outputs (comment limits and allowed labels), and review triage accuracy.
 
 ## Verification
 

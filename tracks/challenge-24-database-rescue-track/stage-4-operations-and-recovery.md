@@ -2,9 +2,9 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 55-70 min
 
-Finish the rescue as if another DBA will deploy it during a busy week. They
-need clear stop conditions, safe rollback, reconciliation they can trust, and
-monitoring that does not become the next performance problem.
+Prepare for another DBA to deploy the changes during a busy week. Provide
+clear stop conditions, safe rollback, reliable reconciliation, and monitoring
+that does not add excessive load.
 
 ## Tasks
 

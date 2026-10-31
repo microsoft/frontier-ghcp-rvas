@@ -70,10 +70,10 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for using Copilot on this track
 
-- When generating javadoc, paste a method into chat and ask "What does this method actually do, including edge cases?" Then ask Copilot to write the javadoc based on its own explanation. This produces more accurate docs than asking for javadoc cold.
+- When generating javadoc, paste a method into chat and ask "What does this method actually do, including edge cases?" Then ask Copilot to write the javadoc based on its own explanation.
 - For Mermaid diagrams, describe the diagram you want in plain language first, then ask Copilot to generate the Mermaid syntax. Iterate on the diagram until it matches the actual architecture.
 - Test your changelog skill on small diffs first (a single-file change), then scale to multi-file changes.
-- For the PR review agent, start by defining what "documentation completeness" means for your team. Different teams care about different things.
+- For the PR review agent, start by defining what "documentation completeness" means for your team.
 - Use `@workspace` to give Copilot full context when generating cross-module diagrams.
 
 ## Resources

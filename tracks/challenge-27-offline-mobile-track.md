@@ -104,8 +104,7 @@ Your `.github/copilot-instructions.md` should capture:
   Node tests instead of tests that depend on a simulator.
 - Give conflict examples concrete versions and timestamps. Ask what happens to
   both copies of the work under the proposed policy.
-- Test the offline fixture before the happy path. A local-first app that only
-  works online is still an online app.
+- Test the offline fixture before the happy path.
 - Review accessibility for state changes as well as static controls. Queue,
   sync, permission, and conflict feedback all need understandable announcements.
 

@@ -41,7 +41,7 @@ cd challenges/challenge-23-merger-architecture
 ./scripts/validate.sh
 ```
 
-Fix structural findings. Then perform a human review for architectural coherence, because a script cannot determine whether a boundary or migration choice is responsible.
+Fix structural findings. Then have a human reviewer assess the boundaries and migration choices; the script cannot judge architectural coherence.
 
 ## Required output
 

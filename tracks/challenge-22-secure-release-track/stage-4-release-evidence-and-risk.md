@@ -2,9 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
-The last stage turns technical work into a release decision. A fixed test suite
-does not automatically mean the service is ready, and an open finding does not
-automatically mean it must wait.
+Passing tests alone do not establish release readiness. An open finding does
+not necessarily block release; assess it against the evidence and accepted risk.
 
 ## Tasks
 

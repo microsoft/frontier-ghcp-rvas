@@ -58,9 +58,9 @@ Your `.github/copilot-instructions.md` should include:
 
 ### Suggested custom agents
 
-- **Log Analyst Agent** -- Reads log files and identifies error patterns, root causes vs. symptoms, severity, and the timeline of events, distinguishing one-off errors from recurring ones. Give it a log file; it returns grouped findings. Use it as the first pass on any incident.
-- **Incident Router Agent** -- Takes an error description or log excerpt and determines which team should investigate, what priority to assign, and which historical incidents look similar. Give it the Log Analyst's output; it returns a routing recommendation. Use it once errors are identified, not on raw logs.
-- **Runbook Generator Agent** -- Takes an error pattern and produces a step-by-step troubleshooting guide: what to check, what to run, when to escalate. Give it a resolved incident; it drafts the runbook. Use it after resolution, so the next person doesn't start from zero.
+- **Log Analyst Agent** -- Groups findings from a log file by error pattern, root cause vs. symptom, severity, and event timeline. It distinguishes one-off errors from recurring ones. Use it as the first pass on any incident.
+- **Incident Router Agent** -- Uses the Log Analyst's error descriptions or log excerpts to recommend an investigating team, priority, and similar historical incidents. Use it once errors are identified, not on raw logs.
+- **Runbook Generator Agent** -- Uses a resolved incident's error pattern to draft a step-by-step troubleshooting guide: what to check, what to run, and when to escalate. Use it after resolution.
 
 ### Suggested custom skills
 

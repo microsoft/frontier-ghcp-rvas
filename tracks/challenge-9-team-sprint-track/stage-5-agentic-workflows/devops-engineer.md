@@ -30,7 +30,7 @@
 
 3. **Set up workflow monitoring** -- Verify that GitHub Actions logs show the agentic workflow runs clearly. Check that each workflow run is visible in the Actions tab, the runtime is reasonable, and failed runs surface useful error messages.
 
-4. **Document the workflows** -- Add a section to `docs/agentic-workflows.md` listing every agentic workflow the team created, what it does, when it runs, and what outputs it produces. This is for future maintainers.
+4. **Document the workflows** -- Add a section to `docs/agentic-workflows.md` listing every agentic workflow the team created, what it does, when it runs, and what outputs it produces.
 
 ## Verification
 

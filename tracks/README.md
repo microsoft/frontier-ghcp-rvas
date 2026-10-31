@@ -2,15 +2,16 @@
 
 Pick a track that matches the work you need to deliver.
 
-The **31 challenge tracks** below are organized by the outcome they help you deliver. Each track provides a worked example you can adapt to your own context.
+The **31 challenge tracks** below are grouped by outcome. Each provides a
+worked example you can adapt to your own context.
 
 Coaches can use the site's Challenge Set Builder or Learning Paths pages to
 share a selected set with one URL. The builder selects whole challenges.
 Use the track guides for stages and role-specific work.
 
-Each track starts with an overview covering audience, setup, tips, and resources.
-Follow its link to the contents page for stages and any role-specific paths.
-Use the previous and next links to move between stage pages on GitHub.
+Open a track's overview for prerequisites and setup, then follow its contents
+link for stages and role-specific work. Previous and next links connect the
+stage pages on GitHub.
 
 Sessions use a customization trio: repository instructions, custom agents, and
 custom skills tailored to each challenge.
@@ -219,7 +220,7 @@ for a critique-and-fix cycle and final UI review.
 
 **Outcome:** Ship Product Features Faster
 
-**Best for:** Teams of 4-6 people from different roles (PO, developers, QA, DevOps) who want to build a complete application together
+**Best for:** Teams of 4-6 people across PO, developer, QA, and DevOps roles
 
 **Focus:** Build CityPulse report and event journeys in parallel, integrate the API, and use Impeccable for one QA-verified UI improvement. Azure deployment is optional without a prepared environment.
 
@@ -233,7 +234,7 @@ for a critique-and-fix cycle and final UI review.
 
 **Outcome:** Ship Product Features Faster
 
-**Best for:** Teams of 2-4 developers/engineers who want to build a complete application from a provided specification, without business stakeholders
+**Best for:** Teams of 2-4 developers/engineers working from a supplied specification, without business stakeholders
 
 **Focus:** Build TrailMate browsing and condition reporting from the specification, then use Impeccable to improve status and warning clarity. Keep analytics outside the core.
 
@@ -247,7 +248,7 @@ for a critique-and-fix cycle and final UI review.
 
 **Outcomes:** Ship Product Features Faster, Automate Delivery and Ops Toil
 
-**Best for:** Product owners, tech leads, and scrum masters who manually convert requirement documents into structured backlogs
+**Best for:** Product owners, tech leads, and scrum masters converting requirements into backlogs
 
 **Focus:** Convert use case specifications into structured backlogs (Epics,
 Stories, Tasks, Test Cases) using workflow skills, refinement agents, and the
@@ -344,7 +345,7 @@ Reverse-engineer, characterize, and migrate legacy codebases to modern platforms
 
 **Outcome:** Modernize Legacy Systems
 
-**Best for:** Developers who enjoy reverse-engineering unfamiliar codebases and tackling legacy modernization challenges
+**Best for:** Developers reverse-engineering unfamiliar codebases
 
 Reverse-engineer a MUMPS banking system with 12 routines and about 2,500 lines
 of code. It handles customers, deposits, loans, interest, and batch processing.
@@ -377,7 +378,7 @@ Spring Boot 3.x / Java 17+.
 
 **Outcome:** Modernize Legacy Systems
 
-**Best for:** Developers dealing with COBOL modernization or anyone who wants to tackle a full legacy-to-modern-web transformation
+**Best for:** Developers modernizing COBOL workflows through an API and web UI
 
 **Focus:** Characterize one COBOL transfer workflow, modernize it through an API and React UI, and review the teller journey with Impeccable.
 
@@ -523,7 +524,7 @@ Automate triage, code quality, documentation, CI monitoring, and security checks
 
 **Outcome:** Automate Delivery and Ops Toil
 
-**Best for:** DevOps engineers and developers who build and maintain CI/CD pipelines, or teams that still deploy manually
+**Best for:** DevOps engineers and developers replacing manual deployments or maintaining CI/CD pipelines
 
 Replace TaskBoard's shell-script deployment with GitHub Actions. Debug five
 deliberate bugs, build reusable workflow templates, and add deployment gates
@@ -719,15 +720,10 @@ Choose by outcome if you already know what you want to deliver.
 
 ## What skills you'll build
 
-The tracks give you practice with:
-
-- GitHub Copilot core features (inline suggestions, chat)
-- Effective prompt engineering
-- Repository instructions, custom agents, and custom skills
-- Using chat commands (`/explain`, `/fix`, `/tests`, `/new`)
-- Workspace context awareness (`@workspace`)
-- Code generation and acceleration
-- Testing and documentation with Copilot
+Practice giving Copilot useful context, reviewing its suggestions, and using
+it for implementation, tests, and documentation. The tracks cover inline
+suggestions, chat commands (`/explain`, `/fix`, `/tests`, `/new`), workspace
+context (`@workspace`), and challenge-specific instructions, agents, and skills.
 
 ## Getting started
 
@@ -736,13 +732,11 @@ The tracks give you practice with:
 > **Use a disposable clone.** First-time setup removes unrelated content and
 > resets template customizations. Follow [Getting Started](./getting-started.md).
 
-**[Follow the Setup Instructions](./getting-started.md)** - includes an interactive setup script.
-
 ---
 
 ### 1. Choose your track
 
-Click on the track link above to read the detailed guide.
+Choose by role or outcome using the links above.
 
 ### 2. Review prerequisites
 
@@ -750,17 +744,11 @@ Each track lists required knowledge and tools.
 
 ### 3. Set up your workspace
 
-Follow the **[Setup Instructions](./getting-started.md)** to create your fresh repository.
+Follow the **[Setup Instructions](./getting-started.md)**.
 
 ### 4. Follow the track guide
 
-Each track provides:
-
-- Recommended challenge sequence
-- Time allocation
-- Learning objectives
-- Tips specific to that domain
-- Tailored briefs for repository instructions, custom agents, and custom skills
+Use the track's time budget, domain-specific tips, and customization briefs.
 
 ### 5. Start your first challenge
 
@@ -782,61 +770,15 @@ Choose challenges that fit the team's work and available time.
 
 ## Tips for success
 
-### 1. Stick to your track (initially)
-
-- Start with your primary track
-- Complete at least the required challenge
-
-### 2. Branch out later
-
-- Finish the core before adding optional work or another challenge
-- Want full-stack experience? Combine Backend + Frontend tracks
-- Mix challenges that interest you
-
-### 3. Use track resources
-
-- Each track has specific tips for that domain
-- Customization briefs tailored to the technology
-- Best practices for that area
-
-### 4. Collaborate
-
-- Find others on your track
-- Share discoveries
-- Help each other learn
-
-## Track resources
-
-Each track includes:
-
-- Detailed track guide
-- Learning objectives
-- Recommended schedule
-- Domain-specific Copilot tips
-- Success metrics
-- Additional challenges
+Finish the required core before adding optional work or another challenge.
+Share discoveries with others on your track. For full-stack practice, combine
+backend and frontend work after completing the core.
 
 ## For teams
 
-### If you're doing this as a team
-
-**Option 1: Everyone on Same Track**
-
-- Choose track based on team's primary role
-- Work together and share what you learn
-- Present the result together
-
-**Option 2: Different Tracks**
-
-- Each person chooses their specialty
-- Build complementary skills
-- Present different perspectives
-
-**Option 3: Full-Stack Together**
-
-- Combine Backend + Frontend tracks
-- Divide challenges among team members
-- Integrate API and UI at the end
+Work on one track and present a shared result, or choose separate tracks by
+specialty and compare what you learned. If combining backend and frontend work,
+divide responsibilities and leave time to integrate the API and UI.
 
 ## Success metrics
 
@@ -850,13 +792,8 @@ Activity metrics (Copilot usage, chat interactions) are supporting evidence, not
 
 ## After your track
 
-### Next steps
-
-1. **Complete the track** - Finish required challenges
-2. **Try more challenges** - Go deeper in your domain
-3. **Explore another track** - Broaden your skills
-4. **Apply to real work** - Use Copilot in your projects
-5. **Share what you learned** - Help others in your organization
+Apply the useful practices to your own projects and share them with your team.
+Choose another challenge when it addresses work you need to learn or deliver.
 
 ### Cross-track learning
 
@@ -890,5 +827,3 @@ Activity metrics (Copilot usage, chat interactions) are supporting evidence, not
 - [Documentation Home](../docs/index.md)
 
 ---
-
-For a first API challenge, use [Challenge 1](./challenge-1-web-api-track.md).

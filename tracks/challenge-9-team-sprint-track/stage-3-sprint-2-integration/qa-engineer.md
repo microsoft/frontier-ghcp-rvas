@@ -4,7 +4,7 @@
 
 ## Tasks
 
-1. **Run Sprint 1 tests against the integrated app** -- The frontend and backend are now connected. Run the full suite and note any regressions.
+1. **Run Sprint 1 tests against the integrated app** -- Run the full suite and note any regressions.
 
 2. **Write tests for new Sprint 2 features:**
    - Search and filtering (search for a report by keyword, filter by category)

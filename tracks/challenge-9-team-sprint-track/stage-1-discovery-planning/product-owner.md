@@ -14,7 +14,7 @@ Review feature ideas and trade-offs with your Product and Analysis Agent before 
    - A page showing upcoming community events
    - A dashboard with basic stats
 
-3. **Export Spark to a repository (the handover)** -- Once the prototype looks right, export the Spark app into a new GitHub repository. This is the official handover to the development team. Create the repo under the team's GitHub organization (or your personal account) and share the link with everyone.
+3. **Export Spark to a repository (the handover)** -- Once the prototype looks right, export the Spark app into a new GitHub repository under the team's GitHub organization (or your personal account). Share the link with everyone.
 
    What this repo represents:
    - It is the **contract** between the PO and the developers. The screens, data model, and user flows captured in the Spark export define what the team agreed to build.

@@ -70,8 +70,8 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 - Describe your infrastructure goal as a comment block before generating HCL or YAML. The comment doubles as documentation.
 - Specify resource limits, probe paths, and replica counts before generating Kubernetes manifests.
-- When generating CI/CD pipelines, list the stages in order as comments. Copilot follows the sequence you lay out.
-- Review generated Dockerfiles and Terraform carefully for security defaults (non-root users, least-privilege IAM, image pinning). Copilot gets the structure right but sometimes skips hardening.
+- When generating CI/CD pipelines, list the stages in order as comments.
+- Review generated Dockerfiles and Terraform for security defaults (non-root users, least-privilege IAM, image pinning). Copilot may skip hardening.
 
 ## Resources
 

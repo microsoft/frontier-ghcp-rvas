@@ -27,8 +27,7 @@ exit status as well as whether a command starts.
    Remove conflicting legacy names rather than explaining every historical
    variation.
 6. Run every shell example you changed. Add or adjust tests only if you find a
-   real software defect. The challenge is not complete if the docs merely look
-   plausible.
+   real software defect.
 7. Repeat the Stage 1 reader journeys without using knowledge that is absent
    from the repaired docs. Record the result in the issue inventory.
 

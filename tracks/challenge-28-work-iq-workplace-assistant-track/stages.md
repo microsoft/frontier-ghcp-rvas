@@ -9,9 +9,9 @@
 | 3 | [Draft a Reviewed Action Register](stage-3-draft-action-register.md) | ⭐⭐⭐ | 75-90 min | Evidence-backed handoff and action register |
 | 4 | [Apply the Approval Gate](stage-4-apply-approval-gate.md) | ⭐⭐⭐ | 45-60 min | Review record and safe publication decision |
 
-Keep the work narrow. Confirm access and governance first. Then collect
-evidence, make the handoff, and get human approval before publishing anything
-or changing Microsoft 365 data.
+Confirm access and governance first. Then collect evidence within the approved
+scope, draft the handoff, and get human approval before publishing anything or
+changing Microsoft 365 data.
 
 > **Short on time?** Complete Stages 1 through 3 for one source and a single
 > handoff. Do not skip the approval decision, even if the output stays local.

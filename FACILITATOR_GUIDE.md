@@ -5,7 +5,7 @@
 Help teams define what to deliver, use Copilot during the work, and demonstrate
 the result. At the end, ask what changed and which practices they can use again.
 
-Participants choose a **worked-example challenge** from the
+Participants choose a challenge from the
 [track catalog](./tracks/README.md).
 
 ## Pre-session setup
@@ -21,17 +21,8 @@ Start one week before the session.
 
 ### 2. Prepare the environment
 
-```bash
-
-# Test the devcontainer builds successfully
-
-# Create a Codespace from the main branch
-
-# Verify all extensions install correctly
-
-# Run the post-create script
-
-```
+Create a Codespace from the main branch. Verify that the selected devcontainer
+builds, its extensions install, and its post-create script runs successfully.
 
 ### 3. Review the tracks
 
@@ -91,20 +82,10 @@ Allow 30 minutes.
 
 Allow 4-5 hours.
 
-**Recommended flow:**
-
-1. Participants choose a challenge and review its outcome
-2. Work through the challenge stages to deliver it
-3. Work individually or in pairs
-4. Facilitators rotate to help teams stay focused on the outcome
-5. Encourage using Copilot Chat for help
-
-**Tips for Facilitators:**
-
-- Don't solve problems directly
-- Guide participants to use Copilot
-- Ask what participants are trying to deliver and how they will demonstrate it
-- Share Copilot techniques that helped a team complete its work
+Participants work through their chosen challenge's stages, individually or in
+pairs. Facilitators rotate between teams, ask what they are trying to deliver,
+and help them use Copilot rather than solving the problem for them. Share
+techniques that helped another team complete its work.
 
 ### Mid-day check-in
 
@@ -112,10 +93,9 @@ Allow 15 minutes.
 
 Around lunch, gather everyone:
 
-- Quick poll: What outcome are you working on? What stage?
+- Ask which outcome and stage each team is working on
 - Have 2-3 teams show their progress
 - Address common issues
-- Ask teams to show what works so far
 
 ### Demo session
 
@@ -123,10 +103,10 @@ Allow 1-2 hours.
 
 **Format Options:**
 
-**Option A: Outcome-Based Demos** RECOMMENDED
+**Option A: Outcome-Based Demos (recommended)**
 
 - Group participants by the outcome they delivered
-- Each team presents their result and the business impact
+- Each team presents its result and any supported business impact
 - Compare approaches across similar outcomes
 - Share Copilot patterns that helped deliver the result
 
@@ -140,7 +120,8 @@ Allow 1-2 hours.
 
 - Each person/team presents (5 min each)
 - Show the outcome they delivered and demo it
-- State the business impact: time saved, risk reduced, quality improved
+- Explain the impact, using evidence for claims about time saved, risk reduced,
+  or quality improved
 - Highlight Copilot patterns that accelerated the work
 
 **Option D: Lightning Talks**
@@ -154,8 +135,8 @@ Allow 1-2 hours.
 
 - What outcomes did teams deliver?
 - What business impact did each produce?
-- How did Copilot accelerate the work?
-- Patterns discovered
+- Where did Copilot help or slow the work?
+- Which practices can teams reuse?
 
 **Q&A (5 min)**
 
@@ -207,18 +188,11 @@ Allow 1-2 hours.
 - Consider switching tracks if significantly mismatched
 - Encourage helping others on same track
 
-**Issue: "I picked the wrong track"**
-
-- Switch tracks if the work is a poor fit
-- Help them find a better fit
-- Suggest starting the recommended challenge for new track
-
 ### Time management
 
 **If running behind:**
 
-- Focus on required stages and skip optional work
-- Focus on quality over quantity
+- Finish required stages before optional work
 - Extend demo time if needed
 
 **If ahead of schedule:**
@@ -266,16 +240,19 @@ Allow 1-2 hours.
 
 **Common challenges:**
 
-- Cloud credentials are the most common blocker. Verify before the session that sandbox accounts have the necessary roles assigned. If someone hits an auth error mid-session, have them switch to the local Docker path while you resolve it.
+- Verify before the session that Azure sandbox accounts have the necessary
+  roles. If authentication fails during the session, use the local Docker path
+  while you resolve it.
 - For Terraform state errors, ask Copilot to explain the message and check
   whether the backend is initialized. Verify who owns a lock before considering
   `terraform force-unlock`.
 
 **Facilitation tips:**
 
-- This track has the highest setup complexity. Do a dry run with the devcontainer before the session, especially for the Terraform stages.
+- Test the devcontainer before the session, especially the Terraform stages.
 - Use the Chat view for multi-line Terraform errors.
-- CI/CD stage failures in GitHub Actions are easier to debug by fetching the raw log URL and pasting it into Copilot Chat than by reading the folded UI.
+- For GitHub Actions failures, give Copilot the relevant log and workflow
+  context. Remove secrets before sharing logs.
 
 ### Frontend developer track
 
@@ -288,7 +265,7 @@ Allow 1-2 hours.
 
 **Facilitation tips:**
 
-- Component generation works well when participants open an existing component as a reference tab before prompting. Tell them: "Show Copilot what you already have before asking for something new."
+- Open an existing component as context before requesting another.
 - Keep time for accessibility checks. Ask Copilot to review ARIA usage, then
   verify the component in the browser.
 - For participants new to TypeScript, set the expectation early: ask Copilot to
@@ -298,7 +275,8 @@ Allow 1-2 hours.
 
 **Common challenges:**
 
-- Playwright installation and browser download takes 2-3 minutes the first time and participants think it's stuck. Let them know it's downloading browser binaries.
+- Playwright's first installation downloads browser binaries and takes
+  2-3 minutes. Explain the wait before participants assume it is stuck.
 - Page Object Model patterns are unfamiliar to participants who've only written procedural tests. Have them open an existing POM file from the starter code and ask Copilot to explain the pattern before generating new pages.
 - For flaky tests, check for missing `await` and hard-coded timeouts. Ask
   Copilot to review the failure for race conditions.
@@ -306,7 +284,8 @@ Allow 1-2 hours.
 **Facilitation tips:**
 
 - Reserve time for Playwright MCP and start the dev server before using it.
-- Test generation with `/tests` works best when the function under test has a clear signature and docstring. If suggestions are vague, ask participants to add a one-line comment describing the expected behavior first.
+- Give `/tests` the function's signature and expected behavior. If suggestions
+  are vague, add a one-line comment describing that behavior.
 - Ask participants to test failure cases as well as the expected flow.
 
 ### Challenge 7: Copilot SDK Track
@@ -321,7 +300,7 @@ Allow 1-2 hours.
 
 - Only for participants who finished a core track
 - Requires solid Node.js/Express experience
-- Significantly longer (8-12 hours)
+- Check the track's time budget before assigning it
 - Help with GitHub App registration and debugging
 
 ### Challenge 8: Flight Delay Predictor Track
@@ -335,7 +314,7 @@ Allow 1-2 hours.
 
 - Only for experienced full-stack developers
 - Spans data science, backend, and frontend
-- Significantly longer (8-12 hours)
+- Keep the work within the track's 4-6-hour core
 - Help with prioritization across the stack
 
 ### Challenge 9: Cross-Functional Team Sprint Track
@@ -363,9 +342,9 @@ Allow 1-2 hours.
 
 **Facilitation tips:**
 
-- Requires a team of 4 technical people, not for solo participants
+- Requires a team of 2-4 technical people, not solo participants
 - The supplied specification lets the team start with technical planning
-- Encourage the team to write a clear technical spec before coding
+- Clarify the supplied specification before coding
 - Keep teams from skipping technical planning
 - Help the team self-organize by suggesting one person manage the project board
 
@@ -384,15 +363,15 @@ Allow 1-2 hours.
 - DevOps & Platform Track
 - QA Tester Track
 
-**Advanced Individual Challenge Tracks (8-12 hours):**
+**Advanced Individual Challenge Tracks:**
 
 - Copilot SDK Track (requires completion of a core track)
 - Flight Delay Predictor Track (full-stack, multi-domain)
 
-**Team Challenge Tracks (8 hours):**
+**Team Challenge Tracks:**
 
 - Cross-Functional Team Sprint Track (4-6 people, all roles)
-- Technical Team Sprint Track (4 developers/engineers, no business roles)
+- Technical Team Sprint Track (2-4 developers/engineers, no business roles)
 
 ### By individual challenge
 
@@ -419,11 +398,12 @@ Allow 1-2 hours.
 Ask participants to note:
 
 - **Outcome delivered** (what they built/shipped/modernized)
-- **Business impact** (time saved, risk reduced, quality improved, toil eliminated)
-- How Copilot accelerated the work
+- **Business impact**, with evidence for time saved, risk reduced, quality
+  improved, or toil eliminated
+- Where Copilot helped or slowed the work
 - Reusable skills and agents, plus any useful chat techniques
 - Time spent
-- Supporting evidence: percentage of code generated by Copilot, chat interactions
+- Supporting activity metrics, such as chat interactions, when useful
 
 ## Post-session
 
@@ -436,20 +416,16 @@ Ask participants to note:
 - [ ] Additional resources
 - [ ] Next steps for continued use
 
-**Collect Feedback on:**
-
-- Outcome clarity and achievement
-- Business impact realized
-- Where Copilot helped or slowed the work
-- Patterns discovered
-- Overall experience
+Ask what participants delivered, what evidence supports the impact, where
+Copilot helped or slowed the work, and which practices they will reuse.
+Collect feedback on the overall experience.
 
 ### Share results
 
 Create a summary:
 
 - Participation stats
-- Productivity gains reported
+- Reported productivity gains, distinguished from measured results
 - Practices teams can reuse
 - Results teams demonstrated
 - Areas for improvement
@@ -512,9 +488,4 @@ Use activity metrics as supporting evidence, not the main measure of success.
 
 ## Questions & support
 
-For facilitation questions:
-
-- Review this guide
-- Check the selected track guide
-- Consult docs folder
-- Ask in organizer chat
+Check the selected track guide or ask in the organizer chat.

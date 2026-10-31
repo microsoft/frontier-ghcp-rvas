@@ -1,8 +1,7 @@
 # Getting started
 
-These steps apply to every track. Start with a clean workspace, inspect the
-challenge, and then prepare the Copilot customizations you will use during the
-session.
+Start with a clean workspace, inspect the challenge, and prepare the Copilot
+customizations you will use during the session.
 
 **Challenge 30 exception:** follow its baseline stage for setup and Spec Kit
 initialization. It uses supplied Spec Kit skills; authoring custom agents and
@@ -22,7 +21,7 @@ Codespace or devcontainer to pick up the installation.
 
 On first setup, the devcontainer:
 
-- Runs the tool and dependency installation for your challenge
+- Installs the tools and dependencies for your challenge
 - Removes challenge folders, track files, and devcontainer configurations you
   do not need
 - Removes the documentation website, full catalog, and facilitator material
@@ -40,10 +39,10 @@ and track remain, along with shared help and required configuration.
 Branch creation requires a Git checkout with at least one commit and works
 when Codespaces opens a detached commit.
 
-Rebuilding a prepared workspace skips cleanup and preserves your current
-branch and files, including installed skills and Copilot customizations. Older prepared
-workspaces are also preserved; use a fresh clone to get the slimmer layout.
-Use a separate clone to switch challenges.
+Rebuilding a prepared workspace skips cleanup and preserves your branch and
+files, including installed skills and Copilot customizations. This also applies
+to older prepared workspaces. Use a fresh clone for the slimmer layout or to
+switch challenges.
 
 ### Manual setup (without a DevContainer)
 
@@ -64,7 +63,7 @@ Windows PowerShell:
 
 Run the script without arguments to see the full list of challenge names.
 
-The script performs the same first-time cleanup as the devcontainer. Running it
+The script runs the same first-time cleanup as the devcontainer. Running it
 again for the same challenge preserves your work. You still need to install
 language-specific dependencies yourself, such as with `npm install` or
 `pip install`.
@@ -78,15 +77,15 @@ customizations, inspect the starter code, tests, configuration, and supporting
 documentation. Identify the outcome, project conventions, constraints, and
 work that the challenge leaves for you.
 
-Each track provides a tailored brief and durable search terms for finding
-relevant patterns and documentation. Use those as investigation guides, not as
+Each track provides a brief and search terms for finding relevant patterns and
+documentation. Use them as investigation guides, not as
 ready-to-paste prompts, agents, skills, or instructions. When a challenge
 includes cloud examples, use Azure only.
 
 ## 3. Draft the Customization Trio
 
-Set aside 20-30 minutes to draft three challenge-specific artifacts. Each has
-a different job. Avoid repeating content between them.
+Set aside 20-30 minutes to draft three challenge-specific artifacts.
+Keep their roles distinct and avoid repeating content.
 
 ### Repository Instructions
 
@@ -100,9 +99,9 @@ for current authoring guidance.
 
 ### Custom Agent
 
-Create one or more custom agents under `.github/agents/` for specialist judgment. Define
-the role that should assess tradeoffs, apply domain expertise, and make
-recommendations within the challenge's constraints.
+Create one or more custom agents under `.github/agents/` for specialist judgment.
+Define the decisions each agent should assess and the constraints its
+recommendations must respect.
 
 See GitHub's
 [custom agent authoring documentation](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents-in-your-ide)
@@ -110,15 +109,13 @@ for current authoring guidance.
 
 ### Custom Skill
 
-Create one or more custom skills under `.github/skills/` for a repeatable, multi-step
-workflow. Choose work that benefits from a consistent sequence and can be
-reused during the challenge.
+Create one or more custom skills under `.github/skills/` for repeatable,
+multi-step work you can reuse during the challenge.
 
 Each skill belongs in `.github/skills/<skill-name>/SKILL.md`. Give it a
 lowercase, hyphenated name and a description that explains when to use it.
-Define the required inputs and expected results, including the checks that
-make those results useful. Author the skill yourself; a track's brief describes
-the work it should support.
+Define the required inputs, expected results, and checks. Author the skill
+yourself; the track's brief describes the work it should support.
 
 **Reuse the same skill as you progress.** When a stage builds on a skill from
 setup, refine that artifact rather than creating another one. Keep reusable
@@ -139,9 +136,9 @@ community artifact does not complete this exercise.
 ## 5. Install Impeccable when your track uses it
 
 Challenges **4, 8, 9, 10, 18, 27, 29, and 30** use Impeccable for a focused UI
-review. Follow this section only for those tracks. Participants install the
-skill themselves; no Impeccable extension or automatic devcontainer install
-is required.
+review. Follow this section only for those tracks. Install the skill yourself;
+no Impeccable extension is required, and devcontainers do not install it
+automatically.
 
 Complete clean setup first. From the **repository root**, run the
 [official installer](https://github.com/pbakaus/impeccable#installation):

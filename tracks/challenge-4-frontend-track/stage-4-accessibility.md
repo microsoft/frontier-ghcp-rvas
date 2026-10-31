@@ -26,7 +26,7 @@ This stage includes a pre-built component with intentional accessibility violati
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can help set up axe-core and suggest fixes. But you still need to test browser behavior and inspect hidden UI. Neither Impeccable's feedback nor a clean axe scan replaces manual keyboard checks.
+Copilot can help set up axe-core and suggest fixes. Test browser behavior and inspect hidden UI yourself. Neither Impeccable's feedback nor a clean axe scan replaces manual keyboard checks.
 
 ---
 

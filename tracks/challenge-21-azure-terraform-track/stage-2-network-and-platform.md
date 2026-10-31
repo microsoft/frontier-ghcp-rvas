@@ -20,7 +20,7 @@ Choose a network shape that fits a small internal app and write down what you ar
 
 ## Review gate
 
-Run a plan before applying. Ask Copilot to explain the plan as if it were reviewing a pull request: what changes, what could break, what looks overbuilt, and what outputs another team would need. Keep the useful critique in `docs/plan-review.md`.
+Run a plan before applying. Ask Copilot to review what changes, what could break, what looks overbuilt, and what outputs another team would need. Keep the useful critique in `docs/plan-review.md`.
 
 ## Verification
 

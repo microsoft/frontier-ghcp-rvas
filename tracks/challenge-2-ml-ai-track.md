@@ -66,8 +66,8 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for using Copilot on this track
 
-- Start each notebook cell with a comment describing the analysis step. Copilot generates better pandas and sklearn code when it knows the intent.
-- For visualizations, describe the layout (subplot grid, axes, colors) in a comment. Copilot handles matplotlib well with a clear spec.
+- Start each notebook cell with a comment describing the analysis step.
+- For visualizations, describe the layout (subplot grid, axes, colors) in a comment.
 - When Copilot suggests an algorithm you're not sure about, use `/explain` on it before moving on.
 - For feature engineering, specify the binning strategy, encoding approach, or interaction terms in comments.
 

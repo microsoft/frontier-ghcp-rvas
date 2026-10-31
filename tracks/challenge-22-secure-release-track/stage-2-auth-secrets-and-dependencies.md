@@ -2,9 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 70-85 min
 
-Now prove the gaps that could change the release decision. The starter leaves
-review leads in code, tests, configuration, and evidence files. Some are more
-serious than others.
+Prove the gaps that could change the release decision. Use the leads in code,
+tests, configuration, and evidence files to assess their severity.
 
 ## Tasks
 

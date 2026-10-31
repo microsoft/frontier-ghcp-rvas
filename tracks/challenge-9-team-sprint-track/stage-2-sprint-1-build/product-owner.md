@@ -20,7 +20,7 @@ Answer developer questions, review PRs, and keep the backlog current during the 
 
 5. **Update the project board** -- Move Issues through columns as work progresses so the board always shows the current status.
 
-6. **Write end-user help content** -- Draft a `docs/user-guide.md` with instructions for how a resident would use CityPulse. This doubles as a test of whether the product makes sense from a user's perspective.
+6. **Write end-user help content** -- Draft a `docs/user-guide.md` explaining how a resident uses CityPulse. Use the draft to check whether the product makes sense from a user's perspective.
 
 ## Copilot Tip
 

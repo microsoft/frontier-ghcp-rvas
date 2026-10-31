@@ -9,9 +9,8 @@
 | 3 | [Build Enforceable Guardrails](stage-3-build-enforceable-guardrails.md) | ⭐⭐⭐ | 90-105 min | APIM policy XML and automated contract checks |
 | 4 | [Package the Paved Road](stage-4-package-paved-road.md) | ⭐⭐⭐ | 60-75 min | Observability requirements and developer onboarding package |
 
-The work moves from evidence to policy, then from policy to enforcement. The
-last stage makes the controls usable by service teams that were not part of
-the design discussion.
+Use the evidence to define policy, then enforce it. The last stage makes the
+controls usable by service teams that were not part of the design discussion.
 
 > **Short on time?** Complete Stages 1 and 2, then implement one APIM policy and
 > the matching automated rule from Stage 3. Do not skip the consumer-risk

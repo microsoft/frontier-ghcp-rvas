@@ -8,8 +8,7 @@ Use this guide to diagnose setup and Copilot problems.
 
 **Symptoms:**
 
-- No gray text appearing as you type
-- No inline suggestions
+- No gray inline suggestions as you type
 
 **Solutions:**
 
@@ -47,12 +46,11 @@ Use this guide to diagnose setup and Copilot problems.
 
 **Symptoms:**
 
-- Copilot suggests wrong code
-- Suggestions don't match intent
+- Suggestions do not match the intended behavior
 
 **Solutions:**
 
-1. **Be More Specific**
+1. **Describe the expected behavior**
 
    ```javascript
    // ❌ Vague
@@ -74,19 +72,18 @@ Use this guide to diagnose setup and Copilot problems.
 
 **Symptoms:**
 
-- Suggests deprecated syntax
-- Not using latest features
+- Suggestions use deprecated syntax or ignore the requested version
 
 **Solutions:**
 
-1. **Explicitly Request Modern Syntax**
+1. **Specify the syntax you need**
 
    ```javascript
    // Use modern ES6+ syntax with async/await and destructuring
 
    ```
 
-2. **Show Example**
+2. **Show an existing pattern**
 
    ```python
 
@@ -98,7 +95,7 @@ Use this guide to diagnose setup and Copilot problems.
 
    ```
 
-3. **Specify Versions**
+3. **Name the project versions**
 
    ```javascript
    // Using React 18 hooks and TypeScript 5.0
@@ -125,8 +122,7 @@ Use this guide to diagnose setup and Copilot problems.
 
 **Symptoms:**
 
-- Laggy typing
-- Delayed responses
+- Typing or responses are delayed
 
 **Solutions:**
 
@@ -139,8 +135,7 @@ Use this guide to diagnose setup and Copilot problems.
 
 **Symptoms:**
 
-- Copilot extension missing
-- Configured extensions not installed
+- Configured extensions, including Copilot, are missing
 
 **Solutions:**
 
@@ -447,24 +442,11 @@ bash script.sh
 
 ## Prevention tips
 
-**Do:**
-
-- Save work frequently
-- Commit small changes
-- Test incrementally
-- Read error messages
-- Ask early when stuck
-
-**Don't:**
-
-- Make many changes at once
-- Ignore warnings
-- Skip documentation
-- Work in isolation when stuck
+Save frequently, commit small changes, and test as you go. Read errors and
+warnings before making more changes. Check the documentation and ask for help
+early when stuck.
 
 ## Still stuck?
-
-If this guide doesn't help:
 
 1. Create an issue with the error, reproduction steps, and fixes you have tried.
 2. Contact the organizers through the session channel.

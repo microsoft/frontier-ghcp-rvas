@@ -89,8 +89,8 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for using Copilot on this track
 
-- Define your TypeScript interfaces first, then generate the components that use them. Types give Copilot much better context.
-- Describe a component's props and behavior in a comment before asking Copilot to generate it. A few lines of intent produce better JSX than a vague prompt.
+- Define your TypeScript interfaces first, then generate the components that use them.
+- Describe a component's props and behavior in a comment before asking Copilot to generate it.
 - Keep the file you're testing open when asking for test cases so Copilot can use it as context.
 - For state management hooks, outline the public API (what it returns, what side effects it has) before generating the implementation.
 - Give Impeccable a specific page or flow to review. Apply the smallest useful change and rerun the relevant checks.

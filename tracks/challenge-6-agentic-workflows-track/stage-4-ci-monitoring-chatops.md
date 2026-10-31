@@ -52,9 +52,9 @@
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-**Copilot helps with:** generating the frontmatter, writing command parsing logic in the Markdown body, adapting gallery workflows.
+Copilot can generate the frontmatter, write command parsing logic in the Markdown body, and adapt gallery workflows.
 
-**Your judgment:** deciding which ChatOps commands to support, defining the scope of CI Doctor analysis (should it only diagnose or also attempt fixes?), calibrating the response format (brief vs. detailed), and testing with realistic scenarios.
+You decide which ChatOps commands to support and whether CI Doctor only diagnoses failures or also attempts fixes. Choose the response format (brief or detailed) and test with realistic scenarios.
 
 ## Verification
 

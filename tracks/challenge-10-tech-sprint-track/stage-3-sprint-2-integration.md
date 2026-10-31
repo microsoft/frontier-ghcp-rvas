@@ -7,7 +7,7 @@ Connect the frontend to the backend and fix bugs from Sprint 1. Add advanced fea
 
 ## Sprint 2 Planning (first 10 minutes)
 
-The team organizes planning. Keep it within 10 minutes.
+The team holds a 10-minute planning session.
 
 1. **Carry-over** -- Anything unfinished from Sprint 1 gets highest priority.
 2. **Bug fixes** -- QA filed bugs. The team decides together which are Sprint 2 fixes and which go to a known-issues list.

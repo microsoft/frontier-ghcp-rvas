@@ -4,7 +4,7 @@
 
 **Difficulty:** ⭐⭐
 
-**Focus:** Automating the conversion of requirement specifications into structured project backlogs using Copilot skills, agents, and the Atlassian MCP server
+**Focus:** Convert requirement specifications into structured project backlogs using Copilot skills, agents, and the Atlassian MCP server
 
 ## Who is this for
 
@@ -80,7 +80,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 - Start with the simplest spec (Password Reset) to build your skill, then test it on the more complex specs. Check coverage each time.
 - Define the backlog skill's output format using your team's work item conventions and the provided backlog templates.
-- The refinement agent works best when you give it both the original spec and the generated backlog, then ask it to find gaps. Use `#file` references to point at both documents.
+- Give the refinement agent both the original spec and the generated backlog to check for gaps. Use `#file` references to point at both documents.
 - For the MCP integration, verify the field mapping with a single approved Jira issue before attempting bulk creation.
 - Test consistency by having multiple team members use the same skill on the same spec and compare outputs.
 

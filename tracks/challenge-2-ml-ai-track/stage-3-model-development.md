@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Reproducibility matters. Use sklearn Pipelines for all preprocessing and training.
+Use sklearn Pipelines for all preprocessing and training.
 
 ## Tasks
 

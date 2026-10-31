@@ -33,7 +33,7 @@ This challenge runs locally and produces architecture artifacts:
 - Azure service choices described in diagrams and decisions
 - Python validation scripts that run without an Azure account
 
-You will not deploy resources or build an integration service. The hard part is deciding where responsibilities belong, what each system may assume, and how the combined company can move without a big-bang cutover.
+You will not deploy resources or build an integration service. Decide where responsibilities belong, what each system may assume, and how the combined company can transition without a big-bang cutover.
 
 ## Getting started
 

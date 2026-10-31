@@ -152,8 +152,8 @@ the answer.
   not a portable guarantee.
 - For migration work, test old and new readers and writers separately. A clean
   backfill says nothing about write-path compatibility.
-- Have someone other than the author follow the runbook. Ambiguity shows up
-  quickly when the database is already under pressure.
+- Have someone other than the author follow the runbook to find ambiguous
+  steps before using it under load.
 
 ## Resources
 

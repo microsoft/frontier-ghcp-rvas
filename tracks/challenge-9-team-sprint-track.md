@@ -57,8 +57,6 @@ The team chooses their stack together. Recommended options:
 
 The team works in parallel within each stage.
 
-The challenge runs as a simulated sprint cycle:
-
 1. The PO prototypes an idea with GitHub Spark, exports it to a GitHub repository, and creates stories and a backlog in GitHub Issues. The export becomes the development contract. Do not return to Spark after handover. Other roles set up tooling and project scaffolding.
 2. **Sprint 1** -- All roles work in parallel on their piece. Developers build core features (using the Spark handover repo as reference), QA writes tests, DevOps sets up infrastructure, the PO manages the board and reviews PRs.
 3. **Sprint 2** -- The team integrates, adds advanced features, fixes bugs, and starts deploying.
@@ -137,9 +135,9 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 - **PO:** Write a rough story first, then ask Copilot to sharpen it. Use the GitHub MCP server to batch-create Issues from your stories file.
 - **Developers:** Describe the API contract or component structure in a comment before generating. The specifics (field names, status codes, prop types) matter more than length.
-- **QA:** Describe the user flow you want to test, then ask for Playwright code. One sentence of intent beats a detailed template.
+- **QA:** Describe the user flow you want to test, then ask for Playwright code.
 - **DevOps:** State the target ("devcontainer with Node 20, Python 3.11, and PostgreSQL") and let Copilot fill in the details.
-- Each role benefits from anchoring prompts in the project domain (reports, categories, locations) rather than generic CRUD terms.
+- Use project terms (reports, categories, locations) rather than generic CRUD terms in prompts.
 
 ## Resources
 

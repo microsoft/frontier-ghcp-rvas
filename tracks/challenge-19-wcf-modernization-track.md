@@ -78,7 +78,7 @@ A demo client is included at `src/Meridian.Banking.Client`. With the service run
 dotnet run --project src/Meridian.Banking.Client
 ```
 
-It sends a real SOAP request to `GetCustomerProfile` for customer ID 1001 and prints the raw HTTP status and response body. Use it to check that the service accepts SOAP messages correctly. The client uses raw HTTP rather than a generated proxy, so you can also read its source to see what a well-formed SOAP envelope looks like for this service.
+It sends a real SOAP request to `GetCustomerProfile` for customer ID 1001 and prints the raw HTTP status and response body. Use it to check that the service accepts SOAP messages correctly. The client uses raw HTTP rather than a generated proxy; its source shows a well-formed SOAP envelope for this service.
 
 ### Repository instructions for this track
 

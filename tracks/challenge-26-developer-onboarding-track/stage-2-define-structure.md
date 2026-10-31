@@ -22,8 +22,7 @@
 6. Update the issue inventory with the destination and acceptance criteria for
    each high-priority repair.
 
-Keep the decisions small enough to apply in this session. A useful style note
-that fits on one page is better than a broad guide nobody can test.
+Keep the decisions small enough to apply and test in this session.
 
 ## Verification
 

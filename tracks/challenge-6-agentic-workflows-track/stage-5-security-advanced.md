@@ -34,7 +34,7 @@
    - **Markdown Linter** -- check all documentation for quality and consistency
    - **Glossary Maintainer** -- keep a project glossary up to date
 
-   Or invent your own. The best agentic workflows address recurring manual chores specific to your project.
+   Or choose another recurring manual task specific to your project.
 
 4. **Optimize a workflow with Q** -- If any of your workflows produce mediocre output, use the [Q - Workflow Optimizer](https://github.com/githubnext/agentics/blob/main/docs/q.md) pattern: create a meta-workflow that analyzes your existing workflow's output and suggests improvements to its Markdown instructions.
 

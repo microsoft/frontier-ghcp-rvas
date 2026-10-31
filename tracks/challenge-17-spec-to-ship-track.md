@@ -60,9 +60,9 @@ Your `.github/copilot-instructions.md` should include:
 
 ### Suggested custom agents
 
-- **Requirements Analyst Agent** -- Takes a functional requirements document and produces structured work items: Epics, Stories with Given/When/Then criteria, Tasks, and Test Cases, with dependency ordering and sizing. Give it the requirements doc; it drafts the work items. Use it as Stage 1's first pass.
-- **Technical Analyst Agent** -- Takes a spec plus the existing codebase (`@workspace`) and produces a technical analysis: affected modules, new models, API decisions, schema changes, and risk. Give it the spec and repo access; it proposes an implementation order. Use it once work items exist.
-- **Test Spec Agent** -- Takes user stories and produces a test specification: scenarios with preconditions, steps, expected results, and edge cases, covering happy path and failure. Give it a story; it drafts the spec. Use it before implementation starts on that story.
+- **Requirements Analyst Agent** -- Drafts structured work items from a functional requirements document: Epics, Stories with Given/When/Then criteria, Tasks, and Test Cases, with dependency ordering and sizing. Use it as Stage 1's first pass.
+- **Technical Analyst Agent** -- Uses a spec and the existing codebase (`@workspace`) to propose affected modules, new models, API decisions, schema changes, risks, and implementation order in a technical analysis. Give it repo access and use it once work items exist.
+- **Test Spec Agent** -- Drafts a test specification from a user story: scenarios with preconditions, steps, expected results, and edge cases, covering happy path and failure. Use it before implementation starts on that story.
 
 ### Suggested custom skills
 

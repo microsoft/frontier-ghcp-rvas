@@ -6,7 +6,7 @@ You inherited a flat Terraform directory with hard-coded names, no remote state,
 
 ## Scenario notes
 
-The team agrees that remote state is required, but not much else is settled. The platform lead wants names that sort cleanly by environment. The application team wants short names that are easy to read in the Azure portal. Finance wants every resource tagged with owner, cost center, environment, and data classification. Azure storage account names are less forgiving than everyone remembers.
+The team requires remote state but has not agreed on naming and tagging. The platform lead wants names that sort cleanly by environment. The application team wants short names that are easy to read in the Azure portal. Finance wants every resource tagged with owner, cost center, environment, and data classification. Azure storage account naming limits constrain these choices.
 
 Resolve the naming and tagging tension before you touch the rest of the platform. Record the rules you choose and the trade-offs you reject in `docs/platform-notes.md`.
 

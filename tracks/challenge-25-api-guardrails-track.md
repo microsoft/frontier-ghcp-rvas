@@ -123,8 +123,7 @@ artifacts yourself after inspecting the starter.
   Microsoft Entra ID audience, scopes, and claims model.
 - A passing parser checks syntax. Review policy intent and contract
   semantics separately.
-- Keep exceptions visible. A standard with no exception process usually turns
-  into an undocumented exception process.
+- Keep exceptions visible.
 
 ## Resources
 

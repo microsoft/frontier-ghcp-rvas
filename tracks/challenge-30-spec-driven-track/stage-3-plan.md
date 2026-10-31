@@ -14,9 +14,9 @@
    unrelated parts of the application.
 
 3. **Use `/speckit-tasks`.** Check that the tasks include API and UI work.
-   Require automated tests for the acceptance scenarios, including forbidden
-   operations and preserved baseline behavior. Tests are part of the work
-   breakdown, even if the generated task list omits them initially.
+   Add automated tests if the generated list omits them. They must cover the
+   acceptance scenarios, including forbidden operations and preserved baseline
+   behavior.
 
 4. **Use `/speckit-analyze` before implementation.** Review consistency across
    the specification, plan, and tasks. Resolve material gaps at their source,
