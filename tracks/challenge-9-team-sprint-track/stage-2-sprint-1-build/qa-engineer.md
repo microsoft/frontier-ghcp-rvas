@@ -2,7 +2,7 @@
 
 **Time: Full 3 hours**
 
-Write tests in parallel with development. Start with stubs or mocks if endpoints are not ready yet. Switch to the real app as features land.
+Write tests alongside development. Use stubs or mocks until endpoints exist, then switch to the real app as features land.
 
 ## Tasks
 
@@ -27,7 +27,7 @@ Using Playwright's API testing or a separate framework:
 
 ### Exploratory Testing and Bug Reports
 
-As features become available, do exploratory testing. File bugs as GitHub Issues using the template in `challenges/challenge-9-team-sprint/templates/bug-report-issue.md`. Include:
+Explore features as they land and file bugs as GitHub Issues using the template in `challenges/challenge-9-team-sprint/templates/bug-report-issue.md`. Include:
 
 - Steps to reproduce
 - Expected vs. actual behavior
@@ -36,7 +36,7 @@ As features become available, do exploratory testing. File bugs as GitHub Issues
 
 ### Test Reporting
 
-Configure Playwright's HTML reporter or a custom reporter so results can be shared with the team.
+Configure Playwright's HTML reporter or a custom reporter to share results with the team.
 
 ## Copilot Tip
 

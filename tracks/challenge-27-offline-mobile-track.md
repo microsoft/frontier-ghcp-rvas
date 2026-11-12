@@ -7,13 +7,6 @@
 **Focus:** Make a React Native field-service workflow dependable when
 connectivity and device capabilities cannot be assumed
 
-## Who is this for
-
-- Mobile developers working with React Native or Expo
-- Frontend engineers moving into local-first mobile workflows
-- Test engineers who need synchronization logic to run without an emulator
-- Technical leads defining offline and conflict behavior for field teams
-
 ## Prerequisites
 
 - Working TypeScript and React knowledge
@@ -22,7 +15,7 @@ connectivity and device capabilities cannot be assumed
 - Node.js 22 or the challenge devcontainer
 
 An emulator, app store account, and Azure subscription are optional. The Expo
-web target and Node test suite cover the required work.
+web target and the Node test suite cover the required work.
 
 ## Technology stack
 
@@ -35,9 +28,9 @@ web target and Node test suite cover the required work.
 
 ## Getting started
 
-Follow the [common setup steps](getting-started.md) first. The challenge expects
-you to create repository instructions, a specialist agent, and a reusable
-skill before the implementation settles.
+Follow the [common setup steps](getting-started.md) first. Create repository
+instructions, a specialist agent, and a reusable skill before the
+implementation settles.
 
 ### Open and inspect the challenge
 
@@ -47,7 +40,7 @@ target. Read `docs/architecture-notes.md` before changing the storage or sync
 code.
 
 The starter is a working service board with inspection forms and four network
-fixtures. It is not release-ready. Refresh the web app after saving an
+fixtures, but it isn't release-ready. Refresh the web app after saving an
 inspection, force a conflict, and try both permission buttons. Those failures
 define the work.
 
@@ -75,8 +68,8 @@ Your `.github/copilot-instructions.md` should capture:
 
 - **Offline Data Reviewer** -- Reviews a proposed storage and queue design for
   data-loss paths, ordering mistakes, and restart behavior. Give it the design
-  and relevant interfaces before implementation; keep it focused on findings
-  and trade-offs rather than wholesale rewrites.
+  and relevant interfaces before implementation. Keep it on findings and
+  trade-offs, not wholesale rewrites.
 - **Mobile Accessibility Reviewer** -- Checks one completed journey for labels,
   roles, focus, text scaling, target size, and non-color status cues. Give it a
   screen and expected states after the basic flow works.
@@ -92,21 +85,22 @@ Your `.github/copilot-instructions.md` should capture:
 - **Permission Degraded-Mode Check** -- Exercises granted, denied, blocked, and
   unavailable device states and verifies that the inspection can continue.
 - **Release Evidence Pass** -- Runs the Node checks, reviews accessibility and
-  failure evidence, and updates the release-readiness checklist without
-  treating optional Azure deployment as a release requirement.
+  failure evidence, and updates the release-readiness checklist. Optional Azure
+  deployment isn't a release requirement.
 
 ## Tips for using Copilot on this track
 
 - Ask Copilot to trace one technician action from the form to local storage and
-  through synchronization. A generic architecture summary will miss ordering
-  and restart failures.
-- Keep native APIs behind narrow interfaces. This lets Copilot generate useful
-  Node tests instead of tests that depend on a simulator.
+  through synchronization. A generic architecture summary misses ordering and
+  restart failures.
+- Keep native APIs behind narrow interfaces. Copilot can then generate Node
+  tests that don't depend on a simulator.
 - Give conflict examples concrete versions and timestamps. Ask what happens to
   both copies of the work under the proposed policy.
 - Test the offline fixture before the happy path.
 - Review accessibility for state changes as well as static controls. Queue,
-  sync, permission, and conflict feedback all need understandable announcements.
+  sync, permission, and conflict feedback all need announcements users can
+  understand.
 
 ## Resources
 

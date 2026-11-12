@@ -20,7 +20,7 @@ Use your test-engineer agent to prioritize flows and edge cases.
 
 5. **Define test data requirements** -- Document what seed data the backend should provide for tests (sample reports, sample events, test users). Coordinate with the backend developer.
 
-6. **Sprint planning** -- Join the PO's planning session. Identify which stories you will write tests for in Sprint 1.
+6. **Sprint planning** -- Join the PO's planning session and pick the stories you'll test in Sprint 1.
 
 ## Verification
 

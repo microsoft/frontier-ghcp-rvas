@@ -6,13 +6,6 @@
 
 **Focus:** Infrastructure as Code, containerization, and deployment automation with GitHub Copilot
 
-## Who is this for
-
-- DevOps Engineers and Platform Engineers
-- Site Reliability Engineers (SRE)
-- Cloud Engineers
-- Infrastructure Architects
-
 ## Prerequisites
 
 - **Azure subscription** for Terraform provisioning, Key Vault, and CI/CD deployment in Stages 3-5
@@ -39,7 +32,7 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-3-devops/`. Explore the starter code: `app/` has the working application, `kubernetes/` and `terraform/` have minimal scaffolds. Read through the existing scaffolds before writing any instructions, then work through the stages in order.
+Go to `challenges/challenge-3-devops/`. `app/` has the working application, and `kubernetes/` and `terraform/` have minimal scaffolds. Read the scaffolds before you write instructions, then work through the stages in order.
 
 ### Repository instructions for this track
 
@@ -49,18 +42,18 @@ Your `.github/copilot-instructions.md` should cover:
 - Infrastructure as Code tool preferences (Terraform)
 - Naming conventions and tagging standards
 - Security requirements and compliance needs
-- Non-negotiable: no secrets in source control, and least-privilege IAM by default
+- No secrets in source control, and least-privilege IAM by default
 
 ### Suggested custom agents
 
-- Use a Terraform Expert Agent to propose module boundaries, variables, and state choices for Azure resource requirements. Use it for module design rather than one-off `apply` runs.
-- Use a Kubernetes Engineer Agent to recommend resource limits, probes, and replica settings for a workload's manifests or Helm charts.
-- Use a Security Reviewer Agent before merging to check Terraform and Kubernetes files for least-privilege IAM, image pinning, and secret handling.
+- A Terraform Expert Agent that proposes module boundaries, variables, and state choices for Azure resource requirements. Use it for module design, not one-off `apply` runs.
+- A Kubernetes Engineer Agent that recommends resource limits, probes, and replica settings for a workload's manifests or Helm charts.
+- A Security Reviewer Agent that checks Terraform and Kubernetes files for least-privilege IAM, image pinning, and secret handling before you merge.
 
 ### Suggested custom skills
 
-- A Pipeline Stage Scaffolding Skill keeps new CI/CD jobs consistent, including inputs from prior stages and required secrets and permissions.
-- A Drift Detection Skill compares the last applied Terraform state with the current configuration and explains changes. Run it before each apply.
+- A Pipeline Stage Scaffolding Skill that keeps new CI/CD jobs consistent, including inputs from prior stages and required secrets and permissions.
+- A Drift Detection Skill that compares the last applied Terraform state with the current configuration and explains the changes. Run it before each apply.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "terraform review agent", "kubernetes manifest skill", and "azure IaC instructions" before you draft your own.
 
@@ -68,7 +61,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for using Copilot on this track
 
-- Describe your infrastructure goal as a comment block before generating HCL or YAML. The comment doubles as documentation.
+- Describe your infrastructure goal in a comment block before generating HCL or YAML. It doubles as documentation.
 - Specify resource limits, probe paths, and replica counts before generating Kubernetes manifests.
 - When generating CI/CD pipelines, list the stages in order as comments.
 - Review generated Dockerfiles and Terraform for security defaults (non-root users, least-privilege IAM, image pinning). Copilot may skip hardening.

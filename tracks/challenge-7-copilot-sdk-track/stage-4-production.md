@@ -2,7 +2,7 @@
 
 **Estimated:** 1-2 hours
 
-Test the tools and categorization logic, then package the agent for distribution.
+Test the tools and categorization logic, then package the agent.
 
 ## Tasks
 
@@ -24,7 +24,7 @@ Test the tools and categorization logic, then package the agent for distribution
 
 - `npm test` passes with >70% coverage on tool implementations and categorization logic
 - The application runs successfully in a Codespace and can generate release notes for a real repository
-- Environment variables are configured securely, with no tokens in source code or build artifacts
+- Tokens are passed through environment variables, not stored in source code or build artifacts
 
 ---
 

@@ -2,8 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 90-110 min
 
-Fix the risks that matter to this release. Broad rewrites make review harder, so
-work one proven behavior at a time.
+Fix the risks that matter to this release. Broad rewrites are hard to review,
+so work one proven behavior at a time.
 
 ## Tasks
 

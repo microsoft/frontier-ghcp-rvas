@@ -35,9 +35,9 @@ Keep the decisions small enough to apply and test in this session.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can find inconsistent terms and compare the proposed tree with common
+Copilot finds inconsistent terms and compares the proposed tree with common
 documentation patterns. You decide the audience boundaries, where conceptual
-context belongs, and which distinctions readers actually need.
+context belongs, and which distinctions readers need.
 
 ---
 

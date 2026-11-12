@@ -11,7 +11,7 @@
 | 5 | [Module and CI Pipeline](stage-5-module-and-ci.md) | ⭐⭐⭐ | 45-60 min | PowerShell module with manifest and GitHub Actions CI |
 
 Check generated PowerShell and Pester tests against your AD schema and Azure
-naming rules. In Stage 3, you decide which tag differences require a change and
+naming rules. In Stage 3, decide which tag differences require a change and
 test that repeated runs make no unnecessary updates.
 
 > **Short on time?** Complete Stages 1 and 2 for a solid introduction, then pick either Stage 4 (testing) or Stage 5 (CI) based on what matters more to your team.

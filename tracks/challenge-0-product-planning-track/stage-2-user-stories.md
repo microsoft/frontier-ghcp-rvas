@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
-Review flawed user stories, then write stories with testable acceptance criteria.
+Fix flawed user stories, then write your own with testable acceptance criteria.
 
 ## Tasks
 
@@ -31,7 +31,7 @@ Review flawed user stories, then write stories with testable acceptance criteria
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can draft stories and acceptance criteria and check them against INVEST. You must review the flaws in each story and justify its priority.
+Copilot can draft stories and acceptance criteria and check them against INVEST. You decide whether each story is sound and justify its priority.
 
 ---
 

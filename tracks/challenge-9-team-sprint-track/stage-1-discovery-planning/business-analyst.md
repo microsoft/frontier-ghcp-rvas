@@ -6,15 +6,15 @@
 
 ## Tasks
 
-Use your Product and Analysis Agent to review acceptance criteria and metrics before adding them to the backlog.
+Before adding acceptance criteria and metrics to the backlog, review them with your Product and Analysis Agent.
 
-1. **Help the PO refine acceptance criteria** -- Review each user story and tighten the criteria. Confirm that they are testable and specific enough for QA to write tests against them.
+1. **Help the PO refine acceptance criteria** -- Review each user story and tighten the criteria until QA can write tests against them.
 
-2. **Create the data model document** -- Create `docs/data-model.md`. Define the entities (Report, Event, User), their fields, and relationships. Share with backend and frontend developers.
+2. **Create the data model document** -- Create `docs/data-model.md`. Define the entities (Report, Event, User), their fields, and relationships. Share it with the backend and frontend developers.
 
 3. **Define dashboard metrics** -- Create `docs/dashboard-metrics.md`. List the KPIs: total open reports, reports by category, reports by status, upcoming event count. Define how each metric is calculated.
 
-4. **Sprint planning** -- Join the PO's planning session. Help prioritize and clarify scope.
+4. **Sprint planning** -- Join the PO's planning session and help prioritize and clarify scope.
 
 ## Verification
 

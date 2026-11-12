@@ -6,13 +6,7 @@
 
 **Focus:** Develop a product from ideation to production deployment with a cross-functional team using GitHub Copilot
 
-> This track requires a team. It is not designed for solo participants. Gather 4-6 people from different disciplines and run through it together.
-
-## Who is this for
-
-- Teams of 4-6 people from different disciplines who want to build a complete application together
-- Organizations that want to simulate an agile sprint using GitHub Copilot
-- Groups with mixed experience across product, development, QA, and operations
+> This track needs a team of 4-6 people from different disciplines. It does not work solo.
 
 ## Team composition
 
@@ -27,11 +21,11 @@ Each person takes exactly one role. The minimum viable team is 4 people.
 | DevOps Engineer | Yes | Devcontainer config, CI/CD, environment setup |
 | Business Analyst | Optional | Acceptance criteria, analytics requirements, data modeling |
 
-If a participant has skills across multiple disciplines, they can take on more than one role. For example, a full-stack developer could cover both backend and frontend (simplify the UI scope accordingly), or the PO could absorb the BA role.
+One person can take more than one role. A full-stack developer could cover backend and frontend (simplify the UI scope to match), or the PO could absorb the BA role.
 
 ## Prerequisites
 
-Each team member needs skills matching their assigned role:
+Each team member needs the skills for their role:
 
 - **PO / BA:** Familiarity with GitHub (Issues, Projects, Pull Requests). No code required.
 - **Backend Dev:** Experience with Node.js/Express or Python/FastAPI
@@ -55,14 +49,12 @@ The team chooses their stack together. Recommended options:
 
 ## How this track works
 
-The team works in parallel within each stage.
-
 1. The PO prototypes an idea with GitHub Spark, exports it to a GitHub repository, and creates stories and a backlog in GitHub Issues. The export becomes the development contract. Do not return to Spark after handover. Other roles set up tooling and project scaffolding.
 2. **Sprint 1** -- All roles work in parallel on their piece. Developers build core features (using the Spark handover repo as reference), QA writes tests, DevOps sets up infrastructure, the PO manages the board and reviews PRs.
 3. **Sprint 2** -- The team integrates, adds advanced features, fixes bugs, and starts deploying.
 4. **Ship and Demo** -- Production deployment, final testing, demo, retrospective.
 
-The PO and BA manage the backlog throughout the sprint. They triage bugs, review acceptance criteria, and prepare the demo. Use GitHub Issues to communicate between roles.
+The PO and BA own the backlog throughout: they triage bugs, review acceptance criteria, and prepare the demo. Roles communicate through GitHub Issues.
 
 ## The Challenge: CityPulse
 
@@ -76,9 +68,9 @@ Build CityPulse, a civic engagement platform for a fictional city government. Re
 The stakeholder brief is in [challenges/challenge-9-team-sprint/docs/stakeholder-brief.md](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md). Read it as a team before sprint planning.
 
 **Core scope:** report submission, readable report status, and upcoming events,
-with API integration and a tested demo. Work in parallel. Keep the dashboard,
-authentication, and agentic workflows outside the core. Azure deployment is a
-stretch task if the team has not prepared an environment before the session.
+with API integration and a tested demo. The dashboard, authentication, and
+agentic workflows are outside the core. Azure deployment is a stretch task
+unless the team prepared an environment before the session.
 
 ## Getting started
 
@@ -86,9 +78,9 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-9-team-sprint/`. Read the [stakeholder brief](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) as a team before starting Stage 1. Everyone should skim the starter scaffolding for their own role before the team commits to any instructions or agents.
+Go to `challenges/challenge-9-team-sprint/`. Read the [stakeholder brief](../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) as a team before Stage 1, and skim the starter scaffolding for your role before the team commits to instructions or agents.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-9-team-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
+The devcontainer is at `.devcontainer/challenge-9-team-sprint/` with Node.js LTS, Python 3.11, GitHub CLI, and Playwright.
 
 ### Install and use Impeccable
 
@@ -101,28 +93,28 @@ stays optional.
 
 ### Repository instructions for this track
 
-Repository instructions are shared, not role-specific. Each team member should contribute to one `.github/copilot-instructions.md`. At minimum include:
+The team shares one `.github/copilot-instructions.md`, and everyone contributes to it. At minimum include:
 
 - The project name (CityPulse) and what it does
 - The team's chosen tech stack (backend framework, frontend framework, database)
 - Code conventions the team agreed on (naming, file structure, API patterns)
 - Non-negotiable: work from the exported Spark handover repo and do not return to Spark once development starts
 
-Individual team members can also maintain role-specific context in their agent definitions.
+Keep role-specific context in each person's agent definition.
 
 ### Suggested custom agents
 
-Each person builds an agent for their role using the shared repository instructions:
+Each person builds an agent for their role on top of the shared repository instructions:
 
 - The PO and BA use a Product and Analysis Agent to draft stories, acceptance criteria, data definitions, dashboard metrics, and release notes from stakeholder input. It should follow the team's format and flag ambiguity.
 - Backend and frontend developers each create an Engineering Conventions Agent for their layer. It should propose endpoints or components that follow CityPulse's API, data model, component, and styling conventions.
 - QA and DevOps each create a Quality and Infrastructure Agent for their responsibility. QA uses it to review Playwright E2E coverage and page objects for working features. DevOps uses it to review devcontainers, GitHub Actions, and environment changes.
 
-Agree on the roster during sprint planning so everyone builds against the same project context.
+Agree on the roster during sprint planning.
 
 ### Suggested custom skills
 
-Agree on shared workflow skills to keep board updates and handoffs consistent:
+Agree on shared workflow skills for board updates and handoffs:
 
 - A Sprint Board Sync Skill updates issue status, links the PR, and records scope changes after each merge.
 - A Discovery Handoff Skill checks the Spark export against the development team's needs and records what is out of scope before Sprint 1.

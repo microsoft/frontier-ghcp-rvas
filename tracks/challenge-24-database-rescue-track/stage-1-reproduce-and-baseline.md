@@ -3,7 +3,7 @@
 **Difficulty:** ⭐⭐⭐ | **Time:** 55-70 min
 
 The peak-load report says the database is slow, blocked, and heavy on I/O.
-Those are observations, not a diagnosis. Build a repeatable baseline before
+Those are symptoms, not a diagnosis. Build a repeatable baseline before
 changing any SQL.
 
 ## Tasks
@@ -48,10 +48,10 @@ If you use an isolated local container and reset state, record that action.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can explain plan operators and organize measurements. It cannot tell
-whether two runs were comparable unless you provide the conditions. You own
-the distinction between correlation and cause, especially when scan pressure,
-parallelism, and blocking appear in the same five-minute window.
+Copilot can explain plan operators and organize measurements. It can't tell
+whether two runs were comparable unless you give it the conditions. You separate
+correlation from cause, especially when scan pressure, parallelism, and
+blocking show up in the same five-minute window.
 
 ---
 

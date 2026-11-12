@@ -10,11 +10,11 @@
 | 4 | [Package the Paved Road](stage-4-package-paved-road.md) | ⭐⭐⭐ | 60-75 min | Observability requirements and developer onboarding package |
 
 Use the evidence to define policy, then enforce it. The last stage makes the
-controls usable by service teams that were not part of the design discussion.
+controls usable by service teams that weren't part of the design.
 
 > **Short on time?** Complete Stages 1 and 2, then implement one APIM policy and
-> the matching automated rule from Stage 3. Do not skip the consumer-risk
-> inventory. It is what keeps the standards tied to actual integration costs.
+> the matching automated rule from Stage 3. Don't skip the consumer-risk
+> inventory. It ties the standards to real integration costs.
 
 ---
 

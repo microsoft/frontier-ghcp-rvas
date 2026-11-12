@@ -4,11 +4,11 @@
 
 ## Tasks
 
-1. **Fix critical bugs** -- If QA found any showstoppers during final testing, fix them now. Non-critical bugs go to the known issues list.
+1. **Fix critical bugs** -- Fix any showstoppers QA found in final testing. Non-critical bugs go to the known issues list.
 
 2. **Performance check** -- Run a quick manual test or review response times for the main endpoints. Optimize anything noticeably slow.
 
-3. **Help with deployment** -- If the DevOps engineer hit any deployment issues, pair on resolving them.
+3. **Help with deployment** -- If the DevOps engineer hit deployment issues, pair on them.
 
 4. **Demo contribution** -- Show the API layer: endpoint design, test results, and specific Copilot prompts that worked well.
 

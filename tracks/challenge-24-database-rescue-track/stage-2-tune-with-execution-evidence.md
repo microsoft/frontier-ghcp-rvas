@@ -2,8 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 70-90 min
 
-Now reduce the measured cost of Q1 through Q4 without changing what callers
-receive. Every retained change needs before/after evidence and an operational
+Reduce the measured cost of Q1 through Q4 without changing what callers
+receive. Keep a change only with before/after evidence and a stated operational
 cost.
 
 ## Tasks
@@ -51,8 +51,8 @@ is to challenge your explanation.
 
 Copilot is good at spotting non-SARGable predicates and drafting candidate
 indexes. It tends to over-index when it sees queries one at a time. You decide
-whether the combined index set is acceptable for a transactional workload and
-whether a faster plan remains stable for the skew in this fixture.
+whether the combined index set suits a transactional workload and whether a
+faster plan stays stable under the skew in this fixture.
 
 ---
 

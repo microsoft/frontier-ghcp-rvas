@@ -5,13 +5,13 @@
 
 ## Objective
 
-Write tests in your target language that capture the banking system's current behavior. Use them in Stage 4 to check the translated business logic.
+Write tests in your target language that capture the banking system's current behavior. In Stage 4 they check the translated business logic.
 
-You are not testing the MUMPS code directly. Instead, you are reimplementing the testable business logic (calculations, validations, data transformations) in your target language and writing tests against those implementations.
+You don't test the MUMPS code directly. Reimplement the testable business logic (calculations, validations, data transformations) in your target language and test that.
 
 ## Tasks
 
-1. Create a target-language project in the challenge folder (e.g., `psl/`, `java/`, `python/`, `typescript/`). Set up a suitable test framework such as JUnit 5, pytest, Jest, or xUnit. Define the structure for the full Stage 4 translation.
+1. Create a target-language project in the challenge folder (e.g., `psl/`, `java/`, `python/`, `typescript/`). Set up a suitable test framework such as JUnit 5, pytest, Jest, or xUnit. Lay out the structure for the Stage 4 translation.
 
 2. Start with utility functions in `BNKUTIL.m`, the simplest module. Implement and test:
    - Date formatting (`FMTDT`): YYYYMMDD to MM/DD/YYYY
@@ -53,11 +53,9 @@ You are not testing the MUMPS code directly. Instead, you are reimplementing the
 
 If your Translation agent or business-rule skill misses a MUMPS rounding quirk or the month-end edge case, refine that customization with the specific rule before rerunning it.
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## Copilot and your judgment
 
-Copilot can draft tests and edge case lists, translate formulas, and set up the test project.
-
-You decide whether behaviors such as interest posting at day >= 28 are intentional. Choose the precision for financial tests and how to model MUMPS globals in your target language.
+Copilot can draft tests and edge case lists, translate formulas, and set up the test project. You decide whether behaviors such as interest posting at day >= 28 are intentional, what precision the financial tests use, and how to model MUMPS globals in your target language.
 
 ## Verification
 

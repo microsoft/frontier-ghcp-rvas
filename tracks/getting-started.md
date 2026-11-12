@@ -1,7 +1,7 @@
 # Getting started
 
-Start with a clean workspace, inspect the challenge, and prepare the Copilot
-customizations you will use during the session.
+Set up a clean workspace, read through the challenge, and draft the Copilot
+customizations you will use.
 
 **Challenge 30 exception:** follow its baseline stage for setup and Spec Kit
 initialization. It uses supplied Spec Kit skills; authoring custom agents and
@@ -84,14 +84,14 @@ includes cloud examples, use Azure only.
 
 ## 3. Draft the Customization Trio
 
-Set aside 20-30 minutes to draft three challenge-specific artifacts.
-Keep their roles distinct and avoid repeating content.
+Spend 20-30 minutes drafting three artifacts for your challenge. Give each a
+distinct job and don't repeat content between them.
 
 ### Repository Instructions
 
 Use `.github/copilot-instructions.md` for stable, project-wide context and
-constraints. Capture facts and conventions that should apply throughout the
-challenge rather than task-specific directions.
+constraints: facts and conventions that apply throughout the challenge, not
+instructions for one task.
 
 See GitHub's
 [repository custom instructions documentation](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)
@@ -129,9 +129,8 @@ for current authoring guidance.
 
 Inspect [github/awesome-copilot](https://github.com/github/awesome-copilot)
 and its [Learning Hub](https://awesome-copilot.github.com/) to see how other
-teams structure customizations. Use the examples to understand the available
-patterns, then author artifacts that fit your challenge. Installing a
-community artifact does not complete this exercise.
+teams structure customizations. Use the examples to learn the patterns, then write artifacts that fit your
+challenge. Installing a community artifact doesn't complete this exercise.
 
 ## 5. Install Impeccable when your track uses it
 
@@ -176,7 +175,7 @@ Budget **15-25 minutes within the stage's existing review time** for one
 critique-and-fix cycle. Record the problem and accepted or rejected feedback in
 the existing pull request or acceptance evidence. Compare the same state and
 viewport before and after a visual change. Preserve behavior and rerun affected
-checks. Do not create a separate workshop report or commit runtime caches.
+checks. Don't create a separate report or commit runtime caches.
 
 Impeccable's feedback is advisory. Browser checks and automated tests remain
 required; a design review does not establish accessibility compliance.

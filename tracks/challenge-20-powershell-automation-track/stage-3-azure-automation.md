@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
-The tagging script in `scripts/Set-AzureResourceTags.ps1` runs interactively with `Connect-AzAccount`, overwrites existing tags without checking them, and provides no feedback. Refactor it to run safely as an automated compliance script.
+The tagging script in `scripts/Set-AzureResourceTags.ps1` runs interactively with `Connect-AzAccount`, overwrites existing tags without checking them, and gives no feedback. Refactor it to run safely as an automated compliance script.
 
 ## Tasks
 
@@ -11,7 +11,7 @@ The tagging script in `scripts/Set-AzureResourceTags.ps1` runs interactively wit
 3. Make the script idempotent: only call `Set-AzResource` when the existing tags differ from the target tags. Add a `-WhatIf` switch using `SupportsShouldProcess` so operators can preview changes without applying them.
 4. Read `docs/tagging-policy.md`. Generate a table with each resource, its current tags, and its compliance status. Do not modify resources while creating the report.
 
-If your Azure Automation agent or refactor skill produces a broken `-WhatIf` path or generic validation messages, refine that customization before trusting the compliance report.
+If your Azure Automation agent or refactor skill produces a broken `-WhatIf` path or generic validation messages, refine it before you trust the compliance report.
 
 ## Verification
 
@@ -22,7 +22,7 @@ If your Azure Automation agent or refactor skill produces a broken `-WhatIf` pat
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can draft `SupportsShouldProcess` and `$PSCmdlet.ShouldProcess` calls. Test the dry-run path. Verify the required RBAC role (`Tag Contributor` or `Contributor`) against your organization's least-privilege policy before deploying.
+Copilot can draft `SupportsShouldProcess` and `$PSCmdlet.ShouldProcess` calls. Test the dry-run path. Check the required RBAC role (`Tag Contributor` or `Contributor`) against your organization's least-privilege policy before deploying.
 
 ---
 

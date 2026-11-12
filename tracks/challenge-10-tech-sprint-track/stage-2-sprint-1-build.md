@@ -3,11 +3,11 @@
 **Duration:** 120 minutes for the selected core stories
 **Focus:** Develop the core API, UI, tests, and infrastructure in parallel
 
-Everyone works in parallel on their assigned Sprint 1 stories. Use GitHub Issues for questions and PRs for code review. Without a dedicated PO, the team self-manages: developers review each other's PRs and each person manages their own Issues on the board.
+Work in parallel on your Sprint 1 stories. Use GitHub Issues for questions and PRs for code review. Developers review each other's PRs, and each person manages their own Issues on the board.
 
 ## Jump to Your Role
 
-Find your role and follow the link for your detailed task list:
+Pick your role for the detailed task list:
 
 | Role | What You Build | Key Deliverable |
 |------|---------------|-----------------|
@@ -18,13 +18,13 @@ Find your role and follow the link for your detailed task list:
 
 ## Sync Point: Mid-Sprint Standup (at ~3:00, roughly 1.5 hours into Sprint 1)
 
-Brief 5-minute standup, either in person or asynchronous via a GitHub Issue labeled `standup`. Each person answers:
+A 5-minute standup, in person or async in a GitHub Issue labeled `standup`. Each person answers:
 
 1. What did I finish since the last check-in?
 2. What am I working on now?
 3. Am I blocked on anything?
 
-If anyone is blocked, resolve it immediately. If the frontend developer needs the API spec finalized, that takes priority. If QA needs seed data, the backend developer provides it.
+Unblock anyone who is stuck right away. If the frontend developer needs the API spec finalized, do that first. If QA needs seed data, the backend developer provides it.
 
 ## Verification
 

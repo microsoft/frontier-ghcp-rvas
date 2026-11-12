@@ -7,7 +7,7 @@
 
 1. **Create a code simplifier workflow** -- Write a workflow that runs on a daily or weekly schedule. The agent should analyze recently modified source files, identify opportunities to simplify the code (dead code, excessive nesting, duplicated logic, overly complex functions), and open a pull request with the improvements.
 
-   In your Markdown instructions, be specific about your codebase:
+   Be specific about your codebase in the instructions:
    - Which directories contain the source code (e.g., `src/`, `server/`, `client/`)
    - What language and framework the project uses
    - Any patterns or conventions to preserve (e.g., "keep the Express middleware structure," "don't merge route handlers")
@@ -23,16 +23,16 @@
 
    Reference the [Daily Documentation Updater](https://github.com/githubnext/agentics/blob/main/docs/daily-doc-updater.md).
 
-4. **Review PR quality** -- After triggering each workflow, review the pull requests they produce. For each PR, evaluate:
-   - Does the change actually improve the code/tests/docs?
-   - Is the scope appropriate (not too broad, not trivial)?
-   - Are there any incorrect changes?
+4. **Review PR quality** -- Trigger each workflow and review the pull requests it produces. For each PR, check:
+   - Does the change improve the code, tests, or docs?
+   - Is the scope right, neither too broad nor trivial?
+   - Is anything incorrect?
 
    If a PR is not useful, revise the workflow instructions and re-run.
 
 5. **Compile, commit, and push** -- Run `gh aw compile` after each new or modified workflow.
 
-If the first PR contains vague simplifications, shallow tests, or docs that restate code, revise your repository instructions, local Workflow Author agent, or verification skill. Then rerun the GitHub Actions workflow.
+If the first PR has vague simplifications, shallow tests, or docs that restate the code, revise your repository instructions, Workflow Author agent, or verification skill, then rerun the workflow.
 
 ## Verification
 

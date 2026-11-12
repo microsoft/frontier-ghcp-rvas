@@ -10,7 +10,7 @@
 | 4 | [Advanced API Patterns and Debugging](stage-4-advanced.md) | ⭐⭐⭐ | 60-90 min | Fix 3 bugs in v2 module, WebSocket, audit log, rate limiting |
 | 5 | [Production Readiness](stage-5-production.md) | ⭐⭐⭐ | 60-90 min | OpenAPI spec, caching, load testing, structured logging |
 
-Complete the stages in order. Review generated code and verify the architecture, bug fixes, and performance results.
+Do the stages in order, and check the generated code, bug fixes, and performance results yourself.
 
 > **Short on time?** Stages 4 and 5 list optional tasks you can skip. Focus on the bug hunt in Stage 4 and the OpenAPI spec + tests in Stage 5.
 

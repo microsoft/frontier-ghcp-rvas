@@ -2,8 +2,8 @@
 
 ## Overview
 
-Help teams define what to deliver, use Copilot during the work, and demonstrate
-the result. At the end, ask what changed and which practices they can use again.
+Help teams decide what to deliver, use Copilot while they build it, and show the
+result. At the end, ask what changed and what they would do again.
 
 Participants choose a challenge from the
 [track catalog](./tracks/README.md).
@@ -62,7 +62,7 @@ Allow 30 minutes.
 **Welcome & Introduction (10 min)**
 
 - Introduce GitHub Copilot
-- Ask participants to deliver a result they can demonstrate
+- Ask participants to finish with something they can demo
 - Review schedule
 - Show the [Tracks Overview](./tracks/README.md)
 
@@ -83,9 +83,9 @@ Allow 30 minutes.
 Allow 4-5 hours.
 
 Participants work through their chosen challenge's stages, individually or in
-pairs. Facilitators rotate between teams, ask what they are trying to deliver,
-and help them use Copilot rather than solving the problem for them. Share
-techniques that helped another team complete its work.
+pairs. Facilitators rotate between teams, ask what each is trying to deliver, and
+help them use Copilot instead of solving the problem for them. Pass on
+techniques that worked for other teams.
 
 ### Mid-day check-in
 
@@ -106,7 +106,7 @@ Allow 1-2 hours.
 **Option A: Outcome-Based Demos (recommended)**
 
 - Group participants by the outcome they delivered
-- Each team presents its result and any supported business impact
+- Each team presents its result and any impact it can back up
 - Compare approaches across similar outcomes
 - Share Copilot patterns that helped deliver the result
 
@@ -134,7 +134,7 @@ Allow 1-2 hours.
 **Outcome Review (15 min)**
 
 - What outcomes did teams deliver?
-- What business impact did each produce?
+- What impact did each have?
 - Where did Copilot help or slow the work?
 - Which practices can teams reuse?
 
@@ -142,8 +142,8 @@ Allow 1-2 hours.
 
 **Next Steps (10 min)**
 
-- Apply these patterns to your own projects
-- Track impact over time
+- Use these patterns in your own projects
+- Keep track of the impact
 
 ## Facilitation tips
 
@@ -398,8 +398,8 @@ Allow 1-2 hours.
 Ask participants to note:
 
 - **Outcome delivered** (what they built/shipped/modernized)
-- **Business impact**, with evidence for time saved, risk reduced, quality
-  improved, or toil eliminated
+- **Impact**, with evidence for time saved, risk reduced, quality
+  improved, or toil removed
 - Where Copilot helped or slowed the work
 - Reusable skills and agents, plus any useful chat techniques
 - Time spent
@@ -412,7 +412,7 @@ Ask participants to note:
 **Send to Participants:**
 
 - [ ] Thank you email
-- [ ] Feedback survey (include outcome-driven questions: What did you deliver? What was the business impact?)
+- [ ] Feedback survey (ask what they delivered and what impact it had)
 - [ ] Additional resources
 - [ ] Next steps for continued use
 
@@ -425,7 +425,7 @@ Collect feedback on the overall experience.
 Create a summary:
 
 - Participation stats
-- Reported productivity gains, distinguished from measured results
+- Reported productivity gains, kept separate from measured results
 - Practices teams can reuse
 - Results teams demonstrated
 - Areas for improvement
@@ -482,9 +482,9 @@ Create a summary:
 
 ## Success criteria
 
-Each team demonstrates its result and explains the impact. Participants
-identify where Copilot helped and which practices they will use in daily work.
-Use activity metrics as supporting evidence, not the main measure of success.
+Each team demos its result and explains the impact. Participants say where
+Copilot helped and which practices they will keep using. Activity metrics are
+supporting evidence, not the goal.
 
 ## Questions & support
 

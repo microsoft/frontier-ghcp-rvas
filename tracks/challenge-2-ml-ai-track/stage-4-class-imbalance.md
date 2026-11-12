@@ -20,7 +20,7 @@ Compare ways to handle class imbalance and explain the model's predictions to th
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can generate SMOTE code, SHAP plots, and metric comparison tables. Choose the metric that fits the churn prediction business case. Interpret the plots and write recommendations the product team can act on.
+Copilot can generate SMOTE code, SHAP plots, and metric comparison tables. You choose the metric that fits the churn use case, interpret the plots, and write recommendations the product team can act on.
 
 ---
 

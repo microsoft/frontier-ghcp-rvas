@@ -6,11 +6,11 @@
 
 1. **Final regression run** -- Run the full E2E test suite against the production deployment.
 
-2. **Smoke test on production** -- Manually verify the critical path: submit a report, view the reports list, browse events. Confirm the deployed version works like local.
+2. **Smoke test on production** -- Manually verify the critical path: submit a report, view the reports list, browse events. Confirm the deployed version behaves like local.
 
 3. **Generate the final test report** -- Total tests, pass rate, and a coverage summary. Have this ready for the demo.
 
-4. **Demo contribution** -- Show the test suite, test results, and any interesting bugs you caught during the day.
+4. **Demo contribution** -- Show the test suite, test results, and any interesting bugs you caught.
 
 ## Verification
 

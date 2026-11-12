@@ -8,11 +8,11 @@ Set up the services and CI checks the team needs in GitHub Codespaces.
 
 ### Devcontainer Features
 
-Extend the devcontainer configuration to include database tooling, linting tools, and any CLI utilities the team needs. Use devcontainer features to add PostgreSQL, Redis, or other services as needed.
+Extend the devcontainer with database tooling, linters, and any CLI utilities the team needs. Add PostgreSQL, Redis, or other services as devcontainer features.
 
 ### Start Script for All Services
 
-Create a single command that brings up backend, frontend, and database together inside the Codespace. Use a process manager like `concurrently`, `overmind`, or a simple shell script with background processes. The frontend should proxy API calls to the backend.
+Create a single command that brings up backend, frontend, and database together inside the Codespace. Use a process manager like `concurrently` or `overmind`, or a shell script with background processes. The frontend should proxy API calls to the backend.
 
 ### Expand the CI Pipeline
 
@@ -25,7 +25,7 @@ Update the GitHub Actions workflow:
 
 ### Harden the Dev Environment
 
-Make the running backend and frontend reliable for the whole team:
+Make the backend and frontend reliable for the whole team:
 
 - Add health check scripts that verify each service is up before tests run
 - Configure port forwarding in the devcontainer so teammates can preview the app

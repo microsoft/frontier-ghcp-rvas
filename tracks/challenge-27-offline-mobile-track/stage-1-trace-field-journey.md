@@ -4,9 +4,9 @@
 
 ## Tasks
 
-Use repository instructions while mapping code boundaries. Have the Offline
-Data Reviewer challenge the map, then run the Offline Journey Check against
-the starter before proposing a fix.
+Map the code boundaries with the help of your repository instructions. Have the
+Offline Data Reviewer challenge the map, then run the Offline Journey Check
+against the starter before proposing a fix.
 
 1. Run `npm run validate:fixtures`, `npm run typecheck`, and `npm test` from the
    challenge folder. Start `npm run web` if you want to inspect the UI without
@@ -39,7 +39,7 @@ failure consistently, add the missing fixture step to the skill.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can trace imports and summarize state transitions. You decide which
+Copilot traces imports and summarizes state transitions. You decide which
 copy of data is authoritative, how much stale work is safe to show, and what a
 technician should see when the server disagrees.
 

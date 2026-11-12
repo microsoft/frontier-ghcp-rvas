@@ -6,13 +6,6 @@
 
 **Focus:** Use merger evidence to define system boundaries, integration contracts, Azure architecture decisions, and a transition plan
 
-## Who is this for
-
-- Solution and enterprise architects working across organizational boundaries
-- Senior engineers moving from implementation decisions into architecture ownership
-- Integration, identity, data, and platform leads
-- Technical program leads who need architecture decisions tied to delivery waves
-
 ## Prerequisites
 
 - Comfort reading API or event contracts
@@ -33,7 +26,7 @@ This challenge runs locally and produces architecture artifacts:
 - Azure service choices described in diagrams and decisions
 - Python validation scripts that run without an Azure account
 
-You will not deploy resources or build an integration service. Decide where responsibilities belong, what each system may assume, and how the combined company can transition without a big-bang cutover.
+You won't deploy resources or build an integration service. Decide where responsibilities belong, what each system may assume, and how the combined company can transition without a big-bang cutover.
 
 ## Getting started
 
@@ -50,13 +43,13 @@ cd challenges/challenge-23-merger-architecture
 ./scripts/validate.sh --starter
 ```
 
-The check covers evidence files, CSV columns, contract shape, and Mermaid source. It does not judge the architecture.
+The check covers evidence files, CSV columns, contract shape, and Mermaid source. It doesn't judge the architecture.
 
 ### Repository instructions for this track
 
-Your repository instructions should tell Copilot that this is a merger architecture exercise, not an implementation task. Capture the two organizations, the required deliverables, Azure-only constraint, evidence-first decision rule, diagram and ADR conventions, and the need to preserve identity and data authority boundaries.
+Your repository instructions should tell Copilot this is a merger architecture exercise, not an implementation task. Cover the two organizations, the required deliverables, the Azure-only constraint, evidence before decisions, diagram and ADR conventions, and the need to keep identity and data authority boundaries intact.
 
-Use the instructions from the first evidence pass onward. Refine them after Stage 2 if Copilot collapses unlike capabilities, treats target state as immediate, or recommends services without tying them to an NFR.
+Use them from the first evidence pass. After Stage 2, refine them if Copilot collapses unlike capabilities, treats the target state as immediate, or recommends services without tying them to an NFR.
 
 ### Suggested custom agents
 
@@ -76,7 +69,7 @@ Harbor & Pine Commerce and Northstar Market Network have merged. One is a retail
 
 Both companies have customer, order, identity, refund, and reporting capabilities. Similar names hide different responsibilities.
 
-The board wants one customer experience within nine months and a useful first release in 90 days. Finance needs a reconciled combined close. Security will not accept a merged authorization boundary for retail support and seller administration. Neither organization can stop normal delivery while the architecture is rebuilt.
+The board wants one customer experience within nine months and a useful first release in 90 days. Finance needs a reconciled combined close. Security won't accept a merged authorization boundary for retail support and seller administration. Neither organization can stop normal delivery while the architecture is rebuilt.
 
 ## Evidence pack
 
@@ -92,7 +85,7 @@ Read the evidence in this order:
 8. `evidence/integration-failure-evidence.md`
 9. `evidence/contracts/`
 
-The files intentionally disagree in places. Record those conflicts and the evidence behind your decisions.
+The files disagree in places on purpose. Record those conflicts and the evidence behind your decisions.
 
 ## Required deliverables
 
@@ -111,9 +104,9 @@ deliverables/
     └── ADR-0003-short-title.md
 ```
 
-You may add a fourth ADR. Keep each ADR short enough to review in one sitting. The decisions should cover the architecture's few consequential choices rather than documenting every Azure service.
+You may add a fourth ADR. Keep each ADR short enough to review in one sitting, and cover the few consequential choices rather than every Azure service.
 
-Your diagrams must show the Azure target, retained source systems, identity or trust boundaries, data movement, and operational visibility. They must also show at least one transition state. A clean target-only picture is not enough.
+Your diagrams must show the Azure target, retained source systems, identity or trust boundaries, data movement, and operational visibility, plus at least one transition state. A target-only picture is not enough.
 
 ## Working principles
 
@@ -134,7 +127,7 @@ Run the final checks from the challenge directory:
 ./scripts/validate.sh
 ```
 
-The script checks the expected artifact structure, Mermaid source, ADR count and consistency, required contract fields, roadmap sections, and unresolved placeholders. Passing it means the pack is reviewable. It does not mean the architecture is sound.
+The script checks the expected artifact structure, Mermaid source, ADR count and consistency, required contract fields, roadmap sections, and unresolved placeholders. Passing means the pack is reviewable, not that the architecture is sound.
 
 ## Resources
 

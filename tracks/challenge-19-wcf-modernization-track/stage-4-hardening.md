@@ -6,7 +6,7 @@
 
 ## Objective
 
-Adapt the Stage 2 characterization tests to the REST API. Investigate failures against the original behavior and any intentional changes. Fix migration gaps, complete the API documentation, and write migration notes that consuming teams can use to update their clients.
+Adapt the Stage 2 characterization tests to the REST API and investigate each failure against the original behavior and your intentional changes. Fix migration gaps, finish the API documentation, and write migration notes that consuming teams can use to update their clients.
 
 ## Tasks
 
@@ -27,7 +27,7 @@ Adapt the Stage 2 characterization tests to the REST API. Investigate failures a
    - Make a loan payment, then check the updated outstanding balance
    - Verify that an operation on a frozen account returns the correct status code from both `AccountController` and `TransactionController`
 
-4. **Complete Swagger documentation.** Verify the OpenAPI spec is useful:
+4. **Complete Swagger documentation.** Check the OpenAPI spec:
    - Every endpoint has a summary comment
    - Every response code is documented (200, 400, 404, etc.)
    - Request body schemas are correct

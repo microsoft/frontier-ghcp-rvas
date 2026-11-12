@@ -8,7 +8,7 @@
 
 Use your repository instructions for backlog conventions. Have the Backlog Architect agent structure the first draft. Refine the Spec-to-Backlog Conversion skill from setup as you work through the specs.
 
-1. **Study the source material.** Read `uc-password-reset.md` carefully. Identify the natural groupings (Epic-level themes), the individual capabilities (Story-level), and the implementation details (Task-level).
+1. **Study the source material.** Read `uc-password-reset.md` closely. Identify the Epic-level themes, the Story-level capabilities, and the Task-level implementation details.
 
 2. **Design your output format.** Review the templates in `templates/backlog-item-templates.md`. Decide on your team's conventions:
    - How many Epics per use case? (Group by functional area, by actor, or by system integration?)

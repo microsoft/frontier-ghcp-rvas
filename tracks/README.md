@@ -2,33 +2,30 @@
 
 Pick a track that matches the work you need to deliver.
 
-The **31 challenge tracks** below are grouped by outcome. Each provides a
-worked example you can adapt to your own context.
+The **31 challenge tracks** below are grouped by outcome. Each is a worked
+example you can adapt to your own context.
 
 Coaches can use the site's Challenge Set Builder or Learning Paths pages to
-share a selected set with one URL. The builder selects whole challenges.
-Use the track guides for stages and role-specific work.
+share a set of challenges with one URL. The builder selects whole challenges, so
+use the track guides for stages and role-specific work.
 
 Open a track's overview for prerequisites and setup, then follow its contents
-link for stages and role-specific work. Previous and next links connect the
-stage pages on GitHub.
+link for stages and role-specific work. On GitHub, previous and next links
+connect the stage pages.
 
-Sessions use a customization trio: repository instructions, custom agents, and
-custom skills tailored to each challenge.
-
-Challenge 30 instead adopts Spec Kit's supplied workflow. Custom agent and skill
-authoring is optional for that track.
+Sessions use repository instructions, custom agents, and custom skills tailored
+to each challenge. Challenge 30 adopts Spec Kit's supplied workflow instead, so
+authoring custom agents and skills is optional there.
 
 Challenges 4, 8, 9, 10, 18, 27, 29, and 30 also use a participant-installed
 Impeccable skill for one focused UI review. Follow the
 [shared installation checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
-and the selected track's review scope.
+and the track's review scope.
 
 ## Challenges by role
 
-Role Collections group relevant challenges without implying a required order.
-Some challenges appear in more than one collection because the work crosses
-team boundaries.
+Role Collections group relevant challenges in no required order. Some appear in
+more than one collection because the work crosses team boundaries.
 
 - **Product and Business:** [0](./challenge-0-product-planning-track.md),
   [9](./challenge-9-team-sprint-track.md),
@@ -150,8 +147,6 @@ team boundaries.
   [27](./challenge-27-offline-mobile-track.md)
 
 ## Challenges by outcome
-
-Choose a group based on the result you need.
 
 ### Ship product features faster
 
@@ -671,17 +666,15 @@ Release. Use custom tools, streaming responses, and multi-turn sessions.
 
 ### By role
 
-Use the [role collections](#challenges-by-role) above to find relevant work.
-For team delivery, choose Challenge 9 with product and engineering roles, or
-Challenge 10 for a technical team working from a supplied specification.
+Use the [role collections](#challenges-by-role) above. For a team, pick
+Challenge 9 if it includes product and engineering roles, or Challenge 10 for a
+technical team working from a supplied specification.
 
-Check the selected track's time budget. In a short session, focus on its core
-stages and leave optional tasks for later.
+In a short session, do a track's core stages and leave optional tasks for later.
 
 ### Not sure? start here
 
 Start with Challenge 1 for API development or Challenge 0 for product planning.
-Choose by outcome if you already know what you want to deliver.
 
 ## Track comparison
 
@@ -720,10 +713,10 @@ Choose by outcome if you already know what you want to deliver.
 
 ## What skills you'll build
 
-Practice giving Copilot useful context, reviewing its suggestions, and using
-it for implementation, tests, and documentation. The tracks cover inline
-suggestions, chat commands (`/explain`, `/fix`, `/tests`, `/new`), workspace
-context (`@workspace`), and challenge-specific instructions, agents, and skills.
+You practice giving Copilot context, reviewing its suggestions, and using it for
+implementation, tests, and documentation. The tracks cover inline suggestions,
+chat commands (`/explain`, `/fix`, `/tests`, `/new`), workspace context
+(`@workspace`), and challenge-specific instructions, agents, and skills.
 
 ## Getting started
 
@@ -736,11 +729,11 @@ context (`@workspace`), and challenge-specific instructions, agents, and skills.
 
 ### 1. Choose your track
 
-Choose by role or outcome using the links above.
+Pick by role or outcome using the links above.
 
 ### 2. Review prerequisites
 
-Each track lists required knowledge and tools.
+Each track lists the knowledge and tools it needs.
 
 ### 3. Set up your workspace
 
@@ -748,7 +741,7 @@ Follow the **[Setup Instructions](./getting-started.md)**.
 
 ### 4. Follow the track guide
 
-Use the track's time budget, domain-specific tips, and customization briefs.
+Use the track's time budget, tips, and customization briefs.
 
 ### 5. Start your first challenge
 
@@ -758,48 +751,48 @@ Open the track's contents page and start the first stage.
 
 ### Full day (8 hours)
 
-Complete the chosen track and use remaining time for optional work.
+Complete the track, then use any remaining time for optional work.
 
 ### Half day (4 hours)
 
-Focus on the core required challenge in your chosen track.
+Do the core of your track.
 
 ### Custom
 
-Choose challenges that fit the team's work and available time.
+Pick challenges that fit the team's work and time.
 
 ## Tips for success
 
-Finish the required core before adding optional work or another challenge.
-Share discoveries with others on your track. For full-stack practice, combine
-backend and frontend work after completing the core.
+Finish the core before adding optional work or another challenge. Share
+discoveries with others on your track. For full-stack practice, combine backend
+and frontend work after the core.
 
 ## For teams
 
-Work on one track and present a shared result, or choose separate tracks by
-specialty and compare what you learned. If combining backend and frontend work,
-divide responsibilities and leave time to integrate the API and UI.
+Work on one track and present a shared result, or pick separate tracks by
+specialty and compare what you learned. If you combine backend and frontend
+work, split responsibilities and leave time to integrate the API and UI.
 
 ## Success metrics
 
-A successful track completion means:
+You have finished a track when you can:
 
 - [ ] Demonstrate the result with working code, tests, or documentation
 - [ ] Explain its impact, such as time saved or risk reduced
 - [ ] Explain how Copilot helped and what the team will reuse
 
-Activity metrics (Copilot usage, chat interactions) are supporting evidence, not the goal.
+Usage and chat counts don't measure success.
 
 ## After your track
 
-Apply the useful practices to your own projects and share them with your team.
-Choose another challenge when it addresses work you need to learn or deliver.
+Use the practices that worked in your own projects and share them with your
+team. Take another challenge if it covers work you need to learn or deliver.
 
 ### Cross-track learning
 
-- Backend devs: Try Frontend track to understand full picture
-- Frontend devs: Try Backend to understand APIs better
-- Everyone: Try DevOps to understand deployment
+- Backend devs: try the Frontend track to see the full picture
+- Frontend devs: try Backend to understand APIs
+- Everyone: try DevOps to understand deployment
 
 ## Need help?
 

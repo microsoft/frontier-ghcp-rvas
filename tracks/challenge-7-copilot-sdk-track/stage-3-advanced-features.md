@@ -2,7 +2,7 @@
 
 **Estimated:** 2-3 hours
 
-Add MCP integration so the agent can read repository files. Define a constrained release-manager persona and give it write tools to publish the release.
+Add MCP so the agent can read repository files, define a constrained release-manager persona, and give it write tools to publish the release.
 
 ## Tasks
 
@@ -15,13 +15,13 @@ Add MCP integration so the agent can read repository files. Define a constrained
 2. **Release manager persona**
     - Define a custom agent with a system prompt that constrains behavior: "You are a release manager. Be precise about breaking changes. Flag any PR that lacks a description or linked issue. Format changelogs consistently."
     - Restrict the agent to release-related tools. Exclude general-purpose file system and shell tools.
-    - Experiment with how different model choices affect the quality of categorization and changelog writing
+    - Try different models and compare categorization and changelog quality
 
 3. **Iterative refinement**
-    - Build a conversational editing loop: after generating the changelog, the user can request changes
+    - Build an editing loop: after generating the changelog, the user can request changes
     - Support commands like "Move PR #405 to the highlights section", "Add a migration guide for the auth breaking change", "Make the descriptions shorter", "Group the dependency updates into a single line"
     - The agent should apply these edits to its internal changelog state and present the updated version
-    - Each refinement round should stream the full updated changelog so the user can compare
+    - Each round should stream the full updated changelog
 
 4. **Publishing tools**
     - Create a `create_draft_release` tool that uses Octokit to create a GitHub Release in draft state with the generated notes, attached to the target tag

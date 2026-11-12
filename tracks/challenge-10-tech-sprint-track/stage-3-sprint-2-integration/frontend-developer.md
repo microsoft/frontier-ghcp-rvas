@@ -30,7 +30,7 @@ so a hiker can identify Closed, Caution, or a high-severity warning without colo
 before reaching the condition-report form. Preserve the existing status policy.
 Record before-and-after evidence in the feature PR and rerun the report flow.
 
-If your UI agent produces a generic dashboard, ignores the stats response shape, or conflicts with the established badge styles, refine its guidance before opening the PR.
+If your UI agent produces a generic dashboard, ignores the stats response shape, or conflicts with the badge styles, refine its guidance before opening the PR.
 
 ## Verification
 

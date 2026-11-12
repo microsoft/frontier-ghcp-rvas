@@ -4,7 +4,7 @@
 
 ## Tasks
 
-Use repository instructions as the evidence and style baseline. Have the
+Treat the repository instructions as your evidence and style baseline. Have the
 Onboarding Reader agent review one audience journey, and use the Onboarding
 Test skill to record the same facts for each attempt.
 
@@ -39,8 +39,8 @@ Do not rewrite pages yet. Use the failure map to prioritize repairs.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can compare claims across files and organize repeated findings. You
-decide which reader tasks matter first, how much context a newcomer needs, and
+Copilot compares claims across files and groups repeated findings. You decide
+which reader tasks matter first, how much context a newcomer needs, and
 whether a technically correct page is usable.
 
 ---

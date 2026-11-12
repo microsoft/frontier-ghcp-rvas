@@ -19,7 +19,7 @@
    failure in the middle of a queue.
 
 Run the Offline Journey Check again after the first durable implementation.
-Update it if it only proves that data exists, but not that the latest draft and
+Update it if it only proves that data exists, not that the latest draft and
 queue order are correct.
 
 ## Verification
@@ -33,7 +33,7 @@ queue order are correct.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can implement storage adapters and serialization tests. You must choose
+Copilot writes storage adapters and serialization tests. You choose the
 compaction, ordering, migration, and recovery rules that preserve technician
 work.
 

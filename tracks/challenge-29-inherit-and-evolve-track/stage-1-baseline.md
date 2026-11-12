@@ -2,8 +2,8 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 30 min
 
-Do not change application code in this stage. First learn what the inherited
-version does.
+Don't change application code in this stage. Learn what the inherited version
+does.
 
 ## Tasks
 
@@ -39,9 +39,8 @@ version does.
    Discovery Reviewer agent and regression-test skill described in the
    overview. You will refine both in later stages.
 
-Stop a foreground local run with `Ctrl+C`, then restart it with the same
-command. Keep test data until you have recorded useful observations.
-The local database is
+Stop a foreground run with `Ctrl+C` and restart it with the same command. Keep
+test data until you've recorded your observations. The local database is
 `src/EquipmentBooking.Web/App_Data/equipment-booking.db`, relative to the
 challenge folder. `Booking__DatabasePath` overrides that location; relative
 override paths resolve against the web project's content root.
@@ -54,8 +53,7 @@ level has a cancelled reservation for the same dates. Compare its history with
 the availability shown. The inspection tablet starts available. The moisture
 meter starts under maintenance.
 
-The employee choices are Alex Morgan, Sam Rivera, and Taylor Chen. These are
-synthetic identities, not authenticated users.
+The employees are Alex Morgan, Sam Rivera, and Taylor Chen, all synthetic.
 
 ### Optional Docker run
 
@@ -94,18 +92,18 @@ your development environment.
 - The browser loads the starter and shows its existing booking workflows.
 - `dotnet test EquipmentBooking.sln` and `bash scripts/validate-starter.sh`
   pass against the unchanged starter.
-- The baseline note records unexpected behavior without guessing at a cause.
+- The baseline note records unexpected behavior without guessing at causes.
 - No application changes or waitlist implementation have been made.
 
-**Passing baseline tests are incomplete evidence.** The cancellation defect is
-deliberately present, and the starter checks are not a waitlist acceptance
-suite.
+**Passing baseline tests don't prove the starter is correct.** The cancellation
+defect is deliberately present, and the starter checks are not a waitlist
+acceptance suite.
 
 ## What Copilot helps with vs. what requires your judgment
 
 Copilot can explain launch output and help find entry points. You decide
-whether a failure comes from setup or the application. Keep what you observed
-separate from guesses about why it happened.
+whether a failure comes from setup or the application, and you keep what you
+observed separate from guesses about why.
 
 ---
 

@@ -23,7 +23,7 @@
 
 3. **Test the checklist skill.** Make a code change to the demo app (add a new endpoint or modify an existing one) and use the skill. Verify that each checklist item is relevant to the change, then refine any rules that produced generic advice.
 
-4. **Combine the ops workflows.** Use your Log Triage skill with the Log Analyst agent to analyze deployment logs. Pass the findings to the incident routing skill from Stage 2, then use the runbook skill from Stage 3 for errors that need troubleshooting guidance. Keep evidence and unresolved questions in each handoff. Reuse these skills rather than authoring another orchestration artifact.
+4. **Combine the ops workflows.** Use your Log Triage skill with the Log Analyst agent to analyze deployment logs. Pass the findings to the incident routing skill from Stage 2, then use the runbook skill from Stage 3 for errors that need troubleshooting guidance. Keep evidence and unresolved questions in each handoff. Reuse these skills; don't write another orchestration artifact.
 
 ## Verification
 

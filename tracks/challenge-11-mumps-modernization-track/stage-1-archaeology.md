@@ -5,13 +5,13 @@
 
 ## Objective
 
-Document the MUMPS banking system for a developer who has never seen it. Explain each module, map the data model, and trace key workflows using the brief system context and 12 source files.
+Document the MUMPS banking system for a developer who has never seen it. Using the system context and the 12 source files, explain each module, map the data model, and trace key workflows.
 
 ## Tasks
 
 Open your repository instructions for MUMPS conventions. Use your MUMPS Archaeologist agent to explain unfamiliar code and apply your business rule documentation skill as you trace each workflow.
 
-1. **Learn MUMPS basics.** Before touching the code, spend 15-20 minutes getting oriented. Ask Copilot to explain MUMPS syntax: what `S`, `W`, `I`, `D`, `Q`, `F`, `N`, `K`, `L`, `R` mean, how `^GLOBALS` work as a built-in database, what `$ORDER`, `$PIECE`, `$GET`, `$DATA`, `$HOROLOG` do, and what the `.` indentation means inside `DO` blocks. Create a cheat sheet for yourself in the challenge folder.
+1. **Learn MUMPS basics.** Spend 15-20 minutes getting oriented before touching the code. Ask Copilot to explain MUMPS syntax: what `S`, `W`, `I`, `D`, `Q`, `F`, `N`, `K`, `L`, `R` mean, how `^GLOBALS` work as a built-in database, what `$ORDER`, `$PIECE`, `$GET`, `$DATA`, `$HOROLOG` do, and what the `.` indentation means inside `DO` blocks. Write a cheat sheet in the challenge folder.
 
 2. **Map the module structure.** Read every `.m` file in `routines/` and summarize each in one paragraph. Distinguish user-facing menus from business logic and utilities. Document which routines call which.
 
@@ -26,9 +26,9 @@ Open your repository instructions for MUMPS conventions. Use your MUMPS Archaeol
    - An account-to-account transfer (including the locking strategy)
    - End-of-day batch processing (all the steps BNKBATCH runs)
 
-5. **Identify quirks, risks, and technical debt.** As you read, note anything that looks like a bug, a workaround, dead code, a security concern, or a missing feature. The system context file hints at some of these, but there are more to find.
+5. **Identify quirks, risks, and technical debt.** As you read, note anything that looks like a bug, a workaround, dead code, a security concern, or a missing feature. The system context hints at some; there are more to find.
 
-6. **Produce an architecture document.** Write a single markdown file (`docs/architecture.md` in the challenge folder) that covers:
+6. **Produce an architecture document.** Write `docs/architecture.md` in the challenge folder, covering:
    - System overview and module map
    - Data model with all globals documented
    - Key workflow diagrams in your choice of text, Mermaid, or ASCII

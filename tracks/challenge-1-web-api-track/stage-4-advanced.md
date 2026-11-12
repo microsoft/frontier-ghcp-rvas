@@ -22,7 +22,7 @@ Fix the broken v2 API module and add advanced features.
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can generate WebSocket boilerplate, rate limiting middleware, and audit log schemas. Read the v2 module and verify all 3 bugs yourself. Copilot may miss the security vulnerability or the off-by-one pagination error.
+Copilot can generate WebSocket boilerplate, rate limiting middleware, and audit log schemas. Read the v2 module and find all 3 bugs yourself. Copilot may miss the security vulnerability or the off-by-one pagination error.
 
 ---
 

@@ -21,8 +21,8 @@
 
 2. **Change the living specification first.** Update the existing feature's
    `spec.md`, directly or through `/speckit-clarify`. Add scenarios for
-   below/equal/above the threshold and intermediate approval state. Do not ask
-   Copilot to patch the code while leaving the old rule in the specification.
+   below/equal/above the threshold and intermediate approval state. Don't ask
+   Copilot to patch the code while the old rule stays in the specification.
 
    **Facilitator guide:** ask participants what a requester should see after
    the first high-cost approval. Let them choose the state name and UI wording,
@@ -33,7 +33,7 @@
 3. **Reconcile the existing plan and tasks.** Revise them or rerun the relevant
    Spec Kit skills. Preserve decisions that still matter. Use
    `/speckit-analyze` to find references to the old one-approval rule.
-   Do not create an unrelated feature directory to hide the contradiction.
+   Don't create a new feature directory to hide the contradiction.
 
 4. **Implement the change and extend the tests.** Cover a repeated approver,
    self-approval, and rejection after the first approval. Confirm that a
@@ -42,7 +42,7 @@
 
    The demo restarts with seeded data, so production migration is outside
    scope. Use test fixtures to verify the rule for previously completed and
-   pending requests. Do not claim a restart tested preservation of history.
+   pending requests. A restart doesn't test that history is preserved.
 
 5. **Review the intermediate approval state.** Use 15--25 minutes of this
    stage's existing review time for Impeccable's `critique` on the working
@@ -69,7 +69,7 @@
 - Two different eligible managers are required for a high-cost request.
 - The first approval is visibly pending; repeated or forbidden approvals do
   not advance it.
-- The UI critique decision agrees with the revised specification and browser tests
+- The UI critique decision agrees with the revised specification and browser tests.
 - Completed decisions remain final, with fixture-based regression evidence.
 - The application works through the UI, all tests pass, and no material
   convergence gap remains.

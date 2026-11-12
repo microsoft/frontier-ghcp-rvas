@@ -6,7 +6,7 @@
 
 ## Tasks
 
-1. **Define what the agent should check.** Before building it, list the review criteria:
+1. **Define what the agent should check.** List the review criteria before building it:
    - Every requirement in the spec has at least one Story covering it
    - Every alternative flow has Stories or acceptance criteria covering it
    - Business rules are testable in the acceptance criteria (not vague)
@@ -29,7 +29,7 @@
    - Dual approval for high-value POs
    - Auto-submission of critical items after 48 hours
 
-5. **Iterate on the agent.** Adjust its instructions until it reliably catches real gaps and contradictory criteria without producing excessive false positives. Revise generic or incomplete analyses before trusting the agent on the harder Inventory Reorder spec.
+5. **Iterate on the agent.** Adjust its instructions until it reliably catches real gaps and contradictory criteria without many false positives. Fix generic or incomplete analyses before you trust it on the Inventory Reorder spec.
 
 ## Verification
 

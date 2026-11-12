@@ -4,11 +4,11 @@
 
 ## Tasks
 
-1. **Review and harden all team workflows** -- Review every agentic workflow the team has created. For each one, verify:
+1. **Review and harden all team workflows** -- Review every agentic workflow the team created. For each one, check that:
    - Permissions are minimal (read-only by default, no unnecessary scopes)
-   - Safe outputs are properly scoped (title prefixes, label constraints, max counts)
-   - The Markdown instructions do not leak secrets or include sensitive patterns
-   - Tools are limited to what the workflow actually needs
+   - Safe outputs are scoped (title prefixes, label constraints, max counts)
+   - The Markdown instructions don't leak secrets or include sensitive patterns
+   - Tools are limited to what the workflow needs
 
 2. **Create a PR fix workflow** -- Write a workflow based on [PR Fix](https://github.com/githubnext/agentics/blob/main/docs/pr-fix.md) that triggers when a collaborator comments `/fix` on a pull request. The workflow should analyze failing CI checks on that PR and push a fix commit.
 
@@ -28,7 +28,7 @@
      github:
    ```
 
-3. **Set up workflow monitoring** -- Verify that GitHub Actions logs show the agentic workflow runs clearly. Check that each workflow run is visible in the Actions tab, the runtime is reasonable, and failed runs surface useful error messages.
+3. **Set up workflow monitoring** -- Check that each agentic workflow run is visible in the Actions tab, runs for a reasonable time, and shows useful error messages when it fails.
 
 4. **Document the workflows** -- Add a section to `docs/agentic-workflows.md` listing every agentic workflow the team created, what it does, when it runs, and what outputs it produces.
 

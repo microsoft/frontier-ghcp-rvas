@@ -26,7 +26,7 @@
 
 5. **Replace manual JSON handling.** Remove the `BufferedReader` loops and Gson parsing. Use Spring's built-in `@RequestBody` deserialization with proper DTO classes.
 
-6. **Create a `.github/copilot-instructions.md` knowledge base.** Document the system's business rules, API contracts, and architectural decisions so future developers (and Copilot) have the context that the original team never wrote down.
+6. **Create a `.github/copilot-instructions.md` knowledge base.** Document the business rules, API contracts, and architectural decisions the original team never wrote down, so future developers and Copilot have them.
 
 7. **Run all Stage 3 tests.** After migration, your characterization tests (with updated imports) should still pass. Fix any regressions.
 

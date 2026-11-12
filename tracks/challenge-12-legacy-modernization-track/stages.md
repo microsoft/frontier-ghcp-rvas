@@ -9,7 +9,7 @@
 | 3 | [Test Harness](stage-3-tests.md) | 1.5-2 hours | Write characterization tests that capture current behavior |
 | 4 | [Migration](stage-4-migration.md) | 2-3 hours | Upgrade to Spring Boot 3.x, replace deprecated libraries, fix architecture |
 
-Complete the stages in order. Document the original behavior before migrating it.
+Do the stages in order, and document the original behavior before you migrate it.
 
 > **Short on time?** Complete Stages 1 and 3 to document the code and test its behavior without migrating it.
 

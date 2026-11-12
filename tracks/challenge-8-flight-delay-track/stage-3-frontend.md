@@ -5,14 +5,14 @@
 
 ## Objective
 
-Create a web application where users select a day of the week and a destination airport, then see the predicted probability of their flight being delayed.
+Create a web app where users pick a day of the week and a destination airport and see the predicted probability that their flight is delayed.
 
 ## Requirements
 
 1. **Airport Dropdown** -- Fetch the list of airports from `GET /airports` and display them in a searchable dropdown, sorted alphabetically.
 2. **Day of Week Selector** -- Display the 7 days of the week for selection (e.g., dropdown or button group).
 3. **Predict Button** -- On click, call `GET /predict?day_of_week=X&airport_id=Y` and display the result.
-4. **Result Display** -- Show the estimated probability of a delay over 15 minutes as text. Any progress bar or color indicator supplements that label. Do not present the result as a guaranteed outcome or an unsupported confidence claim.
+4. **Result Display** -- Show the estimated probability of a delay over 15 minutes as text. A progress bar or color indicator may supplement the text. Don't present the result as guaranteed or as a confidence claim you can't support.
 5. **Loading & Error States** -- Show a loading indicator while the API is called. Display meaningful error messages if the API fails.
 6. **Responsive Design** -- The UI should work on both desktop and mobile screens.
 7. **Focused review** -- Use Impeccable's `critique` on airport selection and
@@ -21,7 +21,7 @@ Create a web application where users select a day of the week and a destination 
 8. **Check the states** -- Use `src/review-cases.json` to cover a low and high
    probability, a delayed response, and a failed request. These are UI test
    cases, not model outputs. Exercise keyboard selection and retry behavior.
-   Record the accepted or rejected recommendation in the pull request.
+   Record in the pull request whether you accepted or rejected the recommendation.
 
 ## Getting Started
 

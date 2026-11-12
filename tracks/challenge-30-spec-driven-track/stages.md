@@ -10,9 +10,9 @@
 | 4 | [Implement and Verify](stage-4-implementation.md) | 105 min | Add approvals to the API and UI with regression evidence |
 | 5 | [Change the Rules](stage-5-change.md) | 60 min | Revise the living specification and implement a second approval |
 
-The core totals five hours. Work solo or in pairs. If you need to cut scope,
-skip optional customizations and keep the UI simple. **The requirement change
-is part of completion**, not a stretch goal.
+The core totals five hours. Work solo or in pairs. To cut scope, skip optional
+customizations and keep the UI simple. **The rule change is required**, not a
+stretch goal.
 
 ---
 

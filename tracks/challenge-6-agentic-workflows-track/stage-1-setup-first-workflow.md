@@ -5,9 +5,9 @@
 
 ## Tasks
 
-Open your repository instructions for the target repo's context. Use your local Workflow Author agent to draft the frontmatter and run your compile-and-verify skill after every edit. That agent helps you author files; the Daily Repo Status workflow runs unattended in GitHub Actions after you push it.
+Use your repository instructions for the target repo's context. Have your local Workflow Author agent draft the frontmatter, and run your compile-and-verify skill after every edit. The agent only helps you write files; the Daily Repo Status workflow runs unattended in GitHub Actions once you push it.
 
-1. **Prepare your GitHub repository** -- You need a repository with real code, a CI pipeline, and some open issues to get meaningful results from agentic workflows. If you completed a previous challenge, push that code to a new GitHub repository. Otherwise, fork a repository with active development. Confirm that GitHub Actions is enabled on the repository.
+1. **Prepare your GitHub repository** -- You need a repository with real code, a CI pipeline, and some open issues, or the workflows have little to report. If you completed a previous challenge, push that code to a new GitHub repository. Otherwise, fork a repository with active development. Confirm that GitHub Actions is enabled on the repository.
 
 2. **Install the `gh-aw` CLI extension** -- Run the following in your terminal:
 
@@ -16,9 +16,9 @@ Open your repository instructions for the target repo's context. Use your local 
    gh aw --help
    ```
 
-   Verify the extension is installed and shows available commands.
+   Confirm that the extension lists its commands.
 
-3. **Read the documentation** -- Spend 10 minutes reviewing the [GitHub Agentic Workflows overview](https://github.github.com/gh-aw/) and the [How They Work](https://github.github.com/gh-aw/introduction/how-they-work/) page. Understand the frontmatter schema (triggers, permissions, safe-outputs, tools) and the security model (read-only tokens, sandboxed execution, safe outputs).
+3. **Read the documentation** -- Spend 10 minutes on the [GitHub Agentic Workflows overview](https://github.github.com/gh-aw/) and the [How They Work](https://github.github.com/gh-aw/introduction/how-they-work/) page. Learn the frontmatter schema (triggers, permissions, safe-outputs, tools) and the security model (read-only tokens, sandboxed execution, safe outputs).
 
 4. **Create your first workflow: Daily Repo Status** -- Create `daily-repo-status.md` in `.github/workflows/`:
 
@@ -66,7 +66,7 @@ Open your repository instructions for the target repo's context. Use your local 
 
 6. **Push and trigger** -- Commit both files, push to GitHub. Then trigger the workflow manually from the Actions tab, or wait for the scheduled run. Check the Actions log and verify that a new issue was created with the `[repo status]` prefix.
 
-7. **Review the output** -- Read the generated status report issue. Is it accurate? Does it reference real issues and PRs? If not, refine the Markdown instructions and re-run.
+7. **Review the output** -- Read the generated status report. Check that it is accurate and references real issues and PRs. If not, refine the Markdown instructions and re-run.
 
 ## Verification
 

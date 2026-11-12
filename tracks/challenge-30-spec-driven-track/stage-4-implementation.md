@@ -30,8 +30,8 @@
    ```
 
    Add feature tests to these suites. Preserve baseline tests unless an
-   explicit, reviewed requirement changes their expectation. Do not weaken an
-   assertion merely to make a generated implementation pass.
+   explicit, reviewed requirement changes their expectation. Don't weaken an
+   assertion to make a generated implementation pass.
 
 5. **Use `/speckit-converge`.** Inspect each reported gap. If it adds legitimate
    tasks, implement them and repeat the checks. If a finding reflects a wrong
@@ -40,7 +40,7 @@
 
 6. **Review and commit the first working feature.** Review the specification
    alongside its code and tests. Keep important decisions in the feature
-   artifacts; a separate completion report is not required.
+   artifacts; no separate completion report is needed.
 
 ## Verification
 

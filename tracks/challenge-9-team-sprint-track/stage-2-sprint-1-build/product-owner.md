@@ -6,11 +6,11 @@ Answer developer questions, review PRs, and keep the backlog current during the 
 
 ## Tasks
 
-1. **Monitor GitHub Issues** -- Developers will post questions in Issue comments. Respond within 10 minutes. If a question blocks someone, drop what you are doing and answer it.
+1. **Monitor GitHub Issues** -- Developers post questions in Issue comments. Respond within 10 minutes. If a question blocks someone, answer it first.
 
-2. **Review Pull Requests** -- When developers open PRs, review them against the acceptance criteria in the linked Issue. Approve or request changes. You are the gatekeeper for "does this match what we asked for?"
+2. **Review Pull Requests** -- Review each PR against the acceptance criteria in the linked Issue, then approve or request changes. You decide whether it matches what the team asked for.
 
-3. **Triage incoming bugs** -- QA will file bugs as GitHub Issues. Decide: is it a Sprint 1 blocker that needs fixing now, or can it wait for Sprint 2?
+3. **Triage incoming bugs** -- QA files bugs as GitHub Issues. Decide for each: Sprint 1 blocker to fix now, or wait for Sprint 2?
 
 4. **Write Sprint 2 stories** -- While Sprint 1 runs, create additional Issues for Sprint 2 scope:
    - User authentication (login, register, protected routes)
@@ -18,9 +18,9 @@ Answer developer questions, review PRs, and keep the backlog current during the 
    - Dashboard page with charts and statistics
    - Report status notifications
 
-5. **Update the project board** -- Move Issues through columns as work progresses so the board always shows the current status.
+5. **Update the project board** -- Move Issues through the columns as work progresses so the board shows current status.
 
-6. **Write end-user help content** -- Draft a `docs/user-guide.md` explaining how a resident uses CityPulse. Use the draft to check whether the product makes sense from a user's perspective.
+6. **Write end-user help content** -- Draft a `docs/user-guide.md` explaining how a resident uses CityPulse. Use the draft to check that the product makes sense to a user.
 
 ## Copilot Tip
 

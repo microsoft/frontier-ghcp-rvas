@@ -24,7 +24,7 @@ Prepare the API for production deployment.
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can draft OpenAPI specs, logging middleware, and tests. Verify the load test thresholds and shutdown behavior. Check that the spec describes your API.
+Copilot can draft OpenAPI specs, logging middleware, and tests. You verify the load test thresholds and shutdown behavior, and that the spec matches your API.
 
 ---
 

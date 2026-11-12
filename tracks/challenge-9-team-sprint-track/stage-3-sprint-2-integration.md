@@ -3,11 +3,11 @@
 **Duration:** 90 minutes for core integration and review
 **Focus:** Integration, advanced features, bug fixing, deployment preparation
 
-Connect the frontend to the backend and fix bugs from Sprint 1. Add advanced features only if time allows, then prepare the first deployment.
+Connect the frontend to the backend and fix Sprint 1 bugs. Add advanced features only if time allows, then prepare the first deployment.
 
 ## Sprint 2 Planning (first 10 minutes)
 
-The PO leads the 10-minute planning session.
+The PO leads a 10-minute planning session:
 
 1. **Carry-over** -- Anything unfinished from Sprint 1 gets highest priority.
 2. **Bug fixes** -- QA filed bugs. The PO decides which are Sprint 2 fixes and which are deferred to a known-issues list.
@@ -16,7 +16,7 @@ The PO leads the 10-minute planning session.
 
 ## Jump to Your Role
 
-Find your role and follow the link for your detailed task list:
+Open your role for the detailed task list:
 
 | Role | Focus This Stage | Key Deliverable |
 |------|-----------------|-----------------|
@@ -29,15 +29,15 @@ Find your role and follow the link for your detailed task list:
 
 ## Sync Point: Integration Check (at ~5:30, 1 hour into Sprint 2)
 
-A brief 5-minute check-in:
+A 5-minute check-in:
 
 - Is the frontend connected to the real backend?
 - Are there any deployment blockers?
 - What will be ready for the demo vs. what will not?
 
-This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication. Focus on making report submission work end-to-end in the Codespace.
+This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication and make report submission work end-to-end in the Codespace.
 
-If repository instructions or the sprint board sync skill give roles conflicting guidance, revise them together before the demo. Check that backend and frontend use the same API contract.
+If repository instructions or the sprint board sync skill give roles conflicting guidance, fix them together before the demo. Check that backend and frontend use the same API contract.
 
 ---
 

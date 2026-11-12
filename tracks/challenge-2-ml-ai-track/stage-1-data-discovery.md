@@ -6,10 +6,10 @@ Find all 7+ distinct data quality problems in the dataset.
 
 ## Tasks
 
-Before cleaning, open `.github/copilot-instructions.md` for the churn dataset's context. Use your data scientist agent to review cleaning and feature choices. Run your notebook documentation skill as you work.
+Open `.github/copilot-instructions.md` for the churn dataset's context first. Use your data scientist agent to review cleaning and feature choices, and run your notebook documentation skill as you work.
 
 1. Load the dataset and inspect shape, dtypes, and null counts.
-2. Discover and document every data quality issue. Inspect the data for inconsistent casing, mixed date formats, type mismatches, blank strings vs. NaN, missing values, duplicate rows, and string-typed numeric columns.
+2. Find and document every data quality issue. Look for inconsistent casing, mixed date formats, type mismatches, blank strings vs. NaN, missing values, duplicate rows, and string-typed numeric columns.
 3. Clean each issue and justify your approach (why not a different method?).
 4. Write a **Data Quality Report** markdown cell listing every issue found, its impact on analysis, and the fix applied.
 

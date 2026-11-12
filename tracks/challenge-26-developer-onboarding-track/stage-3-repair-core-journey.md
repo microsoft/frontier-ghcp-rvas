@@ -4,11 +4,11 @@
 
 ## Tasks
 
-At the midpoint, refine your customizations. Update the
-repository instructions with terminology decisions that should persist. Tighten
-the Technical Accuracy Reviewer agent around the discrepancies you missed in
-Stage 1. Extend the Example Verification skill to capture expected output or
-exit status as well as whether a command starts.
+At the midpoint, refine your customizations. Add the terminology decisions to
+the repository instructions. Tighten the Technical Accuracy Reviewer agent
+around the discrepancies you missed in Stage 1. Extend the Example
+Verification skill to capture expected output or exit status, not just whether
+a command starts.
 
 1. Rewrite `docs/getting-started.md` as a tested quickstart for a named
    audience. State prerequisites, use the supported Node.js version, provide
@@ -42,8 +42,8 @@ exit status as well as whether a command starts.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can draft from verified facts and compare examples with source. You
-still decide the teaching sequence, how much output to show, what belongs in a
+Copilot drafts from verified facts and compares examples with source. You
+decide the teaching sequence, how much output to show, what belongs in a
 tutorial instead of reference, and whether a new reader can recover from an
 error.
 

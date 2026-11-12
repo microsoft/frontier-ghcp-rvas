@@ -3,7 +3,7 @@
 **Difficulty:** ⭐⭐ | **Time:** 30 min
 
 Give the next developer enough evidence to review and run your change. Extend
-your existing working note instead of writing a new report.
+your working note; don't write a new report.
 
 ## Tasks
 
@@ -20,8 +20,8 @@ your existing working note instead of writing a new report.
    summary, cancellation regression evidence, and waitlist test references.
    Record known limitations. Do not present unfinished behavior as complete.
 4. Record storage changes and explain how another developer runs your version
-   with an existing lab database. Test those instructions. Do not assume a
-   fresh database is the only case that matters.
+   against an existing lab database. Test those instructions; a fresh database
+   isn't the only case.
 5. Demo the original cancellation scenario. Then join a waitlist and confirm
    an eligible request. Show one refused confirmation and that the request
    remains pending. Restart to show persistence.
@@ -44,8 +44,8 @@ your existing working note instead of writing a new report.
 ## What Copilot helps with vs. what requires your judgment
 
 Copilot can summarize the diff and find missing evidence references. You
-decide whether the result meets the acceptance criteria. Be clear about any
-unfinished work.
+decide whether the result meets the acceptance criteria, and you say what is
+unfinished.
 
 ---
 

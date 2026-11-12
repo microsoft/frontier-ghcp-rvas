@@ -6,7 +6,7 @@
 
 ## Tasks
 
-1. **Identify what varies between projects.** Review the CI and Build workflows from Stage 1. What would change if you applied the same pipeline to a different Node.js project? Typical variables: Node version, test command, build command, artifact paths, code coverage threshold.
+1. **Identify what varies between projects.** Look at the Stage 1 CI and Build workflows. What would change for a different Node.js project? Typical variables: Node version, test command, build command, artifact paths, code coverage threshold.
 
 2. **Create a reusable CI workflow.** Create `.github/workflows/reusable-node-ci.yml` as a [reusable workflow](https://docs.github.com/en/actions/sharing-automations/reusing-workflows) with `workflow_call` trigger. Parameterize:
    - Node.js version (default to LTS)
@@ -23,7 +23,7 @@
 
 4. **Refactor your Stage 1 workflows.** Update `ci.yml` and `build.yml` to call the reusable workflows instead of duplicating steps. Verify they still work the same way.
 
-5. **Document the templates.** Create a brief guide explaining how another team would adopt these reusable workflows in their project. Include an example `caller` workflow.
+5. **Document the templates.** Write a short guide for adopting these workflows in another project, with an example `caller` workflow.
 
 ## Verification
 

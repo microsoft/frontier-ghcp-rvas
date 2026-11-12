@@ -7,7 +7,7 @@
 
 Use the Modernization agent for the target design and the Behavior Parity
 Check skill after each transfer-rule change. Impeccable is already installed
-through the shared setup; do not add the former frontend-design skill.
+through the shared setup.
 
 1. Define a small API contract for account selection and transfer submission.
    Choose local storage and a module structure that fit the target language.
@@ -51,9 +51,9 @@ its tests before changing the original expectation.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can scaffold API and React code. Impeccable can identify confusing
-feedback. You decide whether the result preserves the original behavior and
-whether the evidence justifies a successful-transfer message.
+Copilot can scaffold API and React code. Impeccable can flag confusing
+feedback. You decide whether the result keeps the original behavior and
+whether the evidence justifies a success message.
 
 ---
 

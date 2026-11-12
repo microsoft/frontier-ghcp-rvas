@@ -40,9 +40,9 @@ batch behavior, and authentication. These are outside the transfer-only core.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can draft test tables and scaffolding. You must check that the expected
-result comes from the original program rather than the generated replacement.
-Stage 4 relies on these tests to check that translation preserves behavior.
+Copilot can draft test tables and scaffolding. Check that each expected result
+comes from the original program, not the generated replacement. Stage 4 relies
+on these tests to show the translation keeps the behavior.
 
 ---
 

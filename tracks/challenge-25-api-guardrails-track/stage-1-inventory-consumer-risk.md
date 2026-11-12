@@ -3,15 +3,14 @@
 **Difficulty:** ⭐⭐ | **Time:** 60-75 min
 
 The three services all run, but their contracts disagree in ways that leak
-into client code and operations. Build the evidence before deciding which
+into client code and operations. Gather the evidence before deciding which
 convention wins.
 
 ## Tasks
 
-Keep repository instructions open while you work. Use the Contract Comparison skill for the
-first inventory pass, and give the API Governance Reviewer both the contracts
-and consumer notes. Check its findings against the files instead of accepting
-the report as fact.
+Use the Contract Comparison skill for the first inventory pass, and give the
+API Governance Reviewer both the contracts and the consumer notes. Check its
+findings against the files.
 
 1. Run `npm test` from `challenges/challenge-25-api-guardrails/`. Confirm that
    OpenAPI parsing, APIM XML parsing, and all three mock smoke tests pass.
@@ -41,8 +40,8 @@ the report as fact.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can compare large contracts quickly and organize repeated differences.
-You decide whether a difference is harmful, which consumers pay for it, and
+Copilot compares large contracts quickly and groups repeated differences. You
+decide whether a difference is harmful, which consumers pay for it, and
 whether the platform can govern it without taking ownership from a service
 team.
 

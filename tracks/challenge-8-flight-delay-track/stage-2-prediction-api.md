@@ -5,7 +5,7 @@
 
 ## Objective
 
-Create a REST API that serves the trained model and the list of airports so the frontend can consume them.
+Create a REST API that serves the trained model and the airport list to the frontend.
 
 ## Requirements
 
@@ -19,8 +19,8 @@ Create a REST API that serves the trained model and the list of airports so the 
    ```
 
    `delay_probability` is the estimated probability of a delay over 15 minutes.
-   Define what `confidence` measures if you return it. A probability's complement
-   is not evidence of calibrated model certainty; do not label it that way in
+   If you return `confidence`, define what it measures. The complement of a
+   probability is not calibrated model certainty, so don't label it that way in
    the UI.
 
 2. **`GET /airports`** -- Returns the list of airports from `airports.csv`, sorted alphabetically by name:
@@ -38,7 +38,7 @@ Create a REST API that serves the trained model and the list of airports so the 
 
 5. **Error handling** -- Return meaningful error messages with appropriate HTTP status codes.
 
-If your API agent or wiring skill produces a generic endpoint contract with wrong fields or missing validation, revise that customization before wiring the frontend in Stage 3.
+If your API agent or wiring skill produces a generic contract with wrong fields or missing validation, fix it before you wire the frontend in Stage 3.
 
 ## Getting Started
 

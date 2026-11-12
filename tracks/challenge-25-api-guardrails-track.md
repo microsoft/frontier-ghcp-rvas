@@ -7,23 +7,16 @@
 **Focus:** Govern API contracts across teams with standards, Azure API
 Management policies, automated checks, observability, and onboarding
 
-## Who is this for
-
-- API platform engineers who review contracts from several product teams
-- Platform engineers who operate Azure API Management
-- Technical leads defining API lifecycle and consumer expectations
-- Developer experience engineers defining the publishing process for API teams
-
 ## Prerequisites
 
 - Comfort reading OpenAPI 3 contracts and HTTP API behavior
 - Basic Node.js and command-line experience
 - Familiarity with identity, versioning, and API lifecycle concepts
-- Basic Azure API Management policy knowledge is useful but not required
+- Basic Azure API Management policy knowledge helps but isn't required
 
-An Azure subscription is optional. The required work runs locally. If you have
-an Azure API Management instance, you can test deployment after the local
-artifacts pass.
+An Azure subscription is optional. All required work runs locally. If you have
+an Azure API Management instance, you can test deployment once the local
+checks pass.
 
 ## Technology stack
 
@@ -34,9 +27,9 @@ artifacts pass.
 - **Azure API Management** for the optional deployment path
 - **Azure Monitor and Application Insights** for observability requirements
 
-The product teams keep ownership of their services. Do not rebuild handlers
-or domain logic. You own the standards, review evidence, runtime controls, and
-publishing process for the shared platform.
+Product teams own their services, so don't rebuild handlers or domain logic.
+You own the standards, review evidence, runtime controls, and publishing
+process for the shared platform.
 
 ## Getting started
 
@@ -57,17 +50,16 @@ npm test
 npm run check:contracts:baseline
 ```
 
-The first command installs local parsers. The test command validates OpenAPI
-and XML, then exercises all three mocks. The baseline contract check reports
-known conflicts without failing. Those findings are evidence, not the answer.
+`npm install` installs local parsers. `npm test` validates OpenAPI and XML,
+then exercises all three mocks. The baseline check reports known conflicts
+without failing. Treat those findings as evidence, not as the answer.
 
-Use `.devcontainer/challenge-25-api-guardrails/` if you want the repository to
-install Node.js and the editor extensions for you.
+Use `.devcontainer/challenge-25-api-guardrails/` to get Node.js and the editor
+extensions preinstalled.
 
 ### Repository instructions for this track
 
-Your repository instructions should capture stable facts that apply throughout
-the work:
+Put the stable facts in your repository instructions:
 
 - The platform-team boundary and the rule that service implementation stays
   unchanged
@@ -79,9 +71,8 @@ the work:
   examples
 - How standards, exceptions, and compatibility decisions should be recorded
 
-Do not turn the instructions into the API standards document. They should
-guide the session, while the standards remain a reviewed participant
-deliverable.
+Don't turn the instructions into the API standards document. The standards
+are your deliverable and need their own review.
 
 ### Suggested custom agents
 
@@ -108,21 +99,21 @@ deliverable.
   sections, executes local contract checks, and records the result. Use it
   before each policy review.
 
-These briefs describe purpose and boundaries. Write the actual customization
-artifacts yourself after inspecting the starter.
+These briefs give purpose and boundaries only. Write the actual customization
+files yourself after inspecting the starter.
 
 ## Tips for using Copilot on this track
 
-- Ask for a comparison table before asking for recommendations. Mixing facts
-  and policy too early hides the real conflicts.
-- Give Copilot the consumer notes alongside the contracts. Review naming
-  differences for their effect on clients.
-- Make breaking-change classifications explain which consumer behavior fails.
+- Ask for a comparison table before recommendations. Mixing facts and policy
+  too early hides the real conflicts.
+- Give Copilot the consumer notes along with the contracts, and check how each
+  naming difference affects clients.
+- Make breaking-change classifications say which consumer behavior fails.
 - Ask Copilot to challenge policy ordering and error paths in APIM XML.
-- Keep generated identity examples abstract until your team has approved the
+- Keep generated identity examples abstract until your team approves the
   Microsoft Entra ID audience, scopes, and claims model.
-- A passing parser checks syntax. Review policy intent and contract
-  semantics separately.
+- A passing parser only proves syntax. Review policy intent and contract
+  semantics yourself.
 - Keep exceptions visible.
 
 ## Resources

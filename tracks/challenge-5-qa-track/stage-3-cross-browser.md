@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Login tests are passing. Now expand coverage to the core shopping flow and run tests across browsers.
+Login tests pass. Extend coverage to the core shopping flow and run across browsers.
 
 ## Tasks
 
@@ -12,7 +12,7 @@ Login tests are passing. Now expand coverage to the core shopping flow and run t
 
 2. **Build a shopping flow test**: Describe the full user journey to Copilot and ask it to generate a test:
    - "Write a Playwright test that logs in, browses the catalog, adds a product to the basket, then verifies the basket shows the correct item and quantity."
-   Review the generated test. Does it follow a realistic user flow? Adjust prompts and regenerate if needed.
+   Check that the test follows a realistic user flow. Adjust the prompt and regenerate if it doesn't.
 
 3. Run `npx playwright test` on Chromium, Firefox, and WebKit, which are already configured in `playwright.config.ts`. Give Copilot any browser-specific errors and ask it to help diagnose them.
 
@@ -20,7 +20,7 @@ Login tests are passing. Now expand coverage to the core shopping flow and run t
 
 5. Ask Copilot to capture the catalog and basket pages during tests. Save the images to `screenshots/` and compare layouts across browsers.
 
-If your Playwright agent or selector skill produces generic page objects, mismatched selectors, or assertions that miss mobile quirks, revise that customization before the cross-browser run.
+If your Playwright agent or selector skill produces generic page objects, wrong selectors, or assertions that miss mobile quirks, fix it before the cross-browser run.
 
 ## Verification
 
@@ -32,7 +32,7 @@ If your Playwright agent or selector skill produces generic page objects, mismat
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can draft page objects and browser configuration. For browser-specific failures, check timing, rendering, and event handling. Verify that each fix resolves the cause rather than hiding the failure.
+Copilot can draft page objects and browser configuration. For browser-specific failures, check timing, rendering, and event handling, and confirm each fix addresses the cause instead of hiding the failure.
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Provision Azure infrastructure using Terraform. Define variables for configurable values.
+Provision Azure infrastructure with Terraform. Put configurable values in variables.
 
 ## Tasks
 
@@ -11,7 +11,7 @@ Provision Azure infrastructure using Terraform. Define variables for configurabl
 3. Create `terraform/azure/outputs.tf`: output ACR login server, AKS cluster name, kubeconfig command, and resource group name.
 4. Configure a remote state backend using Azure Storage Account.
 
-If your Terraform agent or pipeline skill produces hardcoded inputs or naming that conflicts with the tagging standard, revise that customization before moving to Stage 4.
+If your Terraform agent or pipeline skill hardcodes inputs or uses names that conflict with the tagging standard, fix that customization before Stage 4.
 
 ## Verification
 

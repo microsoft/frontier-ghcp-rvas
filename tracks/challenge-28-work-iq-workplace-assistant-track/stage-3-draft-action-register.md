@@ -9,12 +9,12 @@
    decisions, actions, risks, dependencies, and unresolved items.
 2. Write each item from the evidence map. Keep the original source reference
    instead of replacing evidence with an unverified summary.
-3. Mark inferred statements and unresolved gaps clearly. Do not create an owner
-   or date when the source does not provide one.
+3. Mark inferred statements and unresolved gaps clearly. Don't create an owner
+   or date the source doesn't provide.
 4. Draft a short handoff for the delivery lead. State the current decisions,
    follow-up work, and unresolved issues that need a human decision.
-5. Use the Handoff Editor agent to check that the document remains concise
-   without removing evidence or uncertainty.
+5. Use the Handoff Editor agent to keep the document concise without removing
+   evidence or uncertainty.
 6. Update repository instructions and the Evidence-to-Action Register skill
    with stable rules that were missing from the first draft.
 
@@ -28,7 +28,7 @@
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can make the register readable and find duplicates. You decide what
+Copilot makes the register readable and finds duplicates. You decide what
 counts as a decision, whether evidence supports the claim, and which issues
 need human escalation.
 

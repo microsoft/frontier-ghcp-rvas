@@ -2,14 +2,14 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
-The `scripts/` folder has three PowerShell scripts inherited from a colleague who left the team. Each one has at least one bug and no tests. Before touching them, use Copilot to understand what each script is supposed to do, then find and fix the problems.
+The `scripts/` folder has three PowerShell scripts inherited from a colleague who left the team. Each one has at least one bug and no tests. Use Copilot to work out what each script is supposed to do, then find and fix the problems.
 
 ## Tasks
 
-Use your repository instructions for error-handling and logging conventions. Have the PowerShell Expert agent flag anti-patterns, then run the script refactor skill to check each change.
+Have the PowerShell Expert agent flag anti-patterns, then run the script refactor skill to check each change.
 
 1. Open `scripts/Get-StaleAccounts.ps1`. Use Copilot (`/explain`) to describe what the script does and what each parameter controls. Identify the date calculation bug and fix it.
-2. Open `scripts/Invoke-DiskCleanup.ps1`. Have Copilot identify issues, then check its findings. Make the script syntactically correct and runnable. Record the missing output and error handling for Stage 2.
+2. Open `scripts/Invoke-DiskCleanup.ps1`. Have Copilot identify issues, and check its findings. Make the script syntactically correct and runnable. Record the missing output and error handling for Stage 2.
 3. Open `scripts/Set-AzureResourceTags.ps1`. Ask Copilot to explain the risk of calling `Connect-AzAccount` without a `ServicePrincipal` or managed identity context in an automated script. Note what it says for Stage 3.
 4. Add comment-based help (`<# .SYNOPSIS ... #>`) to `Get-StaleAccounts.ps1` using Copilot. Verify it appears when you run `Get-Help Get-StaleAccounts`.
 

@@ -2,9 +2,9 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 105 min
 
-Employees need a waitlist when equipment is already booked. An administrator
-decides when to confirm an eligible request. Keep the current Razor UI and
-SQLite storage.
+Employees need a waitlist for equipment that is already booked. An
+administrator confirms eligible requests. Keep the current Razor UI and SQLite
+storage.
 
 ## Tasks
 
@@ -77,13 +77,13 @@ booking, real authentication, or a new application architecture.
   restart.
 - Existing browse, reserve, list, and cancel workflows still work.
   `dotnet test EquipmentBooking.sln` passes.
-- The reviewed UI shows pending versus confirmed requests and blocked-confirmation reasons without a redesign
+- The reviewed UI shows pending versus confirmed requests and blocked-confirmation reasons without a redesign.
 
 ## What Copilot helps with vs. what requires your judgment
 
 Copilot can draft persistence changes and suggest edge-case tests. You decide
-what eligibility means and must prove confirmation cannot double-book
-equipment. Check the saved result and the message shown in the UI.
+what eligibility means and prove that confirmation can't double-book
+equipment. Check the saved result and the message in the UI.
 
 ---
 

@@ -8,7 +8,7 @@
 
 Port the Meridian Savings Bank business logic to a REST API using ASP.NET Core Web API (.NET 8). The new API must match the behavior captured in the Stage 2 tests.
 
-Before migrating, decide whether to fix the known bugs (see `docs/system-context.md`) or preserve them to match the characterization tests. Document the choice.
+Before migrating, decide whether to fix the known bugs (see `docs/system-context.md`) or keep them to match the characterization tests. Document the choice.
 
 ## Tasks
 
@@ -75,7 +75,7 @@ Copilot can help with:
 **Requires your judgment:**
 
 - Choosing a REST resource model from the possible mappings of WCF operations
-- Deciding whether to fix bugs during migration or preserve them (and which bugs are bugs vs. undocumented features)
+- Deciding whether to fix bugs during migration or keep them, and which are bugs and which are undocumented features
 - Deciding what "Transfer" means atomically in a REST context
 - Checking Copilot's translation against the documented quirks and characterized behavior
 

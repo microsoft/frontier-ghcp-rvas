@@ -2,7 +2,7 @@
 
 **Estimated:** 3-4 hours
 
-Build tools to fetch PR data from GitHub. Let the user review change categories and generate a changelog through conversation.
+Build tools that fetch PR data from GitHub, then review categories and generate a changelog through conversation.
 
 ## Tasks
 
@@ -16,7 +16,7 @@ Build tools to fetch PR data from GitHub. Let the user review change categories 
 2. **Supporting data tools**
     - Create a `get_linked_issues` tool: given a PR number, fetch the issues referenced in its body or linked via GitHub's timeline API
     - Create a `get_commit_stats` tool: given a PR number, fetch file-change statistics (files changed, insertions, deletions) to help the agent gauge the size and scope of a change
-    - Register both tools alongside `get_merged_prs` so the agent can pull in extra context when it needs to
+    - Register both tools alongside `get_merged_prs` so the agent can pull in extra context
 
 3. **Change categorization**
     - Through conversation with the agent, establish categorization rules: features, bug fixes, breaking changes, dependency updates, internal/chore
@@ -30,14 +30,14 @@ Build tools to fetch PR data from GitHub. Let the user review change categories 
     - Breaking changes should include a migration note (which the agent drafts based on the PR body and diff summary)
     - The format should follow common conventions (similar to Keep a Changelog or GitHub's auto-generated release notes)
 
-If ship-it's categorization is generic or mishandles ambiguous PRs, refine the repository instructions, your participant-side SDK Pairing agent, or the research skill before changing the separate SDK agent you are building.
+If ship-it's categorization is generic or mishandles ambiguous PRs, refine your repository instructions, SDK Pairing agent, or research skill before changing ship-it itself.
 
 ## Verification
 
 - Asking "What changes are in this release?" triggers the `get_merged_prs` tool and returns real data from the target repo
 - The agent categorizes PRs and asks about ambiguous ones before finalizing
 - The generated changelog is well-structured with separate sections for features, fixes, breaking changes, and other categories
-- The agent decides when to call tools from the conversation without requiring explicit commands
+- The agent decides from the conversation when to call tools, without explicit commands
 
 ---
 

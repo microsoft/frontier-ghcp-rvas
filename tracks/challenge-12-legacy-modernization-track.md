@@ -6,13 +6,6 @@
 
 **Focus:** Reverse-engineering undocumented Java code, recovering business logic, migrating to modern frameworks, and capturing knowledge in Copilot-readable formats
 
-## Who is this for
-
-- Developers who inherit and maintain systems they did not build
-- Engineers dealing with outdated Java applications (Spring Boot 1.x, Java 8, deprecated libraries)
-- Teams where the original developer has left and documentation is missing
-- Anyone who wants to practice using Copilot as a knowledge recovery tool
-
 ## Prerequisites
 
 - Solid Java skills (you will read and rewrite real Java code)
@@ -29,9 +22,9 @@
 
 ## What you are working with
 
-Acme Bank Account Manager is a mid-size banking API in production since 2016. The original contractor left in 2018. Three developers have maintained it since without documenting it. The system handles customer management, account operations (checking, savings, fixed deposits), transfers, interest calculation, tier management, and reporting.
+Acme Bank Account Manager is a mid-size banking API, in production since 2016. The original contractor left in 2018, and three developers have maintained it since without documenting it. The system handles customer management, account operations (checking, savings, fixed deposits), transfers, interest calculation, tier management, and reporting.
 
-The code has several intentional problems: SQL injection vulnerabilities, no service layer, deprecated libraries with known security issues, missing input validation, dead code from a cancelled project, business logic buried in controller methods, and zero tests.
+The code has deliberate problems: SQL injection vulnerabilities, no service layer, deprecated libraries with known security issues, missing input validation, dead code from a cancelled project, business logic buried in controller methods, and zero tests.
 
 ## Getting started
 
@@ -39,9 +32,9 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-12-legacy-modernization/`. Read the [system context](../challenges/challenge-12-legacy-modernization/docs/system-context.md) first, then explore the `src/` directory before writing any instructions.
+Open `challenges/challenge-12-legacy-modernization/`. Read the [system context](../challenges/challenge-12-legacy-modernization/docs/system-context.md) first, then explore `src/` before writing any instructions.
 
-A dedicated devcontainer is provided at `.devcontainer/challenge-12-legacy-modernization/` with Java 8 (to compile the legacy code), Maven, and Node.js LTS. During the migration phase, you will update the `pom.xml` to target Java 17+ and install a newer JDK (e.g., `sdk install java 21-tem` via SDKMAN) to compile the migrated code.
+A dedicated devcontainer is provided at `.devcontainer/challenge-12-legacy-modernization/` with Java 8 (to compile the legacy code), Maven, and Node.js LTS. During migration, you update the `pom.xml` to target Java 17+ and install a newer JDK (e.g., `sdk install java 21-tem` via SDKMAN) to compile the migrated code.
 
 ### Repository instructions for this track
 
@@ -56,7 +49,7 @@ Your `.github/copilot-instructions.md` should include:
 ### Suggested custom agents
 
 - Use a Code Archaeologist Agent to explain business logic, design patterns, and data flow in Java controllers and queries before migration.
-- Use a Migration Advisor Agent to propose library replacements and API changes from the current `pom.xml` and target stack. Review the order after documenting existing behavior.
+- Use a Migration Advisor Agent to propose library replacements and API changes from the current `pom.xml` and target stack. Review the order once existing behavior is documented.
 - Use a Security Auditor Agent before and after migration to find SQL injection, insecure dependencies, missing validation, and other OWASP Top 10 issues in controllers or queries.
 
 ### Suggested custom skills
@@ -64,17 +57,17 @@ Your `.github/copilot-instructions.md` should include:
 - A Dependency Upgrade Skill checks `pom.xml` for vulnerable or deprecated libraries and plans javax-to-jakarta and Spring Boot 1.x-to-3.x replacements. It should verify compilation after each upgrade.
 - A Controller-to-Service Extraction Skill moves business logic into services without changing behavior and adds tests for the extracted logic.
 
-Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "legacy code archaeology agent", "dependency migration skill", and "spring boot instructions" before you draft your own.
+Search the [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "legacy code archaeology agent", "dependency migration skill", and "spring boot instructions" before drafting your own.
 
 ---
 
 ## Tips for using Copilot on this track
 
-- Use `/explain` on each controller file. Follow up with targeted questions: "What business rule does the interest calculation implement?" or "What happens when a transfer fails halfway through?"
+- Use `/explain` on each controller file, then follow up with targeted questions: "What business rule does the interest calculation implement?" or "What happens when a transfer fails halfway through?"
 - Ask Copilot to review `pom.xml` for deprecated or vulnerable dependencies, including Log4j 1.x, old HttpClient, and outdated Spring Boot.
-- For migration, work module by module rather than everything at once. Have Copilot generate the updated `pom.xml` first, then tackle each controller.
+- For migration, work module by module. Have Copilot generate the updated `pom.xml` first, then take each controller in turn.
 - Use `@workspace` to help Copilot understand cross-file relationships when business logic spans multiple controllers.
-- Create `.github/copilot-instructions.md` early to record the business rules and target stack.
+- Create `.github/copilot-instructions.md` early and record the business rules and target stack.
 - Describe the test scenario and use Agent mode to build the test class.
 
 ## Resources

@@ -6,7 +6,7 @@
 
 ## Objective
 
-Produce enough architecture detail for security, operations, delivery, and source-system teams to review the same proposal. The diagrams, contract, and ADRs should agree with one another.
+Give security, operations, delivery, and source-system teams one proposal they can all review. The diagrams, contract, and ADRs must agree with one another.
 
 ## Tasks
 

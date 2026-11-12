@@ -6,9 +6,9 @@
 
 ## Tasks
 
-Before opening `AccountController.java`, review your repository instructions for the target stack. Use your Code Archaeologist agent to explain unfamiliar business logic. Apply your documentation skill or review sequence as you read each class.
+Before opening `AccountController.java`, check that your repository instructions name the target stack. Use your Code Archaeologist agent to explain unfamiliar business logic, and apply your documentation skill or review sequence as you read each class.
 
-1. **Read the system context.** Start with `docs/system-context.md` in the challenge folder. It contains the limited information available to a new team member.
+1. **Read the system context.** Start with `docs/system-context.md` in the challenge folder. It holds the little a new team member would be given.
 
 2. **Explore the codebase with Copilot.** Use `/explain` on each Java file. Start with `AccountController.java` (the largest file with the most business logic), then `CustomerController.java`, `ReportController.java`, and `DbHelper.java`. For each file, ask Copilot follow-up questions: "What business rules are embedded in this method?" and "What are the edge cases?"
 

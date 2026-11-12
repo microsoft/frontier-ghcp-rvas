@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 45 min
 
-This stage includes a pre-built component with intentional accessibility violations.
+Audit the app for accessibility problems and fix the intentional violations in a pre-built component.
 
 ## Tasks
 

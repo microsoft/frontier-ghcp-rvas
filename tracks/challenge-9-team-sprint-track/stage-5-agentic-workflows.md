@@ -1,11 +1,11 @@
 # Stage 5: Agentic Workflows
 
 **Duration:** 1.5 hours
-**Focus:** Add GitHub Agentic Workflows to your deployed repository for continuous AI-driven maintenance
+**Focus:** Add GitHub Agentic Workflows to your deployed repository for ongoing maintenance
 
 > Push your code to a GitHub repository with GitHub Actions enabled. Agentic workflows execute in GitHub Actions and cannot run locally.
 
-Add repository maintenance workflows with GitHub Agentic Workflows. Describe each job in Markdown; a coding agent runs it in GitHub Actions with read-only permissions and safe outputs.
+You describe each maintenance job in Markdown, and a coding agent runs it in GitHub Actions with read-only permissions and safe outputs.
 
 Create at least three scheduled or event-triggered workflows for issue triage, CI monitoring, and documentation updates.
 
@@ -28,7 +28,7 @@ Create at least three scheduled or event-triggered workflows for issue triage, C
 
 ## Jump to Your Role
 
-Find your role and follow the link for your detailed task list:
+Open your role for the detailed task list:
 
 | Role | Focus This Stage | Key Deliverable |
 |------|-----------------|-----------------|
@@ -77,7 +77,7 @@ Run `gh aw compile` to generate the lock file, then commit both files.
 
 ## Sync Point: Review All Workflows (at ~1:00)
 
-At the 1-hour mark, the team gathers to review each other's workflows:
+At the 1-hour mark, review each other's workflows:
 
 1. Each person walks through their workflow Markdown (2 min each)
 2. The DevOps engineer reviews permissions and safe-output scoping

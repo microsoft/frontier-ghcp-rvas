@@ -11,7 +11,7 @@ Make the task form's feedback clear and handle an empty task list.
 3. Use Impeccable's `critique` on the task creation flow. Apply a useful recommendation or explain why the current behavior should stay.
 4. Make dialog dismissal work with Escape and return focus to the trigger. Keep the delete undo action keyboard-accessible.
 
-If your UI agent or custom skill produces feedback that conflicts with the Stage 2 state model, refine that customization before another pass.
+If your UI agent or custom skill gives feedback that conflicts with the Stage 2 state model, fix that customization and run it again.
 
 ## Verification
 

@@ -6,19 +6,12 @@
 
 **Focus:** Build operations tools with Copilot for log analysis, incident routing, troubleshooting, and deployment automation
 
-## Who is this for
-
-- Support engineers and L1/L2 ops teams who triage production incidents
-- Operations teams without deep technical knowledge of the applications they support
-- SREs who want to reduce incident response time
-- Teams that currently diagnose issues by manually reading log files
-
 ## Prerequisites
 
-- Basic understanding of application logs (log levels, stack traces, timestamps)
-- Familiarity with incident management concepts (severity, routing, escalation)
-- No deep programming experience required; this track focuses on Copilot skills and agents
-- Some comfort with Node.js helpful but not necessary (for the demo app)
+- Application logs (log levels, stack traces, timestamps)
+- Incident management concepts (severity, routing, escalation)
+- No deep programming experience; the track is about Copilot skills and agents
+- Some Node.js helps for the demo app but isn't required
 
 ## Technology stack
 
@@ -52,13 +45,13 @@ Your `.github/copilot-instructions.md` should include:
 
 - That you are building operations tooling for a production order management system
 - The team structure and routing rules (from the team routing guide)
-- That Copilot should explain errors in plain language suitable for non-technical support staff
-- That diagnosis should reference historical incidents when relevant patterns match
+- That errors are explained in plain language for non-technical support staff
+- That diagnosis cites historical incidents when a pattern matches
 - Non-negotiable: never route an incident without citing the log evidence behind the recommendation
 
 ### Suggested custom agents
 
-- **Log Analyst Agent** -- Groups findings from a log file by error pattern, root cause vs. symptom, severity, and event timeline. It distinguishes one-off errors from recurring ones. Use it as the first pass on any incident.
+- **Log Analyst Agent** -- Groups findings from a log file by error pattern, root cause vs. symptom, severity, and event timeline. It separates one-off errors from recurring ones. Use it as the first pass on any incident.
 - **Incident Router Agent** -- Uses the Log Analyst's error descriptions or log excerpts to recommend an investigating team, priority, and similar historical incidents. Use it once errors are identified, not on raw logs.
 - **Runbook Generator Agent** -- Uses a resolved incident's error pattern to draft a step-by-step troubleshooting guide: what to check, what to run, and when to escalate. Use it after resolution.
 

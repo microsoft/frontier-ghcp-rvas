@@ -2,9 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
-A service team must be able to find the checks, run them locally, and respond
-to failures. Write onboarding instructions that connect the standards to
-those tasks.
+A service team needs to find the checks, run them locally, and fix failures.
+Write onboarding instructions that tie the standards to those tasks.
 
 ## Tasks
 
@@ -42,8 +41,8 @@ those tasks.
 ## What Copilot helps with vs. what requires your judgment
 
 Copilot can test the package for missing links and unclear steps. You decide
-which operational signals matter, who responds, and how much process a service
-team can realistically follow within a delivery cycle.
+which signals matter, who responds, and how much process a service team can
+follow in a delivery cycle.
 
 ---
 

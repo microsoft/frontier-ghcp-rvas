@@ -10,7 +10,7 @@
 | 4 | [Observability and Security Hardening](stage-4-observability.md) | ⭐⭐⭐ | 60-90 min | Fix broken Key Vault module, pod security, metrics endpoint |
 | 5 | [CI/CD Pipeline and Deployment Strategy](stage-5-cicd.md) | ⭐⭐⭐ | 60-90 min | GitHub Actions, blue/green deployment, DR runbook |
 
-The application is complete. Build the infrastructure, verify the generated Dockerfile, YAML, and HCL, and test the Terraform fixes. Choose a deployment strategy that fits the service.
+The application is complete, so the work is infrastructure. Check the generated Dockerfile, YAML, and HCL, and test the Terraform fixes. Pick the deployment strategy that fits the service.
 
 > **Short on time?** Skip NetworkPolicy in Stage 2, skip remote state in Stage 3, do only the Key Vault debug in Stage 4, and focus on the GitHub Actions workflow only in Stage 5.
 

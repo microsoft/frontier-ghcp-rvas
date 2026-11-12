@@ -6,18 +6,11 @@
 
 **Focus:** Use Copilot to build CI/CD pipelines, standardize build and deploy processes, debug deployments, and write incident runbooks
 
-## Who is this for
-
-- DevOps and platform engineers who set up CI/CD for development teams
-- Developers responsible for their own build and deploy processes
-- Teams that currently deploy manually and want to automate
-- Engineers who want to practice using Copilot for infrastructure and pipeline code
-
 ## Prerequisites
 
-- Familiarity with CI/CD concepts (build, test, deploy stages)
-- Basic understanding of GitHub Actions (YAML workflow syntax)
-- Comfort with shell scripting and Node.js (the application uses both)
+- CI/CD concepts (build, test, deploy stages)
+- GitHub Actions YAML syntax
+- Shell scripting and Node.js
 - No Azure account needed; pipelines run in GitHub Actions
 
 ## Technology stack
@@ -34,7 +27,7 @@
 - `api-service/`: A Node.js/Express REST API with an in-memory SQLite database
 - `web-app/`: A static HTML/CSS/JS frontend
 
-The application works but has no CI/CD pipeline, no automated tests, and no standardized deployment process. The only deployment mechanism is a shell script (`scripts/deploy.sh`) with commented-out commands. There is also a `stage-broken/` directory containing a copy of the API with 5 deliberate bugs that simulate configuration drift in a staging environment.
+The application works but has no CI/CD pipeline, no automated tests, and no standard deployment process. The only deployment mechanism is a shell script (`scripts/deploy.sh`) with commented-out commands. There is also a `stage-broken/` directory containing a copy of the API with 5 deliberate bugs that simulate configuration drift in a staging environment.
 
 ## Getting started
 
@@ -52,7 +45,7 @@ Your `.github/copilot-instructions.md` should include:
 
 - That you are building CI/CD pipelines for a Node.js application (API + static frontend)
 - Your deployment conventions (environment naming, secret management, approval gates)
-- That Copilot should generate GitHub Actions workflows following best practices (pinned action versions, minimal permissions, proper secret handling)
+- That workflows pin action versions, use minimal permissions, and handle secrets properly
 - Your preferred testing approach (what level of tests, coverage requirements)
 - Non-negotiable: no workflow gets broader permissions than the job actually requires
 
@@ -78,7 +71,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - For the staging debugging phase, paste the broken `server.js` and the working `server.js` into chat and ask Copilot to diff them and identify issues.
 - When creating reusable workflows, ask Copilot to parameterize things that differ between projects (Node version, test command, deploy target).
 - Try `/fix` on the broken staging code and verify each proposed change.
-- Give the incident runbook skill an error log, then check that its troubleshooting guide is usable by someone with limited technical background.
+- Give the incident runbook skill an error log, then check that someone with limited technical background can use the guide.
 
 ## Resources
 

@@ -6,7 +6,7 @@
 
 ## Tasks
 
-1. **Define documentation completeness criteria.** Before building the agent, decide what "complete documentation" means for your team. At minimum:
+1. **Define documentation completeness criteria.** Decide what "complete documentation" means for your team before building the agent. At minimum:
    - Every public class has a class-level javadoc
    - Every public method has a method-level javadoc with parameter and return descriptions
    - Any new or changed REST endpoint is reflected in the API documentation
@@ -23,7 +23,7 @@
 
 4. **Test the agent on a documentation-complete change.** Make a change where you also update the javadoc, changelog, and any other relevant docs. Run the agent and verify it reports everything as complete.
 
-5. **Refine and iterate.** If the agent produces false positives (flagging things that do not need documentation) or false negatives (missing documentation gaps), adjust the agent's instructions until it is reliable.
+5. **Refine and iterate.** If the agent produces false positives (flagging things that do not need documentation) or false negatives (missing documentation gaps), adjust the agent's instructions until it stops.
 
 ## Verification
 

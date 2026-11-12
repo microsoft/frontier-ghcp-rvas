@@ -6,15 +6,15 @@
 
 ## Tasks
 
-1. **Run acceptance tests on integrated features** -- Walk through each completed story end-to-end and verify it matches the acceptance criteria. Comment on the Issues with results.
+1. **Run acceptance tests on integrated features** -- Walk through each completed story end-to-end against its acceptance criteria. Comment on the Issues with results.
 
 2. **Verify dashboard metrics** -- If the dashboard is built, check that the numbers match the actual data. Flag discrepancies.
 
-3. **Help the PO with release notes** -- Review for accuracy and completeness.
+3. **Help the PO with release notes** -- Check them for accuracy and completeness.
 
-4. **Document known issues** -- Create `docs/known-issues.md` listing bugs that the team will not fix before the demo. Include severity and workarounds.
+4. **Document known issues** -- Create `docs/known-issues.md` listing bugs the team won't fix before the demo. Include severity and workarounds.
 
-If your Product and Analysis Agent produces generic acceptance checks or poorly scoped known-issues notes, refine its guidance before handing the revised results to the PO.
+If your Product and Analysis Agent produces generic acceptance checks or poorly scoped known-issues notes, improve its guidance before handing the revised results to the PO.
 
 ## Verification
 

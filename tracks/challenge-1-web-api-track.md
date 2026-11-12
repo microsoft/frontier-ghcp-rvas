@@ -6,12 +6,6 @@
 
 **Focus:** Building APIs and backend services with GitHub Copilot
 
-## Who is this for
-
-- Backend Engineers and API Developers
-- Web Service Developers
-- Software Engineers focused on server-side development
-
 ## Prerequisites
 
 - Basic knowledge of REST APIs and HTTP methods/status codes
@@ -31,7 +25,7 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-1-web-api/` and choose either `node-express` or `python-fastapi`. Open the starter files (`app.js` or `main.py`, `models/`) to understand the structure and existing conventions before you write any instructions, then work through the stages in order.
+Go to `challenges/challenge-1-web-api/` and pick `node-express` or `python-fastapi`. Read the starter files (`app.js` or `main.py`, `models/`) to learn the structure and conventions before you write instructions, then work through the stages in order.
 
 ### Repository instructions for this track
 
@@ -41,18 +35,18 @@ Your `.github/copilot-instructions.md` should cover:
 - Coding standards and conventions for your team
 - Testing requirements and coverage goals
 - API patterns and authentication approach
-- Non-negotiable: keep the chosen framework and auth approach fixed once Copilot has scaffolded around it
+- Once Copilot has scaffolded around your framework and auth approach, keep both fixed
 
 ### Suggested custom agents
 
-- Use an API Developer Agent to recommend resource shapes, status codes, error handling, and edge cases from an endpoint description.
-- Use a Test Writer Agent to propose and implement tests for a working handler, including failure paths.
-- Use a Code Reviewer Agent before opening a PR to review a file or diff for injection risks, weak validation, and inconsistent error handling. It should return findings rather than rewrite the code.
+- An API Developer Agent that recommends resource shapes, status codes, error handling, and edge cases from an endpoint description.
+- A Test Writer Agent that proposes and implements tests for a working handler, including failure paths.
+- A Code Reviewer Agent that reviews a file or diff before you open a PR for injection risks, weak validation, and inconsistent error handling. It should return findings, not rewrite the code.
 
 ### Suggested custom skills
 
-- An Endpoint Scaffolding Skill adds a route file, handler, input validation, and test stub in a consistent format for each new resource.
-- An API Contract Sync Skill checks routes against the OpenAPI/Swagger spec and updates the spec after route changes.
+- An Endpoint Scaffolding Skill that adds a route file, handler, input validation, and test stub in a consistent format for each new resource.
+- An API Contract Sync Skill that checks routes against the OpenAPI/Swagger spec and updates the spec after route changes.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "REST API agent", "test generation skill", and "OpenAPI instructions" before you draft your own.
 
@@ -63,7 +57,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - Write a short comment above each function describing the endpoint, expected inputs, and error cases.
 - Reference existing files in your prompts ("follow the pattern in routes/auth.js") to give Copilot a concrete example.
 - Highlight a working route and ask for tests so Copilot can follow its patterns.
-- When you hit an unfamiliar library or auth flow, use `/explain` on the relevant code to get a quick breakdown.
+- When you hit an unfamiliar library or auth flow, run `/explain` on the code.
 
 ## Resources
 

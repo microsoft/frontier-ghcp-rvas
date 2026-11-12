@@ -3,11 +3,11 @@
 **Duration:** 120 minutes for the selected core stories
 **Focus:** Develop the core API, UI, tests, and infrastructure in parallel
 
-Everyone works in parallel on their assigned Sprint 1 stories. Use GitHub Issues for questions and PRs for code review. The PO stays active on the board, triaging and reviewing throughout.
+Everyone works on their Sprint 1 stories in parallel. Use GitHub Issues for questions and PRs for code review. The PO triages and reviews on the board throughout.
 
 ## Jump to Your Role
 
-Find your role and follow the link for your detailed task list:
+Open your role for the detailed task list:
 
 | Role | What You Build | Key Deliverable |
 |------|---------------|-----------------|
@@ -20,17 +20,17 @@ Find your role and follow the link for your detailed task list:
 
 ## Sync Point: Mid-Sprint Standup (at ~3:00, roughly 1.5 hours into Sprint 1)
 
-Brief 5-minute standup, either in person or asynchronous via a GitHub Issue labeled `standup`. Each person answers:
+A 5-minute standup, in person or asynchronous in a GitHub Issue labeled `standup`. Each person answers:
 
 1. What did I finish since the last check-in?
 2. What am I working on now?
 3. Am I blocked on anything?
 
-If anyone is blocked, resolve it immediately. If the frontend developer needs the API spec finalized, that takes priority. If QA needs seed data, the backend developer provides it.
+Resolve blockers immediately. If the frontend developer needs the API spec finalized, that comes first. If QA needs seed data, the backend developer provides it.
 
 ## Copilot Tips for This Stage
 
-Backend developers can ask Copilot to scaffold an entire router from the API spec. Reference the spec file in your prompt for context:
+Backend developers can ask Copilot to scaffold a whole router from the API spec. Reference the spec file in the prompt:
 
 ```text
 "Read docs/api-spec.md and generate an Express.js router for the Reports endpoints with input validation."

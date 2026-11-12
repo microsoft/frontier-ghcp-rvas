@@ -35,8 +35,8 @@
     const intro = document.getElementById('setIntro');
     if (intro) {
       intro.textContent =
-        `Your coach chose ${n} challenge${n === 1 ? '' : 's'} for this set. ` +
-        'Work through them in the order that makes sense for your team.';
+        `Your coach picked ${n} challenge${n === 1 ? '' : 's'}. ` +
+        'Work through them in whatever order suits your team.';
     }
   }
 

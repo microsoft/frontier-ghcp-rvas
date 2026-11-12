@@ -11,12 +11,12 @@
 | 5 | [Hand Over the Change](stage-5-handover.md) | ⭐⭐ | 30 min | Brief change summary and working demo |
 
 This track takes **300 minutes**. Run the inherited application before you
-change it. Check what the source actually does, fix the support ticket, then
+change it, check what the source actually does, fix the support ticket, then
 add the waitlist without breaking existing bookings.
 
-> **Short on time?** Keep the UI plain and the working note brief. Do not skip
-> the discovery checkpoint or regression proof. If the waitlist is incomplete,
-> say so.
+> **Short on time?** Keep the UI plain and the working note brief. Don't skip
+> the discovery checkpoint or the regression proof. If the waitlist is
+> incomplete, say so.
 
 ---
 

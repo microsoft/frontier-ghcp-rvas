@@ -4,7 +4,7 @@
 
 ## Tasks
 
-1. **Create an issue triage workflow** -- Since there is no Product Owner on this track, the DevOps engineer owns the triage workflow. Write a workflow that triggers on new issues, assigns labels (bug, feature, question), sets priority (P0-P3), and posts a summary comment. Reference the [Issue Triage](https://github.com/githubnext/agentics/blob/main/docs/issue-triage.md) workflow from the Agentics gallery.
+1. **Create an issue triage workflow** -- With no Product Owner on this track, the DevOps engineer owns triage. Write a workflow that triggers on new issues, assigns labels (bug, feature, question), sets priority (P0-P3), and posts a summary comment. Reference the [Issue Triage](https://github.com/githubnext/agentics/blob/main/docs/issue-triage.md) workflow from the Agentics gallery.
 
    ```yaml
    on:
@@ -27,7 +27,7 @@
    - The Markdown instructions do not leak secrets or include sensitive patterns
    - Tools are limited to what the workflow actually needs
 
-3. **Set up workflow monitoring** -- Verify that GitHub Actions logs show the agentic workflow runs clearly. Check that each workflow run is visible in the Actions tab, the runtime is reasonable, and failed runs surface useful error messages.
+3. **Set up workflow monitoring** -- Check that each workflow run is visible in the Actions tab, the runtime is reasonable, and failed runs show useful error messages.
 
 4. **Document the workflows** -- Add a section to `docs/agentic-workflows.md` listing every agentic workflow the team created, what it does, when it runs, and what outputs it produces.
 

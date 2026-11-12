@@ -2,13 +2,13 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 45-60 min
 
-Add managed identity and secret access before handing the platform to the application team.
+Add managed identity and secret access before you hand the platform to the application team.
 
 ## Scenario notes
 
 The app team wants one identity it can reuse across environments. Security prefers a narrower identity per environment. Operations wants secret rotation to avoid code changes. Nobody has written down which secret values the app actually needs.
 
-Before writing more HCL, decide what the app should be allowed to read and how that decision changes between dev and prod.
+Before writing more HCL, decide what the app may read and how that changes between dev and prod.
 
 ## Tasks
 
@@ -30,7 +30,7 @@ Ask Copilot to review the identity and Key Vault plan for least privilege. Make 
 - The managed identity and Key Vault permissions are narrow enough to explain clearly
 - `terraform validate` still passes after the identity and secret changes
 - Outputs expose references that are safe to share, not sensitive values
-- `docs/identity-review.md` explains the selected identity model and the permissions you avoided
+- `docs/identity-review.md` explains the identity model and the permissions you left out
 
 ## What Copilot helps with vs. what requires your judgment
 

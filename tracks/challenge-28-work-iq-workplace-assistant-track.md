@@ -7,17 +7,10 @@
 **Focus:** Turn approved Microsoft 365 project context into a reviewed
 handoff with Microsoft Work IQ and GitHub Copilot CLI
 
-## Who is this for
-
-- Delivery leads trying to get a straight answer on decisions and follow-up work
-- Technical leads who piece together meetings, messages, and documents
-- Developers building workplace-aware workflows with GitHub Copilot
-- Information governance partners reviewing how workplace data is handled
-
 ## Prerequisites
 
-This is a live Microsoft 365 data challenge. A local devcontainer gets the
-tools ready, but it cannot provide the tenant access needed to finish it.
+This is a live Microsoft 365 data challenge. The devcontainer sets up the
+tools but can't provide the tenant access you need to finish.
 
 - GitHub Copilot CLI access
 - Node.js on a supported Windows, Linux, macOS, or WSL environment
@@ -34,8 +27,8 @@ tools ready, but it cannot provide the tenant access needed to finish it.
 
 Complete the
 [preflight checklist](../challenges/challenge-28-work-iq-workplace-assistant/docs/preflight-checklist.md)
-before the session. Missing tenant enablement, billing, or consent means the
-session should wait for the tenant administrator.
+before the session. If tenant enablement, billing, or consent is missing, wait
+for the tenant administrator before starting.
 
 ## Technology stack
 
@@ -51,12 +44,12 @@ session should wait for the tenant administrator.
 
 Pick one project and one recent time range. Retrieve the context that answers a
 real delivery question, then turn it into an action register backed by sources.
-The handoff captures decisions, follow-up work, risks, dependencies, and what
+The handoff covers decisions, follow-up work, risks, dependencies, and what
 is still unknown.
 
 Keep the workflow read-only until someone has reviewed the result. Sending a
 message, creating a task, changing a document, or updating a calendar comes
-later, if the team decides it is worth doing.
+later, if the team decides it's worth doing.
 
 ## Getting started
 
@@ -67,13 +60,13 @@ instructions, agents, and skills before connecting Work IQ to project data.
 
 Open
 [`challenges/challenge-28-work-iq-workplace-assistant/`](../challenges/challenge-28-work-iq-workplace-assistant/).
-Read `docs/preflight-checklist.md`. Agree the project scope, time range, where
-the output can live, and who reviews it. Then read `docs/workflow-brief.md`
+Read `docs/preflight-checklist.md`. Agree on the project scope, time range,
+where the output can live, and who reviews it. Then read `docs/workflow-brief.md`
 before retrieving data.
 
 A dedicated devcontainer lives at
 `.devcontainer/challenge-28-work-iq-workplace-assistant/`. It includes Node.js
-and GitHub CLI. It does not grant Microsoft 365 access or handle tenant setup.
+and GitHub CLI. It doesn't grant Microsoft 365 access or handle tenant setup.
 
 Install the supported Work IQ plugin for GitHub Copilot CLI, sign in with
 Microsoft Entra ID, and check that the Work IQ MCP server is available before
@@ -90,9 +83,9 @@ Your `.github/copilot-instructions.md` should cover:
 - The rule that retrieval stays within the signed-in user's existing access
 - The rule that every write action needs explicit human approval
 
-The administrator owns tenant-wide policy and access decisions. Keep repository
-instructions to stable workflow boundaries. Do not put credentials or personal
-data there.
+The administrator owns tenant-wide policy and access decisions. Keep the
+repository instructions to stable workflow boundaries, and leave credentials
+and personal data out.
 
 ### Suggested custom agents
 
@@ -118,8 +111,8 @@ data there.
 
 Use the shared
 [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own)
-to study patterns, then write customizations for this challenge. A generic
-workplace prompt or agent is not ready for a production workflow.
+to study patterns, then write your own customizations. A generic workplace
+prompt or agent isn't ready for a production workflow.
 
 ## Required participant artifacts
 
@@ -137,10 +130,10 @@ By the end of the challenge, the repository should contain:
 - Start with one project, a recent time range, and one source. Add another
   source only when you can name the gap it fills.
 - Put source references beside the claim they support.
-- Have Copilot flag unknown owners and dates. Do not turn partial context into
+- Have Copilot flag unknown owners and dates. Don't turn partial context into
   confident-looking assignments.
-- The signed-in user's permissions are a boundary. They are not a reason to
-  search broadly.
+- The signed-in user's permissions are a boundary, not a reason to search
+  broadly.
 - Stop before writing to Microsoft 365. Review the action register with a
   person first.
 

@@ -12,7 +12,7 @@ Replace the in-memory store with a real database and add data relationships.
 4. Add `comments` on tasks (one-to-many). Each comment has a body, author, and timestamp.
 5. Bulk operations: `POST /tasks/bulk/categorize` assigns a category to multiple task IDs in a single transactional request. If any task ID is invalid, the entire operation rolls back.
 
-If your REST agent or scaffolding skill produces generic migration guidance or misses the rollback requirement, revise that customization with the missing constraint before trying again.
+If your REST agent or scaffolding skill gives generic migration guidance or misses the rollback requirement, add the missing constraint to it and try again.
 
 ## Verification
 

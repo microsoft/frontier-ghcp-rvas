@@ -14,7 +14,7 @@ scope, draft the handoff, and get human approval before publishing anything or
 changing Microsoft 365 data.
 
 > **Short on time?** Complete Stages 1 through 3 for one source and a single
-> handoff. Do not skip the approval decision, even if the output stays local.
+> handoff. Don't skip the approval decision, even if the output stays local.
 
 ---
 

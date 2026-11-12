@@ -4,7 +4,7 @@ title: Spec-driven feature delivery with GitHub Spec Kit
 category: workflow-automation
 difficulty: intermediate
 duration_minutes: 300
-description: Use Spec Kit to implement approvals and update the rules. Review the intermediate approval UI with Impeccable and keep the specification and tests aligned.
+description: Use Spec Kit to implement approvals, then change the rules. Review the intermediate approval UI with Impeccable and keep the specification and tests in step.
 focus: Use GitHub Spec Kit with Copilot CLI to implement an approval feature and update its specification when the rules change
 tags:
   - spec-driven

@@ -18,7 +18,7 @@
 
 6. **Produce a technical debt report.** Create `docs/tech-debt-report.md` with all findings, organized by severity (Critical, High, Medium, Low). Each finding should have a description, location, risk, and recommended fix.
 
-If your Security Auditor Agent produces generic findings instead of evidence tied to these queries and controllers, refine its review scope. If the Dependency Upgrade Skill skips a vulnerable or deprecated library, tighten its dependency checks before writing the tech debt report.
+If your Security Auditor Agent gives generic findings instead of evidence tied to these queries and controllers, narrow its review scope. If the Dependency Upgrade Skill skips a vulnerable or deprecated library, tighten its dependency checks before you write the report.
 
 ## Verification
 

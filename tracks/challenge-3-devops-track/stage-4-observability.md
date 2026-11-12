@@ -20,7 +20,7 @@ Debug the broken Terraform module.
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can generate Terraform resources and Kubernetes manifests. Identify the Key Vault module's root cause before accepting a fix. Check the Azure identities and Terraform resource dependencies.
+Copilot can generate Terraform resources and Kubernetes manifests. Find the root cause of each Key Vault bug before accepting a fix, and check the Azure identities and Terraform resource dependencies.
 
 ---
 

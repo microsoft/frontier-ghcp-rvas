@@ -11,7 +11,7 @@
 | 4 | [Accessibility and Performance](stage-4-accessibility.md) | ⭐⭐⭐ | 45 min | Accessibility bug hunt, axe and keyboard checks |
 | 5 | [Integration and Testing](stage-5-integration.md) | ⭐⭐⭐ | 75 min | Mocked API, tested task flow, final polish |
 
-The core takes **five hours including setup**. Allow up to six hours for debugging. Complete the stages in order and use Impeccable at the review points. Participants decide which recommendations to apply and verify that changes preserve the task flow.
+The core takes **five hours including setup**. Allow up to six hours for debugging. Do the stages in order and use Impeccable at the review points. You decide which recommendations to apply and check that each change preserves the task flow.
 
 > **Four-hour session:** Preflight the environment before the clock starts. Use two routes in Stage 1 and limit the final polish to the task form. Keep CRUD, accessibility checks, and the required critique-and-fix evidence.
 

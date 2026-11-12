@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60-90 min
 
-Configure the Kubernetes deployment with resource limits, health probes, and network controls.
+Configure the Kubernetes deployment with resource limits, health probes, and a network policy.
 
 ## Tasks
 

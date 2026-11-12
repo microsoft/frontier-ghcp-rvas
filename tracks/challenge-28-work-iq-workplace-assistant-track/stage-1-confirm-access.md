@@ -4,9 +4,9 @@
 
 ## Tasks
 
-Put stable boundaries in repository instructions. Have the Scope Guardian
-agent review the scope, then run the Scoped Workplace Retrieval skill before
-making a Work IQ request.
+Keep the stable boundaries in your repository instructions. Have the Scope
+Guardian agent review the scope, then run the Scoped Workplace Retrieval skill
+before making a Work IQ request.
 
 1. Complete
    `docs/preflight-checklist.md` with the participant, delivery lead, and
@@ -22,7 +22,7 @@ making a Work IQ request.
    allowed to access. Record whether the result and source references are
    enough for a reviewer to use.
 5. Record access failures, consent prompts, policy blocks, or missing source
-   access as blockers. Do not seek workarounds that bypass Microsoft 365
+   access as blockers. Don't look for workarounds that bypass Microsoft 365
    permissions or tenant policy.
 
 ## Verification
@@ -39,8 +39,9 @@ making a Work IQ request.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can test availability and help organize the boundary. You decide if the
-information belongs in the handoff and if the audience should receive it.
+Copilot can test availability and help organize the boundary. You decide
+whether the information belongs in the handoff and whether the audience should
+receive it.
 
 ---
 

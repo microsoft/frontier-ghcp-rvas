@@ -30,8 +30,8 @@ Permission Degraded-Mode Check before accepting either permission flow.
    conflict policy. Use `inspection-save` and `inspection-notes` test IDs to
    target the same controls in before-and-after evidence.
 
-At the midpoint, refine the two reviewer agents with one miss from the first
-pass. Tighten their checks around the actual failure you found rather than
+At the midpoint, refine the two reviewer agents using one miss from the first
+pass. Tighten their checks around the failure you actually found instead of
 adding broad mobile advice.
 
 ## Verification
@@ -47,8 +47,8 @@ adding broad mobile advice.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can scaffold Expo permission adapters and accessibility properties. It
-cannot decide whether a dispatcher update should beat a technician's offline
+Copilot scaffolds Expo permission adapters and accessibility properties. It
+can't decide whether a dispatcher update should beat a technician's offline
 inspection. Make that policy explicit, then use Copilot to find code paths that
 violate it.
 

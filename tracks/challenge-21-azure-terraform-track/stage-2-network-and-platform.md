@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
-With state and naming settled, build a small Azure platform that the application team can deploy to.
+With state and naming settled, build a small Azure platform the application team can deploy to.
 
 ## Scenario notes
 
@@ -20,7 +20,7 @@ Choose a network shape that fits a small internal app and write down what you ar
 
 ## Review gate
 
-Run a plan before applying. Ask Copilot to review what changes, what could break, what looks overbuilt, and what outputs another team would need. Keep the useful critique in `docs/plan-review.md`.
+Run a plan before applying. Ask Copilot what changes, what could break, what looks overbuilt, and what outputs another team needs. Keep the useful critique in `docs/plan-review.md`.
 
 ## Verification
 

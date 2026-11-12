@@ -4,7 +4,7 @@
 
 ## Tasks
 
-1. **Fix critical UI bugs** -- Address any issues from QA's final pass.
+1. **Fix critical UI bugs** -- Fix issues from QA's final pass.
 
 2. Review spacing, color consistency, loading states, and empty states. Fix remaining UI issues before the demo.
 

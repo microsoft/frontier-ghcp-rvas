@@ -12,7 +12,7 @@
 
 Use Copilot to write test code. Decide what to test, review the assertions, and verify the results.
 
-> **Short on time?** Focus on Stages 1-3. These cover the core Copilot-assisted QA workflow. Stages 4-5 add depth but are not required.
+> **Short on time?** Do Stages 1-3. They cover the core workflow; Stages 4-5 are optional.
 
 ---
 

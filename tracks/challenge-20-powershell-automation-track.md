@@ -6,13 +6,6 @@
 
 **Focus:** Use GitHub Copilot to write, debug, test, document, and automate PowerShell scripts for system administration
 
-## Who is this for
-
-- Sysadmins and IT Pros who write PowerShell as part of their daily work
-- Infrastructure engineers managing Windows environments or hybrid setups
-- Anyone who automates Azure resource management with PowerShell
-- IT Pros curious about what Copilot can do beyond code completion
-
 ## Prerequisites
 
 - PowerShell 7+ installed (or Windows PowerShell 5.1)
@@ -39,7 +32,7 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-20-powershell-automation/`. The `scripts/` folder has three starter scripts with intentional gaps and bugs. The `tests/` folder has Pester scaffolds. Read through both before writing any instructions, then work through the stages in order.
+Navigate to `challenges/challenge-20-powershell-automation/`. The `scripts/` folder has three starter scripts with intentional gaps and bugs. The `tests/` folder has Pester scaffolds. Read both before writing any instructions, then work through the stages in order.
 
 ### Repository instructions for this track
 
@@ -50,7 +43,7 @@ Your `.github/copilot-instructions.md` should cover:
 - Preferred error handling pattern (`try/catch` with `Write-Error` vs `$ErrorActionPreference = 'Stop'`)
 - Logging approach (structured `Write-Verbose`/`Write-Information` vs a custom log function)
 - Whether you want comment-based help generated on every function
-- Require `Write-Verbose` or `Write-Output` instead of `Write-Host` in scripts
+- Using `Write-Verbose` or `Write-Output` instead of `Write-Host` in scripts
 
 ### Suggested custom agents
 
@@ -74,7 +67,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - Describe each Pester scenario in the `Context` string, then check that generated `It` blocks test it.
 - PSScriptAnalyzer is strict about aliases (e.g., `?` instead of `Where-Object`). Ask Copilot to "rewrite this without aliases" after generating a script block.
 - Specify the module version for Azure cmdlets. The Az module and older AzureRM module use different cmdlet names.
-- If Copilot generates a `Write-Host` call, ask it to replace it with `Write-Verbose` or `Write-Output`. Check that the replacement fits the intended output.
+- If Copilot generates a `Write-Host` call, ask it to replace it with `Write-Verbose` or `Write-Output`. Check that the replacement fits the output you want.
 
 ## Resources
 

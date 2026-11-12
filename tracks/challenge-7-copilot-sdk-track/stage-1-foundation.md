@@ -2,18 +2,18 @@
 
 **Estimated:** 2-3 hours
 
-Research the SDK and write an accurate instructions file. Set up a streaming connection, then accept a repository and reference point and confirm the release scope with the user.
+Research the SDK, write an instructions file, set up a streaming connection, then take a repository and reference point and confirm the release scope with the user.
 
 ## Tasks
 
-Use your SDK research skill to gather facts for the repository instructions. Keep those instructions open and use your local SDK Pairing agent to review tool schemas. The pairing agent helps build ship-it; ship-it itself runs through the SDK in your application.
+Use your SDK research skill to gather facts for the repository instructions, and your local SDK Pairing agent to review tool schemas. The pairing agent helps you build ship-it; ship-it itself runs through the SDK.
 
 1. **Research the SDK and build your instructions file**
     - Open Copilot Chat and use the `/research` slash command to pull current documentation, API references, and known issues for `@github/copilot-sdk`
     - Cover at minimum: `CopilotClient` initialization and options, session lifecycle, all streaming event types, custom tool schema format, the JSON-RPC communication model between the SDK and Copilot CLI, and any known caveats or version-specific changes
     - Save the output as a document in the project (e.g., `docs/sdk-research.md`)
-    - Turn that document into a Copilot instructions file (`.github/copilot-instructions.md` or a scoped `.instructions.md`) so every subsequent Copilot interaction has accurate SDK context
-    - Check the installed SDK version against the documentation. Training data may describe APIs that changed or never existed
+    - Turn that document into a Copilot instructions file (`.github/copilot-instructions.md` or a scoped `.instructions.md`) so Copilot has accurate SDK context from then on
+    - Check the installed SDK version against the documentation. Training data may describe APIs that have changed or never existed
 
 2. **Client setup and first message**
     - Install the SDK: `npm install @github/copilot-sdk tsx`
@@ -21,7 +21,7 @@ Use your SDK research skill to gather facts for the repository instructions. Kee
     - Create a `CopilotClient` and verify it can connect to the Copilot CLI backend
     - Create a session with `client.createSession({ model: "gpt-4.1" })`
     - Send a simple prompt using `session.sendAndWait()` and print the response
-    - Confirm the full round-trip works: prompt in, response out
+    - Confirm the round trip works: prompt in, response out
 
 3. **Streaming responses**
     - Enable streaming by passing `streaming: true` to `createSession()`

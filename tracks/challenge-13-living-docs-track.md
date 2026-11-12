@@ -6,18 +6,11 @@
 
 **Focus:** Use Copilot skills and agents to generate javadoc, architecture diagrams, changelogs, and stakeholder summaries
 
-## Who is this for
-
-- Developers who spend too much time writing and updating documentation
-- Teams whose documentation is always out of date because they maintain it manually
-- Engineers who want to build documentation workflows that stay in sync with code changes
-- Tech leads responsible for producing release notes, architecture diagrams, or stakeholder reports
-
 ## Prerequisites
 
-- Familiarity with Java (you will read Java code and write javadoc)
-- Basic understanding of REST APIs and MVC architecture
-- Comfort with markdown and diagramming tools (Mermaid syntax is used)
+- Java (you read code and write javadoc)
+- REST APIs and MVC basics
+- Markdown and Mermaid syntax
 - No framework expertise required
 
 ## Technology stack
@@ -28,9 +21,9 @@
 
 ## What you are working with
 
-Widget Corp Inventory Manager is a wholesale distribution system for products, orders, stock tracking, and inventory reports. It has 4 controllers (OrderController, ProductController, InventoryController, plus a few domain classes), about 500 lines of business logic, and almost no documentation.
+Widget Corp Inventory Manager is a wholesale distribution system for products, orders, stock tracking, and inventory reports. It has 4 controllers (OrderController, ProductController, InventoryController, plus a few domain classes) and about 500 lines of business logic. It has almost no documentation.
 
-The Product class has a stub javadoc from v1.0 that says "Represents inventory item" without explaining the fields. Everything else is undocumented. The changelog stopped being updated after v2.0, even though significant features were added in v2.3 (warehouse transfers, stock movements) and v2.5 (volume discounts, reorder reports). There are no architecture diagrams.
+The Product class has a stub javadoc from v1.0 that says "Represents inventory item" without explaining the fields. Everything else is undocumented. The changelog stops at v2.0, but v2.3 added significant features (warehouse transfers, stock movements) and v2.5 added more (volume discounts, reorder reports). There are no architecture diagrams.
 
 ## Getting started
 
@@ -48,7 +41,7 @@ Your `.github/copilot-instructions.md` should include:
 
 - That you are documenting an existing Java inventory management system
 - Your javadoc conventions (what to document, parameter descriptions, exception docs)
-- That Copilot should generate documentation that matches the actual code behavior, not aspirational behavior
+- That documentation must match what the code actually does, not what it should do
 - Your preferred diagram format (Mermaid recommended) and level of detail
 - Non-negotiable: never document behavior you haven't verified by reading the method itself
 

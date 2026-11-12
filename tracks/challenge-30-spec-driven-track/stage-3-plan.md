@@ -20,13 +20,13 @@
 
 4. **Use `/speckit-analyze` before implementation.** Review consistency across
    the specification, plan, and tasks. Resolve material gaps at their source,
-   then repeat analysis. A clean report is not proof that a business decision
-   is correct; compare it with the brief yourself.
+   then repeat analysis. A clean report doesn't prove a business decision is correct; compare it with
+   the brief yourself.
 
 5. **Agree the implementation boundary.** Keep generated feature artifacts in
    the root `specs/` directory and application changes in the starter. Review
-   the current feature recorded by Spec Kit before continuing. Do not create
-   a second project or assume switching Git branches changes the active
+   the current feature recorded by Spec Kit before continuing. Don't create
+   a second project, and don't assume switching Git branches changes the active
    Spec Kit feature.
 
 ## Verification

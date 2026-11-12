@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 75-90 min
 
-A feature spec must describe how the feature fits the existing system and resolve conflicting requirements.
+Write feature specs that fit the existing system and have no conflicting requirements.
 
 ## Tasks
 
@@ -18,7 +18,7 @@ A feature spec must describe how the feature fits the existing system and resolv
 
 6. **Open a Pull Request** for your specs on a branch. Write a PR description that summarizes the features and calls out open questions.
 
-If your agent or writing skill produces vague NFRs, interchangeable personas, or weak acceptance criteria, revise the customization before asking it to revise the draft.
+If your agent or skill produces vague NFRs, interchangeable personas, or weak acceptance criteria, fix the customization first, then redo the draft.
 
 ## Verification
 

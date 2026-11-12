@@ -29,7 +29,7 @@ Map the capabilities and authority each organization owns. Record the conflicts 
 
 5. **Work through every ownership conflict.** Assign a decision owner and deadline. If you defer a decision, state the transition rule that keeps work safe until it is made.
 
-6. **Extract constraints.** Add the NFRs, compliance rules, volumes, SLOs, release windows, and staffing limits that can change an architecture choice. Do not keep a generic list. Link each constraint to a capability or flow.
+6. **Extract constraints.** Add the NFRs, compliance rules, volumes, SLOs, release windows, and staffing limits that can change an architecture choice. Skip generic lists. Link each constraint to a capability or flow.
 
 7. **Draft boundary rules.** Write a small set of rules that later diagrams and contracts must obey. Include identity types, authorization, data authority, consent, reporting corrections, and source-system independence.
 

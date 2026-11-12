@@ -4,11 +4,11 @@
 
 ## Tasks
 
-1. **Verify the full environment** -- Start all services from a clean Codespace and confirm everything comes up healthy. Check that the backend, frontend, and database are all reachable.
+1. **Verify the full environment** -- Start all services from a clean Codespace and confirm the backend, frontend, and database come up healthy and reachable.
 
 2. **Document the environment** -- Write or finalize `docs/local-setup.md`: how to open the Codespace, how to start the application, required `.env` values, how to reset the database, and how to stop everything cleanly.
 
-3. **Verify logs and health checks** -- Show that service logs surface useful output in the terminal. Confirm the CI smoke test is passing in GitHub Actions.
+3. **Verify logs and health checks** -- Show that service logs give useful terminal output, and confirm the CI smoke test passes in GitHub Actions.
 
 4. **Demo contribution** -- Walk through the infrastructure: the devcontainer configuration, the reverse proxy routing, the CI pipeline, and a live startup showing the full stack running in Codespaces.
 

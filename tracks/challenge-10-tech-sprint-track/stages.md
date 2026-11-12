@@ -10,20 +10,20 @@
 | 4 | [Ship and Demo](stage-4-deploy-demo.md) | 30 min | Tested demo and retrospective |
 | 5 | [Agentic Workflows](stage-5-agentic-workflows.md) | Optional | Repository automation outside the core |
 
-Work within each stage happens **in parallel** across roles. Each stage file has a "Jump to Your Role" table so you only read what applies to you.
+Roles work **in parallel** within each stage. Each stage page has a "Jump to Your Role" table.
 
-**The five-hour core schedule takes precedence over full-backlog estimates in
-role pages.** Select trail browsing and condition-report stories during
-planning; treat analytics, authentication, and Stage 5 as stretch work.
-Demonstrate locally if an Azure deployment environment is not already prepared.
-Include the UI review within bug-fix time, not as another stage.
+**The five-hour core schedule overrides the full-backlog estimates in the
+role pages.** Pick trail browsing and condition-report stories during
+planning, and treat analytics, authentication, and Stage 5 as stretch work.
+Demo locally if no Azure deployment environment is prepared.
+Fit the UI review into bug-fix time rather than treating it as another stage.
 
 For four hours, preflight tooling and cap planning at 30 minutes and integration
 at 60 minutes. Keep real API wiring, tests, and the required warning review.
 
 ## Follow Your Role
 
-Use the tables below to follow your role through all five stages, or open a stage page and choose your role there.
+Follow your role through all five stages with the tables below, or open a stage page and pick your role there.
 
 ### Backend Developer
 

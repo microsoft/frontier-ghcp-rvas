@@ -8,13 +8,6 @@
 boundaries, authorization, input handling, configuration, dependencies, and
 security logging
 
-## Who is this for
-
-- Application security engineers reviewing code before release
-- Senior .NET developers responsible for security-sensitive APIs
-- Technical leads who need defensible go or no-go criteria
-- DevOps and platform engineers who support dependency and secret controls
-
 ## Prerequisites
 
 - Comfortable reading C# and .NET Minimal API code
@@ -32,8 +25,8 @@ security logging
 
 The starter is a local payments API with identity, payment, and admin
 endpoints. Its data and tokens are synthetic. Several security decisions are
-deliberately weak, but the challenge does not require destructive testing or
-exploit automation.
+deliberately weak. The challenge needs no destructive testing or exploit
+automation.
 
 ## Getting started
 
@@ -46,8 +39,7 @@ Work in
 Start with `docs/release-brief.md`, then read the API and existing
 characterization tests. Run the application and tests before changing code.
 
-Use `.devcontainer/challenge-22-secure-release/` for a .NET 8 environment. The
-challenge is local-first. It needs no Azure subscription or credentials.
+Use `.devcontainer/challenge-22-secure-release/` for a .NET 8 environment. Everything runs locally, with no Azure subscription or credentials.
 
 Create these participant artifacts under `deliverables/`:
 
@@ -58,8 +50,7 @@ Create these participant artifacts under `deliverables/`:
 - `residual-risk.md`
 - `secure-release-checklist.md`
 
-The documents should point to code, tests, commands, or captured output. A list
-of generic security advice is not enough.
+Point each document at code, tests, commands, or captured output. Generic security advice doesn't count.
 
 ### Repository instructions for this track
 

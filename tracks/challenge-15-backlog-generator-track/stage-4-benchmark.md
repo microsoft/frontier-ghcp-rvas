@@ -2,7 +2,7 @@
 
 **Duration:** 1-1.5 hours
 
-**Focus:** Testing your skill across all three specs and measuring output consistency
+**Focus:** Running your skill on all three specs and comparing the outputs
 
 ## Tasks
 
@@ -28,7 +28,7 @@
 
 4. **Run the refinement agent on all three.** Use the agent from Stage 2 to review each backlog. Check whether it catches similar types of gaps consistently across specs.
 
-5. **Multi-person test (if your team has multiple people).** Have two team members independently use the same skill on the same spec. Compare coverage and structure. Record any differences; a reusable skill does not guarantee identical output.
+5. **Multi-person test (if your team has multiple people).** Have two team members independently use the same skill on the same spec. Compare coverage and structure. Record the differences; a reusable skill does not guarantee identical output.
 
 6. **Document findings.** Write a brief consistency report describing output differences and the skill refinements needed to address them.
 

@@ -11,7 +11,7 @@
 | 4 | [Full-Stack Modernization](stage-4-modernization.md) | 165 min | Local transfer API, React journey, one UI review and fix |
 
 The core takes **five hours including setup**. Complete Stages 1 and 2, then
-go directly to Stage 4. Characterization comes before translation; do not skip
+go directly to Stage 4. Characterization comes before translation; don't skip
 it to spend more time on the UI. Full-system migration and Stage 3 are optional.
 
 > **Four-hour session:** Preflight setup and cap the final stage at 135 minutes.

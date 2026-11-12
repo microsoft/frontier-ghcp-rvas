@@ -10,9 +10,7 @@
 
 ## Who is this for
 
-- Developers and DevOps engineers who want to automate repository maintenance with AI
-- Teams exploring "Continuous AI" as a complement to CI/CD
-- Anyone comfortable with GitHub Actions, Markdown, and YAML who wants to understand how coding agents can run safely in automated pipelines
+Developers and DevOps engineers who know GitHub Actions, Markdown, and YAML and want to automate repository maintenance with coding agents that run safely in pipelines.
 
 ## Prerequisites
 
@@ -47,16 +45,16 @@ A dedicated devcontainer is provided at `.devcontainer/challenge-6-agentic-workf
 
 Your `.github/copilot-instructions.md` should describe:
 
-- The repository you are adding agentic workflows to (what does the code do, what language, what frameworks)
-- The types of automation you want (triage, documentation, code quality, CI monitoring)
+- The repository you are adding workflows to: what the code does, its language and frameworks
+- The automation you want: triage, documentation, code quality, CI monitoring
 - Security constraints: read-only permissions, safe outputs only, scoped labels
-- Non-negotiable: no workflow gets write access or secrets it doesn't need for its stated purpose
+- No workflow gets write access or secrets beyond what its purpose needs
 
 ### Suggested custom agents
 
-Use the custom Copilot agents below locally to author and review workflow files. The workflows you build run unattended in GitHub Actions with an agent engine (Copilot, Claude, or Codex) configured per workflow.
+Use these agents locally to write and review workflow files. The workflows themselves run unattended in GitHub Actions, with an agent engine (Copilot, Claude, or Codex) set per workflow.
 
-- Use a Workflow Author Agent to draft and debug Markdown workflows using the `gh-aw` frontmatter schema, safe outputs, and permission model. Review its draft before compiling.
+- Use a Workflow Author Agent to draft and debug Markdown workflows using the `gh-aw` frontmatter schema, safe outputs, and permission model. Review its draft before you compile.
 - Use a Security Reviewer Agent to check draft or compiled workflows for excessive permissions, missing safe-output limits, and prompt injection risks before pushing.
 
 ### Suggested custom skills
@@ -64,7 +62,7 @@ Use the custom Copilot agents below locally to author and review workflow files.
 - A Workflow Compile and Verify Skill runs `gh aw compile` after edits and checks the lock file's permissions and triggers against the intended workflow. Run it before each push.
 - A Safe-Output Audit Skill checks that issues, comments, and PRs use only the required labels and permissions. Run it when adding an output type.
 
-Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "agentic workflow", "repository automation skill", and "GitHub Actions security instructions" before you draft your own.
+Before drafting your own, search the [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for "agentic workflow", "repository automation skill", and "GitHub Actions security instructions".
 
 ---
 
@@ -74,7 +72,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 - Use the [Agentics gallery](https://github.com/githubnext/agentics) as a reference and ask Copilot to adapt a workflow for your repository.
 - When writing workflow instructions, specify the language, framework, directory structure, and naming conventions.
 - Use `gh aw compile` after every change to regenerate the lock file. The lock file is what GitHub Actions actually runs.
-- Review generated issues, PRs, and comments before accepting workflow output.
+- Read generated issues, PRs, and comments before you accept them.
 
 ## Resources
 

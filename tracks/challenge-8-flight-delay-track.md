@@ -8,10 +8,7 @@
 
 ## Who is this for
 
-- Full-stack developers looking for a deep, cross-domain challenge
-- Teams that finished their primary track early
-- Experienced engineers who want to push Copilot's capabilities across multiple domains
-- Anyone who wants to combine ML, API, and UI skills in a single project
+Full-stack developers, including teams that finished their primary track early, who want to combine ML, API, and UI work in one project.
 
 ## Prerequisites
 
@@ -38,13 +35,13 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-8-flight-delay/`. A dedicated devcontainer is provided at `.devcontainer/challenge-8-flight-delay/` with Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS. Read through the starter notebook and scaffolding across all three layers before writing any instructions.
+Navigate to `challenges/challenge-8-flight-delay/`. A dedicated devcontainer is provided at `.devcontainer/challenge-8-flight-delay/` with Python 3.11, Jupyter, scikit-learn, Flask, FastAPI, and Node.js LTS. Read the starter notebook and the scaffolding for all three layers before writing instructions.
 
 ### Install and use Impeccable
 
 Follow the [shared manual installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it)
 after clean setup. Preflight `client/src/main.ts`. In Stage 3, review the airport
-selection and prediction result from the client folder. Fix one usability
+selection and prediction result from the client folder, and fix one usability
 problem without changing the model or API contract. **Show probability as an
 estimate, never a guaranteed outcome.**
 
@@ -58,7 +55,7 @@ Your `.github/copilot-instructions.md` should cover:
 - Code quality standards (PEP 8 for Python, ESLint for JS/TS)
 - Testing expectations
 - The project's overall goal: flight delay prediction from FAA data
-- Non-negotiable: the API's input schema must match what the model actually expects, and the frontend must match the API in turn
+- The API's input schema must match what the model expects, and the frontend must match the API
 
 ### Suggested custom agents
 
@@ -71,13 +68,13 @@ Your `.github/copilot-instructions.md` should cover:
 - An End-to-End Wiring Skill checks the model, API, and frontend schemas and traces a request through all three layers. Run it after changes to the model's feature set.
 - A Cross-Layer Debugging Skill identifies the failing layer from the full traceback and checks its neighboring contract for CORS, serialization, or model-loading errors.
 
-Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "full-stack ML agent", "API integration skill", and "flask instructions" before you draft your own.
+Before drafting your own, search the [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for "full-stack ML agent", "API integration skill", and "flask instructions".
 
 ---
 
 ## Tips for using Copilot on this track
 
-- This track spans Python, Flask, and TypeScript. When switching layers, a comment describing the context ("Flask prediction endpoint" or "React form component") helps Copilot stay oriented.
+- When you switch layers, start with a comment naming the context ("Flask prediction endpoint", "React form component").
 - For the API, describe endpoint inputs and responses in comments before generating code.
 - For CORS or model-loading errors, give Copilot the full traceback.
 - For the frontend, describe the form fields and API data flow in a comment.

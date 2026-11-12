@@ -2,8 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-75 min
 
-Passing tests alone do not establish release readiness. An open finding does
-not necessarily block release; assess it against the evidence and accepted risk.
+Passing tests don't make a release ready, and an open finding doesn't always
+block one. Judge each against the evidence and the risk you accept.
 
 ## Tasks
 
@@ -37,9 +37,9 @@ not necessarily block release; assess it against the evidence and accepted risk.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can find missing links between findings and evidence. It cannot accept
-risk for the team. The release recommendation belongs to the accountable
-reviewers, with names, dates, and conditions that can be checked later.
+Copilot can find missing links between findings and evidence. It can't accept
+risk for the team. The accountable reviewers own the release recommendation,
+with names, dates, and conditions someone can check later.
 
 ---
 

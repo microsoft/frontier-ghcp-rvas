@@ -2,11 +2,11 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Decide which requests fit the release budget and explain the trade-offs to stakeholders.
+Decide which requests fit the release budget and tell stakeholders what you traded off.
 
 ## Tasks
 
-1. **Write 3 ADRs** -- Copy [docs/adr/0002-template.md](../../challenges/challenge-0-product-planning/docs/adr/0002-template.md) for each. Your ADRs must address real architectural and product decisions:
+1. **Write 3 ADRs** -- Copy [docs/adr/0002-template.md](../../challenges/challenge-0-product-planning/docs/adr/0002-template.md) for each. Cover these decisions:
    - **ADR: Notification delivery mechanism** -- Compare WebSocket, Server-Sent Events, polling, and push notifications. Analyze each on latency, infrastructure cost, battery impact (mobile), implementation complexity, and offline behavior. Pick one and justify.
    - **ADR: Multi-tenancy strategy** -- Compare shared database, database-per-tenant, and schema-per-tenant. Analyze on data isolation, cost per tenant, migration complexity, query performance, and compliance (GDPR data separation). Pick one and justify.
    - **ADR: One additional decision** that emerged from your feature specs (e.g., real-time collaboration protocol, search engine choice, file storage strategy).

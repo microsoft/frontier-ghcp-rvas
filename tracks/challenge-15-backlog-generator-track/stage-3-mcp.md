@@ -10,7 +10,7 @@
 
 1. **Set up the Atlassian MCP server.** Follow the [Atlassian setup instructions](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/) to configure the Atlassian Rovo MCP server in your `.vscode/mcp.json`. Complete the OAuth authentication flow.
 
-2. **Explore the available tools.** In Agent mode, ask Copilot what Atlassian MCP tools are available. Familiarize yourself with the tools for creating Jira issues, searching issues, and reading Confluence pages.
+2. **Explore the available tools.** In Agent mode, ask Copilot what Atlassian MCP tools are available. Note the tools for creating Jira issues, searching issues, and reading Confluence pages.
 
 3. **Create a single issue manually.** Use Copilot in Agent mode to create one Jira Issue (a User Story) from your generated backlog. Verify it appears correctly in Jira with the right fields.
 

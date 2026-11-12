@@ -6,19 +6,12 @@
 
 **Focus:** Use GitHub Copilot to understand legacy code, write characterization tests, extend features, and translate MUMPS to a modern language
 
-## Who is this for
-
-- Developers who enjoy reverse-engineering unfamiliar systems
-- Engineers dealing with legacy modernization at work (COBOL, MUMPS, RPG, or similar)
-- Anyone curious about how Copilot handles obscure languages and large-scale translation tasks
-- Teams that finished a standard track and want a fundamentally different kind of challenge
-
 ## Prerequisites
 
-- Solid programming skills in at least one modern language (PSL, Java, Python, C#, TypeScript)
-- Comfort reading code you don't fully understand and building a mental model from it
-- Basic understanding of banking concepts (accounts, transactions, interest, loans)
-- No prior MUMPS experience required
+- Solid skills in at least one modern language (PSL, Java, Python, C#, TypeScript)
+- Comfort reading code you don't fully understand
+- Basic banking concepts (accounts, transactions, interest, loans)
+- No MUMPS experience required
 
 ## Technology stack
 
@@ -29,11 +22,11 @@
 
 ## What you are working with
 
-The codebase is a core banking system for the fictional First National Bank, described as "in production" since 1997. It handles customer management, deposit accounts (savings, checking, fixed deposits), teller transactions, consumer loans, interest calculation, end-of-day batch processing, and audit logging.
+The codebase is the core banking system of the fictional First National Bank, "in production" since 1997. It handles customer management, deposit accounts (savings, checking, fixed deposits), teller transactions, consumer loans, interest calculation, end-of-day batch processing, and audit logging.
 
 The code spans 12 MUMPS routines totaling roughly 2,500 lines, with uneven comments. There are dead code paths, hardcoded values that should be configurable, a comment about a "temporary fix" from 2012, and business logic that becomes clear only after tracing through multiple files.
 
-A minimal context document is provided. Learn the rest from the code.
+The context document is minimal. Learn the rest from the code.
 
 ## Getting started
 
@@ -53,7 +46,7 @@ Your `.github/copilot-instructions.md` should include:
 - The MUMPS conventions: `^GLOBAL` = persistent database, `$ORDER` = iteration, `$PIECE` = string splitting, abbreviated commands (S=SET, W=WRITE, I=IF, D=DO, Q=QUIT, F=FOR, N=NEW, K=KILL, L=LOCK, R=READ)
 - Your target language and framework conventions
 - That you want Copilot to explain MUMPS idioms when asked and to preserve business logic exactly during translation
-- Non-negotiable: a translated routine must match the original's behavior, including its quirks, unless a quirk is a documented bug you're explicitly asked to fix
+- Non-negotiable: a translated routine matches the original's behavior, including its quirks, unless a quirk is a documented bug you're explicitly asked to fix
 
 ### Suggested custom agents
 
@@ -72,7 +65,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 ## Tips for using Copilot on this track
 
-- MUMPS is in Copilot's training data, but it is not a primary language. Paste code blocks and ask for line-by-line explanations.
+- Copilot knows MUMPS, but not well. Paste code blocks and ask for line-by-line explanations.
 - Use `@workspace` and `#file` to point Copilot at specific routines.
 - Describe the business rule first ("this function calculates monthly loan payment using the PMT formula"), then ask for its equivalent in the target language.
 - Use Agent mode to generate test scaffolding. Describe the test scenarios and let Copilot wire up the framework.

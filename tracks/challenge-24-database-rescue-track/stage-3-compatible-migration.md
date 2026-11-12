@@ -51,10 +51,10 @@ available through the stated compatibility window and rollback rehearsal.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can draft guards, batching loops, and comparison queries. It cannot
-choose a safe batch size without observing log use, lock duration, and workload
-pressure. It also cannot decide when the compatibility window is truly over.
-Those are release and operations decisions backed by evidence.
+Copilot can draft guards, batching loops, and comparison queries. It can't
+choose a safe batch size without seeing log use, lock duration, and workload
+pressure, and it can't decide when the compatibility window is over. Those are
+release and operations decisions that need evidence.
 
 ---
 

@@ -6,7 +6,7 @@ Explore eShop manually and with the Playwright MCP server, then build a test pla
 
 ## Tasks
 
-Open your repository instructions for the eShop and Playwright context. Use your test planning agent to review flows and risks. Apply your selector discovery skill to the live pages.
+Use your repository instructions for eShop and Playwright context, your test planning agent for flows and risks, and your selector discovery skill on the live pages.
 
 1. Open the running eShop app in your browser. Browse the catalog, view a product, log in, and add items to the cart. Note page names, key elements, forms, buttons, and navigation patterns.
 
@@ -14,7 +14,7 @@ Open your repository instructions for the eShop and Playwright context. Use your
    - "What are the main user-facing pages in this application?"
    - "What authentication method does this app use?"
    - "What API endpoints serve the catalog page?"
-   Observe how Copilot uses the codebase as context. Note which answers are accurate and which need verification.
+   Note which answers are accurate and which you'd need to verify.
 
 3. **Explore with Playwright MCP**: Set up the Playwright MCP server following `docs/playwright-mcp-guide.md`. Then ask Copilot (with MCP active) to navigate the application:
    - "Navigate to the eShop home page and describe what you see"
@@ -36,7 +36,7 @@ Open your repository instructions for the eShop and Playwright context. Use your
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can describe the codebase, and Playwright MCP can report page elements. Check those reports against the app. You decide which flows and edge cases to test first.
+Copilot describes the codebase and Playwright MCP reports page elements. Check both against the app. You decide which flows and edge cases to test first.
 
 ---
 

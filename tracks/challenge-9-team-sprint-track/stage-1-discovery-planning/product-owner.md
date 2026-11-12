@@ -4,11 +4,11 @@
 
 ## Tasks
 
-Review feature ideas and trade-offs with your Product and Analysis Agent before writing backlog stories.
+Before writing backlog stories, review feature ideas and trade-offs with your Product and Analysis Agent.
 
-1. **Read the stakeholder brief** -- Open the [stakeholder brief](../../../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) and internalize the requirements. This is your specification from the "client."
+1. **Read the stakeholder brief** -- Open the [stakeholder brief](../../../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) and learn the requirements. It is your specification from the "client."
 
-2. **Prototype with GitHub Spark** -- Go to [github.com/spark](https://github.com/spark) (requires a GitHub Copilot license) and use GitHub Spark to create a quick interactive prototype of CityPulse. Describe screens in natural language:
+2. **Prototype with GitHub Spark** -- Go to [github.com/spark](https://github.com/spark) (requires a GitHub Copilot license) and use GitHub Spark to build a quick interactive prototype of CityPulse. Describe the screens in natural language:
    - A form where residents submit issue reports (title, description, category, location)
    - A page listing all reported issues with colored status badges
    - A page showing upcoming community events
@@ -16,10 +16,7 @@ Review feature ideas and trade-offs with your Product and Analysis Agent before 
 
 3. **Export Spark to a repository (the handover)** -- Once the prototype looks right, export the Spark app into a new GitHub repository under the team's GitHub organization (or your personal account). Share the link with everyone.
 
-   What this repo represents:
-   - It is the **contract** between the PO and the developers. The screens, data model, and user flows captured in the Spark export define what the team agreed to build.
-   - Developers clone the repo and use its code as a reference or adapt it into the application architecture.
-   - The frontend developer in particular should review the component structure and page layout, then decide what to keep, what to rewrite, and what to throw away.
+   This repo is the **contract** between the PO and the developers. The screens, data model, and user flows in the export define what the team agreed to build. Developers clone it and use the code as a reference or adapt it into the application architecture. The frontend developer reviews the component structure and page layout, then decides what to keep, rewrite, or discard.
 
    > **Do not return to Spark after export.** Make further changes through branches, PRs, and code review. The repository is the source of truth.
 
@@ -40,7 +37,7 @@ Review feature ideas and trade-offs with your Product and Analysis Agent before 
 
 7. **Set up GitHub Project board** -- Create a project board with columns: Backlog, Sprint 1, In Progress, In Review, Done. Move Sprint 1 stories into the Sprint 1 column.
 
-8. **Sprint planning** -- At the 1-hour mark, walk the team through the backlog. Let each role pick their Sprint 1 stories. Resolve questions about scope or acceptance criteria.
+8. **Sprint planning** -- At the 1-hour mark, walk the team through the backlog. Each role picks their Sprint 1 stories. Settle open questions about scope and acceptance criteria.
 
 ## Verification
 

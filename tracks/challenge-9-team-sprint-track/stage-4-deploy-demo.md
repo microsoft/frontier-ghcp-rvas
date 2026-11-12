@@ -2,17 +2,18 @@
 
 **Duration:** 30 minutes for a tested core demo
 
-Use the core scope from the [contents page](stages.md). Azure deployment is
-optional when an environment was not prepared before the session. The full
-deployment tasks below remain stretch work; a local demo still requires
-integration and test evidence.
 **Focus:** Production deployment, final testing, demo, retrospective
 
-Run final tests and finish UI fixes before the demo. The PO leads the demo, followed by a brief team retrospective.
+Use the core scope from the [contents page](stages.md). Azure deployment is
+optional if no environment was prepared before the session, and the full
+deployment tasks below are stretch work. A local demo still needs
+integration and test evidence.
+
+Run final tests and finish UI fixes before the demo. The PO leads the demo, followed by a short retrospective.
 
 ## Jump to Your Role
 
-Find your role and follow the link for your detailed task list:
+Open your role for the detailed task list:
 
 | Role | Focus This Stage | Key Deliverable |
 |------|-----------------|-----------------|
@@ -27,7 +28,7 @@ Find your role and follow the link for your detailed task list:
 
 The PO leads. Suggested structure:
 
-1. **Problem statement** (2 min) -- What is CityPulse and why does it matter? Briefly reference the stakeholder brief.
+1. **Problem statement** (2 min) -- What is CityPulse and why does it matter? Reference the stakeholder brief.
 2. **Live walkthrough** (8-10 min) -- Use the deployed application:
    - Submit a new issue report (fill in the form, show it appear in the list)
    - Browse community events
@@ -39,11 +40,11 @@ The PO leads. Suggested structure:
 
 ## Retrospective (last 10 minutes)
 
-After the demo, the team discusses:
+After the demo, discuss:
 
-1. **What went well?** -- What worked about the parallel sprint structure? Which Copilot features were most useful?
-2. **What would we change?** -- Where did the team get stuck? Were there communication gaps? Was the scope right?
-3. **What surprised us?** -- Any unexpected wins or challenges?
+1. **What went well?** -- Did the parallel sprint structure work? Which Copilot features helped most?
+2. **What would we change?** -- Where did the team get stuck? Where did communication fail? Was the scope right?
+3. **What surprised us?** -- Any unexpected wins or problems?
 
 Capture notes in `docs/retrospective.md` or as a GitHub Issue labeled `retrospective`.
 

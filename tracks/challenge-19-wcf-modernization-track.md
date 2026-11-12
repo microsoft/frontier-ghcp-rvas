@@ -6,13 +6,6 @@
 
 **Focus:** Use GitHub Copilot to trace a banking SOAP service, characterize its behavior, and migrate it to a REST API
 
-## Who is this for
-
-- .NET developers dealing with legacy WCF or SOAP services
-- Engineers performing enterprise service modernization (WCF, JAX-WS, or similar SOAP platforms)
-- Developers who need to understand service contracts, bindings, faults, and data contracts before rewriting them
-- Teams that finished challenge-18 (COBOL) and want a second modernization scenario with a different legacy stack
-
 ## Prerequisites
 
 - Solid C# and .NET fundamentals
@@ -31,11 +24,11 @@
 
 ## What you are working with
 
-The codebase is a **legacy banking SOAP service** for a fictional bank called Meridian Savings Bank. It was built circa 2010-2012 using WCF and has been running in production ever since, migrated to CoreWCF in 2024 without touching the business logic.
+The codebase is a **legacy banking SOAP service** for a fictional bank called Meridian Savings Bank. It was built circa 2010-2012 using WCF and has run in production ever since, migrated to CoreWCF in 2024 without touching the business logic.
 
 The system handles customer account management, consumer loans, and transaction processing through `AccountService`, `LoanService`, and `TransactionService`. It follows classic WCF conventions, with service contracts on interfaces, data contracts on DTOs, fault contracts on every operation, and `BasicHttpBinding` for all endpoints.
 
-Some operations have documented bugs (see `docs/system-context.md`). Some have undocumented quirks. Learn about the system by reading the contracts, tracing the implementations, and studying the context document.
+Some operations have documented bugs (see `docs/system-context.md`). Some have undocumented quirks. Read the contracts, trace the implementations, and read the context document.
 
 ## Getting started
 
@@ -78,7 +71,7 @@ A demo client is included at `src/Meridian.Banking.Client`. With the service run
 dotnet run --project src/Meridian.Banking.Client
 ```
 
-It sends a real SOAP request to `GetCustomerProfile` for customer ID 1001 and prints the raw HTTP status and response body. Use it to check that the service accepts SOAP messages correctly. The client uses raw HTTP rather than a generated proxy; its source shows a well-formed SOAP envelope for this service.
+It sends a real SOAP request to `GetCustomerProfile` for customer ID 1001 and prints the raw HTTP status and response body. Use it to check that the service accepts SOAP messages. The client uses raw HTTP rather than a generated proxy, so its source shows a well-formed SOAP envelope for this service.
 
 ### Repository instructions for this track
 
@@ -88,11 +81,11 @@ Your `.github/copilot-instructions.md` should include:
 - WCF-specific concepts Copilot should expect to encounter: `ServiceContract`, `OperationContract`, `DataContract`, `DataMember`, `FaultContract`, `ServiceFault`, `BasicHttpBinding`, `ServiceBehavior`, WSDL, SOAP 1.1 message structure
 - The modernization goal: preserve all business logic while adopting REST/JSON conventions and HTTP status codes in place of SOAP faults
 - Your preference for REST endpoint design (controllers vs. minimal APIs) and persistence strategy (in-memory, SQLite, or other)
-- Non-negotiable: every migrated endpoint needs a characterization test proving it matches the original SOAP behavior before the SOAP path is retired
+- Every migrated endpoint needs a characterization test proving it matches the original SOAP behavior before the SOAP path is retired
 
 ### Suggested custom agents
 
-The custom agents below help you work on the challenge. They are separate from the WCF service and REST API you build; those are runtime deliverables, not `.github/agents/` definitions.
+These agents help you work on the challenge. They are separate from the WCF service and REST API you build.
 
 - **WCF Analyst Agent** -- Reads WCF service contracts and explains each operation, its data contracts, and the faults it can throw. Give it a contract file; it returns a plain-language breakdown of the operation and its `BasicHttpBinding` configuration. Use it before mapping anything to REST.
 - **Banking Domain Agent** -- Applies banking domain judgment for account types, interest calculation, and transaction reconciliation that the WCF service assumes. Give it an operation's behavior; it explains the domain reasoning. Use it when a rule's intent isn't obvious from the contract alone.

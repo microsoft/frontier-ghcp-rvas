@@ -5,7 +5,7 @@
 
 ## Objective
 
-Explore and clean the FAA flights dataset, then perform exploratory data analysis. Train a classification model that predicts whether a flight arriving at a given airport on a given day of the week will be delayed by more than 15 minutes.
+Clean and explore the FAA flights dataset. Train a classification model that predicts whether a flight arriving at a given airport on a given day of the week will be delayed by more than 15 minutes.
 
 ## Dataset
 
@@ -23,7 +23,7 @@ The dataset (`data/flights.csv`) contains ~272,000 records of US flights from 20
 
 ## Requirements
 
-Open your repository instructions for the project's goal and conventions. Use your data scientist agent to review features and model choices. Run your end-to-end wiring or leakage-check skill throughout the stage.
+Use your repository instructions for the project's goal and conventions, your data scientist agent to review features and model choices, and your end-to-end wiring or leakage-check skill throughout.
 
 1. **Load & Inspect** -- Load `data/flights.csv`, display shape, column types, first rows, summary statistics.
 2. **Clean** -- Identify null/missing values and handle them (e.g., replace with 0 or drop).
@@ -45,7 +45,7 @@ Open your repository instructions for the project's goal and conventions. Use yo
 ## Copilot Tips for This Stage
 
 - Start each notebook cell with a descriptive comment to give Copilot context.
-- Use `/explain` to understand ML concepts like precision vs. recall.
+- Use `/explain` for ML concepts like precision vs. recall.
 - Ask Copilot: *"What's the best model for binary classification on imbalanced data?"*
 - Use Agent Mode (`Ctrl+Alt+I`) to generate entire analysis blocks from natural language.
 

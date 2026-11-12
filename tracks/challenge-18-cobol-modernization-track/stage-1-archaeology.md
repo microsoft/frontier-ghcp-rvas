@@ -5,9 +5,8 @@
 
 ## Tasks
 
-Keep your repository instructions open for the target stack and COBOL
-conventions. Use the COBOL Archaeologist agent where the transfer logic is
-unclear, and run your business-rule documentation skill as you trace it.
+Use the COBOL Archaeologist agent where the transfer logic is unclear, and
+run your business-rule documentation skill as you trace it.
 
 1. Get oriented in the COBOL divisions, paragraphs, and copybook fields used
    by `programs/BNKTXN.cbl`. Trace `PROCESS-TRANSFER` and the paragraphs it calls.
@@ -16,8 +15,8 @@ unclear, and run your business-rule documentation skill as you trace it.
 3. Follow successful transfer and rejected-input paths from prompts to file
    writes. Check same-account handling, account eligibility, amount limits,
    and insufficient funds against the source.
-4. Compare actual file operations with comments about locking. Distinguish
-   implemented behavior from claims in comments; do not assume atomicity.
+4. Compare actual file operations with comments about locking. Separate
+   implemented behavior from claims in comments, and do not assume atomicity.
 5. Keep one short source-linked note for the transfer workflow. List observed
    outputs and uncertainties that Stage 2 must check. Preserve the COBOL files.
 
@@ -36,9 +35,9 @@ and build a broader technical-debt inventory. Keep this outside the core.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can explain paragraphs and propose a workflow map. You decide whether
-the explanation matches the actual file operations. A plausible summary is
-not evidence that a transfer is safe or atomic.
+Copilot can explain paragraphs and propose a workflow map. You check the
+explanation against the actual file operations. A plausible summary is not
+evidence that a transfer is safe or atomic.
 
 ---
 

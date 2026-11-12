@@ -27,7 +27,7 @@
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can group related evidence and spot recurring topics. You decide which
+Copilot groups related evidence and spots recurring topics. You decide which
 sources belong in scope, whether the support is good enough, and when to stop.
 
 ---

@@ -22,7 +22,7 @@ Build the core API endpoints.
 
 ### Seed Data
 
-Create a script or endpoint that populates the database with sample reports and events. QA and the frontend developer both need this.
+Create a script or endpoint that fills the database with sample reports and events. QA and the frontend developer both need it.
 
 ### Tests
 

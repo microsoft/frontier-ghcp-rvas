@@ -30,7 +30,7 @@ Use your repository instructions for the Order Gateway context. Have the Log Ana
    - Invalid order state transition
    - Batch reconciliation mismatches
 
-5. Show the output to someone without deep technical knowledge. Check whether they can explain what happened and why it matters. Adjust the agent's instructions if they cannot.
+5. Show the output to someone non-technical. If they can't explain what happened and why it matters, adjust the agent's instructions.
 
 6. Have the agent classify each error as Critical, High, Medium, or Low based on impact (full outage vs. single user affected, data loss risk, security implications).
 

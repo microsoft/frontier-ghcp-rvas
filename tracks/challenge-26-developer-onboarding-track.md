@@ -7,13 +7,6 @@
 **Focus:** Test onboarding tasks, resolve audience and terminology conflicts,
 verify examples against the software, and add editorial checks
 
-## Who is this for
-
-- Technical writers who maintain developer documentation
-- Developer educators who build hands-on onboarding material
-- Developer experience practitioners responsible for setup success
-- Engineers who review or contribute to onboarding docs
-
 ## Prerequisites
 
 - Comfortable editing Markdown and running commands in a terminal
@@ -31,16 +24,15 @@ verify examples against the software, and add editorial checks
 ## What you are repairing
 
 Launchpad is a small developer setup tool with a CLI and SDK. The software
-works, but the documentation does not. Pages came from different team wikis
-and releases. They disagree about commands, supported runtimes, audience,
+works, but the documentation doesn't. Pages came from different team wikis
+and releases, and they disagree about commands, supported runtimes, audience,
 terminology, and what the tool changes on a developer's machine.
 
-Measure success by whether readers can complete their tasks. A new API or web
-developer should be able to choose the right profile, verify the tool, generate
-a setup plan, and use the SDK without guessing. This differs from the Living
-Documentation challenge, which focuses on generating reference material from
-code and release changes. Here, automation supports the editorial work rather
-than defining it.
+Success means readers can complete their tasks. A new API or web developer
+should be able to choose the right profile, verify the tool, generate a setup
+plan, and use the SDK without guessing. This differs from the Living
+Documentation challenge, which generates reference material from code and
+release changes. Here, automation supports the editorial work.
 
 ## Getting started
 
@@ -51,9 +43,9 @@ instructions, custom agents, and skills before the first reader test.
 
 Navigate to
 [`challenges/challenge-26-developer-onboarding/`](../challenges/challenge-26-developer-onboarding/).
-Start at `docs/index.md`, but do not assume it points to everything useful.
-Run the code tests before changing documentation so you can separate software
-behavior from documentation defects.
+Start at `docs/index.md`, but don't assume it links to everything useful.
+Run the code tests before changing documentation so you can tell software
+bugs from documentation defects.
 
 ### Repository instructions for this track
 
@@ -65,8 +57,8 @@ Your `.github/copilot-instructions.md` should establish:
 - The project's Markdown style and example-testing conventions
 - A rule that commands and API examples must be verified before publication
 
-Describe stable decisions only. Stage-specific requests belong in your work
-notes, not repository instructions.
+Record stable decisions only. Stage-specific requests belong in your work
+notes.
 
 ### Suggested custom agents
 
@@ -93,8 +85,8 @@ notes, not repository instructions.
 
 Use the shared
 [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own)
-to study patterns, then author customizations for this challenge. Do not copy
-a generic documentation agent and treat it as complete.
+to study patterns, then write your own customizations. Don't copy a generic
+documentation agent and call it done.
 
 ## Required participant artifacts
 
@@ -111,17 +103,17 @@ By the end of the challenge, the repository should contain:
 ## Tips for using Copilot on this track
 
 - Give Copilot a reader, goal, starting page, and evidence. "Improve these
-  docs" is too vague to produce a useful review.
-- Ask for discrepancies before asking for rewrites. You need the inventory
-  before you decide page boundaries.
-- Treat CLI help, exported SDK types, and passing tests as evidence, not as a
-  substitute for reader context.
+  docs" is too vague.
+- Ask for discrepancies before rewrites. You need the inventory before you
+  decide page boundaries.
+- Treat CLI help, exported SDK types, and passing tests as evidence. They
+  don't replace reader context.
 - Run examples yourself. Plausible command syntax is one of the easiest
   documentation errors to miss.
 - Keep reference concise. Move explanations and decisions into the quickstart,
-  tutorial, or concepts material when they interrupt lookup tasks.
-- Record terminology choices once and apply them consistently rather than
-  asking Copilot to choose again on every page.
+  tutorial, or concepts material when they interrupt lookup.
+- Record terminology choices once and apply them everywhere, instead of asking
+  Copilot to choose again on every page.
 
 ## Resources
 

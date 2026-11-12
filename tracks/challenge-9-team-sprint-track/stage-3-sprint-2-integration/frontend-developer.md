@@ -27,7 +27,7 @@ and failed submission. Fix one useful finding without changing the accepted
 story or adding a dashboard. QA verifies the fix against the story, including
 keyboard use. Put before-and-after evidence and your decision in the feature PR.
 
-If your UI agent produces a generic dashboard, ignores the API response shape, or conflicts with the established layout, refine its guidance before opening the PR.
+If your UI agent produces a generic dashboard, ignores the API response shape, or conflicts with the established layout, improve its guidance before opening the PR.
 
 ## Verification
 

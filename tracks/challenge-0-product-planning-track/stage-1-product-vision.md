@@ -2,11 +2,11 @@
 
 **Difficulty:** ⭐ | **Time:** 60-90 min
 
-Write a product brief that explains TaskFlow's market position and uses measurable goals.
+Write a product brief that states TaskFlow's market position and sets measurable goals.
 
 ## Tasks
 
-Before drafting, open `.github/copilot-instructions.md` for TaskFlow's context. Use your product agent to review positioning and KPIs. Apply your document critique or story-writing skill to the draft.
+Open `.github/copilot-instructions.md` for TaskFlow's context first. Use your product agent to review positioning and KPIs, and your document critique or story-writing skill on the draft.
 
 1. **Complete the product brief** in [docs/product-brief.md](../../challenges/challenge-0-product-planning/docs/product-brief.md). Fill in every section.
 

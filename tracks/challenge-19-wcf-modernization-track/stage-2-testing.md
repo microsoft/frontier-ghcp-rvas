@@ -6,9 +6,7 @@
 
 ## Objective
 
-Write a test suite that captures the WCF service's current behavior, including bugs. Use it in Stage 3 to check that the REST API preserves the covered behavior.
-
-Test the running WCF service over HTTP. Cover observable behavior rather than implementation lines.
+Write a test suite that captures the WCF service's current behavior, including bugs. Use it in Stage 3 to check that the REST API preserves that behavior. Test the running WCF service over HTTP and cover observable behavior, not implementation lines.
 
 ## Tasks
 
@@ -57,7 +55,7 @@ Test the running WCF service over HTTP. Cover observable behavior rather than im
    - Compare `AddDays(30)` and `AddMonths(1)` in the amortization schedule date sequence for a short term
    - Statement summary for a date range with no transactions
 
-If your Banking Domain agent or WSDL skill produces a generic characterization test or misses the frozen-account edge case, refine it before using the test to check migration behavior.
+If your Banking Domain agent or WSDL skill produces generic tests or misses the frozen-account edge case, refine it before you rely on the tests for migration.
 
 ## Verification
 

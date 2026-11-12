@@ -4,7 +4,7 @@
 
 ## Tasks
 
-1. **Add a reverse proxy** -- Configure nginx as a reverse proxy inside the Codespace that routes `/api/` to the backend and `/` to the frontend. This gives the whole stack a single entry point on one port and eliminates browser CORS issues.
+1. **Add a reverse proxy** -- Configure nginx as a reverse proxy inside the Codespace that routes `/api/` to the backend and `/` to the frontend. The whole stack gets one entry point on one port, and browser CORS issues go away.
 
 2. **Make the environment shareable** -- Verify that anyone on the team can start the full application from a fresh Codespace with a single command:
    - Opening the Codespace should install all dependencies automatically
@@ -18,7 +18,7 @@
 
 4. **Review service logs** -- Confirm that each service writes structured logs readable in the terminal. Each service should log at an appropriate level (info for requests, error for failures). Fix anything that logs nothing or is too noisy.
 
-If your infrastructure agent produces an incomplete smoke test or reverse proxy config, refine its service and health-check guidance before calling the environment shareable.
+If your infrastructure agent produces an incomplete smoke test or proxy config, refine its service and health-check guidance before calling the environment shareable.
 
 ## Verification
 

@@ -2,8 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60 min
 
-Build a small map that helps another developer find the code behind a user
-action.
+Build a small map that shows another developer where the code behind each user
+action lives.
 
 ## Tasks
 
@@ -29,7 +29,7 @@ action.
    reviewer invented a route or treated a guess as evidence, make its brief
    more specific before you use it again.
 
-Do not document every class. The map should show where you would investigate a
+Don't document every class. The map should show where you'd investigate a
 booking problem and where a feature could change existing behavior.
 
 ## Verification
@@ -43,9 +43,9 @@ booking problem and where a feature could change existing behavior.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can follow references and draft a map. You must check that it traced
-the path the application actually runs. A confident summary without evidence
-does not pass the discovery checkpoint.
+Copilot can follow references and draft a map. You check that it traced the
+path the application actually runs. A confident summary without evidence fails
+the discovery checkpoint.
 
 ---
 

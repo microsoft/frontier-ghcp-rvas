@@ -22,8 +22,7 @@ Package the three tested scripts into a PowerShell module. Add a GitHub Actions 
 
 Review generated module installation steps for rate limits and conflicts with
 the runner's installed versions. The Pester installation step should use
-`-Force -Scope CurrentUser` and may need `-AllowClobber`. Check the YAML before
-committing.
+`-Force -Scope CurrentUser` and may need `-AllowClobber`.
 
 ---
 

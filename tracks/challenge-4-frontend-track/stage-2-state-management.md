@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 60 min
 
-Replace static data with real state management. Users must be able to create, edit, and delete tasks.
+Replace static data with real state management so users can create, edit, and delete tasks.
 
 ## Tasks
 

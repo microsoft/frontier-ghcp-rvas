@@ -26,7 +26,7 @@
 
 3. **Compile and commit** -- Run `gh aw compile` for each workflow. Commit and push.
 
-4. **Review output** -- Trigger the documentation updater manually and review the pull request it creates. Does it accurately reflect recent changes?
+4. **Review output** -- Trigger the documentation updater manually and review the pull request it creates. Does it reflect the recent changes accurately?
 
 ## Verification
 

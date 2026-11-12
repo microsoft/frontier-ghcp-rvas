@@ -12,15 +12,15 @@ Use your ui-builder agent to review component structure.
    - Create a basic layout component (header, sidebar, main content area)
    - Add a placeholder home page
 
-2. Clone the Spark handover repo and study the generated code. It defines the agreed screens, data model, and user flows. Decide which components to keep, adapt, or rewrite for your chosen framework. Treat the export as a visual and structural reference; you do not have to use its code in production.
+2. Clone the Spark handover repo and study the generated code. It defines the agreed screens, data model, and user flows. Decide which components to keep, adapt, or rewrite for your chosen framework. Treat the export as a visual and structural reference. You don't have to ship its code.
 
 3. **Write custom instructions** -- Add frontend context to `.github/copilot-instructions.md`: framework, component patterns, styling approach (Tailwind, CSS modules, etc.).
 
 4. **Create a frontend agent** -- Create `.github/agents/ui-builder.agent.md` with component patterns and styling conventions.
 
-5. **Coordinate with the backend developer** -- Review the draft API spec. Agree on endpoint shapes so you can start building against mocked data if the API is not ready yet.
+5. **Coordinate with the backend developer** -- Review the draft API spec. Agree on endpoint shapes so you can build against mocked data until the API is ready.
 
-6. **Sprint planning** -- Join the PO's planning session. Pick your Sprint 1 stories.
+6. **Sprint planning** -- Join the PO's planning session and pick your Sprint 1 stories.
 
 ## Verification
 

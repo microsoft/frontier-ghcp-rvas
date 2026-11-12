@@ -2,8 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 70-85 min
 
-Prove the gaps that could change the release decision. Use the leads in code,
-tests, configuration, and evidence files to assess their severity.
+Prove the gaps that could change the release decision. Start from the leads in code,
+tests, configuration, and evidence files, and judge how severe each one is.
 
 ## Tasks
 

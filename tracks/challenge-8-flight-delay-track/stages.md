@@ -4,7 +4,7 @@
 
 The core takes **five hours including setup**. Build one baseline model and
 keep its two-feature contract consistent through the API and UI. Stage 4 is
-optional and sits outside the core budget.
+optional.
 
 | Stage | Name | Duration | Focus |
 |-------|------|----------|-------|

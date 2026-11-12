@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 60-90 min
 
-Use the Playwright MCP server to let Copilot explore the app and generate tests without predefined selectors or steps.
+Let Copilot explore the app through the Playwright MCP server and generate tests without predefined selectors or steps.
 
 ## Tasks
 
@@ -34,7 +34,7 @@ Use the Playwright MCP server to let Copilot explore the app and generate tests 
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-MCP-generated tests may reproduce current behavior without checking whether it is correct. Review each test against the requirements and check that it would catch a regression.
+MCP-generated tests may encode the app's current behavior without checking that it's correct. Review each test against the requirements and confirm it would catch a regression.
 
 ---
 

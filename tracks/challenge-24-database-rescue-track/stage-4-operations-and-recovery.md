@@ -2,9 +2,9 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 55-70 min
 
-Prepare for another DBA to deploy the changes during a busy week. Provide
+Prepare another DBA to deploy the changes during a busy week. Give them
 clear stop conditions, safe rollback, reliable reconciliation, and monitoring
-that does not add excessive load.
+that doesn't add load.
 
 ## Tasks
 
@@ -53,9 +53,9 @@ would have. If it asks the author what a step means, the runbook is not done.
 ## What Copilot helps with vs. what requires your judgment
 
 Copilot can turn your scripts into a checklist and point out missing branches.
-It cannot set an acceptable blocking duration, decide how much mismatch is
-tolerable, or name the person who can approve the contract step. Put those
-decisions in the runbook so they are settled before peak load returns.
+It can't set an acceptable blocking duration, decide how much mismatch is
+tolerable, or name who can approve the contract step. Put those decisions in the
+runbook before peak load returns.
 
 ---
 

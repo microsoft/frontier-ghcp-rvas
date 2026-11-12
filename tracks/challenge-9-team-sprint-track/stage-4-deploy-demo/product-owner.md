@@ -8,16 +8,16 @@
 
 2. **Finalize release notes** -- Update `docs/release-notes.md` with the final feature list, known issues, and any scope changes from the original plan.
 
-3. **Prepare and rehearse the demo** -- Practice the demo flow once before presenting:
+3. **Prepare and rehearse the demo** -- Run through the demo flow once before presenting:
    - Submit a new issue report
    - View it in the reports list
    - Browse community events
    - Show the dashboard (if built)
    - Show the deployed URL
 
-4. **Lead the demo** (last 20-30 minutes) -- Walk through the application live. Each team member can present their specific contribution.
+4. **Lead the demo** (last 20-30 minutes) -- Walk through the application live. Each team member presents their own contribution.
 
-5. **Run the retrospective** (last 10 minutes) -- Three questions for the team:
+5. **Run the retrospective** (last 10 minutes) -- Ask the team:
    - What went well?
    - What would we change next time?
    - Where did GitHub Copilot help most, and where did it fall short?

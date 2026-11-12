@@ -10,7 +10,7 @@
 | 4 | [Release Evidence and Residual Risk](stage-4-release-evidence-and-risk.md) | ⭐⭐⭐ | 60-75 min | Residual-risk record, secure-release checklist, and release recommendation |
 
 Map the trust boundaries and prove the security gaps. Fix a focused set, then
-decide whether the remaining risk is acceptable for release.
+decide whether the remaining risk is acceptable.
 
 > **Short on time?** Complete Stages 1, 2, and 4, then remediate one
 > release-blocking finding from Stage 3 with a regression test.

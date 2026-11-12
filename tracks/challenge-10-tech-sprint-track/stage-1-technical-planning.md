@@ -3,13 +3,13 @@
 **Duration:** 60 minutes for the core; role-page estimates cover the extended backlog
 **Focus:** Read the specification, create a technical spec, set up tooling, break work into Issues, plan Sprint 1
 
-Turn the provided functional specification into a technical plan and set up the development environment.
+Turn the functional specification into a technical plan and set up the development environment.
 
 Before setup, check that `.github/copilot-instructions.md` describes TrailMate for all roles. Agree on one shared skill, such as spec-to-issues or sprint board sync, to keep handoffs consistent.
 
 ## Jump to Your Role
 
-Find your role and follow the link for your detailed task list:
+Pick your role for the detailed task list:
 
 | Role | Time | Summary |
 |------|------|---------|
@@ -20,34 +20,34 @@ Find your role and follow the link for your detailed task list:
 
 ## Before You Start
 
-Everyone reads the functional specification together:
+Read the functional specification together:
 
 1. Open `challenges/challenge-10-tech-sprint/docs/functional-spec.md`
-2. Read through the entire document as a team (10 minutes)
-3. Resolve questions or ambiguities before the sprint
+2. Read the whole document as a team (10 minutes)
+3. Resolve open questions before the sprint
 4. Assign one person to fill in `challenges/challenge-10-tech-sprint/docs/technical-spec-template.md` during Stage 1, with contributions from everyone
 
 ## Creating the Backlog
 
-Since there is no Product Owner, the team creates the GitHub Issues together. During the first 20 minutes:
+There is no Product Owner, so the team creates the GitHub Issues together in the first 20 minutes:
 
 1. One person creates a GitHub Project board with columns: Backlog, Sprint 1, In Progress, Review, Done
 2. Each developer reads the spec section closest to their role and writes 3-5 user stories as GitHub Issues using the template in `challenges/challenge-10-tech-sprint/templates/user-story-issue.md`
 3. Label each Issue with its epic, priority, and size
-4. The team reviews the Issues together and resolves any overlaps or gaps
+4. Review the Issues together and resolve overlaps and gaps
 
 Ask Copilot to draft user stories from the functional spec. Use GitHub MCP Server to create the Issues.
 
 ## Sync Point: Sprint Planning Meeting (at ~1:00)
 
-At the 1-hour mark, everyone pauses setup and joins a 30-minute planning session:
+At the 1-hour mark, pause setup for a 30-minute planning session:
 
 1. Walk through the GitHub Project board and review the Issues (10 min)
 2. Each role picks their Sprint 1 stories (10 min)
 3. Resolve blockers and dependencies, such as the frontend's API spec and QA's seed data (5 min)
 4. Agree on a mid-sprint standup time (5 min)
 
-After planning, everyone should know their Sprint 1 tasks and have no blockers.
+After planning, everyone knows their Sprint 1 tasks and has no blockers.
 
 ---
 

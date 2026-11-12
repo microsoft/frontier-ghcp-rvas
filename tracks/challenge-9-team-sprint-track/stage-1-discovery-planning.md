@@ -3,13 +3,13 @@
 **Duration:** 60 minutes for the core; role-page estimates cover the extended backlog
 **Focus:** Product ideation, backlog creation, tooling setup, sprint planning
 
-The PO develops the product idea while the rest of the team sets up tooling. End the stage with a planning session to agree on Sprint 1 scope.
+The PO develops the product idea while the rest of the team sets up tooling. The stage ends with a planning session that fixes Sprint 1 scope.
 
 Before setup, check that `.github/copilot-instructions.md` describes CityPulse for all roles. Agree on one shared custom skill, such as sprint board sync or Discovery Handoff.
 
 ## Jump to Your Role
 
-Find your role and follow the link for your detailed task list:
+Open your role for the detailed task list:
 
 | Role | Time | Summary |
 |------|------|---------|
@@ -24,20 +24,20 @@ Find your role and follow the link for your detailed task list:
 
 Before sprint planning, the PO exports the GitHub Spark prototype to a GitHub repository and shares the link. The export defines the agreed screens, user flows, and data model.
 
-Every team member should clone the repo and review it. The frontend developer should pay close attention to the component structure and page layouts. The backend developer should look at the data model and API patterns implied by the UI.
+Everyone clones and reviews the repo. The frontend developer studies the component structure and page layouts. The backend developer looks at the data model and the API patterns the UI implies.
 
-After export, make all changes in the repository through branches, pull requests, and code review. Do not return to Spark; the repository is now the source of truth.
+After export, make all changes through branches, pull requests, and code review. Do not return to Spark. The repository is the source of truth.
 
 ## Sync Point: Sprint Planning Meeting (at ~1:00)
 
-At the 1-hour mark, everyone pauses setup and joins a 30-minute planning session led by the PO:
+At the 1-hour mark, everyone pauses setup for a 30-minute planning session led by the PO:
 
 1. PO walks through the backlog and GitHub Project board (10 min)
 2. Each role picks their Sprint 1 stories (10 min)
 3. Resolve blockers and dependencies, such as the frontend's API spec and QA's seed data (5 min)
 4. Agree on a mid-sprint standup time (5 min)
 
-After planning, everyone should know their Sprint 1 tasks and have no blockers.
+Afterward, everyone should know their Sprint 1 tasks and have no blockers.
 
 ---
 

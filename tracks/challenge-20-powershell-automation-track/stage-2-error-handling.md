@@ -2,9 +2,9 @@
 
 **Difficulty:** ⭐⭐ | **Time:** 45-60 min
 
-The scripts from Stage 1 can fail without visible output when a machine is
-offline, a temp directory is locked, or an AD query returns nothing. Add error
-handling and structured logging to `Invoke-DiskCleanup.ps1`.
+The scripts from Stage 1 can fail silently when a machine is offline, a temp
+directory is locked, or an AD query returns nothing. Add error handling and
+logging to `Invoke-DiskCleanup.ps1`.
 
 ## Tasks
 

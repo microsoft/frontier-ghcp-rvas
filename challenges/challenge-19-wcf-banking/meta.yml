@@ -4,7 +4,7 @@ title: Legacy WCF banking modernization
 category: legacy-modernization
 difficulty: advanced
 duration_minutes: 480
-description: Reverse-engineer a WCF banking SOAP service and rebuild it as a modern REST API with GitHub Copilot.
+description: Trace a WCF banking SOAP service and rebuild it as a REST API with GitHub Copilot.
 focus: Use GitHub Copilot to trace a banking SOAP service, characterize its behavior, and migrate it to a REST API
 tags:
   - legacy-modernization

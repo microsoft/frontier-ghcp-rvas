@@ -8,11 +8,7 @@
 
 ## Who is this for
 
-- QA Engineers and Quality Assurance Specialists
-- Manual testers looking to use AI-assisted testing tools
-- Test leads and QA managers who want to evaluate Copilot for their teams
-
-No coding experience is required. Use Copilot to generate and explain test code, then check whether the tests cover the intended behavior.
+QA engineers, manual testers, and test leads. No coding experience is required. Copilot generates and explains the test code; you check that the tests cover the behavior you intend.
 
 ## Prerequisites
 
@@ -34,13 +30,13 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-5-qa/`. Test the existing eShop application with Copilot as your testing assistant; you will not build an application. Browse the running application's pages before writing any instructions or tests.
+Navigate to `challenges/challenge-5-qa/`. You test the existing eShop application with Copilot as your assistant. You don't build an application. Browse the running app's pages before you write any instructions or tests.
 
 #### Setup: Target application
 
 You will be testing **[eShop](https://github.com/dotnet/eShop)**, a .NET Aspire reference application with a microservices architecture.
 
-> ⚠️ **Setup note**: eShop uses .NET Aspire and Docker. The initial setup takes a few minutes as it pulls container images and starts multiple services. Be patient during first launch.
+> ⚠️ **Setup note**: eShop uses .NET Aspire and Docker. The first launch takes a few minutes while it pulls container images and starts several services.
 
 1. **Clone the Repository**:
 
@@ -89,7 +85,7 @@ Your `.github/copilot-instructions.md` should cover:
 - Your preferred test structure (describe/it blocks, AAA pattern)
 - That Copilot should explain generated code
 - That test names should describe the user behavior being verified
-- Non-negotiable: never report a failure as a bug without checking whether the selector or a wait condition is the actual cause
+- Never report a failure as a bug before checking whether a selector or wait condition is the cause
 
 ### Suggested custom agents
 
@@ -102,17 +98,17 @@ Your `.github/copilot-instructions.md` should cover:
 - A Test Failure Triage Skill checks the error and live-page selector to distinguish bugs from flaky waits or stale selectors. Run it before rewriting a failing test.
 - A Selector Discovery Skill finds stable selectors with the browser's Inspect tool and verifies them through Playwright MCP before tests use them.
 
-Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "playwright test agent", "bug report skill", and "QA instructions" before you draft your own.
+Before drafting your own, search the [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for "playwright test agent", "bug report skill", and "QA instructions".
 
 ---
 
 ## Tips for using Copilot on this track
 
-- Describe what you want to test in plain English before asking Copilot to write code. "Test that a user can add an item to the cart and see the total update" produces better results than "write a Playwright test."
+- Describe what you want to test in plain English before asking Copilot to write code. "Test that a user can add an item to the cart and see the total update" works better than "write a Playwright test."
 - Keep the application's page open alongside VS Code. Use the browser's Inspect tool to find selectors, then paste them into your Copilot prompts.
 - When Copilot generates code you don't understand, ask it to explain. Use prompts like "Explain what this test does step by step" or "Why did you use `waitFor` here?"
 - If a test fails, paste the error message into Copilot Chat and ask it to diagnose the problem.
-- If the Playwright MCP tool fails, check the Output panel in VS Code under "GitHub Copilot MCP" for logs.
+- If the Playwright MCP tool fails, read the logs in the VS Code Output panel under "GitHub Copilot MCP".
 
 ## Resources
 

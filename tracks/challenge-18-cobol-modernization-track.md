@@ -6,13 +6,6 @@
 
 **Focus:** Trace and characterize a COBOL account-transfer workflow, then expose it through an API and a React UI
 
-## Who is this for
-
-- Developers who enjoy reverse-engineering unfamiliar systems
-- Engineers dealing with legacy modernization at work (COBOL, MUMPS, RPG, or similar)
-- Anyone curious about how Copilot handles mainframe-era languages and large-scale translation tasks
-- Teams that finished a standard track and want a fundamentally different kind of challenge
-
 ## Prerequisites
 
 - Solid programming skills in at least one modern language (Node.js/TypeScript or Java)
@@ -32,17 +25,17 @@
 
 ## What you are working with
 
-The codebase is a **core banking system** for a fictional bank called First National Bank. It has been "in production" since 1997. The system handles customer management, deposit accounts (savings, checking, fixed deposits), teller transactions, consumer loans, interest calculation, end-of-day batch processing, and audit logging.
+The codebase is a **core banking system** for a fictional bank called First National Bank. It has been "in production" since 1997. It handles customer management, deposit accounts (savings, checking, fixed deposits), teller transactions, consumer loans, interest calculation, end-of-day batch processing, and audit logging.
 
-The code is spread across multiple COBOL programs and copybooks totaling roughly 2,500 lines. Some programs are well-commented; others read like someone was in a hurry. There are dead code paths, hardcoded values that should be configurable, a comment about a "temporary fix" from 2012, and business logic that becomes clear only after tracing through multiple files.
+The code is spread across multiple COBOL programs and copybooks totaling roughly 2,500 lines. Some programs are well commented; others were clearly written in a hurry. There are dead code paths, hardcoded values that should be configurable, a comment about a "temporary fix" from 2012, and business logic that becomes clear only after tracing through multiple files.
 
-Data lives in indexed sequential (ISAM) files, COBOL's native flat-file storage with key-based access. Start with the brief context document, then trace the code to learn the system's behavior.
+Data lives in indexed sequential (ISAM) files, COBOL's native flat-file storage with key-based access. Start with the context document, then trace the code.
 
 **The core covers one account-to-account transfer workflow.** Characterize its
 rules before translation, then build a local API and React view for account
 selection, transfer submission, and the resulting balances. Full-system
-translation and new banking features are stretch work. Preserve the original
-COBOL sources and do not replace their behavior with design recommendations.
+translation and new banking features are stretch work. Keep the original
+COBOL sources unchanged.
 
 ## Getting started
 
@@ -60,8 +53,7 @@ Follow the [shared manual installation and discovery checks](getting-started.md#
 after clean setup. Once the React shell exists, preflight one of its source
 files. In Stage 4, critique only the transfer flow. Use
 `fixtures/transfer-ui-cases.json` for review states and preserve the behavior
-captured in Stage 2. This replaces the former frontend-design installation;
-do not install both skills for this exercise.
+captured in Stage 2. Do not also install the frontend-design skill.
 
 ### Repository instructions for this track
 
@@ -71,11 +63,11 @@ Your `.github/copilot-instructions.md` should include:
 - The COBOL conventions: IDENTIFICATION DIVISION, ENVIRONMENT DIVISION, DATA DIVISION, PROCEDURE DIVISION, WORKING-STORAGE SECTION, copybooks (`.cpy` files), PERFORM/PERFORM THRU, EVALUATE/WHEN, indexed file I/O (OPEN, READ, WRITE, REWRITE, DELETE, START), COMP-3 packed decimal, PIC clauses (PIC 9, PIC X, PIC S9V99), 88-level condition names, paragraph and section naming conventions
 - Your target backend language and framework conventions
 - That you want Copilot to explain COBOL idioms when asked and to preserve business logic exactly during modernization
-- Non-negotiable: a modernized module must match the original's behavior, including its quirks, unless a quirk is a documented bug you're explicitly asked to fix
+- A modernized module must match the original's behavior, including its quirks, unless a quirk is a documented bug you're explicitly asked to fix
 
 ### Suggested custom agents
 
-- **COBOL Archaeologist Agent** -- Reads COBOL source and copybooks and explains what it does: business rules, data flow, and paragraph structure. Give it a program or copybook; it returns a plain-language walkthrough. Use it before touching any modernization work.
+- **COBOL Archaeologist Agent** -- Reads COBOL source and copybooks and explains what it does: business rules, data flow, and paragraph structure. Give it a program or copybook; it returns a plain-language walkthrough. Use it before you modernize anything.
 - **Banking Domain Agent** -- Applies banking domain judgment: interest calculation methods, loan amortization, and audit requirements the COBOL code assumes but rarely states outright. Give it a described rule; it explains the domain reasoning. Use it when a calculation's intent is unclear from the code alone.
 - **Modernization Agent** -- Reasons about target architecture: how a documented COBOL business rule becomes a REST endpoint, service layer, schema, and page structure in your chosen stack. Give it a documented rule and your target stack; it proposes the design. Use it once the Archaeologist and Domain agents have made the original logic clear.
 
@@ -83,7 +75,7 @@ Your `.github/copilot-instructions.md` should include:
 
 - **Behavior Parity Check Skill** -- A repeatable comparison: run the original COBOL program (via GnuCOBOL) and the modernized code against the same inputs, and confirm the outputs, including known quirks, match before calling a module migrated.
 - **Business Rule Documentation Skill** -- A fixed sequence: trace a paragraph, extract the rule in plain language, and log it in a shared doc before any code gets rewritten.
-- **Transfer Journey Check Skill** -- A repeatable check of account selection, rejected transfers, and successful balance updates. Require backend evidence before accepting a success message. Keep it separate from Impeccable's general UI review.
+- **Transfer Journey Check Skill** -- A repeatable check of account selection, rejected transfers, and successful balance updates. Require backend evidence before accepting a success message. Keep it separate from Impeccable's UI review.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "legacy code archaeology agent", "characterization testing skill", and "banking domain instructions" before you draft your own.
 
@@ -93,7 +85,7 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 
 - Ask Copilot to explain specific COBOL paragraphs, then check its explanation against the source.
 - Use `@workspace` and `#file` to reference the programs and copybooks behind your questions.
-- Before translating a paragraph, describe its business rule, such as monthly loan payment calculation with the PMT formula. Check that the target implementation preserves that rule.
+- Before translating a paragraph, describe its business rule, such as monthly loan payment calculation with the PMT formula. Check that the target implementation keeps that rule.
 - Describe the test scenarios and use Agent mode to scaffold the framework.
 - The `/explain` command works on COBOL files. Use it on the dense programs to build your understanding.
 - Give Impeccable the characterized transfer rules before reviewing the UI. Accept a change only if the backend tests and browser journey still agree.

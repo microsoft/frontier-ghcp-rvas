@@ -5,21 +5,20 @@
 
 ## Objective
 
-Translate the core banking system from MUMPS to your chosen modern language. Preserve all business rules, validations, and calculations while using the target language's conventions. The translation must pass all Stage 2 characterization tests.
+Translate the core banking system from MUMPS to your chosen language. Preserve all business rules, validations, and calculations, and follow the target language's conventions. The translation must pass all Stage 2 characterization tests.
 
 ## Translation Strategy
 
 Choose one of these approaches:
 
-Bottom-up translation starts with utilities and data access, followed by business logic and the service layer. Test each layer independently.
+- **Bottom-up:** start with utilities and data access, then business logic and the service layer. Test each layer independently.
+- **Module-by-module:** translate one routine at a time (BNKUTIL, then BNKCUST, then BNKACCT). This keeps the amount of code in view small.
 
-Module-by-module translation handles one routine at a time (e.g., BNKUTIL, then BNKCUST, then BNKACCT). This limits how much code you need to consider at once.
-
-Run characterization tests throughout translation. Passing tests show that the covered behaviors match.
+Run the characterization tests throughout. Passing tests show the covered behaviors match.
 
 ## Tasks
 
-1. **Design the target architecture.** Before translating any code, decide on:
+1. **Design the target architecture.** Before translating, decide on:
    - How to model the MUMPS global database: in-memory maps, an ORM with SQLite, a repository pattern with interfaces, or something else
    - Class/module structure: one class per MUMPS routine, or reorganized by domain (Customer, Account, Transaction, Loan)
    - Error handling: MUMPS uses `$ZTRAP` and status checks; your language likely has exceptions
@@ -68,11 +67,9 @@ Run characterization tests throughout translation. Passing tests show that the c
    - Remove the dead GOLD account type code path
    - Apply the FD early closure penalty from configuration instead of hardcoded 1%
 
-## What Copilot Helps With vs. What Requires Your Judgment
+## Copilot and your judgment
 
-Copilot can translate syntax and utilities, generate class skeletons, and draft repository or DAO implementations.
-
-You choose the architecture and how to map MUMPS globals to your persistence model. Use characterization tests to record existing behavior, then decide which quirks are bugs and how to apply target-language conventions.
+Copilot can translate syntax and utilities, generate class skeletons, and draft repository or DAO implementations. You choose the architecture and how MUMPS globals map to persistence, and you decide which quirks are bugs.
 
 ## Verification
 

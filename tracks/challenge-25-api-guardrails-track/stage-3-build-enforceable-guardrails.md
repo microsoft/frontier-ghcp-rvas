@@ -2,9 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 90-105 min
 
-The written standard now needs two enforcement layers: checks that reject
-contract drift before publication and Azure API Management policies that apply
-runtime controls consistently.
+Enforce the standard in two places: checks that reject contract drift before
+publication, and Azure API Management policies that apply runtime controls.
 
 ## Tasks
 
@@ -38,9 +37,9 @@ runtime controls consistently.
    Management instance after all local checks pass.
 
 At the midpoint, refine your customizations. Tighten repository instructions
-where they allowed ambiguous generated artifacts. Update the APIM Policy
-Reviewer with the failure modes you found. Change the Policy Validation skill
-so it runs your approved rules and policy paths, not only the starter checks.
+where they let ambiguous artifacts through. Add the failure modes you found to
+the APIM Policy Reviewer. Make the Policy Validation skill run your approved
+rules and policy paths, not only the starter checks.
 
 ## Verification
 
@@ -56,10 +55,9 @@ so it runs your approved rules and policy paths, not only the starter checks.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot is good at turning a precise rule into a parser check and explaining
-APIM policy syntax. You still need to review false positives, policy execution
-order, failure behavior, and the line between platform authorization and
-service authorization.
+Copilot turns a precise rule into a parser check and explains APIM policy
+syntax. You review false positives, policy execution order, failure behavior,
+and the line between platform and service authorization.
 
 ---
 

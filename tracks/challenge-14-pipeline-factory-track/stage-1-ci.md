@@ -23,7 +23,7 @@ Open your repository instructions for deployment conventions. Use your Pipeline 
    - Runs a production build check (verify the app starts and the health endpoint responds)
    - Uploads test results as artifacts
 
-5. **Validate the workflows.** Use Copilot to review your workflow YAML for common mistakes: unpinned action versions, missing `permissions` blocks, unnecessary `secrets` exposure, and incorrect trigger configurations.
+5. **Validate the workflows.** Have Copilot review your workflow YAML for common mistakes: unpinned action versions, missing `permissions` blocks, unnecessary `secrets` exposure, and incorrect trigger configurations.
 
 ## Verification
 

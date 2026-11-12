@@ -6,7 +6,7 @@
 
 ## Tasks
 
-1. **Create a system architecture diagram.** Use a high-level Mermaid diagram to show the components: HTTP clients, controllers, database, and any external systems. Show the data flow between them.
+1. **Create a system architecture diagram.** Draw a high-level Mermaid diagram of the components (HTTP clients, controllers, database, any external systems) and the data flow between them.
 
 2. **Create an entity-relationship diagram.** Read the SQL schema (or infer it from the `JdbcTemplate` queries in the controllers) and produce a Mermaid ERD showing all tables, columns, and relationships.
 
@@ -14,7 +14,7 @@
 
 4. **Create a state diagram for orders.** The order status transitions are defined in `OrderController.updateStatus()`. Produce a Mermaid state diagram showing all valid transitions: PENDING to CONFIRMED, CONFIRMED to SHIPPED, etc. Include the restock-on-cancellation side effect.
 
-5. **Assemble an architecture document.** Create `docs/architecture.md` in the challenge folder with all diagrams, a component description section, and a data model narrative.
+5. **Assemble an architecture document.** Create `docs/architecture.md` in the challenge folder with all diagrams, a component description, and a data model narrative.
 
 If your diagram agent or documentation skill misses a relationship or the restock-on-cancellation transition, refine that customization before assembling the architecture document.
 

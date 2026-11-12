@@ -37,10 +37,9 @@ reference pages. Keep them local, quick, and understandable.
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can write small parsers and suggest workflow triggers. You decide which
-examples are safe to execute, what level of automation the team can maintain,
-who owns approval, and when a code change is significant enough to repeat a
-reader test.
+Copilot writes small parsers and suggests workflow triggers. You decide which
+examples are safe to execute, what automation the team can maintain, who owns
+approval, and when a code change is big enough to repeat a reader test.
 
 ---
 

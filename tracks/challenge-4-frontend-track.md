@@ -6,13 +6,6 @@
 
 **Focus:** Build an accessible task dashboard with GitHub Copilot and use Impeccable to improve one user flow
 
-## Who is this for
-
-- Frontend Developers and UI/UX Engineers
-- React Developers
-- Web Developers focused on client-side
-- Full-stack developers interested in frontend
-
 ## Prerequisites
 
 - JavaScript fundamentals
@@ -38,24 +31,24 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Use the dedicated devcontainer at `.devcontainer/challenge-4-frontend/`. It installs the frontend tooling. **Install Impeccable yourself after the common clean setup**, which removes existing customizations. The devcontainer does not install it for you.
+Use the dedicated devcontainer at `.devcontainer/challenge-4-frontend/`. It installs the frontend tooling but not Impeccable, so **install Impeccable yourself after the common clean setup**, which removes existing customizations.
 
-Navigate to `challenges/challenge-4-frontend/`, install dependencies (`npm install`), and start the dev server (`npm run dev`). Read `src/App.tsx`, the task types, and `src/fixtures/tasks.ts` before writing instructions. The app is an empty shell; the fixtures provide mixed statuses and a long title for layout reviews. Work through the stages in order.
+Go to `challenges/challenge-4-frontend/`, install dependencies (`npm install`), and start the dev server (`npm run dev`). Read `src/App.tsx`, the task types, and `src/fixtures/tasks.ts` before you write instructions. The app is an empty shell; the fixtures provide mixed statuses and a long title for layout reviews. Work through the stages in order.
 
 ### Install and check Impeccable
 
 Follow the [shared Impeccable installation and discovery checks](getting-started.md#5-install-impeccable-when-your-track-uses-it).
 Use `src/App.tsx` in the challenge folder for the read-only preflight.
-Keep your own custom skill separate from the supplied skill, and do not edit
-Impeccable's files to hold project instructions.
+Keep your own custom skill separate from the supplied skill, and don't put
+project instructions in Impeccable's files.
 
 ### Use Impeccable on this track
 
-Keep Impeccable's working directory at `challenges/challenge-4-frontend/` so it reviews the task dashboard rather than the repository's documentation site. Initialize its product context there before planning the UI. Describe the intended users and their main task; inspect any generated context files for accuracy.
+Run Impeccable from `challenges/challenge-4-frontend/` so it reviews the task dashboard, not the repository's documentation site. Initialize its product context there before planning the UI. Describe the intended users and their main task, then check any generated context files for accuracy.
 
-Use `shape` before building the layout, then `critique` to review the first working version. Later, use `audit` for an additional quality review and `polish` on the completed task flow. Follow the command syntax offered by the installed skill.
+Use `shape` before building the layout and `critique` on the first working version. Later, use `audit` for another quality review and `polish` on the completed task flow. Follow the command syntax the installed skill offers.
 
-**One critique-and-fix cycle is required.** Capture the same page before and after the change. In the pull request, explain the problem, which recommendation you accepted or rejected, and how you checked the result. Keep screenshots and review evidence in the pull request; do not create a separate workshop report. Inspect generated files before committing and leave runtime caches out of the change.
+**One critique-and-fix cycle is required.** Capture the same page before and after the change. In the pull request, explain the problem, which recommendation you accepted or rejected, and how you checked the result. Keep screenshots and review evidence in the pull request, not in a separate report. Inspect generated files before committing and leave runtime caches out of the change.
 
 Impeccable's feedback is advisory. Check the rendered app yourself, and keep keyboard testing and axe checks as separate requirements.
 
@@ -68,20 +61,20 @@ Your `.github/copilot-instructions.md` should cover:
 - Accessibility requirements (WCAG compliance level)
 - Testing approach and coverage goals
 - Intended users, the main task flow, and visual constraints that Impeccable must respect
-- Non-negotiable: every interactive component ships keyboard-navigable, not retrofitted later
+- Every interactive component is keyboard-navigable from the start, not retrofitted later
 
 ### Suggested custom agents
 
-- Use a React Developer Agent to propose component boundaries, hooks, and prop types from a feature description.
-- Use a UI Stylist Agent to review layout, breakpoints, and animation for a working component.
-- Use an Accessibility Expert Agent to check a rendered component or its JSX for keyboard navigation, focus order, and ARIA issues before marking it done.
+- A React Developer Agent that proposes component boundaries, hooks, and prop types from a feature description.
+- A UI Stylist Agent that reviews layout, breakpoints, and animation for a working component.
+- An Accessibility Expert Agent that checks a rendered component or its JSX for keyboard navigation, focus order, and ARIA issues before you mark it done.
 
 ### Suggested custom skills
 
-- A Component Test Scaffolding Skill generates render, interaction, and snapshot tests for a component's props and states after its first working version.
-- A Type-First Scaffolding Skill creates a component shell, prop destructuring, and default state from a TypeScript interface before you write JSX.
+- A Component Test Scaffolding Skill that generates render, interaction, and snapshot tests for a component's props and states after its first working version.
+- A Type-First Scaffolding Skill that creates a component shell, prop destructuring, and default state from a TypeScript interface before you write JSX.
 
-Impeccable supplies general design guidance. Author a small project-specific skill for a repeatable check that matters to this dashboard, such as reviewing task-form states. Define what it checks and what evidence it returns. Avoid copying Impeccable's commands into a second skill.
+Impeccable supplies general design guidance. Write a small project-specific skill for a repeatable check that matters to this dashboard, such as reviewing task-form states, and define what it checks and what evidence it returns. Don't copy Impeccable's commands into a second skill.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "react component agent", "accessibility review skill", and "typescript instructions" before you draft your own.
 

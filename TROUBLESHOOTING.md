@@ -1,6 +1,6 @@
 # Troubleshooting guide
 
-Use this guide to diagnose setup and Copilot problems.
+Fixes for common setup and Copilot problems.
 
 ## GitHub Copilot issues
 
@@ -442,9 +442,7 @@ bash script.sh
 
 ## Prevention tips
 
-Save frequently, commit small changes, and test as you go. Read errors and
-warnings before making more changes. Check the documentation and ask for help
-early when stuck.
+Commit small changes and test as you go. Read errors before changing more code. Ask for help early.
 
 ## Still stuck?
 

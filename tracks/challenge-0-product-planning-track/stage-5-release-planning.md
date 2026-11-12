@@ -2,7 +2,7 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 90-120 min
 
-Plan the release milestones, assess risks, and define how to roll back each milestone.
+Plan the release milestones, score the risks, and define how to roll back each milestone.
 
 ## Tasks
 
@@ -34,7 +34,7 @@ Plan the release milestones, assess risks, and define how to roll back each mile
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can draft release notes and Gantt diagrams or suggest monitoring metrics. Check risk estimates against your project, verify that rollback steps are workable, and set monitoring thresholds that trigger a useful response. Customer release notes should explain what customers need to know.
+Copilot can draft release notes and Gantt diagrams or suggest monitoring metrics. You check risk estimates against your project, confirm the rollback steps would work, and set monitoring thresholds that trigger a useful response.
 
 ---
 

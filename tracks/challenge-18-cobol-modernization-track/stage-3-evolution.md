@@ -5,7 +5,7 @@
 
 ## Objective
 
-Show your understanding of the system by adding features that change multiple modules. Keep them consistent with the existing data model, business rules, and coding patterns. You can do this in COBOL (if you have GnuCOBOL set up) or in your target language (if you already started translating in Stage 2).
+Add a feature that changes multiple modules, consistent with the existing data model, business rules, and coding patterns. You can do this in COBOL (if you have GnuCOBOL set up) or in your target language (if you already started translating in Stage 2).
 
 For the five-hour core, skip this stage and continue to
 [Stage 4](stage-4-modernization.md). Do not add a new banking rule while
@@ -13,8 +13,7 @@ characterizing or translating the original transfer workflow.
 
 ## Choose your features
 
-Pick one feature if you continue beyond the core. Each exercises a different
-part of the system.
+Pick one feature if you continue beyond the core.
 
 ### Feature A: Multi-currency support
 
@@ -81,9 +80,9 @@ Add a transaction search that works across all accounts:
 
 ## Copilot tips for this stage
 
-- Describe the feature to Copilot in banking terms first, then ask for the implementation. "Add a scheduled transfers file that the EOD batch picks up and executes" gives better results than "add a cron job."
+- Describe the feature to Copilot in banking terms first, then ask for the implementation. "Add a scheduled transfers file that the EOD batch picks up and executes" works better than "add a cron job."
 - If implementing in COBOL, reference an existing program so Copilot can follow its style.
-- Use agent mode to scaffold the full feature (data model + business logic + menu integration + tests) in one pass, then refine.
+- Use agent mode to scaffold the whole feature (data model, business logic, menu integration, tests) in one pass, then refine.
 
 ## Verification
 

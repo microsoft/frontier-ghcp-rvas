@@ -5,7 +5,7 @@
 
 ## Objective
 
-Show your understanding of the system by adding features that change multiple modules. Keep them consistent with the existing data model, business rules, and coding patterns. You can do this in MUMPS (if you have YottaDB running) or in your target language (if you already started translating in Stage 2).
+Add features that touch several modules, consistent with the existing data model, business rules, and coding patterns. Doing so shows you understand the system. You can work in MUMPS (if you have YottaDB running) or in your target language (if you already started translating in Stage 2).
 
 ## Choose Your Features
 
@@ -69,7 +69,7 @@ Add a global transaction search that works across all accounts:
 
 ## Tasks
 
-1. **Design the feature.** Before writing code, document what changes are needed: which globals, which routines, what new menu options, what edge cases.
+1. **Design the feature.** Before coding, document the changes: which globals, which routines, what new menu options, what edge cases.
 2. **Implement** the feature in your chosen language (MUMPS or target).
 3. **Write tests** for the new functionality, following the same patterns from Stage 2.
 4. **Update your architecture document** from Stage 1 to reflect the additions.
@@ -78,7 +78,7 @@ Add a global transaction search that works across all accounts:
 
 - Describe the feature to Copilot in banking terms first, then ask for the implementation. "Add a scheduled transfers table that the EOD batch picks up and executes" gives better results than "add a cron job."
 - For MUMPS implementation, give Copilot an existing routine as a style reference.
-- Use agent mode to scaffold the full feature (data model + business logic + menu integration + tests) in one pass, then refine.
+- Use agent mode to scaffold the whole feature (data model, business logic, menu integration, tests), then refine.
 
 ## Verification
 

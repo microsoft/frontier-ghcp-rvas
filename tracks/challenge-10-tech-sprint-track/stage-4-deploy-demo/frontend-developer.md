@@ -8,7 +8,7 @@
 
 2. Review spacing, color consistency, loading states, and empty states. Fix remaining UI issues before the demo.
 
-3. **Demo contribution** -- Walk through the UI: component structure, responsive behavior, how Copilot helped with component generation and styling. Consider leading the live walkthrough section of the demo.
+3. **Demo contribution** -- Walk through the UI: component structure, responsive behavior, and how Copilot helped with components and styling. Consider leading the live walkthrough.
 
 ## Verification
 

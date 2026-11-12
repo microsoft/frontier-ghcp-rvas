@@ -6,19 +6,12 @@
 
 **Focus:** Convert requirement specifications into structured project backlogs using Copilot skills, agents, and the Atlassian MCP server
 
-## Who is this for
-
-- Product owners and tech leads who spend hours manually creating backlogs from requirement documents
-- Scrum masters and project managers who want consistent, high-quality backlog items across teams
-- Anyone involved in sprint planning who converts use case documents into Epics, Stories, and Tasks
-- Teams that use Jira and Confluence and want to integrate Copilot with those tools
-
 ## Prerequisites
 
-- Understanding of agile concepts: Epics, User Stories, Acceptance Criteria, Tasks
-- Familiarity with the INVEST criteria for good user stories
-- No coding experience required; use Copilot skills and agents to build backlog workflows
-- Atlassian Cloud account (optional, for MCP integration stages)
+- Agile concepts: Epics, User Stories, Acceptance Criteria, Tasks
+- The INVEST criteria for user stories
+- No coding required; you build workflows with Copilot skills and agents
+- Atlassian Cloud account (optional, for the MCP stage)
 
 ## Technology stack
 
@@ -35,7 +28,7 @@ The `specs/` directory contains three use case specifications of increasing comp
 2. **Notification Preferences** -- Moderate complexity with a configuration matrix, compliance rules (GDPR), and multiple integration points
 3. **Inventory Reorder** -- Complex, with scheduled jobs, external system integrations, business formulas (EOQ), and multi-level approval workflows
 
-Build Copilot workflows that convert these Confluence-style specs into backlogs in your team's format.
+You build Copilot workflows that turn these Confluence-style specs into backlogs in your team's format.
 
 ## Getting started
 
@@ -49,7 +42,7 @@ A dedicated devcontainer is provided at `.devcontainer/challenge-15-backlog-gene
 
 #### Atlassian MCP Server (optional)
 
-If your team uses Atlassian Cloud (Jira / Confluence), you can connect Copilot to it via the Atlassian Rovo MCP Server. Follow the [Atlassian setup instructions](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/). You need this connection for Stage 3, where you push generated backlog items directly to Jira.
+If your team uses Atlassian Cloud (Jira / Confluence), connect Copilot through the Atlassian Rovo MCP Server. Follow the [Atlassian setup instructions](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/). Stage 3 needs it to push backlog items to Jira.
 
 ### Repository instructions for this track
 

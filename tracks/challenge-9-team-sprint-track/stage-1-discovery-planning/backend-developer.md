@@ -16,9 +16,9 @@ Use your api-architect agent to review resource shapes, status codes, and error 
 
 3. **Create a backend agent** -- Create `.github/agents/api-architect.agent.md` with context about REST design, the CityPulse data model, and coding standards.
 
-4. **Draft the API spec** -- Create `docs/api-spec.md`. List the planned endpoints, request/response shapes, and status codes. Share this with the frontend developer so they can start building against it.
+4. **Draft the API spec** -- Create `docs/api-spec.md`. List the planned endpoints, request/response shapes, and status codes. Share it with the frontend developer so they can build against it.
 
-5. **Sprint planning** -- Join the PO's planning session. Review stories, ask questions, commit to Sprint 1 scope.
+5. **Sprint planning** -- Join the PO's planning session, review the stories, and commit to Sprint 1 scope.
 
 ## Verification
 

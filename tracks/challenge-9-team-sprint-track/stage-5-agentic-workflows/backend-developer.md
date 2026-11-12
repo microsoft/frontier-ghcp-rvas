@@ -22,13 +22,13 @@
      github:
    ```
 
-   Describe the source directories, backend language, and patterns to preserve in the workflow body. Define what counts as a useful simplification for CityPulse.
+   In the workflow body, name the source directories, the backend language, and the patterns to preserve, and say what counts as a useful simplification for CityPulse.
 
 2. **Create a test improver workflow** -- Write a workflow that runs daily, assesses test coverage, identifies under-tested areas of the backend, and opens a PR adding meaningful tests. Reference the [Daily Test Improver](https://github.com/githubnext/agentics/blob/main/docs/daily-test-improver.md).
 
 3. **Compile and commit** -- Run `gh aw compile` for each workflow. Commit the `.md` and `.lock.yml` files.
 
-4. **Trigger and review** -- Trigger at least one workflow manually via GitHub Actions and review the resulting pull request. Check that the proposed changes make sense before merging.
+4. **Trigger and review** -- Trigger at least one workflow manually via GitHub Actions and review the resulting pull request. Check the changes before merging.
 
 ## Verification
 

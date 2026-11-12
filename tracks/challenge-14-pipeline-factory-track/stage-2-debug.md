@@ -6,9 +6,9 @@
 
 ## Tasks
 
-1. **Compare working vs. broken.** The `stage-broken/server.js` is a copy of the API with 5 deliberate bugs introduced. Use Copilot to compare it against the working `api-service/server.js` and identify discrepancies.
+1. **Compare working vs. broken.** `stage-broken/server.js` is a copy of the API with 5 deliberate bugs. Use Copilot to compare it with the working `api-service/server.js`.
 
-2. **Find and fix all 5 bugs.** The bugs represent common staging environment issues:
+2. **Find and fix all 5 bugs.** The bugs are typical staging problems:
    - Configuration problems (missing files, wrong paths)
    - Silent error handling that hides failures
    - Missing validation that exists in the working version
@@ -22,7 +22,7 @@
    - How you fixed it
    - How to prevent it in the future (what CI check would catch it?)
 
-4. **Use Copilot's `/fix` command.** Try `/fix` on the broken `server.js` and see how many of the 5 bugs it catches directly. Note which ones it finds and which ones require more context.
+4. **Use Copilot's `/fix` command.** Try `/fix` on the broken `server.js`. Note which of the 5 bugs it catches and which need more context.
 
 5. **Add preventive tests.** Write tests that fail when these 5 bugs recur.
 

@@ -6,7 +6,7 @@ Build a responsive layout with static data and reusable components.
 
 ## Tasks
 
-Before creating the first component, open your repository instructions for accessibility and styling conventions. Use your component-structure agent to review the design. Run your type-first scaffolding skill to define props before writing the layout.
+Open your repository instructions for accessibility and styling conventions first. Use your component-structure agent to review the design, and your type-first scaffolding skill to define props before you write the layout.
 
 1. Define who uses the dashboard and what they need to do first. Use Impeccable's `shape` guidance to choose the layout and visual hierarchy. Keep the work focused on finding and updating tasks.
 2. Build a responsive dashboard layout with header, sidebar, and main content area using Tailwind CSS.

@@ -6,22 +6,15 @@
 
 **Focus:** Build and review an Azure Terraform baseline with remote state, reusable modules, identity controls, policy checks, and CI gates
 
-## Who is this for
-
-- Platform engineers standardizing Azure environments
-- DevOps engineers who manage Terraform in real repositories
-- Backend or full-stack developers who own their team's cloud infrastructure
-- Technical leads who need a repeatable Azure foundation for multiple environments
-
 ## Prerequisites
 
 - An Azure subscription with permission to create resource groups, storage accounts, networking resources, managed identities, and Key Vault
 - Basic familiarity with Terraform workflows (`init`, `fmt`, `validate`, `plan`, `apply`)
-- Comfort reading HCL and understanding Azure resource relationships
-- Basic GitHub Actions knowledge for the CI phase
-- Azure CLI installed and authenticated if you want to run the plans against a real subscription
+- Comfort reading HCL and Azure resource relationships
+- Basic GitHub Actions knowledge for the CI stage
+- Azure CLI, installed and authenticated, to run plans against a real subscription
 
-> ⚠️ **No Azure subscription?** You can still complete most of the track by focusing on `terraform fmt`, `terraform validate`, module structure, variable design, and pipeline generation. Treat the live `plan` and `apply` steps as design exercises if you cannot provision resources.
+> ⚠️ **No Azure subscription?** You can still do most of the track with `terraform fmt`, `terraform validate`, module structure, variable design, and pipeline generation. Treat the live `plan` and `apply` steps as design exercises.
 
 ## Technology stack
 
@@ -38,21 +31,21 @@ Follow the [common setup steps](getting-started.md) first (clean start, custom i
 
 ### Open and inspect the challenge
 
-Navigate to `challenges/challenge-21-azure-terraform/`. The challenge is built around a small internal operations app that needs a clean Azure foundation before rollout to multiple regions. Focus on `terraform/azure/`, `modules/`, and `docs/` rather than application code.
+Go to `challenges/challenge-21-azure-terraform/`. The challenge is a small internal operations app that needs a clean Azure foundation before it rolls out to multiple regions. Work in `terraform/azure/`, `modules/`, and `docs/`, not the application code.
 
-This challenge should use its own devcontainer at `.devcontainer/challenge-21-azure-terraform/` so the Terraform, Azure CLI, and validation tooling stay isolated from the other tracks.
+Use the devcontainer at `.devcontainer/challenge-21-azure-terraform/`. It keeps the Terraform, Azure CLI, and validation tooling separate from the other tracks.
 
-The starter includes constrained Terraform inputs, TFLint configuration, a pull request validation workflow, and evidence under `docs/`. Read these files before writing instructions. They are intentionally incomplete; you must decide what the team should accept, block, or document.
+The starter includes constrained Terraform inputs, TFLint configuration, a pull request validation workflow, and evidence under `docs/`. Read them before writing instructions. They are deliberately incomplete: you decide what the team accepts, blocks, or documents.
 
 #### Working scenario
 
-You are taking over infrastructure for an internal operations app. The app is not mission-critical yet, but it handles operational data that the team does not want exposed. Three stakeholders have left you with requirements that do not line up cleanly:
+You are taking over infrastructure for an internal operations app. It is not mission-critical yet, but it handles operational data the team does not want exposed. Three stakeholders left you requirements that don't line up:
 
 - The platform lead wants one Terraform pattern that can support dev and prod without a separate rewrite later.
 - The application team wants a fast path to a working dev environment and does not want a heavy approval process for every small change.
 - Security wants private networking where practical, narrow identity permissions, no secrets in source control, and a clear drift response before production rollout.
 
-Your job is to make the smallest responsible Azure baseline and explain the trade-offs. Do not build a full enterprise landing zone. Do not accept generated HCL until you can explain the plan it produces.
+Build the smallest responsible Azure baseline and explain the trade-offs. Don't build a full enterprise landing zone, and don't accept generated HCL until you can explain the plan it produces.
 
 #### Required participant artifacts
 
@@ -64,7 +57,7 @@ Create these files under `challenges/challenge-21-azure-terraform/docs/` as you 
 - `environment-promotion.md` -- dev-to-prod differences and approval rules
 - `drift-response.md` -- incident steps for drift, failed apply, import, and rollback decisions
 
-Keep the notes short. A reviewer should be able to tell why you made each decision without reading every Terraform file.
+Keep the notes short. A reviewer should see why you made each decision without reading every Terraform file.
 
 ### Repository instructions for this track
 
@@ -95,12 +88,12 @@ Search the shared [examples guidance](getting-started.md#4-learn-from-examples-t
 ## Tips for using Copilot on this track
 
 - Use Copilot as a reviewer before you use it as a generator. Ask it to compare two designs, find plan risks, and challenge your assumptions.
-- Start each Terraform file with a short comment describing the resources, naming rules, and environment assumptions. Copilot does better when the infrastructure intent is explicit.
-- Ask Copilot to explain a `terraform plan` diff, then check for accidental replacements and missing dependencies before accepting it.
+- Start each Terraform file with a short comment on the resources, naming rules, and environment assumptions. Copilot does better when the intent is explicit.
+- Ask Copilot to explain a `terraform plan` diff, then check for accidental replacements and missing dependencies.
 - Check generated variables for descriptions, validation, and sensible defaults.
 - Have Copilot review modules for implicit dependencies and unnecessary outputs.
-- For GitHub Actions, tell Copilot which steps should block merges and which ones are advisory. It will otherwise treat every check as equal.
-- If a generated resource looks plausible but unfamiliar, ask Copilot which Azure API or provider schema it is relying on. That often exposes outdated suggestions quickly.
+- For GitHub Actions, say which steps block merges and which are advisory. Otherwise Copilot treats every check the same.
+- If a generated resource looks plausible but unfamiliar, ask which Azure API or provider schema it relies on. That often exposes outdated suggestions.
 - Before applying, record one generated suggestion you rejected and why.
 
 ## Resources

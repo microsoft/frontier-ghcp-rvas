@@ -30,8 +30,8 @@
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot is useful for test tables and fixture setup. You decide whether the
-evidence matches the real risks. A large test count does not compensate for a
+Copilot is good for test tables and fixture setup. You decide whether the
+evidence matches the real risks. A large test count doesn't make up for a
 missing restart, duplicate-action, or conflict case.
 
 ---

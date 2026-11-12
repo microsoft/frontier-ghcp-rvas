@@ -6,13 +6,6 @@
 
 **Focus:** Use Copilot skills and agents to take functional requirements through implementation, testing, and deployment
 
-## Who is this for
-
-- Tech leads and senior developers who manage the full cycle from spec intake to production deployment
-- Teams where multiple manual handoffs (PM to dev to QA to ops) delay releases
-- Developers who write technical analysis documents, create work items, generate tests, and configure pipelines
-- Anyone who wants a reusable Copilot workflow for feature delivery
-
 ## Prerequisites
 
 - Experience with the full software development lifecycle (requirements, design, implementation, testing, deployment)
@@ -36,7 +29,7 @@ The starter has two parts:
 
 2. `existing-app/` contains a tenant management API that handles tenant and user CRUD. Integrate the billing module with this codebase.
 
-Build the billing module and the **reusable skills and agents** that carry work between stages. Your team should be able to use them for a later feature.
+Build the billing module and the **reusable skills and agents** that carry work between stages. Your team should be able to reuse them for the next feature.
 
 ## Getting started
 
@@ -56,7 +49,7 @@ Your `.github/copilot-instructions.md` should include:
 - The project's code conventions (from the existing app: Express routes, in-memory data store pattern)
 - Your team's work item format (Epic/Story/Task structure, acceptance criteria style)
 - Your test specification conventions (test format, what constitutes an edge case worth testing)
-- Non-negotiable: every stage's output must be reusable for the next feature, not a one-off for the billing module
+- Every stage's output must be reusable for the next feature, not a one-off for the billing module
 
 ### Suggested custom agents
 

@@ -8,9 +8,9 @@
 
 Open your repository instructions for documentation conventions. Use your documentation reviewer agent and run the javadoc accuracy skill for each class before accepting generated text.
 
-1. **Audit the existing documentation.** Go through each Java file and note what already has javadoc (even if it is stale or incomplete) vs. what has none. The `Product` class has a stub; everything else is bare.
+1. **Audit the existing documentation.** Note which Java files already have javadoc, even stale or incomplete, and which have none. The `Product` class has a stub; everything else is bare.
 
-2. **Generate javadoc for domain classes.** Start with `Product.java`, `Order.java`, and `OrderLine.java`. For each class, ask Copilot to explain the class based on how it is used in the controllers, then write javadoc that reflects actual behavior. Pay attention to:
+2. **Generate javadoc for domain classes.** Start with `Product.java`, `Order.java`, and `OrderLine.java`. For each class, ask Copilot to explain the class based on how it is used in the controllers, then write javadoc that reflects actual behavior. Cover:
    - Class-level documentation explaining the business purpose
    - Field descriptions (what each field represents, valid values, units where applicable)
    - Enum documentation (the `Order.Status` enum and its state machine)
@@ -20,9 +20,9 @@ Open your repository instructions for documentation conventions. Use your docume
    - Method-level: HTTP method, path, parameters, return type, possible error responses
    - Business rules embedded in the code (discount tiers, tax rate, shipping thresholds, state transition rules)
 
-4. **Fix the stale Product javadoc.** The existing `@author` and `@since` tags reference a version that predates half the current fields. Update it to reflect the current state.
+4. **Fix the stale Product javadoc.** Its `@author` and `@since` tags predate half the current fields. Update it to match the current class.
 
-5. **Validate accuracy.** For at least 3 methods, read the code line-by-line and verify that the generated javadoc matches the actual behavior. Copilot sometimes generates javadoc based on what a method *should* do rather than what it *actually* does.
+5. **Validate accuracy.** For at least 3 methods, read the code line-by-line and verify that the generated javadoc matches the actual behavior. Copilot sometimes documents what a method *should* do rather than what it *does*.
 
 ## Verification
 

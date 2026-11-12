@@ -13,7 +13,7 @@
    location. Keep the final location within the scope agreed in Stage 1.
 4. If the team wants to create tasks, send messages, or update a document,
    define each action separately with its target, audience, approval, and
-   verification. Do not make bulk changes from the first handoff.
+   verification. Don't make bulk changes from the first handoff.
 5. Run the Human Approval Gate skill before every proposed write action. Keep
    its review record beside the handoff.
 6. Document the recurring trigger for this workflow, its owner, and when the
@@ -29,7 +29,7 @@
 
 ## What Copilot helps with vs. what requires your judgment
 
-Copilot can compare the draft with the evidence map and prepare a review record.
+Copilot compares the draft with the evidence map and prepares a review record.
 You approve the final content, decide where it belongs, and authorize any
 change to Microsoft 365 data.
 

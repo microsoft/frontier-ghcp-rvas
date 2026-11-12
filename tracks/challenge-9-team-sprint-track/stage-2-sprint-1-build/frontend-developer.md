@@ -2,11 +2,11 @@
 
 **Time: Full 3 hours**
 
-Build the core UI pages. Use mocked data while the API is being built, then swap to real API calls when the backend is ready.
+Build the core UI pages. Use mocked data until the backend is ready, then switch to real API calls.
 
 Use Impeccable's `shape` on the report-submission journey before building it.
 Work inside the exported frontend and preserve the Spark handover contract.
-Keep the review within the stage's UI planning time.
+Do the review within the stage's UI planning time.
 
 ## Tasks
 

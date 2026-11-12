@@ -22,7 +22,7 @@
    code and capture the failure.** A compile error or broken test setup
    does not count as reproducing the defect.
 4. Make a small fix. Run the same test again and record the passing result.
-   Keep enough command output or version references to show the test and
+   Keep enough command output or version references to show which test and
    version you ran.
 5. Check nearby behavior. Active overlapping reservations must still block.
    Adjacent ranges must remain valid. Maintenance must still prevent booking.
@@ -48,7 +48,7 @@
 
 Copilot can suggest causes and draft a test. You decide whether the test
 reproduces the user's problem and whether the patch fixes the cause. A passing
-test with a weak assertion proves nothing useful.
+test with a weak assertion proves nothing.
 
 ---
 

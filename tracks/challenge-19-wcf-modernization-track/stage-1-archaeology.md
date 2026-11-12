@@ -6,13 +6,13 @@
 
 ## Objective
 
-Document every operation, data contract, and fault condition in the Meridian Savings Bank WCF service for someone who has never worked with WCF. Start with the service contract interfaces, trace the implementations, and write an inventory to guide every decision in Stage 3.
+Document every operation, data contract, and fault condition in the Meridian Savings Bank WCF service for someone who has never worked with WCF. Start with the service contract interfaces, trace the implementations, and write an inventory you will use for every decision in Stage 3.
 
 ## Tasks
 
-Use your repository instructions for WCF conventions and the REST target. Have the WCF Analyst agent review uncertain fault mappings. Once the service starts, run the WSDL verification skill to check its SOAP responses.
+Have the WCF Analyst agent review uncertain fault mappings. Once the service starts, run the WSDL verification skill to check its SOAP responses.
 
-1. **Get oriented on WCF fundamentals.** Before reading service code, spend 15-20 minutes getting context. Ask Copilot to explain:
+1. **Get oriented on WCF fundamentals.** Before reading service code, spend 15-20 minutes on background. Ask Copilot to explain:
    - What `ServiceContract`, `OperationContract`, `DataContract`, `DataMember`, and `FaultContract` attributes do
    - What `BasicHttpBinding` is and what it controls (transport, encoding, security)
    - How SOAP faults work: when `FaultException<T>` is thrown, what does the SOAP message look like?

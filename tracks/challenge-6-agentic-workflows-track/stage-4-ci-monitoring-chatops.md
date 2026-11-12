@@ -46,15 +46,13 @@
 
 3. **Create a ChatOps `/ask` command** -- Write a command-triggered workflow based on [Repo Ask](https://github.com/githubnext/agentics/blob/main/docs/repo-ask.md). When someone comments `/ask <question>` on an issue, the agent should research the repository (code, issues, PRs, docs) and post an answer as a comment.
 
-4. **Test the ChatOps workflows** -- Create a test issue and try the `/plan` and `/ask` commands. Verify that the agent responds with useful output. Test edge cases: vague issues, multi-part questions, issues that reference external resources.
+4. **Test the ChatOps workflows** -- Create a test issue and try the `/plan` and `/ask` commands. Check that the agent's responses are useful. Test edge cases: vague issues, multi-part questions, issues that reference external resources.
 
 5. **Compile, commit, and push** -- Run `gh aw compile` for all new workflows.
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can generate the frontmatter, write command parsing logic in the Markdown body, and adapt gallery workflows.
-
-You decide which ChatOps commands to support and whether CI Doctor only diagnoses failures or also attempts fixes. Choose the response format (brief or detailed) and test with realistic scenarios.
+Copilot can generate the frontmatter, write the command handling in the Markdown body, and adapt gallery workflows. You decide which ChatOps commands to support, whether CI Doctor only diagnoses failures or also attempts fixes, and how detailed responses should be. Test with realistic scenarios.
 
 ## Verification
 

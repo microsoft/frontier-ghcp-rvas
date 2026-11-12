@@ -7,14 +7,14 @@
 
 1. **Create an issue triage workflow** -- Write a Markdown workflow that triggers when a new issue is opened. The agent should read the issue title and body, assign one type label (bug, feature, question, documentation) and one priority label (P0-P3), and post a summary comment explaining the triage decision.
 
-   Points to consider in your Markdown instructions:
+   In your instructions:
    - Define what each label means for your project (e.g., P0 = service down, P1 = broken feature, P2 = degraded experience, P3 = minor improvement)
    - Tell the agent how to handle ambiguous issues (default to P2 and `question` if unclear)
    - Specify the comment format (brief, actionable, linking to related issues if found)
 
    Use the [Issue Triage](https://github.com/githubnext/agentics/blob/main/docs/issue-triage.md) workflow from the Agentics gallery as a reference.
 
-2. **Test the triage workflow** -- Create 3-4 test issues with different intents: a clear bug report, a feature request, a vague question, and a documentation request. Trigger the triage workflow for each (or let it trigger automatically). Review the labels and comments the agent assigned. Did it get them right?
+2. **Test the triage workflow** -- Create 3-4 test issues with different intents: a clear bug report, a feature request, a vague question, and a documentation request. Trigger the triage workflow for each (or let it trigger automatically). Check the labels and comments the agent assigned.
 
 3. **Create a contribution check workflow** -- Write a workflow based on [Contribution Check](https://github.com/githubnext/agentics/blob/main/docs/contribution-check.md) that periodically reviews open pull requests against contribution guidelines. If you don't have a `CONTRIBUTING.md`, create a minimal one first. The workflow should create a report issue listing PRs that need attention.
 
@@ -40,9 +40,7 @@
 
 ## What Copilot Helps With vs. What Requires Your Judgment
 
-Copilot can generate the frontmatter schema, draft the Markdown body from your description, and adapt gallery examples to your project.
-
-You decide the label taxonomy and priority definitions, scope safe outputs (comment limits and allowed labels), and review triage accuracy.
+Copilot can generate the frontmatter, draft the Markdown body from your description, and adapt gallery examples. You decide the label taxonomy and priority definitions, scope the safe outputs (comment limits, allowed labels), and judge triage accuracy.
 
 ## Verification
 

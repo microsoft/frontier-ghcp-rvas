@@ -4,17 +4,17 @@
 
 ## Tasks
 
-1. **Run Sprint 2 planning** -- 10-minute session. Assign stories, confirm scope, cut anything that will not land.
+1. **Run Sprint 2 planning** -- 10-minute session. Assign stories, confirm scope, and cut anything that won't land.
 
-2. **Triage Sprint 1 bugs** -- QA filed bugs during Sprint 1. Work with the BA (or on your own) to classify each: fix now, defer, or won't fix.
+2. **Triage Sprint 1 bugs** -- QA filed bugs during Sprint 1. Classify each with the BA (or alone): fix now, defer, or won't fix.
 
-3. **Continue reviewing PRs** -- Focus on whether completed features match what you asked for. Leave specific, actionable feedback on GitHub.
+3. **Continue reviewing PRs** -- Check that completed features match what you asked for, and leave specific feedback on GitHub.
 
-4. **Draft release notes** -- Start `docs/release-notes.md`. Write it for end users, not developers. Describe the features that will ship and any known limitations.
+4. **Draft release notes** -- Start `docs/release-notes.md`. Write for end users, not developers: the features that will ship and any known limitations.
 
-5. **Prepare the demo outline** -- Write bullet points for what you will show in Stage 4. Build a narrative: a resident discovers CityPulse, reports an issue, browses events, checks the dashboard.
+5. **Prepare the demo outline** -- Write bullet points for what you'll show in Stage 4, as one story: a resident discovers CityPulse, reports an issue, browses events, checks the dashboard.
 
-If your Product and Analysis Agent produces generic release notes or a poorly scoped demo outline, refine its shipping context before asking it to revise the draft.
+If your Product and Analysis Agent produces generic release notes or a poorly scoped demo outline, improve its shipping context before asking for a revision.
 
 ## Verification
 

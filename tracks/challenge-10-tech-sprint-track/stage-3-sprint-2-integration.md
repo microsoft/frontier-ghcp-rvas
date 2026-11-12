@@ -7,16 +7,16 @@ Connect the frontend to the backend and fix bugs from Sprint 1. Add advanced fea
 
 ## Sprint 2 Planning (first 10 minutes)
 
-The team holds a 10-minute planning session.
+Hold a 10-minute planning session.
 
-1. **Carry-over** -- Anything unfinished from Sprint 1 gets highest priority.
-2. **Bug fixes** -- QA filed bugs. The team decides together which are Sprint 2 fixes and which go to a known-issues list.
-3. **New features** -- Trail status management, search/filter, dashboard, and authentication are candidates. Pick based on what the team can realistically finish in 2 hours.
+1. **Carry-over** -- Unfinished Sprint 1 work comes first.
+2. **Bug fixes** -- Decide which of QA's bugs are Sprint 2 fixes and which go to a known-issues list.
+3. **New features** -- Trail status management, search/filter, dashboard, and authentication are candidates. Pick what the team can finish in 2 hours.
 4. **Assign work** -- Each role picks their Sprint 2 Issues from the board.
 
 ## Jump to Your Role
 
-Find your role and follow the link for your detailed task list:
+Pick your role for the detailed task list:
 
 | Role | Focus This Stage | Key Deliverable |
 |------|-----------------|-----------------|
@@ -27,15 +27,15 @@ Find your role and follow the link for your detailed task list:
 
 ## Sync Point: Integration Check (at ~5:30, 1 hour into Sprint 2)
 
-A brief 5-minute check-in:
+A 5-minute check-in:
 
 - Is the frontend connected to the real backend?
 - Are there any deployment blockers?
-- What will be ready for the demo vs. what will not?
+- What will and won't be ready for the demo?
 
-This is the last chance to cut scope. If the team is behind, drop the dashboard and authentication. Focus on making the trail directory and condition reporting flow work end-to-end in the Codespace.
+This is the last chance to cut scope. If you're behind, drop the dashboard and authentication and get the trail directory and condition reporting flow working end to end in the Codespace.
 
-If repository instructions or the sprint board sync skill give roles conflicting guidance, revise them together before the demo. Check that backend and frontend use the same trail data model.
+If repository instructions or the sprint board sync skill give roles conflicting guidance, fix them together before the demo. Check that backend and frontend use the same trail data model.
 
 ---
 

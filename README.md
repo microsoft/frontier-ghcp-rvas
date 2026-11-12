@@ -2,39 +2,32 @@
 
 ![GitHub Copilot Adoption banner](docs/images/rvas-banner.jpg)
 
-Use GitHub Copilot to deliver work your team needs. Choose from **31 challenges**
-with starter code and track guides. Use the session to
-find practices your team can keep using.
+Use GitHub Copilot to deliver work your team needs. Pick one of **31 challenges**,
+each with starter code and a track guide, and leave with practices your team
+keeps using.
 
-Sessions use repository instructions, custom agents, and custom skills tailored
-to the work. Challenge 30 adopts Spec Kit's supplied workflow; authoring custom
-agents and skills is optional there.
+Sessions use repository instructions, custom agents, and custom skills. Challenge 30
+adopts Spec Kit's supplied workflow, so authoring custom agents and skills is
+optional there.
 
 In the other tracks, participants author **custom skills for reusable workflows**
-and refine them throughout the session. Ordinary chat prompts remain useful for one-off requests.
+and refine them during the session. Ordinary chat prompts still work for one-off requests.
 Challenges **4, 8, 9, 10, 18, 27, 29, and 30** also use Impeccable for a focused
-UI review tied to the existing user journey. Participants install the skill
+UI review of the existing user journey. Participants install the skill
 with `npx`; no Impeccable extension is required. The
 [shared setup](tracks/getting-started.md#5-install-impeccable-when-your-track-uses-it)
-includes discovery and launcher checks. Each selected track keeps optional
-features outside its 4-6-hour core.
+covers discovery and launcher checks. Optional features sit outside each track's
+4-6-hour core.
+
 The Backlog Generator's first stage is now
-[Spec-to-Backlog Skill](tracks/challenge-15-backlog-generator-track/stage-1-skill.md);
-links to its former `stage-1-prompt` page need updating.
-
-## Choose a challenge
-
-Choose a challenge below. Each has a defined outcome, starter code, a
-devcontainer, and stages that guide the work.
+[Spec-to-Backlog Skill](tracks/challenge-15-backlog-generator-track/stage-1-skill.md).
+Update any links to its former `stage-1-prompt` page.
 
 ## Overview
 
-The repository includes **31 challenge tracks** organized by the outcomes they help you deliver:
+The repository has **31 challenge tracks**, grouped by the outcome they help you deliver.
 
 ### Challenges by outcome
-
-Choose by the work you need to deliver. At the end, show what changed and how
-Copilot helped.
 
 - 📋 **[Challenge 0: Product Planning Track](./tracks/challenge-0-product-planning-track.md)** - Product planning, backlog management, documentation (no code) | **Outcome:** Ship Product Features Faster
 - 🔧 **[Challenge 1: Web API Track](./tracks/challenge-1-web-api-track.md)** - REST APIs, authentication, testing | **Outcomes:** Ship Product Features Faster, Raise Quality and Confidence
@@ -71,19 +64,16 @@ Copilot helped.
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
 Coaches can use the site's Challenge Set Builder and Learning Paths pages to
-select challenges for a focused session and share one student URL.
+pick challenges for a session and share one student URL.
 
-Each track explains its stages and verification criteria.
-
-The documentation site also groups challenges into 13 enterprise Role
-Collections. Use the **Roles** page to find relevant work for product,
-engineering, data, security, database, documentation, mobile, platform,
-operations, QA, and architecture roles.
+The site also groups challenges into 13 Role Collections. Use the **Roles** page
+to find work for product, engineering, data, security, database, documentation,
+mobile, platform, operations, QA, and architecture roles.
 
 ## Duration
 
-Duration varies by track. Challenge 29 takes **4-6 hours**, with a five-hour core.
-Check the selected track for its time budget.
+Duration varies by track; check the track for its time budget. Challenge 29 takes
+**4-6 hours**, with a five-hour core.
 
 ## Documentation site
 
@@ -91,9 +81,9 @@ The static documentation site lives in `web/`. It uses HTML, CSS, and JavaScript
 with no build dependencies.
 
 The homepage starts with role selection, then explains how to open a track,
-prepare the environment, and work through its stages. The catalog, learning
-paths, and Challenge Set Builder pages remain available through navigation.
-The site also includes setup, troubleshooting, and facilitator instructions.
+prepare the environment, and work through its stages. Navigation links to the
+catalog, learning paths, and Challenge Set Builder, plus setup, troubleshooting,
+and facilitator instructions.
 
 To build the site data locally:
 
@@ -135,7 +125,7 @@ python3 -m http.server
 
 Then open `http://localhost:8000/index.html` in your browser.
 
-The GitHub Pages deployment workflow automatically builds and deploys the site from `.github/workflows/deploy-site.yml` on every push to `main`.
+`.github/workflows/deploy-site.yml` builds and deploys the site to GitHub Pages on every push to `main`.
 
 ## Getting started
 
@@ -216,7 +206,7 @@ including installed skills.
 
 ### Step 4: verify your setup
 
-Before starting, make sure Copilot is working:
+Confirm Copilot works before you start:
 
 **Check Copilot Status:**
 
@@ -237,15 +227,13 @@ Before starting, make sure Copilot is working:
 
 ### Step 5: start your track
 
-Once your environment is ready:
-
 1. Open your chosen track guide (e.g., `tracks/challenge-1-web-api-track.md`)
 2. Follow the recommended challenge sequence
 3. Use the track-specific tips and guidance
 
-## Skills you'll build while driving outcomes
+## Skills you'll build
 
-The challenges give you practice with these Copilot capabilities:
+The challenges practice these Copilot capabilities:
 
 ### 1. Chat and agentic capabilities
 
@@ -275,8 +263,7 @@ The challenges give you practice with these Copilot capabilities:
 ## Challenges
 
 Use the [track catalog](./tracks/README.md) to choose by role or outcome.
-
-All 31 challenges are available, and each track has a dedicated challenge:
+Each of the 31 tracks has its own challenge:
 
 ### [Challenge 0: Product Planning -- TaskFlow v2.0](./challenges/challenge-0-product-planning/) ([Track](./tracks/challenge-0-product-planning-track.md))
 
@@ -669,10 +656,9 @@ Build a reviewed project handoff from approved Microsoft 365 context. Retrieve a
 
 Take over a working equipment-booking app. Verify how it behaves, fix a reported
 cancellation defect, then add a waitlist through the UI and backend. The starter
-includes seeded data and passing baseline tests, plus an application Dockerfile
-and a dedicated devcontainer.
-The Challenge 29 workflow runs the starter tests and checks application-container
-startup and restart when its code changes.
+includes seeded data, passing baseline tests, an application Dockerfile, and a
+dedicated devcontainer. When its code changes, the Challenge 29 workflow runs the
+starter tests and checks that the container starts and restarts.
 
 ---
 
@@ -694,15 +680,15 @@ implement the approval rules. No deployment or external issue tracker is needed.
 
 ### Examples and templates
 
-Use the [shared examples guidance](./tracks/getting-started.md#4-learn-from-examples-then-write-your-own)
-to find current examples. Search for terms that match the artifact you need,
-such as "repository instructions", "custom agent", or "workflow skill".
+The [shared examples guidance](./tracks/getting-started.md#4-learn-from-examples-then-write-your-own)
+explains how to find current examples. Search for the artifact you need, such as
+"repository instructions", "custom agent", or "workflow skill".
 
 ### Quick tips
 
 Describe the expected behavior and reference existing code. Refine suggestions
-through conversation, and review generated code before accepting it.
-Use `/explain`, `/fix`, and `/tests` for focused requests.
+in conversation, and review generated code before accepting it. Use `/explain`,
+`/fix`, and `/tests` for focused requests.
 
 | Shortcut | Action |
 |----------|--------|
@@ -738,41 +724,32 @@ Use `/explain`, `/fix`, and `/tests` for focused requests.
 
 ### Track-based learning
 
-**Choose a track** based on your role and follow the curated path:
-
-- Each track provides a recommended sequence of challenges
-- Track-specific tips and guidance
-- Clear learning objectives
-- Estimated time for completion
-
-See **[Tracks Overview](./tracks/README.md)** to choose your path.
+Pick a track for your role and follow its path. Each track gives a recommended
+challenge sequence, tips, learning objectives, and a time estimate. See
+**[Tracks Overview](./tracks/README.md)**.
 
 ### Alternative: individual challenges
 
-Choose challenges based on your interests. Each includes starter code and
-objectives, with optional tasks for further work.
+Pick any challenge. Each has starter code, objectives, and optional tasks.
 
 ### Team demos (1-2 hours)
 
 - Present your solutions
 - Share interesting Copilot interactions
-- Discuss productivity gains and lessons learned
-- Compare experiences across different tracks
+- Discuss lessons learned
+- Compare experiences across tracks
 
 ### Best practices session (1 hour)
 
 - Review common patterns
-- Share tips and tricks discovered
+- Share tips and tricks
 - Q&A with Copilot experts
 
 ## Success metrics
 
-Each team should demonstrate its result and explain the impact, such as time
-saved or risk reduced. Record how Copilot helped and which practices the team
-will use in daily work.
-
-Copilot usage and chat counts can support that evidence. **Judge success by
-the work delivered**, not tool activity.
+Each team demos its result and explains the impact, such as time saved or risk
+reduced. Say how Copilot helped and which practices the team will keep.
+**Judge success by the work delivered**, not by usage or chat counts.
 
 ## Collaboration
 
@@ -783,35 +760,34 @@ the work delivered**, not tool activity.
 
 ## Feedback
 
-After completing the session, please share:
+After the session, tell us:
 
 - What worked well
 - What could be improved
-- Productivity improvements you experienced
-- Features you found most valuable
+- What improved your productivity
+- Which features you found most valuable
 
 ## Next steps
 
 After the session:
 
-1. Apply Copilot to your daily work
+1. Use Copilot in your daily work
 2. Explore advanced features and settings
 3. Refine your team's repository instructions, custom agents, and custom skills
-4. Share knowledge with your organization
-5. Measure and track productivity improvements
+4. Share what you learned with your organization
 
 ## Support and resources
 
 ### Quick links
 
-- **[Choose Your Track](./tracks/README.md)** - Outcome-driven learning paths organized by role and outcome
-- **Challenge Set Builder** - Available on the published site; coaches can curate challenge sets and generate student URLs
+- **[Choose Your Track](./tracks/README.md)** - Learning paths by role and outcome
+- **Challenge Set Builder** - On the published site; coaches pick challenges and generate student URLs
 - **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
 - **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For GitHub Copilot Adoption delivery session organizers
 - **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content
 
 ### Help
 
-Use the [Track Selection Guide](./tracks/README.md) to choose a challenge and
-the [Troubleshooting Guide](./TROUBLESHOOTING.md) for setup problems.
-Report bugs through this repository's issues.
+Use the [Track Selection Guide](./tracks/README.md) to pick a challenge and the
+[Troubleshooting Guide](./TROUBLESHOOTING.md) for setup problems. Report bugs
+in this repository's issues.

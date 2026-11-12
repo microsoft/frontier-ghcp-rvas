@@ -8,13 +8,6 @@
 and ship an Azure SQL-compatible schema change without breaking active
 readers or writers
 
-## Who is this for
-
-- Database administrators responsible for SQL Server or Azure SQL
-- Database reliability engineers who investigate load-related incidents
-- Senior data platform engineers who review indexing and migration safety
-- Operations engineers who need useful database evidence and recovery steps
-
 Keep the transaction model and query result contracts unchanged. Make the
 database behave predictably under load, and leave enough evidence for the
 next on-call DBA to operate it.
@@ -27,10 +20,10 @@ next on-call DBA to operate it.
 - Docker for the optional local SQL Server runtime
 - An Azure SQL database only if you want to perform the optional target check
 
-> ⚠️ SQL Server 2022 Linux containers publish an `amd64` image. The supplied
-> Compose file requests that architecture explicitly. Docker Desktop can often
-> emulate it on ARM hosts, but the challenge does not assume that emulation is
-> available. `scripts/validate.sh` is the portable fallback: it parses every
+> ⚠️ SQL Server 2022 Linux containers publish an `amd64` image, and the
+> supplied Compose file requests that architecture explicitly. Docker Desktop
+> can often emulate it on ARM hosts, but don't count on it.
+> `scripts/validate.sh` is the portable fallback: it parses every
 > authoritative T-SQL artifact, validates evidence fixtures, and runs the
 > verifier tests without starting a database.
 
@@ -80,8 +73,8 @@ export MSSQL_SA_PASSWORD
 bash scripts/run-local-sqlserver.sh
 ```
 
-Stop the local service when you finish. This command does not require the
-password to remain in your shell:
+Stop the local service when you finish. This command doesn't need the
+password to still be in your shell:
 
 ```bash
 docker compose down
@@ -106,8 +99,7 @@ Your `.github/copilot-instructions.md` should capture stable database rules:
 - No generated index or hint accepted without a measured reason and a stated
   write or storage cost
 
-Write the rules in your own words. They should guide review without prescribing
-the answer.
+Write the rules in your own words. They should guide review without giving away the answer.
 
 ### Suggested custom agents
 

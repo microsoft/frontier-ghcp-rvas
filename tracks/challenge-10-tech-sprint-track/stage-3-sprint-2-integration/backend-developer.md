@@ -4,7 +4,7 @@
 
 ## Tasks
 
-1. **Fix Sprint 1 bugs** -- Any bugs filed by QA take priority over new features.
+1. **Fix Sprint 1 bugs** -- QA's bugs come before new features.
 
 2. **Add search and filtering** (if scoped):
    - `GET /api/trails?difficulty=Hard&status=Open` -- Filter trails by difficulty and status
@@ -24,7 +24,7 @@
 
 6. **Open PRs** for each feature. Keep them small and reviewable.
 
-If your API agent proposes a fix or endpoint that ignores an existing convention or conflicts with the Stage 1 spec, refine the agent's guidance before asking it to review the contract again.
+If your API agent proposes a fix or endpoint that ignores an existing convention or conflicts with the Stage 1 spec, refine its guidance before asking for another contract review.
 
 ## Verification
 

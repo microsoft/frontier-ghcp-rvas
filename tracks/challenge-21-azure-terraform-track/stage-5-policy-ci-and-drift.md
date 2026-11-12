@@ -6,9 +6,9 @@ Add CI checks and review evidence so another engineer can assess a plan before i
 
 ## Scenario notes
 
-Your team has already seen two kinds of trouble: a manual portal change that did not match Terraform, and a failed apply that left part of an environment updated. Developers want CI feedback that is fast. Operations wants enough evidence to decide whether to import, revert, or repair.
+Your team has seen two kinds of trouble: a manual portal change that didn't match Terraform, and a failed apply that left an environment half updated. Developers want fast CI feedback. Operations wants enough evidence to decide whether to import, revert, or repair.
 
-Build the smallest workflow and runbook that would help during those incidents.
+Build the smallest workflow and runbook that would help in those incidents.
 
 ## Tasks
 
@@ -28,7 +28,7 @@ Have Copilot review the workflow for credential leaks, slow pull request steps, 
 - The workflow validates Terraform changes on pull requests
 - Policy or lint checks run in CI and have a clear pass/fail rule
 - The repository has a documented apply approval path
-- The drift response document is practical enough that another engineer could follow it during an incident
+- The drift response document is practical enough for another engineer to follow during an incident
 - `docs/plan-review.md` includes a CI or policy review note with a blocking-versus-advisory decision
 - `docs/drift-response.md` includes a realistic failure drill and a recovery decision point
 

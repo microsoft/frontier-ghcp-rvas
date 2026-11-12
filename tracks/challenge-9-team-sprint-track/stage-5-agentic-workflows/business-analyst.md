@@ -4,7 +4,7 @@
 
 ## Tasks
 
-1. **Create a weekly summary workflow** -- Write a Markdown workflow based on [Weekly Issue Summary](https://github.com/githubnext/agentics/blob/main/docs/weekly-issue-summary.md) that creates a weekly report of issue activity: how many were opened, closed, and are still open, grouped by label. The report should include trend observations and recommendations for the team.
+1. **Create a weekly summary workflow** -- Write a Markdown workflow based on [Weekly Issue Summary](https://github.com/githubnext/agentics/blob/main/docs/weekly-issue-summary.md) that creates a weekly report of issue activity: how many were opened, closed, and are still open, grouped by label. The report should include trends and recommendations.
 
    ```yaml
    on:
@@ -26,7 +26,7 @@
 
 3. **Compile and commit** -- Run `gh aw compile` for each workflow. Commit and push.
 
-4. **Trigger and validate** -- Trigger the weekly summary manually. Review the generated issue for accuracy and usefulness.
+4. **Trigger and validate** -- Trigger the weekly summary manually. Check the generated issue for accuracy.
 
 ## Verification
 

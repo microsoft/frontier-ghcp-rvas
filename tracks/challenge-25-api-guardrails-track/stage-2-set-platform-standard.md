@@ -2,8 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐ | **Time:** 75-90 min
 
-Turn the inventory into decisions that a service owner can apply and a reviewer
-can test. A preference is not a standard until its scope, exception path, and
+Turn the inventory into decisions a service owner can apply and a reviewer can
+test. A preference becomes a standard once its scope, exception path, and
 compatibility effect are clear.
 
 ## Tasks
@@ -17,11 +17,11 @@ compatibility effect are clear.
 3. State which rules are mandatory, advisory, or eligible for an exception.
    Give every exception an owner, reason, review date, and consumer impact.
 4. Define compatible, breaking, deprecated, sunset, and retired states. Set
-   notification and support expectations without inventing dates that are not
-   supported by the scenario.
-5. Create normalized contract proposals under `contracts/proposals/`. Keep the
-   service capabilities intact. The proposals should show how each existing
-   API would look at the platform boundary, not replace the service code.
+   notification and support expectations. Don't invent dates the scenario
+   doesn't support.
+5. Create normalized contract proposals under `contracts/proposals/`. Each
+   shows how an existing API would look at the platform boundary. Keep the
+   service capabilities intact; a proposal doesn't replace service code.
 6. For each proposal, add a short decision record under
    `deliverables/decisions/`. Explain contract changes, compatibility class,
    consumer migration work, and any unresolved exception.
@@ -44,8 +44,8 @@ compatibility effect are clear.
 ## What Copilot helps with vs. what requires your judgment
 
 Copilot can find gaps between the documents and flag inconsistent wording. It
-cannot decide the support window your organization can honor or which
-exceptions are worth carrying. Those decisions need owners and evidence.
+can't decide the support window your organization can honor or which
+exceptions are worth carrying. Those calls need owners and evidence.
 
 ---
 

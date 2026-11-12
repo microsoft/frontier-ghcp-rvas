@@ -6,14 +6,6 @@
 
 **Focus:** Product planning, backlog management, and documentation using GitHub Copilot and GitHub's collaboration features
 
-## Who is this for
-
-- Product Owners and Product Managers
-- Business Analysts
-- Project Managers and Scrum Masters
-- Program Managers
-- Stakeholders who participate in planning and requirements
-
 ## Prerequisites
 
 - A GitHub account with Copilot access
@@ -30,15 +22,11 @@
 
 ## Getting started
 
-Choose one of these ways to work:
+Pick one of these ways to work. You can switch later.
 
-Path A uses GitHub.com Copilot Chat in the browser without an IDE. Go to [github.com/copilot](https://github.com/copilot), attach your repository, and use Chat alongside Issues and Projects. Custom agents and instructions work here. Nothing needs installing.
-
-Path B uses GitHub.com and Codespaces. Create a Codespace from your repository and use Copilot Chat in VS Code's sidebar, with Issues and Projects on GitHub.com. The devcontainer hides the activity bar, status bar, and line numbers and uses a GitHub theme. Press `Ctrl+Shift+I` (or `Cmd+Shift+I` on Mac) to open Chat.
-
-Path C uses local VS Code with the GitHub MCP server to create issues, list PRs, and manage milestones from Copilot Chat. The devcontainer pre-configures the server.
-
-> You can switch between these options.
+- **Path A: browser only.** Go to [github.com/copilot](https://github.com/copilot), attach your repository, and use Chat alongside Issues and Projects. Custom agents and instructions work here. Nothing to install.
+- **Path B: Codespaces.** Create a Codespace from your repository and use Copilot Chat in the VS Code sidebar, with Issues and Projects on GitHub.com. The devcontainer hides the activity bar, status bar, and line numbers and uses a GitHub theme. Press `Ctrl+Shift+I` (`Cmd+Shift+I` on Mac) to open Chat.
+- **Path C: local VS Code.** Use the GitHub MCP server to create issues, list PRs, and manage milestones from Copilot Chat. The devcontainer configures the server for you.
 
 Follow the [common setup steps](getting-started.md) first (clean start, custom instructions, custom agents, custom skills), then continue below.
 
@@ -59,14 +47,14 @@ Your `.github/copilot-instructions.md` should cover:
 
 ### Suggested custom agents
 
-- Use a Product Strategist Agent to review feature ideas against product goals and flag risks or open questions before adding them to the backlog.
-- Use a Story Writer Agent to turn approved feature descriptions into stories with testable Given/When/Then acceptance criteria.
-- Use a Release Planner Agent to propose milestones from a backlog and identify dependencies and communication needs.
+- A Product Strategist Agent that checks feature ideas against product goals and flags risks or open questions before they reach the backlog.
+- A Story Writer Agent that turns approved feature descriptions into stories with testable Given/When/Then acceptance criteria.
+- A Release Planner Agent that proposes milestones from a backlog and identifies dependencies and communication needs.
 
 ### Suggested custom skills
 
-- An Issue Batch Creation Skill converts a finished stories file into GitHub Issues through MCP. It should preserve titles, bodies, and labels and confirm the issue count.
-- A Document Critique Pass Skill reviews briefs, specs, or ADRs for contradictions, priority conflicts, and untestable acceptance criteria before you share them.
+- An Issue Batch Creation Skill that converts a finished stories file into GitHub Issues through MCP, keeping titles, bodies, and labels and confirming the issue count.
+- A Document Critique Pass Skill that checks briefs, specs, or ADRs for contradictions, priority conflicts, and untestable acceptance criteria.
 
 Search the shared [examples guidance](getting-started.md#4-learn-from-examples-then-write-your-own) for terms like "product brief agent", "user story skill", and "release notes instructions" before you draft your own.
 

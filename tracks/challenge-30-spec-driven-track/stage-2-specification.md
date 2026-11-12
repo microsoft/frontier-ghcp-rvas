@@ -11,13 +11,13 @@
    > Managers should be able to handle requests from the existing register.
    > Keep the current request flow working.
 
-   This brief deliberately leaves policy questions unanswered. Your job is to
-   get those answers before the implementation starts.
+   The brief deliberately leaves policy questions open. Get them answered
+   before implementation starts.
 
 2. **Use `/speckit-specify` to describe the feature in your own words.**
    Supply the operations brief and distinguish it from the existing starter
-   behavior. Focus on the user outcome. Do not specify a replacement framework
-   or ask the agent to implement immediately.
+   behavior. Focus on the user outcome. Don't specify a replacement framework
+   or ask the agent to implement yet.
 
 3. **Use `/speckit-clarify` and review its questions.** Confirm the fixed
    boundaries below. Agree the remaining policy choices with your partner or
@@ -42,17 +42,17 @@
    **Facilitator guide:** ask participants to explain their policy choice and
    how they would test it. If they need a smaller scope, require a rejection
    reason and make rejection final; the requester can create a new request.
-   These are suggested decisions, not hidden grading criteria. Record whichever
-   policy is agreed before moving on.
+   These are suggestions, not hidden grading criteria. Record whichever policy
+   is agreed before moving on.
 
 5. **Review the specification.** Write acceptance scenarios for the successful
    decision and for forbidden actors. Include draft requests, missing IDs,
    and repeated decisions. Check that manager-created requests cannot be
-   self-approved. Make any API failure expectations observable without
-   prematurely prescribing the code structure.
+   self-approved. Make API failure expectations observable without
+   prescribing the code structure.
 
-   Use the optional Acceptance Reviewer only if it helps find an actual gap.
-   A human must approve the business rules.
+   Use the optional Acceptance Reviewer only if it finds a real gap. A human
+   must approve the business rules.
 
 ## Verification
 
