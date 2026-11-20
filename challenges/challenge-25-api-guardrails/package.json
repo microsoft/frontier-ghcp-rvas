@@ -14,7 +14,7 @@
     "test": "node --test && npm run validate:openapi && npm run validate:policies && npm run smoke"
   },
   "dependencies": {
-    "fast-xml-parser": "5.10.1",
+    "fast-xml-parser": "5.12.0",
     "openapi-schema-validator": "12.1.3",
     "yaml": "2.9.0"
   },
